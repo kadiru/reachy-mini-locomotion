@@ -12,6 +12,12 @@ calibration and credentials are excluded. Package installation and both CLI
 entry points were verified locally. The project virtual environment's packaging
 tools were upgraded to support editable `pyproject.toml` installs.
 
+Initial implementation pushed as `c5341b9`. [GitHub CPU CI](https://github.com/kadiru/reachy-mini-locomotion/actions/runs/44390624399)
+passed on Linux/Python 3.11, including package installation, a fresh pinned model
+checkout/LFS hydration and the test suite. Local Python 3.9 package installation,
+both CLI entry points and `pip check` also passed. Local working tree was clean
+after the implementation push; this documentation update records the CI receipt.
+
 Reviewed the opening tabletop sequence in `https://vimeo.com/kadiru/demo-reachy-reach`
 through the Vimeo player. Head turning/tilting, body rocking and apparent
 progress toward the laptop are visible. No metric speed or causal contact-force

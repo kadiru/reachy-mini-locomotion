@@ -54,11 +54,11 @@ The user's observation is retained and now supported by a supplied GIF showing c
 PYTHONPATH=src .venv/bin/python -m reachy_locomotion session-smoke --output data/synthetic/my-session-check
 ```
 
-Use a new output directory. Verified development results: 46 unit tests, full synthetic UDP/HTTP/video pipeline, and threaded CLI loss/shutdown check. Reports are in `experiments/reports/first-session-tests.txt`, `data/synthetic/first-session-smoke-04/report.json`, and `experiments/reports/first-session-cli.json`.
+Use a new output directory. Current validation: **50 tests pass locally and in [GitHub CI](https://github.com/kadiru/reachy-mini-locomotion/actions/runs/44390624399)**. The local test log is `experiments/reports/repository-tests-2026-11-18.txt`. The earlier full synthetic UDP/HTTP/video pipeline and threaded CLI loss/shutdown check also passed; their generated captures remain local-only.
 
 ## Run locally
 
-All commands run from `/Users/kadir/linkedin/projects/reachy-mini-locomotion`. The original recorder/analyzer needs only Python 3.9+ standard library. The first-session tools additionally use NumPy/OpenCV/Pillow, pinned in `experiments/requirements-capture.txt`. `.venv` is project-local; MuJoCo is optional and used only by `audit-sim`. Physical guardian execution uses the robot's installed, version-matched Reachy SDK; do not upgrade that installation from the host requirements file.
+Run commands from the repository root (this workspace: `/Users/kadir/linkedin/projects/reachy-mini-locomotion`). The original recorder/analyzer needs only the Python standard library. The first-session tools additionally use NumPy/OpenCV/Pillow, pinned in `experiments/requirements-capture.txt`. `.venv` is project-local; optional MuJoCo supports `audit-sim` and the contact probe. Physical guardian execution uses the robot's installed, version-matched Reachy SDK; do not upgrade that installation from the host requirements file.
 
 ```sh
 PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v
