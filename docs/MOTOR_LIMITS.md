@@ -28,7 +28,7 @@ explicitly uncalibrated; they are not evidence for real-robot performance.
 
 The manufacturer motor data cover 3.7–6 V. Reachy's system supply is listed as
 6.8–7.6 V; [Pollen's troubleshooting guide](https://github.com/pollen-robotics/reachy_mini/blob/main/docs/source/troubleshooting.md)
-says its higher voltage is intentional. Neither source establishes this user's
+says its higher voltage is intentional. The user confirmed battery operation for the reference video. Neither source establishes this user's
 motor-bus voltage under load. We interpolate only within manufacturer data and
 refuse extrapolation. Nominal 5 V and randomized 4.2–6 V are conservative study
 hypotheses, not readings from the robot. No power or firmware settings were changed.

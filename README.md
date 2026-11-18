@@ -8,13 +8,17 @@ The opening sequence shows controller-driven head motion, whole-body rocking
 and apparent base progress. [Video observations](docs/VIMEO_OBSERVATIONS_2026-11-18.md)
 separate what is visible from what still needs measurement.
 
-**Current state (November 18, 2026):** a scripted head roll/yaw pattern now produces
-penguin-like rocking and forward travel in the uncalibrated MuJoCo model: **15.8 cm
-in 6.6 simulated seconds** in a 30-cycle run. [Results, limits and reproduction](docs/SWAY_EXPERIMENT_2026-11-18.md)
-include 170 search/control trials, timestep/friction checks, backwards motion
-when yaw phase is reversed, and failures. Motor saturation and parameter
-sensitivity remain substantial. There is no trained policy or verified physical
-transfer. [Watch the simulation](media/simulation/sway-forward-2026-11-18.mp4).
+**Current state (November 18, 2026):** CPU gait training now uses published
+Dynamixel torque/speed data, motor-specific limits, command smoothing/latency,
+and corrected total mass. [Motor sources and assumptions](docs/MOTOR_LIMITS.md)
+and [training protocol/results](docs/MOTOR_TRAINING_2026-11-18.md) distinguish
+measured manufacturer specifications from uncalibrated model parameters.
+The refined candidate advances **3.2 cm in 13 simulated seconds**, with about
+64% lower sampled body acceleration than the first trained candidate. It passes
+our walking check in **8/12 fresh held-out cases** (up from 2/12); all 12 move
+forward. [Watch the real-time simulation](media/simulation/motors-trained-2026-11-18.mp4).
+Sim-to-real transfer remains unverified. The historical 15.8 cm demo used an
+unrealistic 1.2 Nm head-motor cap and is retained only as an exploratory result.
 
 ## Start here
 
@@ -50,7 +54,7 @@ The user's observation is retained and now supported by a supplied GIF showing c
 - Read-only HTTP state capture; no motor enable, waking or command writes.
 - Cycle analysis, conservative tracking-gap rejection, forward/lateral displacement, repeatability, fall accounting and matched-condition trial comparison.
 - Offline replay schedule generation from submitted SDK targets. It cannot actuate hardware.
-- CPU-only model audit, moving-foot contact probe and head-actuated sway controller. Scripted gait exploration is implemented; RL training is not.
+- CPU-only model audit, moving-foot contact probe and head-actuated sway controller. Scripted exploration and CEM gait-parameter training are implemented; RL training is not.
 - Original-source ledger and reveal shot list. No verified spoken-video timestamps yet.
 
 **Start with `docs/FIRST_RECORDING_SESSION.md`.** It has the exact commands, Unity setup, camera procedure and stop keys. The synthetic end-to-end test passes with a mock robot; no physical actuation has been attempted. The supplied profile is explicitly a preview example and cannot arm hardware.
@@ -59,7 +63,7 @@ The user's observation is retained and now supported by a supplied GIF showing c
 PYTHONPATH=src .venv/bin/python -m reachy_locomotion session-smoke --output data/synthetic/my-session-check
 ```
 
-Use a new output directory. Current validation: **55 local tests pass**; the [CPU workflow](https://github.com/kadiru/reachy-mini-locomotion/actions/workflows/tests.yml) runs the suite on GitHub. The latest local log is `experiments/reports/repository-tests-sway-2026-11-18.txt`. The earlier full synthetic UDP/HTTP/video pipeline and threaded CLI loss/shutdown check also passed; their generated captures remain local-only.
+Use a new output directory. Current validation: **63 local tests pass**; the [CPU workflow](https://github.com/kadiru/reachy-mini-locomotion/actions/workflows/tests.yml) runs the suite on GitHub. The latest local log is `experiments/reports/repository-tests-motors-final-2026-11-18.txt`. The earlier full synthetic UDP/HTTP/video pipeline and threaded CLI loss/shutdown check also passed; their generated captures remain local-only.
 
 ## Run locally
 

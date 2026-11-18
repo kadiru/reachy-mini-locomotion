@@ -9,6 +9,8 @@ Reproduce the user's previously observed motion before treating autonomous locom
 November 18 clarification: the headset was **Meta Quest 3S**. User requests a
 GitHub repository and a learning/sim-to-real project based on head-driven
 penguin-like motion in [reachy reach](https://vimeo.com/kadiru/demo-reachy-reach).
+The user also confirmed this video was made on **battery power**; actual motor-bus
+voltage under load remains unknown.
 Use the recovered recording software and new MuJoCo contact probe as the starting
 point; the historical description below predates this model-name correction.
 

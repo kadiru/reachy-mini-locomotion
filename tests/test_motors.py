@@ -1,7 +1,5 @@
-import copy
 import json
 import unittest
-from pathlib import Path
 
 import numpy as np
 from reachy_locomotion.motors import dc_torque, specification, validate_motor_config
@@ -63,3 +61,31 @@ class MotorSimulationTests(unittest.TestCase):
         r=self.sim.run(Gait(roll_deg=0,yaw_deg=0),cycles=4)
         self.assertTrue(r['valid'])
         self.assertLess(np.hypot(r['forward_m'],r['lateral_m']),1e-5)
+
+    def test_latency_holds_previous_target_until_delivered(self):
+        servo=self.sim.servos
+        original=servo.config['delay_frames']
+        try:
+            servo.config['delay_frames']=2
+            initial=self.sim.initial_targets.copy()
+            servo.reset(initial)
+            target=initial.copy();target[1]+=.01
+            servo.command(target)
+            np.testing.assert_array_equal(servo.target,initial)
+            servo.command(target)
+            np.testing.assert_array_equal(servo.target,initial)
+            servo.command(target)
+            np.testing.assert_array_equal(servo.target,target)
+        finally:
+            servo.config['delay_frames']=original
+
+
+class QualificationTests(unittest.TestCase):
+    def test_numerical_validity_alone_is_not_walking_success(self):
+        from experiments.summarize_motor_training import qualified
+        base=dict(valid=True,forward_m_per_s=.005,forward_m=.05,lateral_m=.002,
+                  heading_change_rad=.02,max_foot_tilt_deg=4)
+        self.assertTrue(qualified(base))
+        for changes in [dict(forward_m_per_s=0),dict(valid=False),dict(lateral_m=.1),
+                        dict(heading_change_rad=1),dict(max_foot_tilt_deg=30)]:
+            self.assertFalse(qualified(dict(base,**changes)))

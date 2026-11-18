@@ -158,7 +158,6 @@ class SwaySimulator:
         motor_work_j = 0.0
         initial_yaw = 0.0
         velocity_samples = []
-        target_samples = []
         peak_torque = np.zeros(model.nu)
         torque_sq = np.zeros(model.nu)
         peak_velocity = np.zeros(model.nu)
@@ -191,7 +190,6 @@ class SwaySimulator:
             actual = relative_head_pose(model, state)
             if measuring:
                 max_track = max(max_track, angle(desired, actual))
-                target_samples.append(target.copy())
                 velocity_samples.append(state.qvel[:6].copy())
                 if (frame - warmup_frames) % frames_per_cycle == 0:
                     displacement = start_rot.T @ (state.xpos[self.base] - start)
@@ -298,7 +296,7 @@ class SwaySimulator:
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--upstream", default="experiments/upstream-reachy-mini")
-    parser.add_argument("--config", default="configs/contact-proxy.json")
+    parser.add_argument("--config", default="configs/motors-datasheet.json")
     parser.add_argument("--gait", help="JSON file of Gait fields")
     parser.add_argument("--cycles", type=int, default=8)
     parser.add_argument("--output", required=True)

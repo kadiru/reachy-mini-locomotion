@@ -1,5 +1,77 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 18, 2026 — motor-bounded training and robustness refinement
+
+User requested smoother, more reliable forward motion and real motor limits;
+they confirmed the Vimeo walking demonstration ran on **battery power**.
+Checked official Pollen and ROBOTIS sources. Head motors are XL330-M288-T:
+0.52 Nm / 103 rpm at 5 V, 0.60 Nm / 123 rpm at 6 V (stall torque / no-load speed).
+The previous assumed 1.2 Nm cap was unrealistic for these published conditions.
+Body uses custom XC330-M288-PG; antennas XL330-M077-T. Actual motor-bus voltage,
+installed registers, continuous duty and PG gear envelope remain unknown.
+
+Implemented `motors.py` and `configs/motors-datasheet.json`: per-model voltage
+interpolation, approximate PWM/DC torque-speed response, peak torque and PWM
+caps, 50 Hz target latency, speed/acceleration smoothing, actual joint-angle
+bounds, torque/speed diagnostics. Corrected model mass from 1.17652824 to 1.475 kg;
+tested torso and uniform mass placement. Removed inherited motor rotor inertia
+from passive ball joints and exposed their uncertain friction. All inferred
+parameters and source links are in `docs/MOTOR_LIMITS.md`. No hardware accessed.
+CLI now defaults to this model; historical configs remain reproducible.
+
+Ran **528 candidate evaluations / 1,872 training rollouts**, 98 control/evaluation
+rollouts, and six constant-voltage battery sensitivity rollouts on local CPU
+(max four workers). First CEM study: 10×24 candidates, three domains. Refinement:
+12×24 candidates, four domains including 1/2 ms physics, stronger worst-domain,
+heading, sideways and acceleration penalties. Refined policy found in its first
+generation; later generations did not improve it. This is learned parameter
+search, not RL. All 66 invalid training outcomes are retained. Initial model and
+study committed as `bf18fb5`; complete receipts under `experiments/reports/`.
+
+Refined nominal gait: **1.852 Hz**, **32.1 mm forward in 12.96 s**, -5.1 mm lateral,
+-3.49° heading at 1 ms; 34.0 mm forward at 2 ms. Sampled RMS base acceleration
+0.419 m/s² versus 1.172 for first trained candidate (~64% lower), no torque-cap
+saturation, peak head torque 0.288 Nm under a 0.416 Nm study cap. Alternating
+edge unloading ~12% per side, peak foot tilt 0.81°, rim clearance ~1.2 mm.
+Large head target phase lag (~88° maximum orientation error) remains; measured
+head roll/yaw stay roughly within ±36°. This is a subtle rocking shuffle.
+
+Fresh heldouts: six uncertain parameter sets × two timesteps; **12/12 advance
+more than 1 mm**, **8/12 pass** speed/lateral/heading/tilt checks versus 2/12 for
+first trained policy. Four fail the <=10° heading criterion (11–15° turn).
+No heldout numerical/contact validity failure. Speeds 1.72–6.90 mm/s. All seven
+refined domain pairs pass a 20% +1 mm displacement timestep diagnostic, not a
+formal convergence proof. After battery confirmation, nominal 5/5.5/6 V at
+1/2 ms all pass (32–48 mm forward); these are hypothetical constant bus voltages,
+not measurements or sag/thermal simulations. No extrapolation above 6 V.
+
+Artifacts: `configs/sway-trained.json`, `docs/MOTOR_TRAINING_2026-11-18.md`,
+`experiments/reports/motor-training-summary-final-2026-11-18.json`, complete
+initial/refined/battery receipts, and
+`media/simulation/motors-trained-2026-11-18.mp4` (14.08 s, real-time playback,
+actual saved 1 ms states, front/side fixed cameras). Preview PNG inspected;
+ffprobe verified 352 frames at 25 fps. Full states are local/ignored at
+`experiments/generated/motors-trained-1ms-2026-11-18.json`.
+
+Validation: **63 tests passed locally**, including torque-speed/braking,
+voltage-extrapolation rejection, delay, per-motor torque/target-rate bounds,
+mass/passive inertia, reproducible rollout, stationary control, and criteria
+that distinguish numerical validity from walking success. Log:
+`experiments/reports/repository-tests-motors-final-2026-11-18.txt`.
+
+```sh
+.venv/bin/python -m reachy_locomotion.sway --config configs/motors-datasheet.json --gait configs/sway-trained.json --cycles 24 --output experiments/generated/trained-next.json
+.venv/bin/python experiments/train_sway.py --output experiments/reports/motor-training-next.json
+.venv/bin/python experiments/refine_sway.py --output experiments/reports/motor-training-refined-next.json
+.venv/bin/python experiments/battery_sensitivity.py --output experiments/reports/motor-training-battery-next.json
+```
+
+Next: read-only battery-powered voltage/register/state capture, fit actuator
+phase lag and passive/contact losses, then add heading feedback and evaluate on
+fresh domains. Transfer remains gated by the existing hardware commissioning
+workflow. Motor specifications are sourced; dynamics/contact/thermal behavior
+are not physically calibrated. No robot, shared Ubuntu GPU, or paid job used.
+
 ## November 18, 2026 — head sway produces simulated forward motion
 
 User requested simulation-first head sway inspired by their video. Implemented

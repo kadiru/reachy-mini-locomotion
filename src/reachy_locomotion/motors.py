@@ -4,7 +4,6 @@ See docs/MOTOR_LIMITS.md for provenance, inferred dynamics and missing telemetry
 Only this module's synthetic torques enter MuJoCo; no robot connection exists.
 """
 import math
-import xml.etree.ElementTree as ET
 from collections import deque
 
 import numpy as np

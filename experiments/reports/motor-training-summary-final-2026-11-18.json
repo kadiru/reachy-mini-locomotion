@@ -1,0 +1,360 @@
+{
+  "evidence": "uncalibrated_simulation",
+  "hardware_ready": false,
+  "qualification": "valid; >=1 mm/s forward; lateral <=30% forward +2 mm; |heading| <=10 deg; tilt <=12 deg",
+  "qualification_is_not_hardware_acceptance": true,
+  "labels": {
+    "refined": {
+      "heldout_cases": 12,
+      "heldout_valid": 12,
+      "heldout_forward_over_1mm": 12,
+      "heldout_qualified": 8,
+      "heldout_speed_mm_s_range": [
+        1.7160041253558114,
+        6.903188853913793
+      ],
+      "nominal": [
+        {
+          "actual_frequency_hz": 1.8518518518518519,
+          "measured_seconds": 12.96,
+          "forward_m": 0.03404104158778382,
+          "lateral_m": -0.004386148685322786,
+          "heading_change_rad": -0.048064377233068,
+          "rms_base_acceleration_m_s2": 0.4373880962840015,
+          "rms_base_angular_velocity_rad_s": 0.14981766529265325,
+          "max_foot_tilt_deg": 0.8620294098751625,
+          "max_head_orientation_tracking_error_deg": 87.73639790819269,
+          "left_unloaded_fraction": 0.12731481481481483,
+          "right_unloaded_fraction": 0.11682098765432099,
+          "any_motor_torque_saturated_fraction": 0.0,
+          "dt_s": 0.002,
+          "qualified": true
+        },
+        {
+          "actual_frequency_hz": 1.8518518518518519,
+          "measured_seconds": 12.96,
+          "forward_m": 0.03212299572514042,
+          "lateral_m": -0.005087396406298396,
+          "heading_change_rad": -0.060966710300354165,
+          "rms_base_acceleration_m_s2": 0.4193155552273393,
+          "rms_base_angular_velocity_rad_s": 0.14593721884439861,
+          "max_foot_tilt_deg": 0.8081623442912089,
+          "max_head_orientation_tracking_error_deg": 88.14220251403437,
+          "left_unloaded_fraction": 0.12662037037037038,
+          "right_unloaded_fraction": 0.11736111111111111,
+          "any_motor_torque_saturated_fraction": 0.0,
+          "dt_s": 0.001,
+          "qualified": true
+        }
+      ],
+      "timestep_pairs": [
+        {
+          "domain_index": 0,
+          "forward_difference_mm": 1.9180458626434014,
+          "heading_difference_deg": 0.7392492306275792,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 1,
+          "forward_difference_mm": 5.355243278604524,
+          "heading_difference_deg": 4.561849691240106,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 2,
+          "forward_difference_mm": 4.677783483407971,
+          "heading_difference_deg": 2.2509197745924223,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 3,
+          "forward_difference_mm": 2.7839111804418106,
+          "heading_difference_deg": 1.1065847660410337,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 4,
+          "forward_difference_mm": 0.7288884012903868,
+          "heading_difference_deg": 2.1856462988601604,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 5,
+          "forward_difference_mm": 0.3962660844888041,
+          "heading_difference_deg": 1.2295114111095418,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 6,
+          "forward_difference_mm": 1.4086460171386928,
+          "heading_difference_deg": 1.3220752501832767,
+          "converged_at_20pct_plus_1mm": true
+        }
+      ]
+    },
+    "initial_trained": {
+      "heldout_cases": 12,
+      "heldout_valid": 12,
+      "heldout_forward_over_1mm": 12,
+      "heldout_qualified": 2,
+      "heldout_speed_mm_s_range": [
+        0.8336762154082791,
+        13.721254841766665
+      ],
+      "nominal": [
+        {
+          "actual_frequency_hz": 2.1739130434782608,
+          "measured_seconds": 11.040000000000001,
+          "forward_m": 0.06442118390244532,
+          "lateral_m": -0.11201144719577011,
+          "heading_change_rad": -1.7174312829165894,
+          "rms_base_acceleration_m_s2": 1.189538137137726,
+          "rms_base_angular_velocity_rad_s": 0.604972368231535,
+          "max_foot_tilt_deg": 3.290319618114551,
+          "max_head_orientation_tracking_error_deg": 93.85661001147886,
+          "left_unloaded_fraction": 0.39094202898550723,
+          "right_unloaded_fraction": 0.3884057971014493,
+          "any_motor_torque_saturated_fraction": 0.15018115942028987,
+          "dt_s": 0.002,
+          "qualified": false
+        },
+        {
+          "actual_frequency_hz": 2.1739130434782608,
+          "measured_seconds": 11.040000000000001,
+          "forward_m": 0.06404600577733198,
+          "lateral_m": -0.10953476664827802,
+          "heading_change_rad": -1.7056759675270297,
+          "rms_base_acceleration_m_s2": 1.1718829226668654,
+          "rms_base_angular_velocity_rad_s": 0.6034834780887556,
+          "max_foot_tilt_deg": 3.33553122542579,
+          "max_head_orientation_tracking_error_deg": 93.49450340895798,
+          "left_unloaded_fraction": 0.4041666666666667,
+          "right_unloaded_fraction": 0.392481884057971,
+          "any_motor_torque_saturated_fraction": 0.1490036231884058,
+          "dt_s": 0.001,
+          "qualified": false
+        }
+      ],
+      "timestep_pairs": [
+        {
+          "domain_index": 0,
+          "forward_difference_mm": 0.37517812511334014,
+          "heading_difference_deg": 0.6735299586669595,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 1,
+          "forward_difference_mm": 11.082026810494055,
+          "heading_difference_deg": 14.131849590150312,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 2,
+          "forward_difference_mm": 1.2865449139266918,
+          "heading_difference_deg": 1.1831604177798816,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 3,
+          "forward_difference_mm": 6.74746956920827,
+          "heading_difference_deg": 11.906175299714851,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 4,
+          "forward_difference_mm": 0.4926200250477235,
+          "heading_difference_deg": 0.5323058194620995,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 5,
+          "forward_difference_mm": 3.318905519673038,
+          "heading_difference_deg": 1.274664181094643,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 6,
+          "forward_difference_mm": 0.2759724319297014,
+          "heading_difference_deg": 0.23865396490815774,
+          "converged_at_20pct_plus_1mm": true
+        }
+      ]
+    },
+    "old_untrained": {
+      "heldout_cases": 12,
+      "heldout_valid": 12,
+      "heldout_forward_over_1mm": 0,
+      "heldout_qualified": 0,
+      "heldout_speed_mm_s_range": [
+        -0.014955929140589196,
+        0.013784305566702093
+      ],
+      "nominal": [
+        {
+          "actual_frequency_hz": 4.545454545454546,
+          "measured_seconds": 5.28,
+          "forward_m": 1.0679155399521087e-05,
+          "lateral_m": -2.2533901183999934e-06,
+          "heading_change_rad": 0.00033961827601158845,
+          "rms_base_acceleration_m_s2": 0.007824448525181686,
+          "rms_base_angular_velocity_rad_s": 0.0052324479654951,
+          "max_foot_tilt_deg": 0.1261438757485407,
+          "max_head_orientation_tracking_error_deg": 76.85622604444266,
+          "left_unloaded_fraction": 0.0,
+          "right_unloaded_fraction": 0.0,
+          "any_motor_torque_saturated_fraction": 0.0,
+          "dt_s": 0.002,
+          "qualified": false
+        },
+        {
+          "actual_frequency_hz": 4.545454545454546,
+          "measured_seconds": 5.28,
+          "forward_m": -4.935034860089804e-06,
+          "lateral_m": -1.2533557401880405e-05,
+          "heading_change_rad": -7.530757864282478e-05,
+          "rms_base_acceleration_m_s2": 0.0074489514942456805,
+          "rms_base_angular_velocity_rad_s": 0.005080560551283332,
+          "max_foot_tilt_deg": 0.07109842839400297,
+          "max_head_orientation_tracking_error_deg": 75.26653644201018,
+          "left_unloaded_fraction": 0.0,
+          "right_unloaded_fraction": 0.0,
+          "any_motor_torque_saturated_fraction": 0.0,
+          "dt_s": 0.001,
+          "qualified": false
+        }
+      ],
+      "timestep_pairs": [
+        {
+          "domain_index": 0,
+          "forward_difference_mm": 0.015614190259610892,
+          "heading_difference_deg": 0.023773500282556502,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 1,
+          "forward_difference_mm": 0.025692917535108554,
+          "heading_difference_deg": 0.02650276429813809,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 2,
+          "forward_difference_mm": 0.09405466626928821,
+          "heading_difference_deg": 0.11010081442467029,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 3,
+          "forward_difference_mm": 0.012766756693289333,
+          "heading_difference_deg": 0.028981368040876636,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 4,
+          "forward_difference_mm": 0.018789962440229454,
+          "heading_difference_deg": 0.0004015505653970251,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 5,
+          "forward_difference_mm": 0.012954300548523028,
+          "heading_difference_deg": 0.022361252435226898,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 6,
+          "forward_difference_mm": 0.031058887575585472,
+          "heading_difference_deg": 0.022326345452114944,
+          "converged_at_20pct_plus_1mm": true
+        }
+      ]
+    },
+    "stationary": {
+      "heldout_cases": 12,
+      "heldout_valid": 12,
+      "heldout_forward_over_1mm": 0,
+      "heldout_qualified": 0,
+      "heldout_speed_mm_s_range": [
+        2.649971411384946e-09,
+        3.0812563113178517e-07
+      ],
+      "nominal": [
+        {
+          "actual_frequency_hz": 2.0,
+          "measured_seconds": 12.0,
+          "forward_m": 1.3201973763744903e-10,
+          "lateral_m": -1.7442651727858554e-11,
+          "heading_change_rad": 1.550654715742894e-09,
+          "rms_base_acceleration_m_s2": 2.822700901935705e-10,
+          "rms_base_angular_velocity_rad_s": 1.8125948223595809e-09,
+          "max_foot_tilt_deg": 0.0008083753234208777,
+          "max_head_orientation_tracking_error_deg": 0.16196339023801778,
+          "left_unloaded_fraction": 0.0,
+          "right_unloaded_fraction": 0.0,
+          "any_motor_torque_saturated_fraction": 0.0,
+          "dt_s": 0.002,
+          "qualified": false
+        },
+        {
+          "actual_frequency_hz": 2.0,
+          "measured_seconds": 12.0,
+          "forward_m": 1.1993851746668304e-10,
+          "lateral_m": -1.465447921477172e-11,
+          "heading_change_rad": 1.5341297121551634e-09,
+          "rms_base_acceleration_m_s2": 2.780428575993328e-10,
+          "rms_base_angular_velocity_rad_s": 1.8007197283633853e-09,
+          "max_foot_tilt_deg": 0.0008100161439516479,
+          "max_head_orientation_tracking_error_deg": 0.1667513232767057,
+          "left_unloaded_fraction": 0.0,
+          "right_unloaded_fraction": 0.0,
+          "any_motor_torque_saturated_fraction": 0.0,
+          "dt_s": 0.001,
+          "qualified": false
+        }
+      ],
+      "timestep_pairs": [
+        {
+          "domain_index": 0,
+          "forward_difference_mm": 1.2081220170765988e-08,
+          "heading_difference_deg": 9.468129620155113e-10,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 1,
+          "forward_difference_mm": 1.581711446968644e-08,
+          "heading_difference_deg": 8.662049841685e-10,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 2,
+          "forward_difference_mm": 1.2031040765092088e-08,
+          "heading_difference_deg": 1.5102291405086846e-09,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 3,
+          "forward_difference_mm": 5.686125195460324e-09,
+          "heading_difference_deg": 7.207136908196329e-10,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 4,
+          "forward_difference_mm": 2.834306661073596e-07,
+          "heading_difference_deg": 2.363571961545346e-08,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 5,
+          "forward_difference_mm": 3.354406468569896e-08,
+          "heading_difference_deg": 5.922192816885069e-10,
+          "converged_at_20pct_plus_1mm": true
+        },
+        {
+          "domain_index": 6,
+          "forward_difference_mm": 2.024952957668869e-07,
+          "heading_difference_deg": 2.4834203508303818e-08,
+          "converged_at_20pct_plus_1mm": true
+        }
+      ]
+    }
+  }
+}
