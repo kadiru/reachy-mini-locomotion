@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reachy-mini-locomotion"
+version = "0.1.0"
+description = "Quest demonstration capture and experimental head-driven Reachy Mini locomotion"
+requires-python = ">=3.9,<3.13"
+dependencies = []
+
+[project.optional-dependencies]
+capture = ["numpy==2.0.2", "opencv-python==4.12.0.88", "Pillow==11.3.0"]
+sim = ["numpy==2.0.2", "mujoco==3.3.7"]
+
+[project.scripts]
+reachy-locomotion = "reachy_locomotion.__main__:main"
+reachy-contact-probe = "reachy_locomotion.contact_probe:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

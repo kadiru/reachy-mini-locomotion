@@ -1,0 +1,24 @@
+name: CPU tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -e '.[capture,sim]'
+      - name: Fetch pinned official model
+        env:
+          GIT_LFS_SKIP_SMUDGE: '1'
+        run: |
+          git init experiments/upstream-reachy-mini
+          git -C experiments/upstream-reachy-mini remote add origin https://github.com/pollen-robotics/reachy_mini.git
+          git -C experiments/upstream-reachy-mini fetch --depth 1 origin a9a2a42adcc1abc7d9c90d390889bbebf930c96c
+          git -C experiments/upstream-reachy-mini checkout --detach FETCH_HEAD
+          python experiments/fetch_mujoco_assets.py
+      - run: python -m unittest discover -s tests -v

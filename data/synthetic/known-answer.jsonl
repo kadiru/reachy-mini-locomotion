@@ -1,0 +1,131 @@
+{"kind": "session", "schema_version": 1, "session_id": "SYNTHETIC-001", "evidence": "synthetic", "control_mode": "teleoperation", "robot": {"variant": "synthetic_wireless", "sdk_commit": null}, "setup": {"surface": "invented", "condition_id": "synthetic-only"}, "clock": {"type": "synthetic", "origin_monotonic_ns": 0}, "measurement": {"max_pose_gap_s": 0.11, "xy_endpoint_uncertainty_m": 0.0005}, "review": {"falls_reviewed": true, "external_assistance_reviewed": true}}
+{"kind": "event", "t_ns": 0, "source": "SYNTHETIC_GENERATOR", "data": {"name": "cycle_start", "cycle_id": "0"}}
+{"kind": "base_pose", "t_ns": 0, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.0, "y_m": 0.0, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 0, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": 0.0}}}
+{"kind": "state", "t_ns": 0, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": 0.0}}}
+{"kind": "video_frame", "t_ns": 0, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 0, "pts_s": 0.0, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 100000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.001, "y_m": 0.0011755705045849462, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 100000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": 0.029389262614623657}}}
+{"kind": "state", "t_ns": 100000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": 0.023511410091698926}}}
+{"kind": "video_frame", "t_ns": 100000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 1, "pts_s": 0.1, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 200000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.002, "y_m": 0.0019021130325903072, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 200000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": 0.04755282581475768}}}
+{"kind": "state", "t_ns": 200000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": 0.038042260651806145}}}
+{"kind": "video_frame", "t_ns": 200000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 2, "pts_s": 0.2, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 300000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.003, "y_m": 0.0019021130325903074, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 300000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": 0.047552825814757685}}}
+{"kind": "state", "t_ns": 300000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": 0.038042260651806145}}}
+{"kind": "video_frame", "t_ns": 300000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 3, "pts_s": 0.3, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 400000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.004, "y_m": 0.0011755705045849464, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 400000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": 0.029389262614623664}}}
+{"kind": "state", "t_ns": 400000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": 0.02351141009169893}}}
+{"kind": "video_frame", "t_ns": 400000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 4, "pts_s": 0.4, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 500000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.005, "y_m": 2.4492935982947063e-19, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 500000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": 6.123233995736766e-18}}}
+{"kind": "state", "t_ns": 500000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": 4.898587196589413e-18}}}
+{"kind": "video_frame", "t_ns": 500000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 5, "pts_s": 0.5, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 600000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.006, "y_m": -0.001175570504584946, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 600000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": -0.029389262614623653}}}
+{"kind": "state", "t_ns": 600000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": -0.023511410091698923}}}
+{"kind": "video_frame", "t_ns": 600000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 6, "pts_s": 0.6, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 700000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.006999999999999999, "y_m": -0.0019021130325903072, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 700000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": -0.04755282581475768}}}
+{"kind": "state", "t_ns": 700000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": -0.038042260651806145}}}
+{"kind": "video_frame", "t_ns": 700000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 7, "pts_s": 0.7, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 800000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.008, "y_m": -0.0019021130325903074, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 800000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": -0.047552825814757685}}}
+{"kind": "state", "t_ns": 800000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": -0.038042260651806145}}}
+{"kind": "video_frame", "t_ns": 800000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 8, "pts_s": 0.8, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 900000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.009000000000000001, "y_m": -0.0011755705045849467, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 900000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": -0.02938926261462367}}}
+{"kind": "state", "t_ns": 900000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": -0.023511410091698937}}}
+{"kind": "video_frame", "t_ns": 900000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 9, "pts_s": 0.9, "clock_mapping": "synthetic_identity"}}
+{"kind": "event", "t_ns": 1000000000, "source": "SYNTHETIC_GENERATOR", "data": {"name": "cycle_end", "cycle_id": "0"}}
+{"kind": "event", "t_ns": 1000000000, "source": "SYNTHETIC_GENERATOR", "data": {"name": "cycle_start", "cycle_id": "1"}}
+{"kind": "base_pose", "t_ns": 1000000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.01, "y_m": -4.898587196589413e-19, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 1000000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": -1.2246467991473533e-17}}}
+{"kind": "state", "t_ns": 1000000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": -9.797174393178826e-18}}}
+{"kind": "video_frame", "t_ns": 1000000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 10, "pts_s": 1.0, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 1100000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.011000000000000001, "y_m": 0.001175570504584947, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 1100000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": 0.02938926261462368}}}
+{"kind": "state", "t_ns": 1100000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": 0.023511410091698944}}}
+{"kind": "video_frame", "t_ns": 1100000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 11, "pts_s": 1.1, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 1200000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.012, "y_m": 0.0019021130325903072, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 1200000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": 0.04755282581475768}}}
+{"kind": "state", "t_ns": 1200000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": 0.038042260651806145}}}
+{"kind": "video_frame", "t_ns": 1200000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 12, "pts_s": 1.2, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 1300000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.013000000000000001, "y_m": 0.0019021130325903074, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 1300000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": 0.047552825814757685}}}
+{"kind": "state", "t_ns": 1300000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": 0.038042260651806145}}}
+{"kind": "video_frame", "t_ns": 1300000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 13, "pts_s": 1.3, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 1400000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.013999999999999999, "y_m": 0.0011755705045849467, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 1400000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": 0.02938926261462367}}}
+{"kind": "state", "t_ns": 1400000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": 0.023511410091698937}}}
+{"kind": "video_frame", "t_ns": 1400000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 14, "pts_s": 1.4, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 1500000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.015, "y_m": 7.347880794884119e-19, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 1500000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": 1.8369701987210297e-17}}}
+{"kind": "state", "t_ns": 1500000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": 1.4695761589768237e-17}}}
+{"kind": "video_frame", "t_ns": 1500000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 15, "pts_s": 1.5, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 1600000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.016, "y_m": -0.0011755705045849456, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 1600000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": -0.029389262614623643}}}
+{"kind": "state", "t_ns": 1600000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": -0.023511410091698912}}}
+{"kind": "video_frame", "t_ns": 1600000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 16, "pts_s": 1.6, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 1700000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.017, "y_m": -0.001902113032590307, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 1700000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": -0.04755282581475767}}}
+{"kind": "state", "t_ns": 1700000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": -0.03804226065180614}}}
+{"kind": "video_frame", "t_ns": 1700000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 17, "pts_s": 1.7, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 1800000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.018000000000000002, "y_m": -0.0019021130325903076, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 1800000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": -0.04755282581475769}}}
+{"kind": "state", "t_ns": 1800000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": -0.03804226065180615}}}
+{"kind": "video_frame", "t_ns": 1800000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 18, "pts_s": 1.8, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 1900000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.019, "y_m": -0.0011755705045849469, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 1900000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": -0.029389262614623674}}}
+{"kind": "state", "t_ns": 1900000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": -0.02351141009169894}}}
+{"kind": "video_frame", "t_ns": 1900000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 19, "pts_s": 1.9, "clock_mapping": "synthetic_identity"}}
+{"kind": "event", "t_ns": 2000000000, "source": "SYNTHETIC_GENERATOR", "data": {"name": "cycle_end", "cycle_id": "1"}}
+{"kind": "event", "t_ns": 2000000000, "source": "SYNTHETIC_GENERATOR", "data": {"name": "cycle_start", "cycle_id": "2"}}
+{"kind": "base_pose", "t_ns": 2000000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.02, "y_m": -9.797174393178825e-19, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 2000000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": -2.4492935982947065e-17}}}
+{"kind": "state", "t_ns": 2000000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": -1.959434878635765e-17}}}
+{"kind": "video_frame", "t_ns": 2000000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 20, "pts_s": 2.0, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 2100000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.021, "y_m": 0.0011755705045849454, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 2100000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": 0.029389262614623636}}}
+{"kind": "state", "t_ns": 2100000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": 0.02351141009169891}}}
+{"kind": "video_frame", "t_ns": 2100000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 21, "pts_s": 2.1, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 2200000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.022000000000000002, "y_m": 0.001902113032590308, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 2200000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": 0.0475528258147577}}}
+{"kind": "state", "t_ns": 2200000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": 0.03804226065180616}}}
+{"kind": "video_frame", "t_ns": 2200000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 22, "pts_s": 2.2, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 2300000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.023, "y_m": 0.0019021130325903087, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 2300000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": 0.04755282581475772}}}
+{"kind": "state", "t_ns": 2300000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": 0.03804226065180617}}}
+{"kind": "video_frame", "t_ns": 2300000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 23, "pts_s": 2.3, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 2400000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.024, "y_m": 0.001175570504584947, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 2400000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": 0.02938926261462368}}}
+{"kind": "state", "t_ns": 2400000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": 0.023511410091698944}}}
+{"kind": "video_frame", "t_ns": 2400000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 24, "pts_s": 2.4, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 2500000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.025, "y_m": 1.2246467991473532e-18, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 2500000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": 3.061616997868383e-17}}}
+{"kind": "state", "t_ns": 2500000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": 2.4492935982947065e-17}}}
+{"kind": "video_frame", "t_ns": 2500000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 25, "pts_s": 2.5, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 2600000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.026000000000000002, "y_m": -0.0011755705045849451, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 2600000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": -0.02938926261462363}}}
+{"kind": "state", "t_ns": 2600000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": -0.023511410091698905}}}
+{"kind": "video_frame", "t_ns": 2600000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 26, "pts_s": 2.6, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 2700000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.027000000000000003, "y_m": -0.001902113032590307, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 2700000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": -0.04755282581475767}}}
+{"kind": "state", "t_ns": 2700000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": -0.03804226065180614}}}
+{"kind": "video_frame", "t_ns": 2700000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 27, "pts_s": 2.7, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 2800000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.027999999999999997, "y_m": -0.0019021130325903076, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 2800000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": -0.04755282581475769}}}
+{"kind": "state", "t_ns": 2800000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": -0.03804226065180615}}}
+{"kind": "video_frame", "t_ns": 2800000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 28, "pts_s": 2.8, "clock_mapping": "synthetic_identity"}}
+{"kind": "base_pose", "t_ns": 2900000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.028999999999999998, "y_m": -0.0011755705045849473, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 2900000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": -0.029389262614623685}}}
+{"kind": "state", "t_ns": 2900000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": -0.023511410091698947}}}
+{"kind": "video_frame", "t_ns": 2900000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 29, "pts_s": 2.9, "clock_mapping": "synthetic_identity"}}
+{"kind": "event", "t_ns": 3000000000, "source": "SYNTHETIC_GENERATOR", "data": {"name": "cycle_end", "cycle_id": "2"}}
+{"kind": "base_pose", "t_ns": 3000000000, "source": "SYNTHETIC_GENERATOR", "data": {"tracked_body": "foot", "frame": "world", "x_m": 0.03, "y_m": -1.4695761589768239e-18, "yaw_rad": 0}}
+{"kind": "command", "t_ns": 3000000000, "source": "SYNTHETIC_GENERATOR", "data": {"stage": "submitted", "target": {"body_yaw": -3.6739403974420595e-17}}}
+{"kind": "state", "t_ns": 3000000000, "source": "SYNTHETIC_GENERATOR", "data": {"sdk_state": {"body_yaw": -2.9391523179536474e-17}}}
+{"kind": "video_frame", "t_ns": 3000000000, "source": "SYNTHETIC_GENERATOR", "data": {"stream_id": "synthetic-no-video-file", "frame_index": 30, "pts_s": 3.0, "clock_mapping": "synthetic_identity"}}

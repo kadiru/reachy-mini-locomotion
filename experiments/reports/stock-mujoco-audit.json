@@ -1,0 +1,141 @@
+{
+  "evidence": "compiled_model_inspection_only",
+  "upstream_commit": "a9a2a42adcc1abc7d9c90d390889bbebf930c96c",
+  "mujoco_version": "3.3.7",
+  "scene": "/Users/kadir/linkedin/projects/reachy-mini-locomotion/experiments/upstream-reachy-mini/src/reachy_mini/descriptions/reachy_mini/mjcf/scenes/empty.xml",
+  "nq": 37,
+  "nv": 30,
+  "nu": 9,
+  "free_joints": [],
+  "base_joint_count": 0,
+  "base_collision_geom_count": 0,
+  "base_subtree_mass_kg": 1.1765282399999994,
+  "floor_friction_slide_torsion_roll": [
+    1.0,
+    0.005,
+    0.0001
+  ],
+  "actuators": [
+    {
+      "name": "yaw_body",
+      "force_limited": true,
+      "force_range": [
+        -20.0,
+        20.0
+      ],
+      "control_limited": true,
+      "control_range": [
+        -2.792526803190975,
+        2.792526803190879
+      ]
+    },
+    {
+      "name": "stewart_1",
+      "force_limited": true,
+      "force_range": [
+        -20.0,
+        20.0
+      ],
+      "control_limited": true,
+      "control_range": [
+        -0.8377580409572196,
+        1.3962634015955222
+      ]
+    },
+    {
+      "name": "stewart_2",
+      "force_limited": true,
+      "force_range": [
+        -20.0,
+        20.0
+      ],
+      "control_limited": true,
+      "control_range": [
+        -1.396263401595614,
+        1.22173047639588
+      ]
+    },
+    {
+      "name": "stewart_3",
+      "force_limited": true,
+      "force_range": [
+        -20.0,
+        20.0
+      ],
+      "control_limited": true,
+      "control_range": [
+        -0.8377580409572174,
+        1.3962634015955244
+      ]
+    },
+    {
+      "name": "stewart_4",
+      "force_limited": true,
+      "force_range": [
+        -20.0,
+        20.0
+      ],
+      "control_limited": true,
+      "control_range": [
+        -1.3962634015953894,
+        0.8377580409573524
+      ]
+    },
+    {
+      "name": "stewart_5",
+      "force_limited": true,
+      "force_range": [
+        -20.0,
+        20.0
+      ],
+      "control_limited": true,
+      "control_range": [
+        -1.2217304763962082,
+        1.3962634015952857
+      ]
+    },
+    {
+      "name": "stewart_6",
+      "force_limited": true,
+      "force_range": [
+        -20.0,
+        20.0
+      ],
+      "control_limited": true,
+      "control_range": [
+        -1.3962634015954123,
+        0.8377580409573295
+      ]
+    },
+    {
+      "name": "right_antenna",
+      "force_limited": true,
+      "force_range": [
+        -20.0,
+        20.0
+      ],
+      "control_limited": false,
+      "control_range": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "left_antenna",
+      "force_limited": true,
+      "force_range": [
+        -20.0,
+        20.0
+      ],
+      "control_limited": false,
+      "control_range": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "locomotion_ready": false,
+  "reason": "Fixed foot; no free joint or foot contact collider. Actuators and floor need hardware calibration.",
+  "simulation_rollouts_run": 0,
+  "training_jobs_started": 0
+}

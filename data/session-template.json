@@ -1,0 +1,26 @@
+{
+  "session_id": "REPLACE_WITH_UNIQUE_TRIAL_ID",
+  "evidence": "physical",
+  "control_mode": "teleoperation",
+  "robot": {
+    "variant": "wireless",
+    "sdk_commit": "UNKNOWN_READ_INSTALLED_VERSION",
+    "teleop_commit": "76ab2fdef8e872d36c0bfd0c866570e512a2aaad",
+    "actuation_bridge": "UNKNOWN"
+  },
+  "setup": {
+    "surface": "flat; material and friction unmeasured",
+    "condition_id": "REPLACE_WITH_SURFACE_MOTION_AND_START_POSE_ID",
+    "attachments": "unconfirmed",
+    "power": "unconfirmed battery or cable",
+    "video": "external fixed camera required; not connected"
+  },
+  "measurement": {
+    "max_pose_gap_s": 0.1,
+    "xy_endpoint_uncertainty_m": null
+  },
+  "review": {
+    "falls_reviewed": false,
+    "external_assistance_reviewed": false
+  }
+}

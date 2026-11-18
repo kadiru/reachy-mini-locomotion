@@ -1,0 +1,194 @@
+{
+  "mode": "offline_schedule_only",
+  "evidence": "synthetic",
+  "source_session_id": "SYNTHETIC-001",
+  "commands": [
+    {
+      "offset_ns": 0,
+      "target": {
+        "body_yaw": 0.0
+      }
+    },
+    {
+      "offset_ns": 100000000,
+      "target": {
+        "body_yaw": 0.029389262614623657
+      }
+    },
+    {
+      "offset_ns": 200000000,
+      "target": {
+        "body_yaw": 0.04755282581475768
+      }
+    },
+    {
+      "offset_ns": 300000000,
+      "target": {
+        "body_yaw": 0.047552825814757685
+      }
+    },
+    {
+      "offset_ns": 400000000,
+      "target": {
+        "body_yaw": 0.029389262614623664
+      }
+    },
+    {
+      "offset_ns": 500000000,
+      "target": {
+        "body_yaw": 6.123233995736766e-18
+      }
+    },
+    {
+      "offset_ns": 600000000,
+      "target": {
+        "body_yaw": -0.029389262614623653
+      }
+    },
+    {
+      "offset_ns": 700000000,
+      "target": {
+        "body_yaw": -0.04755282581475768
+      }
+    },
+    {
+      "offset_ns": 800000000,
+      "target": {
+        "body_yaw": -0.047552825814757685
+      }
+    },
+    {
+      "offset_ns": 900000000,
+      "target": {
+        "body_yaw": -0.02938926261462367
+      }
+    },
+    {
+      "offset_ns": 1000000000,
+      "target": {
+        "body_yaw": -1.2246467991473533e-17
+      }
+    },
+    {
+      "offset_ns": 1100000000,
+      "target": {
+        "body_yaw": 0.02938926261462368
+      }
+    },
+    {
+      "offset_ns": 1200000000,
+      "target": {
+        "body_yaw": 0.04755282581475768
+      }
+    },
+    {
+      "offset_ns": 1300000000,
+      "target": {
+        "body_yaw": 0.047552825814757685
+      }
+    },
+    {
+      "offset_ns": 1400000000,
+      "target": {
+        "body_yaw": 0.02938926261462367
+      }
+    },
+    {
+      "offset_ns": 1500000000,
+      "target": {
+        "body_yaw": 1.8369701987210297e-17
+      }
+    },
+    {
+      "offset_ns": 1600000000,
+      "target": {
+        "body_yaw": -0.029389262614623643
+      }
+    },
+    {
+      "offset_ns": 1700000000,
+      "target": {
+        "body_yaw": -0.04755282581475767
+      }
+    },
+    {
+      "offset_ns": 1800000000,
+      "target": {
+        "body_yaw": -0.04755282581475769
+      }
+    },
+    {
+      "offset_ns": 1900000000,
+      "target": {
+        "body_yaw": -0.029389262614623674
+      }
+    },
+    {
+      "offset_ns": 2000000000,
+      "target": {
+        "body_yaw": -2.4492935982947065e-17
+      }
+    },
+    {
+      "offset_ns": 2100000000,
+      "target": {
+        "body_yaw": 0.029389262614623636
+      }
+    },
+    {
+      "offset_ns": 2200000000,
+      "target": {
+        "body_yaw": 0.0475528258147577
+      }
+    },
+    {
+      "offset_ns": 2300000000,
+      "target": {
+        "body_yaw": 0.04755282581475772
+      }
+    },
+    {
+      "offset_ns": 2400000000,
+      "target": {
+        "body_yaw": 0.02938926261462368
+      }
+    },
+    {
+      "offset_ns": 2500000000,
+      "target": {
+        "body_yaw": 3.061616997868383e-17
+      }
+    },
+    {
+      "offset_ns": 2600000000,
+      "target": {
+        "body_yaw": -0.02938926261462363
+      }
+    },
+    {
+      "offset_ns": 2700000000,
+      "target": {
+        "body_yaw": -0.04755282581475767
+      }
+    },
+    {
+      "offset_ns": 2800000000,
+      "target": {
+        "body_yaw": -0.04755282581475769
+      }
+    },
+    {
+      "offset_ns": 2900000000,
+      "target": {
+        "body_yaw": -0.029389262614623685
+      }
+    },
+    {
+      "offset_ns": 3000000000,
+      "target": {
+        "body_yaw": -3.6739403974420595e-17
+      }
+    }
+  ],
+  "hardware_ready": false
+}
