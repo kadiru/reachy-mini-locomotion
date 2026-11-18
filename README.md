@@ -8,9 +8,13 @@ The opening sequence shows controller-driven head motion, whole-body rocking
 and apparent base progress. [Video observations](docs/VIMEO_OBSERVATIONS_2026-11-18.md)
 separate what is visible from what still needs measurement.
 
-**Current state (November 18, 2026):** capture/analysis tools and an experimental
-free-foot MuJoCo contact probe are implemented. There is no trained gait or
-verified sim-to-real transfer. Physical commissioning remains pending.
+**Current state (November 18, 2026):** a scripted head roll/yaw pattern now produces
+penguin-like rocking and forward travel in the uncalibrated MuJoCo model: **15.8 cm
+in 6.6 simulated seconds** in a 30-cycle run. [Results, limits and reproduction](docs/SWAY_EXPERIMENT_2026-11-18.md)
+include 170 search/control trials, timestep/friction checks, backwards motion
+when yaw phase is reversed, and failures. Motor saturation and parameter
+sensitivity remain substantial. There is no trained policy or verified physical
+transfer. [Watch the simulation](media/simulation/sway-forward-2026-11-18.mp4).
 
 ## Start here
 
@@ -29,6 +33,7 @@ to fetch it and run a CPU-only experiment. No robot or GPU is needed.
 - [Learning roadmap](docs/LEARNING_ROADMAP.md): demonstrations → replay → model fitting → compact gait learning → residual RL → supervised transfer.
 - [First recording session](docs/FIRST_RECORDING_SESSION.md): existing Quest bridge, calibration and robot-local guardian.
 - [Moving-foot experiment](docs/CONTACT_PROBE.md): derived official model, explicit assumptions and reproducible results.
+- [Head-sway experiment](docs/SWAY_EXPERIMENT_2026-11-18.md): official IK, roll/yaw controller, search results and rendered motion.
 
 ## Original first milestone
 
@@ -45,7 +50,7 @@ The user's observation is retained and now supported by a supplied GIF showing c
 - Read-only HTTP state capture; no motor enable, waking or command writes.
 - Cycle analysis, conservative tracking-gap rejection, forward/lateral displacement, repeatability, fall accounting and matched-condition trial comparison.
 - Offline replay schedule generation from submitted SDK targets. It cannot actuate hardware.
-- CPU-only audit of the stock model and a separate moving-foot contact probe. Hold/push rollouts are implemented; gait training is not.
+- CPU-only model audit, moving-foot contact probe and head-actuated sway controller. Scripted gait exploration is implemented; RL training is not.
 - Original-source ledger and reveal shot list. No verified spoken-video timestamps yet.
 
 **Start with `docs/FIRST_RECORDING_SESSION.md`.** It has the exact commands, Unity setup, camera procedure and stop keys. The synthetic end-to-end test passes with a mock robot; no physical actuation has been attempted. The supplied profile is explicitly a preview example and cannot arm hardware.
@@ -54,7 +59,7 @@ The user's observation is retained and now supported by a supplied GIF showing c
 PYTHONPATH=src .venv/bin/python -m reachy_locomotion session-smoke --output data/synthetic/my-session-check
 ```
 
-Use a new output directory. Current validation: **50 tests pass locally and in [GitHub CI](https://github.com/kadiru/reachy-mini-locomotion/actions/runs/44390624399)**. The local test log is `experiments/reports/repository-tests-2026-11-18.txt`. The earlier full synthetic UDP/HTTP/video pipeline and threaded CLI loss/shutdown check also passed; their generated captures remain local-only.
+Use a new output directory. Current validation: **55 local tests pass**; the [CPU workflow](https://github.com/kadiru/reachy-mini-locomotion/actions/workflows/tests.yml) runs the suite on GitHub. The latest local log is `experiments/reports/repository-tests-sway-2026-11-18.txt`. The earlier full synthetic UDP/HTTP/video pipeline and threaded CLI loss/shutdown check also passed; their generated captures remain local-only.
 
 ## Run locally
 

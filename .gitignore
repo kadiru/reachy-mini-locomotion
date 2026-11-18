@@ -25,3 +25,7 @@ experiments/reports/*
 !experiments/reports/repository-tests-*.txt
 !experiments/reports/synthetic-analysis.json
 !experiments/reports/synthetic-replay-plan.json
+!experiments/reports/sway-*.json
+media/simulation/*
+!media/simulation/sway-forward-2026-11-18.mp4
+!media/simulation/sway-forward-2026-11-18.png

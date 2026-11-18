@@ -1,5 +1,60 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 18, 2026 — head sway produces simulated forward motion
+
+User requested simulation-first head sway inspired by their video. Implemented
+`src/reachy_locomotion/sway.py`: official Rust IK, moving-foot-relative poses,
+50 Hz servo targets, smooth startup, cycle-aligned measurements excluding two
+warm-up cycles, per-physics-step warning/tilt/closure/contact checks, foot force
+diagnostics and saved states. No base-position writes or external pushes occur
+during rollouts. Body yaw target remains zero; six head actuators cause motion.
+
+The first 75 mm contact proxy was wider than the CAD underside. New explicit
+config `configs/sway-cad-proxy.json` uses a 56 mm cylindrical approximation
+informed by CAD bottom bounds and an **unmeasured 1.2 Nm cap**, replacing the
+prior unmeasured 0.6 Nm hypothesis only for this experiment. Neither is a verified
+hardware actuator envelope. The original contact config remains unchanged.
+
+`experiments/sway_study.py` ran **170 CPU simulations**: 135 search cases, 18
+sensitivity cases and 17 controls/extended trials; all four invalid outcomes are
+preserved in `experiments/reports/sway-study-2026-11-18.json`.
+
+Candidate requests roll ±40 degrees and yaw ±30 degrees, yaw phase +90 degrees,
+frequency 4.545 Hz (rounded to 11 samples/cycle). Twelve measured cycles advance
+61.1 mm at 2 ms and 47.8 mm at 1 ms, in 2.64 s. Reversing yaw phase produces
+approximately -27 mm at both timesteps. Zero-motion drift is below 1 micrometre.
+A 30-cycle run travels 158.4 mm forward and 6.3 mm laterally in 6.60 s; peak foot
+tilt 6.43 degrees, maximum closure error 0.097 mm, alternating side unloading,
+and about 10.9 mm maximum opposite-rim clearance. No numerical warning/fall limit
+or non-foot floor contact occurs in that accepted run.
+
+Important limits: motors are strongly saturated; actual head roll/yaw are much
+smaller than requested (roughly ±8 / ±11 degrees). The 0.6 Nm hypothesis barely
+rocks. Low friction causes large sideways drift; heading changes with timestep.
+A faster 2.4 Nm candidate fails at 1 ms despite appearing stable at 2 ms.
+This supports an exploratory rocking/slip mechanism, not calibrated transfer,
+reliable steering or learned autonomy. No hardware/GPU training was performed.
+
+Artifacts: `media/simulation/sway-forward-2026-11-18.mp4` (half-speed, fixed front
+and side cameras, 5 cm grid, metrics), corresponding PNG/GIF, full local states
+in `experiments/generated/sway-forward-2026-11-18.json`. Video is rendered from
+actual saved simulator states. `docs/SWAY_EXPERIMENT_2026-11-18.md` explains
+results, assumptions, failures and exact commands.
+
+Validation: **55 local tests passed**, including static IK/frame agreement,
+unreachable-pose rejection, stationary baseline, and alternating contact with
+intact closed-chain constraints. Log:
+`experiments/reports/repository-tests-sway-2026-11-18.txt`.
+
+```sh
+.venv/bin/python -m reachy_locomotion.sway --config configs/sway-cad-proxy.json --gait configs/sway-candidate.json --cycles 30 --output experiments/generated/my-sway.json
+.venv/bin/python experiments/sway_study.py --stage controls --output experiments/reports/sway-controls-next.json
+```
+
+Next: fit motor speed/torque/latency and actual underside geometry, then reduce
+saturation and sideways drift with a slower reachable trajectory. Compare to
+instrumented Quest demonstrations before any physical transfer.
+
 ## November 18, 2026 — repository launch and moving-foot experiment
 
 Current request: inspect the user's Vimeo movement, create a GitHub repository,

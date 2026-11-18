@@ -1,0 +1,14 @@
+{
+  "frequency_hz": 4.5,
+  "roll_deg": 40.0,
+  "yaw_deg": 30.0,
+  "yaw_phase_deg": 90.0,
+  "pitch_deg": 0.0,
+  "pitch_phase_deg": 0.0,
+  "pitch_bias_deg": 0.0,
+  "x_mm": 0.0,
+  "y_mm": 0.0,
+  "y_phase_deg": 0.0,
+  "z_mm": 0.0,
+  "mirror": 1.0
+}

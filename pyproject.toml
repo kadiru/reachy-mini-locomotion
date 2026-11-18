@@ -11,11 +11,12 @@ dependencies = []
 
 [project.optional-dependencies]
 capture = ["numpy==2.0.2", "opencv-python==4.12.0.88", "Pillow==11.3.0"]
-sim = ["numpy==2.0.2", "mujoco==3.3.7"]
+sim = ["numpy==2.0.2", "mujoco==3.3.7", "reachy-mini-rust-kinematics==1.0.3"]
 
 [project.scripts]
 reachy-locomotion = "reachy_locomotion.__main__:main"
 reachy-contact-probe = "reachy_locomotion.contact_probe:main"
+reachy-sway = "reachy_locomotion.sway:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

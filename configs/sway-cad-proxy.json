@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "evidence": "uncalibrated_simulation",
+  "upstream_commit": "a9a2a42adcc1abc7d9c90d390889bbebf930c96c",
+  "foot_radius_m": 0.056,
+  "foot_half_height_m": 0.004,
+  "initial_clearance_m": 0.003,
+  "friction_slide_torsion_roll": [0.7, 0.005, 0.0001],
+  "position_kp": 10.0,
+  "position_kv": 0.1,
+  "motor_force_limit_nm": 1.2,
+  "timestep_s": 0.002,
+  "notes": "Experimental hypothesis, NOT measured hardware. Foot radius approximates +/-55.953 mm CAD underside bounds; actual underside is not a perfect cylinder. Motor cap raised from the original unmeasured 0.6 to an unmeasured 1.2 Nm; see torque sensitivity study. Other dynamics remain uncalibrated."
+}
