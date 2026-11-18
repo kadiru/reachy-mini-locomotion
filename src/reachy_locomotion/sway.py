@@ -87,6 +87,8 @@ class SwaySimulator:
         self.model = mujoco.MjModel.from_xml_string(xml)
         self.ik = HeadIK(upstream)
         self.act = np.array([self.model.actuator(name).id for name in self.ik.names])
+        self.command_limits = self.model.actuator_ctrlrange[self.act].copy()
+        self.servos = None
         self.joint_qpos = self.model.jnt_qposadr[self.model.actuator_trnid[self.act, 0]]
         self.base = self.model.body(BASE).id
         self.foot = self.model.geom("foot_contact_proxy").id
@@ -108,6 +110,15 @@ class SwaySimulator:
             state.ctrl[self.act] = previous * (1 - blend) + neutral_joints * blend
             mujoco.mj_step(self.model, state)
         mujoco.mj_forward(self.model, state)
+        if "motor_model" in config:
+            from .motors import DynamixelApproximation
+            self.servos = DynamixelApproximation(self.model, config["motor_model"])
+            self.initial_targets = state.ctrl.copy()
+            self.servos.reset(self.initial_targets)
+            for _ in range(round(2 / self.dt)):
+                self.servos.apply(state)
+                mujoco.mj_step(self.model, state)
+            mujoco.mj_forward(self.model, state)
         self.initial_qpos = state.qpos.copy()
         self.initial_qvel = state.qvel.copy()
         self.initial_ctrl = state.ctrl.copy()
@@ -116,7 +127,7 @@ class SwaySimulator:
 
     def checked_ik(self, pose):
         joints = self.ik.solve(pose)
-        limits = self.model.actuator_ctrlrange[self.act]
+        limits = self.command_limits
         if np.any(joints < limits[:, 0]) or np.any(joints > limits[:, 1]):
             raise ValueError("IK exceeds inspected model joint limits")
         return joints
@@ -129,6 +140,8 @@ class SwaySimulator:
         state.qpos[:] = self.initial_qpos
         state.qvel[:] = self.initial_qvel
         state.ctrl[:] = self.initial_ctrl
+        if self.servos:
+            self.servos.reset(self.initial_targets)
         mujoco.mj_forward(model, state)
         # Align endpoints to whole cycles AND 50 Hz control samples.
         frames_per_cycle = max(10, round(50 / gait.frequency_hz))
@@ -144,6 +157,11 @@ class SwaySimulator:
         max_side_clearance = 0.0
         motor_work_j = 0.0
         initial_yaw = 0.0
+        velocity_samples = []
+        target_samples = []
+        peak_torque = np.zeros(model.nu)
+        torque_sq = np.zeros(model.nu)
+        peak_velocity = np.zeros(model.nu)
         for frame in range(total_frames + 1):
             phase = 2 * math.pi * frame / frames_per_cycle
             ramp = min(1, frame / frames_per_cycle)
@@ -154,7 +172,12 @@ class SwaySimulator:
             except ValueError as error:
                 reason = str(error)
                 break
-            state.ctrl[self.act] = target
+            if self.servos:
+                targets = self.initial_targets.copy()
+                targets[self.act] = target
+                self.servos.command(targets)
+            else:
+                state.ctrl[self.act] = target
             if frame == warmup_frames:
                 start = state.xpos[self.base].copy()
                 start_rot = state.xmat[self.base].reshape(3, 3).copy()
@@ -168,6 +191,8 @@ class SwaySimulator:
             actual = relative_head_pose(model, state)
             if measuring:
                 max_track = max(max_track, angle(desired, actual))
+                target_samples.append(target.copy())
+                velocity_samples.append(state.qvel[:6].copy())
                 if (frame - warmup_frames) % frames_per_cycle == 0:
                     displacement = start_rot.T @ (state.xpos[self.base] - start)
                     boundaries.append({"cycle": (frame - warmup_frames) // frames_per_cycle,
@@ -189,6 +214,8 @@ class SwaySimulator:
                 break
             for _ in range(self.substeps):
                 # Only servo targets act on the robot. No base motion writes or pushes.
+                if self.servos:
+                    self.servos.apply(state)
                 mujoco.mj_step(model, state)
                 mujoco.mj_forward(model, state)
                 if not np.isfinite(state.qpos).all() or not np.isfinite(state.qvel).all() or any(w.number for w in state.warning):
@@ -218,7 +245,11 @@ class SwaySimulator:
                     foot_contact_steps += int(supported)
                     left_unloaded += int(forces[1] < .1 and forces[0] > .1)
                     right_unloaded += int(forces[0] < .1 and forces[1] > .1)
-                    torque_saturated += int(np.any(np.abs(state.actuator_force[self.act]) >= .99 * self.config["motor_force_limit_nm"]))
+                    caps = self.servos.torque_caps[self.act] if self.servos else self.config["motor_force_limit_nm"]
+                    torque_saturated += int(np.any(np.abs(state.actuator_force[self.act]) >= .99 * caps))
+                    peak_torque = np.maximum(peak_torque, np.abs(state.actuator_force))
+                    torque_sq += state.actuator_force ** 2
+                    peak_velocity = np.maximum(peak_velocity, np.abs(state.actuator_velocity))
                     motor_work_j += float(np.sum(np.abs(state.actuator_force[self.act] * state.actuator_velocity[self.act]))) * self.dt
                     for sign in (-1, 1):
                         rim = state.xpos[self.base] + state.xmat[self.base].reshape(3, 3) @ np.array([0, sign*self.config["foot_radius_m"], 0])
@@ -247,6 +278,18 @@ class SwaySimulator:
                   "cycle_boundaries": boundaries, "external_forces_applied": False,
                   "mujoco_version": mujoco.__version__, "control_rate_hz": 50,
                   "upstream_xml_sha256": self.source_sha256, "kinematics_sha256": self.ik.source_sha256}
+        result["actuator_names"] = [model.actuator(i).name for i in range(model.nu)]
+        result["peak_motor_torque_nm"] = peak_torque.tolist()
+        result["rms_motor_torque_nm"] = np.sqrt(torque_sq / max(1, measured_steps)).tolist()
+        result["peak_motor_velocity_rad_s"] = peak_velocity.tolist()
+        result["base_subtree_mass_kg"] = float(model.body_subtreemass[self.base])
+        velocities = np.asarray(velocity_samples)
+        if len(velocities) > 2:
+            accelerations = np.diff(velocities[:, :3], axis=0) / .02
+            result["rms_base_acceleration_m_s2"] = float(np.sqrt(np.mean(accelerations ** 2)))
+            result["rms_base_angular_velocity_rad_s"] = float(np.sqrt(np.mean(velocities[:, 3:] ** 2)))
+        if self.servos:
+            result["motor_diagnostics"] = self.servos.report()
         if record:
             result["trajectory"] = trajectory
         return result

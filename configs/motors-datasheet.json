@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "evidence": "uncalibrated_simulation",
+  "upstream_commit": "a9a2a42adcc1abc7d9c90d390889bbebf930c96c",
+  "foot_radius_m": 0.056,
+  "foot_half_height_m": 0.004,
+  "initial_clearance_m": 0.003,
+  "friction_slide_torsion_roll": [
+    0.7,
+    0.005,
+    0.0001
+  ],
+  "position_kp": 10.0,
+  "position_kv": 0.1,
+  "motor_force_limit_nm": 0.6,
+  "timestep_s": 0.002,
+  "motor_model": {
+    "voltage_v": 5.0,
+    "torque_derating": 0.8,
+    "pwm_limit_fraction": 0.8,
+    "pid_scale": 1.0,
+    "target_speed_rad_s": 6.0,
+    "target_acceleration_rad_s2": 60.0,
+    "target_filter_hz": 5.0,
+    "delay_frames": 1,
+    "joint_damping_nm_s_rad": 0.005,
+    "joint_friction_nm": 0.01,
+    "joint_armature_kg_m2": 0.0001,
+    "total_mass_kg": 1.475,
+    "mass_distribution": "torso",
+    "passive_damping_nm_s_rad": 0.0001,
+    "passive_friction_nm": 0.001
+  },
+  "notes": "Rated head motor: XL330-M288. 5 V is an evaluation hypothesis, not measured bus voltage. 80% torque/PWM and command rate/acceleration caps are software design choices, not continuous ratings or firmware settings. Inertia/friction/PID mapping/mass placement remain unidentified. Legacy PD fields apply only during artificial reset; datasheet-bounded torque control replaces them before rollout."
+}

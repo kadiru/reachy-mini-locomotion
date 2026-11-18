@@ -76,6 +76,9 @@ def scene_xml(upstream, config, free=True):
         limit = config["motor_force_limit_nm"]
         actuator.set("forcerange", "%s %s" % (-limit, limit))
         actuator.set("forcelimited", "true")
+    if "motor_model" in config:
+        from .motors import modify_physics_xml
+        modify_physics_xml(root, config["motor_model"])
     return ET.tostring(root, encoding="unicode"), hashlib.sha256(original).hexdigest()
 
 

@@ -29,3 +29,4 @@ experiments/reports/*
 media/simulation/*
 !media/simulation/sway-forward-2026-11-18.mp4
 !media/simulation/sway-forward-2026-11-18.png
+!experiments/reports/motor-training-*.json
