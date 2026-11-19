@@ -4,6 +4,11 @@ Objective: learn repeatable forward travel from the user's head-driven,
 penguin-like Reachy Mini motion, then assess transfer to the Wireless robot.
 The November 18, 2026 user clarification identifies a Quest 3S and controller.
 
+The November 19 clarification adds [two separate gait styles](GAIT_STYLES.md):
+rapid small steps and larger alternating-edge steps with deliberate torso
+roll/yaw. Preserve a separate policy for each; the current 57.39 mm/s nominal
+simulation is the rapid style, and the large-step style remains a target.
+
 ## Choose MuJoCo first
 
 Reachy already has an [official MuJoCo model and SDK simulator](https://huggingface.co/docs/reachy_mini/en/platforms/simulation/get_started).
@@ -46,8 +51,12 @@ Evaluate net displacement in the **initial foot forward frame** per cycle and
 per second, lateral drift, heading error, falls/interventions, tracking error,
 energy/effort and action slew. Exclude artificial initialization motion from
 reward. Terminate on numerical warnings, contact/closure anomalies or falls.
-Use progress with penalties for drift, tilt/falls, excessive effort and abrupt
-actions; choose weights after measuring meaningful scales.
+Use style-specific progress objectives with no-fall and actuator constraints.
+The rapid style prioritizes speed; the large-step style must also demonstrate
+larger signed cycle progress and alternating lift/support transfer. Do not apply
+a blanket penalty to the useful tilt, yaw or braking that creates the step.
+Separate within-cycle torso oscillation from persistent heading/path drift;
+the interpretation of the 20° heading tolerance is pending user clarification.
 
 Randomize measured uncertainty in mass/COM, friction/contact compliance, motor
 strength, latency and observation noise. Hold out parameter combinations and
@@ -62,4 +71,5 @@ existing bridge and collect a rest → wobble → rest recording with a fixed ca
 In parallel, measure/photo the underside and weigh the complete Wireless robot.
 Those measurements replace the contact proxy; then implement task-space replay
 in the moving-foot model. Physical controls and Unity sender still need hardware
-validation. No autonomous controller or learned weights exist yet.
+validation. Compact gait optimization and heading feedback now exist in
+simulation; no learned physical locomotion policy has been verified.

@@ -1,0 +1,578 @@
+{
+  "evidence": "analysis_of_existing_uncalibrated_simulation",
+  "new_training_run": false,
+  "source": "experiments/generated/faster-20s-2026-11-19.json",
+  "source_sha256": "e846089bf0e9ebe6561a77d982e412d5a8c50143a357175ed40a128ac4820e77",
+  "sample_hz": 50,
+  "gait_style": "rapid_small_steps",
+  "actual_frequency_hz": 4.545454545454546,
+  "complete_cycles": 91,
+  "max_body_tilt_deg": 2.4327148945198256,
+  "body_roll_range_deg": [
+    -1.8624472009045139,
+    2.4197592405146358
+  ],
+  "max_side_rim_clearance_mm": 4.331190776426595,
+  "mean_forward_mm_per_left_right_cycle": 12.626501413201272,
+  "mean_yaw_excursion_per_cycle_deg": 5.929048153808461,
+  "max_yaw_excursion_per_cycle_deg": 6.382762115056632,
+  "max_abs_cycle_mean_heading_deg": 11.559987585822233,
+  "max_abs_cycle_end_heading_deg": 14.385420923823942,
+  "support_samples": {
+    "left": 458,
+    "right": 542,
+    "both": 1,
+    "unloaded": 1
+  },
+  "direct_left_right_support_changes": 180,
+  "airborne_fraction": 0.0,
+  "caveat": "Support labels and cycle headings are 50 Hz diagnostics; no contact-patch or physical-video pose estimation. Rim height uses the existing side-rim proxy.",
+  "cycles": [
+    {
+      "forward_mm": 12.225446823024702,
+      "heading_mean_deg": -1.290657224277064,
+      "heading_end_deg": 2.1773012647421264,
+      "yaw_excursion_peak_to_peak_deg": 6.200229152132099
+    },
+    {
+      "forward_mm": 12.732341646603627,
+      "heading_mean_deg": -0.6291032909491174,
+      "heading_end_deg": 2.489607730194335,
+      "yaw_excursion_peak_to_peak_deg": 6.366835623075511
+    },
+    {
+      "forward_mm": 12.427378350259438,
+      "heading_mean_deg": 0.3055130830074871,
+      "heading_end_deg": 3.425662491376602,
+      "yaw_excursion_peak_to_peak_deg": 5.711667535142041
+    },
+    {
+      "forward_mm": 12.75815586618497,
+      "heading_mean_deg": 0.5037729178464553,
+      "heading_end_deg": 3.5702056198070347,
+      "yaw_excursion_peak_to_peak_deg": 5.8882124073667095
+    },
+    {
+      "forward_mm": 12.516758007786505,
+      "heading_mean_deg": 0.9633143796089304,
+      "heading_end_deg": 3.9137453744979327,
+      "yaw_excursion_peak_to_peak_deg": 6.012859676318938
+    },
+    {
+      "forward_mm": 12.75407218702374,
+      "heading_mean_deg": 1.2070801077491085,
+      "heading_end_deg": 4.276765186515254,
+      "yaw_excursion_peak_to_peak_deg": 5.867039694384436
+    },
+    {
+      "forward_mm": 12.689804904653048,
+      "heading_mean_deg": 1.6948080118543303,
+      "heading_end_deg": 4.6793309827551495,
+      "yaw_excursion_peak_to_peak_deg": 5.857383578269089
+    },
+    {
+      "forward_mm": 12.622388630960069,
+      "heading_mean_deg": 2.0973832680482642,
+      "heading_end_deg": 5.370419698675805,
+      "yaw_excursion_peak_to_peak_deg": 6.382762115056632
+    },
+    {
+      "forward_mm": 12.439926154400649,
+      "heading_mean_deg": 2.5375151565585314,
+      "heading_end_deg": 5.206289594331694,
+      "yaw_excursion_peak_to_peak_deg": 5.632914007122739
+    },
+    {
+      "forward_mm": 13.262374763845445,
+      "heading_mean_deg": 2.6257949483242915,
+      "heading_end_deg": 6.0922989591489145,
+      "yaw_excursion_peak_to_peak_deg": 6.375086231394278
+    },
+    {
+      "forward_mm": 12.685319509565787,
+      "heading_mean_deg": 3.691762392910139,
+      "heading_end_deg": 6.92807637214523,
+      "yaw_excursion_peak_to_peak_deg": 6.279131389652772
+    },
+    {
+      "forward_mm": 12.579231223784827,
+      "heading_mean_deg": 4.060783704583123,
+      "heading_end_deg": 6.930197081050524,
+      "yaw_excursion_peak_to_peak_deg": 5.654183696603209
+    },
+    {
+      "forward_mm": 12.099042209730472,
+      "heading_mean_deg": 4.084408500699004,
+      "heading_end_deg": 6.601595894572599,
+      "yaw_excursion_peak_to_peak_deg": 5.520541358421378
+    },
+    {
+      "forward_mm": 13.189084932561897,
+      "heading_mean_deg": 3.6019063204769397,
+      "heading_end_deg": 6.546922247777924,
+      "yaw_excursion_peak_to_peak_deg": 6.04300252634958
+    },
+    {
+      "forward_mm": 12.401174952043792,
+      "heading_mean_deg": 3.9539249547547457,
+      "heading_end_deg": 6.946218519110449,
+      "yaw_excursion_peak_to_peak_deg": 6.117869601514081
+    },
+    {
+      "forward_mm": 12.92309577274328,
+      "heading_mean_deg": 4.266073944110326,
+      "heading_end_deg": 7.412698682058174,
+      "yaw_excursion_peak_to_peak_deg": 6.0039538204709135
+    },
+    {
+      "forward_mm": 12.549037918516222,
+      "heading_mean_deg": 4.841634299017348,
+      "heading_end_deg": 7.750948818374693,
+      "yaw_excursion_peak_to_peak_deg": 5.809642808116991
+    },
+    {
+      "forward_mm": 12.7754834154365,
+      "heading_mean_deg": 5.102116007776141,
+      "heading_end_deg": 8.30440809690872,
+      "yaw_excursion_peak_to_peak_deg": 6.33861175528855
+    },
+    {
+      "forward_mm": 12.336263125840905,
+      "heading_mean_deg": 5.450566774029992,
+      "heading_end_deg": 8.065584437415477,
+      "yaw_excursion_peak_to_peak_deg": 5.62728671237579
+    },
+    {
+      "forward_mm": 12.470954233984031,
+      "heading_mean_deg": 5.164968667096338,
+      "heading_end_deg": 7.964202197771611,
+      "yaw_excursion_peak_to_peak_deg": 5.660272720674721
+    },
+    {
+      "forward_mm": 12.553238886375741,
+      "heading_mean_deg": 5.01549659610385,
+      "heading_end_deg": 7.412484161417397,
+      "yaw_excursion_peak_to_peak_deg": 6.032297718783608
+    },
+    {
+      "forward_mm": 12.587330397712154,
+      "heading_mean_deg": 4.423661679862548,
+      "heading_end_deg": 6.966821405498279,
+      "yaw_excursion_peak_to_peak_deg": 6.162749148647069
+    },
+    {
+      "forward_mm": 12.318244547464774,
+      "heading_mean_deg": 4.218753760271705,
+      "heading_end_deg": 6.972105923404972,
+      "yaw_excursion_peak_to_peak_deg": 5.961007612127898
+    },
+    {
+      "forward_mm": 12.735056477806948,
+      "heading_mean_deg": 4.5946376223036305,
+      "heading_end_deg": 7.89598796568322,
+      "yaw_excursion_peak_to_peak_deg": 6.026577033627122
+    },
+    {
+      "forward_mm": 12.184855218048986,
+      "heading_mean_deg": 5.0995928755094,
+      "heading_end_deg": 7.804566368103391,
+      "yaw_excursion_peak_to_peak_deg": 5.521987579614802
+    },
+    {
+      "forward_mm": 12.808237522163942,
+      "heading_mean_deg": 4.811090806756244,
+      "heading_end_deg": 7.489433800090503,
+      "yaw_excursion_peak_to_peak_deg": 6.088699774436616
+    },
+    {
+      "forward_mm": 12.835361750941056,
+      "heading_mean_deg": 4.701103246987809,
+      "heading_end_deg": 7.5132685584831,
+      "yaw_excursion_peak_to_peak_deg": 5.801226340423937
+    },
+    {
+      "forward_mm": 12.590184253013014,
+      "heading_mean_deg": 4.811906360124625,
+      "heading_end_deg": 7.76239397255586,
+      "yaw_excursion_peak_to_peak_deg": 6.002777403400739
+    },
+    {
+      "forward_mm": 12.604045515041978,
+      "heading_mean_deg": 4.928509152450291,
+      "heading_end_deg": 7.4749276974732854,
+      "yaw_excursion_peak_to_peak_deg": 5.875926137791668
+    },
+    {
+      "forward_mm": 12.716604999824897,
+      "heading_mean_deg": 4.77533004300287,
+      "heading_end_deg": 7.9215054046688556,
+      "yaw_excursion_peak_to_peak_deg": 6.301914369348249
+    },
+    {
+      "forward_mm": 12.345589934086718,
+      "heading_mean_deg": 5.086605676585085,
+      "heading_end_deg": 7.715501300115384,
+      "yaw_excursion_peak_to_peak_deg": 5.620866276969263
+    },
+    {
+      "forward_mm": 13.204355305479972,
+      "heading_mean_deg": 5.070466202087814,
+      "heading_end_deg": 8.423560568206288,
+      "yaw_excursion_peak_to_peak_deg": 6.265880480796905
+    },
+    {
+      "forward_mm": 12.703806518981574,
+      "heading_mean_deg": 5.971995636651807,
+      "heading_end_deg": 9.137239048882774,
+      "yaw_excursion_peak_to_peak_deg": 6.223165376908595
+    },
+    {
+      "forward_mm": 12.63773147581105,
+      "heading_mean_deg": 6.283544870230475,
+      "heading_end_deg": 9.188615858381693,
+      "yaw_excursion_peak_to_peak_deg": 5.726986900439143
+    },
+    {
+      "forward_mm": 12.851546519891343,
+      "heading_mean_deg": 6.6303581810085355,
+      "heading_end_deg": 9.723649775741746,
+      "yaw_excursion_peak_to_peak_deg": 5.96346733258847
+    },
+    {
+      "forward_mm": 12.656429166758967,
+      "heading_mean_deg": 7.036661615221791,
+      "heading_end_deg": 10.00510191825515,
+      "yaw_excursion_peak_to_peak_deg": 5.99534845067919
+    },
+    {
+      "forward_mm": 12.551926961980246,
+      "heading_mean_deg": 7.13703207964107,
+      "heading_end_deg": 9.8161051315829,
+      "yaw_excursion_peak_to_peak_deg": 5.721414684353813
+    },
+    {
+      "forward_mm": 12.905140222819153,
+      "heading_mean_deg": 7.10870351623435,
+      "heading_end_deg": 10.16541042090384,
+      "yaw_excursion_peak_to_peak_deg": 6.031814422730249
+    },
+    {
+      "forward_mm": 12.603387347728672,
+      "heading_mean_deg": 7.584106239860886,
+      "heading_end_deg": 10.57307222123352,
+      "yaw_excursion_peak_to_peak_deg": 6.110441997059508
+    },
+    {
+      "forward_mm": 12.851031109658162,
+      "heading_mean_deg": 7.863327673151095,
+      "heading_end_deg": 10.93838364423906,
+      "yaw_excursion_peak_to_peak_deg": 5.935692769058683
+    },
+    {
+      "forward_mm": 12.576040898513181,
+      "heading_mean_deg": 8.322395066141498,
+      "heading_end_deg": 11.1819746477889,
+      "yaw_excursion_peak_to_peak_deg": 5.786450854426605
+    },
+    {
+      "forward_mm": 12.8989900153342,
+      "heading_mean_deg": 8.519992670096686,
+      "heading_end_deg": 11.68040854334199,
+      "yaw_excursion_peak_to_peak_deg": 6.304863925302778
+    },
+    {
+      "forward_mm": 12.349067093845694,
+      "heading_mean_deg": 8.86226052138421,
+      "heading_end_deg": 11.491953443392894,
+      "yaw_excursion_peak_to_peak_deg": 5.627737109410257
+    },
+    {
+      "forward_mm": 13.069393039008968,
+      "heading_mean_deg": 8.848953532148276,
+      "heading_end_deg": 12.170729526430845,
+      "yaw_excursion_peak_to_peak_deg": 6.222025761965472
+    },
+    {
+      "forward_mm": 12.586858609685619,
+      "heading_mean_deg": 9.590714753067603,
+      "heading_end_deg": 12.434680643997156,
+      "yaw_excursion_peak_to_peak_deg": 5.858790199683865
+    },
+    {
+      "forward_mm": 12.47742480928336,
+      "heading_mean_deg": 9.51988575667993,
+      "heading_end_deg": 12.3061729784075,
+      "yaw_excursion_peak_to_peak_deg": 5.7199181607788265
+    },
+    {
+      "forward_mm": 12.389124636295016,
+      "heading_mean_deg": 9.557954118660728,
+      "heading_end_deg": 12.266743298835602,
+      "yaw_excursion_peak_to_peak_deg": 5.566372449802862
+    },
+    {
+      "forward_mm": 12.717171230648002,
+      "heading_mean_deg": 9.380944691422698,
+      "heading_end_deg": 12.112621689374176,
+      "yaw_excursion_peak_to_peak_deg": 5.975174310407517
+    },
+    {
+      "forward_mm": 12.435477711742672,
+      "heading_mean_deg": 9.157120051399414,
+      "heading_end_deg": 11.442469331867567,
+      "yaw_excursion_peak_to_peak_deg": 6.002693160340383
+    },
+    {
+      "forward_mm": 13.062811941565512,
+      "heading_mean_deg": 8.644826062237733,
+      "heading_end_deg": 11.711498955235685,
+      "yaw_excursion_peak_to_peak_deg": 6.245008317891605
+    },
+    {
+      "forward_mm": 12.10165388829299,
+      "heading_mean_deg": 8.769662542750112,
+      "heading_end_deg": 11.279196488421382,
+      "yaw_excursion_peak_to_peak_deg": 5.7151422055711585
+    },
+    {
+      "forward_mm": 12.766107312346122,
+      "heading_mean_deg": 8.453739738801232,
+      "heading_end_deg": 11.430416320985616,
+      "yaw_excursion_peak_to_peak_deg": 5.827697832338739
+    },
+    {
+      "forward_mm": 12.478288897685896,
+      "heading_mean_deg": 8.63008535925384,
+      "heading_end_deg": 11.181542895421389,
+      "yaw_excursion_peak_to_peak_deg": 5.841926729325412
+    },
+    {
+      "forward_mm": 13.060322772591219,
+      "heading_mean_deg": 8.339731723193468,
+      "heading_end_deg": 11.282422589561095,
+      "yaw_excursion_peak_to_peak_deg": 5.991819949094514
+    },
+    {
+      "forward_mm": 12.434798084481756,
+      "heading_mean_deg": 8.609295470875686,
+      "heading_end_deg": 11.27345007907237,
+      "yaw_excursion_peak_to_peak_deg": 5.696037201260645
+    },
+    {
+      "forward_mm": 13.028674696313312,
+      "heading_mean_deg": 8.459352792119699,
+      "heading_end_deg": 11.405310201385504,
+      "yaw_excursion_peak_to_peak_deg": 5.989079360597479
+    },
+    {
+      "forward_mm": 12.430597112664216,
+      "heading_mean_deg": 8.735061355981891,
+      "heading_end_deg": 11.389689505497536,
+      "yaw_excursion_peak_to_peak_deg": 5.701373607340312
+    },
+    {
+      "forward_mm": 13.007742749160807,
+      "heading_mean_deg": 8.594044801991366,
+      "heading_end_deg": 11.554792828677273,
+      "yaw_excursion_peak_to_peak_deg": 5.994144111554121
+    },
+    {
+      "forward_mm": 12.462980585539444,
+      "heading_mean_deg": 8.873490718525709,
+      "heading_end_deg": 11.53836962507872,
+      "yaw_excursion_peak_to_peak_deg": 5.704486958438122
+    },
+    {
+      "forward_mm": 13.058391765480662,
+      "heading_mean_deg": 8.759656240437467,
+      "heading_end_deg": 11.797944117715042,
+      "yaw_excursion_peak_to_peak_deg": 6.054160813418226
+    },
+    {
+      "forward_mm": 12.44165177953923,
+      "heading_mean_deg": 9.134764928024312,
+      "heading_end_deg": 11.818723393119553,
+      "yaw_excursion_peak_to_peak_deg": 5.699301683729857
+    },
+    {
+      "forward_mm": 12.834373636688062,
+      "heading_mean_deg": 9.049515253551643,
+      "heading_end_deg": 12.101491458862188,
+      "yaw_excursion_peak_to_peak_deg": 5.928815413389295
+    },
+    {
+      "forward_mm": 12.37393048100453,
+      "heading_mean_deg": 9.352997708327761,
+      "heading_end_deg": 11.862892654129299,
+      "yaw_excursion_peak_to_peak_deg": 5.7910951440192555
+    },
+    {
+      "forward_mm": 12.76376251197742,
+      "heading_mean_deg": 9.010178136981136,
+      "heading_end_deg": 11.897902241492465,
+      "yaw_excursion_peak_to_peak_deg": 6.125924833025173
+    },
+    {
+      "forward_mm": 12.366412837827726,
+      "heading_mean_deg": 9.347658417232244,
+      "heading_end_deg": 12.179617412293057,
+      "yaw_excursion_peak_to_peak_deg": 5.593543003302609
+    },
+    {
+      "forward_mm": 12.79742140535157,
+      "heading_mean_deg": 9.46807651692734,
+      "heading_end_deg": 12.674844535931117,
+      "yaw_excursion_peak_to_peak_deg": 6.067931640103541
+    },
+    {
+      "forward_mm": 13.006787738399813,
+      "heading_mean_deg": 10.162681677347186,
+      "heading_end_deg": 13.296513389862001,
+      "yaw_excursion_peak_to_peak_deg": 6.219824523007497
+    },
+    {
+      "forward_mm": 12.296279752586102,
+      "heading_mean_deg": 10.403039205312401,
+      "heading_end_deg": 13.204314611284369,
+      "yaw_excursion_peak_to_peak_deg": 5.657889377354038
+    },
+    {
+      "forward_mm": 11.649690715860327,
+      "heading_mean_deg": 10.420383273708142,
+      "heading_end_deg": 12.88346296492224,
+      "yaw_excursion_peak_to_peak_deg": 5.455293952581374
+    },
+    {
+      "forward_mm": 12.702236944747913,
+      "heading_mean_deg": 9.707581115352967,
+      "heading_end_deg": 12.161477802734542,
+      "yaw_excursion_peak_to_peak_deg": 6.191164425791714
+    },
+    {
+      "forward_mm": 12.85558248949638,
+      "heading_mean_deg": 9.298127777295912,
+      "heading_end_deg": 12.058483936324352,
+      "yaw_excursion_peak_to_peak_deg": 6.026844242230353
+    },
+    {
+      "forward_mm": 12.551510973383284,
+      "heading_mean_deg": 9.128243629169319,
+      "heading_end_deg": 11.822773646634221,
+      "yaw_excursion_peak_to_peak_deg": 5.783698139349299
+    },
+    {
+      "forward_mm": 12.738229582026081,
+      "heading_mean_deg": 9.190361130659005,
+      "heading_end_deg": 12.344016949441471,
+      "yaw_excursion_peak_to_peak_deg": 5.9603222340956545
+    },
+    {
+      "forward_mm": 12.555077829760881,
+      "heading_mean_deg": 9.623899154695259,
+      "heading_end_deg": 12.272263587139571,
+      "yaw_excursion_peak_to_peak_deg": 5.770170038539119
+    },
+    {
+      "forward_mm": 12.521423289077994,
+      "heading_mean_deg": 9.294625864685552,
+      "heading_end_deg": 11.638079021025833,
+      "yaw_excursion_peak_to_peak_deg": 6.155802102227343
+    },
+    {
+      "forward_mm": 12.55991200254044,
+      "heading_mean_deg": 8.782900983728975,
+      "heading_end_deg": 11.532795790597122,
+      "yaw_excursion_peak_to_peak_deg": 6.115938199903861
+    },
+    {
+      "forward_mm": 12.484019671012154,
+      "heading_mean_deg": 9.444614581608525,
+      "heading_end_deg": 12.618835099805631,
+      "yaw_excursion_peak_to_peak_deg": 5.8910693594701256
+    },
+    {
+      "forward_mm": 12.641371796667185,
+      "heading_mean_deg": 9.959305980129882,
+      "heading_end_deg": 13.23551306158532,
+      "yaw_excursion_peak_to_peak_deg": 6.0960538542452785
+    },
+    {
+      "forward_mm": 12.977113713002,
+      "heading_mean_deg": 10.7278041770706,
+      "heading_end_deg": 13.810008373337922,
+      "yaw_excursion_peak_to_peak_deg": 6.168175733657208
+    },
+    {
+      "forward_mm": 12.489195732177176,
+      "heading_mean_deg": 10.96335828670866,
+      "heading_end_deg": 13.876124463046924,
+      "yaw_excursion_peak_to_peak_deg": 5.698942565653574
+    },
+    {
+      "forward_mm": 11.788300583678184,
+      "heading_mean_deg": 10.961322572025272,
+      "heading_end_deg": 13.26279534688269,
+      "yaw_excursion_peak_to_peak_deg": 5.648853782339023
+    },
+    {
+      "forward_mm": 13.006214999846677,
+      "heading_mean_deg": 10.225927892472049,
+      "heading_end_deg": 12.993697578887026,
+      "yaw_excursion_peak_to_peak_deg": 6.103187662126151
+    },
+    {
+      "forward_mm": 12.890069112047485,
+      "heading_mean_deg": 10.374644019927427,
+      "heading_end_deg": 13.421815241842056,
+      "yaw_excursion_peak_to_peak_deg": 6.154278044587604
+    },
+    {
+      "forward_mm": 12.504432533631991,
+      "heading_mean_deg": 10.623692010902705,
+      "heading_end_deg": 13.365084851606985,
+      "yaw_excursion_peak_to_peak_deg": 5.646267295732506
+    },
+    {
+      "forward_mm": 12.749148793801657,
+      "heading_mean_deg": 10.679323178242331,
+      "heading_end_deg": 13.734480494600263,
+      "yaw_excursion_peak_to_peak_deg": 5.956237942053444
+    },
+    {
+      "forward_mm": 13.074026501014835,
+      "heading_mean_deg": 11.196258986119995,
+      "heading_end_deg": 14.385420923823942,
+      "yaw_excursion_peak_to_peak_deg": 6.303582946928028
+    },
+    {
+      "forward_mm": 12.214165575902888,
+      "heading_mean_deg": 11.557214746007748,
+      "heading_end_deg": 14.256942474640255,
+      "yaw_excursion_peak_to_peak_deg": 5.624520239691401
+    },
+    {
+      "forward_mm": 12.494330395269053,
+      "heading_mean_deg": 11.559987585822233,
+      "heading_end_deg": 14.159463652765567,
+      "yaw_excursion_peak_to_peak_deg": 5.668635304668921
+    },
+    {
+      "forward_mm": 12.420369953323725,
+      "heading_mean_deg": 11.356007950170373,
+      "heading_end_deg": 14.088274603950397,
+      "yaw_excursion_peak_to_peak_deg": 5.83646256258249
+    },
+    {
+      "forward_mm": 12.839641376353217,
+      "heading_mean_deg": 11.210196021674934,
+      "heading_end_deg": 13.936941036010662,
+      "yaw_excursion_peak_to_peak_deg": 5.890266595817836
+    },
+    {
+      "forward_mm": 12.351587282301765,
+      "heading_mean_deg": 11.178952484562114,
+      "heading_end_deg": 13.957721254458718,
+      "yaw_excursion_peak_to_peak_deg": 5.768657915901462
+    }
+  ]
+}

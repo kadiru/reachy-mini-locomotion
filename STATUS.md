@@ -1,5 +1,36 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 19, 2026 — two walking styles defined; large edge steps remain a separate target
+
+User clarified the intended endpoint: preserve rapid, small steps and also
+develop a larger sway/turn/stop gait with deliberate torso roll/yaw and alternating
+base-edge support. Recorded separate objectives in `docs/GAIT_STYLES.md` and
+BRIEF.md. No new gait has been trained in this clarification turn; controller,
+motor limits and fall checks are unchanged.
+
+Rechecked the existing 20-second fast trajectory: 4.545 Hz, **12.63 mm per complete
+left/right cycle**, 2.43° maximum body tilt and a 4.33 mm maximum side-rim height
+proxy. Its 50 Hz samples show 458 left-edge and 542 right-edge support frames,
+180 direct left/right support changes, and about 5.93° mean within-cycle yaw
+excursion. This supports classifying it as the rapid small-step baseline, rather
+than claiming the large-tilt gait has already been reproduced. Evidence:
+`experiments/reports/motor-training-gait-styles-baseline-2026-11-19.json`.
+
+Attempted to replay Vimeo; both the in-app browser and Chrome displayed
+"Unable to play media". Used the earlier Vimeo review and re-inspected the saved
+GIF contact sheets (frames 0–20 and 42–62). The latter visibly show coupled head
+turning/tilting and torso rocking; hidden contacts and camera motion still prevent
+metric physical tilt/step/force estimates. No new Vimeo playback is claimed.
+
+Heading clarification is pending: the user has been asked whether the 20° bound
+can apply after a full left/right cycle while allowing larger intermediate torso
+swings. Until answered, preserve the existing instantaneous bound. Next: add
+separate cycle-progress, support-transfer and within-cycle-versus-net-heading
+metrics to the large-step training objective, then search its gait family under
+the unchanged actuator/joint/no-fall constraints. Keep both mode winners and
+evaluate transitions separately; no mode-switching controller exists yet.
+
+
 ## November 19, 2026 — larger-yaw headshake gains another 19%, two-minute check passes
 
 The user requested more forward speed from larger swings/sharper braking while

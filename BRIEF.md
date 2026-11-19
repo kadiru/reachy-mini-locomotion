@@ -2,6 +2,22 @@
 
 ## Priority
 
+Maintain **two distinct walking styles**, per the latest user clarification:
+
+- Rapid left/right headshakes for fast, small steps. Preserve the current
+  57.39 mm/s policy as this mode's baseline.
+- Larger sway, head turn and timed stop, deliberately transferring support
+  between base edges while the torso tilts and rotates to advance the opposite
+  side. Develop this as a separate mode, with larger signed progress per complete
+  left/right cycle and verified alternating support; speed alone must not collapse
+  it into the small-step style.
+
+Distinguish deliberate within-cycle torso yaw from accumulated course/heading
+drift. The user has been asked whether the existing 20° bound may apply after
+each full cycle rather than at every instant; that reinterpretation is pending.
+Keep the existing instantaneous bound until clarified. Motor/IK limits and the
+no-fall checks remain unchanged for both modes. See `docs/GAIT_STYLES.md`.
+
 Latest follow-up: push beyond the 48.19 mm/s speed-first result with larger
 compound head swings and sharper braking, still upright and within 20° heading
 change. Freeze both the physical motor model and the last software command

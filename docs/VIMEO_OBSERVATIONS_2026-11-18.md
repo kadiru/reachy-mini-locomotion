@@ -45,3 +45,16 @@ qualitative reference; it is not itself a command-labeled imitation dataset.
 
 The original video and the earlier local GIF are not redistributed in this
 repository. No inferred metric poses were added to physical recordings.
+
+## November 19 follow-up
+
+The user clarified two desired styles: rapid small steps and larger deliberate
+edge-supported steps with pronounced torso tilt and left/right rotation.
+See [GAIT_STYLES.md](GAIT_STYLES.md). This is user-provided intent and mechanism
+description, not a newly measured physical result.
+
+A fresh playback attempt returned "Unable to play media" in both the in-app
+browser and Chrome. The earlier Vimeo observations above remain the evidence
+from actual playback. The local GIF contact sheets were re-inspected separately;
+their timestamps are not Vimeo timestamps, and their fall/reset annotations
+must not be transferred to this edited video.

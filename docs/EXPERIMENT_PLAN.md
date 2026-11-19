@@ -43,7 +43,7 @@ M2 exit: a candidate beats the replay baseline on held-out trials without increa
 
 ## M3 — RL after model validation
 
-No training has started. No shared Ubuntu GPU jobs were touched. Before RL, complete the free-base/contact/actuator work in `SIM_AUDIT.md` and validate against held-out physical replay. Avoid training a policy to exploit a fixed base, missing foot geometry or ideal torque limits.
+November 19 update: compact gait-parameter optimization and heading feedback now run in the free-base, motor-bounded simulation. Reinforcement learning and physical transfer remain future work; no shared Ubuntu GPU jobs were touched. The latest [two-style objective](GAIT_STYLES.md) supersedes one universal speed/heading reward. Before RL or transfer, validate the contact/actuator model against held-out physical replay. Avoid training a policy to exploit missing foot geometry or ideal torque limits.
 
 Observation: joint positions/estimated velocities, previous target, phase, available IMU orientation/rates, target direction and measured/estimated base velocity. A deployable policy cannot depend on simulator ground-truth contact forces or world position unless equivalent sensing exists at deployment; use them only for privileged training/evaluation and disclose that design.
 
@@ -51,7 +51,15 @@ Action: bounded residuals around a validated periodic trajectory or small bounde
 
 Suggested normalized reward per step:
 
+Historical proposal (not the current speed-first optimizer):
+
 `r = w_p * delta_forward / L - w_l * abs(delta_lateral) / L - w_h * heading_error² - w_u * excess_tilt² - w_s * ||a_t-a_(t-1)||² - w_t * tracking_error² - w_e * energy / E - w_f * fall`
+
+For the new large-step style, separate cyclic torso yaw from course drift and
+evaluate signed progress over a complete left/right pair, with actual support
+transfer. Preserve useful head braking and body rocking rather than penalizing
+all abrupt motion or tilt. The previous instantaneous 20° bound remains until
+the user clarifies whether it should instead apply after a complete cycle.
 
 `L` and `E` are declared normalization scales. Use signed progress so oscillating back and forth cannot collect positive reward twice. Apply tilt penalty above a demonstrated safe wobble envelope, not at every tilt (rocking is the mechanism). Select weights after measuring baseline magnitudes; predeclare them before evaluation. If motor torque/current is unavailable, omit physical energy or label a command-velocity proxy explicitly; never call that measured energy.
 

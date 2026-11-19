@@ -3,6 +3,11 @@
 Learn head-driven, penguin-like locomotion from **Meta Quest 3S** demonstrations,
 then evaluate sim-to-real transfer on Reachy Mini Wireless.
 
+The intended gait library has [two styles](docs/GAIT_STYLES.md): rapid small
+steps and larger alternating-edge steps driven by sway, head turning and braking.
+The current trained result is the rapid style; the larger-tilt style remains a
+separate training target.
+
 Reference: Kadir's [reachy reach video](https://vimeo.com/kadiru/demo-reachy-reach).
 The opening sequence shows controller-driven head motion, whole-body rocking
 and apparent base progress. [Video observations](docs/VIMEO_OBSERVATIONS_2026-11-18.md)
