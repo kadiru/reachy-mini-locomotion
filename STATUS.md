@@ -1,5 +1,38 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 19, 2026 — clarified speed regression with matched-duration runs
+
+User pointed out that the earlier demo moved forward much better. Confirmed:
+the later result improved heading/acceleration while giving up forward speed;
+it should not have been framed as an overall locomotion improvement.
+
+Ran 54 diagnostic simulations (three frozen gaits, nine model variants, two
+timesteps), all with exactly 6.6 s measurement windows. At 2 ms: original fast
+gait/model = 158.4 mm; changing only its cap from 1.2 to 0.6 Nm = 2.16 mm. Under
+the same current 5 V model, first trained gait = 68.5 mm forward but 50.5 mm
+lateral and 57° turn; smooth gait = 17.7 mm forward, 1.4 mm lateral, 0.3° turn.
+The original fast result at 1 ms is 111.4 mm, showing significant timestep
+sensitivity. Torque sensitivity in the old model does not prove the real
+mechanism needs that torque; its passive losses/inertia were also incorrect.
+
+Additional sensitivity: lower CAD mass boosts newer-model progress markedly;
+full momentary torque bounds or looser command limits do not recover the old
+fast gait. These diagnostics do not change the production config or policy.
+Mass/COM, servo phase lag and contacts remain uncalibrated. User priority is
+forward progress; next training should maximize speed with explicit steering/
+stability constraints, keeping smoothness as a bound or secondary objective.
+
+Artifacts: `experiments/compare_forward_progress.py`,
+`experiments/reports/motor-training-forward-comparison-2026-11-19.json`,
+`docs/FORWARD_PROGRESS_COMPARISON_2026-11-19.md`. Verified all 54 windows completed
+at exactly 6.6 s, no external forces, and historical 158.4 mm baseline reproduced.
+An initial attempt stopped at a rounded-mass guard; rerun uses the exact XML mass
+sum. No production physics code changed; no new training or hardware work.
+
+```sh
+.venv/bin/python experiments/compare_forward_progress.py --output experiments/reports/motor-training-forward-comparison-next.json
+```
+
 ## November 18, 2026 — motor-bounded training and robustness refinement
 
 User requested smoother, more reliable forward motion and real motor limits;

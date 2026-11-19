@@ -17,6 +17,8 @@ The refined candidate advances **3.2 cm in 13 simulated seconds**, with about
 64% lower sampled body acceleration than the first trained candidate. It passes
 our walking check in **8/12 fresh held-out cases** (up from 2/12); all 12 move
 forward. [Watch the real-time simulation](media/simulation/motors-trained-2026-11-18.mp4).
+The smoother gait sacrifices substantial speed. [Matched-duration comparison](docs/FORWARD_PROGRESS_COMPARISON_2026-11-19.md)
+separates the motor-model change from the steering/speed tradeoff.
 Sim-to-real transfer remains unverified. The historical 15.8 cm demo used an
 unrealistic 1.2 Nm head-motor cap and is retained only as an exploratory result.
 
