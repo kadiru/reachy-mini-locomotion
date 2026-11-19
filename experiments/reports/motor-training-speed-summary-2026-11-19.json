@@ -1,0 +1,96 @@
+{
+  "evidence": "uncalibrated_simulation",
+  "hardware_ready": false,
+  "selection_rule": "fastest sustained fixed-axis forward speed with simulation no-fall validity and <=20 deg heading including startup",
+  "nominal_metrics": {
+    "feasible": true,
+    "stable": true,
+    "speed_mm_s": 48.19388109135688,
+    "heading_deg": 17.289147428756866,
+    "score": 1048.1938810913568
+  },
+  "forward_m": 0.9648414994489647,
+  "measured_seconds": 20.02,
+  "lateral_m_fixed_start_axis": 0.09716303604208847,
+  "speed_ratio_to_previous_fast": 2.7289511398838937,
+  "previous_fast_mm_s": 17.660221316167405,
+  "endurance_40s": {
+    "feasible": true,
+    "stable": true,
+    "speed_mm_s": 48.24812666365763,
+    "heading_deg": 17.289147428756866,
+    "score": 1048.2481266636576
+  },
+  "fine_timestep_relative_difference": 0.005726426029150789,
+  "fresh_models": 8,
+  "fresh_rollouts": 16,
+  "fresh_stable_count": 16,
+  "fresh_full_20deg_pass_count": 6,
+  "fresh_heading_max_deg": 84.15000370854712,
+  "fresh_speed_range_mm_s": [
+    1.5535218759834741,
+    73.98067425407221
+  ],
+  "search_candidate_evaluations": 612,
+  "selection_rollouts": 96,
+  "baseline_rollouts": 24,
+  "recording_rollouts": 1,
+  "ablation_rollouts": 8,
+  "airborne_fraction": 0.0,
+  "motion_diagnostics": {
+    "mean_cycle_progress_mm": 10.602653840098514,
+    "min_cycle_progress_mm": 7.430324565061952,
+    "max_cycle_progress_mm": 11.763980972272408,
+    "single_edge_fraction_50hz": 0.9960079840319361,
+    "head_slowing_on_edge_fraction": 0.9922779922779923,
+    "head_roll_range_deg": [
+      -20.07917570414435,
+      5.385357239768499
+    ],
+    "head_yaw_range_deg": [
+      -17.907396128352673,
+      32.71362381585756
+    ],
+    "peak_head_roll_yaw_rate_deg_s": [
+      330.6679573441158,
+      685.2260536673863
+    ],
+    "peak_observed_forward_speed_mm_s": 94.84506798816128,
+    "mean_negative_motor_power_w_50hz": 0.6524194319227704,
+    "interpretation": "kinematic phase correlation, not proof that braking alone causes motion; no-flight classification uses physics-substep clearance and force"
+  },
+  "projection_independently_checked_without_BLAS": true,
+  "video": {
+    "path": "media/simulation/speed-first-2026-11-19.mp4",
+    "playback_rate": 1.0,
+    "frames": 518,
+    "fps": 25,
+    "duration_s": 20.72,
+    "resolution": [
+      1280,
+      580
+    ]
+  },
+  "motor_profile_changes": {
+    "physical_head_torque_cap_nm": 0.416,
+    "voltage_hypothesis_v": 5.0,
+    "physical_mass_kg": 1.475,
+    "new_software_command_speed_rad_s": 10.7,
+    "new_software_command_acceleration_rad_s2": 360.0,
+    "new_software_command_filter_hz": 25.0,
+    "note": "Software design choices, not measured firmware settings; manufacturer torque/back-EMF and no-load-speed envelope remain unchanged."
+  },
+  "source_sha256": {
+    "src/reachy_locomotion/sway.py": "1c7e4ddbc26eaf44c0db383005891814bc36adfbbe7ff6be10f74148d9e33d1e",
+    "src/reachy_locomotion/motors.py": "e17ed3834e5842def618a8fdaa8d7782f4bbd66e27cd6762eb4b7e2a16c89675",
+    "src/reachy_locomotion/heading.py": "a36c5005d40f4c1931107a2de0c4a35bb5dfe0f4f3850778512fc852ac990218",
+    "experiments/train_speed.py": "d5d3d53c31ad1af8f930875c0effc4fda6f631df706456d7e8269e72d5bb3284",
+    "experiments/select_speed.py": "3a6a313de2e5691fe96443962726d980c521ec029e8394e9a63195d0c30c46a7",
+    "experiments/record_speed_demo.py": "b2cb4116382a5f1988920a03ce953c9491449b131a1b1235229ff6ec7a586e40",
+    "experiments/render_sway.py": "f9bca73a0fea094961f9cfcc2c0d51054dd8456732eb94c71e3cdf6f0fbfcd29"
+  },
+  "media_sha256": {
+    "media/simulation/speed-first-2026-11-19.mp4": "981842250c4a3f27df5bedd6a2f85b9707e561c6a9743b3e4b8e81842f2eacd2",
+    "media/simulation/speed-first-2026-11-19.png": "7fda76b3370e38f57adc16cfa98cc0d2e850e9daba5e8f5dce7656a5339d264f"
+  }
+}

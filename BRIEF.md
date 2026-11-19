@@ -2,12 +2,24 @@
 
 ## Priority
 
-Latest task: retain fast forward speed while passing the original stress suite,
-add heading feedback, and render the best evaluated simulation. November 19
-feedback work retains 89.2% nominal speed and greatly reduces stress turning,
-but still passes 0/12 old stress cases (4/20 fresh). The simultaneous all-pass /
-small-speed-loss goal remains unresolved; preserve that limitation in summaries.
-See `docs/HEADING_FEEDBACK_2026-11-19.md` and current `STATUS.md`.
+Latest November 19 steering: maximize **forward speed**, keeping the simulated
+robot upright and allowing up to 20 degrees of heading change. Smoothness and
+lateral-drift minimization are no longer objectives. Test the user's proposed
+rapid compound head swing followed by sharp braking while supported on an edge.
+Distinguish rocking/rim lift from genuine flight using contact force and clearance.
+
+Keep the current physical motor torque/speed and joint limits, mass and contact
+model. Compare faster software command profiles explicitly: the old 6 rad/s,
+60 rad/s² and 5 Hz target filter were conservative design choices, not measured
+firmware limits. Do not relabel those choices as motor specifications or weaken
+physical caps. Retain the earliest 1.2 Nm simulation as a historical reference,
+not a hardware-plausible candidate. Select on longer runs and finer timesteps;
+evaluate fresh model variations only after selecting the policy. Render the best
+verified candidate at real-time playback, with honest displacement and heading.
+
+The preceding heading-feedback objective and its unresolved strict stress-suite
+results remain historical evidence in STATUS.md; the user has superseded that
+optimization priority with speed-first movement.
 
 Reproduce the user's previously observed motion before treating autonomous locomotion as proven.
 

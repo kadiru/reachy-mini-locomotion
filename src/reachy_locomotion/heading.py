@@ -35,6 +35,7 @@ class HeadingFeedback:
     yaw_harmonic_per_correction: float = 0.
     yaw_harmonic_phase_deg: float = 0.
     phase_fit: bool = False
+    heading_deadband_deg: float = 0.
 
     def __post_init__(self):
         if not all(math.isfinite(v) for v in asdict(self).values()):
@@ -61,6 +62,8 @@ class HeadingFeedback:
             raise ValueError('Invalid twice-per-stride yaw correction')
         if not isinstance(self.phase_fit,bool):
             raise ValueError('Phase estimator flag must be boolean')
+        if not 0 <= self.heading_deadband_deg <= 20:
+            raise ValueError('Heading deadband must lie in [0, 20] degrees')
 
 
 @dataclass
@@ -127,17 +130,20 @@ class HeadingController:
         self.filtered_deg += -math.expm1(-dt/c.filter_tau_s) * (observation-self.filtered_deg)
         if not c.cycle_update or self.frames % len(self.history) == 0:
             control_dt = dt*len(self.history) if c.cycle_update else dt
-            rate = (self.filtered_deg-self.control_heading)/control_dt
+            error = math.copysign(max(0., abs(self.filtered_deg)-c.heading_deadband_deg), self.filtered_deg)
+            rate = (error-self.control_heading)/control_dt
             if c.phase_fit and self.frames >= 2*len(self.history)+self.sensor.delay_frames:
                 rate=self.fit_rate
-            self.control_heading = self.filtered_deg
-            candidate_integral = self.integral + self.gain_scale*c.ki*self.filtered_deg*control_dt
-            raw = self.gain_scale*c.kp*self.filtered_deg + candidate_integral + self.gain_scale*c.kd*rate
+            if c.heading_deadband_deg and not error:
+                rate = 0.
+            self.control_heading = error
+            candidate_integral = self.integral + self.gain_scale*c.ki*error*control_dt
+            raw = self.gain_scale*c.kp*error + candidate_integral + self.gain_scale*c.kd*rate
             # Positive head roll bias produced negative body yaw in the steering probe.
             # Conditional integration prevents winding up against the correction cap.
-            if abs(raw) <= c.max_correction_deg or raw*self.filtered_deg < 0:
+            if abs(raw) <= c.max_correction_deg or raw*error < 0:
                 self.integral = candidate_integral
-            self.raw_command = self.gain_scale*c.kp*self.filtered_deg + self.integral + self.gain_scale*c.kd*rate
+            self.raw_command = self.gain_scale*c.kp*error + self.integral + self.gain_scale*c.kd*rate
         raw = self.raw_command
         bounded = float(np.clip(raw, -c.max_correction_deg, c.max_correction_deg))
         self.correction_deg += float(np.clip(bounded-self.correction_deg,

@@ -1,0 +1,22 @@
+{
+  "frequency_hz": 4.647087937668649,
+  "roll_deg": 38.95566755807141,
+  "yaw_deg": 37.15498031049635,
+  "yaw_phase_deg": 120.10834427827292,
+  "pitch_bias_deg": 2.672582059047778,
+  "x_mm": -6.8539749152523415,
+  "y_mm": 0.485917920319398,
+  "y_phase_deg": -0.5015971762020464,
+  "z_mm": -0.3446753287820978,
+  "yaw_sharpness": 0.4448753166410324,
+  "roll_sharpness": 0.7202931616988598,
+  "yaw_bias_deg": 1.0966887577300828,
+  "roll_bias_deg": -0.5984729872047905,
+  "phase_skew": 0.23525054308415458,
+  "pitch_deg": -0.7926075899450095,
+  "pitch_phase_deg": -88.32869377357447,
+  "yaw_stroke_fraction": 0.0,
+  "roll_stroke_fraction": 0.0,
+  "stroke_accel_fraction": 0.14893264140959447,
+  "stroke_brake_fraction": 0.0628062052908845
+}

@@ -35,6 +35,10 @@ class Gait:
     phase_skew: float = 0.0
     yaw_harmonic_deg: float = 0.0
     yaw_harmonic_phase_deg: float = 0.0
+    yaw_stroke_fraction: float = 0.0
+    roll_stroke_fraction: float = 0.0
+    stroke_accel_fraction: float = 0.20
+    stroke_brake_fraction: float = 0.05
 
     def __post_init__(self):
         if not all(math.isfinite(v) for v in asdict(self).values()):
@@ -45,6 +49,10 @@ class Gait:
             raise ValueError("Swing sharpness must lie in [0, 5]")
         if abs(self.phase_skew) > .5:
             raise ValueError("Phase skew outside monotonic stroke bound")
+        if any(v != 0 and not .15 <= v <= 1 for v in (self.yaw_stroke_fraction, self.roll_stroke_fraction)):
+            raise ValueError("Stroke fraction must be zero (legacy) or in [.15, 1]")
+        if not (.025 <= self.stroke_accel_fraction <= .45 and .025 <= self.stroke_brake_fraction <= .45):
+            raise ValueError("Stroke acceleration/braking fractions must lie in [.025, .45]")
         if abs(self.pitch_deg) + abs(self.pitch_bias_deg) > 40 or self.mirror not in (-1, 1):
             raise ValueError("Invalid pitch or mirror value")
         if max(abs(self.x_mm), abs(self.y_mm), abs(self.z_mm)) > 25:
@@ -56,10 +64,12 @@ class Gait:
         phase = phase + self.phase_skew * (1-math.cos(phase))
         # Smooth, bounded swing-and-hold. Large sharpness shortens the stroke
         # and lengthens its end dwell. It never changes motor torque/rate caps.
-        def swing(p, sharpness):
+        def swing(p, sharpness, stroke):
+            if stroke:
+                return brake_stroke(p, stroke, self.stroke_accel_fraction, self.stroke_brake_fraction)
             return math.sin(p) if sharpness == 0 else math.tanh(sharpness * math.sin(p)) / math.tanh(sharpness)
-        r = self.mirror * (self.roll_bias_deg + self.roll_deg * swing(phase, self.roll_sharpness))
-        y = self.mirror * (self.yaw_bias_deg + self.yaw_deg * swing(phase + math.radians(self.yaw_phase_deg), self.yaw_sharpness))
+        r = self.mirror * (self.roll_bias_deg + self.roll_deg * swing(phase, self.roll_sharpness, self.roll_stroke_fraction))
+        y = self.mirror * (self.yaw_bias_deg + self.yaw_deg * swing(phase + math.radians(self.yaw_phase_deg), self.yaw_sharpness, self.yaw_stroke_fraction))
         y += self.mirror*self.yaw_harmonic_deg*math.sin(2*phase+math.radians(self.yaw_harmonic_phase_deg))
         p = self.pitch_bias_deg + self.pitch_deg * math.sin(2 * phase + math.radians(self.pitch_phase_deg))
         pose = np.eye(4)
@@ -68,6 +78,25 @@ class Gait:
                       self.mirror * self.y_mm * envelope * math.sin(phase + math.radians(self.y_phase_deg)) / 1000,
                       .177 + self.z_mm * envelope / 1000]
         return pose
+
+
+def brake_stroke(phase, move_fraction, accel_fraction, brake_fraction):
+    """Continuous position/velocity, trapezoidal speed, then an endpoint hold.
+
+    Fractions describe a target waveform, not additional motor capability.
+    All targets still pass through IK, 50 Hz sampling and the same bounded servo.
+    Zero phase crosses the stroke centre approximately, as for the legacy sine.
+    """
+    half = ((phase + math.pi / 2) % (2 * math.pi)) / math.pi
+    u = float(np.clip(((half % 1) - (1 - move_fraction) / 2) / move_fraction, 0, 1))
+    area = 1 - (accel_fraction + brake_fraction) / 2
+    if u < accel_fraction:
+        progress = u * u / (2 * accel_fraction * area)
+    elif u <= 1 - brake_fraction:
+        progress = (u - accel_fraction / 2) / area
+    else:
+        progress = 1 - (1 - u) ** 2 / (2 * brake_fraction * area)
+    return (2 * progress - 1) * (1 if half < 1 else -1)
 
 
 class HeadIK:
@@ -187,6 +216,10 @@ class SwaySimulator:
         left_unloaded = right_unloaded = 0
         max_side_clearance = 0.0
         motor_work_j = 0.0
+        braking_work_j = 0.0
+        airborne_steps = flight_run_steps = longest_flight_steps = flight_count = 0
+        max_foot_bottom_clearance = 0.0
+        minimum_joint_margin = float("inf")
         initial_yaw = 0.0
         velocity_samples = []
         peak_torque = np.zeros(model.nu)
@@ -316,6 +349,25 @@ class SwaySimulator:
                     torque_sq += state.actuator_force ** 2
                     peak_velocity = np.maximum(peak_velocity, np.abs(state.actuator_velocity))
                     motor_work_j += float(np.sum(np.abs(state.actuator_force[self.act] * state.actuator_velocity[self.act]))) * self.dt
+                    power = state.actuator_force[self.act] * state.actuator_velocity[self.act]
+                    braking_work_j += float(np.sum(np.maximum(-power, 0))) * self.dt
+                    # Cylinder support function: a raised rim is not a flight.
+                    row_z = state.geom_xmat[self.foot].reshape(3, 3)[2]
+                    bottom = float(state.geom_xpos[self.foot, 2] -
+                                   self.config["foot_half_height_m"] * abs(row_z[2]) -
+                                   self.config["foot_radius_m"] * np.linalg.norm(row_z[:2]))
+                    max_foot_bottom_clearance = max(max_foot_bottom_clearance, bottom)
+                    airborne = bottom > .0001 and sum(forces) < .05
+                    if airborne:
+                        flight_count += int(flight_run_steps == 0)
+                        flight_run_steps += 1
+                        airborne_steps += 1
+                        longest_flight_steps = max(longest_flight_steps, flight_run_steps)
+                    else:
+                        flight_run_steps = 0
+                    q = state.qpos[self.joint_qpos]
+                    minimum_joint_margin = min(minimum_joint_margin, float(np.min(q-self.command_limits[:, 0])),
+                                               float(np.min(self.command_limits[:, 1]-q)))
                     for sign in (-1, 1):
                         rim = state.xpos[self.base] + state.xmat[self.base].reshape(3, 3) @ np.array([0, sign*self.config["foot_radius_m"], 0])
                         max_side_clearance = max(max_side_clearance, float(rim[2]))
@@ -346,6 +398,14 @@ class SwaySimulator:
                   "right_unloaded_fraction": right_unloaded/max(1, measured_steps),
                   "any_motor_torque_saturated_fraction": torque_saturated/max(1, measured_steps),
                   "absolute_motor_work_j": motor_work_j,
+                  "negative_motor_work_j": braking_work_j,
+                  "airborne_fraction": airborne_steps/max(1, measured_steps),
+                  "longest_airborne_interval_s": longest_flight_steps*self.dt,
+                  "airborne_intervals": flight_count,
+                  "airborne_definition": "foot-cylinder bottom >0.1 mm and summed foot normal force <0.05 N",
+                  "max_foot_bottom_clearance_m": max_foot_bottom_clearance,
+                  "min_motor_joint_limit_margin_rad": minimum_joint_margin if measured_steps else None,
+                  "measurement_displacement_in_startup_frame_m": (startup_rotation.T @ (state.xpos[self.base]-start)).tolist() if start is not None else [0., 0., 0.],
                   "cycle_boundaries": boundaries, "external_forces_applied": False,
                   "mujoco_version": mujoco.__version__, "control_rate_hz": 50,
                   "upstream_xml_sha256": self.source_sha256, "kinematics_sha256": self.ik.source_sha256}

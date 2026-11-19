@@ -1,5 +1,48 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 19, 2026 — speed-first headshake reaches 0.96 m in 20 seconds
+
+Latest user priority: maximum forward speed without falling, allowing up to
+20° heading change. Removed smoothness/lateral penalties from the objective.
+Compared the prior gait, the original high-frequency headshake and explicit
+rapid-stroke/brake/hold waveforms in 612 candidate evaluations on four local CPU
+workers. Selected on 96 longer/finer rollouts, then froze the policy before 16
+fresh stress runs. No robot or shared GPU was used.
+
+**Selected 1 ms run:** 964.8 mm in 20.02 s, **48.19 mm/s**, **2.73×** the prior
+fast gait on the same physical model. Maximum heading from startup is 17.29°.
+The 40.04 s run moves 1.93 m without falling; maximum foot tilt is 3.22°.
+At 0.5 ms, speed is 48.47 mm/s (0.57% difference) and heading stays within 16.62°.
+The 20-second saved replay matches selection exactly; the video plays at 1×.
+
+Kept the nominal 5 V hypothesis, 1.475 kg mass, 0.416 Nm head torque caps,
+motor back-EMF/no-load-speed envelope, joint limits and contact model. Changed
+software target speed/acceleration/filter from 6 rad/s, 60 rad/s², 5 Hz to
+10.7 rad/s, 360 rad/s², 25 Hz. These are model/software choices, not verified
+firmware limits. Body yaw remains zero. Actual gait frequency is 4.545 Hz;
+bounded heading feedback uses a 10° deadband. The winning waveform uses the
+existing smooth swing family; explicit trapezoidal brake/hold candidates were
+tested but did not win. Ablations show fast command timing and coupled roll/yaw
+are important, without establishing braking alone as the cause.
+
+Mean progress is 10.6 mm/cycle, with single-edge support in 99.6% of sampled
+frames. **No true airborne interval was detected** using substep foot-bottom
+clearance plus normal force. This is fast rocking locomotion, not a verified hop.
+All 16 fresh trials stay upright and move forward, but only **6/16** pass the
+20° heading constraint; worst heading is 84.15° and speeds range 1.55–73.98 mm/s.
+Hardware response and the heading estimator remain unidentified; no sim-to-real
+success is claimed.
+
+Evidence: `docs/SPEED_FIRST_2026-11-19.md`,
+`experiments/reports/motor-training-speed-summary-2026-11-19.json`, detailed
+search/selection/demo reports, and `media/simulation/speed-first-2026-11-19.mp4`.
+Frozen policy: `configs/{sway,motors,heading}-speed-trained.json`.
+All **80 tests pass** in `experiments/reports/repository-tests-speed-final-2026-11-19.txt`.
+Reproduction commands are in the speed-first document. Next: improve steering
+under the identified difficult model variations while retaining this speed
+baseline, and identify actual motor/profile/contact response before transfer.
+
+
 ## November 19, 2026 — personal clones resynchronized without losing work
 
 User confirmed the scope is this Mac and `kfuUbuntu`, with Nimbus/EY excluded.

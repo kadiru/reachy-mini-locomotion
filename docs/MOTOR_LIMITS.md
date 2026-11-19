@@ -70,6 +70,11 @@ Nominal torque and PWM limits of 80%, command speed 6 rad/s, acceleration 60
 rad/s², a 5 Hz target filter, and one 20 ms delay frame are **our software/model
 choices**, not ROBOTIS ratings or changes to Reachy's firmware.
 
+The November 19 [speed-first experiment](SPEED_FIRST_2026-11-19.md) keeps the
+physical envelope and changes those software command choices to 10.7 rad/s,
+360 rad/s² and a 25 Hz target filter. These values are not measured installed
+profile settings. The original configuration remains available for comparison.
+
 The CAD exporter applies a motor class to seven passive ball joints, including
 0.001 kg·m² reflected rotor inertia at each axis. We remove that motor inertia
 and explicitly assume small passive damping/friction, varying friction in the

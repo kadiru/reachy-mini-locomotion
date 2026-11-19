@@ -1,0 +1,5933 @@
+{
+  "evidence": "uncalibrated_simulation",
+  "hardware_ready": false,
+  "recipe": {
+    "id": "11-deadband10",
+    "gait": {
+      "frequency_hz": 4.647087937668649,
+      "roll_deg": 38.95566755807141,
+      "yaw_deg": 37.15498031049635,
+      "yaw_phase_deg": 120.10834427827292,
+      "pitch_bias_deg": 2.672582059047778,
+      "x_mm": -6.8539749152523415,
+      "y_mm": 0.485917920319398,
+      "y_phase_deg": -0.5015971762020464,
+      "z_mm": -0.3446753287820978,
+      "yaw_sharpness": 0.4448753166410324,
+      "roll_sharpness": 0.7202931616988598,
+      "yaw_bias_deg": 1.0966887577300828,
+      "roll_bias_deg": -0.5984729872047905,
+      "phase_skew": 0.23525054308415458,
+      "pitch_deg": -0.7926075899450095,
+      "pitch_phase_deg": -88.32869377357447,
+      "yaw_stroke_fraction": 0.0,
+      "roll_stroke_fraction": 0.0,
+      "stroke_accel_fraction": 0.14893264140959447,
+      "stroke_brake_fraction": 0.0628062052908845
+    },
+    "profile": "sharp_targets",
+    "feedback": {
+      "kp": 0.2044537893293592,
+      "ki": 0.07476637749331849,
+      "kd": 0.0061529199323916255,
+      "filter_tau_s": 0.1219339821597473,
+      "max_correction_deg": 2.484207714544889,
+      "correction_rate_deg_s": 17.651055916275357,
+      "yaw_per_roll": -0.2551286938232557,
+      "roll_per_correction": 1.0,
+      "phase_skew_per_correction": -0.014923379981482778,
+      "cycle_average": false,
+      "cycle_update": false,
+      "startup_ramp_cycles": 1.0,
+      "heading_deadband_deg": 10.0
+    }
+  },
+  "recorded_replay_matches_selection_exactly": true,
+  "recording": "experiments/generated/speed-first-20s-2026-11-19.json",
+  "recording_sha256": "cbbc8cc0c3dac65f2e2333ce9e6d2cca5f527fe0e12498b353aaead61f6a069b",
+  "nominal": {
+    "evidence": "uncalibrated_simulation",
+    "gait": {
+      "frequency_hz": 4.647087937668649,
+      "roll_deg": 38.95566755807141,
+      "yaw_deg": 37.15498031049635,
+      "yaw_phase_deg": 120.10834427827292,
+      "pitch_deg": -0.7926075899450095,
+      "pitch_phase_deg": -88.32869377357447,
+      "pitch_bias_deg": 2.672582059047778,
+      "x_mm": -6.8539749152523415,
+      "y_mm": 0.485917920319398,
+      "y_phase_deg": -0.5015971762020464,
+      "z_mm": -0.3446753287820978,
+      "mirror": 1.0,
+      "roll_sharpness": 0.7202931616988598,
+      "yaw_sharpness": 0.4448753166410324,
+      "roll_bias_deg": -0.5984729872047905,
+      "yaw_bias_deg": 1.0966887577300828,
+      "phase_skew": 0.23525054308415458,
+      "yaw_harmonic_deg": 0.0,
+      "yaw_harmonic_phase_deg": 0.0,
+      "yaw_stroke_fraction": 0.0,
+      "roll_stroke_fraction": 0.0,
+      "stroke_accel_fraction": 0.14893264140959447,
+      "stroke_brake_fraction": 0.0628062052908845
+    },
+    "actual_frequency_hz": 4.545454545454546,
+    "config": {
+      "schema_version": 1,
+      "evidence": "uncalibrated_simulation",
+      "upstream_commit": "a9a2a42adcc1abc7d9c90d390889bbebf930c96c",
+      "foot_radius_m": 0.056,
+      "foot_half_height_m": 0.004,
+      "initial_clearance_m": 0.003,
+      "friction_slide_torsion_roll": [
+        0.7,
+        0.005,
+        0.0001
+      ],
+      "position_kp": 10.0,
+      "position_kv": 0.1,
+      "motor_force_limit_nm": 0.6,
+      "timestep_s": 0.001,
+      "motor_model": {
+        "voltage_v": 5.0,
+        "torque_derating": 0.8,
+        "pwm_limit_fraction": 0.8,
+        "pid_scale": 1.0,
+        "target_speed_rad_s": 10.7,
+        "target_acceleration_rad_s2": 360.0,
+        "target_filter_hz": 25.0,
+        "delay_frames": 1,
+        "joint_damping_nm_s_rad": 0.005,
+        "joint_friction_nm": 0.01,
+        "joint_armature_kg_m2": 0.0001,
+        "total_mass_kg": 1.475,
+        "mass_distribution": "torso",
+        "passive_damping_nm_s_rad": 0.0001,
+        "passive_friction_nm": 0.001
+      },
+      "notes": "Rated head motor: XL330-M288. 5 V is an evaluation hypothesis, not measured bus voltage. 80% torque/PWM and command rate/acceleration caps are software design choices, not continuous ratings or firmware settings. Inertia/friction/PID mapping/mass placement remain unidentified. Legacy PD fields apply only during artificial reset; datasheet-bounded torque control replaces them before rollout. Speed-first software target profile: sharp_targets; physical torque/mass/contact bounds unchanged. This is not an identified firmware profile."
+    },
+    "valid": true,
+    "failure_reason": null,
+    "requested_cycles": 91,
+    "warmup_cycles": 3,
+    "measured_seconds": 20.02,
+    "forward_m": 0.9644778201152951,
+    "lateral_m": 0.10070903205518,
+    "heading_change_rad": 0.1882248495206933,
+    "forward_m_per_s": 0.048175715290474284,
+    "max_heading_excursion_rad": 0.3054284470558519,
+    "max_heading_from_startup_rad": 0.3017525474945191,
+    "final_heading_from_startup_rad": 0.18454894995936755,
+    "startup_frame_displacement_m": [
+      0.9682682739934226,
+      0.09707475928545771,
+      0.0007679004150626927
+    ],
+    "unwrapped_heading_change_rad": 0.1882248495207004,
+    "max_lateral_excursion_m": 0.10089260144948609,
+    "max_foot_tilt_deg": 3.2241885463163014,
+    "max_closure_error_m": 3.9453607695715706e-05,
+    "max_head_orientation_tracking_error_deg": 67.5295546962979,
+    "max_side_rim_clearance_m": 0.005851916465085656,
+    "foot_contact_fraction": 1.0,
+    "left_unloaded_fraction": 0.49305694305694303,
+    "right_unloaded_fraction": 0.502997002997003,
+    "any_motor_torque_saturated_fraction": 0.007292707292707293,
+    "absolute_motor_work_j": 40.32429120427639,
+    "negative_motor_work_j": 13.116263443725403,
+    "airborne_fraction": 0.0,
+    "longest_airborne_interval_s": 0.0,
+    "airborne_intervals": 0,
+    "airborne_definition": "foot-cylinder bottom >0.1 mm and summed foot normal force <0.05 N",
+    "max_foot_bottom_clearance_m": 0.0,
+    "min_motor_joint_limit_margin_rad": 0.46865529305356557,
+    "measurement_displacement_in_startup_frame_m": [
+      0.9648414994489647,
+      0.09716303604208847,
+      0.00046369091790423434
+    ],
+    "cycle_boundaries": [
+      {
+        "cycle": 0,
+        "foot_displacement_m": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "cycle": 1,
+        "foot_displacement_m": [
+          0.00742747106153409,
+          0.0007899266122346004,
+          4.748652232756343e-05
+        ]
+      },
+      {
+        "cycle": 2,
+        "foot_displacement_m": [
+          0.017782422172912395,
+          0.0018597656180357534,
+          1.2058618004369317e-05
+        ]
+      },
+      {
+        "cycle": 3,
+        "foot_displacement_m": [
+          0.029534638878526257,
+          0.001556860132841236,
+          0.0001041996674601146
+        ]
+      },
+      {
+        "cycle": 4,
+        "foot_displacement_m": [
+          0.039711634505512995,
+          0.0015838519311863952,
+          0.00018330477121875733
+        ]
+      },
+      {
+        "cycle": 5,
+        "foot_displacement_m": [
+          0.05119769384552039,
+          0.0013015359239583865,
+          -0.0001166603981144587
+        ]
+      },
+      {
+        "cycle": 6,
+        "foot_displacement_m": [
+          0.06107574297317559,
+          0.0019663166226484316,
+          0.00019767299248716843
+        ]
+      },
+      {
+        "cycle": 7,
+        "foot_displacement_m": [
+          0.07177236707332095,
+          0.0023812093099552564,
+          -6.211300748098131e-05
+        ]
+      },
+      {
+        "cycle": 8,
+        "foot_displacement_m": [
+          0.08226088653200667,
+          0.0027389997168794826,
+          0.00016947836211202025
+        ]
+      },
+      {
+        "cycle": 9,
+        "foot_displacement_m": [
+          0.09393838133928102,
+          0.0024838812197960705,
+          5.770644247753663e-06
+        ]
+      },
+      {
+        "cycle": 10,
+        "foot_displacement_m": [
+          0.10405814438952822,
+          0.003461562457218818,
+          0.00018411879832284532
+        ]
+      },
+      {
+        "cycle": 11,
+        "foot_displacement_m": [
+          0.11534469877578701,
+          0.004208462475073165,
+          -0.00013752992736014108
+        ]
+      },
+      {
+        "cycle": 12,
+        "foot_displacement_m": [
+          0.1253306258887466,
+          0.005228918957899206,
+          0.00020900603484320067
+        ]
+      },
+      {
+        "cycle": 13,
+        "foot_displacement_m": [
+          0.13647585971379977,
+          0.005649214202593635,
+          -0.00012534903442810357
+        ]
+      },
+      {
+        "cycle": 14,
+        "foot_displacement_m": [
+          0.14679039897173618,
+          0.006787739569981289,
+          0.00015176304273256902
+        ]
+      },
+      {
+        "cycle": 15,
+        "foot_displacement_m": [
+          0.15804097363057165,
+          0.00751906078083191,
+          -2.576563657686454e-05
+        ]
+      },
+      {
+        "cycle": 16,
+        "foot_displacement_m": [
+          0.16847318292643343,
+          0.008468149660282944,
+          0.00014336326002643867
+        ]
+      },
+      {
+        "cycle": 17,
+        "foot_displacement_m": [
+          0.1798134431919288,
+          0.009320427894721378,
+          -1.3532454759549806e-05
+        ]
+      },
+      {
+        "cycle": 18,
+        "foot_displacement_m": [
+          0.1902687638240975,
+          0.010477038026396017,
+          0.00011330515632614383
+        ]
+      },
+      {
+        "cycle": 19,
+        "foot_displacement_m": [
+          0.20153806450626333,
+          0.01167943787228554,
+          -9.51096886536585e-05
+        ]
+      },
+      {
+        "cycle": 20,
+        "foot_displacement_m": [
+          0.21172146962090974,
+          0.013154283183909264,
+          0.0001648962411761525
+        ]
+      },
+      {
+        "cycle": 21,
+        "foot_displacement_m": [
+          0.2229649365113638,
+          0.014186411493218606,
+          -2.8473194962790212e-05
+        ]
+      },
+      {
+        "cycle": 22,
+        "foot_displacement_m": [
+          0.2333208295144692,
+          0.015441553214170664,
+          0.00017736096567781283
+        ]
+      },
+      {
+        "cycle": 23,
+        "foot_displacement_m": [
+          0.24508147559871266,
+          0.01637040121282596,
+          -7.385354082223124e-05
+        ]
+      },
+      {
+        "cycle": 24,
+        "foot_displacement_m": [
+          0.2548337100268185,
+          0.018255526793506838,
+          0.00024477093739055743
+        ]
+      },
+      {
+        "cycle": 25,
+        "foot_displacement_m": [
+          0.2660143051488832,
+          0.019654537305712306,
+          -0.00018274300710010004
+        ]
+      },
+      {
+        "cycle": 26,
+        "foot_displacement_m": [
+          0.2758787040729188,
+          0.021632531109799225,
+          0.0002321558722756458
+        ]
+      },
+      {
+        "cycle": 27,
+        "foot_displacement_m": [
+          0.28691648605894193,
+          0.023032094596906364,
+          -0.00015483843318320933
+        ]
+      },
+      {
+        "cycle": 28,
+        "foot_displacement_m": [
+          0.2970493274674019,
+          0.024930682547240623,
+          0.00015416464465674133
+        ]
+      },
+      {
+        "cycle": 29,
+        "foot_displacement_m": [
+          0.308199777229286,
+          0.026418158808655785,
+          1.1930145213698111e-05
+        ]
+      },
+      {
+        "cycle": 30,
+        "foot_displacement_m": [
+          0.31854843701575497,
+          0.028235610086733438,
+          0.00020300077138871191
+        ]
+      },
+      {
+        "cycle": 31,
+        "foot_displacement_m": [
+          0.32990863205879256,
+          0.029583482489527437,
+          0.00018958965231090596
+        ]
+      },
+      {
+        "cycle": 32,
+        "foot_displacement_m": [
+          0.3404929722304818,
+          0.03146045563941009,
+          6.45809472268787e-05
+        ]
+      },
+      {
+        "cycle": 33,
+        "foot_displacement_m": [
+          0.35156120692737913,
+          0.03365492572416394,
+          6.100628044246895e-05
+        ]
+      },
+      {
+        "cycle": 34,
+        "foot_displacement_m": [
+          0.36208020442368904,
+          0.035540731339391715,
+          9.964661446992508e-05
+        ]
+      },
+      {
+        "cycle": 35,
+        "foot_displacement_m": [
+          0.37353403130764895,
+          0.03724394583506802,
+          0.00013861301967149457
+        ]
+      },
+      {
+        "cycle": 36,
+        "foot_displacement_m": [
+          0.3836993487610858,
+          0.03923406566471683,
+          0.00015121173138544044
+        ]
+      },
+      {
+        "cycle": 37,
+        "foot_displacement_m": [
+          0.39502445400074243,
+          0.04086599931567939,
+          0.0002398010969642997
+        ]
+      },
+      {
+        "cycle": 38,
+        "foot_displacement_m": [
+          0.40551750006517184,
+          0.04247050039790266,
+          9.602448948162066e-05
+        ]
+      },
+      {
+        "cycle": 39,
+        "foot_displacement_m": [
+          0.4168654571870422,
+          0.04415956479354341,
+          0.0002456445717550306
+        ]
+      },
+      {
+        "cycle": 40,
+        "foot_displacement_m": [
+          0.427119086684059,
+          0.04576556072090901,
+          0.00022669385863527495
+        ]
+      },
+      {
+        "cycle": 41,
+        "foot_displacement_m": [
+          0.43812390672947993,
+          0.04677911462513212,
+          0.0008178455347930291
+        ]
+      },
+      {
+        "cycle": 42,
+        "foot_displacement_m": [
+          0.4481425748324147,
+          0.0485418437074518,
+          7.185432006922047e-05
+        ]
+      },
+      {
+        "cycle": 43,
+        "foot_displacement_m": [
+          0.45939834950036823,
+          0.05029336929296527,
+          0.00043621955811570394
+        ]
+      },
+      {
+        "cycle": 44,
+        "foot_displacement_m": [
+          0.4692467955431972,
+          0.052437334927003004,
+          0.0002063567927687566
+        ]
+      },
+      {
+        "cycle": 45,
+        "foot_displacement_m": [
+          0.48044053575501355,
+          0.05448859610019991,
+          0.00015811307890004398
+        ]
+      },
+      {
+        "cycle": 46,
+        "foot_displacement_m": [
+          0.49091139642901893,
+          0.05609928455880539,
+          0.00020731598555914386
+        ]
+      },
+      {
+        "cycle": 47,
+        "foot_displacement_m": [
+          0.501743447345541,
+          0.05721757075604076,
+          0.0007551322543498879
+        ]
+      },
+      {
+        "cycle": 48,
+        "foot_displacement_m": [
+          0.5116804570091689,
+          0.05855111536991314,
+          0.00015394591160266207
+        ]
+      },
+      {
+        "cycle": 49,
+        "foot_displacement_m": [
+          0.5227224614238524,
+          0.059927426737080465,
+          0.0007417056423247067
+        ]
+      },
+      {
+        "cycle": 50,
+        "foot_displacement_m": [
+          0.5325794654340648,
+          0.06158642987995034,
+          4.138910692997195e-05
+        ]
+      },
+      {
+        "cycle": 51,
+        "foot_displacement_m": [
+          0.5439759782118546,
+          0.0633307448357797,
+          0.0005241503714517259
+        ]
+      },
+      {
+        "cycle": 52,
+        "foot_displacement_m": [
+          0.5538626884666576,
+          0.0647318518434345,
+          0.0001483217723629306
+        ]
+      },
+      {
+        "cycle": 53,
+        "foot_displacement_m": [
+          0.5648126691109308,
+          0.06588195286740477,
+          0.0010039065652804576
+        ]
+      },
+      {
+        "cycle": 54,
+        "foot_displacement_m": [
+          0.5744183394641033,
+          0.06746537481919798,
+          0.00013482417635914064
+        ]
+      },
+      {
+        "cycle": 55,
+        "foot_displacement_m": [
+          0.5854615456001568,
+          0.06910127039635212,
+          0.0005201910445898213
+        ]
+      },
+      {
+        "cycle": 56,
+        "foot_displacement_m": [
+          0.5953307930126895,
+          0.07054398878421468,
+          0.0001886710153058104
+        ]
+      },
+      {
+        "cycle": 57,
+        "foot_displacement_m": [
+          0.6062750028770096,
+          0.0715243429706173,
+          0.0007628977130078542
+        ]
+      },
+      {
+        "cycle": 58,
+        "foot_displacement_m": [
+          0.6161682022806592,
+          0.07247919086937121,
+          0.00028687262378078725
+        ]
+      },
+      {
+        "cycle": 59,
+        "foot_displacement_m": [
+          0.6267357348083736,
+          0.07337724793202699,
+          0.001141019382242443
+        ]
+      },
+      {
+        "cycle": 60,
+        "foot_displacement_m": [
+          0.6364589720360136,
+          0.0749279307378289,
+          7.535704527183068e-05
+        ]
+      },
+      {
+        "cycle": 61,
+        "foot_displacement_m": [
+          0.64775861925722,
+          0.07679719837909862,
+          0.00023441572758178055
+        ]
+      },
+      {
+        "cycle": 62,
+        "foot_displacement_m": [
+          0.6578407157382792,
+          0.0779782810631186,
+          0.00017567030135641276
+        ]
+      },
+      {
+        "cycle": 63,
+        "foot_displacement_m": [
+          0.6687736510203661,
+          0.07852924163836365,
+          0.0009195482584801878
+        ]
+      },
+      {
+        "cycle": 64,
+        "foot_displacement_m": [
+          0.6787140525908371,
+          0.07964236798135094,
+          0.00010393225430928841
+        ]
+      },
+      {
+        "cycle": 65,
+        "foot_displacement_m": [
+          0.6896587122149703,
+          0.08072787570377166,
+          0.00071967518074989
+        ]
+      },
+      {
+        "cycle": 66,
+        "foot_displacement_m": [
+          0.6996036189211247,
+          0.08168183379568253,
+          0.00015658362917386856
+        ]
+      },
+      {
+        "cycle": 67,
+        "foot_displacement_m": [
+          0.710738472774571,
+          0.08263156144157391,
+          0.0007606689846759763
+        ]
+      },
+      {
+        "cycle": 68,
+        "foot_displacement_m": [
+          0.7205539027358933,
+          0.08363838569082961,
+          0.00033905056647024287
+        ]
+      },
+      {
+        "cycle": 69,
+        "foot_displacement_m": [
+          0.7313194161567043,
+          0.08464758821712905,
+          0.0008287644109417822
+        ]
+      },
+      {
+        "cycle": 70,
+        "foot_displacement_m": [
+          0.7412477246582131,
+          0.08593174565422651,
+          4.6529808488571245e-05
+        ]
+      },
+      {
+        "cycle": 71,
+        "foot_displacement_m": [
+          0.752503590140329,
+          0.08706854755226633,
+          0.0005048280341672072
+        ]
+      },
+      {
+        "cycle": 72,
+        "foot_displacement_m": [
+          0.7625376058766908,
+          0.08789162771586073,
+          0.00017600398841015867
+        ]
+      },
+      {
+        "cycle": 73,
+        "foot_displacement_m": [
+          0.7735307931164813,
+          0.08839468472842044,
+          0.0008545178568345926
+        ]
+      },
+      {
+        "cycle": 74,
+        "foot_displacement_m": [
+          0.7834289373783933,
+          0.08947279222090822,
+          0.00014302060645323875
+        ]
+      },
+      {
+        "cycle": 75,
+        "foot_displacement_m": [
+          0.7944407935476567,
+          0.0901573808860595,
+          0.0007737530227453818
+        ]
+      },
+      {
+        "cycle": 76,
+        "foot_displacement_m": [
+          0.804590065468177,
+          0.09124499782227716,
+          0.00010767308133546844
+        ]
+      },
+      {
+        "cycle": 77,
+        "foot_displacement_m": [
+          0.8157118595007226,
+          0.09205774334632055,
+          0.0005471458524466974
+        ]
+      },
+      {
+        "cycle": 78,
+        "foot_displacement_m": [
+          0.8258334029173698,
+          0.09266737258816105,
+          0.00017192250910285202
+        ]
+      },
+      {
+        "cycle": 79,
+        "foot_displacement_m": [
+          0.8368059163303079,
+          0.09301429325079935,
+          0.0008216098838526584
+        ]
+      },
+      {
+        "cycle": 80,
+        "foot_displacement_m": [
+          0.8468528610499546,
+          0.09373707404653028,
+          0.00013251945778052578
+        ]
+      },
+      {
+        "cycle": 81,
+        "foot_displacement_m": [
+          0.8579693053648002,
+          0.09430754705430161,
+          0.0006251605429693863
+        ]
+      },
+      {
+        "cycle": 82,
+        "foot_displacement_m": [
+          0.8681345717358807,
+          0.09534441051250936,
+          0.00022849337859248052
+        ]
+      },
+      {
+        "cycle": 83,
+        "foot_displacement_m": [
+          0.8791414617151809,
+          0.09572394999889698,
+          0.0008031929345133203
+        ]
+      },
+      {
+        "cycle": 84,
+        "foot_displacement_m": [
+          0.8893062174161301,
+          0.09645432314350821,
+          9.472703292794337e-05
+        ]
+      },
+      {
+        "cycle": 85,
+        "foot_displacement_m": [
+          0.9005284174518701,
+          0.09707590845064273,
+          0.0004702332436465816
+        ]
+      },
+      {
+        "cycle": 86,
+        "foot_displacement_m": [
+          0.9108626415561255,
+          0.09796325659541742,
+          0.0002010447591036185
+        ]
+      },
+      {
+        "cycle": 87,
+        "foot_displacement_m": [
+          0.9218543945921869,
+          0.09845208480396513,
+          0.0005809813251313896
+        ]
+      },
+      {
+        "cycle": 88,
+        "foot_displacement_m": [
+          0.932077707871661,
+          0.09880166828204603,
+          0.00024403019621940548
+        ]
+      },
+      {
+        "cycle": 89,
+        "foot_displacement_m": [
+          0.9430583767344602,
+          0.09907201221623177,
+          0.0008021884395429336
+        ]
+      },
+      {
+        "cycle": 90,
+        "foot_displacement_m": [
+          0.9531958994824412,
+          0.10017351707947146,
+          0.00015772226316639672
+        ]
+      },
+      {
+        "cycle": 91,
+        "foot_displacement_m": [
+          0.9644778201152951,
+          0.10070903205518,
+          0.00046369091790423434
+        ]
+      }
+    ],
+    "external_forces_applied": false,
+    "mujoco_version": "3.3.7",
+    "control_rate_hz": 50,
+    "upstream_xml_sha256": "efd7e49d4288e5ef53945771a1f116584aa2c8b89721b725d5d77da9f0fcbf46",
+    "kinematics_sha256": "b07324cfe46515d7b3bd5be416f5f2ed87811ac1fcdb0e6ad841119e4ed9ab3b",
+    "actuator_names": [
+      "yaw_body",
+      "stewart_1",
+      "stewart_2",
+      "stewart_3",
+      "stewart_4",
+      "stewart_5",
+      "stewart_6",
+      "right_antenna",
+      "left_antenna"
+    ],
+    "peak_motor_torque_nm": [
+      0.12490730929193404,
+      0.3538359082818793,
+      0.41600000000000004,
+      0.16904550594948647,
+      0.3541751653514576,
+      0.35968420442490145,
+      0.304669735033455,
+      0.0029059283370483596,
+      0.003470469445499881
+    ],
+    "rms_motor_torque_nm": [
+      0.07044472165795979,
+      0.19290331240318678,
+      0.2195274218197657,
+      0.09554368726654526,
+      0.13442423866512465,
+      0.1905222359244554,
+      0.16084810571545138,
+      0.001035509842495193,
+      0.0024323230329028776
+    ],
+    "peak_motor_velocity_rad_s": [
+      1.1133685859914846,
+      7.05817430712461,
+      5.8572006779842045,
+      3.974673044233406,
+      4.397815432328467,
+      5.225858373991155,
+      7.00739098361657,
+      0.11411957968776817,
+      0.1978167984903161
+    ],
+    "base_subtree_mass_kg": 1.4749999999999994,
+    "rms_base_acceleration_m_s2": 1.5919258710162552,
+    "rms_base_angular_velocity_rad_s": 0.8228079453076481,
+    "motor_diagnostics": {
+      "model": "unidentified_PWM_DC_approximation",
+      "hardware_ready": false,
+      "stall_torque_nm": [
+        0.93,
+        0.52,
+        0.52,
+        0.52,
+        0.52,
+        0.52,
+        0.52,
+        0.215,
+        0.215
+      ],
+      "torque_caps_nm": [
+        0.7440000000000001,
+        0.41600000000000004,
+        0.41600000000000004,
+        0.41600000000000004,
+        0.41600000000000004,
+        0.41600000000000004,
+        0.41600000000000004,
+        0.17200000000000001,
+        0.17200000000000001
+      ],
+      "no_load_speed_rad_s": [
+        8.482300164692441,
+        10.786134777324955,
+        10.786134777324955,
+        10.786134777324955,
+        10.786134777324955,
+        10.786134777324955,
+        10.786134777324955,
+        40.10766621082969,
+        40.10766621082969
+      ],
+      "any_pwm_saturated_fraction_including_warmup": 0.4496615087040619,
+      "max_filtered_command_speed_rad_s": 10.7,
+      "max_filtered_command_acceleration_rad_s2": 360.0,
+      "thermal_model": false,
+      "current_estimate": "not_calibrated_not_reported"
+    },
+    "heading_feedback": {
+      "config": {
+        "kp": 0.2044537893293592,
+        "ki": 0.07476637749331849,
+        "kd": 0.0061529199323916255,
+        "filter_tau_s": 0.1219339821597473,
+        "max_correction_deg": 2.484207714544889,
+        "correction_rate_deg_s": 17.651055916275357,
+        "yaw_per_roll": -0.2551286938232557,
+        "roll_per_correction": 1.0,
+        "phase_skew_per_correction": -0.014923379981482778,
+        "cycle_average": false,
+        "cycle_update": false,
+        "startup_ramp_cycles": 1.0,
+        "yaw_excursion_target_deg": 0.0,
+        "min_yaw_scale": 0.6,
+        "initial_yaw_scale": 1.0,
+        "amplitude_adaptation_rate": 0.2,
+        "gain_schedule": false,
+        "yaw_amplitude_response": 1.0,
+        "yaw_phase_slowdown_deg": 0.0,
+        "roll_slowdown_deg": 0.0,
+        "yaw_harmonic_per_correction": 0.0,
+        "yaw_harmonic_phase_deg": 0.0,
+        "phase_fit": false,
+        "heading_deadband_deg": 10.0
+      },
+      "sensor": {
+        "delay_frames": 3,
+        "noise_std_deg": 0.25,
+        "bias_deg": 0.0,
+        "seed": 19031
+      },
+      "sensing_assumption": "simulated external foot heading, relative to startup; not hardware calibrated",
+      "peak_correction_deg": 2.270294854636146,
+      "minimum_yaw_scale": 1.0,
+      "saturated_fraction": 0.0
+    },
+    "render_forward_frame": "startup"
+  },
+  "metrics": {
+    "feasible": true,
+    "stable": true,
+    "speed_mm_s": 48.19388109135688,
+    "heading_deg": 17.289147428756866,
+    "score": 1048.1938810913568
+  },
+  "diagnostics": {
+    "mean_cycle_progress_mm": 10.602653840098514,
+    "min_cycle_progress_mm": 7.430324565061952,
+    "max_cycle_progress_mm": 11.763980972272408,
+    "single_edge_fraction_50hz": 0.9960079840319361,
+    "head_slowing_on_edge_fraction": 0.9922779922779923,
+    "head_roll_range_deg": [
+      -20.07917570414435,
+      5.385357239768499
+    ],
+    "head_yaw_range_deg": [
+      -17.907396128352673,
+      32.71362381585756
+    ],
+    "peak_head_roll_yaw_rate_deg_s": [
+      330.6679573441158,
+      685.2260536673863
+    ],
+    "peak_observed_forward_speed_mm_s": 94.84506798816128,
+    "mean_negative_motor_power_w_50hz": 0.6524194319227704,
+    "interpretation": "kinematic phase correlation, not proof that braking alone causes motion; no-flight classification uses physics-substep clearance and force"
+  },
+  "ablations": [
+    {
+      "case": "selected",
+      "result": {
+        "evidence": "uncalibrated_simulation",
+        "gait": {
+          "frequency_hz": 4.647087937668649,
+          "roll_deg": 38.95566755807141,
+          "yaw_deg": 37.15498031049635,
+          "yaw_phase_deg": 120.10834427827292,
+          "pitch_deg": -0.7926075899450095,
+          "pitch_phase_deg": -88.32869377357447,
+          "pitch_bias_deg": 2.672582059047778,
+          "x_mm": -6.8539749152523415,
+          "y_mm": 0.485917920319398,
+          "y_phase_deg": -0.5015971762020464,
+          "z_mm": -0.3446753287820978,
+          "mirror": 1.0,
+          "roll_sharpness": 0.7202931616988598,
+          "yaw_sharpness": 0.4448753166410324,
+          "roll_bias_deg": -0.5984729872047905,
+          "yaw_bias_deg": 1.0966887577300828,
+          "phase_skew": 0.23525054308415458,
+          "yaw_harmonic_deg": 0.0,
+          "yaw_harmonic_phase_deg": 0.0,
+          "yaw_stroke_fraction": 0.0,
+          "roll_stroke_fraction": 0.0,
+          "stroke_accel_fraction": 0.14893264140959447,
+          "stroke_brake_fraction": 0.0628062052908845
+        },
+        "actual_frequency_hz": 4.545454545454546,
+        "config": {
+          "schema_version": 1,
+          "evidence": "uncalibrated_simulation",
+          "upstream_commit": "a9a2a42adcc1abc7d9c90d390889bbebf930c96c",
+          "foot_radius_m": 0.056,
+          "foot_half_height_m": 0.004,
+          "initial_clearance_m": 0.003,
+          "friction_slide_torsion_roll": [
+            0.7,
+            0.005,
+            0.0001
+          ],
+          "position_kp": 10.0,
+          "position_kv": 0.1,
+          "motor_force_limit_nm": 0.6,
+          "timestep_s": 0.001,
+          "motor_model": {
+            "voltage_v": 5.0,
+            "torque_derating": 0.8,
+            "pwm_limit_fraction": 0.8,
+            "pid_scale": 1.0,
+            "target_speed_rad_s": 10.7,
+            "target_acceleration_rad_s2": 360.0,
+            "target_filter_hz": 25.0,
+            "delay_frames": 1,
+            "joint_damping_nm_s_rad": 0.005,
+            "joint_friction_nm": 0.01,
+            "joint_armature_kg_m2": 0.0001,
+            "total_mass_kg": 1.475,
+            "mass_distribution": "torso",
+            "passive_damping_nm_s_rad": 0.0001,
+            "passive_friction_nm": 0.001
+          },
+          "notes": "Rated head motor: XL330-M288. 5 V is an evaluation hypothesis, not measured bus voltage. 80% torque/PWM and command rate/acceleration caps are software design choices, not continuous ratings or firmware settings. Inertia/friction/PID mapping/mass placement remain unidentified. Legacy PD fields apply only during artificial reset; datasheet-bounded torque control replaces them before rollout. Speed-first software target profile: sharp_targets; physical torque/mass/contact bounds unchanged. This is not an identified firmware profile."
+        },
+        "valid": true,
+        "failure_reason": null,
+        "requested_cycles": 46,
+        "warmup_cycles": 3,
+        "measured_seconds": 10.120000000000001,
+        "forward_m": 0.49091139642901893,
+        "lateral_m": 0.05609928455880539,
+        "heading_change_rad": 0.30542844705585104,
+        "forward_m_per_s": 0.048509031267689615,
+        "max_heading_excursion_rad": 0.3054284470558519,
+        "max_heading_from_startup_rad": 0.3017525474945191,
+        "final_heading_from_startup_rad": 0.3017525474945191,
+        "startup_frame_displacement_m": [
+          0.49454106919259666,
+          0.05420609186627889,
+          0.0005115254827176023
+        ],
+        "unwrapped_heading_change_rad": 0.3054284470558519,
+        "max_lateral_excursion_m": 0.05641824024109018,
+        "max_foot_tilt_deg": 3.0882774778205255,
+        "max_closure_error_m": 3.9453607695715706e-05,
+        "max_head_orientation_tracking_error_deg": 67.5295546962979,
+        "max_side_rim_clearance_m": 0.005635429995257332,
+        "foot_contact_fraction": 1.0,
+        "left_unloaded_fraction": 0.49970355731225297,
+        "right_unloaded_fraction": 0.4924901185770751,
+        "any_motor_torque_saturated_fraction": 0.014130434782608696,
+        "absolute_motor_work_j": 20.159527151794208,
+        "negative_motor_work_j": 6.421011760127495,
+        "airborne_fraction": 0.0,
+        "longest_airborne_interval_s": 0.0,
+        "airborne_intervals": 0,
+        "airborne_definition": "foot-cylinder bottom >0.1 mm and summed foot normal force <0.05 N",
+        "max_foot_bottom_clearance_m": 0.0,
+        "min_motor_joint_limit_margin_rad": 0.4813479785444764,
+        "measurement_displacement_in_startup_frame_m": [
+          0.4911142946481387,
+          0.05429436862290965,
+          0.00020731598555914386
+        ],
+        "cycle_boundaries": [
+          {
+            "cycle": 0,
+            "foot_displacement_m": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "cycle": 1,
+            "foot_displacement_m": [
+              0.00742747106153409,
+              0.0007899266122346004,
+              4.748652232756343e-05
+            ]
+          },
+          {
+            "cycle": 2,
+            "foot_displacement_m": [
+              0.017782422172912395,
+              0.0018597656180357534,
+              1.2058618004369317e-05
+            ]
+          },
+          {
+            "cycle": 3,
+            "foot_displacement_m": [
+              0.029534638878526257,
+              0.001556860132841236,
+              0.0001041996674601146
+            ]
+          },
+          {
+            "cycle": 4,
+            "foot_displacement_m": [
+              0.039711634505512995,
+              0.0015838519311863952,
+              0.00018330477121875733
+            ]
+          },
+          {
+            "cycle": 5,
+            "foot_displacement_m": [
+              0.05119769384552039,
+              0.0013015359239583865,
+              -0.0001166603981144587
+            ]
+          },
+          {
+            "cycle": 6,
+            "foot_displacement_m": [
+              0.06107574297317559,
+              0.0019663166226484316,
+              0.00019767299248716843
+            ]
+          },
+          {
+            "cycle": 7,
+            "foot_displacement_m": [
+              0.07177236707332095,
+              0.0023812093099552564,
+              -6.211300748098131e-05
+            ]
+          },
+          {
+            "cycle": 8,
+            "foot_displacement_m": [
+              0.08226088653200667,
+              0.0027389997168794826,
+              0.00016947836211202025
+            ]
+          },
+          {
+            "cycle": 9,
+            "foot_displacement_m": [
+              0.09393838133928102,
+              0.0024838812197960705,
+              5.770644247753663e-06
+            ]
+          },
+          {
+            "cycle": 10,
+            "foot_displacement_m": [
+              0.10405814438952822,
+              0.003461562457218818,
+              0.00018411879832284532
+            ]
+          },
+          {
+            "cycle": 11,
+            "foot_displacement_m": [
+              0.11534469877578701,
+              0.004208462475073165,
+              -0.00013752992736014108
+            ]
+          },
+          {
+            "cycle": 12,
+            "foot_displacement_m": [
+              0.1253306258887466,
+              0.005228918957899206,
+              0.00020900603484320067
+            ]
+          },
+          {
+            "cycle": 13,
+            "foot_displacement_m": [
+              0.13647585971379977,
+              0.005649214202593635,
+              -0.00012534903442810357
+            ]
+          },
+          {
+            "cycle": 14,
+            "foot_displacement_m": [
+              0.14679039897173618,
+              0.006787739569981289,
+              0.00015176304273256902
+            ]
+          },
+          {
+            "cycle": 15,
+            "foot_displacement_m": [
+              0.15804097363057165,
+              0.00751906078083191,
+              -2.576563657686454e-05
+            ]
+          },
+          {
+            "cycle": 16,
+            "foot_displacement_m": [
+              0.16847318292643343,
+              0.008468149660282944,
+              0.00014336326002643867
+            ]
+          },
+          {
+            "cycle": 17,
+            "foot_displacement_m": [
+              0.1798134431919288,
+              0.009320427894721378,
+              -1.3532454759549806e-05
+            ]
+          },
+          {
+            "cycle": 18,
+            "foot_displacement_m": [
+              0.1902687638240975,
+              0.010477038026396017,
+              0.00011330515632614383
+            ]
+          },
+          {
+            "cycle": 19,
+            "foot_displacement_m": [
+              0.20153806450626333,
+              0.01167943787228554,
+              -9.51096886536585e-05
+            ]
+          },
+          {
+            "cycle": 20,
+            "foot_displacement_m": [
+              0.21172146962090974,
+              0.013154283183909264,
+              0.0001648962411761525
+            ]
+          },
+          {
+            "cycle": 21,
+            "foot_displacement_m": [
+              0.2229649365113638,
+              0.014186411493218606,
+              -2.8473194962790212e-05
+            ]
+          },
+          {
+            "cycle": 22,
+            "foot_displacement_m": [
+              0.2333208295144692,
+              0.015441553214170664,
+              0.00017736096567781283
+            ]
+          },
+          {
+            "cycle": 23,
+            "foot_displacement_m": [
+              0.24508147559871266,
+              0.01637040121282596,
+              -7.385354082223124e-05
+            ]
+          },
+          {
+            "cycle": 24,
+            "foot_displacement_m": [
+              0.2548337100268185,
+              0.018255526793506838,
+              0.00024477093739055743
+            ]
+          },
+          {
+            "cycle": 25,
+            "foot_displacement_m": [
+              0.2660143051488832,
+              0.019654537305712306,
+              -0.00018274300710010004
+            ]
+          },
+          {
+            "cycle": 26,
+            "foot_displacement_m": [
+              0.2758787040729188,
+              0.021632531109799225,
+              0.0002321558722756458
+            ]
+          },
+          {
+            "cycle": 27,
+            "foot_displacement_m": [
+              0.28691648605894193,
+              0.023032094596906364,
+              -0.00015483843318320933
+            ]
+          },
+          {
+            "cycle": 28,
+            "foot_displacement_m": [
+              0.2970493274674019,
+              0.024930682547240623,
+              0.00015416464465674133
+            ]
+          },
+          {
+            "cycle": 29,
+            "foot_displacement_m": [
+              0.308199777229286,
+              0.026418158808655785,
+              1.1930145213698111e-05
+            ]
+          },
+          {
+            "cycle": 30,
+            "foot_displacement_m": [
+              0.31854843701575497,
+              0.028235610086733438,
+              0.00020300077138871191
+            ]
+          },
+          {
+            "cycle": 31,
+            "foot_displacement_m": [
+              0.32990863205879256,
+              0.029583482489527437,
+              0.00018958965231090596
+            ]
+          },
+          {
+            "cycle": 32,
+            "foot_displacement_m": [
+              0.3404929722304818,
+              0.03146045563941009,
+              6.45809472268787e-05
+            ]
+          },
+          {
+            "cycle": 33,
+            "foot_displacement_m": [
+              0.35156120692737913,
+              0.03365492572416394,
+              6.100628044246895e-05
+            ]
+          },
+          {
+            "cycle": 34,
+            "foot_displacement_m": [
+              0.36208020442368904,
+              0.035540731339391715,
+              9.964661446992508e-05
+            ]
+          },
+          {
+            "cycle": 35,
+            "foot_displacement_m": [
+              0.37353403130764895,
+              0.03724394583506802,
+              0.00013861301967149457
+            ]
+          },
+          {
+            "cycle": 36,
+            "foot_displacement_m": [
+              0.3836993487610858,
+              0.03923406566471683,
+              0.00015121173138544044
+            ]
+          },
+          {
+            "cycle": 37,
+            "foot_displacement_m": [
+              0.39502445400074243,
+              0.04086599931567939,
+              0.0002398010969642997
+            ]
+          },
+          {
+            "cycle": 38,
+            "foot_displacement_m": [
+              0.40551750006517184,
+              0.04247050039790266,
+              9.602448948162066e-05
+            ]
+          },
+          {
+            "cycle": 39,
+            "foot_displacement_m": [
+              0.4168654571870422,
+              0.04415956479354341,
+              0.0002456445717550306
+            ]
+          },
+          {
+            "cycle": 40,
+            "foot_displacement_m": [
+              0.427119086684059,
+              0.04576556072090901,
+              0.00022669385863527495
+            ]
+          },
+          {
+            "cycle": 41,
+            "foot_displacement_m": [
+              0.43812390672947993,
+              0.04677911462513212,
+              0.0008178455347930291
+            ]
+          },
+          {
+            "cycle": 42,
+            "foot_displacement_m": [
+              0.4481425748324147,
+              0.0485418437074518,
+              7.185432006922047e-05
+            ]
+          },
+          {
+            "cycle": 43,
+            "foot_displacement_m": [
+              0.45939834950036823,
+              0.05029336929296527,
+              0.00043621955811570394
+            ]
+          },
+          {
+            "cycle": 44,
+            "foot_displacement_m": [
+              0.4692467955431972,
+              0.052437334927003004,
+              0.0002063567927687566
+            ]
+          },
+          {
+            "cycle": 45,
+            "foot_displacement_m": [
+              0.48044053575501355,
+              0.05448859610019991,
+              0.00015811307890004398
+            ]
+          },
+          {
+            "cycle": 46,
+            "foot_displacement_m": [
+              0.49091139642901893,
+              0.05609928455880539,
+              0.00020731598555914386
+            ]
+          }
+        ],
+        "external_forces_applied": false,
+        "mujoco_version": "3.3.7",
+        "control_rate_hz": 50,
+        "upstream_xml_sha256": "efd7e49d4288e5ef53945771a1f116584aa2c8b89721b725d5d77da9f0fcbf46",
+        "kinematics_sha256": "b07324cfe46515d7b3bd5be416f5f2ed87811ac1fcdb0e6ad841119e4ed9ab3b",
+        "actuator_names": [
+          "yaw_body",
+          "stewart_1",
+          "stewart_2",
+          "stewart_3",
+          "stewart_4",
+          "stewart_5",
+          "stewart_6",
+          "right_antenna",
+          "left_antenna"
+        ],
+        "peak_motor_torque_nm": [
+          0.12281244928414888,
+          0.3304652443476461,
+          0.41600000000000004,
+          0.16650812711632657,
+          0.34380838239835015,
+          0.3594281200337093,
+          0.2933821929909293,
+          0.0029059283370483596,
+          0.003470469445499881
+        ],
+        "rms_motor_torque_nm": [
+          0.07071964609940533,
+          0.18849782542043012,
+          0.22367981675548737,
+          0.09342294362947538,
+          0.1253782843033839,
+          0.19469402992217297,
+          0.16112671342105633,
+          0.0010650614627680773,
+          0.0026345939326068105
+        ],
+        "peak_motor_velocity_rad_s": [
+          1.1133685859914846,
+          7.05817430712461,
+          5.8572006779842045,
+          3.67605161381963,
+          4.204059614968105,
+          5.225858373991155,
+          7.00739098361657,
+          0.101986557713499,
+          0.17285126865421455
+        ],
+        "base_subtree_mass_kg": 1.4749999999999994,
+        "rms_base_acceleration_m_s2": 1.5547714966959016,
+        "rms_base_angular_velocity_rad_s": 0.7870020327644159,
+        "motor_diagnostics": {
+          "model": "unidentified_PWM_DC_approximation",
+          "hardware_ready": false,
+          "stall_torque_nm": [
+            0.93,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.215,
+            0.215
+          ],
+          "torque_caps_nm": [
+            0.7440000000000001,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.17200000000000001,
+            0.17200000000000001
+          ],
+          "no_load_speed_rad_s": [
+            8.482300164692441,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            40.10766621082969,
+            40.10766621082969
+          ],
+          "any_pwm_saturated_fraction_including_warmup": 0.45602968460111315,
+          "max_filtered_command_speed_rad_s": 10.7,
+          "max_filtered_command_acceleration_rad_s2": 360.0,
+          "thermal_model": false,
+          "current_estimate": "not_calibrated_not_reported"
+        },
+        "heading_feedback": {
+          "config": {
+            "kp": 0.2044537893293592,
+            "ki": 0.07476637749331849,
+            "kd": 0.0061529199323916255,
+            "filter_tau_s": 0.1219339821597473,
+            "max_correction_deg": 2.484207714544889,
+            "correction_rate_deg_s": 17.651055916275357,
+            "yaw_per_roll": -0.2551286938232557,
+            "roll_per_correction": 1.0,
+            "phase_skew_per_correction": -0.014923379981482778,
+            "cycle_average": false,
+            "cycle_update": false,
+            "startup_ramp_cycles": 1.0,
+            "yaw_excursion_target_deg": 0.0,
+            "min_yaw_scale": 0.6,
+            "initial_yaw_scale": 1.0,
+            "amplitude_adaptation_rate": 0.2,
+            "gain_schedule": false,
+            "yaw_amplitude_response": 1.0,
+            "yaw_phase_slowdown_deg": 0.0,
+            "roll_slowdown_deg": 0.0,
+            "yaw_harmonic_per_correction": 0.0,
+            "yaw_harmonic_phase_deg": 0.0,
+            "phase_fit": false,
+            "heading_deadband_deg": 10.0
+          },
+          "sensor": {
+            "delay_frames": 3,
+            "noise_std_deg": 0.25,
+            "bias_deg": 0.0,
+            "seed": 19031
+          },
+          "sensing_assumption": "simulated external foot heading, relative to startup; not hardware calibrated",
+          "peak_correction_deg": 1.6131973397229302,
+          "minimum_yaw_scale": 1.0,
+          "saturated_fraction": 0.0
+        }
+      },
+      "metrics": {
+        "feasible": true,
+        "stable": true,
+        "speed_mm_s": 48.52908049882793,
+        "heading_deg": 17.289147428756866,
+        "score": 1048.5290804988279
+      }
+    },
+    {
+      "case": "command_acceleration_60",
+      "result": {
+        "evidence": "uncalibrated_simulation",
+        "gait": {
+          "frequency_hz": 4.647087937668649,
+          "roll_deg": 38.95566755807141,
+          "yaw_deg": 37.15498031049635,
+          "yaw_phase_deg": 120.10834427827292,
+          "pitch_deg": -0.7926075899450095,
+          "pitch_phase_deg": -88.32869377357447,
+          "pitch_bias_deg": 2.672582059047778,
+          "x_mm": -6.8539749152523415,
+          "y_mm": 0.485917920319398,
+          "y_phase_deg": -0.5015971762020464,
+          "z_mm": -0.3446753287820978,
+          "mirror": 1.0,
+          "roll_sharpness": 0.7202931616988598,
+          "yaw_sharpness": 0.4448753166410324,
+          "roll_bias_deg": -0.5984729872047905,
+          "yaw_bias_deg": 1.0966887577300828,
+          "phase_skew": 0.23525054308415458,
+          "yaw_harmonic_deg": 0.0,
+          "yaw_harmonic_phase_deg": 0.0,
+          "yaw_stroke_fraction": 0.0,
+          "roll_stroke_fraction": 0.0,
+          "stroke_accel_fraction": 0.14893264140959447,
+          "stroke_brake_fraction": 0.0628062052908845
+        },
+        "actual_frequency_hz": 4.545454545454546,
+        "config": {
+          "schema_version": 1,
+          "evidence": "uncalibrated_simulation",
+          "upstream_commit": "a9a2a42adcc1abc7d9c90d390889bbebf930c96c",
+          "foot_radius_m": 0.056,
+          "foot_half_height_m": 0.004,
+          "initial_clearance_m": 0.003,
+          "friction_slide_torsion_roll": [
+            0.7,
+            0.005,
+            0.0001
+          ],
+          "position_kp": 10.0,
+          "position_kv": 0.1,
+          "motor_force_limit_nm": 0.6,
+          "timestep_s": 0.001,
+          "motor_model": {
+            "voltage_v": 5.0,
+            "torque_derating": 0.8,
+            "pwm_limit_fraction": 0.8,
+            "pid_scale": 1.0,
+            "target_speed_rad_s": 10.7,
+            "target_acceleration_rad_s2": 60.0,
+            "target_filter_hz": 25.0,
+            "delay_frames": 1,
+            "joint_damping_nm_s_rad": 0.005,
+            "joint_friction_nm": 0.01,
+            "joint_armature_kg_m2": 0.0001,
+            "total_mass_kg": 1.475,
+            "mass_distribution": "torso",
+            "passive_damping_nm_s_rad": 0.0001,
+            "passive_friction_nm": 0.001
+          },
+          "notes": "Rated head motor: XL330-M288. 5 V is an evaluation hypothesis, not measured bus voltage. 80% torque/PWM and command rate/acceleration caps are software design choices, not continuous ratings or firmware settings. Inertia/friction/PID mapping/mass placement remain unidentified. Legacy PD fields apply only during artificial reset; datasheet-bounded torque control replaces them before rollout. Speed-first software target profile: sharp_targets; physical torque/mass/contact bounds unchanged. This is not an identified firmware profile."
+        },
+        "valid": true,
+        "failure_reason": null,
+        "requested_cycles": 46,
+        "warmup_cycles": 3,
+        "measured_seconds": 10.120000000000001,
+        "forward_m": -7.434048704819752e-06,
+        "lateral_m": -3.9261591625009477e-05,
+        "heading_change_rad": 0.0003932607264323096,
+        "forward_m_per_s": -7.345897929663786e-07,
+        "max_heading_excursion_rad": 0.0005530450284489952,
+        "max_heading_from_startup_rad": 0.00757274532568708,
+        "final_heading_from_startup_rad": -0.005742121372557474,
+        "startup_frame_displacement_m": [
+          -9.04291909979062e-05,
+          -0.0001722449160796686,
+          6.341534757101081e-07
+        ],
+        "unwrapped_heading_change_rad": 0.0003932607264354182,
+        "max_lateral_excursion_m": 5.0438470284701725e-05,
+        "max_foot_tilt_deg": 1.0651807613412665,
+        "max_closure_error_m": 6.40731971184088e-05,
+        "max_head_orientation_tracking_error_deg": 103.86475336440537,
+        "max_side_rim_clearance_m": 1.679933024255771e-05,
+        "foot_contact_fraction": 1.0,
+        "left_unloaded_fraction": 9.881422924901186e-05,
+        "right_unloaded_fraction": 9.881422924901186e-05,
+        "any_motor_torque_saturated_fraction": 0.16047430830039525,
+        "absolute_motor_work_j": 12.001077809307365,
+        "negative_motor_work_j": 4.099532433687468,
+        "airborne_fraction": 0.0,
+        "longest_airborne_interval_s": 0.0,
+        "airborne_intervals": 0,
+        "airborne_definition": "foot-cylinder bottom >0.1 mm and summed foot normal force <0.05 N",
+        "max_foot_bottom_clearance_m": 0.0,
+        "min_motor_joint_limit_margin_rad": 0.10830852247414935,
+        "measurement_displacement_in_startup_frame_m": [
+          -7.674792140801316e-06,
+          -3.9215242223785134e-05,
+          3.681549891530511e-06
+        ],
+        "cycle_boundaries": [
+          {
+            "cycle": 0,
+            "foot_displacement_m": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "cycle": 1,
+            "foot_displacement_m": [
+              -7.905649040453322e-08,
+              4.934604087424441e-06,
+              3.238617193716543e-06
+            ]
+          },
+          {
+            "cycle": 2,
+            "foot_displacement_m": [
+              -6.642600484571069e-07,
+              3.593463876331849e-07,
+              2.946960955690579e-06
+            ]
+          },
+          {
+            "cycle": 3,
+            "foot_displacement_m": [
+              -2.4289934487674304e-06,
+              6.380024337118688e-08,
+              3.334629392341351e-06
+            ]
+          },
+          {
+            "cycle": 4,
+            "foot_displacement_m": [
+              2.7146673332417415e-06,
+              -6.567871247592505e-06,
+              3.2122620036185577e-06
+            ]
+          },
+          {
+            "cycle": 5,
+            "foot_displacement_m": [
+              -4.87448321876871e-07,
+              7.2272125414863634e-06,
+              3.1672818822118187e-06
+            ]
+          },
+          {
+            "cycle": 6,
+            "foot_displacement_m": [
+              -1.013615512583576e-06,
+              -2.297813070804478e-06,
+              3.074035423447119e-06
+            ]
+          },
+          {
+            "cycle": 7,
+            "foot_displacement_m": [
+              1.1923840756873826e-06,
+              -6.045336527188286e-06,
+              3.7465379359541645e-06
+            ]
+          },
+          {
+            "cycle": 8,
+            "foot_displacement_m": [
+              -3.995505869517604e-06,
+              6.029840544398218e-06,
+              2.856688081673041e-06
+            ]
+          },
+          {
+            "cycle": 9,
+            "foot_displacement_m": [
+              -5.611592006702657e-09,
+              6.91076878712103e-06,
+              3.2053345016191465e-06
+            ]
+          },
+          {
+            "cycle": 10,
+            "foot_displacement_m": [
+              -7.681452640963917e-07,
+              -5.949774641472445e-07,
+              3.3334745295155794e-06
+            ]
+          },
+          {
+            "cycle": 11,
+            "foot_displacement_m": [
+              3.052796379110307e-07,
+              1.8079738076835916e-06,
+              2.989444097987139e-06
+            ]
+          },
+          {
+            "cycle": 12,
+            "foot_displacement_m": [
+              -1.8720241813498182e-06,
+              9.31968164495128e-06,
+              2.8613467293786394e-06
+            ]
+          },
+          {
+            "cycle": 13,
+            "foot_displacement_m": [
+              -5.923637319029279e-07,
+              -1.723270155549452e-06,
+              3.679428945591445e-06
+            ]
+          },
+          {
+            "cycle": 14,
+            "foot_displacement_m": [
+              -2.4439829924920007e-07,
+              -6.166508639066195e-07,
+              2.7532944117561494e-06
+            ]
+          },
+          {
+            "cycle": 15,
+            "foot_displacement_m": [
+              -2.3867470953606846e-06,
+              1.6626281485756694e-05,
+              2.96791506079475e-06
+            ]
+          },
+          {
+            "cycle": 16,
+            "foot_displacement_m": [
+              4.0017316961548714e-06,
+              -1.0316428880849662e-05,
+              3.88294232230069e-06
+            ]
+          },
+          {
+            "cycle": 17,
+            "foot_displacement_m": [
+              -8.145554457201998e-07,
+              -1.6218437662070064e-06,
+              3.021625668772797e-06
+            ]
+          },
+          {
+            "cycle": 18,
+            "foot_displacement_m": [
+              -4.686342107114739e-06,
+              1.1451127616896142e-05,
+              3.332386324060261e-06
+            ]
+          },
+          {
+            "cycle": 19,
+            "foot_displacement_m": [
+              -9.399464040472135e-07,
+              -2.5098141553244304e-06,
+              3.4545678769156687e-06
+            ]
+          },
+          {
+            "cycle": 20,
+            "foot_displacement_m": [
+              -3.4156061628580295e-07,
+              -6.45811156646514e-06,
+              3.0929519754129928e-06
+            ]
+          },
+          {
+            "cycle": 21,
+            "foot_displacement_m": [
+              -3.5658910521522167e-06,
+              1.3114379908981143e-05,
+              4.503123589866044e-06
+            ]
+          },
+          {
+            "cycle": 22,
+            "foot_displacement_m": [
+              2.2256951198995506e-06,
+              -9.267371201081738e-06,
+              3.511710176145485e-06
+            ]
+          },
+          {
+            "cycle": 23,
+            "foot_displacement_m": [
+              -4.185927198089477e-06,
+              -1.3930732521824794e-05,
+              3.1487879422708556e-06
+            ]
+          },
+          {
+            "cycle": 24,
+            "foot_displacement_m": [
+              -8.121294417153708e-06,
+              -3.1697470513610745e-06,
+              2.652416883013476e-06
+            ]
+          },
+          {
+            "cycle": 25,
+            "foot_displacement_m": [
+              -5.849462438123808e-06,
+              -1.6065834473153185e-05,
+              3.5389862236339466e-06
+            ]
+          },
+          {
+            "cycle": 26,
+            "foot_displacement_m": [
+              1.7644504731398195e-06,
+              -3.0360194877724717e-05,
+              3.179631014019463e-06
+            ]
+          },
+          {
+            "cycle": 27,
+            "foot_displacement_m": [
+              -3.58568549423224e-06,
+              -1.1659509150168605e-05,
+              2.5430199859648883e-06
+            ]
+          },
+          {
+            "cycle": 28,
+            "foot_displacement_m": [
+              2.8372640232505413e-06,
+              -3.567209570027938e-05,
+              3.6258033284355108e-06
+            ]
+          },
+          {
+            "cycle": 29,
+            "foot_displacement_m": [
+              1.8441112075784315e-06,
+              -2.829935486813933e-05,
+              3.070047485780481e-06
+            ]
+          },
+          {
+            "cycle": 30,
+            "foot_displacement_m": [
+              -1.4689339053851648e-05,
+              -7.580945941152027e-06,
+              -1.686965457140297e-06
+            ]
+          },
+          {
+            "cycle": 31,
+            "foot_displacement_m": [
+              -1.4106493426990481e-05,
+              -1.544666117718733e-05,
+              3.5190254186247226e-06
+            ]
+          },
+          {
+            "cycle": 32,
+            "foot_displacement_m": [
+              -7.619340451693282e-06,
+              -2.4437704619626213e-05,
+              2.92115129539585e-06
+            ]
+          },
+          {
+            "cycle": 33,
+            "foot_displacement_m": [
+              -1.749441000533564e-05,
+              3.2715452007951093e-07,
+              6.01613689509522e-06
+            ]
+          },
+          {
+            "cycle": 34,
+            "foot_displacement_m": [
+              -1.060752683442358e-05,
+              -2.7285864984181416e-05,
+              4.130631500780023e-06
+            ]
+          },
+          {
+            "cycle": 35,
+            "foot_displacement_m": [
+              -1.2733919448446261e-05,
+              -1.6160951481690154e-05,
+              3.0095784004350416e-06
+            ]
+          },
+          {
+            "cycle": 36,
+            "foot_displacement_m": [
+              -1.9163438314665392e-05,
+              2.9434252125507006e-07,
+              3.0971914659653978e-06
+            ]
+          },
+          {
+            "cycle": 37,
+            "foot_displacement_m": [
+              -1.3776316516991404e-05,
+              -1.996624026949731e-05,
+              3.6892542974847943e-06
+            ]
+          },
+          {
+            "cycle": 38,
+            "foot_displacement_m": [
+              -1.1359793370737937e-05,
+              -2.2051066370757302e-05,
+              2.850115372891743e-06
+            ]
+          },
+          {
+            "cycle": 39,
+            "foot_displacement_m": [
+              -1.857479945298699e-05,
+              -3.868878860156827e-06,
+              2.488260894420753e-06
+            ]
+          },
+          {
+            "cycle": 40,
+            "foot_displacement_m": [
+              -8.263048306530429e-06,
+              -3.3483236344588585e-05,
+              4.213646484375637e-06
+            ]
+          },
+          {
+            "cycle": 41,
+            "foot_displacement_m": [
+              -7.882400319405497e-06,
+              -3.0293061591334995e-05,
+              3.1211106820893747e-06
+            ]
+          },
+          {
+            "cycle": 42,
+            "foot_displacement_m": [
+              -1.5688844002030404e-05,
+              -1.0506730314276272e-05,
+              4.609240187562557e-06
+            ]
+          },
+          {
+            "cycle": 43,
+            "foot_displacement_m": [
+              -9.379530209546206e-06,
+              -3.0092014317672505e-05,
+              3.6616863045380865e-06
+            ]
+          },
+          {
+            "cycle": 44,
+            "foot_displacement_m": [
+              -8.597757081659656e-06,
+              -3.2569766706208985e-05,
+              2.8312691548158537e-06
+            ]
+          },
+          {
+            "cycle": 45,
+            "foot_displacement_m": [
+              -1.5019400653446293e-05,
+              -1.7093750829842185e-05,
+              2.6988415635590472e-06
+            ]
+          },
+          {
+            "cycle": 46,
+            "foot_displacement_m": [
+              -7.434048704819752e-06,
+              -3.9261591625009477e-05,
+              3.681549891530511e-06
+            ]
+          }
+        ],
+        "external_forces_applied": false,
+        "mujoco_version": "3.3.7",
+        "control_rate_hz": 50,
+        "upstream_xml_sha256": "efd7e49d4288e5ef53945771a1f116584aa2c8b89721b725d5d77da9f0fcbf46",
+        "kinematics_sha256": "b07324cfe46515d7b3bd5be416f5f2ed87811ac1fcdb0e6ad841119e4ed9ab3b",
+        "actuator_names": [
+          "yaw_body",
+          "stewart_1",
+          "stewart_2",
+          "stewart_3",
+          "stewart_4",
+          "stewart_5",
+          "stewart_6",
+          "right_antenna",
+          "left_antenna"
+        ],
+        "peak_motor_torque_nm": [
+          0.022762267029368285,
+          0.41600000000000004,
+          0.3407387826777544,
+          0.4140714090532629,
+          0.41600000000000004,
+          0.3917209079119077,
+          0.41600000000000004,
+          0.0034096366293658023,
+          0.0042198451324791985
+        ],
+        "rms_motor_torque_nm": [
+          0.0030031608891504867,
+          0.30049892272140905,
+          0.15105148570954566,
+          0.20919043464434928,
+          0.1888786465985755,
+          0.20416639706551487,
+          0.22403899365869684,
+          0.0017203106239111032,
+          0.0034763238526661303
+        ],
+        "peak_motor_velocity_rad_s": [
+          0.18154818362237227,
+          4.7265452527630885,
+          4.180498503523627,
+          2.4020492710360193,
+          3.8797132615215397,
+          5.917541237142619,
+          4.312180655810452,
+          0.11032836038095109,
+          0.12577372792509586
+        ],
+        "base_subtree_mass_kg": 1.4749999999999994,
+        "rms_base_acceleration_m_s2": 0.006995397988047007,
+        "rms_base_angular_velocity_rad_s": 0.0022872293728956566,
+        "motor_diagnostics": {
+          "model": "unidentified_PWM_DC_approximation",
+          "hardware_ready": false,
+          "stall_torque_nm": [
+            0.93,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.215,
+            0.215
+          ],
+          "torque_caps_nm": [
+            0.7440000000000001,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.17200000000000001,
+            0.17200000000000001
+          ],
+          "no_load_speed_rad_s": [
+            8.482300164692441,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            40.10766621082969,
+            40.10766621082969
+          ],
+          "any_pwm_saturated_fraction_including_warmup": 0.5993506493506493,
+          "max_filtered_command_speed_rad_s": 10.7,
+          "max_filtered_command_acceleration_rad_s2": 60.0,
+          "thermal_model": false,
+          "current_estimate": "not_calibrated_not_reported"
+        },
+        "heading_feedback": {
+          "config": {
+            "kp": 0.2044537893293592,
+            "ki": 0.07476637749331849,
+            "kd": 0.0061529199323916255,
+            "filter_tau_s": 0.1219339821597473,
+            "max_correction_deg": 2.484207714544889,
+            "correction_rate_deg_s": 17.651055916275357,
+            "yaw_per_roll": -0.2551286938232557,
+            "roll_per_correction": 1.0,
+            "phase_skew_per_correction": -0.014923379981482778,
+            "cycle_average": false,
+            "cycle_update": false,
+            "startup_ramp_cycles": 1.0,
+            "yaw_excursion_target_deg": 0.0,
+            "min_yaw_scale": 0.6,
+            "initial_yaw_scale": 1.0,
+            "amplitude_adaptation_rate": 0.2,
+            "gain_schedule": false,
+            "yaw_amplitude_response": 1.0,
+            "yaw_phase_slowdown_deg": 0.0,
+            "roll_slowdown_deg": 0.0,
+            "yaw_harmonic_per_correction": 0.0,
+            "yaw_harmonic_phase_deg": 0.0,
+            "phase_fit": false,
+            "heading_deadband_deg": 10.0
+          },
+          "sensor": {
+            "delay_frames": 3,
+            "noise_std_deg": 0.25,
+            "bias_deg": 0.0,
+            "seed": 19031
+          },
+          "sensing_assumption": "simulated external foot heading, relative to startup; not hardware calibrated",
+          "peak_correction_deg": 0.0,
+          "minimum_yaw_scale": 1.0,
+          "saturated_fraction": 0.0
+        }
+      },
+      "metrics": {
+        "feasible": false,
+        "stable": true,
+        "speed_mm_s": -0.0007583786700396556,
+        "heading_deg": 0.43388634648929175,
+        "score": -0.0007583786700396556
+      }
+    },
+    {
+      "case": "command_filter_5",
+      "result": {
+        "evidence": "uncalibrated_simulation",
+        "gait": {
+          "frequency_hz": 4.647087937668649,
+          "roll_deg": 38.95566755807141,
+          "yaw_deg": 37.15498031049635,
+          "yaw_phase_deg": 120.10834427827292,
+          "pitch_deg": -0.7926075899450095,
+          "pitch_phase_deg": -88.32869377357447,
+          "pitch_bias_deg": 2.672582059047778,
+          "x_mm": -6.8539749152523415,
+          "y_mm": 0.485917920319398,
+          "y_phase_deg": -0.5015971762020464,
+          "z_mm": -0.3446753287820978,
+          "mirror": 1.0,
+          "roll_sharpness": 0.7202931616988598,
+          "yaw_sharpness": 0.4448753166410324,
+          "roll_bias_deg": -0.5984729872047905,
+          "yaw_bias_deg": 1.0966887577300828,
+          "phase_skew": 0.23525054308415458,
+          "yaw_harmonic_deg": 0.0,
+          "yaw_harmonic_phase_deg": 0.0,
+          "yaw_stroke_fraction": 0.0,
+          "roll_stroke_fraction": 0.0,
+          "stroke_accel_fraction": 0.14893264140959447,
+          "stroke_brake_fraction": 0.0628062052908845
+        },
+        "actual_frequency_hz": 4.545454545454546,
+        "config": {
+          "schema_version": 1,
+          "evidence": "uncalibrated_simulation",
+          "upstream_commit": "a9a2a42adcc1abc7d9c90d390889bbebf930c96c",
+          "foot_radius_m": 0.056,
+          "foot_half_height_m": 0.004,
+          "initial_clearance_m": 0.003,
+          "friction_slide_torsion_roll": [
+            0.7,
+            0.005,
+            0.0001
+          ],
+          "position_kp": 10.0,
+          "position_kv": 0.1,
+          "motor_force_limit_nm": 0.6,
+          "timestep_s": 0.001,
+          "motor_model": {
+            "voltage_v": 5.0,
+            "torque_derating": 0.8,
+            "pwm_limit_fraction": 0.8,
+            "pid_scale": 1.0,
+            "target_speed_rad_s": 10.7,
+            "target_acceleration_rad_s2": 360.0,
+            "target_filter_hz": 5.0,
+            "delay_frames": 1,
+            "joint_damping_nm_s_rad": 0.005,
+            "joint_friction_nm": 0.01,
+            "joint_armature_kg_m2": 0.0001,
+            "total_mass_kg": 1.475,
+            "mass_distribution": "torso",
+            "passive_damping_nm_s_rad": 0.0001,
+            "passive_friction_nm": 0.001
+          },
+          "notes": "Rated head motor: XL330-M288. 5 V is an evaluation hypothesis, not measured bus voltage. 80% torque/PWM and command rate/acceleration caps are software design choices, not continuous ratings or firmware settings. Inertia/friction/PID mapping/mass placement remain unidentified. Legacy PD fields apply only during artificial reset; datasheet-bounded torque control replaces them before rollout. Speed-first software target profile: sharp_targets; physical torque/mass/contact bounds unchanged. This is not an identified firmware profile."
+        },
+        "valid": true,
+        "failure_reason": null,
+        "requested_cycles": 46,
+        "warmup_cycles": 3,
+        "measured_seconds": 10.120000000000001,
+        "forward_m": 0.05401906194436525,
+        "lateral_m": 0.22615557656775265,
+        "heading_change_rad": 1.782068359335443,
+        "forward_m_per_s": 0.005337851970787079,
+        "max_heading_excursion_rad": 1.782068359335442,
+        "max_heading_from_startup_rad": 1.773132409777662,
+        "final_heading_from_startup_rad": 1.773132409777662,
+        "startup_frame_displacement_m": [
+          0.05531818586066518,
+          0.22535794416309185,
+          0.0008131468733109194
+        ],
+        "unwrapped_heading_change_rad": 1.782068359335442,
+        "max_lateral_excursion_m": 0.22615557656775265,
+        "max_foot_tilt_deg": 5.0437434683848394,
+        "max_closure_error_m": 3.411350920202719e-05,
+        "max_head_orientation_tracking_error_deg": 65.82944584561022,
+        "max_side_rim_clearance_m": 0.00887270492109625,
+        "foot_contact_fraction": 1.0,
+        "left_unloaded_fraction": 0.4744071146245059,
+        "right_unloaded_fraction": 0.5099802371541502,
+        "any_motor_torque_saturated_fraction": 0.0,
+        "absolute_motor_work_j": 12.743329770820282,
+        "negative_motor_work_j": 3.8798198636412966,
+        "airborne_fraction": 0.0,
+        "longest_airborne_interval_s": 0.0,
+        "airborne_intervals": 0,
+        "airborne_definition": "foot-cylinder bottom >0.1 mm and summed foot normal force <0.05 N",
+        "max_foot_bottom_clearance_m": 0.0,
+        "min_motor_joint_limit_margin_rad": 0.48067546246239734,
+        "measurement_displacement_in_startup_frame_m": [
+          0.05603779314452292,
+          0.22566384204283474,
+          0.0004886106931581658
+        ],
+        "cycle_boundaries": [
+          {
+            "cycle": 0,
+            "foot_displacement_m": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "cycle": 1,
+            "foot_displacement_m": [
+              -0.0004918335250892016,
+              0.00020056446668154036,
+              0.0001314505708971063
+            ]
+          },
+          {
+            "cycle": 2,
+            "foot_displacement_m": [
+              -0.0008669141615117922,
+              0.0006812767169121634,
+              0.00032320751022336925
+            ]
+          },
+          {
+            "cycle": 3,
+            "foot_displacement_m": [
+              -0.0005994008462741914,
+              0.0017871883130831257,
+              0.0008131555479976241
+            ]
+          },
+          {
+            "cycle": 4,
+            "foot_displacement_m": [
+              0.0017333999565366657,
+              0.003755663232633667,
+              0.001734650932888708
+            ]
+          },
+          {
+            "cycle": 5,
+            "foot_displacement_m": [
+              0.006044505960699515,
+              0.0076490238479417,
+              0.0007432065437680514
+            ]
+          },
+          {
+            "cycle": 6,
+            "foot_displacement_m": [
+              0.011056657527458782,
+              0.010015975353921106,
+              0.0009158706865801951
+            ]
+          },
+          {
+            "cycle": 7,
+            "foot_displacement_m": [
+              0.01595641458857158,
+              0.012045704590130818,
+              0.00031804092844550625
+            ]
+          },
+          {
+            "cycle": 8,
+            "foot_displacement_m": [
+              0.020258871196014487,
+              0.016412764120237826,
+              0.0007800150424174769
+            ]
+          },
+          {
+            "cycle": 9,
+            "foot_displacement_m": [
+              0.02486181653009111,
+              0.020032143978333982,
+              0.0008305507163986552
+            ]
+          },
+          {
+            "cycle": 10,
+            "foot_displacement_m": [
+              0.029432606688902154,
+              0.023050764924613693,
+              0.0002829171699374923
+            ]
+          },
+          {
+            "cycle": 11,
+            "foot_displacement_m": [
+              0.03349506745423625,
+              0.027789665457768585,
+              0.0005948769530083931
+            ]
+          },
+          {
+            "cycle": 12,
+            "foot_displacement_m": [
+              0.03744955522455752,
+              0.03258350499820869,
+              0.0005984210571370037
+            ]
+          },
+          {
+            "cycle": 13,
+            "foot_displacement_m": [
+              0.04152607888163724,
+              0.03682306509606749,
+              0.0003615810434143145
+            ]
+          },
+          {
+            "cycle": 14,
+            "foot_displacement_m": [
+              0.04525461443424146,
+              0.041833613413525435,
+              0.0005011611287259368
+            ]
+          },
+          {
+            "cycle": 15,
+            "foot_displacement_m": [
+              0.04853997780504533,
+              0.04724357319904459,
+              0.0005534463321294592
+            ]
+          },
+          {
+            "cycle": 16,
+            "foot_displacement_m": [
+              0.05184551884444749,
+              0.052385493886430795,
+              0.0004703638038449793
+            ]
+          },
+          {
+            "cycle": 17,
+            "foot_displacement_m": [
+              0.05505787532107857,
+              0.0575546797254301,
+              0.00042614813124023157
+            ]
+          },
+          {
+            "cycle": 18,
+            "foot_displacement_m": [
+              0.05790050504380747,
+              0.06311145538169485,
+              0.0004831650254602897
+            ]
+          },
+          {
+            "cycle": 19,
+            "foot_displacement_m": [
+              0.06050095795476216,
+              0.06875739124608589,
+              0.0004895915278407881
+            ]
+          },
+          {
+            "cycle": 20,
+            "foot_displacement_m": [
+              0.0630513163082416,
+              0.07431524398197671,
+              0.00043437884726202846
+            ]
+          },
+          {
+            "cycle": 21,
+            "foot_displacement_m": [
+              0.0653984765081213,
+              0.07999815497849919,
+              0.00043693964893177866
+            ]
+          },
+          {
+            "cycle": 22,
+            "foot_displacement_m": [
+              0.06745725297870066,
+              0.0858403646847701,
+              0.000455787680008587
+            ]
+          },
+          {
+            "cycle": 23,
+            "foot_displacement_m": [
+              0.06935390303619772,
+              0.09168919253024693,
+              0.00044255706651192596
+            ]
+          },
+          {
+            "cycle": 24,
+            "foot_displacement_m": [
+              0.07112764026573819,
+              0.09754125562319176,
+              0.0004195254075186689
+            ]
+          },
+          {
+            "cycle": 25,
+            "foot_displacement_m": [
+              0.07268102593869281,
+              0.10348328750108071,
+              0.000424239523981163
+            ]
+          },
+          {
+            "cycle": 26,
+            "foot_displacement_m": [
+              0.07401267128636885,
+              0.10948334693480234,
+              0.00042757912135726005
+            ]
+          },
+          {
+            "cycle": 27,
+            "foot_displacement_m": [
+              0.07519327813071225,
+              0.11548613570721229,
+              0.00041510974742561325
+            ]
+          },
+          {
+            "cycle": 28,
+            "foot_displacement_m": [
+              0.07620946110832737,
+              0.12151433709463426,
+              0.0004067580015751765
+            ]
+          },
+          {
+            "cycle": 29,
+            "foot_displacement_m": [
+              0.07701236497119247,
+              0.127586972923178,
+              0.0004095780473129761
+            ]
+          },
+          {
+            "cycle": 30,
+            "foot_displacement_m": [
+              0.07761316531993774,
+              0.13367872848497367,
+              0.00041000836776633855
+            ]
+          },
+          {
+            "cycle": 31,
+            "foot_displacement_m": [
+              0.07803112468248312,
+              0.13977133603356803,
+              0.0004054755262968659
+            ]
+          },
+          {
+            "cycle": 32,
+            "foot_displacement_m": [
+              0.07823502265028798,
+              0.14587320365963619,
+              0.00040700996186987374
+            ]
+          },
+          {
+            "cycle": 33,
+            "foot_displacement_m": [
+              0.0781946610663701,
+              0.15198454621864893,
+              0.00041538184140355256
+            ]
+          },
+          {
+            "cycle": 34,
+            "foot_displacement_m": [
+              0.07791990511289482,
+              0.15808422035130626,
+              0.00042031673575493094
+            ]
+          },
+          {
+            "cycle": 35,
+            "foot_displacement_m": [
+              0.07741131837431775,
+              0.16416141783953167,
+              0.00042392422255488674
+            ]
+          },
+          {
+            "cycle": 36,
+            "foot_displacement_m": [
+              0.07664569041526009,
+              0.17021201065701883,
+              0.00043082544247951225
+            ]
+          },
+          {
+            "cycle": 37,
+            "foot_displacement_m": [
+              0.07561198425109876,
+              0.17622261501932376,
+              0.0004389614242096562
+            ]
+          },
+          {
+            "cycle": 38,
+            "foot_displacement_m": [
+              0.07431343396722294,
+              0.18217677390117512,
+              0.00044524211317978736
+            ]
+          },
+          {
+            "cycle": 39,
+            "foot_displacement_m": [
+              0.07274471633098567,
+              0.18806229378555747,
+              0.00045130633155577487
+            ]
+          },
+          {
+            "cycle": 40,
+            "foot_displacement_m": [
+              0.07089465892175567,
+              0.19386610469764265,
+              0.00045877584009752586
+            ]
+          },
+          {
+            "cycle": 41,
+            "foot_displacement_m": [
+              0.06876405883533794,
+              0.1995716774885077,
+              0.0004657814400406146
+            ]
+          },
+          {
+            "cycle": 42,
+            "foot_displacement_m": [
+              0.06635765259604015,
+              0.2051644041773031,
+              0.0004714083248051052
+            ]
+          },
+          {
+            "cycle": 43,
+            "foot_displacement_m": [
+              0.0636755930355082,
+              0.2106319375891184,
+              0.0004766554731831093
+            ]
+          },
+          {
+            "cycle": 44,
+            "foot_displacement_m": [
+              0.060719346059679505,
+              0.2159609207417291,
+              0.00048182954584735725
+            ]
+          },
+          {
+            "cycle": 45,
+            "foot_displacement_m": [
+              0.05749736547847702,
+              0.22113918661422108,
+              0.0004857965434269838
+            ]
+          },
+          {
+            "cycle": 46,
+            "foot_displacement_m": [
+              0.05401906194436525,
+              0.22615557656775265,
+              0.0004886106931581658
+            ]
+          }
+        ],
+        "external_forces_applied": false,
+        "mujoco_version": "3.3.7",
+        "control_rate_hz": 50,
+        "upstream_xml_sha256": "efd7e49d4288e5ef53945771a1f116584aa2c8b89721b725d5d77da9f0fcbf46",
+        "kinematics_sha256": "b07324cfe46515d7b3bd5be416f5f2ed87811ac1fcdb0e6ad841119e4ed9ab3b",
+        "actuator_names": [
+          "yaw_body",
+          "stewart_1",
+          "stewart_2",
+          "stewart_3",
+          "stewart_4",
+          "stewart_5",
+          "stewart_6",
+          "right_antenna",
+          "left_antenna"
+        ],
+        "peak_motor_torque_nm": [
+          0.1258398320860922,
+          0.21503284487070723,
+          0.3812365698915733,
+          0.22643910722809607,
+          0.14024179590416855,
+          0.3553437006819699,
+          0.18565776195629977,
+          0.004032469628573324,
+          0.004109462637696497
+        ],
+        "rms_motor_torque_nm": [
+          0.03908879744518158,
+          0.10479783414339433,
+          0.15825137061938543,
+          0.0865127936658608,
+          0.03726048104905195,
+          0.16653670334113238,
+          0.0916471097812671,
+          0.0014645422502535636,
+          0.0010844872986547553
+        ],
+        "peak_motor_velocity_rad_s": [
+          1.0551974445428303,
+          4.388295234221273,
+          6.724241392810688,
+          3.793955306230864,
+          2.7239619225087686,
+          6.025297675822451,
+          5.915108075327001,
+          0.37194996115042134,
+          0.3578161152128747
+        ],
+        "base_subtree_mass_kg": 1.4749999999999994,
+        "rms_base_acceleration_m_s2": 1.6910278499915943,
+        "rms_base_angular_velocity_rad_s": 0.8893828334636573,
+        "motor_diagnostics": {
+          "model": "unidentified_PWM_DC_approximation",
+          "hardware_ready": false,
+          "stall_torque_nm": [
+            0.93,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.215,
+            0.215
+          ],
+          "torque_caps_nm": [
+            0.7440000000000001,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.17200000000000001,
+            0.17200000000000001
+          ],
+          "no_load_speed_rad_s": [
+            8.482300164692441,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            40.10766621082969,
+            40.10766621082969
+          ],
+          "any_pwm_saturated_fraction_including_warmup": 0.17597402597402598,
+          "max_filtered_command_speed_rad_s": 10.7,
+          "max_filtered_command_acceleration_rad_s2": 360.0,
+          "thermal_model": false,
+          "current_estimate": "not_calibrated_not_reported"
+        },
+        "heading_feedback": {
+          "config": {
+            "kp": 0.2044537893293592,
+            "ki": 0.07476637749331849,
+            "kd": 0.0061529199323916255,
+            "filter_tau_s": 0.1219339821597473,
+            "max_correction_deg": 2.484207714544889,
+            "correction_rate_deg_s": 17.651055916275357,
+            "yaw_per_roll": -0.2551286938232557,
+            "roll_per_correction": 1.0,
+            "phase_skew_per_correction": -0.014923379981482778,
+            "cycle_average": false,
+            "cycle_update": false,
+            "startup_ramp_cycles": 1.0,
+            "yaw_excursion_target_deg": 0.0,
+            "min_yaw_scale": 0.6,
+            "initial_yaw_scale": 1.0,
+            "amplitude_adaptation_rate": 0.2,
+            "gain_schedule": false,
+            "yaw_amplitude_response": 1.0,
+            "yaw_phase_slowdown_deg": 0.0,
+            "roll_slowdown_deg": 0.0,
+            "yaw_harmonic_per_correction": 0.0,
+            "yaw_harmonic_phase_deg": 0.0,
+            "phase_fit": false,
+            "heading_deadband_deg": 10.0
+          },
+          "sensor": {
+            "delay_frames": 3,
+            "noise_std_deg": 0.25,
+            "bias_deg": 0.0,
+            "seed": 19031
+          },
+          "sensing_assumption": "simulated external foot heading, relative to startup; not hardware calibrated",
+          "peak_correction_deg": 2.484207714544889,
+          "minimum_yaw_scale": 1.0,
+          "saturated_fraction": 0.7092592592592593
+        }
+      },
+      "metrics": {
+        "feasible": false,
+        "stable": true,
+        "speed_mm_s": 5.537331338391592,
+        "heading_deg": 101.59300359812126,
+        "score": -239.2416794559722
+      }
+    },
+    {
+      "case": "command_speed_6",
+      "result": {
+        "evidence": "uncalibrated_simulation",
+        "gait": {
+          "frequency_hz": 4.647087937668649,
+          "roll_deg": 38.95566755807141,
+          "yaw_deg": 37.15498031049635,
+          "yaw_phase_deg": 120.10834427827292,
+          "pitch_deg": -0.7926075899450095,
+          "pitch_phase_deg": -88.32869377357447,
+          "pitch_bias_deg": 2.672582059047778,
+          "x_mm": -6.8539749152523415,
+          "y_mm": 0.485917920319398,
+          "y_phase_deg": -0.5015971762020464,
+          "z_mm": -0.3446753287820978,
+          "mirror": 1.0,
+          "roll_sharpness": 0.7202931616988598,
+          "yaw_sharpness": 0.4448753166410324,
+          "roll_bias_deg": -0.5984729872047905,
+          "yaw_bias_deg": 1.0966887577300828,
+          "phase_skew": 0.23525054308415458,
+          "yaw_harmonic_deg": 0.0,
+          "yaw_harmonic_phase_deg": 0.0,
+          "yaw_stroke_fraction": 0.0,
+          "roll_stroke_fraction": 0.0,
+          "stroke_accel_fraction": 0.14893264140959447,
+          "stroke_brake_fraction": 0.0628062052908845
+        },
+        "actual_frequency_hz": 4.545454545454546,
+        "config": {
+          "schema_version": 1,
+          "evidence": "uncalibrated_simulation",
+          "upstream_commit": "a9a2a42adcc1abc7d9c90d390889bbebf930c96c",
+          "foot_radius_m": 0.056,
+          "foot_half_height_m": 0.004,
+          "initial_clearance_m": 0.003,
+          "friction_slide_torsion_roll": [
+            0.7,
+            0.005,
+            0.0001
+          ],
+          "position_kp": 10.0,
+          "position_kv": 0.1,
+          "motor_force_limit_nm": 0.6,
+          "timestep_s": 0.001,
+          "motor_model": {
+            "voltage_v": 5.0,
+            "torque_derating": 0.8,
+            "pwm_limit_fraction": 0.8,
+            "pid_scale": 1.0,
+            "target_speed_rad_s": 6.0,
+            "target_acceleration_rad_s2": 360.0,
+            "target_filter_hz": 25.0,
+            "delay_frames": 1,
+            "joint_damping_nm_s_rad": 0.005,
+            "joint_friction_nm": 0.01,
+            "joint_armature_kg_m2": 0.0001,
+            "total_mass_kg": 1.475,
+            "mass_distribution": "torso",
+            "passive_damping_nm_s_rad": 0.0001,
+            "passive_friction_nm": 0.001
+          },
+          "notes": "Rated head motor: XL330-M288. 5 V is an evaluation hypothesis, not measured bus voltage. 80% torque/PWM and command rate/acceleration caps are software design choices, not continuous ratings or firmware settings. Inertia/friction/PID mapping/mass placement remain unidentified. Legacy PD fields apply only during artificial reset; datasheet-bounded torque control replaces them before rollout. Speed-first software target profile: sharp_targets; physical torque/mass/contact bounds unchanged. This is not an identified firmware profile."
+        },
+        "valid": true,
+        "failure_reason": null,
+        "requested_cycles": 46,
+        "warmup_cycles": 3,
+        "measured_seconds": 10.120000000000001,
+        "forward_m": -0.0011232982496618008,
+        "lateral_m": 0.0012898222322828908,
+        "heading_change_rad": 0.009199103435720168,
+        "forward_m_per_s": -0.00011099785075709493,
+        "max_heading_excursion_rad": 0.009320200238462917,
+        "max_heading_from_startup_rad": 0.009517171084906906,
+        "final_heading_from_startup_rad": 0.009396074282162825,
+        "startup_frame_displacement_m": [
+          -0.0012286718067993298,
+          0.0013355648447195738,
+          1.2620928120560323e-05
+        ],
+        "unwrapped_heading_change_rad": 0.009199103435718836,
+        "max_lateral_excursion_m": 0.00135608089930521,
+        "max_foot_tilt_deg": 0.11063412074168072,
+        "max_closure_error_m": 3.079848722893117e-05,
+        "max_head_orientation_tracking_error_deg": 71.56762225883605,
+        "max_side_rim_clearance_m": 2.9950995997746297e-05,
+        "foot_contact_fraction": 1.0,
+        "left_unloaded_fraction": 0.028458498023715414,
+        "right_unloaded_fraction": 0.06867588932806325,
+        "any_motor_torque_saturated_fraction": 0.0,
+        "absolute_motor_work_j": 11.413535509079642,
+        "negative_motor_work_j": 4.047363096695989,
+        "airborne_fraction": 0.0,
+        "longest_airborne_interval_s": 0.0,
+        "airborne_intervals": 0,
+        "airborne_definition": "foot-cylinder bottom >0.1 mm and summed foot normal force <0.05 N",
+        "max_foot_bottom_clearance_m": 0.0,
+        "min_motor_joint_limit_margin_rad": 0.5037848564998514,
+        "measurement_displacement_in_startup_frame_m": [
+          -0.0011235522852464234,
+          0.0012896009502563282,
+          1.327305791003116e-05
+        ],
+        "cycle_boundaries": [
+          {
+            "cycle": 0,
+            "foot_displacement_m": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "cycle": 1,
+            "foot_displacement_m": [
+              -2.505670939459305e-05,
+              3.819431859395699e-05,
+              -1.108676337716772e-06
+            ]
+          },
+          {
+            "cycle": 2,
+            "foot_displacement_m": [
+              -4.079584354123331e-05,
+              7.097354984671865e-05,
+              3.5973738876868085e-06
+            ]
+          },
+          {
+            "cycle": 3,
+            "foot_displacement_m": [
+              -6.913951477040854e-05,
+              8.70352477708501e-05,
+              3.6448580424782565e-06
+            ]
+          },
+          {
+            "cycle": 4,
+            "foot_displacement_m": [
+              -9.800820419930345e-05,
+              0.00011393918209657157,
+              1.3965069647253028e-05
+            ]
+          },
+          {
+            "cycle": 5,
+            "foot_displacement_m": [
+              -0.00012633045061980595,
+              0.0001455155869178294,
+              1.3693651020665266e-06
+            ]
+          },
+          {
+            "cycle": 6,
+            "foot_displacement_m": [
+              -0.0001472288036370772,
+              0.000172469302655425,
+              6.084854834582316e-06
+            ]
+          },
+          {
+            "cycle": 7,
+            "foot_displacement_m": [
+              -0.00018145136229993502,
+              0.0002104647711421401,
+              1.4061381035701692e-05
+            ]
+          },
+          {
+            "cycle": 8,
+            "foot_displacement_m": [
+              -0.00019694207741189897,
+              0.00024195238194718975,
+              1.4285540796781762e-06
+            ]
+          },
+          {
+            "cycle": 9,
+            "foot_displacement_m": [
+              -0.00022331383599226166,
+              0.00025315347929178665,
+              4.729877734568189e-06
+            ]
+          },
+          {
+            "cycle": 10,
+            "foot_displacement_m": [
+              -0.0002500189854423841,
+              0.00027493334533522677,
+              1.4385760978360792e-05
+            ]
+          },
+          {
+            "cycle": 11,
+            "foot_displacement_m": [
+              -0.00026797884980555854,
+              0.00031398701104764864,
+              -8.654232072961179e-07
+            ]
+          },
+          {
+            "cycle": 12,
+            "foot_displacement_m": [
+              -0.00028711526346100844,
+              0.0003461208309176901,
+              4.875170406629911e-06
+            ]
+          },
+          {
+            "cycle": 13,
+            "foot_displacement_m": [
+              -0.0003156730784316732,
+              0.000365032668545211,
+              3.760534119033234e-06
+            ]
+          },
+          {
+            "cycle": 14,
+            "foot_displacement_m": [
+              -0.00033406173799662635,
+              0.0003967478099183084,
+              5.310684419056004e-06
+            ]
+          },
+          {
+            "cycle": 15,
+            "foot_displacement_m": [
+              -0.00036880438073699,
+              0.0004370853511533936,
+              1.3718493098704473e-05
+            ]
+          },
+          {
+            "cycle": 16,
+            "foot_displacement_m": [
+              -0.0003868088094299968,
+              0.00046186593701193614,
+              3.2607773770048422e-06
+            ]
+          },
+          {
+            "cycle": 17,
+            "foot_displacement_m": [
+              -0.0004156030796452714,
+              0.00047762741260443407,
+              3.519444663224764e-06
+            ]
+          },
+          {
+            "cycle": 18,
+            "foot_displacement_m": [
+              -0.00044064232992938545,
+              0.0005024070696698384,
+              1.33764239834897e-05
+            ]
+          },
+          {
+            "cycle": 19,
+            "foot_displacement_m": [
+              -0.00048247033403165594,
+              0.000530534643825498,
+              1.430947987334842e-05
+            ]
+          },
+          {
+            "cycle": 20,
+            "foot_displacement_m": [
+              -0.0005009310478893939,
+              0.0005536316272045446,
+              3.4027991670679633e-06
+            ]
+          },
+          {
+            "cycle": 21,
+            "foot_displacement_m": [
+              -0.0005294723400918667,
+              0.0005701205487449129,
+              3.6111936569775625e-06
+            ]
+          },
+          {
+            "cycle": 22,
+            "foot_displacement_m": [
+              -0.0005510202176536911,
+              0.0006041416896846964,
+              1.2527745710459918e-05
+            ]
+          },
+          {
+            "cycle": 23,
+            "foot_displacement_m": [
+              -0.0005797876615529046,
+              0.0006356647096056787,
+              1.3643086601689529e-06
+            ]
+          },
+          {
+            "cycle": 24,
+            "foot_displacement_m": [
+              -0.0006007347246298329,
+              0.0006625303969150227,
+              6.052489911775836e-06
+            ]
+          },
+          {
+            "cycle": 25,
+            "foot_displacement_m": [
+              -0.0006351041104536715,
+              0.0007003382366283679,
+              1.4058602282925904e-05
+            ]
+          },
+          {
+            "cycle": 26,
+            "foot_displacement_m": [
+              -0.000650662958582025,
+              0.0007316925763013835,
+              1.4239632950333771e-06
+            ]
+          },
+          {
+            "cycle": 27,
+            "foot_displacement_m": [
+              -0.0006769945653678109,
+              0.0007427204484677592,
+              4.727113646158379e-06
+            ]
+          },
+          {
+            "cycle": 28,
+            "foot_displacement_m": [
+              -0.0006979661451684418,
+              0.0007684446564491125,
+              1.375212771208129e-05
+            ]
+          },
+          {
+            "cycle": 29,
+            "foot_displacement_m": [
+              -0.000716688113159065,
+              0.0008082427012348872,
+              -1.3356644501164757e-06
+            ]
+          },
+          {
+            "cycle": 30,
+            "foot_displacement_m": [
+              -0.0007394684683122459,
+              0.0008313846377171429,
+              6.838547247285032e-06
+            ]
+          },
+          {
+            "cycle": 31,
+            "foot_displacement_m": [
+              -0.0007667789774024088,
+              0.0008628171816438953,
+              -7.811511867222582e-07
+            ]
+          },
+          {
+            "cycle": 32,
+            "foot_displacement_m": [
+              -0.0007884074320446188,
+              0.0008883589753636548,
+              5.724679155735585e-06
+            ]
+          },
+          {
+            "cycle": 33,
+            "foot_displacement_m": [
+              -0.0008120523631973014,
+              0.0009212510116920682,
+              1.6401435683229045e-06
+            ]
+          },
+          {
+            "cycle": 34,
+            "foot_displacement_m": [
+              -0.000833172778297008,
+              0.0009476688556567597,
+              5.794459499791934e-06
+            ]
+          },
+          {
+            "cycle": 35,
+            "foot_displacement_m": [
+              -0.0008562624717627027,
+              0.0009801724020386806,
+              1.7224825567176968e-06
+            ]
+          },
+          {
+            "cycle": 36,
+            "foot_displacement_m": [
+              -0.0008768739702915527,
+              0.0010073539755561024,
+              5.679098333962268e-06
+            ]
+          },
+          {
+            "cycle": 37,
+            "foot_displacement_m": [
+              -0.0009059718886992977,
+              0.001033620792702018,
+              2.3909206473131823e-06
+            ]
+          },
+          {
+            "cycle": 38,
+            "foot_displacement_m": [
+              -0.0009218903360127751,
+              0.0010705676938109767,
+              3.5379060690601837e-06
+            ]
+          },
+          {
+            "cycle": 39,
+            "foot_displacement_m": [
+              -0.0009510608963072382,
+              0.0010880675308630031,
+              3.6583412755696984e-06
+            ]
+          },
+          {
+            "cycle": 40,
+            "foot_displacement_m": [
+              -0.0009726485569442369,
+              0.0011220238360120129,
+              1.253012443811859e-05
+            ]
+          },
+          {
+            "cycle": 41,
+            "foot_displacement_m": [
+              -0.001001521498983602,
+              0.001153382444901012,
+              1.35827345112847e-06
+            ]
+          },
+          {
+            "cycle": 42,
+            "foot_displacement_m": [
+              -0.0010225156279889014,
+              0.0011801636997214179,
+              6.017879941007327e-06
+            ]
+          },
+          {
+            "cycle": 43,
+            "foot_displacement_m": [
+              -0.0010570275273886138,
+              0.0012177866302563488,
+              1.405302383315442e-05
+            ]
+          },
+          {
+            "cycle": 44,
+            "foot_displacement_m": [
+              -0.001072045981155959,
+              0.0012494018458575095,
+              5.489603777831268e-07
+            ]
+          },
+          {
+            "cycle": 45,
+            "foot_displacement_m": [
+              -0.001101121615901362,
+              0.001261905745078145,
+              3.386677454778403e-06
+            ]
+          },
+          {
+            "cycle": 46,
+            "foot_displacement_m": [
+              -0.0011232982496618008,
+              0.0012898222322828908,
+              1.327305791003116e-05
+            ]
+          }
+        ],
+        "external_forces_applied": false,
+        "mujoco_version": "3.3.7",
+        "control_rate_hz": 50,
+        "upstream_xml_sha256": "efd7e49d4288e5ef53945771a1f116584aa2c8b89721b725d5d77da9f0fcbf46",
+        "kinematics_sha256": "b07324cfe46515d7b3bd5be416f5f2ed87811ac1fcdb0e6ad841119e4ed9ab3b",
+        "actuator_names": [
+          "yaw_body",
+          "stewart_1",
+          "stewart_2",
+          "stewart_3",
+          "stewart_4",
+          "stewart_5",
+          "stewart_6",
+          "right_antenna",
+          "left_antenna"
+        ],
+        "peak_motor_torque_nm": [
+          0.1415912790213966,
+          0.21884998019120339,
+          0.2939211407628027,
+          0.13851526258216645,
+          0.2102182109602389,
+          0.16754446395389488,
+          0.22048453325653125,
+          0.002348509638600865,
+          0.003017454179078799
+        ],
+        "rms_motor_torque_nm": [
+          0.08521623354272743,
+          0.12317724123206061,
+          0.1739206966975863,
+          0.07753881696520151,
+          0.09706130487908514,
+          0.10581368515171001,
+          0.12857597549591068,
+          0.0013586162888172557,
+          0.0021625577255007422
+        ],
+        "peak_motor_velocity_rad_s": [
+          1.2500969653008096,
+          5.009091217560965,
+          4.388643684213377,
+          2.2622821120788608,
+          2.7180555473239103,
+          3.82382977438468,
+          5.075472459124913,
+          0.19014003221718656,
+          0.14127870195183093
+        ],
+        "base_subtree_mass_kg": 1.4749999999999994,
+        "rms_base_acceleration_m_s2": 0.049305757339036256,
+        "rms_base_angular_velocity_rad_s": 0.02863449582920772,
+        "motor_diagnostics": {
+          "model": "unidentified_PWM_DC_approximation",
+          "hardware_ready": false,
+          "stall_torque_nm": [
+            0.93,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.215,
+            0.215
+          ],
+          "torque_caps_nm": [
+            0.7440000000000001,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.17200000000000001,
+            0.17200000000000001
+          ],
+          "no_load_speed_rad_s": [
+            8.482300164692441,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            40.10766621082969,
+            40.10766621082969
+          ],
+          "any_pwm_saturated_fraction_including_warmup": 0.002968460111317254,
+          "max_filtered_command_speed_rad_s": 6.0,
+          "max_filtered_command_acceleration_rad_s2": 360.0,
+          "thermal_model": false,
+          "current_estimate": "not_calibrated_not_reported"
+        },
+        "heading_feedback": {
+          "config": {
+            "kp": 0.2044537893293592,
+            "ki": 0.07476637749331849,
+            "kd": 0.0061529199323916255,
+            "filter_tau_s": 0.1219339821597473,
+            "max_correction_deg": 2.484207714544889,
+            "correction_rate_deg_s": 17.651055916275357,
+            "yaw_per_roll": -0.2551286938232557,
+            "roll_per_correction": 1.0,
+            "phase_skew_per_correction": -0.014923379981482778,
+            "cycle_average": false,
+            "cycle_update": false,
+            "startup_ramp_cycles": 1.0,
+            "yaw_excursion_target_deg": 0.0,
+            "min_yaw_scale": 0.6,
+            "initial_yaw_scale": 1.0,
+            "amplitude_adaptation_rate": 0.2,
+            "gain_schedule": false,
+            "yaw_amplitude_response": 1.0,
+            "yaw_phase_slowdown_deg": 0.0,
+            "roll_slowdown_deg": 0.0,
+            "yaw_harmonic_per_correction": 0.0,
+            "yaw_harmonic_phase_deg": 0.0,
+            "phase_fit": false,
+            "heading_deadband_deg": 10.0
+          },
+          "sensor": {
+            "delay_frames": 3,
+            "noise_std_deg": 0.25,
+            "bias_deg": 0.0,
+            "seed": 19031
+          },
+          "sensing_assumption": "simulated external foot heading, relative to startup; not hardware calibrated",
+          "peak_correction_deg": 0.0,
+          "minimum_yaw_scale": 1.0,
+          "saturated_fraction": 0.0
+        }
+      },
+      "metrics": {
+        "feasible": false,
+        "stable": true,
+        "speed_mm_s": -0.11102295308759125,
+        "heading_deg": 0.5452937360691086,
+        "score": -0.11102295308759125
+      }
+    },
+    {
+      "case": "all_previous_command_profile",
+      "result": {
+        "evidence": "uncalibrated_simulation",
+        "gait": {
+          "frequency_hz": 4.647087937668649,
+          "roll_deg": 38.95566755807141,
+          "yaw_deg": 37.15498031049635,
+          "yaw_phase_deg": 120.10834427827292,
+          "pitch_deg": -0.7926075899450095,
+          "pitch_phase_deg": -88.32869377357447,
+          "pitch_bias_deg": 2.672582059047778,
+          "x_mm": -6.8539749152523415,
+          "y_mm": 0.485917920319398,
+          "y_phase_deg": -0.5015971762020464,
+          "z_mm": -0.3446753287820978,
+          "mirror": 1.0,
+          "roll_sharpness": 0.7202931616988598,
+          "yaw_sharpness": 0.4448753166410324,
+          "roll_bias_deg": -0.5984729872047905,
+          "yaw_bias_deg": 1.0966887577300828,
+          "phase_skew": 0.23525054308415458,
+          "yaw_harmonic_deg": 0.0,
+          "yaw_harmonic_phase_deg": 0.0,
+          "yaw_stroke_fraction": 0.0,
+          "roll_stroke_fraction": 0.0,
+          "stroke_accel_fraction": 0.14893264140959447,
+          "stroke_brake_fraction": 0.0628062052908845
+        },
+        "actual_frequency_hz": 4.545454545454546,
+        "config": {
+          "schema_version": 1,
+          "evidence": "uncalibrated_simulation",
+          "upstream_commit": "a9a2a42adcc1abc7d9c90d390889bbebf930c96c",
+          "foot_radius_m": 0.056,
+          "foot_half_height_m": 0.004,
+          "initial_clearance_m": 0.003,
+          "friction_slide_torsion_roll": [
+            0.7,
+            0.005,
+            0.0001
+          ],
+          "position_kp": 10.0,
+          "position_kv": 0.1,
+          "motor_force_limit_nm": 0.6,
+          "timestep_s": 0.001,
+          "motor_model": {
+            "voltage_v": 5.0,
+            "torque_derating": 0.8,
+            "pwm_limit_fraction": 0.8,
+            "pid_scale": 1.0,
+            "target_speed_rad_s": 6.0,
+            "target_acceleration_rad_s2": 60.0,
+            "target_filter_hz": 5.0,
+            "delay_frames": 1,
+            "joint_damping_nm_s_rad": 0.005,
+            "joint_friction_nm": 0.01,
+            "joint_armature_kg_m2": 0.0001,
+            "total_mass_kg": 1.475,
+            "mass_distribution": "torso",
+            "passive_damping_nm_s_rad": 0.0001,
+            "passive_friction_nm": 0.001
+          },
+          "notes": "Rated head motor: XL330-M288. 5 V is an evaluation hypothesis, not measured bus voltage. 80% torque/PWM and command rate/acceleration caps are software design choices, not continuous ratings or firmware settings. Inertia/friction/PID mapping/mass placement remain unidentified. Legacy PD fields apply only during artificial reset; datasheet-bounded torque control replaces them before rollout. Speed-first software target profile: sharp_targets; physical torque/mass/contact bounds unchanged. This is not an identified firmware profile."
+        },
+        "valid": true,
+        "failure_reason": null,
+        "requested_cycles": 46,
+        "warmup_cycles": 3,
+        "measured_seconds": 10.120000000000001,
+        "forward_m": -9.052803981838714e-06,
+        "lateral_m": -2.8466655305351064e-05,
+        "heading_change_rad": -0.0005626936472702404,
+        "forward_m_per_s": -8.94545848007778e-07,
+        "max_heading_excursion_rad": 0.0015713441221416602,
+        "max_heading_from_startup_rad": 0.0051826087626021256,
+        "final_heading_from_startup_rad": 0.00449380130119037,
+        "startup_frame_displacement_m": [
+          -4.8818876281551247e-05,
+          0.0002444989391176536,
+          3.300292188941891e-07
+        ],
+        "unwrapped_heading_change_rad": -0.00056269364726802,
+        "max_lateral_excursion_m": 5.979470369632177e-05,
+        "max_foot_tilt_deg": 0.1325095493785725,
+        "max_closure_error_m": 2.6235040289631666e-05,
+        "max_head_orientation_tracking_error_deg": 74.35721412480058,
+        "max_side_rim_clearance_m": 0.0,
+        "foot_contact_fraction": 1.0,
+        "left_unloaded_fraction": 0.0,
+        "right_unloaded_fraction": 0.0,
+        "any_motor_torque_saturated_fraction": 0.0,
+        "absolute_motor_work_j": 2.3341926121934145,
+        "negative_motor_work_j": 0.7128014086380124,
+        "airborne_fraction": 0.0,
+        "longest_airborne_interval_s": 0.0,
+        "airborne_intervals": 0,
+        "airborne_definition": "foot-cylinder bottom >0.1 mm and summed foot normal force <0.05 N",
+        "max_foot_bottom_clearance_m": 0.0,
+        "min_motor_joint_limit_margin_rad": 0.4436756532943138,
+        "measurement_displacement_in_startup_frame_m": [
+          -8.90874736503454e-06,
+          -2.8512066648934043e-05,
+          -4.874453193217255e-07
+        ],
+        "cycle_boundaries": [
+          {
+            "cycle": 0,
+            "foot_displacement_m": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "cycle": 1,
+            "foot_displacement_m": [
+              1.5480452940432696e-05,
+              -4.256183434370232e-05,
+              -5.30459731552296e-07
+            ]
+          },
+          {
+            "cycle": 2,
+            "foot_displacement_m": [
+              8.209255877609781e-06,
+              -3.361680379905956e-05,
+              -8.08641634900935e-07
+            ]
+          },
+          {
+            "cycle": 3,
+            "foot_displacement_m": [
+              -2.973159971927372e-06,
+              -1.9116460862015516e-05,
+              -1.153349178455668e-06
+            ]
+          },
+          {
+            "cycle": 4,
+            "foot_displacement_m": [
+              -6.8602631611315585e-06,
+              -2.5511788641931873e-05,
+              -3.246920168712889e-08
+            ]
+          },
+          {
+            "cycle": 5,
+            "foot_displacement_m": [
+              2.8002827178464244e-05,
+              -4.345594974101175e-05,
+              -5.512280155820645e-07
+            ]
+          },
+          {
+            "cycle": 6,
+            "foot_displacement_m": [
+              -1.560913640384899e-05,
+              -3.458956853057029e-05,
+              -1.1661492351283803e-06
+            ]
+          },
+          {
+            "cycle": 7,
+            "foot_displacement_m": [
+              8.248357092044077e-06,
+              -1.6736471446207015e-05,
+              -7.514312557516906e-07
+            ]
+          },
+          {
+            "cycle": 8,
+            "foot_displacement_m": [
+              1.3276146850734277e-05,
+              -3.953256892506661e-05,
+              -4.1098566880704967e-07
+            ]
+          },
+          {
+            "cycle": 9,
+            "foot_displacement_m": [
+              -3.1474838423556966e-06,
+              -3.9335600754919215e-05,
+              -9.650177533499394e-07
+            ]
+          },
+          {
+            "cycle": 10,
+            "foot_displacement_m": [
+              -1.7692740438971293e-06,
+              -1.0881194956171091e-05,
+              -1.0180712445142853e-06
+            ]
+          },
+          {
+            "cycle": 11,
+            "foot_displacement_m": [
+              1.0021741384096436e-05,
+              -3.7167748786406616e-05,
+              -4.958301474772232e-07
+            ]
+          },
+          {
+            "cycle": 12,
+            "foot_displacement_m": [
+              1.6692016787065792e-06,
+              -3.679979084869858e-05,
+              -8.113270424475762e-07
+            ]
+          },
+          {
+            "cycle": 13,
+            "foot_displacement_m": [
+              4.9321270936602974e-06,
+              -2.6422184395425418e-05,
+              -9.629825945653124e-07
+            ]
+          },
+          {
+            "cycle": 14,
+            "foot_displacement_m": [
+              4.281157410276445e-06,
+              -2.878482403055857e-05,
+              -6.47133033281591e-07
+            ]
+          },
+          {
+            "cycle": 15,
+            "foot_displacement_m": [
+              -4.656973133618288e-06,
+              -3.4552648141560994e-05,
+              -2.1224361966951284e-07
+            ]
+          },
+          {
+            "cycle": 16,
+            "foot_displacement_m": [
+              2.4788492620446663e-05,
+              -3.2027490844767416e-05,
+              -6.147546539267017e-07
+            ]
+          },
+          {
+            "cycle": 17,
+            "foot_displacement_m": [
+              -9.186659018507384e-06,
+              -1.969632812452534e-05,
+              -1.0885842277450397e-06
+            ]
+          },
+          {
+            "cycle": 18,
+            "foot_displacement_m": [
+              1.2243998384335018e-05,
+              -3.056049847975641e-05,
+              -3.4469584993702674e-07
+            ]
+          },
+          {
+            "cycle": 19,
+            "foot_displacement_m": [
+              5.5021762639448e-06,
+              -3.1981173777700506e-05,
+              -6.138652316259319e-07
+            ]
+          },
+          {
+            "cycle": 20,
+            "foot_displacement_m": [
+              -2.4304232207094846e-08,
+              -2.9880450176900635e-05,
+              -5.459078032527993e-07
+            ]
+          },
+          {
+            "cycle": 21,
+            "foot_displacement_m": [
+              6.4159350628509795e-06,
+              -3.6032536527263044e-05,
+              -4.649115169741991e-07
+            ]
+          },
+          {
+            "cycle": 22,
+            "foot_displacement_m": [
+              1.1309266928183971e-05,
+              -2.6981293445372996e-05,
+              -8.721532721295882e-07
+            ]
+          },
+          {
+            "cycle": 23,
+            "foot_displacement_m": [
+              -7.2989798952262115e-06,
+              -3.3229404518346123e-05,
+              -3.674650380239091e-07
+            ]
+          },
+          {
+            "cycle": 24,
+            "foot_displacement_m": [
+              1.0218436612257536e-05,
+              -3.118932247830778e-05,
+              -7.457581385541401e-07
+            ]
+          },
+          {
+            "cycle": 25,
+            "foot_displacement_m": [
+              1.848216050699312e-06,
+              -2.609669235284835e-05,
+              -9.544988150999274e-07
+            ]
+          },
+          {
+            "cycle": 26,
+            "foot_displacement_m": [
+              -2.9849664880998074e-06,
+              -3.4948915260033275e-05,
+              -2.3214402467512115e-07
+            ]
+          },
+          {
+            "cycle": 27,
+            "foot_displacement_m": [
+              1.483636164141832e-05,
+              -3.1002219802568866e-05,
+              -6.345743873472837e-07
+            ]
+          },
+          {
+            "cycle": 28,
+            "foot_displacement_m": [
+              -5.289779373975035e-06,
+              -3.080188741286141e-05,
+              -8.131406700223568e-07
+            ]
+          },
+          {
+            "cycle": 29,
+            "foot_displacement_m": [
+              1.0821241849433569e-05,
+              -3.0315175389227674e-05,
+              -3.3499581061997223e-07
+            ]
+          },
+          {
+            "cycle": 30,
+            "foot_displacement_m": [
+              2.803929344578631e-06,
+              -2.997934176272742e-05,
+              -7.73584903244356e-07
+            ]
+          },
+          {
+            "cycle": 31,
+            "foot_displacement_m": [
+              7.197276996054528e-07,
+              -2.362596609779306e-05,
+              -8.267730086920316e-07
+            ]
+          },
+          {
+            "cycle": 32,
+            "foot_displacement_m": [
+              1.1963881673075359e-05,
+              -3.932340564120469e-05,
+              -4.0227103206120184e-07
+            ]
+          },
+          {
+            "cycle": 33,
+            "foot_displacement_m": [
+              4.170583209944368e-06,
+              -3.0771358054077626e-05,
+              -1.0181969207790023e-06
+            ]
+          },
+          {
+            "cycle": 34,
+            "foot_displacement_m": [
+              3.2368601434015193e-06,
+              -1.541199150621482e-05,
+              -1.2400787088323408e-06
+            ]
+          },
+          {
+            "cycle": 35,
+            "foot_displacement_m": [
+              2.2172336244440063e-06,
+              -3.7579847132154396e-05,
+              -4.485459340151373e-07
+            ]
+          },
+          {
+            "cycle": 36,
+            "foot_displacement_m": [
+              1.2619723955047888e-05,
+              -2.326015793830505e-05,
+              -9.35880843575458e-07
+            ]
+          },
+          {
+            "cycle": 37,
+            "foot_displacement_m": [
+              -3.6400672371335014e-06,
+              -3.208225663100987e-05,
+              -3.918002127329805e-07
+            ]
+          },
+          {
+            "cycle": 38,
+            "foot_displacement_m": [
+              7.711985172042757e-06,
+              -2.9846274130369875e-05,
+              -7.292320682102357e-07
+            ]
+          },
+          {
+            "cycle": 39,
+            "foot_displacement_m": [
+              8.122495832563089e-06,
+              -2.915069830428046e-05,
+              -6.691213870508455e-07
+            ]
+          },
+          {
+            "cycle": 40,
+            "foot_displacement_m": [
+              -1.5147926648415952e-06,
+              -2.7808059713781583e-05,
+              -5.995546129940654e-07
+            ]
+          },
+          {
+            "cycle": 41,
+            "foot_displacement_m": [
+              6.4029775217461204e-06,
+              -3.5515436331911575e-05,
+              -4.461691386538363e-07
+            ]
+          },
+          {
+            "cycle": 42,
+            "foot_displacement_m": [
+              1.1144949659477027e-05,
+              -2.6840771234265508e-05,
+              -1.0903485442358702e-06
+            ]
+          },
+          {
+            "cycle": 43,
+            "foot_displacement_m": [
+              -7.436680788219041e-06,
+              -3.0521135633939235e-05,
+              -2.6664070094404105e-07
+            ]
+          },
+          {
+            "cycle": 44,
+            "foot_displacement_m": [
+              2.191418037633988e-05,
+              -3.0162798323175277e-05,
+              -4.832903316541058e-07
+            ]
+          },
+          {
+            "cycle": 45,
+            "foot_displacement_m": [
+              8.041697040839678e-06,
+              -3.148071679591098e-05,
+              -4.2937552657493634e-07
+            ]
+          },
+          {
+            "cycle": 46,
+            "foot_displacement_m": [
+              -9.052803981838714e-06,
+              -2.8466655305351064e-05,
+              -4.874453193217255e-07
+            ]
+          }
+        ],
+        "external_forces_applied": false,
+        "mujoco_version": "3.3.7",
+        "control_rate_hz": 50,
+        "upstream_xml_sha256": "efd7e49d4288e5ef53945771a1f116584aa2c8b89721b725d5d77da9f0fcbf46",
+        "kinematics_sha256": "b07324cfe46515d7b3bd5be416f5f2ed87811ac1fcdb0e6ad841119e4ed9ab3b",
+        "actuator_names": [
+          "yaw_body",
+          "stewart_1",
+          "stewart_2",
+          "stewart_3",
+          "stewart_4",
+          "stewart_5",
+          "stewart_6",
+          "right_antenna",
+          "left_antenna"
+        ],
+        "peak_motor_torque_nm": [
+          0.06796740189978548,
+          0.1553222916606211,
+          0.2565867614767451,
+          0.15602402876332283,
+          0.1324606947468006,
+          0.12042816521747146,
+          0.10988062107977455,
+          0.0009003881166757563,
+          0.002056356454164314
+        ],
+        "rms_motor_torque_nm": [
+          0.029362953921168493,
+          0.05723210626438394,
+          0.08891603369705385,
+          0.04277026602792799,
+          0.0572385686175421,
+          0.04521472580391931,
+          0.04873142137906193,
+          0.0004129139753769697,
+          0.0011965744594799761
+        ],
+        "peak_motor_velocity_rad_s": [
+          0.5921768968845937,
+          3.0112026512652084,
+          3.52519601071943,
+          2.1243919750575726,
+          2.175211333163408,
+          3.0212873954612167,
+          2.947501608689548,
+          0.03937954704527848,
+          0.044751030241959214
+        ],
+        "base_subtree_mass_kg": 1.4749999999999994,
+        "rms_base_acceleration_m_s2": 0.004965996174752821,
+        "rms_base_angular_velocity_rad_s": 0.00480900992551213,
+        "motor_diagnostics": {
+          "model": "unidentified_PWM_DC_approximation",
+          "hardware_ready": false,
+          "stall_torque_nm": [
+            0.93,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.215,
+            0.215
+          ],
+          "torque_caps_nm": [
+            0.7440000000000001,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.17200000000000001,
+            0.17200000000000001
+          ],
+          "no_load_speed_rad_s": [
+            8.482300164692441,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            40.10766621082969,
+            40.10766621082969
+          ],
+          "any_pwm_saturated_fraction_including_warmup": 0.0,
+          "max_filtered_command_speed_rad_s": 5.780847277306921,
+          "max_filtered_command_acceleration_rad_s2": 60.0,
+          "thermal_model": false,
+          "current_estimate": "not_calibrated_not_reported"
+        },
+        "heading_feedback": {
+          "config": {
+            "kp": 0.2044537893293592,
+            "ki": 0.07476637749331849,
+            "kd": 0.0061529199323916255,
+            "filter_tau_s": 0.1219339821597473,
+            "max_correction_deg": 2.484207714544889,
+            "correction_rate_deg_s": 17.651055916275357,
+            "yaw_per_roll": -0.2551286938232557,
+            "roll_per_correction": 1.0,
+            "phase_skew_per_correction": -0.014923379981482778,
+            "cycle_average": false,
+            "cycle_update": false,
+            "startup_ramp_cycles": 1.0,
+            "yaw_excursion_target_deg": 0.0,
+            "min_yaw_scale": 0.6,
+            "initial_yaw_scale": 1.0,
+            "amplitude_adaptation_rate": 0.2,
+            "gain_schedule": false,
+            "yaw_amplitude_response": 1.0,
+            "yaw_phase_slowdown_deg": 0.0,
+            "roll_slowdown_deg": 0.0,
+            "yaw_harmonic_per_correction": 0.0,
+            "yaw_harmonic_phase_deg": 0.0,
+            "phase_fit": false,
+            "heading_deadband_deg": 10.0
+          },
+          "sensor": {
+            "delay_frames": 3,
+            "noise_std_deg": 0.25,
+            "bias_deg": 0.0,
+            "seed": 19031
+          },
+          "sensing_assumption": "simulated external foot heading, relative to startup; not hardware calibrated",
+          "peak_correction_deg": 0.0,
+          "minimum_yaw_scale": 1.0,
+          "saturated_fraction": 0.0
+        }
+      },
+      "metrics": {
+        "feasible": false,
+        "stable": true,
+        "speed_mm_s": -0.0008803110044500531,
+        "heading_deg": 0.2969416089646198,
+        "score": -0.0008803110044500531
+      }
+    },
+    {
+      "case": "open_loop",
+      "result": {
+        "evidence": "uncalibrated_simulation",
+        "gait": {
+          "frequency_hz": 4.647087937668649,
+          "roll_deg": 38.95566755807141,
+          "yaw_deg": 37.15498031049635,
+          "yaw_phase_deg": 120.10834427827292,
+          "pitch_deg": -0.7926075899450095,
+          "pitch_phase_deg": -88.32869377357447,
+          "pitch_bias_deg": 2.672582059047778,
+          "x_mm": -6.8539749152523415,
+          "y_mm": 0.485917920319398,
+          "y_phase_deg": -0.5015971762020464,
+          "z_mm": -0.3446753287820978,
+          "mirror": 1.0,
+          "roll_sharpness": 0.7202931616988598,
+          "yaw_sharpness": 0.4448753166410324,
+          "roll_bias_deg": -0.5984729872047905,
+          "yaw_bias_deg": 1.0966887577300828,
+          "phase_skew": 0.23525054308415458,
+          "yaw_harmonic_deg": 0.0,
+          "yaw_harmonic_phase_deg": 0.0,
+          "yaw_stroke_fraction": 0.0,
+          "roll_stroke_fraction": 0.0,
+          "stroke_accel_fraction": 0.14893264140959447,
+          "stroke_brake_fraction": 0.0628062052908845
+        },
+        "actual_frequency_hz": 4.545454545454546,
+        "config": {
+          "schema_version": 1,
+          "evidence": "uncalibrated_simulation",
+          "upstream_commit": "a9a2a42adcc1abc7d9c90d390889bbebf930c96c",
+          "foot_radius_m": 0.056,
+          "foot_half_height_m": 0.004,
+          "initial_clearance_m": 0.003,
+          "friction_slide_torsion_roll": [
+            0.7,
+            0.005,
+            0.0001
+          ],
+          "position_kp": 10.0,
+          "position_kv": 0.1,
+          "motor_force_limit_nm": 0.6,
+          "timestep_s": 0.001,
+          "motor_model": {
+            "voltage_v": 5.0,
+            "torque_derating": 0.8,
+            "pwm_limit_fraction": 0.8,
+            "pid_scale": 1.0,
+            "target_speed_rad_s": 10.7,
+            "target_acceleration_rad_s2": 360.0,
+            "target_filter_hz": 25.0,
+            "delay_frames": 1,
+            "joint_damping_nm_s_rad": 0.005,
+            "joint_friction_nm": 0.01,
+            "joint_armature_kg_m2": 0.0001,
+            "total_mass_kg": 1.475,
+            "mass_distribution": "torso",
+            "passive_damping_nm_s_rad": 0.0001,
+            "passive_friction_nm": 0.001
+          },
+          "notes": "Rated head motor: XL330-M288. 5 V is an evaluation hypothesis, not measured bus voltage. 80% torque/PWM and command rate/acceleration caps are software design choices, not continuous ratings or firmware settings. Inertia/friction/PID mapping/mass placement remain unidentified. Legacy PD fields apply only during artificial reset; datasheet-bounded torque control replaces them before rollout. Speed-first software target profile: sharp_targets; physical torque/mass/contact bounds unchanged. This is not an identified firmware profile."
+        },
+        "valid": true,
+        "failure_reason": null,
+        "requested_cycles": 46,
+        "warmup_cycles": 3,
+        "measured_seconds": 10.120000000000001,
+        "forward_m": 0.4890493083070103,
+        "lateral_m": 0.06532208845475684,
+        "heading_change_rad": 0.328342092158862,
+        "forward_m_per_s": 0.048325030465119594,
+        "max_heading_excursion_rad": 0.328342092158858,
+        "max_heading_from_startup_rad": 0.32466619259752516,
+        "final_heading_from_startup_rad": 0.32466619259752516,
+        "startup_frame_displacement_m": [
+          0.49271289567550897,
+          0.06343567828543778,
+          0.0004613136818451353
+        ],
+        "unwrapped_heading_change_rad": 0.328342092158858,
+        "max_lateral_excursion_m": 0.06549148767715673,
+        "max_foot_tilt_deg": 2.7293319749776934,
+        "max_closure_error_m": 3.93636920583187e-05,
+        "max_head_orientation_tracking_error_deg": 66.56916671364348,
+        "max_side_rim_clearance_m": 0.004982180023638049,
+        "foot_contact_fraction": 1.0,
+        "left_unloaded_fraction": 0.5018774703557313,
+        "right_unloaded_fraction": 0.48705533596837947,
+        "any_motor_torque_saturated_fraction": 0.017193675889328065,
+        "absolute_motor_work_j": 20.083037454759374,
+        "negative_motor_work_j": 6.342937638327155,
+        "airborne_fraction": 0.0,
+        "longest_airborne_interval_s": 0.0,
+        "airborne_intervals": 0,
+        "airborne_definition": "foot-cylinder bottom >0.1 mm and summed foot normal force <0.05 N",
+        "max_foot_bottom_clearance_m": 0.0,
+        "min_motor_joint_limit_margin_rad": 0.48944638967780574,
+        "measurement_displacement_in_startup_frame_m": [
+          0.4892861211310511,
+          0.06352395504206855,
+          0.00015710418468667685
+        ],
+        "cycle_boundaries": [
+          {
+            "cycle": 0,
+            "foot_displacement_m": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "cycle": 1,
+            "foot_displacement_m": [
+              0.00742747106153409,
+              0.0007899266122346004,
+              4.748652232756343e-05
+            ]
+          },
+          {
+            "cycle": 2,
+            "foot_displacement_m": [
+              0.017782422172912395,
+              0.0018597656180357534,
+              1.2058618004369317e-05
+            ]
+          },
+          {
+            "cycle": 3,
+            "foot_displacement_m": [
+              0.029534638878526257,
+              0.001556860132841236,
+              0.0001041996674601146
+            ]
+          },
+          {
+            "cycle": 4,
+            "foot_displacement_m": [
+              0.039711634505512995,
+              0.0015838519311863952,
+              0.00018330477121875733
+            ]
+          },
+          {
+            "cycle": 5,
+            "foot_displacement_m": [
+              0.05119769384552039,
+              0.0013015359239583865,
+              -0.0001166603981144587
+            ]
+          },
+          {
+            "cycle": 6,
+            "foot_displacement_m": [
+              0.06107574297317559,
+              0.0019663166226484316,
+              0.00019767299248716843
+            ]
+          },
+          {
+            "cycle": 7,
+            "foot_displacement_m": [
+              0.07177236707332095,
+              0.0023812093099552564,
+              -6.211300748098131e-05
+            ]
+          },
+          {
+            "cycle": 8,
+            "foot_displacement_m": [
+              0.08226088653200667,
+              0.0027389997168794826,
+              0.00016947836211202025
+            ]
+          },
+          {
+            "cycle": 9,
+            "foot_displacement_m": [
+              0.09393838133928102,
+              0.0024838812197960705,
+              5.770644247753663e-06
+            ]
+          },
+          {
+            "cycle": 10,
+            "foot_displacement_m": [
+              0.10405814438952822,
+              0.003461562457218818,
+              0.00018411879832284532
+            ]
+          },
+          {
+            "cycle": 11,
+            "foot_displacement_m": [
+              0.11534469877578701,
+              0.004208462475073165,
+              -0.00013752992736014108
+            ]
+          },
+          {
+            "cycle": 12,
+            "foot_displacement_m": [
+              0.1253306258887466,
+              0.005228918957899206,
+              0.00020900603484320067
+            ]
+          },
+          {
+            "cycle": 13,
+            "foot_displacement_m": [
+              0.13647585971379977,
+              0.005649214202593635,
+              -0.00012534903442810357
+            ]
+          },
+          {
+            "cycle": 14,
+            "foot_displacement_m": [
+              0.14679039897173618,
+              0.006787739569981289,
+              0.00015176304273256902
+            ]
+          },
+          {
+            "cycle": 15,
+            "foot_displacement_m": [
+              0.15804097363057165,
+              0.00751906078083191,
+              -2.576563657686454e-05
+            ]
+          },
+          {
+            "cycle": 16,
+            "foot_displacement_m": [
+              0.16847318292643343,
+              0.008468149660282944,
+              0.00014336326002643867
+            ]
+          },
+          {
+            "cycle": 17,
+            "foot_displacement_m": [
+              0.1798134431919288,
+              0.009320427894721378,
+              -1.3532454759549806e-05
+            ]
+          },
+          {
+            "cycle": 18,
+            "foot_displacement_m": [
+              0.1902687638240975,
+              0.010477038026396017,
+              0.00011330515632614383
+            ]
+          },
+          {
+            "cycle": 19,
+            "foot_displacement_m": [
+              0.20153806450626333,
+              0.01167943787228554,
+              -9.51096886536585e-05
+            ]
+          },
+          {
+            "cycle": 20,
+            "foot_displacement_m": [
+              0.21172146962090974,
+              0.013154283183909264,
+              0.0001648962411761525
+            ]
+          },
+          {
+            "cycle": 21,
+            "foot_displacement_m": [
+              0.2229649365113638,
+              0.014186411493218606,
+              -2.8473194962790212e-05
+            ]
+          },
+          {
+            "cycle": 22,
+            "foot_displacement_m": [
+              0.2333208295144692,
+              0.015441553214170664,
+              0.00017736096567781283
+            ]
+          },
+          {
+            "cycle": 23,
+            "foot_displacement_m": [
+              0.24508147559871266,
+              0.01637040121282596,
+              -7.385354082223124e-05
+            ]
+          },
+          {
+            "cycle": 24,
+            "foot_displacement_m": [
+              0.2548337100268185,
+              0.018255526793506838,
+              0.00024477093739055743
+            ]
+          },
+          {
+            "cycle": 25,
+            "foot_displacement_m": [
+              0.2660143051488832,
+              0.019654537305712306,
+              -0.00018274300710010004
+            ]
+          },
+          {
+            "cycle": 26,
+            "foot_displacement_m": [
+              0.2758787040729188,
+              0.021632531109799225,
+              0.0002321558722756458
+            ]
+          },
+          {
+            "cycle": 27,
+            "foot_displacement_m": [
+              0.2869259264436297,
+              0.023034614973632347,
+              -0.00016000954071641621
+            ]
+          },
+          {
+            "cycle": 28,
+            "foot_displacement_m": [
+              0.29715734263817206,
+              0.025104532974445523,
+              0.00016757900437704268
+            ]
+          },
+          {
+            "cycle": 29,
+            "foot_displacement_m": [
+              0.3082685874325169,
+              0.026936580109924817,
+              -5.376548018711294e-05
+            ]
+          },
+          {
+            "cycle": 30,
+            "foot_displacement_m": [
+              0.31864477843783745,
+              0.028755958150361405,
+              0.00010740001326272827
+            ]
+          },
+          {
+            "cycle": 31,
+            "foot_displacement_m": [
+              0.32991310610072117,
+              0.030621461133316312,
+              -6.879578906165184e-05
+            ]
+          },
+          {
+            "cycle": 32,
+            "foot_displacement_m": [
+              0.3400774770904213,
+              0.03267414636634955,
+              0.00019307767218026674
+            ]
+          },
+          {
+            "cycle": 33,
+            "foot_displacement_m": [
+              0.3514631544010783,
+              0.034416694263222164,
+              -0.00013462311599677553
+            ]
+          },
+          {
+            "cycle": 34,
+            "foot_displacement_m": [
+              0.36123478702518286,
+              0.03683014799574102,
+              0.00024065064304670017
+            ]
+          },
+          {
+            "cycle": 35,
+            "foot_displacement_m": [
+              0.3723141353727725,
+              0.03870515584623474,
+              -0.0001044451715215794
+            ]
+          },
+          {
+            "cycle": 36,
+            "foot_displacement_m": [
+              0.3825383001357261,
+              0.04105998753784844,
+              0.00016024144049453347
+            ]
+          },
+          {
+            "cycle": 37,
+            "foot_displacement_m": [
+              0.3937415064692012,
+              0.04317764985602935,
+              -1.2526226802401467e-05
+            ]
+          },
+          {
+            "cycle": 38,
+            "foot_displacement_m": [
+              0.4039665316869419,
+              0.04543015647464746,
+              0.00015280798877556222
+            ]
+          },
+          {
+            "cycle": 39,
+            "foot_displacement_m": [
+              0.4155524205271579,
+              0.04756995910701636,
+              -2.579108674572971e-05
+            ]
+          },
+          {
+            "cycle": 40,
+            "foot_displacement_m": [
+              0.4254678957426954,
+              0.0501971269633378,
+              0.00018428450188394602
+            ]
+          },
+          {
+            "cycle": 41,
+            "foot_displacement_m": [
+              0.4366660362877908,
+              0.05252224602936542,
+              -0.00013017362720034226
+            ]
+          },
+          {
+            "cycle": 42,
+            "foot_displacement_m": [
+              0.44659705440328085,
+              0.05518602390057274,
+              0.0002036433727907232
+            ]
+          },
+          {
+            "cycle": 43,
+            "foot_displacement_m": [
+              0.45761879238048264,
+              0.057633459091736186,
+              -0.00012376245486770803
+            ]
+          },
+          {
+            "cycle": 44,
+            "foot_displacement_m": [
+              0.4676320032568499,
+              0.06036892349960933,
+              0.00017704395649486648
+            ]
+          },
+          {
+            "cycle": 45,
+            "foot_displacement_m": [
+              0.478825771613618,
+              0.06281724784170904,
+              2.2913422571883466e-05
+            ]
+          },
+          {
+            "cycle": 46,
+            "foot_displacement_m": [
+              0.4890493083070103,
+              0.06532208845475684,
+              0.00015710418468667685
+            ]
+          }
+        ],
+        "external_forces_applied": false,
+        "mujoco_version": "3.3.7",
+        "control_rate_hz": 50,
+        "upstream_xml_sha256": "efd7e49d4288e5ef53945771a1f116584aa2c8b89721b725d5d77da9f0fcbf46",
+        "kinematics_sha256": "b07324cfe46515d7b3bd5be416f5f2ed87811ac1fcdb0e6ad841119e4ed9ab3b",
+        "actuator_names": [
+          "yaw_body",
+          "stewart_1",
+          "stewart_2",
+          "stewart_3",
+          "stewart_4",
+          "stewart_5",
+          "stewart_6",
+          "right_antenna",
+          "left_antenna"
+        ],
+        "peak_motor_torque_nm": [
+          0.12281244928414888,
+          0.284344044113572,
+          0.41600000000000004,
+          0.16464893970380268,
+          0.3220815246641208,
+          0.3594281200337093,
+          0.27991649898265636,
+          0.0029059283370483596,
+          0.003470469445499881
+        ],
+        "rms_motor_torque_nm": [
+          0.0710243985434007,
+          0.18678670505287137,
+          0.22470655631527345,
+          0.09247034064000148,
+          0.12180783866726935,
+          0.19606041818260073,
+          0.16088580989608184,
+          0.0010579549305393284,
+          0.0026663052562991077
+        ],
+        "peak_motor_velocity_rad_s": [
+          1.1133685859914846,
+          7.05817430712461,
+          5.8572006779842045,
+          3.139274358963134,
+          3.9675817831380478,
+          5.225858373991155,
+          7.00739098361657,
+          0.07365175263857902,
+          0.07234353940394668
+        ],
+        "base_subtree_mass_kg": 1.4749999999999994,
+        "rms_base_acceleration_m_s2": 1.5298526402990293,
+        "rms_base_angular_velocity_rad_s": 0.7717407418929523,
+        "motor_diagnostics": {
+          "model": "unidentified_PWM_DC_approximation",
+          "hardware_ready": false,
+          "stall_torque_nm": [
+            0.93,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.215,
+            0.215
+          ],
+          "torque_caps_nm": [
+            0.7440000000000001,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.17200000000000001,
+            0.17200000000000001
+          ],
+          "no_load_speed_rad_s": [
+            8.482300164692441,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            40.10766621082969,
+            40.10766621082969
+          ],
+          "any_pwm_saturated_fraction_including_warmup": 0.45714285714285713,
+          "max_filtered_command_speed_rad_s": 10.7,
+          "max_filtered_command_acceleration_rad_s2": 360.0,
+          "thermal_model": false,
+          "current_estimate": "not_calibrated_not_reported"
+        }
+      },
+      "metrics": {
+        "feasible": true,
+        "stable": true,
+        "speed_mm_s": 48.34843094180346,
+        "heading_deg": 18.602002586419722,
+        "score": 1048.3484309418034
+      }
+    },
+    {
+      "case": "no_yaw",
+      "result": {
+        "evidence": "uncalibrated_simulation",
+        "gait": {
+          "frequency_hz": 4.647087937668649,
+          "roll_deg": 38.95566755807141,
+          "yaw_deg": 0.0,
+          "yaw_phase_deg": 120.10834427827292,
+          "pitch_deg": -0.7926075899450095,
+          "pitch_phase_deg": -88.32869377357447,
+          "pitch_bias_deg": 2.672582059047778,
+          "x_mm": -6.8539749152523415,
+          "y_mm": 0.485917920319398,
+          "y_phase_deg": -0.5015971762020464,
+          "z_mm": -0.3446753287820978,
+          "mirror": 1.0,
+          "roll_sharpness": 0.7202931616988598,
+          "yaw_sharpness": 0.4448753166410324,
+          "roll_bias_deg": -0.5984729872047905,
+          "yaw_bias_deg": 0.0,
+          "phase_skew": 0.23525054308415458,
+          "yaw_harmonic_deg": 0.0,
+          "yaw_harmonic_phase_deg": 0.0,
+          "yaw_stroke_fraction": 0.0,
+          "roll_stroke_fraction": 0.0,
+          "stroke_accel_fraction": 0.14893264140959447,
+          "stroke_brake_fraction": 0.0628062052908845
+        },
+        "actual_frequency_hz": 4.545454545454546,
+        "config": {
+          "schema_version": 1,
+          "evidence": "uncalibrated_simulation",
+          "upstream_commit": "a9a2a42adcc1abc7d9c90d390889bbebf930c96c",
+          "foot_radius_m": 0.056,
+          "foot_half_height_m": 0.004,
+          "initial_clearance_m": 0.003,
+          "friction_slide_torsion_roll": [
+            0.7,
+            0.005,
+            0.0001
+          ],
+          "position_kp": 10.0,
+          "position_kv": 0.1,
+          "motor_force_limit_nm": 0.6,
+          "timestep_s": 0.001,
+          "motor_model": {
+            "voltage_v": 5.0,
+            "torque_derating": 0.8,
+            "pwm_limit_fraction": 0.8,
+            "pid_scale": 1.0,
+            "target_speed_rad_s": 10.7,
+            "target_acceleration_rad_s2": 360.0,
+            "target_filter_hz": 25.0,
+            "delay_frames": 1,
+            "joint_damping_nm_s_rad": 0.005,
+            "joint_friction_nm": 0.01,
+            "joint_armature_kg_m2": 0.0001,
+            "total_mass_kg": 1.475,
+            "mass_distribution": "torso",
+            "passive_damping_nm_s_rad": 0.0001,
+            "passive_friction_nm": 0.001
+          },
+          "notes": "Rated head motor: XL330-M288. 5 V is an evaluation hypothesis, not measured bus voltage. 80% torque/PWM and command rate/acceleration caps are software design choices, not continuous ratings or firmware settings. Inertia/friction/PID mapping/mass placement remain unidentified. Legacy PD fields apply only during artificial reset; datasheet-bounded torque control replaces them before rollout. Speed-first software target profile: sharp_targets; physical torque/mass/contact bounds unchanged. This is not an identified firmware profile."
+        },
+        "valid": true,
+        "failure_reason": null,
+        "requested_cycles": 46,
+        "warmup_cycles": 3,
+        "measured_seconds": 10.120000000000001,
+        "forward_m": 0.0957701570876001,
+        "lateral_m": -0.27556074568283667,
+        "heading_change_rad": -1.2727730518422213,
+        "forward_m_per_s": 0.009463454257667994,
+        "max_heading_excursion_rad": 1.3201450839819082,
+        "max_heading_from_startup_rad": 1.3109008976097178,
+        "final_heading_from_startup_rad": -1.263528865470033,
+        "startup_frame_displacement_m": [
+          0.10010694857436538,
+          -0.27573572703697524,
+          0.0008793901514628488
+        ],
+        "unwrapped_heading_change_rad": -1.2727730518422233,
+        "max_lateral_excursion_m": 0.27556074568283667,
+        "max_foot_tilt_deg": 5.393169211795016,
+        "max_closure_error_m": 3.359281793933551e-05,
+        "max_head_orientation_tracking_error_deg": 60.39629333174603,
+        "max_side_rim_clearance_m": 0.009608916490395098,
+        "foot_contact_fraction": 1.0,
+        "left_unloaded_fraction": 0.4941699604743083,
+        "right_unloaded_fraction": 0.5055335968379446,
+        "any_motor_torque_saturated_fraction": 0.0,
+        "absolute_motor_work_j": 18.837945880609045,
+        "negative_motor_work_j": 5.703945306303855,
+        "airborne_fraction": 0.0,
+        "longest_airborne_interval_s": 0.0,
+        "airborne_intervals": 0,
+        "airborne_definition": "foot-cylinder bottom >0.1 mm and summed foot normal force <0.05 N",
+        "max_foot_bottom_clearance_m": 0.0,
+        "min_motor_joint_limit_margin_rad": 0.47583708634569954,
+        "measurement_displacement_in_startup_frame_m": [
+          0.09831336370792819,
+          -0.27466366717550617,
+          0.0005611098540428165
+        ],
+        "cycle_boundaries": [
+          {
+            "cycle": 0,
+            "foot_displacement_m": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "cycle": 1,
+            "foot_displacement_m": [
+              0.005860298357299192,
+              -0.001322829688500401,
+              0.0003348781947756335
+            ]
+          },
+          {
+            "cycle": 2,
+            "foot_displacement_m": [
+              0.012244464777644657,
+              -0.005801813422276319,
+              0.0008172420714580695
+            ]
+          },
+          {
+            "cycle": 3,
+            "foot_displacement_m": [
+              0.01667929224468859,
+              -0.008992864913409735,
+              -0.0002439572317393656
+            ]
+          },
+          {
+            "cycle": 4,
+            "foot_displacement_m": [
+              0.022790650644082557,
+              -0.013686827133466603,
+              0.00023514747794340046
+            ]
+          },
+          {
+            "cycle": 5,
+            "foot_displacement_m": [
+              0.026501850642871326,
+              -0.01766580835863375,
+              0.00019635079241702943
+            ]
+          },
+          {
+            "cycle": 6,
+            "foot_displacement_m": [
+              0.032409520838875314,
+              -0.023188501948165317,
+              0.00036332355603017484
+            ]
+          },
+          {
+            "cycle": 7,
+            "foot_displacement_m": [
+              0.03649488043820042,
+              -0.026730658045562114,
+              3.4191705753865e-06
+            ]
+          },
+          {
+            "cycle": 8,
+            "foot_displacement_m": [
+              0.041734227973507794,
+              -0.03245574620687189,
+              0.0004469075727251712
+            ]
+          },
+          {
+            "cycle": 9,
+            "foot_displacement_m": [
+              0.044881176552292734,
+              -0.037026802978099446,
+              8.8158659189542e-05
+            ]
+          },
+          {
+            "cycle": 10,
+            "foot_displacement_m": [
+              0.04992967746155802,
+              -0.043272353525307415,
+              0.00022807263178481756
+            ]
+          },
+          {
+            "cycle": 11,
+            "foot_displacement_m": [
+              0.053342601944839994,
+              -0.047548348647349165,
+              7.778546543586441e-05
+            ]
+          },
+          {
+            "cycle": 12,
+            "foot_displacement_m": [
+              0.05765407262640649,
+              -0.05418130345954236,
+              0.0005380118442275993
+            ]
+          },
+          {
+            "cycle": 13,
+            "foot_displacement_m": [
+              0.060566455204413935,
+              -0.058940597718701845,
+              -3.856759431523644e-05
+            ]
+          },
+          {
+            "cycle": 14,
+            "foot_displacement_m": [
+              0.06453047999522175,
+              -0.0657987302681577,
+              0.0003820945632410129
+            ]
+          },
+          {
+            "cycle": 15,
+            "foot_displacement_m": [
+              0.06717512611186849,
+              -0.07085275172783384,
+              1.8073796876265998e-05
+            ]
+          },
+          {
+            "cycle": 16,
+            "foot_displacement_m": [
+              0.0705261091868182,
+              -0.07790072148743142,
+              0.0005751167127503321
+            ]
+          },
+          {
+            "cycle": 17,
+            "foot_displacement_m": [
+              0.07294362962855065,
+              -0.08325176571421192,
+              -7.968496838673178e-05
+            ]
+          },
+          {
+            "cycle": 18,
+            "foot_displacement_m": [
+              0.07601852016712124,
+              -0.09035726046820677,
+              0.00034169486079488147
+            ]
+          },
+          {
+            "cycle": 19,
+            "foot_displacement_m": [
+              0.07787281416345439,
+              -0.09590477891969826,
+              7.817199506260732e-05
+            ]
+          },
+          {
+            "cycle": 20,
+            "foot_displacement_m": [
+              0.0805047564484586,
+              -0.1031690518896514,
+              0.0004981629075527908
+            ]
+          },
+          {
+            "cycle": 21,
+            "foot_displacement_m": [
+              0.0825267249688322,
+              -0.1087167337278259,
+              -9.419099490658603e-05
+            ]
+          },
+          {
+            "cycle": 22,
+            "foot_displacement_m": [
+              0.08488101011634777,
+              -0.11599576032610655,
+              0.0004078310355932382
+            ]
+          },
+          {
+            "cycle": 23,
+            "foot_displacement_m": [
+              0.08628323439503768,
+              -0.12182616349449404,
+              8.3062147648267e-05
+            ]
+          },
+          {
+            "cycle": 24,
+            "foot_displacement_m": [
+              0.08862572237823045,
+              -0.12931243313807747,
+              0.00014367248931341912
+            ]
+          },
+          {
+            "cycle": 25,
+            "foot_displacement_m": [
+              0.08983747913094693,
+              -0.13489967339288178,
+              0.000118664548525232
+            ]
+          },
+          {
+            "cycle": 26,
+            "foot_displacement_m": [
+              0.09129693504780939,
+              -0.14246738032598721,
+              0.0007072727218374806
+            ]
+          },
+          {
+            "cycle": 27,
+            "foot_displacement_m": [
+              0.09282887918782762,
+              -0.1481937891851702,
+              -0.00020929542337932424
+            ]
+          },
+          {
+            "cycle": 28,
+            "foot_displacement_m": [
+              0.09454184837968897,
+              -0.15576593723989315,
+              0.00022067552619768182
+            ]
+          },
+          {
+            "cycle": 29,
+            "foot_displacement_m": [
+              0.09489365793395792,
+              -0.16161646210225172,
+              0.0002712716845322381
+            ]
+          },
+          {
+            "cycle": 30,
+            "foot_displacement_m": [
+              0.0962327358894623,
+              -0.16931540130391065,
+              0.00029949873409413827
+            ]
+          },
+          {
+            "cycle": 31,
+            "foot_displacement_m": [
+              0.09727296406865402,
+              -0.17494581294908665,
+              -1.5790962040379932e-05
+            ]
+          },
+          {
+            "cycle": 32,
+            "foot_displacement_m": [
+              0.09818625386032716,
+              -0.18250556391830328,
+              0.0005128886691484243
+            ]
+          },
+          {
+            "cycle": 33,
+            "foot_displacement_m": [
+              0.0985109659235697,
+              -0.18841667373602813,
+              3.415019932970757e-05
+            ]
+          },
+          {
+            "cycle": 34,
+            "foot_displacement_m": [
+              0.0995490143435269,
+              -0.19605626450222746,
+              0.00014766010176622802
+            ]
+          },
+          {
+            "cycle": 35,
+            "foot_displacement_m": [
+              0.09972466933051026,
+              -0.2017406889493483,
+              9.554893258051665e-05
+            ]
+          },
+          {
+            "cycle": 36,
+            "foot_displacement_m": [
+              0.09992547740561733,
+              -0.20942037773106242,
+              0.0006117705386963439
+            ]
+          },
+          {
+            "cycle": 37,
+            "foot_displacement_m": [
+              0.10038722348176926,
+              -0.2152139859278715,
+              -0.0002011403171348875
+            ]
+          },
+          {
+            "cycle": 38,
+            "foot_displacement_m": [
+              0.10084777078319482,
+              -0.22293826757845553,
+              0.0002212245039087859
+            ]
+          },
+          {
+            "cycle": 39,
+            "foot_displacement_m": [
+              0.10016988115440825,
+              -0.2285948213354647,
+              0.00021777988981585205
+            ]
+          },
+          {
+            "cycle": 40,
+            "foot_displacement_m": [
+              0.10020076698807792,
+              -0.2362799512309132,
+              0.0003525408375434576
+            ]
+          },
+          {
+            "cycle": 41,
+            "foot_displacement_m": [
+              0.1001446916122834,
+              -0.24191038016318353,
+              -8.222445852793366e-05
+            ]
+          },
+          {
+            "cycle": 42,
+            "foot_displacement_m": [
+              0.09975257218971864,
+              -0.24944385048626783,
+              0.00047563505826006276
+            ]
+          },
+          {
+            "cycle": 43,
+            "foot_displacement_m": [
+              0.09878343461326487,
+              -0.25516295104655146,
+              -1.779410351583318e-06
+            ]
+          },
+          {
+            "cycle": 44,
+            "foot_displacement_m": [
+              0.09832069213669671,
+              -0.26269786845901655,
+              0.00017312796682537434
+            ]
+          },
+          {
+            "cycle": 45,
+            "foot_displacement_m": [
+              0.09722138651605938,
+              -0.26818347158987954,
+              6.018359343330407e-05
+            ]
+          },
+          {
+            "cycle": 46,
+            "foot_displacement_m": [
+              0.0957701570876001,
+              -0.27556074568283667,
+              0.0005611098540428165
+            ]
+          }
+        ],
+        "external_forces_applied": false,
+        "mujoco_version": "3.3.7",
+        "control_rate_hz": 50,
+        "upstream_xml_sha256": "efd7e49d4288e5ef53945771a1f116584aa2c8b89721b725d5d77da9f0fcbf46",
+        "kinematics_sha256": "b07324cfe46515d7b3bd5be416f5f2ed87811ac1fcdb0e6ad841119e4ed9ab3b",
+        "actuator_names": [
+          "yaw_body",
+          "stewart_1",
+          "stewart_2",
+          "stewart_3",
+          "stewart_4",
+          "stewart_5",
+          "stewart_6",
+          "right_antenna",
+          "left_antenna"
+        ],
+        "peak_motor_torque_nm": [
+          0.09944527811335575,
+          0.30889236403901194,
+          0.34972026342988094,
+          0.10285494810247318,
+          0.22373160434836112,
+          0.31373936659119794,
+          0.2873907237269852,
+          0.00305767496033952,
+          0.0036607950988307592
+        ],
+        "rms_motor_torque_nm": [
+          0.04926319389529239,
+          0.1735297469637476,
+          0.16086456168215213,
+          0.04404440002307492,
+          0.07083068187151029,
+          0.14925509938403364,
+          0.17544215659878026,
+          0.0015088526652326099,
+          0.0025058452266235698
+        ],
+        "peak_motor_velocity_rad_s": [
+          0.8333048558218703,
+          8.998837778679357,
+          5.2904493413936,
+          2.633855687369139,
+          4.312152037366463,
+          4.876264267097152,
+          6.233384220356463,
+          0.4124487559177259,
+          0.1588803344709204
+        ],
+        "base_subtree_mass_kg": 1.4749999999999994,
+        "rms_base_acceleration_m_s2": 2.220720790798641,
+        "rms_base_angular_velocity_rad_s": 1.0480919433195501,
+        "motor_diagnostics": {
+          "model": "unidentified_PWM_DC_approximation",
+          "hardware_ready": false,
+          "stall_torque_nm": [
+            0.93,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.215,
+            0.215
+          ],
+          "torque_caps_nm": [
+            0.7440000000000001,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.17200000000000001,
+            0.17200000000000001
+          ],
+          "no_load_speed_rad_s": [
+            8.482300164692441,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            40.10766621082969,
+            40.10766621082969
+          ],
+          "any_pwm_saturated_fraction_including_warmup": 0.31716141001855286,
+          "max_filtered_command_speed_rad_s": 10.7,
+          "max_filtered_command_acceleration_rad_s2": 360.0,
+          "thermal_model": false,
+          "current_estimate": "not_calibrated_not_reported"
+        }
+      },
+      "metrics": {
+        "feasible": false,
+        "stable": true,
+        "speed_mm_s": 9.714759259676697,
+        "heading_deg": 75.1090887929481,
+        "score": -155.6125071191676
+      }
+    },
+    {
+      "case": "no_roll",
+      "result": {
+        "evidence": "uncalibrated_simulation",
+        "gait": {
+          "frequency_hz": 4.647087937668649,
+          "roll_deg": 0.0,
+          "yaw_deg": 37.15498031049635,
+          "yaw_phase_deg": 120.10834427827292,
+          "pitch_deg": -0.7926075899450095,
+          "pitch_phase_deg": -88.32869377357447,
+          "pitch_bias_deg": 2.672582059047778,
+          "x_mm": -6.8539749152523415,
+          "y_mm": 0.485917920319398,
+          "y_phase_deg": -0.5015971762020464,
+          "z_mm": -0.3446753287820978,
+          "mirror": 1.0,
+          "roll_sharpness": 0.7202931616988598,
+          "yaw_sharpness": 0.4448753166410324,
+          "roll_bias_deg": 0.0,
+          "yaw_bias_deg": 1.0966887577300828,
+          "phase_skew": 0.23525054308415458,
+          "yaw_harmonic_deg": 0.0,
+          "yaw_harmonic_phase_deg": 0.0,
+          "yaw_stroke_fraction": 0.0,
+          "roll_stroke_fraction": 0.0,
+          "stroke_accel_fraction": 0.14893264140959447,
+          "stroke_brake_fraction": 0.0628062052908845
+        },
+        "actual_frequency_hz": 4.545454545454546,
+        "config": {
+          "schema_version": 1,
+          "evidence": "uncalibrated_simulation",
+          "upstream_commit": "a9a2a42adcc1abc7d9c90d390889bbebf930c96c",
+          "foot_radius_m": 0.056,
+          "foot_half_height_m": 0.004,
+          "initial_clearance_m": 0.003,
+          "friction_slide_torsion_roll": [
+            0.7,
+            0.005,
+            0.0001
+          ],
+          "position_kp": 10.0,
+          "position_kv": 0.1,
+          "motor_force_limit_nm": 0.6,
+          "timestep_s": 0.001,
+          "motor_model": {
+            "voltage_v": 5.0,
+            "torque_derating": 0.8,
+            "pwm_limit_fraction": 0.8,
+            "pid_scale": 1.0,
+            "target_speed_rad_s": 10.7,
+            "target_acceleration_rad_s2": 360.0,
+            "target_filter_hz": 25.0,
+            "delay_frames": 1,
+            "joint_damping_nm_s_rad": 0.005,
+            "joint_friction_nm": 0.01,
+            "joint_armature_kg_m2": 0.0001,
+            "total_mass_kg": 1.475,
+            "mass_distribution": "torso",
+            "passive_damping_nm_s_rad": 0.0001,
+            "passive_friction_nm": 0.001
+          },
+          "notes": "Rated head motor: XL330-M288. 5 V is an evaluation hypothesis, not measured bus voltage. 80% torque/PWM and command rate/acceleration caps are software design choices, not continuous ratings or firmware settings. Inertia/friction/PID mapping/mass placement remain unidentified. Legacy PD fields apply only during artificial reset; datasheet-bounded torque control replaces them before rollout. Speed-first software target profile: sharp_targets; physical torque/mass/contact bounds unchanged. This is not an identified firmware profile."
+        },
+        "valid": true,
+        "failure_reason": null,
+        "requested_cycles": 46,
+        "warmup_cycles": 3,
+        "measured_seconds": 10.120000000000001,
+        "forward_m": 0.0006535820840414309,
+        "lateral_m": -0.00025768716785407546,
+        "heading_change_rad": 0.004933144095419895,
+        "forward_m_per_s": 6.458320988551689e-05,
+        "max_heading_excursion_rad": 0.006256036051755842,
+        "max_heading_from_startup_rad": 0.00638346639662668,
+        "final_heading_from_startup_rad": 0.005060574440288512,
+        "startup_frame_displacement_m": [
+          0.0006754818774336343,
+          -0.00026367234177844914,
+          -2.581653165054833e-07
+        ],
+        "unwrapped_heading_change_rad": 0.004933144095417674,
+        "max_lateral_excursion_m": 0.00026880748994478204,
+        "max_foot_tilt_deg": 0.008133129723236595,
+        "max_closure_error_m": 1.8574779732711658e-05,
+        "max_head_orientation_tracking_error_deg": 57.23685792405601,
+        "max_side_rim_clearance_m": 0.0,
+        "foot_contact_fraction": 1.0,
+        "left_unloaded_fraction": 0.0,
+        "right_unloaded_fraction": 0.0,
+        "any_motor_torque_saturated_fraction": 0.0,
+        "absolute_motor_work_j": 9.06815276683014,
+        "negative_motor_work_j": 3.2063752943208987,
+        "airborne_fraction": 0.0,
+        "longest_airborne_interval_s": 0.0,
+        "airborne_intervals": 0,
+        "airborne_definition": "foot-cylinder bottom >0.1 mm and summed foot normal force <0.05 N",
+        "max_foot_bottom_clearance_m": 0.0,
+        "min_motor_joint_limit_margin_rad": 0.5590476808504418,
+        "measurement_displacement_in_startup_frame_m": [
+          0.0006536149158994168,
+          -0.00025760387957170385,
+          1.3410335167016749e-08
+        ],
+        "cycle_boundaries": [
+          {
+            "cycle": 0,
+            "foot_displacement_m": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "cycle": 1,
+            "foot_displacement_m": [
+              1.4208474185079286e-05,
+              -5.626467334438673e-06,
+              1.0899805860987185e-08
+            ]
+          },
+          {
+            "cycle": 2,
+            "foot_displacement_m": [
+              2.8433279202829778e-05,
+              -1.1266133241354775e-05,
+              1.0796604558096384e-08
+            ]
+          },
+          {
+            "cycle": 3,
+            "foot_displacement_m": [
+              4.265556623286484e-05,
+              -1.6898562129370853e-05,
+              1.0944818888377391e-08
+            ]
+          },
+          {
+            "cycle": 4,
+            "foot_displacement_m": [
+              5.687747196458721e-05,
+              -2.2528500436502745e-05,
+              1.1042654470840539e-08
+            ]
+          },
+          {
+            "cycle": 5,
+            "foot_displacement_m": [
+              7.109862996547309e-05,
+              -2.815656787797473e-05,
+              1.1126783544793855e-08
+            ]
+          },
+          {
+            "cycle": 6,
+            "foot_displacement_m": [
+              8.531916704994982e-05,
+              -3.3782912825705475e-05,
+              1.1201179401612344e-08
+            ]
+          },
+          {
+            "cycle": 7,
+            "foot_displacement_m": [
+              9.953904175602997e-05,
+              -3.940766005843404e-05,
+              1.1269704562872458e-08
+            ]
+          },
+          {
+            "cycle": 8,
+            "foot_displacement_m": [
+              0.00011375825685311047,
+              -4.503086384468199e-05,
+              1.1334098269554708e-08
+            ]
+          },
+          {
+            "cycle": 9,
+            "foot_displacement_m": [
+              0.00012797679738227397,
+              -5.065258041656636e-05,
+              1.13956202321279e-08
+            ]
+          },
+          {
+            "cycle": 10,
+            "foot_displacement_m": [
+              0.00014219466475061661,
+              -5.627284967668988e-05,
+              1.1455105040747264e-08
+            ]
+          },
+          {
+            "cycle": 11,
+            "foot_displacement_m": [
+              0.00015641185968849513,
+              -6.18916993860856e-05,
+              1.1513119356957961e-08
+            ]
+          },
+          {
+            "cycle": 12,
+            "foot_displacement_m": [
+              0.00017062838047481244,
+              -6.750914901074026e-05,
+              1.1570284685167719e-08
+            ]
+          },
+          {
+            "cycle": 13,
+            "foot_displacement_m": [
+              0.000184844219042104,
+              -7.312521008081429e-05,
+              1.1626729111964096e-08
+            ]
+          },
+          {
+            "cycle": 14,
+            "foot_displacement_m": [
+              0.00019905937693815202,
+              -7.873988845270032e-05,
+              1.1682671629773824e-08
+            ]
+          },
+          {
+            "cycle": 15,
+            "foot_displacement_m": [
+              0.0002132738506467013,
+              -8.43531883818926e-05,
+              1.1738293341179921e-08
+            ]
+          },
+          {
+            "cycle": 16,
+            "foot_displacement_m": [
+              0.00022748764471678084,
+              -8.996511776945896e-05,
+              1.1793622529215583e-08
+            ]
+          },
+          {
+            "cycle": 17,
+            "foot_displacement_m": [
+              0.0002417007578740521,
+              -9.557568105498314e-05,
+              1.184875942872402e-08
+            ]
+          },
+          {
+            "cycle": 18,
+            "foot_displacement_m": [
+              0.00025591318362510674,
+              -0.00010118487315664692,
+              1.1903736649525028e-08
+            ]
+          },
+          {
+            "cycle": 19,
+            "foot_displacement_m": [
+              0.0002701249293803733,
+              -0.00010679270127993782,
+              1.1958600484815202e-08
+            ]
+          },
+          {
+            "cycle": 20,
+            "foot_displacement_m": [
+              0.0002843359947873807,
+              -0.00011239916276014166,
+              1.2013333009507131e-08
+            ]
+          },
+          {
+            "cycle": 21,
+            "foot_displacement_m": [
+              0.000298546377557799,
+              -0.0001180042588376797,
+              1.20679802370597e-08
+            ]
+          },
+          {
+            "cycle": 22,
+            "foot_displacement_m": [
+              0.000312756069487967,
+              -0.00012360798788943865,
+              1.2122530714279642e-08
+            ]
+          },
+          {
+            "cycle": 23,
+            "foot_displacement_m": [
+              0.00032696507476136666,
+              -0.000129210351705711,
+              1.217700489350253e-08
+            ]
+          },
+          {
+            "cycle": 24,
+            "foot_displacement_m": [
+              0.0003411733971812959,
+              -0.0001348113489099544,
+              1.2231437083425197e-08
+            ]
+          },
+          {
+            "cycle": 25,
+            "foot_displacement_m": [
+              0.00035538103275636917,
+              -0.00014041097613268983,
+              1.2285734360155864e-08
+            ]
+          },
+          {
+            "cycle": 26,
+            "foot_displacement_m": [
+              0.00036958798416433634,
+              -0.00014600924139378244,
+              1.2340003215956371e-08
+            ]
+          },
+          {
+            "cycle": 27,
+            "foot_displacement_m": [
+              0.0003837942461220531,
+              -0.00015160613905679528,
+              1.2394149245392998e-08
+            ]
+          },
+          {
+            "cycle": 28,
+            "foot_displacement_m": [
+              0.00039799982218734117,
+              -0.0001572016701411194,
+              1.2448261597192666e-08
+            ]
+          },
+          {
+            "cycle": 29,
+            "foot_displacement_m": [
+              0.00041220470940340874,
+              -0.0001627958329986476,
+              1.2502308695105512e-08
+            ]
+          },
+          {
+            "cycle": 30,
+            "foot_displacement_m": [
+              0.0004264089070850272,
+              -0.00016838862746511397,
+              1.2556265454718367e-08
+            ]
+          },
+          {
+            "cycle": 31,
+            "foot_displacement_m": [
+              0.00044061240944207405,
+              -0.00017398005444847417,
+              1.2610186690413159e-08
+            ]
+          },
+          {
+            "cycle": 32,
+            "foot_displacement_m": [
+              0.00045481522307662734,
+              -0.0001795701150870684,
+              1.2663996366562983e-08
+            ]
+          },
+          {
+            "cycle": 33,
+            "foot_displacement_m": [
+              0.0004690173565373186,
+              -0.0001851588078734623,
+              1.2717758890340197e-08
+            ]
+          },
+          {
+            "cycle": 34,
+            "foot_displacement_m": [
+              0.0004832187997603743,
+              -0.00019074612997336854,
+              1.2771421890897072e-08
+            ]
+          },
+          {
+            "cycle": 35,
+            "foot_displacement_m": [
+              0.0004974195508282997,
+              -0.00019633208471509116,
+              1.2825065062805675e-08
+            ]
+          },
+          {
+            "cycle": 36,
+            "foot_displacement_m": [
+              0.0005116196110937417,
+              -0.00020191667190765902,
+              1.2878611075650985e-08
+            ]
+          },
+          {
+            "cycle": 37,
+            "foot_displacement_m": [
+              0.0005258189762630674,
+              -0.00020749988861293935,
+              1.2932097902753508e-08
+            ]
+          },
+          {
+            "cycle": 38,
+            "foot_displacement_m": [
+              0.000540017645004109,
+              -0.00021308173272822112,
+              1.2985493453158731e-08
+            ]
+          },
+          {
+            "cycle": 39,
+            "foot_displacement_m": [
+              0.0005542156243978195,
+              -0.00021866220891936244,
+              1.3038839172832507e-08
+            ]
+          },
+          {
+            "cycle": 40,
+            "foot_displacement_m": [
+              0.0005684129082497039,
+              -0.00022424131378890756,
+              1.3092125595144883e-08
+            ]
+          },
+          {
+            "cycle": 41,
+            "foot_displacement_m": [
+              0.0005826095026539193,
+              -0.00022981905197760302,
+              1.3145333592831524e-08
+            ]
+          },
+          {
+            "cycle": 42,
+            "foot_displacement_m": [
+              0.0005968054101040609,
+              -0.00023539541785843864,
+              1.3198463773269264e-08
+            ]
+          },
+          {
+            "cycle": 43,
+            "foot_displacement_m": [
+              0.0006110006227413481,
+              -0.00024097041226612452,
+              1.325153476870283e-08
+            ]
+          },
+          {
+            "cycle": 44,
+            "foot_displacement_m": [
+              0.0006251951392841265,
+              -0.00024654403511605776,
+              1.3304535232183993e-08
+            ]
+          },
+          {
+            "cycle": 45,
+            "foot_displacement_m": [
+              0.000639388960056732,
+              -0.00025211628726727907,
+              1.3357487103261997e-08
+            ]
+          },
+          {
+            "cycle": 46,
+            "foot_displacement_m": [
+              0.0006535820840414309,
+              -0.00025768716785407546,
+              1.3410335167016749e-08
+            ]
+          }
+        ],
+        "external_forces_applied": false,
+        "mujoco_version": "3.3.7",
+        "control_rate_hz": 50,
+        "upstream_xml_sha256": "efd7e49d4288e5ef53945771a1f116584aa2c8b89721b725d5d77da9f0fcbf46",
+        "kinematics_sha256": "b07324cfe46515d7b3bd5be416f5f2ed87811ac1fcdb0e6ad841119e4ed9ab3b",
+        "actuator_names": [
+          "yaw_body",
+          "stewart_1",
+          "stewart_2",
+          "stewart_3",
+          "stewart_4",
+          "stewart_5",
+          "stewart_6",
+          "right_antenna",
+          "left_antenna"
+        ],
+        "peak_motor_torque_nm": [
+          0.17159309087352448,
+          0.17156984551365576,
+          0.2171132439161077,
+          0.15645003643098662,
+          0.17518180793305665,
+          0.17525981459700943,
+          0.21586580633046823,
+          0.0013629573039463285,
+          0.001148494552027187
+        ],
+        "rms_motor_torque_nm": [
+          0.10760287250515219,
+          0.10538897756551432,
+          0.09972550124959115,
+          0.09696645022204994,
+          0.090967319049384,
+          0.09978440070842394,
+          0.11452860173109135,
+          0.0009591513683099459,
+          0.0008571412596370571
+        ],
+        "peak_motor_velocity_rad_s": [
+          1.4254358294185685,
+          3.384338585789332,
+          3.1474473112266197,
+          3.019208303543052,
+          4.114975202515336,
+          2.490894677437201,
+          4.306323096938261,
+          0.04106001478775662,
+          0.04090846867085838
+        ],
+        "base_subtree_mass_kg": 1.4749999999999994,
+        "rms_base_acceleration_m_s2": 0.008019658573722697,
+        "rms_base_angular_velocity_rad_s": 0.014392058772850566,
+        "motor_diagnostics": {
+          "model": "unidentified_PWM_DC_approximation",
+          "hardware_ready": false,
+          "stall_torque_nm": [
+            0.93,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.52,
+            0.215,
+            0.215
+          ],
+          "torque_caps_nm": [
+            0.7440000000000001,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.41600000000000004,
+            0.17200000000000001,
+            0.17200000000000001
+          ],
+          "no_load_speed_rad_s": [
+            8.482300164692441,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            10.786134777324955,
+            40.10766621082969,
+            40.10766621082969
+          ],
+          "any_pwm_saturated_fraction_including_warmup": 0.0,
+          "max_filtered_command_speed_rad_s": 10.7,
+          "max_filtered_command_acceleration_rad_s2": 360.0,
+          "thermal_model": false,
+          "current_estimate": "not_calibrated_not_reported"
+        }
+      },
+      "metrics": {
+        "feasible": true,
+        "stable": true,
+        "speed_mm_s": 0.06458645414025857,
+        "heading_deg": 0.3657456831902924,
+        "score": 1000.0645864541402
+      }
+    }
+  ],
+  "completed": true
+}

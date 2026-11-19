@@ -32,10 +32,14 @@ def main():
                   diffuse="0.7 0.7 0.7", ambient="0.3 0.3 0.3")
     ET.SubElement(world, "light", pos="-1 1 1", dir="1 -1 -1", directional="true",
                   diffuse="0.5 0.5 0.5")
-    for value in np.arange(-.3, .501, .05):
-        for a, b in (([value, -.3, .0005], [value, .5, .0005]), ([-.3, value, .0005], [.5, value, .0005])):
-            ET.SubElement(world, "geom", type="capsule", size=".00025", fromto=" ".join(map(str,a+b)),
-                          rgba="0.4 0.5 0.6 1", contype="0", conaffinity="0")
+    positions = np.array([row['foot_xyz_m'] for row in result['trajectory']])
+    lo = np.floor(np.minimum([-.3, -.3], positions[:, :2].min(axis=0)-.15)/.05)*.05
+    hi = np.ceil(np.maximum([.5, .5], positions[:, :2].max(axis=0)+.15)/.05)*.05
+    lines = [([x, lo[1], .0005], [x, hi[1], .0005]) for x in np.arange(lo[0], hi[0]+.001, .05)]
+    lines += [([lo[0], y, .0005], [hi[0], y, .0005]) for y in np.arange(lo[1], hi[1]+.001, .05)]
+    for a, b in lines:
+        ET.SubElement(world, "geom", type="capsule", size=".00025", fromto=" ".join(map(str,a+b)),
+                      rgba="0.4 0.5 0.6 1", contype="0", conaffinity="0")
     ET.SubElement(world, "geom", type="capsule", size=".001", fromto="0 0 .001 .15 0 .001",
                   rgba="0.25 0.85 0.45 1", contype="0", conaffinity="0")
     for y in [-.012, .012]:
@@ -44,7 +48,6 @@ def main():
     model = mujoco.MjModel.from_xml_string(ET.tostring(root, encoding="unicode"))
     data = mujoco.MjData(model)
     base = model.body(BASE).id
-    positions = np.array([row['foot_xyz_m'] for row in result['trajectory']])
     midpoint = (positions.min(axis=0)+positions.max(axis=0))/2
     path_span = float(np.max(np.ptp(positions[:,:2],axis=0)))
     cameras = []
@@ -82,7 +85,7 @@ def main():
             mujoco.mj_forward(model, data)
             if row["measuring"] and start is None:
                 start = data.xpos[base].copy()
-                yaw = row["foot_rpy_rad"][2]
+                yaw = result['trajectory'][0]['foot_rpy_rad'][2] if result.get('render_forward_frame') == 'startup' else row["foot_rpy_rad"][2]
                 start_rotation = np.array([np.cos(yaw), np.sin(yaw), 0])
                 initial_heading = yaw
             head_yaw = row["head_rpy_rad"][2]
