@@ -1,0 +1,31 @@
+{
+  "gait": {
+    "frequency_hz": 1.8489678772476028,
+    "roll_deg": 38.46653074933546,
+    "yaw_deg": 26.31535308949845,
+    "yaw_phase_deg": 99.2145661229179,
+    "pitch_bias_deg": 9.82038781751871,
+    "x_mm": -12.340387222012874,
+    "y_mm": 14.381493375703101,
+    "y_phase_deg": -129.75065666029408,
+    "z_mm": -0.6583014376029436,
+    "yaw_sharpness": 0.5423954544519042,
+    "roll_sharpness": 0.014458144873900205,
+    "yaw_bias_deg": -0.5199766907138954,
+    "roll_bias_deg": -0.9152089250049198
+  },
+  "feedback": {
+    "kp": 0.23303774410910136,
+    "ki": 0.055850443128546846,
+    "kd": 0.005671227833595896,
+    "filter_tau_s": 0.1219339821597473,
+    "max_correction_deg": 2.6158617869288934,
+    "correction_rate_deg_s": 13.001617698769229,
+    "yaw_per_roll": -0.2551286938232557,
+    "roll_per_correction": 1.0,
+    "phase_skew_per_correction": -0.0030084918850669367,
+    "cycle_average": false,
+    "cycle_update": false,
+    "startup_ramp_cycles": 2.0
+  }
+}

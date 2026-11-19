@@ -1,5 +1,69 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 19, 2026 — heading feedback trained; all-pass stress target unmet
+
+Added bounded head-roll/yaw/timing corrections driven by a simulated heading
+estimate (60 ms delay, 0.25° noise), with no privileged model/contact inputs.
+Body yaw remains zero; existing mass, motor torque/speed/acceleration/latency
+models and pose/IK limits are unchanged. Optional estimator, amplitude and
+harmonic steering variants were investigated but are disabled in the selected
+configuration. Hardware remains untouched.
+
+**Selected nominal 1 ms run:** 324.7 mm in 20.52 s, 15.83 mm/s, **89.2%** of the
+previous fast gait's speed; -16.5 mm lateral, -2.54° net turn, 5.89° maximum
+measured excursion (5.62° maximum error from startup). Peak head torque 0.3982 Nm
+under 0.416 Nm cap; actual joint-angle margin >=0.2425 rad. Nominal 2 ms speed
+16.82 mm/s. Video uses exact saved evaluated states at 1x playback.
+
+**Original stress cases, >=12 s:** still **0/12 pass** the original strict criteria.
+Mean forward speed improves 12.08 ->18.62 mm/s; minimum 4.29 ->13.90 mm/s; worst
+heading excursion 110.07° ->24.03°. At >=20 s: 0/12 pass, minimum 13.78 mm/s,
+worst turn 26.30°. Same gait/startup with feedback disabled gives worst turn
+81.60° and mean speed 13.75 mm/s, so feedback provides a measured improvement.
+Do not call this an all-pass or hardware-transfer success.
+
+**Fresh seed 2026111907**, ten models x two timesteps, never used for selection:
+4/20 passes versus original fast 2/20; all numerically valid and forward-moving.
+Worst heading falls 118.64° ->34.60°, mean speed 11.88 ->14.62 mm/s. Fresh minimum
+speed 2.11 mm/s; only 8/10 model pairs pass the coarse timestep displacement
+check. One differs 7.71 vs20.87 mm/s. Ideal/noisy/delayed sensor audits still fail
+stress heading constraints, including with ideal sensing.
+
+593 recorded candidate evaluations /4,151 completed training rollouts, plus
+112 steering probes. A feasibility-first search was stopped after 72 candidates
+because it favored near-stationary policies; that receipt labels the interruption.
+Final selection uses only >=20 s development tests, requiring >=14 mm/s nominal
+at both timesteps and >=8 mm/s in all original stress cases; two stalling
+candidates were rejected. Final development physics replay matched exactly.
+At most four local CPU training workers; no shared GPU or robot was accessed.
+
+**Validation:** 75 tests pass in
+`experiments/reports/repository-tests-heading-2026-11-19.txt`. New tests cover
+heading wrap/delay/noise, anti-windup, bounded corrections, optional phase
+estimation/adaptation, and motor-bounded repeatable recorded rollouts.
+
+Frozen configs: `configs/sway-heading-trained.json`, `configs/heading-trained.json`,
+`configs/heading-sensor-assumed.json`. Final evaluation and video receipts:
+`experiments/reports/motor-training-heading-final-2026-11-19.json`,
+`experiments/reports/motor-training-heading-demo-2026-11-19.json`.
+Videos: `media/simulation/heading-feedback-2026-11-19.mp4` (nominal) and
+`media/simulation/heading-feedback-stress-2026-11-19.mp4` (predeclared stress1;
+311.7 mm/20.52 s, but 24.03° heading failure). Both are 1x, fixed views, 5 cm grid.
+Full protocol, limits and receipts: `docs/HEADING_FEEDBACK_2026-11-19.md`.
+
+```sh
+.venv/bin/python -m unittest discover -s tests -v
+.venv/bin/python -m reachy_locomotion.sway --config configs/motors-datasheet.json --gait configs/sway-heading-trained.json --feedback configs/heading-trained.json --sensor configs/heading-sensor-assumed.json --cycles 38 --warmup-cycles 3 --output experiments/generated/heading-next.json
+.venv/bin/python experiments/render_sway.py experiments/generated/heading-next.json --output experiments/generated/heading-next.mp4 --slowdown 1 --title 'HEADING FEEDBACK' --diagnostics --frame-path
+```
+
+The CLI example uses 2 ms; the shown videos override the model to 1 ms. Next:
+the simultaneous fast/all-pass objective remains open. Inspect within-stride yaw,
+steering oscillation and lateral drift together, consider richer phase-dependent
+control using observable joint state, and calibrate battery-powered servo/contact
+response before physical transfer. The existing hardware commissioning guard is
+unchanged; no physical-ready flags were set.
+
 ## November 19, 2026 — progress-first compound swing and best-result video
 
 User requested faster progress, less turning, published motor bounds, a best-run

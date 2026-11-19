@@ -1,0 +1,6 @@
+{
+  "delay_frames": 3,
+  "noise_std_deg": 0.25,
+  "bias_deg": 0.0,
+  "seed": 19031
+}

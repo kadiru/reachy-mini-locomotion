@@ -32,26 +32,35 @@ class Gait:
     yaw_sharpness: float = 0.0
     roll_bias_deg: float = 0.0
     yaw_bias_deg: float = 0.0
+    phase_skew: float = 0.0
+    yaw_harmonic_deg: float = 0.0
+    yaw_harmonic_phase_deg: float = 0.0
 
     def __post_init__(self):
         if not all(math.isfinite(v) for v in asdict(self).values()):
             raise ValueError("Gait values must be finite")
-        if not .25 <= self.frequency_hz <= 5 or abs(self.roll_deg) + abs(self.roll_bias_deg) > 40 or abs(self.yaw_deg) + abs(self.yaw_bias_deg) > 60:
+        if not .25 <= self.frequency_hz <= 5 or abs(self.roll_deg) + abs(self.roll_bias_deg) > 40 or abs(self.yaw_deg) + abs(self.yaw_bias_deg) + abs(self.yaw_harmonic_deg) > 60:
             raise ValueError("Sway outside exploratory frequency/angle bounds")
         if not 0 <= self.roll_sharpness <= 5 or not 0 <= self.yaw_sharpness <= 5:
             raise ValueError("Swing sharpness must lie in [0, 5]")
+        if abs(self.phase_skew) > .5:
+            raise ValueError("Phase skew outside monotonic stroke bound")
         if abs(self.pitch_deg) + abs(self.pitch_bias_deg) > 40 or self.mirror not in (-1, 1):
             raise ValueError("Invalid pitch or mirror value")
         if max(abs(self.x_mm), abs(self.y_mm), abs(self.z_mm)) > 25:
             raise ValueError("Translation outside exploratory 25 mm bound")
 
     def pose(self, phase, envelope=1.0):
+        # Warp timing within each cycle while preserving its period and endpoints.
+        # d(warped phase)/d(phase) >= .5: no reverse or discontinuous strokes.
+        phase = phase + self.phase_skew * (1-math.cos(phase))
         # Smooth, bounded swing-and-hold. Large sharpness shortens the stroke
         # and lengthens its end dwell. It never changes motor torque/rate caps.
         def swing(p, sharpness):
             return math.sin(p) if sharpness == 0 else math.tanh(sharpness * math.sin(p)) / math.tanh(sharpness)
         r = self.mirror * (self.roll_bias_deg + self.roll_deg * swing(phase, self.roll_sharpness))
         y = self.mirror * (self.yaw_bias_deg + self.yaw_deg * swing(phase + math.radians(self.yaw_phase_deg), self.yaw_sharpness))
+        y += self.mirror*self.yaw_harmonic_deg*math.sin(2*phase+math.radians(self.yaw_harmonic_phase_deg))
         p = self.pitch_bias_deg + self.pitch_deg * math.sin(2 * phase + math.radians(self.pitch_phase_deg))
         pose = np.eye(4)
         pose[:3, :3] = rotation(np.radians([r, p, y]) * envelope)
@@ -142,7 +151,7 @@ class SwaySimulator:
             raise ValueError("IK exceeds inspected model joint limits")
         return joints
 
-    def run(self, gait, cycles=8, warmup_cycles=2, record=False):
+    def run(self, gait, cycles=8, warmup_cycles=2, record=False, feedback=None, sensor=None):
         if cycles < 1 or warmup_cycles < 1:
             raise ValueError("Require positive measurement and warm-up cycles")
         model = self.model
@@ -153,6 +162,16 @@ class SwaySimulator:
         if self.servos:
             self.servos.reset(self.initial_targets)
         mujoco.mj_forward(model, state)
+        startup_pos = state.xpos[self.base].copy()
+        startup_yaw = math.atan2(state.xmat[self.base].reshape(3, 3)[1, 0], state.xmat[self.base].reshape(3, 3)[0, 0])
+        startup_rotation = rotation([0, 0, startup_yaw])
+        startup_previous_yaw = startup_yaw
+        startup_heading = max_startup_heading = 0.
+        controller = None
+        if feedback is not None:
+            from .heading import HeadingController, HeadingFeedback, HeadingSensor
+            controller = HeadingController(HeadingFeedback(**feedback), HeadingSensor(**(sensor or {})), startup_yaw,
+                                           max(10, round(50 / gait.frequency_hz)))
         # Align endpoints to whole cycles AND 50 Hz control samples.
         frames_per_cycle = max(10, round(50 / gait.frequency_hz))
         actual_frequency = 50 / frames_per_cycle
@@ -175,9 +194,17 @@ class SwaySimulator:
         peak_velocity = np.zeros(model.nu)
         for frame in range(total_frames + 1):
             phase = 2 * math.pi * frame / frames_per_cycle
-            ramp = min(1, frame / frames_per_cycle)
+            ramp_cycles = controller.config.startup_ramp_cycles if controller else 1.
+            ramp = min(1, frame / (frames_per_cycle * ramp_cycles))
             envelope = ramp * ramp * (3 - 2 * ramp)
-            desired = gait.pose(phase, envelope)
+            current_yaw = math.atan2(state.xmat[self.base].reshape(3, 3)[1, 0], state.xmat[self.base].reshape(3, 3)[0, 0])
+            startup_heading += (current_yaw-startup_previous_yaw+math.pi) % (2*math.pi)-math.pi
+            startup_previous_yaw = current_yaw
+            max_startup_heading = max(max_startup_heading, abs(startup_heading))
+            if controller:
+                controller.update(current_yaw)
+            commanded_gait = controller.steer(gait) if controller else gait
+            desired = commanded_gait.pose(phase, envelope)
             try:
                 target = self.checked_ik(desired)
             except ValueError as error:
@@ -226,6 +253,10 @@ class SwaySimulator:
                         point = state.xmat[self.base].reshape(3, 3).T @ (contact.pos - state.xpos[self.base])
                         side_forces[int(point[1] >= 0)] += abs(float(wrench[0]))
                 trajectory.append({"time_s": float(state.time), "measuring": measuring,
+                                   "heading_from_startup_rad": startup_heading,
+                                   "heading_estimate_deg": controller.filtered_deg if controller else None,
+                                   "steering_correction_deg": controller.correction_deg if controller else 0.,
+                                   "yaw_amplitude_scale": controller.yaw_scale if controller else 1.,
                                    "phase_rad": phase % (2 * math.pi),
                                    "foot_side_normal_forces_n_right_left": side_forces,
                                    "qvel": state.qvel.tolist(),
@@ -302,6 +333,9 @@ class SwaySimulator:
                   "lateral_m": float(displacement[1]), "heading_change_rad": (yaw-initial_yaw+math.pi)%(2*math.pi)-math.pi,
                   "forward_m_per_s": float(displacement[0])/measured_seconds if measured_seconds else 0.0,
                   "max_heading_excursion_rad": max_heading,
+                  "max_heading_from_startup_rad": max_startup_heading,
+                  "final_heading_from_startup_rad": startup_heading,
+                  "startup_frame_displacement_m": (startup_rotation.T @ (state.xpos[self.base]-startup_pos)).tolist(),
                   "unwrapped_heading_change_rad": unwrapped_heading,
                   "max_lateral_excursion_m": max_lateral,
                   "max_foot_tilt_deg": math.degrees(max_tilt), "max_closure_error_m": max_closure,
@@ -327,6 +361,8 @@ class SwaySimulator:
             result["rms_base_angular_velocity_rad_s"] = float(np.sqrt(np.mean(velocities[:, 3:] ** 2)))
         if self.servos:
             result["motor_diagnostics"] = self.servos.report()
+        if controller:
+            result["heading_feedback"] = controller.report()
         if record:
             result["trajectory"] = trajectory
         return result
@@ -338,6 +374,9 @@ def main():
     parser.add_argument("--config", default="configs/motors-datasheet.json")
     parser.add_argument("--gait", help="JSON file of Gait fields")
     parser.add_argument("--cycles", type=int, default=8)
+    parser.add_argument("--feedback", help="JSON file of HeadingFeedback fields")
+    parser.add_argument("--sensor", help="JSON file of simulated HeadingSensor fields")
+    parser.add_argument("--warmup-cycles", type=int, default=2)
     parser.add_argument("--output", required=True)
     args = parser.parse_args()
     output = Path(args.output)
@@ -345,7 +384,9 @@ def main():
         parser.error("Choose a new report path")
     gait = Gait(**json.loads(Path(args.gait).read_text())) if args.gait else Gait()
     sim = SwaySimulator(args.upstream, json.loads(Path(args.config).read_text()))
-    result = sim.run(gait, cycles=args.cycles, record=True)
+    result = sim.run(gait, cycles=args.cycles, warmup_cycles=args.warmup_cycles, record=True,
+                     feedback=json.loads(Path(args.feedback).read_text()) if args.feedback else None,
+                     sensor=json.loads(Path(args.sensor).read_text()) if args.sensor else None)
     output.parent.mkdir(parents=True, exist_ok=True)
     with output.open("x") as file:
         json.dump(result, file, indent=2, allow_nan=False)

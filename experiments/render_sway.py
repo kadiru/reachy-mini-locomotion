@@ -106,6 +106,9 @@ def main():
             if args.diagnostics and start is not None:
                 turn = np.degrees((row['foot_rpy_rad'][2]-initial_heading+np.pi)%(2*np.pi)-np.pi)
                 label = f"t = {row['time_s']:.2f} s   |   forward = {distance:+.1f} mm   |   turn = {turn:+.1f} deg"
+                if 'heading_feedback' in result:
+                    turn = np.degrees(row['heading_from_startup_rad'])
+                    label = f"t = {row['time_s']:.2f} s   |   forward = {distance:+.1f} mm   |   heading error = {turn:+.1f} deg"
             if not row["measuring"]:
                 label = f"t = {row['time_s']:.2f} s   |   startup / warm-up (excluded from displacement)"
             draw.text((20, 544), label, font=font, fill="white")
@@ -123,6 +126,11 @@ def main():
                 draw.text((20,96), 'Support: '+support, font=font, fill=(110,210,235))
                 draw.text((20,122), 'Head yaw: '+('SLOWING' if slowing else 'SWING / HOLD'), font=font,
                           fill=(255,195,100) if slowing else 'white')
+                if 'heading_feedback' in result:
+                    draw.rectangle((925,92,1268,149), fill=(15,22,32))
+                    draw.text((933,96), f"Steering trim: {row['steering_correction_deg']:+.2f} deg", font=font, fill=(110,210,235))
+                    sensor = result['heading_feedback']['sensor']
+                    draw.text((933,122), f"Sensor: {sensor['delay_frames']*20} ms / {sensor['noise_std_deg']:g} deg noise", font=font, fill='white')
             process.stdin.write(canvas.tobytes())
             if len(images) < 160:
                 images.append(canvas.resize((768,348)))

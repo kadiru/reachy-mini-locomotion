@@ -1,0 +1,48 @@
+{
+  "evidence": "saved_simulation_state_render",
+  "playback_speed": 1,
+  "render_source_sha256": "52bb074ed1f2a639f0831f6ea3277428165088c639763186d83985d39894fb7e",
+  "videos": [
+    {
+      "path": "media/simulation/heading-feedback-2026-11-19.mp4",
+      "sha256": "811825275c1a66f483aa3231773b0a8fd123086972a658da2152a5adcb2fab18",
+      "states_path": "experiments/generated/heading-feedback-nominal-2026-11-19.json",
+      "states_sha256": "03ee9acf02b073a46869b57c455462b9691b73984d8694a2d2d7939ed921d425",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1280,
+            "height": 580,
+            "avg_frame_rate": "25/1",
+            "duration": "22.160000",
+            "nb_frames": "554"
+          }
+        ]
+      },
+      "preview_inspected": true
+    },
+    {
+      "path": "media/simulation/heading-feedback-stress-2026-11-19.mp4",
+      "sha256": "8f8f212e2b254fd69f98cf68d9f0395636886bc89d9a1975fae33611c94c0ed7",
+      "states_path": "experiments/generated/heading-feedback-stress1-2026-11-19.json",
+      "states_sha256": "c0eb254b0f5bd01e13b48dfe8bc49fb615c4a107b91cc44fc70e2a9a7d429c1b",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1280,
+            "height": 580,
+            "avg_frame_rate": "25/1",
+            "duration": "22.160000",
+            "nb_frames": "554"
+          }
+        ]
+      },
+      "preview_inspected": true
+    }
+  ],
+  "nominal_18_second_frame_inspected": true
+}

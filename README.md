@@ -8,19 +8,25 @@ The opening sequence shows controller-driven head motion, whole-body rocking
 and apparent base progress. [Video observations](docs/VIMEO_OBSERVATIONS_2026-11-18.md)
 separate what is visible from what still needs measurement.
 
-**Current state (November 19, 2026):** a larger compound head swing advances
-**36.4 cm in 20.5 simulated seconds**, about **7.15× faster** than the prior smooth
-gait over the same duration, under unchanged motor torque bounds and corrected
-mass. Net measured heading change is 7.8°; peak excursion is 9.0° after startup.
-[Watch at real-time speed](media/simulation/progress-fast-2026-11-19.mp4).
-[Full results and mechanism checks](docs/PROGRESS_TRAINING_2026-11-19.md).
+**Current state (November 19, 2026):** heading feedback retains **89.2%** of
+the previous fast gait's nominal speed: **32.5 cm in 20.52 simulated seconds**,
+with 5.9° maximum measured heading excursion and unchanged motor bounds/mass.
+[Watch the evaluated nominal run](media/simulation/heading-feedback-2026-11-19.mp4).
+[Full heading-feedback results](docs/HEADING_FEEDBACK_2026-11-19.md).
 
-**This is a nominal-model success:** 0/12 varied-model stress cases satisfy the
-full turning/drift criteria, although all advance without numerical failures.
-Motor phase lag, contact and mass distribution remain uncalibrated; physical
-transfer is unverified. [Motor sources and assumptions](docs/MOTOR_LIMITS.md).
-The original 15.8 cm demo used a 1.2 Nm head cap; [matched comparisons](docs/FORWARD_PROGRESS_COMPARISON_2026-11-19.md)
-explain that earlier model and the speed/steering tradeoff.
+**The all-pass stress target is still unmet.** On the original stress set,
+mean forward speed improves from 12.08 to 18.62 mm/s and worst heading excursion
+falls from 110° to 24°, but **0/12** pass the strict 10° criterion. Fresh model
+cases improve from 2/20 to **4/20** passes. Some unseen cases remain slow and
+sensitive to timestep. No physical transfer has been verified; motor/contact
+response and the assumed heading estimator remain uncalibrated.
+[Motor sources and assumptions](docs/MOTOR_LIMITS.md).
+
+The earlier open-loop result was 36.4 cm in 20.52 s; its
+[results](docs/PROGRESS_TRAINING_2026-11-19.md) and
+[video](media/simulation/progress-fast-2026-11-19.mp4) remain available. The
+[original 1.2 Nm model comparison](docs/FORWARD_PROGRESS_COMPARISON_2026-11-19.md)
+explains the first, overly optimistic actuator assumption.
 
 ## Start here
 
@@ -56,7 +62,7 @@ The user's observation is retained and now supported by a supplied GIF showing c
 - Read-only HTTP state capture; no motor enable, waking or command writes.
 - Cycle analysis, conservative tracking-gap rejection, forward/lateral displacement, repeatability, fall accounting and matched-condition trial comparison.
 - Offline replay schedule generation from submitted SDK targets. It cannot actuate hardware.
-- CPU-only model audit, moving-foot contact probe and head-actuated sway controller. Scripted exploration and CEM gait-parameter training are implemented; RL training is not.
+- CPU-only model audit, moving-foot contact probe and head-actuated sway controller. Scripted exploration, CEM gait-parameter training and bounded heading feedback are implemented; RL training is not.
 - Original-source ledger and reveal shot list. No verified spoken-video timestamps yet.
 
 **Start with `docs/FIRST_RECORDING_SESSION.md`.** It has the exact commands, Unity setup, camera procedure and stop keys. The synthetic end-to-end test passes with a mock robot; no physical actuation has been attempted. The supplied profile is explicitly a preview example and cannot arm hardware.
@@ -65,7 +71,7 @@ The user's observation is retained and now supported by a supplied GIF showing c
 PYTHONPATH=src .venv/bin/python -m reachy_locomotion session-smoke --output data/synthetic/my-session-check
 ```
 
-Use a new output directory. Current validation: **67 local tests pass**; the [CPU workflow](https://github.com/kadiru/reachy-mini-locomotion/actions/workflows/tests.yml) runs the suite on GitHub. The latest local log is `experiments/reports/repository-tests-progress-2026-11-19.txt`. The earlier full synthetic UDP/HTTP/video pipeline and threaded CLI loss/shutdown check also passed; their generated captures remain local-only.
+Use a new output directory. Current validation: **75 local tests pass**; the [CPU workflow](https://github.com/kadiru/reachy-mini-locomotion/actions/workflows/tests.yml) runs the suite on GitHub. The latest local log is `experiments/reports/repository-tests-heading-2026-11-19.txt`. The earlier full synthetic UDP/HTTP/video pipeline and threaded CLI loss/shutdown check also passed; their generated captures remain local-only.
 
 ## Run locally
 

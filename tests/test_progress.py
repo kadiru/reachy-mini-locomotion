@@ -20,6 +20,10 @@ class StrokeTests(unittest.TestCase):
         self.assertGreater(euler(g.pose(math.pi/3))[2],math.radians(49))
         # The hold has a flat finite endpoint, without discontinuous position.
         self.assertLess(np.max(np.abs(g.pose(math.pi/2+1e-5)-g.pose(math.pi/2-1e-5))),1e-9)
+        skewed=Gait(phase_skew=.4)
+        for phase in np.linspace(0,2*math.pi,51):
+            np.testing.assert_allclose(skewed.pose(phase),skewed.pose(phase+2*math.pi),atol=1e-12)
+        with self.assertRaises(ValueError):Gait(phase_skew=.51)
 
     def test_bias_and_amplitude_share_angle_envelope(self):
         for kw in [dict(roll_deg=39,roll_bias_deg=2),dict(yaw_deg=55,yaw_bias_deg=6),dict(yaw_sharpness=6)]:
