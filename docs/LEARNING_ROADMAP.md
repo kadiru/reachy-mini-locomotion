@@ -56,7 +56,8 @@ The rapid style prioritizes speed; the large-step style must also demonstrate
 larger signed cycle progress and alternating lift/support transfer. Do not apply
 a blanket penalty to the useful tilt, yaw or braking that creates the step.
 Separate within-cycle torso oscillation from persistent heading/path drift;
-the interpretation of the 20° heading tolerance is pending user clarification.
+the user confirmed that the 20° heading tolerance applies after each complete
+left/right cycle, with larger intermediate torso swings allowed.
 
 Randomize measured uncertainty in mass/COM, friction/contact compliance, motor
 strength, latency and observation noise. Hold out parameter combinations and

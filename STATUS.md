@@ -1,5 +1,67 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 19, 2026 — larger rocking demo recorded; continuous qualification fails
+
+User confirmed that 20° applies after every complete left/right cycle, relative
+to startup; larger within-step torso turns are allowed. Added observational
+cycle metrics and delayed same-phase heading feedback. Physical motor limits,
+software profile, joint/IK guards and the previous rapid gait remain unchanged.
+
+Trained on four local CPU workers: **1,719 exploration/refinement rollouts**,
+followed by 110 qualification rollouts. Neither the original nor explicitly
+provisional long-run selection passed. Preserved those failures and froze the
+best qualified **twenty-second demonstration**, rather than calling it a
+continuous-walking solution. Frozen configs:
+`configs/{sway,heading}-rocking-experimental.json`.
+
+Recorded nominal trial: **1.004 m in 20.16 s, 49.81 mm/s, 15.94 mm/full cycle**,
+with 6.14° median bilateral roll, **8.56° peak body tilt**, both edges loaded
+within every cycle, and **11.57° maximum cycle-end heading**. No falls or
+airborne intervals. The steps are 26.2% longer than the rapid mode's 12.63 mm,
+and peak tilt is 3.52× larger; the rapid mode remains faster at 57.39 mm/s.
+The existing nominal 5 V hypothesis and 0.416 Nm head caps are unchanged.
+
+At 0.5/0.25 ms, speed is 45.78/45.01 mm/s, stride 14.65/14.40 mm/cycle, and
+cycle-end heading stays within 15.18°/15.66°, upright throughout twenty seconds.
+These miss the original 15 mm style goal; instantaneous yaw up to 23.67° is
+allowed under the new rule. In both 40- and 120-second requests the selected
+controller drifts past 20° and stops at an invalid IK target after **38.04 s**.
+The invalid command is not executed. Twenty-two smaller-trim/phase-steering
+variants complete forty seconds at both timesteps, but none stays on course.
+
+After freezing: **8/16 fresh model trials complete, 0/16 pass heading**. The
+other eight stop at the IK guard. No fall/nonfoot-contact termination occurs,
+but incomplete guarded runs are failures, not successful no-fall trials.
+This gait is **not robust or hardware-ready**. No physical robot, shared GPU,
+Nimbus or EY project was touched.
+
+Video: `media/simulation/rocking-steps-2026-11-19.mp4`, real time, 529 frames at
+25 fps, 1280×580; startup included. Early/late/final frames were visually checked.
+The ordinary CLI replay exactly matches every recorded result field and state.
+**85 tests pass**; log `experiments/reports/repository-tests-rocking-2026-11-19.txt`.
+Details and runnable commands: `docs/LARGE_ROCKING_2026-11-19.md`. Compact evidence
+and hashes: `experiments/reports/motor-training-rocking-{summary,artifacts}-2026-11-19.json`.
+
+Next: preserve the two distinct modes and this short demonstration, then identify
+a steering response that stays inside the reachable head workspace over long
+runs. Train against long-horizon drift and model variation from the outset;
+the current fresh suite is now evaluation evidence and must not be reused as an
+untouched holdout. Physical motor/contact/heading calibration is still required
+before considering robot execution. Mode transitions remain unimplemented.
+
+Reproduce the frozen numerical trial from this repository root:
+
+```sh
+.venv/bin/python -m reachy_locomotion.sway \
+  --config configs/motors-speed-trained.json \
+  --gait configs/sway-rocking-experimental.json \
+  --feedback configs/heading-rocking-experimental.json \
+  --sensor configs/heading-sensor-assumed.json \
+  --warmup-cycles 3 --cycles 63 \
+  --output experiments/generated/rocking-replay-next.json
+```
+
+
 ## November 19, 2026 — two walking styles defined; large edge steps remain a separate target
 
 User clarified the intended endpoint: preserve rapid, small steps and also

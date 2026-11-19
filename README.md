@@ -5,15 +5,27 @@ then evaluate sim-to-real transfer on Reachy Mini Wireless.
 
 The intended gait library has [two styles](docs/GAIT_STYLES.md): rapid small
 steps and larger alternating-edge steps driven by sway, head turning and braking.
-The current trained result is the rapid style; the larger-tilt style remains a
-separate training target.
+Both now have simulation candidates. The larger-rocking mode is experimental:
+its twenty-second demonstration passes, while longer-run steering remains unsolved.
 
 Reference: Kadir's [reachy reach video](https://vimeo.com/kadiru/demo-reachy-reach).
 The opening sequence shows controller-driven head motion, whole-body rocking
 and apparent base progress. [Video observations](docs/VIMEO_OBSERVATIONS_2026-11-18.md)
 separate what is visible from what still needs measurement.
 
-**Current state (November 19, 2026):** the larger-yaw headshake moves
+**Large-rocking experiment (November 19, 2026):** **1.004 m in 20.16 s**,
+**49.81 mm/s**, **15.94 mm per full left/right cycle**, and **8.56° peak body tilt**.
+Every completed cycle stays within **11.58°** of startup heading in the saved
+trial, with no fall. At 0.5 ms the stride is 14.65 mm and cycle-end heading stays
+within 15.18°. This misses the original 15 mm target at that finer timestep.
+The selected controller stops on an unreachable head target after 38.04 measured
+seconds in the longer test; it is **not qualified for continuous walking**.
+Fresh model variations give 8/16 completed runs and 0/16 heading passes; the
+other eight stop at the joint-limit guard. Hardware transfer remains unverified.
+[Watch the real-time demonstration](media/simulation/rocking-steps-2026-11-19.mp4).
+[Results, failed checks and reproduction](docs/LARGE_ROCKING_2026-11-19.md).
+
+**Preserved rapid mode:** the larger-yaw headshake moves
 **114.9 cm in 20.02 simulated seconds**, **19.1% faster** than the preceding
 48.19 mm/s gait, with **14.4°** maximum heading change. It remains upright for
 120 seconds, moving 6.75 m while staying within 15.2°. Reducing the physics
@@ -81,7 +93,7 @@ The user's observation is retained and now supported by a supplied GIF showing c
 PYTHONPATH=src .venv/bin/python -m reachy_locomotion session-smoke --output data/synthetic/my-session-check
 ```
 
-Use a new output directory. Current validation: **81 local tests pass**; the [CPU workflow](https://github.com/kadiru/reachy-mini-locomotion/actions/workflows/tests.yml) runs the suite on GitHub. The latest local log is `experiments/reports/repository-tests-faster-2026-11-19.txt`. The earlier full synthetic UDP/HTTP/video pipeline and threaded CLI loss/shutdown check also passed; their generated captures remain local-only.
+Use a new output directory. Current validation: **85 local tests pass**; the [CPU workflow](https://github.com/kadiru/reachy-mini-locomotion/actions/workflows/tests.yml) runs the suite on GitHub. The latest local log is `experiments/reports/repository-tests-rocking-2026-11-19.txt`. The earlier full synthetic UDP/HTTP/video pipeline and threaded CLI loss/shutdown check also passed; their generated captures remain local-only.
 
 ## Run locally
 

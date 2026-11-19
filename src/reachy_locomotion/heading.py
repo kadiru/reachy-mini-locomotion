@@ -36,6 +36,7 @@ class HeadingFeedback:
     yaw_harmonic_phase_deg: float = 0.
     phase_fit: bool = False
     heading_deadband_deg: float = 0.
+    cycle_endpoint: bool = False
 
     def __post_init__(self):
         if not all(math.isfinite(v) for v in asdict(self).values()):
@@ -64,6 +65,8 @@ class HeadingFeedback:
             raise ValueError('Phase estimator flag must be boolean')
         if not 0 <= self.heading_deadband_deg <= 20:
             raise ValueError('Heading deadband must lie in [0, 20] degrees')
+        if not isinstance(self.cycle_endpoint,bool) or (self.cycle_endpoint and (self.cycle_average or self.phase_fit)):
+            raise ValueError('Endpoint feedback cannot also average or phase-fit heading')
 
 
 @dataclass
@@ -127,9 +130,13 @@ class HeadingController:
             fit=np.linalg.lstsq(design,np.asarray(self.fit_history),rcond=None)[0]
             observation=float(np.clip(fit[0],min(self.fit_history)-5,max(self.fit_history)+5))
             self.fit_rate=float(np.clip(fit[1],-60,60))
-        self.filtered_deg += -math.expm1(-dt/c.filter_tau_s) * (observation-self.filtered_deg)
-        if not c.cycle_update or self.frames % len(self.history) == 0:
-            control_dt = dt*len(self.history) if c.cycle_update else dt
+        endpoint_ready = self.frames >= self.sensor.delay_frames and (self.frames-self.sensor.delay_frames) % len(self.history) == 0
+        if not c.cycle_endpoint or endpoint_ready:
+            filter_dt = dt*len(self.history) if c.cycle_endpoint else dt
+            self.filtered_deg += -math.expm1(-filter_dt/c.filter_tau_s) * (observation-self.filtered_deg)
+        update_control = endpoint_ready if c.cycle_endpoint else (not c.cycle_update or self.frames % len(self.history) == 0)
+        if update_control:
+            control_dt = dt*len(self.history) if c.cycle_update or c.cycle_endpoint else dt
             error = math.copysign(max(0., abs(self.filtered_deg)-c.heading_deadband_deg), self.filtered_deg)
             rate = (error-self.control_heading)/control_dt
             if c.phase_fit and self.frames >= 2*len(self.history)+self.sensor.delay_frames:

@@ -58,8 +58,9 @@ Historical proposal (not the current speed-first optimizer):
 For the new large-step style, separate cyclic torso yaw from course drift and
 evaluate signed progress over a complete left/right pair, with actual support
 transfer. Preserve useful head braking and body rocking rather than penalizing
-all abrupt motion or tilt. The previous instantaneous 20° bound remains until
-the user clarifies whether it should instead apply after a complete cycle.
+all abrupt motion or tilt. The user confirmed that the 20° bound applies after
+each complete left/right cycle, relative to the fixed startup heading; larger
+within-step torso swings are allowed. The no-fall and motor limits remain.
 
 `L` and `E` are declared normalization scales. Use signed progress so oscillating back and forth cannot collect positive reward twice. Apply tilt penalty above a demonstrated safe wobble envelope, not at every tilt (rocking is the mechanism). Select weights after measuring baseline magnitudes; predeclare them before evaluation. If motor torque/current is unavailable, omit physical energy or label a command-velocity proxy explicitly; never call that measured energy.
 

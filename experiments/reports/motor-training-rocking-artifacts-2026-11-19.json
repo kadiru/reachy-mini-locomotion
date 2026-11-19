@@ -1,0 +1,176 @@
+{
+  "evidence": "uncalibrated_simulation",
+  "hardware_ready": false,
+  "acceptance_scope": "20-second demonstration only; long-run and randomized qualification failed",
+  "exact_cli_replay_matches_recording": true,
+  "compared_cli_fields": [
+    "evidence",
+    "gait",
+    "actual_frequency_hz",
+    "config",
+    "valid",
+    "failure_reason",
+    "requested_cycles",
+    "warmup_cycles",
+    "measured_seconds",
+    "forward_m",
+    "lateral_m",
+    "heading_change_rad",
+    "forward_m_per_s",
+    "max_heading_excursion_rad",
+    "max_heading_from_startup_rad",
+    "final_heading_from_startup_rad",
+    "startup_frame_displacement_m",
+    "unwrapped_heading_change_rad",
+    "max_lateral_excursion_m",
+    "max_foot_tilt_deg",
+    "max_closure_error_m",
+    "max_head_orientation_tracking_error_deg",
+    "max_side_rim_clearance_m",
+    "foot_contact_fraction",
+    "left_unloaded_fraction",
+    "right_unloaded_fraction",
+    "any_motor_torque_saturated_fraction",
+    "absolute_motor_work_j",
+    "negative_motor_work_j",
+    "airborne_fraction",
+    "longest_airborne_interval_s",
+    "airborne_intervals",
+    "airborne_definition",
+    "max_foot_bottom_clearance_m",
+    "min_motor_joint_limit_margin_rad",
+    "measurement_displacement_in_startup_frame_m",
+    "cycle_boundaries",
+    "external_forces_applied",
+    "mujoco_version",
+    "control_rate_hz",
+    "upstream_xml_sha256",
+    "kinematics_sha256",
+    "actuator_names",
+    "rocking_cycles",
+    "peak_motor_torque_nm",
+    "rms_motor_torque_nm",
+    "peak_motor_velocity_rad_s",
+    "base_subtree_mass_kg",
+    "rms_base_acceleration_m_s2",
+    "rms_base_angular_velocity_rad_s",
+    "motor_diagnostics",
+    "heading_feedback",
+    "trajectory"
+  ],
+  "unchanged_from_parent": [
+    "src/reachy_locomotion/motors.py",
+    "configs/motors-speed-trained.json",
+    "configs/sway-faster-trained.json",
+    "configs/heading-faster-trained.json"
+  ],
+  "parent_commit": "63ffd307142a6aca4bd91dbea557497e4c4b636e",
+  "training_counts": {
+    "probe": {
+      "recipes": 129,
+      "simulated_rollouts": 129
+    },
+    "search": {
+      "recipes": 400,
+      "simulated_rollouts": 400
+    },
+    "steps": {
+      "recipes": 176,
+      "simulated_rollouts": 176
+    },
+    "progress": {
+      "recipes": 400,
+      "simulated_rollouts": 400
+    },
+    "refined": {
+      "recipes": 336,
+      "simulated_rollouts": 336
+    },
+    "paired": {
+      "recipes": 121,
+      "simulated_rollouts": 195
+    },
+    "coordinate": {
+      "recipes": 27,
+      "simulated_rollouts": 39
+    },
+    "steering": {
+      "recipes": 22,
+      "simulated_rollouts": 44
+    }
+  },
+  "training_simulated_rollouts": 1719,
+  "qualification_counts": {
+    "selection": {
+      "development": 80,
+      "fine": 5,
+      "endurance": 0
+    },
+    "selection-provisional": {
+      "development": 16,
+      "fine": 7,
+      "endurance": 2
+    }
+  },
+  "fresh_model_trials": 16,
+  "extra_checks": 4,
+  "recording_and_cli_replays": 2,
+  "video": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1280,
+        "height": 580,
+        "r_frame_rate": "25/1",
+        "duration": "21.160000",
+        "nb_frames": "529"
+      }
+    ]
+  },
+  "visually_checked_frames_s": [
+    3.2,
+    16,
+    21.12
+  ],
+  "test_count": 85,
+  "test_log": "experiments/reports/repository-tests-rocking-2026-11-19.txt",
+  "file_sha256": {
+    "experiments/reports/motor-training-rocking-progress-2026-11-19.json": "5bee954a5f1118025c9652bc065caf4980a582908e85707080a1a23941800fc4",
+    "experiments/reports/motor-training-rocking-demonstration-2026-11-19.json": "6f86a797f7ba50da787a86a895afdc454166c7ff1de9a5cf997301d29eff7db9",
+    "experiments/reports/motor-training-rocking-summary-2026-11-19.json": "9ba1f1177088e56e20922ee533928a2205f980516248ff6d7f87c53bee4cf503",
+    "experiments/reports/motor-training-rocking-selection-2026-11-19.json": "71906e7ec6b5b41347d4742ac39382103e3638a104ac624b0101d163b951cf98",
+    "experiments/reports/motor-training-rocking-steps-2026-11-19.json": "71050072c6be7268aa4e5abcb21307642c89f051db7fe293075bd12bcb61eaa2",
+    "experiments/reports/motor-training-rocking-refined-2026-11-19.json": "eca76e4f265818f5d9fa208ac5277d92f8e6045aef9997c6330d089f9fd83a14",
+    "experiments/reports/motor-training-rocking-coordinate-2026-11-19.json": "47d1ac475d81de9ff68f35ab66a7e7aa557485306e896d4a6684939f005de5ed",
+    "experiments/reports/motor-training-rocking-steering-2026-11-19.json": "5b0cb7d1533c7a8d6f80ebdf233ba062fc178d6e39f91fc76b9d0e62b54773cd",
+    "experiments/reports/motor-training-rocking-paired-2026-11-19.json": "9e18a286b5b2236a3a342f9b97b4978b561ae364a9530b6e421a3021b2463a2f",
+    "experiments/reports/motor-training-rocking-probe-2026-11-19.json": "12a4a704f4f77382e26631de52d21bcc65b92dec954d8ecf72a2b1e8c7851526",
+    "experiments/reports/motor-training-rocking-selection-provisional-2026-11-19.json": "decaef15d1a541d5ad71db063d2951574f8eb3bf0eaae1eb249cb148f7b4c3e9",
+    "experiments/reports/motor-training-rocking-search-2026-11-19.json": "ed1d8d8298fe6b36bc22981db4cfd9e24b7f4a68ac32728107aeb72af135105e",
+    "experiments/record_rocking_demonstration.py": "b2900b4c023a3c2e82842de9195d704ccdfb1af4f35330041c348231f2e689f7",
+    "experiments/probe_rocking_steering.py": "910b830ce41d20d6ac3d5d7b2df1de2feaf67ee3569878b44446dddc395c13c2",
+    "experiments/refine_rocking_feedback.py": "b70b675ac91d2297c8b9edf0e941827be40f076801ed093a5fe821b3e2615f0e",
+    "experiments/probe_rocking_coordinates.py": "c1b7ae52fc7283c67a15976979aec3dffaba7532a18d6ae045fb02e66e77e638",
+    "experiments/probe_rocking_steps.py": "68b8546f7285a9fff50a4f6697b8b4bf3e6db881abb1b650670c7a2d176dd39b",
+    "experiments/select_rocking.py": "489d5e607ea9cd06c62ad2753b9fbb7036aca08df6ce6f162190e0aec72ab566",
+    "experiments/verify_rocking.py": "ecbd2020a4cc5c16b9adc8e186c522fbe533df574e868ab590b7b3d18446cebe",
+    "experiments/train_rocking.py": "2f3d9007b6a55a5afb16a0da53a956322b9af34b481d65b16d2847d26d072f2d",
+    "experiments/generated/rocking-20s-2026-11-19.json": "68bd4485da4d7611fd4d61e135470993e36775c52af5b980de1f33552808b424",
+    "experiments/generated/rocking-cli-replay-2026-11-19.json": "88dbd430bcdbb37a3f8e207ae9b1ec3ddea41ace554a47c067209821054e6e46",
+    "media/simulation/rocking-steps-2026-11-19.mp4": "215e184dad287d64c630113114aad093dbad9449648eb17c757d7181bdd21655",
+    "media/simulation/rocking-steps-2026-11-19.png": "a9374e636628f621bd4f14b836976e052c36bb9a52f1f659b0f55c93beb9383e",
+    "src/reachy_locomotion/rocking.py": "d579751e6127efa351087a48cd1a1d275a17eedd80e3bf978d06dab8ccedfcce",
+    "src/reachy_locomotion/sway.py": "c096bffc6831c8d07371c52912cf27cbcb7d5aa016ec0369ea90e2263bb0f83c",
+    "src/reachy_locomotion/heading.py": "e7df4c188a4ee18c64dbc8c6e91c6e4642318d26d4d76dffe4a3773160554e2c",
+    "configs/sway-rocking-experimental.json": "19549fdf78f0a5be5cf234fe3fe47dce303fe6e4a86ff978e6a38e282f87fcad",
+    "configs/heading-rocking-experimental.json": "e3c1bb44c353dbd105202af690a6a41e138aaaf167be434bdd1a132081a7b117",
+    "experiments/render_sway.py": "3841962ecbc395ccec7e6aefb046f8257b38ca99d530ac87b7dd8ec360da5b4c",
+    "src/reachy_locomotion/motors.py": "e17ed3834e5842def618a8fdaa8d7782f4bbd66e27cd6762eb4b7e2a16c89675",
+    "configs/motors-speed-trained.json": "ac2196618707b161ba2f9e6f5181474dadad8dc7ccc72e8f36f596ab03ff8ffd",
+    "configs/sway-faster-trained.json": "0df4d48f17e676dfd40d0e74f4d7bf82a75501c9abd42f8d7ff1f62375cb5f09",
+    "configs/heading-faster-trained.json": "2849e2892e5c1ddabdafda1efb9402af54d08932914f48935b0ba27506ae9902"
+  },
+  "renderer_compatibility_note": "Cycle-end label reads startup heading only for completed_cycle recordings; legacy recordings retain their old path. No change to the delivered completed_cycle video.",
+  "rendered_with_renderer_sha256": "cfc6c3368f06216d755a66205a7ec9bdcbb9b25eb07ed0c4722213be48b48999"
+}

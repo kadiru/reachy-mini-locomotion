@@ -1,0 +1,14 @@
+{
+  "kp": 0.08,
+  "ki": 0.015,
+  "kd": 0,
+  "filter_tau_s": 0.15,
+  "max_correction_deg": 4,
+  "correction_rate_deg_s": 12,
+  "yaw_per_roll": -2,
+  "roll_per_correction": 0,
+  "phase_skew_per_correction": 0,
+  "cycle_endpoint": true,
+  "heading_deadband_deg": 5,
+  "startup_ramp_cycles": 2
+}

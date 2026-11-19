@@ -3,13 +3,14 @@
 The user's November 19 clarification defines two desired gait families. Keep a
 separate best policy for each, rather than selecting every experiment solely by
 average speed. Both must respect the same motor/joint limits and remain upright.
-This document records the intended behavior and evaluation changes; it does not
-claim that a large-step policy or a mode-switching controller is implemented.
+This document records the intended behavior and evaluation changes. A larger
+rocking demonstration is now implemented in simulation; continuous qualification
+and a mode-switching controller remain incomplete.
 
 | Style | Intended motion | Main selection goal | Current evidence |
 |---|---|---|---|
 | Rapid small steps | Fast alternating head motion; small body rocking and frequent support changes | Sustained forward speed with no falls | Existing 57.39 mm/s nominal simulation |
-| Large alternating-edge steps | Larger sway, head turn and timed braking; pronounced torso roll/yaw, lifting the opposite side before transferring support | Larger signed forward progress per complete left/right cycle, with actual support transfer and no falls; retain speed as a separate metric | User's demonstrated/reported behavior; not yet reproduced as a separately trained simulation mode |
+| Large alternating-edge steps | Larger sway, head turn and timed braking; pronounced torso roll/yaw, lifting the opposite side before transferring support | Larger signed forward progress per complete left/right cycle, with actual support transfer and no falls; retain speed as a separate metric | Experimental 20-second simulation: 49.81 mm/s, 15.94 mm/cycle, 8.56° peak body tilt; longer-run steering fails qualification |
 
 ## Large-step mechanism to test
 
@@ -59,16 +60,16 @@ Measure these independently:
 - **Travel direction and lateral displacement:** the path relative to the fixed
   requested forward axis; body orientation and velocity direction can differ.
 
-The current optimizer constrains the maximum instantaneous heading error to 20°,
-and the feedback responds to a filtered instantaneous heading. For the slower
-large-step style, this could suppress useful yaw oscillation. A cycle-based
-heading estimate/correction is a candidate alternative, not yet selected.
+The preserved rapid optimizer constrained maximum instantaneous heading error to
+20°. The large-rocking optimizer now checks heading at every full-cycle endpoint.
+Its experimental controller uses delayed same-phase heading feedback; bounded
+yaw-bias correction improves short trials but has not solved longer-run drift.
 
-**Pending user clarification:** may the 20° tolerance apply after a complete
-left/right cycle, with larger temporary torso excursions? Until confirmed,
-preserve the existing instantaneous 20° constraint. Do not silently broaden it
-or raise the 35° simulation fall guard. Record within-step extrema even if a
-cycle-level course constraint is later approved.
+**Confirmed by the user:** the 20° tolerance applies after each complete
+left/right cycle; larger temporary torso excursions are allowed. Measure every
+cycle endpoint against the original startup heading, including startup cycles;
+do not reset the reference each cycle or check only the final endpoint. Keep
+within-step extrema visible. The 35° simulation fall guard is unchanged.
 
 ## Training and acceptance changes
 

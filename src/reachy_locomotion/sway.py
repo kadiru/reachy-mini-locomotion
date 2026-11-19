@@ -12,6 +12,7 @@ import numpy as np
 
 from .contact_probe import BASE, initialize, relative_head_pose, scene_xml
 from .geometry import angle, euler, rotation
+from .rocking import CycleMonitor
 
 
 @dataclass
@@ -209,6 +210,8 @@ class SwaySimulator:
         actual_frequency = 50 / frames_per_cycle
         warmup_frames = warmup_cycles * frames_per_cycle
         total_frames = (warmup_cycles + cycles) * frames_per_cycle
+        cycle_monitor = CycleMonitor(frames_per_cycle, warmup_frames, startup_yaw)
+        forces = [0., 0.]
         start = start_rot = None
         trajectory, boundaries = [], []
         reason = None
@@ -237,6 +240,9 @@ class SwaySimulator:
             startup_heading += (current_yaw-startup_previous_yaw+math.pi) % (2*math.pi)-math.pi
             startup_previous_yaw = current_yaw
             max_startup_heading = max(max_startup_heading, abs(startup_heading))
+            base_matrix = state.xmat[self.base].reshape(3, 3)
+            cycle_monitor.observe(frame, state.xpos[self.base],
+                                  math.atan2(base_matrix[2, 1], base_matrix[2, 2]), startup_heading, forces)
             if controller:
                 controller.update(current_yaw)
             commanded_gait = controller.steer(gait) if controller else gait
@@ -413,6 +419,7 @@ class SwaySimulator:
                   "mujoco_version": mujoco.__version__, "control_rate_hz": 50,
                   "upstream_xml_sha256": self.source_sha256, "kinematics_sha256": self.ik.source_sha256}
         result["actuator_names"] = [model.actuator(i).name for i in range(model.nu)]
+        result['rocking_cycles'] = cycle_monitor.report()
         result["peak_motor_torque_nm"] = peak_torque.tolist()
         result["rms_motor_torque_nm"] = np.sqrt(torque_sq / max(1, measured_steps)).tolist()
         result["peak_motor_velocity_rad_s"] = peak_velocity.tolist()

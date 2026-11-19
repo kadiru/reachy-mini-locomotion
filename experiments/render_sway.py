@@ -80,8 +80,13 @@ def main():
     images = []
     previous_head_yaw = previous_head_rate = None
     initial_heading = None
+    last_cycle_heading = 0.
+    completed_cycle_rule = result.get('evaluation_heading_rule') == 'completed_cycle'
+    cycle_frames = round(50/result['actual_frequency_hz'])
     try:
         for frame_index, row in enumerate(result["trajectory"]):
+            if completed_cycle_rule and frame_index and frame_index % cycle_frames == 0:
+                last_cycle_heading = np.degrees(row['heading_from_startup_rad'])
             data.qpos[:] = row["qpos"]
             mujoco.mj_forward(model, data)
             if row["measuring"] and start is None:
@@ -116,6 +121,9 @@ def main():
                 if 'heading_feedback' in result:
                     turn = np.degrees(row['heading_from_startup_rad'])
                     label = f"t = {row['time_s']:.2f} s   |   forward = {distance:+.1f} mm   |   heading error = {turn:+.1f} deg"
+                if completed_cycle_rule:
+                    turn = np.degrees(row['heading_from_startup_rad'])
+                    label = f"t = {row['time_s']:.2f} s   |   forward = {distance:+.1f} mm   |   torso yaw = {turn:+.1f} deg"
             if not row["measuring"]:
                 label = f"t = {row['time_s']:.2f} s   |   startup / warm-up (excluded from displacement)"
             draw.text((20, 544), label, font=font, fill="white")
@@ -133,7 +141,11 @@ def main():
                 draw.text((20,96), 'Support: '+support, font=font, fill=(110,210,235))
                 draw.text((20,122), 'Head yaw: '+('SLOWING' if slowing else 'SWING / HOLD'), font=font,
                           fill=(255,195,100) if slowing else 'white')
-                if 'heading_feedback' in result:
+                if completed_cycle_rule:
+                    draw.rectangle((925,92,1268,149), fill=(15,22,32))
+                    draw.text((933,96), f"Last cycle: {last_cycle_heading:+.1f} / +/-20 deg", font=font, fill=(110,210,235))
+                    draw.text((933,122), f"Body roll: {np.degrees(row['foot_rpy_rad'][0]):+.1f} deg", font=font, fill='white')
+                elif 'heading_feedback' in result:
                     draw.rectangle((925,92,1268,149), fill=(15,22,32))
                     draw.text((933,96), f"Steering trim: {row['steering_correction_deg']:+.2f} deg", font=font, fill=(110,210,235))
                     sensor = result['heading_feedback']['sensor']

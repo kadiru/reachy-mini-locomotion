@@ -12,11 +12,13 @@ Maintain **two distinct walking styles**, per the latest user clarification:
   left/right cycle and verified alternating support; speed alone must not collapse
   it into the small-step style.
 
-Distinguish deliberate within-cycle torso yaw from accumulated course/heading
-drift. The user has been asked whether the existing 20° bound may apply after
-each full cycle rather than at every instant; that reinterpretation is pending.
-Keep the existing instantaneous bound until clarified. Motor/IK limits and the
-no-fall checks remain unchanged for both modes. See `docs/GAIT_STYLES.md`.
+The user has confirmed that **20° applies to overall heading after each full
+left/right cycle**; larger intermediate torso swings are allowed. Train the
+large-rocking mode using that completed-cycle constraint, measured relative to
+startup without resetting the heading reference each cycle. Keep instantaneous
+extrema visible as diagnostics. Motor/IK limits and the no-fall checks remain
+unchanged for both modes. Preserve the rapid gait and render the best validated
+large-rocking candidate. See `docs/GAIT_STYLES.md`.
 
 Latest follow-up: push beyond the 48.19 mm/s speed-first result with larger
 compound head swings and sharper braking, still upright and within 20° heading
