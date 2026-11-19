@@ -1,0 +1,15 @@
+{
+  "kp": 0.2044537893293592,
+  "ki": 0.07476637749331849,
+  "kd": 0.0061529199323916255,
+  "filter_tau_s": 0.1219339821597473,
+  "max_correction_deg": 2.484207714544889,
+  "correction_rate_deg_s": 17.651055916275357,
+  "yaw_per_roll": -0.2551286938232557,
+  "roll_per_correction": 1.0,
+  "phase_skew_per_correction": -0.014923379981482778,
+  "cycle_average": false,
+  "cycle_update": false,
+  "startup_ramp_cycles": 1.0,
+  "heading_deadband_deg": 10.0
+}

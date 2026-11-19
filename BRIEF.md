@@ -2,6 +2,13 @@
 
 ## Priority
 
+Latest follow-up: push beyond the 48.19 mm/s speed-first result with larger
+compound head swings and sharper braking, still upright and within 20° heading
+change. Freeze both the physical motor model and the last software command
+profile (10.7 rad/s, 360 rad/s², 25 Hz). Search waveform/phase/amplitude and
+heading feedback, check sustained speed at finer timesteps, and show the fastest
+validated result in a real-time video. Do not replace prior evidence.
+
 Latest November 19 steering: maximize **forward speed**, keeping the simulated
 robot upright and allowing up to 20 degrees of heading change. Smoothness and
 lateral-drift minimization are no longer objectives. Test the user's proposed

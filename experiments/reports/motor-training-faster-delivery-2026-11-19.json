@@ -1,0 +1,47 @@
+{
+  "evidence": "uncalibrated_simulation",
+  "hardware_ready": false,
+  "documented_cli_reproduces_selected_video": true,
+  "physical_and_software_motor_config_byte_identical_to_previous_commit": true,
+  "head_torque_cap_verified_nm": 0.416,
+  "local_tests_passed": 81,
+  "recorded_candidate_evaluations": 693,
+  "video": {
+    "path": "media/simulation/faster-headshake-2026-11-19.mp4",
+    "fps": 25,
+    "frames": 518,
+    "duration_s": 20.72,
+    "width": 1280,
+    "height": 580,
+    "playback_rate": 1.0,
+    "following_front_camera": true,
+    "fixed_side_camera": true,
+    "visually_reviewed_times_s": [
+      3.2,
+      18,
+      20.6
+    ]
+  },
+  "sha256": {
+    "experiments/train_faster.py": "117926d06c7d7ba3b75ac7a3d6e7ce1b4bd38b7d92a36e2ae198e4c50d9d040f",
+    "experiments/probe_braking.py": "d4d609baf02112bb3dc565cd18f1791ad06e7f9f04ac085aab775704338feca7",
+    "experiments/select_faster.py": "33722a726deeedd8a607436842b6dca85718d23414c0d75be792f945183733e1",
+    "experiments/analyze_faster.py": "4ae422e72f36dd6f6143ef91a477252aa2ba0388e35e8e77ec35608b47634d48",
+    "experiments/render_sway.py": "015151331fbd80df7f39a499452cc75ca61fefb92fe99fb117c071ea5f273f20",
+    "src/reachy_locomotion/sway.py": "c95740dcc71ec2332593aa12be8272cfdaceab851635620cb7a8bded10d53597",
+    "src/reachy_locomotion/motors.py": "e17ed3834e5842def618a8fdaa8d7782f4bbd66e27cd6762eb4b7e2a16c89675",
+    "src/reachy_locomotion/heading.py": "a36c5005d40f4c1931107a2de0c4a35bb5dfe0f4f3850778512fc852ac990218",
+    "configs/motors-speed-trained.json": "ac2196618707b161ba2f9e6f5181474dadad8dc7ccc72e8f36f596ab03ff8ffd",
+    "configs/sway-faster-trained.json": "0df4d48f17e676dfd40d0e74f4d7bf82a75501c9abd42f8d7ff1f62375cb5f09",
+    "configs/heading-faster-trained.json": "2849e2892e5c1ddabdafda1efb9402af54d08932914f48935b0ba27506ae9902",
+    "media/simulation/faster-headshake-2026-11-19.mp4": "d65077e122d90e1fb15946c867db7cfd703d5c56ede0539c359895e520d609c0",
+    "media/simulation/faster-headshake-2026-11-19.png": "3f46d37f0bd37550c4a45efb3c1d4fd74ed24f8bba93a6d8f824b23e70b6ec14",
+    "experiments/reports/motor-training-faster-probe-2026-11-19.json": "769dd00f35a16e18f42c0b63a5dc389e8e94a09ddeee61be71466a933fcab759",
+    "experiments/reports/motor-training-faster-braking-2026-11-19.json": "1ee5881506db51b5753f90c6004867e3c14d1c4c7b7572f7b38865635451761e",
+    "experiments/reports/motor-training-faster-search-2026-11-19.json": "9f51eef6469fa84b54a2ee895b6b90cfff190e80a54fa047dcb3e649bfcf1633",
+    "experiments/reports/motor-training-faster-refined-2026-11-19.json": "1af22a6d385669a9d3ca482698f6d2bb6d3457d78e9b367240b328bb885d14f8",
+    "experiments/reports/motor-training-faster-selection-2026-11-19.json": "b95a86537f2820b0bcdfa1a60faaf43db70c0bac047259752a9fb0b32d7a03d1",
+    "experiments/reports/motor-training-faster-summary-2026-11-19.json": "08051cdf5038f2529632f37e5e5ca7609cf787c468f9f77df2a121a4c43a98db",
+    "experiments/reports/motor-training-faster-interruption-2026-11-19.json": "e8514fb524eee02dd26f6cda2010c2d2024e14c7f01842967571f3514dda8873"
+  }
+}

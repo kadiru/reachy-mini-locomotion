@@ -20,6 +20,7 @@ def main():
     parser.add_argument("--title", default="HEAD-DRIVEN SWAY")
     parser.add_argument("--diagnostics", action="store_true", help="Show recorded support and yaw deceleration")
     parser.add_argument("--frame-path", action="store_true", help="Use fixed cameras framing the entire saved path")
+    parser.add_argument("--follow-front", action="store_true", help="Follow the base in the front close-up; keep the side camera fixed")
     args = parser.parse_args()
     output = Path(args.output)
     if output.exists():
@@ -96,12 +97,15 @@ def main():
                 continue
             canvas = Image.new("RGB", (1280, 580), (15, 22, 32))
             for index, camera in enumerate(cameras):
+                if index == 0 and args.follow_front:
+                    camera.lookat[:] = [data.xpos[base, 0], data.xpos[base, 1], .13]
+                    camera.distance = .62
                 renderer.update_scene(data, camera=camera)
                 canvas.paste(Image.fromarray(renderer.render()), (index*640, 52))
             draw = ImageDraw.Draw(canvas)
             draw.text((20, 12), args.title + "  |  UNCALIBRATED SIMULATION", font=big, fill="white")
             draw.text((1030, 16), f"{1/args.slowdown:g}x playback", font=font, fill=(110, 210, 235))
-            draw.text((20, 65), "Front view", font=font, fill="white")
+            draw.text((20, 65), "Head close-up (following)" if args.follow_front else "Front view", font=font, fill="white")
             draw.text((660, 65), "Side view  |  green arrow = forward (+X)", font=font, fill="white")
             distance = float((data.xpos[base]-start) @ start_rotation)*1000 if start is not None else 0
             tilt = np.degrees(np.arccos(np.clip(data.xmat[base].reshape(3,3)[2,2],-1,1)))

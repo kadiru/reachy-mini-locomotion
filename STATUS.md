@@ -1,5 +1,51 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 19, 2026 — larger-yaw headshake gains another 19%, two-minute check passes
+
+The user requested more forward speed from larger swings/sharper braking while
+keeping realistic motor limits, no falls and up to 20° turning. **Both physical
+and software motor limits remain unchanged** from the 48.19 mm/s result.
+Recorded 693 candidate evaluations on four local CPU workers, including wider,
+slower swings and explicit short-braking strokes. The first refinement stopped
+after seven complete generations on a reproduced floating-point angle-boundary
+bug; those results were preserved and explicitly recovered. A 1e-12° arithmetic
+tolerance fixes that bug without changing motor/IK limits or valid trajectories.
+
+Selected policy `0-same`: **1.149 m in 20.02 s, 57.39 mm/s**, **19.09% faster**
+than the prior gait. Heading stays within 14.39°, with 23.5 mm lateral travel.
+The 40.04 s run moves 2.280 m, maximum heading 15.18°. An additional **120.12 s**
+check moves **6.754 m** at 56.23 mm/s, still within 15.18°, without falling.
+Maximum foot tilt is 2.43°; minimum motor joint-limit margin is 0.527 rad.
+At 0.5/0.25 ms, speeds are 57.23/57.08 mm/s (within 0.6% of 1 ms).
+
+Measured yaw span increases from 50.62° to **55.88°** (+10.4%), while measured
+roll span decreases. Retiming roll/yaw reversals matters more than added waveform
+sharpness in matched ablations. Explicit trapezoidal brake/hold strokes did not
+win. The selected gait keeps the existing 10° heading deadband and 4.545 Hz actual
+cycle rate. It remains edge-supported rocking: **no airborne interval detected**.
+
+Selection used 55 twenty-second rollouts, eight fine-timestep checks and four
+40-second checks before freezing. All **16 fresh model trials remain valid and
+upright**, with positive forward progress, but only **6/16** stay within 20°.
+Worst heading is 114.43°; speeds range 2.56–95.58 mm/s. This set uses a new seed,
+so it is not a paired robustness comparison with the preceding experiment.
+No hardware transfer or motor-response identification has been performed.
+
+Evidence: `docs/FASTER_HEADSHAKE_2026-11-19.md`,
+`experiments/reports/motor-training-faster-{selection,summary}-2026-11-19.json`,
+the complete and interrupted search receipts, and
+`media/simulation/faster-headshake-2026-11-19.mp4` (1× playback, following head
+close-up plus fixed side view). Recording exactly matches the selection run;
+start/late/final video frames were visually checked. The old policy/video remain.
+Frozen gait/feedback: `configs/{sway,heading}-faster-trained.json`; motor config
+remains `configs/motors-speed-trained.json`. **81 tests pass**, including the
+boundary regression. Commands are in the new document.
+
+Next: preserve this faster nominal baseline while improving steering across
+model variations; identify the installed motor/profile/contact response before
+hardware trials. No robot, shared GPU, Nimbus or EY project was touched.
+
+
 ## November 19, 2026 — speed-first headshake reaches 0.96 m in 20 seconds
 
 Latest user priority: maximum forward speed without falling, allowing up to

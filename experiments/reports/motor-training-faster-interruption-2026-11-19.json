@@ -1,0 +1,10 @@
+{
+  "report": "experiments/reports/motor-training-faster-search-2026-11-19.json",
+  "report_sha256": "9f51eef6469fa84b54a2ee895b6b90cfff190e80a54fa047dcb3e649bfcf1633",
+  "completed_generations": 7,
+  "recorded_candidate_evaluations": 280,
+  "planned_generations": 10,
+  "interruption": "ValueError in clipped harmonic steering: floating-point sum can be 60.00000000000001 degrees",
+  "recovery": "Explicit --allow-partial-seed in motor-training-faster-refined-2026-11-19.json; original incomplete report preserved",
+  "regression_test": "test_clipped_harmonic_steering_tolerates_roundoff_but_rejects_excess"
+}

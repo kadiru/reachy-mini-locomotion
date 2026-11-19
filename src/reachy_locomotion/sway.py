@@ -43,7 +43,10 @@ class Gait:
     def __post_init__(self):
         if not all(math.isfinite(v) for v in asdict(self).values()):
             raise ValueError("Gait values must be finite")
-        if not .25 <= self.frequency_hz <= 5 or abs(self.roll_deg) + abs(self.roll_bias_deg) > 40 or abs(self.yaw_deg) + abs(self.yaw_bias_deg) + abs(self.yaw_harmonic_deg) > 60:
+        # Steering subtracts bias/harmonic amplitudes from these shared bounds.
+        # Floating-point addition can recover 60.00000000000001 from that clip.
+        # Tolerate arithmetic roundoff only; motor/IK limits are still enforced.
+        if not .25 <= self.frequency_hz <= 5 or abs(self.roll_deg) + abs(self.roll_bias_deg) > 40+1e-12 or abs(self.yaw_deg) + abs(self.yaw_bias_deg) + abs(self.yaw_harmonic_deg) > 60+1e-12:
             raise ValueError("Sway outside exploratory frequency/angle bounds")
         if not 0 <= self.roll_sharpness <= 5 or not 0 <= self.yaw_sharpness <= 5:
             raise ValueError("Swing sharpness must lie in [0, 5]")

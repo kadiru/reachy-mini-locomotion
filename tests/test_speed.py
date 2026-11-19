@@ -50,6 +50,20 @@ class SpeedStrokeTests(unittest.TestCase):
         self.assertGreater(c.correction_deg, 0.)
         self.assertLessEqual(c.correction_deg, c.config.max_correction_deg)
 
+    def test_clipped_harmonic_steering_tolerates_roundoff_but_rejects_excess(self):
+        from reachy_locomotion.heading import HeadingController, HeadingFeedback, HeadingSensor
+        c = HeadingController(HeadingFeedback(yaw_per_roll=1), HeadingSensor(), 0.)
+        c.correction_deg = 2.1508894117658364
+        g = Gait(roll_deg=38, yaw_deg=55, yaw_harmonic_deg=3.345279439498346,
+                 yaw_bias_deg=.5208054808851006)
+        steered = c.steer(g)
+        total = abs(steered.yaw_deg)+abs(steered.yaw_bias_deg)+abs(steered.yaw_harmonic_deg)
+        self.assertLessEqual(total, 60+1e-12)
+        with self.assertRaises(ValueError):
+            Gait(yaw_deg=60.000001)
+        with self.assertRaises(ValueError):
+            Gait(roll_deg=40.000001)
+
 
 @unittest.skipUnless(AVAILABLE, 'Install simulator extras and pinned model')
 class SpeedSimulationTests(unittest.TestCase):

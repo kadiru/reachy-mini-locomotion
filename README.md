@@ -8,20 +8,23 @@ The opening sequence shows controller-driven head motion, whole-body rocking
 and apparent base progress. [Video observations](docs/VIMEO_OBSERVATIONS_2026-11-18.md)
 separate what is visible from what still needs measurement.
 
-**Current state (November 19, 2026):** the new speed-first headshake moves
-**96.5 cm in 20.02 simulated seconds**, **2.73× faster** than the previous fast
-gait, with **17.3°** maximum heading change. It remains upright for 40 seconds;
-halving the physics timestep changes speed by 0.6%. Physical motor torque caps
-and mass are unchanged; faster software command timing enables the gain.
-[Watch the real-time simulation](media/simulation/speed-first-2026-11-19.mp4).
-[Full speed-first results and reproduction](docs/SPEED_FIRST_2026-11-19.md).
+**Current state (November 19, 2026):** the larger-yaw headshake moves
+**114.9 cm in 20.02 simulated seconds**, **19.1% faster** than the preceding
+48.19 mm/s gait, with **14.4°** maximum heading change. It remains upright for
+120 seconds, moving 6.75 m while staying within 15.2°. Reducing the physics
+timestep from 1 to 0.25 ms changes speed by 0.6%. Both physical motor limits
+and software command limits are unchanged; swing amplitude and timing enable
+the gain. [Watch the real-time simulation](media/simulation/faster-headshake-2026-11-19.mp4).
+[Full results and reproduction](docs/FASTER_HEADSHAKE_2026-11-19.md).
 
 **Fast rocking steps, with no airborne flight observed.** All 16 fresh stress
-runs stay upright, but only 6/16 remain within 20°; the worst turns 84°.
+runs stay upright, but only 6/16 remain within 20°; the worst turns 114°.
 No physical transfer has been verified. Motor/contact response, software command
 profiles and the assumed heading estimator remain uncalibrated.
 [Motor sources and assumptions](docs/MOTOR_LIMITS.md).
 
+The preceding [48.19 mm/s speed-first result](docs/SPEED_FIRST_2026-11-19.md)
+and [video](media/simulation/speed-first-2026-11-19.mp4) remain available.
 The earlier stricter-heading objective and its unresolved stress results are
 preserved in the [heading-feedback report](docs/HEADING_FEEDBACK_2026-11-19.md).
 The earlier open-loop result was 36.4 cm in 20.52 s; its
@@ -73,7 +76,7 @@ The user's observation is retained and now supported by a supplied GIF showing c
 PYTHONPATH=src .venv/bin/python -m reachy_locomotion session-smoke --output data/synthetic/my-session-check
 ```
 
-Use a new output directory. Current validation: **80 local tests pass**; the [CPU workflow](https://github.com/kadiru/reachy-mini-locomotion/actions/workflows/tests.yml) runs the suite on GitHub. The latest local log is `experiments/reports/repository-tests-speed-final-2026-11-19.txt`. The earlier full synthetic UDP/HTTP/video pipeline and threaded CLI loss/shutdown check also passed; their generated captures remain local-only.
+Use a new output directory. Current validation: **81 local tests pass**; the [CPU workflow](https://github.com/kadiru/reachy-mini-locomotion/actions/workflows/tests.yml) runs the suite on GitHub. The latest local log is `experiments/reports/repository-tests-faster-2026-11-19.txt`. The earlier full synthetic UDP/HTTP/video pipeline and threaded CLI loss/shutdown check also passed; their generated captures remain local-only.
 
 ## Run locally
 
