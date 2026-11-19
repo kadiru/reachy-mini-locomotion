@@ -13,6 +13,18 @@ The opening sequence shows controller-driven head motion, whole-body rocking
 and apparent base progress. [Video observations](docs/VIMEO_OBSERVATIONS_2026-11-18.md)
 separate what is visible from what still needs measurement.
 
+**New primitive curriculum (November 19):** before further walking optimization,
+learn sideways lift, recovery and edge pivots. With the waist holding a constant
+zero target, the selected simulation recovers from **30.03° roll / 55.59 mm
+opposite-rim height difference**, settling with **2.82 mm center drift**. A
+compound head turn/stop produces **17.78° final base rotation**, including
+**14.81° during edge support**, then settles upright. The same launch without
+the recovery response eventually falls. These nominal outcomes persist at
+0.5, 0.25 and 0.125 ms physics timesteps. Fresh model variations still cause
+falls and weak pivots; this is not robust walking or a hardware-ready policy.
+[Watch fall → recovery → edge pivot](media/simulation/primitive-curriculum-2026-11-19.mp4).
+[Measurements, comparisons and failure map](docs/PRIMITIVE_CURRICULUM_2026-11-19.md).
+
 **Large-rocking experiment (November 19, 2026):** **1.004 m in 20.16 s**,
 **49.81 mm/s**, **15.94 mm per full left/right cycle**, and **8.56° peak body tilt**.
 Every completed cycle stays within **11.58°** of startup heading in the saved
@@ -85,6 +97,7 @@ The user's observation is retained and now supported by a supplied GIF showing c
 - Cycle analysis, conservative tracking-gap rejection, forward/lateral displacement, repeatability, fall accounting and matched-condition trial comparison.
 - Offline replay schedule generation from submitted SDK targets. It cannot actuate hardware.
 - CPU-only model audit, moving-foot contact probe and head-actuated sway controller. Scripted exploration, CEM gait-parameter training and bounded heading feedback are implemented; RL training is not.
+- Separate simulation curriculum for intentional sideways falls, delayed-roll recovery and head-driven edge pivots, with bounded fixed-target or unpowered waist modes and material-point slip diagnostics.
 - Original-source ledger and reveal shot list. No verified spoken-video timestamps yet.
 
 **Start with `docs/FIRST_RECORDING_SESSION.md`.** It has the exact commands, Unity setup, camera procedure and stop keys. The synthetic end-to-end test passes with a mock robot; no physical actuation has been attempted. The supplied profile is explicitly a preview example and cannot arm hardware.
@@ -93,7 +106,7 @@ The user's observation is retained and now supported by a supplied GIF showing c
 PYTHONPATH=src .venv/bin/python -m reachy_locomotion session-smoke --output data/synthetic/my-session-check
 ```
 
-Use a new output directory. Current validation: **85 local tests pass**; the [CPU workflow](https://github.com/kadiru/reachy-mini-locomotion/actions/workflows/tests.yml) runs the suite on GitHub. The latest local log is `experiments/reports/repository-tests-rocking-2026-11-19.txt`. The earlier full synthetic UDP/HTTP/video pipeline and threaded CLI loss/shutdown check also passed; their generated captures remain local-only.
+Use a new output directory. Current validation: **89 local tests pass**; the [CPU workflow](https://github.com/kadiru/reachy-mini-locomotion/actions/workflows/tests.yml) runs the suite on GitHub. The latest local log is `experiments/reports/repository-tests-primitives-2026-11-19.txt`. The earlier full synthetic UDP/HTTP/video pipeline and threaded CLI loss/shutdown check also passed; their generated captures remain local-only.
 
 ## Run locally
 

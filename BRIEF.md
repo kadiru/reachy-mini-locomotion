@@ -2,6 +2,24 @@
 
 ## Priority
 
+Latest user direction: learn a **primitive curriculum before more walking
+optimization**. First discover how pure head sway lifts an edge and produces a
+sideways fall; then learn to arrest that fall and recover; then add head yaw and
+braking while one edge supports the robot to learn an in-place edge pivot.
+Compose those behaviors into larger penguin steps later. Do not reward forward
+speed during the initial balance/pivot experiments.
+
+The user clarified that the waist **may hold a fixed angle**. Do not command
+waist rotation. Measure foot rotation on the floor separately from torso and
+waist-joint rotation, and disclose holding torque/work. Preserve an unpowered
+waist comparison. Deliberate falls are authorized in isolated simulation
+diagnostics only; do not change the walking evaluator's 35° guard or the motor,
+IK and actual joint-limit checks. A guarded invalid target is not a fall or a
+successful catch. A tipping threshold depends on motion, angular velocity and
+model assumptions, not only a single tilt angle.
+
+Preserve both walking policies and all earlier failed qualification evidence.
+
 Maintain **two distinct walking styles**, per the latest user clarification:
 
 - Rapid left/right headshakes for fast, small steps. Preserve the current

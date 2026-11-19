@@ -1,5 +1,75 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 19, 2026 — sideways recovery and edge pivot primitives
+
+Latest instruction supersedes speed optimization: learn to lift/tip sideways,
+recover, and pivot on an edge before composing bigger penguin steps. User
+permits the waist to hold a fixed angle. Implemented an isolated diagnostic
+simulator with **constant zero waist target**, bounded holding torque, 20 ms
+delayed roll-triggered head response, separate floor-foot/torso/waist rotation,
+and contact-material-point slip. The existing walking evaluator, 35° walking
+guard, motor model, motor profile and previous gait configs are unchanged.
+
+Selected recordings at **0.25 ms**, each requesting eight seconds:
+
+- **Fall:** continued head pumping reaches 69.75° roll and first nonfoot contact
+  at 6.505 s. This is an intentional simulation-only diagnostic.
+- **Recovery:** same launch and identical qpos/qvel through its 1.48 s trigger;
+  changed head response reaches **30.03° roll**, **55.59 mm opposite-rim height
+  difference**, then settles upright with **2.82 mm center drift**. This prevents
+  the continuing launch's eventual fall; it does not establish a point of no
+  return or prove the robot was already committed to falling at the trigger.
+- **Edge pivot:** different recovered launch plus 40° head-yaw stroke/hold/return;
+  **−17.78° final base yaw**, **−14.81° during 1.02 s edge support**, 22.23° peak
+  roll, **16.79 mm drift / 4.37 mm estimated slip**. Sway-only comparison gives
+  −10.58° edge turn; slower yaw gives −12.55°. Holding waist torque peaks at
+  0.0533 Nm; measured waist angle remains within −2.23…+1.31°.
+
+Nominal fall/recovery/pivot outcomes persist at 0.5, 0.25 and **0.125 ms**.
+Fine catch search: 324 trials, 127 recovered and 197 fell; 11/12 selected
+recovered candidates pass finer validation. For the selected launch all tested
+late triggers at 22–38° fall, while many earlier triggers recover. The timing
+and angular velocity differ, so **there is no universal measured tipping angle**.
+Twelve pivot candidates pass the explicit edge-turn/drift/slip gate at both
+0.5 and 0.25 ms. Coarse timestep artifacts and all guarded failures are retained.
+
+**Unresolved robustness:** fresh four-model probe gives catch recovery 3/4 and
+pivot recovery 3/4, but **0/4 pivot-gate passes**; one variant falls for both
+policies and the other pivots turn too little. Mirroring the catch falls.
+Mirroring the pivot recovers at 0.25 ms with +29.00° final yaw, not yet qualified
+at multiple timesteps. No robust bilateral walking, maximum possible lift or
+physical transfer is claimed. No hardware/shared GPU/Nimbus/EY work was touched.
+
+Frozen configs: `configs/primitive-{fall,catch,pivot}-experimental.json`.
+Final report: `experiments/reports/motor-training-primitives-final-2026-11-19.json`.
+Video: `media/simulation/primitive-curriculum-2026-11-19.mp4`, real-time three-part
+comparison. Chart: same prefix with `-chart.png`. Rendering uses saved states,
+including the actual terminal contact pose; no simulated bounce is fabricated.
+An independent CLI replay matches every saved catch field/trace/state exactly.
+**89 tests pass**; log `experiments/reports/repository-tests-primitives-2026-11-19.txt`.
+Artifact receipt records media hashes, 566 frames at 25 fps (22.64 s), software
+versions, the exact replay check and 17 unchanged walking/motor files.
+
+Publication pending: GitHub connector verified `kadiru` and remote `main` at
+`ca2d46eb20eb41cca8f8a9eef9ad4aaa63bbc252`, matching the local parent. Mac HTTPS
+fetch/API and SSH connection attempts timed out. Changes are committed locally
+with the verified personal author/committer; no push or new GitHub CI run has
+completed. Resume by verifying local GitHub authentication and fetching before
+pushing the one local commit. Do not bypass the identity guard.
+
+Full method, phase counts, boundary map, comparisons and limitations:
+`docs/PRIMITIVE_CURRICULUM_2026-11-19.md`. Reproduce from this project directory:
+
+```sh
+.venv/bin/python experiments/run_primitive.py configs/primitive-catch-experimental.json --record --output experiments/generated/my-catch.json
+.venv/bin/python experiments/render_sway.py experiments/generated/my-catch.json --output experiments/generated/my-catch.mp4 --slowdown 1 --title 'CATCH AND RECOVER' --diagnostics --frame-path --follow-front
+```
+
+Next: add signed roll and roll-rate feedback, train both directions across
+initial phases/model variants, qualify recovery in angle/rate space, then
+alternate the edge pivots to advance the unloaded side. Restore the user's
+20° **full-cycle** heading criterion when composing a walking gait.
+
 ## November 19, 2026 — larger rocking demo recorded; continuous qualification fails
 
 User confirmed that 20° applies after every complete left/right cycle, relative

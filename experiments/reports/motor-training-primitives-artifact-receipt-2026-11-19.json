@@ -1,0 +1,96 @@
+{
+  "evidence": "uncalibrated_simulation",
+  "hardware_ready": false,
+  "completed": true,
+  "python": "3.9.6",
+  "mujoco": "3.3.7",
+  "numpy": "2.0.2",
+  "matplotlib": "3.9.4",
+  "upstream_commit": "a9a2a42adcc1abc7d9c90d390889bbebf930c96c",
+  "unchanged_from_parent": [
+    "src/reachy_locomotion/sway.py",
+    "src/reachy_locomotion/motors.py",
+    "configs/motors-speed-trained.json",
+    "configs/sway-progress-conservative.json",
+    "configs/sway-cad-proxy.json",
+    "configs/sway-candidate.json",
+    "configs/sway-heading-trained.json",
+    "configs/sway-rocking-experimental.json",
+    "configs/sway-faster-trained.json",
+    "configs/sway-trained.json",
+    "configs/sway-speed-trained.json",
+    "configs/sway-progress-fast.json",
+    "configs/heading-speed-trained.json",
+    "configs/heading-sensor-assumed.json",
+    "configs/heading-rocking-experimental.json",
+    "configs/heading-faster-trained.json",
+    "configs/heading-trained.json"
+  ],
+  "tests": {
+    "count": 89,
+    "result": "passed"
+  },
+  "independent_cli_replay_exact_match": true,
+  "visual_review": [
+    "fall terminal contact",
+    "catch near peak lean",
+    "pivot peak lean",
+    "catch settled finish",
+    "pivot settled finish",
+    "trajectory and recovery-map chart"
+  ],
+  "video": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1280,
+        "height": 580,
+        "r_frame_rate": "25/1",
+        "nb_frames": "566"
+      }
+    ],
+    "format": {
+      "duration": "22.640000"
+    }
+  },
+  "video_chapters_s": {
+    "fall": [
+      0,
+      6.56
+    ],
+    "catch": [
+      6.56,
+      14.6
+    ],
+    "pivot": [
+      14.6,
+      22.64
+    ]
+  },
+  "hashes": {
+    "media/simulation/primitive-curriculum-2026-11-19.png": "cd110b0f4d67d8920c563c9588571c1ebc6156fbaa3e5ffff5149999d7988a9d",
+    "media/simulation/primitive-curriculum-2026-11-19.mp4": "d5d0cebbac42a365af544a35afd8e748f24e143ec8f0f1971b80b1d4df771547",
+    "media/simulation/primitive-curriculum-2026-11-19-chart.png": "97e67123f36061bb43b255befc18584c56a86e2fe8eca37c6e521161bd9d8d4b",
+    "configs/primitive-fall-experimental.json": "502b52b22d6b9bd4e9a4c5f64dbfceb9353c51b05d1e61e23695125f1f891e3c",
+    "configs/primitive-catch-experimental.json": "8ad0c68d06984b44488c84d723135f466a88d8e9159fbf657abe6f0836cd848c",
+    "configs/primitive-pivot-experimental.json": "d96e9903d4b295c921edf2fc3135c311d09e184b90c2c52bac5656f161de09c4",
+    "src/reachy_locomotion/primitives.py": "527ba75b7d7759b3186ce1d3c40d94a292daafe48f0ae1a307941d2e06921c29",
+    "experiments/render_sway.py": "81f7b85bf5c62e336408a288a66476ac96cab67a763391bf796a8f24c5120df5",
+    "experiments/plot_primitives.py": "c870de7e4dd8c7d84be0fbe9a91464a04adbb83387d56d28d7e64b2f3570ea48",
+    "experiments/run_primitive.py": "f8664fd4d10c6b8e3efb2f0a36346c576e89cf976a3ed32169f15dab7f03d55e",
+    "experiments/reports/motor-training-primitives-final-2026-11-19.json": "6625d9d8a60f3e7d2a0ca6af7a1ed853df66e45df7ef1201d962b246eb26f1fa",
+    "experiments/reports/repository-tests-primitives-2026-11-19.txt": "a43dc2c02bf398d2820d97804dc14adf68568c1288c7b6ddda6fc704b516b10b"
+  },
+  "simulation_trials_in_search_and_qualification_reports": 1275,
+  "final_frozen_recordings": 3,
+  "post_freeze_checks": 8,
+  "fresh_model_trials": 8,
+  "notes": [
+    "Counts exclude manual probes, unit tests, CLI replay and serialization retry.",
+    "No hardware or shared GPU used.",
+    "Waist held at constant zero target, not welded or unpowered.",
+    "Fresh-model pivot gate: 0/4; both policies fall on one variant.",
+    "No walking policy composed from these primitives yet."
+  ]
+}

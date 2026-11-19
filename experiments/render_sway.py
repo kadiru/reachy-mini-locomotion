@@ -26,6 +26,7 @@ def main():
     if output.exists():
         parser.error("Choose a new output file")
     result = json.loads(Path(args.report).read_text())
+    primitive_trial = result.get('primitive_trial',False)
     xml, _ = scene_xml(args.upstream, result["config"])
     root = ET.fromstring(xml)
     world = root.find("worldbody")
@@ -59,6 +60,9 @@ def main():
         if args.frame_path:
             cam.lookat[:] = [midpoint[0],midpoint[1],.13]
             cam.distance = .65+.6*path_span
+        if primitive_trial:
+            cam.lookat[2] = .16
+            cam.distance = .78+.6*path_span
         cam.azimuth = azimuth
         cam.elevation = -15
         cameras.append(cam)
@@ -82,7 +86,7 @@ def main():
     initial_heading = None
     last_cycle_heading = 0.
     completed_cycle_rule = result.get('evaluation_heading_rule') == 'completed_cycle'
-    cycle_frames = round(50/result['actual_frequency_hz'])
+    cycle_frames = round(50/result['actual_frequency_hz']) if completed_cycle_rule else 1
     try:
         for frame_index, row in enumerate(result["trajectory"]):
             if completed_cycle_rule and frame_index and frame_index % cycle_frames == 0:
@@ -98,13 +102,13 @@ def main():
             head_rate = 0 if previous_head_yaw is None else ((head_yaw-previous_head_yaw+np.pi)%(2*np.pi)-np.pi)/.02
             slowing = previous_head_rate is not None and abs(head_rate)>.3 and abs(head_rate)<abs(previous_head_rate)-.02
             previous_head_yaw, previous_head_rate = head_yaw, head_rate
-            if frame_index % 2:
+            if frame_index % 2 and not (primitive_trial and frame_index==len(result['trajectory'])-1):
                 continue
             canvas = Image.new("RGB", (1280, 580), (15, 22, 32))
             for index, camera in enumerate(cameras):
                 if index == 0 and args.follow_front:
-                    camera.lookat[:] = [data.xpos[base, 0], data.xpos[base, 1], .13]
-                    camera.distance = .62
+                    camera.lookat[:] = [data.xpos[base, 0], data.xpos[base, 1], .16 if primitive_trial else .13]
+                    camera.distance = .75 if primitive_trial else .62
                 renderer.update_scene(data, camera=camera)
                 canvas.paste(Image.fromarray(renderer.render()), (index*640, 52))
             draw = ImageDraw.Draw(canvas)
@@ -124,12 +128,16 @@ def main():
                 if completed_cycle_rule:
                     turn = np.degrees(row['heading_from_startup_rad'])
                     label = f"t = {row['time_s']:.2f} s   |   forward = {distance:+.1f} mm   |   torso yaw = {turn:+.1f} deg"
+                if primitive_trial:
+                    drift=1000*float(np.linalg.norm(data.xpos[base,:2]-start[:2]))
+                    turn=np.degrees(row['heading_from_startup_rad'])
+                    label=f"t = {row['time_s']:.2f} s   |   center shift = {drift:.1f} mm   |   base yaw = {turn:+.1f} deg"
             if not row["measuring"]:
                 label = f"t = {row['time_s']:.2f} s   |   startup / warm-up (excluded from displacement)"
             draw.text((20, 544), label, font=font, fill="white")
             draw.text((870, 544), "5 cm grid  |  no external pushes", font=font, fill=(110,210,235))
             if args.diagnostics:
-                forces = row.get('foot_side_normal_forces_n_right_left', [0,0])
+                forces = row.get('foot_side_normal_forces_n_right_left') or [0,0]
                 support = 'BOTH SIDES'
                 if forces[0] < .1 and forces[1] > .1:
                     support = 'LEFT EDGE'
@@ -137,11 +145,21 @@ def main():
                     support = 'RIGHT EDGE'
                 elif sum(forces) < .1:
                     support = 'UNLOADED'
+                if row.get('terminal_event'):
+                    support='BODY CONTACT' if row['terminal_event']=='nonfoot_floor_contact' else 'TERMINATED'
                 draw.rectangle((12,92,335,148), fill=(15,22,32))
                 draw.text((20,96), 'Support: '+support, font=font, fill=(110,210,235))
                 draw.text((20,122), 'Head yaw: '+('SLOWING' if slowing else 'SWING / HOLD'), font=font,
                           fill=(255,195,100) if slowing else 'white')
-                if completed_cycle_rule:
+                if primitive_trial:
+                    draw.rectangle((12,118,335,148),fill=(15,22,32))
+                    draw.text((20,122),'Stage: '+row['primitive_stage'].upper(),font=font,fill=(255,195,100))
+                    draw.rectangle((900,92,1268,177),fill=(15,22,32))
+                    waist='OFF' if result['waist_mode']=='off' else 'FIXED TARGET (0 deg)'
+                    draw.text((908,96),'Waist: '+waist,font=font,fill=(110,210,235))
+                    draw.text((908,122),f"Roll: {np.degrees(row['foot_rpy_rad'][0]):+.1f} deg",font=font,fill='white')
+                    draw.text((908,148),f"Edge height difference: {row['side_height_difference_mm']:.1f} mm",font=font,fill='white')
+                elif completed_cycle_rule:
                     draw.rectangle((925,92,1268,149), fill=(15,22,32))
                     draw.text((933,96), f"Last cycle: {last_cycle_heading:+.1f} / +/-20 deg", font=font, fill=(110,210,235))
                     draw.text((933,122), f"Body roll: {np.degrees(row['foot_rpy_rad'][0]):+.1f} deg", font=font, fill='white')
