@@ -1,5 +1,36 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 19, 2026 — personal clones resynchronized without losing work
+
+User confirmed the scope is this Mac and `kfuUbuntu`, with Nimbus/EY excluded.
+Resynchronized 11 personal Git databases / 15 worktrees: six databases on the Mac
+and five on Ubuntu, including four found in Ubuntu's mounted older home directory.
+Six branches advanced by fast-forward, with no new merge commits or history
+rewrite. Two Sircus detached review checkouts keep their corrected pinned commits.
+The local-only Neuralink visualization branch and its work remain unchanged;
+its inactive master branch now matches the current remote.
+
+Verified all 24 original dirty files byte-for-byte and compared staged and
+unstaged binary patches before and after. This includes the dirty Ubuntu Emcee
+Android files while its main branch advanced six commits in disjoint paths.
+All active local branches, tags and remote-tracking histories are free of the
+retired personal attribution; no stashes were present. Each clone has a verified
+bundle, prior config/index, patches and dirty-file copies in
+`.git/identity-repair/20261119-clone-resync/`.
+
+Mac identity guards remain active. The five Ubuntu clones now have explicit
+personal identity settings and repository-scoped guards that preserve existing
+hooks; author and committer override rejection was tested without making commits.
+Ubuntu has no GitHub CLI login or configured GitHub SSH trust/authentication, so
+minimal verified personal-history bundles were transferred from the Mac instead.
+Its guards stop future pushes until authentication can be verified as `kadiru`.
+Shared authentication settings and Nimbus/EY configs/code were left untouched.
+No training job, container or physical robot runtime was changed.
+
+Report: `experiments/reports/personal-clone-resync-2026-11-19.json`.
+Projects without remotes retained their existing work; none was newly published.
+
+
 ## November 19, 2026 — personal repository identity audit completed
 
 Audited all 31 `kadiru`-owned GitHub repositories plus three other accessible

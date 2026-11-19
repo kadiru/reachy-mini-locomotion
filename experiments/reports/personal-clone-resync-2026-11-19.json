@@ -1,0 +1,361 @@
+{
+  "date": "2026-11-19",
+  "scope": "Personal clones on this Mac and kfuUbuntu, as confirmed by the user; Nimbus/EY excluded.",
+  "git_databases": 11,
+  "worktrees": 15,
+  "mac_git_databases": 6,
+  "ubuntu_git_databases": 5,
+  "branches_fast_forwarded": 6,
+  "original_dirty_files_verified": 24,
+  "staged_and_unstaged_patches_preserved": true,
+  "retired_attribution_in_active_branches_tags_remote_tracking": 0,
+  "stashes_found": 0,
+  "no_new_merge_commits": true,
+  "no_history_rewritten_this_pass": true,
+  "backups": "Verified bundles, prior config, original index, binary staged/unstaged patches and dirty-file copies are saved inside each clone at .git/identity-repair/20261119-clone-resync/.",
+  "local_only_work": "NeuralinkPCClustering visualization branch and its uncommitted files remain unchanged; its inactive master branch was fast-forwarded. Two corrected Sircus detached review checkouts retain their pinned commits. Local projects without remotes were not reset or published.",
+  "identity_guards": "Mac guards retained. Five Ubuntu clones received repository-local kadiru name/email and guards preserving existing hooks. Both author and committer overrides were tested without making commits. Entire proposed push ancestry is checked for the retired identity.",
+  "ubuntu_transfer": "Two minimal update bundles, verified against current GitHub refs through the Mac kadiru connection, transferred personal history without transferring credentials or modifying shared authentication settings.",
+  "ubuntu_push_authentication": "GitHub CLI login is absent and GitHub SSH trust/authentication is not configured. Guards stop pushes until kadiru authentication can be verified. Resync itself is complete.",
+  "excluded_work": "Nimbus/EY repositories and configs were not modified. No Nimbus/EY code, training jobs, containers, or robot runtimes were changed.",
+  "details": [
+    {
+      "root": "/Users/kadir/humanoid-sitting-control",
+      "backup": "/Users/kadir/humanoid-sitting-control/.git/identity-repair/20261119-clone-resync",
+      "worktrees": [
+        {
+          "path": "/Users/kadir/humanoid-sitting-control",
+          "original_dirty_files_verified": 8,
+          "staged_and_unstaged_patches_unchanged": true,
+          "detached_review_preserved": false
+        }
+      ],
+      "actions": [
+        {
+          "worktree": "/Users/kadir/humanoid-sitting-control",
+          "branch": "refs/heads/main",
+          "upstream": "refs/remotes/origin/main",
+          "before": "7f529a82c7e3c8b168e712f8b3c481567d70b749",
+          "target": "7f529a82c7e3c8b168e712f8b3c481567d70b749",
+          "ahead": 0,
+          "behind": 0,
+          "action": "already synchronized; working files and index preserved"
+        }
+      ],
+      "retired_active_attributions": 0,
+      "identity_verified": true
+    },
+    {
+      "root": "/Users/kadir/linkedin/projects/aiworker-pouring",
+      "backup": "/Users/kadir/linkedin/projects/aiworker-pouring/.git/identity-repair/20261119-clone-resync",
+      "worktrees": [
+        {
+          "path": "/Users/kadir/linkedin/projects/aiworker-pouring",
+          "original_dirty_files_verified": 0,
+          "staged_and_unstaged_patches_unchanged": true,
+          "detached_review_preserved": false
+        }
+      ],
+      "actions": [
+        {
+          "worktree": "/Users/kadir/linkedin/projects/aiworker-pouring",
+          "branch": "refs/heads/main",
+          "upstream": "refs/remotes/origin/main",
+          "before": "22b45c02035fc63df1dc8b163eeb5c24c2c85a04",
+          "target": "22b45c02035fc63df1dc8b163eeb5c24c2c85a04",
+          "ahead": 0,
+          "behind": 0,
+          "action": "already synchronized; working files and index preserved"
+        }
+      ],
+      "retired_active_attributions": 0,
+      "identity_verified": true
+    },
+    {
+      "root": "/Users/kadir/linkedin/projects/reachy-mini-locomotion",
+      "backup": "/Users/kadir/linkedin/projects/reachy-mini-locomotion/.git/identity-repair/20261119-clone-resync",
+      "worktrees": [
+        {
+          "path": "/Users/kadir/linkedin/projects/reachy-mini-locomotion",
+          "original_dirty_files_verified": 0,
+          "staged_and_unstaged_patches_unchanged": true,
+          "detached_review_preserved": false
+        }
+      ],
+      "actions": [
+        {
+          "worktree": "/Users/kadir/linkedin/projects/reachy-mini-locomotion",
+          "branch": "refs/heads/main",
+          "upstream": "refs/remotes/origin/main",
+          "before": "75c67477282815557e534f8ece3aaaed5a8733ea",
+          "target": "75c67477282815557e534f8ece3aaaed5a8733ea",
+          "ahead": 0,
+          "behind": 0,
+          "action": "already synchronized; working files and index preserved"
+        }
+      ],
+      "retired_active_attributions": 0,
+      "identity_verified": true
+    },
+    {
+      "root": "/Users/kadir/linkedin/projects/reachy-mini-locomotion/experiments/upstream-emcee",
+      "backup": "/Users/kadir/linkedin/projects/reachy-mini-locomotion/experiments/upstream-emcee/.git/identity-repair/20261119-clone-resync",
+      "worktrees": [
+        {
+          "path": "/Users/kadir/linkedin/projects/reachy-mini-locomotion/experiments/upstream-emcee",
+          "original_dirty_files_verified": 0,
+          "staged_and_unstaged_patches_unchanged": true,
+          "detached_review_preserved": false
+        }
+      ],
+      "actions": [
+        {
+          "worktree": "/Users/kadir/linkedin/projects/reachy-mini-locomotion/experiments/upstream-emcee",
+          "branch": "refs/heads/main",
+          "upstream": "refs/remotes/origin/main",
+          "before": "76ab2fdef8e872d36c0bfd0c866570e512a2aaad",
+          "target": "73ff32d02d9c2e5192b4e4cf00f317d884962b43",
+          "ahead": 0,
+          "behind": 2,
+          "action": "fast-forwarded to corrected upstream"
+        }
+      ],
+      "retired_active_attributions": 0,
+      "identity_verified": true
+    },
+    {
+      "root": "/Users/kadir/linkedin/projects/roboturk/upstream",
+      "backup": "/Users/kadir/linkedin/projects/roboturk/upstream/.git/identity-repair/20261119-clone-resync",
+      "worktrees": [
+        {
+          "path": "/Users/kadir/linkedin/projects/roboturk/upstream",
+          "original_dirty_files_verified": 0,
+          "staged_and_unstaged_patches_unchanged": true,
+          "detached_review_preserved": false
+        }
+      ],
+      "actions": [
+        {
+          "worktree": "/Users/kadir/linkedin/projects/roboturk/upstream",
+          "branch": "refs/heads/master",
+          "upstream": "refs/remotes/origin/master",
+          "before": "841298f3daa5c723a183c29ea0d8617c22d66c8a",
+          "target": "841298f3daa5c723a183c29ea0d8617c22d66c8a",
+          "ahead": 0,
+          "behind": 0,
+          "action": "already synchronized; working files and index preserved"
+        }
+      ],
+      "retired_active_attributions": 0,
+      "identity_verified": true
+    },
+    {
+      "root": "/Users/kadir/linkedin/projects/viam-ball-hackathon/sircus",
+      "backup": "/Users/kadir/linkedin/projects/viam-ball-hackathon/sircus/.git/identity-repair/20261119-clone-resync",
+      "worktrees": [
+        {
+          "path": "/Users/kadir/linkedin/projects/viam-ball-hackathon/sircus",
+          "original_dirty_files_verified": 0,
+          "staged_and_unstaged_patches_unchanged": true,
+          "detached_review_preserved": false
+        },
+        {
+          "path": "/Users/kadir/linkedin/projects/viam-ball-hackathon/sircus-audio-review",
+          "original_dirty_files_verified": 0,
+          "staged_and_unstaged_patches_unchanged": true,
+          "detached_review_preserved": true
+        },
+        {
+          "path": "/Users/kadir/linkedin/projects/viam-ball-hackathon/sircus-dashboard-audio-review",
+          "original_dirty_files_verified": 0,
+          "staged_and_unstaged_patches_unchanged": true,
+          "detached_review_preserved": true
+        },
+        {
+          "path": "/Users/kadir/linkedin/projects/viam-ball-hackathon/sircus-guided-training",
+          "original_dirty_files_verified": 0,
+          "staged_and_unstaged_patches_unchanged": true,
+          "detached_review_preserved": false
+        },
+        {
+          "path": "/Users/kadir/linkedin/projects/viam-ball-hackathon/sircus-main",
+          "original_dirty_files_verified": 0,
+          "staged_and_unstaged_patches_unchanged": true,
+          "detached_review_preserved": false
+        }
+      ],
+      "actions": [
+        {
+          "worktree": "/Users/kadir/linkedin/projects/viam-ball-hackathon/sircus",
+          "branch": "refs/heads/codex/mac-mini-oddball-sfx",
+          "upstream": "refs/remotes/origin/codex/mac-mini-oddball-sfx",
+          "before": "146a3e071121de05680a47a76f81a6cb3f86abf2",
+          "target": "f2be6f865369d3e0951b1c7aca86b22d0bdda4ec",
+          "ahead": 0,
+          "behind": 6,
+          "action": "fast-forwarded to corrected upstream"
+        },
+        {
+          "worktree": "/Users/kadir/linkedin/projects/viam-ball-hackathon/sircus-audio-review",
+          "action": "preserved corrected detached review commit",
+          "head": "f2be6f865369d3e0951b1c7aca86b22d0bdda4ec"
+        },
+        {
+          "worktree": "/Users/kadir/linkedin/projects/viam-ball-hackathon/sircus-dashboard-audio-review",
+          "action": "preserved corrected detached review commit",
+          "head": "c1cfb04463d5b97a8376d387852b3fdb94b148b5"
+        },
+        {
+          "worktree": "/Users/kadir/linkedin/projects/viam-ball-hackathon/sircus-guided-training",
+          "branch": "refs/heads/codex/mac-mini-guided-inspection",
+          "upstream": "refs/remotes/origin/codex/macbook-guided-training",
+          "before": "f4eece5c84fae5e3945a11205bb842d94991bd29",
+          "target": "fdfb86c823cc22df73c0fd89be325466e215e1ab",
+          "ahead": 0,
+          "behind": 1,
+          "action": "fast-forwarded to corrected upstream"
+        },
+        {
+          "worktree": "/Users/kadir/linkedin/projects/viam-ball-hackathon/sircus-main",
+          "branch": "refs/heads/main",
+          "upstream": "refs/remotes/origin/main",
+          "before": "374f66a5d0fac72d1984fb5afa4957316ae25a32",
+          "target": "6664a855632de8a26f938552c1c37853a9d5e762",
+          "ahead": 0,
+          "behind": 1,
+          "action": "fast-forwarded to corrected upstream"
+        }
+      ],
+      "retired_active_attributions": 0,
+      "identity_verified": true
+    },
+    {
+      "root": "/home/kadir/code/irona",
+      "backup": "/home/kadir/code/irona/.git/identity-repair/20261119-clone-resync",
+      "worktrees": [
+        {
+          "path": "/home/kadir/code/irona",
+          "original_dirty_files_verified": 0,
+          "staged_and_unstaged_patches_unchanged": true,
+          "detached_review_preserved": false
+        }
+      ],
+      "actions": [
+        {
+          "worktree": "/home/kadir/code/irona",
+          "branch": "refs/heads/main",
+          "before": "cb511f6d490db9999614e873724fc0517fd92255",
+          "target": "cb511f6d490db9999614e873724fc0517fd92255",
+          "ahead": 0,
+          "behind": 0,
+          "action": "already synchronized; existing work preserved"
+        }
+      ],
+      "retired_active_attributions": 0,
+      "identity_verified": true
+    },
+    {
+      "root": "/data/home/kadir/code/ws_webots",
+      "backup": "/data/home/kadir/code/ws_webots/.git/identity-repair/20261119-clone-resync",
+      "worktrees": [
+        {
+          "path": "/data/home/kadir/code/ws_webots",
+          "original_dirty_files_verified": 1,
+          "staged_and_unstaged_patches_unchanged": true,
+          "detached_review_preserved": false
+        }
+      ],
+      "actions": [
+        {
+          "worktree": "/data/home/kadir/code/ws_webots",
+          "branch": "refs/heads/main",
+          "before": "48a66c72c1bb53d869ca9127358d511d7bd225b0",
+          "target": "48a66c72c1bb53d869ca9127358d511d7bd225b0",
+          "ahead": 0,
+          "behind": 0,
+          "action": "already synchronized; existing work preserved"
+        }
+      ],
+      "retired_active_attributions": 0,
+      "identity_verified": true
+    },
+    {
+      "root": "/data/home/kadir/CLionProjects/irona-the-bot",
+      "backup": "/data/home/kadir/CLionProjects/irona-the-bot/.git/identity-repair/20261119-clone-resync",
+      "worktrees": [
+        {
+          "path": "/data/home/kadir/CLionProjects/irona-the-bot",
+          "original_dirty_files_verified": 5,
+          "staged_and_unstaged_patches_unchanged": true,
+          "detached_review_preserved": false
+        }
+      ],
+      "actions": [
+        {
+          "worktree": "/data/home/kadir/CLionProjects/irona-the-bot",
+          "branch": "refs/heads/main",
+          "before": "24e072b76a0f994dc7fec5ef3030a502b1203a10",
+          "target": "24e072b76a0f994dc7fec5ef3030a502b1203a10",
+          "ahead": 0,
+          "behind": 0,
+          "action": "already synchronized; existing work preserved"
+        }
+      ],
+      "retired_active_attributions": 0,
+      "identity_verified": true
+    },
+    {
+      "root": "/data/home/kadir/CLionProjects/NeuralinkPCClustering",
+      "backup": "/data/home/kadir/CLionProjects/NeuralinkPCClustering/.git/identity-repair/20261119-clone-resync",
+      "worktrees": [
+        {
+          "path": "/data/home/kadir/CLionProjects/NeuralinkPCClustering",
+          "original_dirty_files_verified": 6,
+          "staged_and_unstaged_patches_unchanged": true,
+          "detached_review_preserved": false
+        }
+      ],
+      "actions": [
+        {
+          "worktree": "/data/home/kadir/CLionProjects/NeuralinkPCClustering",
+          "branch": "refs/heads/visualization",
+          "action": "preserved local-only branch and uncommitted work",
+          "head": "7ac46ad6f55653290252000917083a72f0d9a461"
+        },
+        {
+          "branch": "refs/heads/master",
+          "before": "69222a2c763d5a8919c75a94debaf9ee104f3f43",
+          "target": "3d16dd5b74abc6d4fad2c293e2857134ffcfdd35",
+          "action": "fast-forwarded inactive branch; no working files touched"
+        }
+      ],
+      "retired_active_attributions": 0,
+      "identity_verified": true
+    },
+    {
+      "root": "/data/home/kadir/CLionProjects/Emcee",
+      "backup": "/data/home/kadir/CLionProjects/Emcee/.git/identity-repair/20261119-clone-resync",
+      "worktrees": [
+        {
+          "path": "/data/home/kadir/CLionProjects/Emcee",
+          "original_dirty_files_verified": 4,
+          "staged_and_unstaged_patches_unchanged": true,
+          "detached_review_preserved": false
+        }
+      ],
+      "actions": [
+        {
+          "worktree": "/data/home/kadir/CLionProjects/Emcee",
+          "branch": "refs/heads/main",
+          "before": "450b57692ab1cb0e545e3a3cbf3f70ad901c1223",
+          "target": "73ff32d02d9c2e5192b4e4cf00f317d884962b43",
+          "ahead": 0,
+          "behind": 6,
+          "action": "fast-forwarded; original dirty file bytes and staged/unstaged patches preserved"
+        }
+      ],
+      "retired_active_attributions": 0,
+      "identity_verified": true
+    }
+  ]
+}
