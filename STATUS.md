@@ -1,5 +1,33 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 19, 2026 — corrected GitHub attribution to kadiru
+
+User requires all future authoring/committing/pushing through `kadiru`, never
+`KineticUtopia`. The incorrect global Git identity was corrected to `Kadir Uyanik
+<717445+kadiru@users.noreply.github.com>`, with explicit local identity settings,
+`user.useConfigOnly`, and GitHub authentication through the active `kadiru` account.
+The preference is also saved in the global Codex instructions. Both requested
+repositories have pre-commit/pre-push guards that reject the retired identity;
+pushes additionally require GitHub authentication as `kadiru`.
+
+Rewrote the eight prior Reachy commits, preserving their trees, messages, dates
+and topology. Latest replacement: `1623eca9a055ff6d44b31a86cebd8cdc219a594b`.
+The user also explicitly requested correction of the humanoid repository shown
+in their screenshot: 53 misattributed main-branch commits plus 773 on its saved-
+history branch were corrected; its existing correct author/committer metadata was
+preserved. Its working files and staged contents were verified unchanged.
+No robot, GPU job, or project implementation was changed for this repair.
+
+Published with exact force-with-lease checks (the two humanoid branches together
+atomically). GitHub API verification confirms all published authors/committers
+resolve to `kadiru`. Verified local bundles, prior configs, dirty-file snapshots,
+old/new commit mappings and verification receipts are retained privately under
+`.git/identity-repair/20261119-033149/` in each repository. Commit hashes changed;
+other clones must resynchronize with the rewritten history rather than merging
+the old, misattributed history back. Identity guards were tested for normal
+commits, explicit author overrides, and attempted pushes of bad-identity history.
+
+
 ## November 19, 2026 — heading feedback trained; all-pass stress target unmet
 
 Added bounded head-roll/yaw/timing corrections driven by a simulated heading
