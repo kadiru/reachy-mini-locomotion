@@ -1,0 +1,427 @@
+{
+  "evidence": "uncalibrated_simulation",
+  "hardware_ready": false,
+  "counts": {
+    "candidate_evaluations": 624,
+    "training_rollouts": 1200,
+    "invalid_training_rollouts": 78,
+    "development_shortlist_rollouts": 60,
+    "long_development_rollouts": 56,
+    "conservative_evaluation_rollouts": 42,
+    "fast_12s_validation_rollouts": 48,
+    "fast_20s_validation_rollouts": 8,
+    "fast_evaluation_rollouts": 42,
+    "ablation_rollouts": 8
+  },
+  "selected_for": "fast nominal progress with two-timestep long-run heading/drift limits; not stress robustness",
+  "passed_nominal_20s": true,
+  "frozen_policy": {
+    "frequency_hz": 1.8716393667931681,
+    "roll_deg": 38.622996842521985,
+    "yaw_deg": 26.047505833961836,
+    "yaw_phase_deg": 93.30670400108693,
+    "pitch_bias_deg": 9.625640669053023,
+    "x_mm": -12.382977257323425,
+    "y_mm": 14.410962428851692,
+    "y_phase_deg": -129.31430078464584,
+    "z_mm": -0.6583014376029436,
+    "yaw_sharpness": 0.5423954544519042,
+    "roll_sharpness": 0.014458144873900205,
+    "yaw_bias_deg": -0.5199766907138954,
+    "roll_bias_deg": -0.8896019771267193
+  },
+  "matched_20p52s_demo": {
+    "fast": {
+      "forward_m": 0.36392685666079466,
+      "lateral_m": -0.027563576418402007,
+      "measured_seconds": 20.52,
+      "forward_m_per_s": 0.017735226932787264,
+      "heading_change_rad": -0.1354643327331,
+      "max_heading_excursion_rad": 0.1575841445520898,
+      "max_heading_from_startup_deg": 11.516265618464656,
+      "max_foot_tilt_deg": 3.538169159189302,
+      "max_side_rim_clearance_m": 0.005899604648861615,
+      "peak_motor_torque_nm": [
+        0.22669120121331096,
+        0.29199902340666983,
+        0.3968452547411397,
+        0.3935867155693066,
+        0.40548212026025954,
+        0.39154358702429,
+        0.3435586113941018,
+        0.009998120010595888,
+        0.010967603559479766
+      ],
+      "rms_motor_torque_nm": [
+        0.10970807769023648,
+        0.10584494718935582,
+        0.1887310294086801,
+        0.1704530606833091,
+        0.17471690353639943,
+        0.1888136779363472,
+        0.10067933170196999,
+        0.004966514010233822,
+        0.005690418414882353
+      ],
+      "peak_motor_velocity_rad_s": [
+        1.6951774486611293,
+        4.442913632248442,
+        5.962396087403234,
+        6.015352738601744,
+        5.7709195969556015,
+        5.8732397587344325,
+        4.6598120160796395,
+        1.0274333618686626,
+        0.9858304077539202
+      ],
+      "any_motor_torque_saturated_fraction": 0.0,
+      "actual_head_rpy_min_deg": [
+        -31.42620034138451,
+        14.71330280205994,
+        -49.59385369623096
+      ],
+      "actual_head_rpy_max_deg": [
+        28.98635584334243,
+        28.611643622163065,
+        53.51027972377668
+      ]
+    },
+    "previous_smooth": {
+      "forward_m": 0.05089570255513058,
+      "lateral_m": -0.00875998822272949,
+      "measured_seconds": 20.52,
+      "forward_m_per_s": 0.0024802973954742,
+      "heading_change_rad": -0.09472180781795947,
+      "max_heading_excursion_rad": 0.09472180781796258,
+      "max_heading_from_startup_deg": 5.581708465014699,
+      "max_foot_tilt_deg": 0.8081623442912089,
+      "max_side_rim_clearance_m": 0.0011883337991425678,
+      "peak_motor_torque_nm": [
+        0.06950224379710512,
+        0.12297917098389628,
+        0.2879353939635829,
+        0.1319146488198601,
+        0.1366511583466644,
+        0.27632625820380385,
+        0.12134015041490685,
+        0.00783853841902025,
+        0.0056962974977151845
+      ],
+      "rms_motor_torque_nm": [
+        0.046917855500642563,
+        0.05609435328152943,
+        0.11529271957835992,
+        0.07484620923484349,
+        0.0758073360376591,
+        0.11882158380971317,
+        0.05716092278607327,
+        0.0028920545305028316,
+        0.0027769926013601477
+      ],
+      "peak_motor_velocity_rad_s": [
+        0.8269788194566007,
+        2.362642099744169,
+        6.729804292358049,
+        3.485060152694934,
+        3.429514526840762,
+        6.612499839665981,
+        2.4089299870890737,
+        0.8775319692074037,
+        0.7351150901036975
+      ],
+      "any_motor_torque_saturated_fraction": 0.0,
+      "actual_head_rpy_min_deg": [
+        -33.908999482029444,
+        5.239148245299367,
+        -32.30241897833144
+      ],
+      "actual_head_rpy_max_deg": [
+        35.559881669839115,
+        13.239654251146156,
+        35.208346353110485
+      ]
+    }
+  },
+  "stress": {
+    "selected": {
+      "cases": 12,
+      "valid": 12,
+      "positive_forward_over_1mm": 12,
+      "passed": 0,
+      "speed_mm_s_range": [
+        4.289407274634463,
+        17.697631204500837
+      ],
+      "max_heading_deg_range": [
+        12.611549576330475,
+        110.06898595166611
+      ]
+    },
+    "previous_smooth": {
+      "cases": 12,
+      "valid": 12,
+      "positive_forward_over_1mm": 12,
+      "passed": 10,
+      "speed_mm_s_range": [
+        2.2097928160077713,
+        9.817760412514836
+      ],
+      "max_heading_deg_range": [
+        1.3135776148410572,
+        15.264704340104796
+      ]
+    },
+    "previous_fast": {
+      "cases": 12,
+      "valid": 12,
+      "positive_forward_over_1mm": 11,
+      "passed": 0,
+      "speed_mm_s_range": [
+        -15.748608254297299,
+        11.355788324874784
+      ],
+      "max_heading_deg_range": [
+        10.957652409110075,
+        205.99138931634445
+      ]
+    }
+  },
+  "ablations": [
+    {
+      "name": "no_yaw_stroke",
+      "speed_mm_s": [
+        4.141201135228189,
+        4.047181238742731
+      ]
+    },
+    {
+      "name": "no_lateral_stroke",
+      "speed_mm_s": [
+        0.001456457324328705,
+        0.0007581855858975074
+      ]
+    },
+    {
+      "name": "sine_without_dwell",
+      "speed_mm_s": [
+        17.919827888772094,
+        17.33941554953621
+      ]
+    },
+    {
+      "name": "yaw_phase_plus_90",
+      "speed_mm_s": [
+        3.998603270709843,
+        3.9649198247176267
+      ]
+    }
+  ],
+  "matched_speed_ratio": 7.150443719026897,
+  "stroke_analysis": {
+    "evidence": "uncalibrated_simulation",
+    "interpretation": "kinematic slowing plus contact correlation, not proof of physical causation",
+    "head_momentum_reference": "head-site body subtree about its own COM, world axes; not total angular momentum about the foot",
+    "yaw_slowing_fraction": 0.49951314508276534,
+    "edge_support_fraction_at_50hz": 0.7614410905550146,
+    "fraction_of_slowing_samples_on_one_edge": 1.0,
+    "negative_net_head_motor_power_fraction": 0.05744888023369036,
+    "head_momentum_z_range_kg_m2_s": [
+      -0.010542307537798693,
+      0.010305780710970673
+    ],
+    "phase_bins": [
+      {
+        "phase_center_deg": 11.25,
+        "head_yaw_rate_rad_s": 5.491334698269121,
+        "head_momentum_z_kg_m2_s": 0.004814830687820792,
+        "right_left_normal_n": [
+          6.882199124356183,
+          10.260544986845797
+        ],
+        "slowing_fraction": 0.0,
+        "edge_fraction": 0.0,
+        "signed_head_motor_power_w": 1.7124220670991919
+      },
+      {
+        "phase_center_deg": 33.75,
+        "head_yaw_rate_rad_s": 9.380634032577241,
+        "head_momentum_z_kg_m2_s": 0.008825971045671614,
+        "right_left_normal_n": [
+          9.954741658980405,
+          3.3362067928400108
+        ],
+        "slowing_fraction": 0.0,
+        "edge_fraction": 0.40789473684210525,
+        "signed_head_motor_power_w": 2.0651332356353356
+      },
+      {
+        "phase_center_deg": 56.25,
+        "head_yaw_rate_rad_s": 11.159424387174347,
+        "head_momentum_z_kg_m2_s": 0.00999496445275195,
+        "right_left_normal_n": [
+          12.182839825509962,
+          1.2359210236370854
+        ],
+        "slowing_fraction": 0.5394736842105263,
+        "edge_fraction": 1.0,
+        "signed_head_motor_power_w": 0.7307600001446686
+      },
+      {
+        "phase_center_deg": 78.75,
+        "head_yaw_rate_rad_s": 9.047723358185848,
+        "head_momentum_z_kg_m2_s": 0.007041040029309264,
+        "right_left_normal_n": [
+          0.0,
+          19.291993556886027
+        ],
+        "slowing_fraction": 1.0,
+        "edge_fraction": 1.0,
+        "signed_head_motor_power_w": -0.590077306444696
+      },
+      {
+        "phase_center_deg": 101.25,
+        "head_yaw_rate_rad_s": 5.804407745562572,
+        "head_momentum_z_kg_m2_s": 0.0032603831352678685,
+        "right_left_normal_n": [
+          0.0,
+          14.633327816334102
+        ],
+        "slowing_fraction": 1.0,
+        "edge_fraction": 1.0,
+        "signed_head_motor_power_w": 0.4906579754526945
+      },
+      {
+        "phase_center_deg": 123.75,
+        "head_yaw_rate_rad_s": 3.379808297125944,
+        "head_momentum_z_kg_m2_s": 0.0027624887290569416,
+        "right_left_normal_n": [
+          0.0,
+          11.810583928925462
+        ],
+        "slowing_fraction": 1.0,
+        "edge_fraction": 1.0,
+        "signed_head_motor_power_w": 0.2071830464356226
+      },
+      {
+        "phase_center_deg": 146.25,
+        "head_yaw_rate_rad_s": 0.2079397292992291,
+        "head_momentum_z_kg_m2_s": 0.0006558482182969185,
+        "right_left_normal_n": [
+          0.38020524069349715,
+          12.264792045336685
+        ],
+        "slowing_fraction": 0.4473684210526316,
+        "edge_fraction": 1.0,
+        "signed_head_motor_power_w": 0.47520552690718504
+      },
+      {
+        "phase_center_deg": 168.75,
+        "head_yaw_rate_rad_s": -2.8510095992970723,
+        "head_momentum_z_kg_m2_s": -0.001506239840811982,
+        "right_left_normal_n": [
+          9.806829566560374,
+          6.0277723815180035
+        ],
+        "slowing_fraction": 0.0,
+        "edge_fraction": 0.8947368421052632,
+        "signed_head_motor_power_w": 0.39061511111592895
+      },
+      {
+        "phase_center_deg": 191.25,
+        "head_yaw_rate_rad_s": -6.44908666957611,
+        "head_momentum_z_kg_m2_s": -0.0059323696467721825,
+        "right_left_normal_n": [
+          9.147195055150632,
+          6.15783497217088
+        ],
+        "slowing_fraction": 0.0,
+        "edge_fraction": 0.0,
+        "signed_head_motor_power_w": 2.0460220765714787
+      },
+      {
+        "phase_center_deg": 213.75,
+        "head_yaw_rate_rad_s": -9.545490953372251,
+        "head_momentum_z_kg_m2_s": -0.008957739578184786,
+        "right_left_normal_n": [
+          4.812686429007003,
+          8.302545888860973
+        ],
+        "slowing_fraction": 0.0,
+        "edge_fraction": 0.02631578947368421,
+        "signed_head_motor_power_w": 2.1660647899088645
+      },
+      {
+        "phase_center_deg": 236.25,
+        "head_yaw_rate_rad_s": -11.38878244913183,
+        "head_momentum_z_kg_m2_s": -0.010112603923038756,
+        "right_left_normal_n": [
+          0.3565261549853505,
+          12.841392063215922
+        ],
+        "slowing_fraction": 0.5131578947368421,
+        "edge_fraction": 1.0,
+        "signed_head_motor_power_w": 1.008572794768961
+      },
+      {
+        "phase_center_deg": 258.75,
+        "head_yaw_rate_rad_s": -8.898165259688462,
+        "head_momentum_z_kg_m2_s": -0.007066097147052676,
+        "right_left_normal_n": [
+          17.477804726723637,
+          0.0
+        ],
+        "slowing_fraction": 1.0,
+        "edge_fraction": 1.0,
+        "signed_head_motor_power_w": 0.15409037680288548
+      },
+      {
+        "phase_center_deg": 281.25,
+        "head_yaw_rate_rad_s": -5.647500576625574,
+        "head_momentum_z_kg_m2_s": -0.003242848716244818,
+        "right_left_normal_n": [
+          14.064940938249169,
+          0.0
+        ],
+        "slowing_fraction": 1.0,
+        "edge_fraction": 1.0,
+        "signed_head_motor_power_w": 0.5488650938207439
+      },
+      {
+        "phase_center_deg": 303.75,
+        "head_yaw_rate_rad_s": -4.045021551824633,
+        "head_momentum_z_kg_m2_s": -0.0032275956944678953,
+        "right_left_normal_n": [
+          11.803839078690162,
+          0.0
+        ],
+        "slowing_fraction": 1.0,
+        "edge_fraction": 1.0,
+        "signed_head_motor_power_w": 0.2156068278002229
+      },
+      {
+        "phase_center_deg": 326.25,
+        "head_yaw_rate_rad_s": 0.1200071416053457,
+        "head_momentum_z_kg_m2_s": -0.0005016982294928012,
+        "right_left_normal_n": [
+          12.155963378520942,
+          0.455150990653862
+        ],
+        "slowing_fraction": 0.47368421052631576,
+        "edge_fraction": 1.0,
+        "signed_head_motor_power_w": 0.39623769235567713
+      },
+      {
+        "phase_center_deg": 348.75,
+        "head_yaw_rate_rad_s": 3.1002616817413613,
+        "head_momentum_z_kg_m2_s": 0.001686530444463008,
+        "right_left_normal_n": [
+          1.3632236910544195,
+          15.352363640181357
+        ],
+        "slowing_fraction": 0.0,
+        "edge_fraction": 0.7659574468085106,
+        "signed_head_motor_power_w": 0.38665938805303374
+      }
+    ]
+  }
+}

@@ -17,6 +17,9 @@ def main():
     parser.add_argument("--output", required=True)
     parser.add_argument("--upstream", default="experiments/upstream-reachy-mini")
     parser.add_argument("--slowdown", type=float, default=2)
+    parser.add_argument("--title", default="HEAD-DRIVEN SWAY")
+    parser.add_argument("--diagnostics", action="store_true", help="Show recorded support and yaw deceleration")
+    parser.add_argument("--frame-path", action="store_true", help="Use fixed cameras framing the entire saved path")
     args = parser.parse_args()
     output = Path(args.output)
     if output.exists():
@@ -41,11 +44,17 @@ def main():
     model = mujoco.MjModel.from_xml_string(ET.tostring(root, encoding="unicode"))
     data = mujoco.MjData(model)
     base = model.body(BASE).id
+    positions = np.array([row['foot_xyz_m'] for row in result['trajectory']])
+    midpoint = (positions.min(axis=0)+positions.max(axis=0))/2
+    path_span = float(np.max(np.ptp(positions[:,:2],axis=0)))
     cameras = []
     for azimuth in (190, 90):
         cam = mujoco.MjvCamera()
         cam.lookat[:] = [.06, 0, .13]
         cam.distance = .62
+        if args.frame_path:
+            cam.lookat[:] = [midpoint[0],midpoint[1],.13]
+            cam.distance = .65+.6*path_span
         cam.azimuth = azimuth
         cam.elevation = -15
         cameras.append(cam)
@@ -65,6 +74,8 @@ def main():
     start = None
     start_rotation = None
     images = []
+    previous_head_yaw = previous_head_rate = None
+    initial_heading = None
     try:
         for frame_index, row in enumerate(result["trajectory"]):
             data.qpos[:] = row["qpos"]
@@ -73,6 +84,11 @@ def main():
                 start = data.xpos[base].copy()
                 yaw = row["foot_rpy_rad"][2]
                 start_rotation = np.array([np.cos(yaw), np.sin(yaw), 0])
+                initial_heading = yaw
+            head_yaw = row["head_rpy_rad"][2]
+            head_rate = 0 if previous_head_yaw is None else ((head_yaw-previous_head_yaw+np.pi)%(2*np.pi)-np.pi)/.02
+            slowing = previous_head_rate is not None and abs(head_rate)>.3 and abs(head_rate)<abs(previous_head_rate)-.02
+            previous_head_yaw, previous_head_rate = head_yaw, head_rate
             if frame_index % 2:
                 continue
             canvas = Image.new("RGB", (1280, 580), (15, 22, 32))
@@ -80,17 +96,33 @@ def main():
                 renderer.update_scene(data, camera=camera)
                 canvas.paste(Image.fromarray(renderer.render()), (index*640, 52))
             draw = ImageDraw.Draw(canvas)
-            draw.text((20, 12), "HEAD-DRIVEN SWAY  |  UNCALIBRATED SIMULATION", font=big, fill="white")
+            draw.text((20, 12), args.title + "  |  UNCALIBRATED SIMULATION", font=big, fill="white")
             draw.text((1030, 16), f"{1/args.slowdown:g}x playback", font=font, fill=(110, 210, 235))
             draw.text((20, 65), "Front view", font=font, fill="white")
             draw.text((660, 65), "Side view  |  green arrow = forward (+X)", font=font, fill="white")
             distance = float((data.xpos[base]-start) @ start_rotation)*1000 if start is not None else 0
             tilt = np.degrees(np.arccos(np.clip(data.xmat[base].reshape(3,3)[2,2],-1,1)))
             label = f"t = {row['time_s']:.2f} s   |   forward = {distance:+.1f} mm   |   base tilt = {tilt:.1f} deg"
+            if args.diagnostics and start is not None:
+                turn = np.degrees((row['foot_rpy_rad'][2]-initial_heading+np.pi)%(2*np.pi)-np.pi)
+                label = f"t = {row['time_s']:.2f} s   |   forward = {distance:+.1f} mm   |   turn = {turn:+.1f} deg"
             if not row["measuring"]:
                 label = f"t = {row['time_s']:.2f} s   |   startup / warm-up (excluded from displacement)"
             draw.text((20, 544), label, font=font, fill="white")
             draw.text((870, 544), "5 cm grid  |  no external pushes", font=font, fill=(110,210,235))
+            if args.diagnostics:
+                forces = row.get('foot_side_normal_forces_n_right_left', [0,0])
+                support = 'BOTH SIDES'
+                if forces[0] < .1 and forces[1] > .1:
+                    support = 'LEFT EDGE'
+                elif forces[1] < .1 and forces[0] > .1:
+                    support = 'RIGHT EDGE'
+                elif sum(forces) < .1:
+                    support = 'UNLOADED'
+                draw.rectangle((12,92,335,148), fill=(15,22,32))
+                draw.text((20,96), 'Support: '+support, font=font, fill=(110,210,235))
+                draw.text((20,122), 'Head yaw: '+('SLOWING' if slowing else 'SWING / HOLD'), font=font,
+                          fill=(255,195,100) if slowing else 'white')
             process.stdin.write(canvas.tobytes())
             if len(images) < 160:
                 images.append(canvas.resize((768,348)))

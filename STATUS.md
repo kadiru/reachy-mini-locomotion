@@ -1,5 +1,75 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 19, 2026 — progress-first compound swing and best-result video
+
+User requested faster progress, less turning, published motor bounds, a best-run
+video, and a compound roll/yaw stop timed to edge support. Rewatched Vimeo's
+opening 0–10 s. The current edit includes real footage plus the earlier simulation
+inset; only the real footage was treated as physical evidence. Review is in
+`docs/VIMEO_REVIEW_2026-11-19.md`.
+
+Extended `Gait` with bounded roll/yaw swing-and-hold shaping and small biases;
+added maximum unwrapped heading/lateral excursion metrics and saved side-force,
+velocity, torque and head-subtree angular-momentum diagnostics. Motor model,
+0.416 Nm nominal head cap, 1.475 kg mass and contact geometry are unchanged.
+Targets remain rate-limited and IK-checked; no external pushes or base writes.
+
+`train_progress.py`: 624 candidate evaluations / 1,200 CPU training rollouts
+(12×36 nominal exploration; 8×24 four-domain conservative refinement). Objective
+rewards speed without a smoothness penalty, subject to heading/drift/tilt checks.
+78 invalid IK outcomes retained. `select_progress.py` independently selects the
+fastest nominal candidate from exploration only, with 12 s tests at 1/2 ms and
+20 s tests of eligible candidates, before fresh stress tests. All training uses
+at most four local CPU workers; no robot or shared GPU was used.
+
+**Selected nominal result:** 363.9 mm forward, -27.6 mm lateral in 20.52 s at
+1 ms; -7.76° net measured turn, 9.03° maximum excursion after startup (11.52°
+including startup). 2 ms result 371.2 mm, a 2.0% displacement difference. Previous
+smooth gait gives 50.9 mm over matched 20.52 s: **7.15× speed improvement**.
+Peak head torque 0.4055 Nm under 0.416 Nm cap; head-joint speed <=6.02 rad/s;
+no 99%-cap saturation; actual joint positions have >=0.219 rad limit margin.
+Foot tilt 3.54°, rim lift 5.90 mm. Actual head yaw roughly -50° to +54°.
+
+**Robustness limit:** selected fast gait advances in 12/12 fresh stress cases,
+but 0/12 meet full turning/drift criteria; maximum turn spans 12.6–110°. Previous
+smooth gait passes 10/12 on the same set. Do not represent this as robust transfer.
+The separate conservative branch reaches 6.1–6.6 mm/s nominal; it has a different
+stress set, so its pass count is not directly comparable.
+
+Mechanism: 76.1% sampled single-edge support, all sampled yaw slowing on an edge.
+Removing yaw or shifting yaw phase 90° cuts nominal speed to about 4 mm/s; removing
+roll plus lateral translation nearly eliminates motion. Removing dwell shaping
+retains about 17.3 mm/s: coupled motion/timing matters more than aggressive dwell.
+These are simulated diagnostics, not physical force identification.
+
+Video: `media/simulation/progress-fast-2026-11-19.mp4`, 22.16 s / 554 frames at
+25 fps, real-time playback, fixed front/side cameras, 5 cm grid, displacement,
+heading, support and head-slowing overlays. Inspected preview and near-end frame.
+Saved states: `experiments/generated/progress-fast-20s-2026-11-19.json` (ignored).
+Reports: `experiments/reports/motor-training-progress-summary-2026-11-19.json`,
+complete search/selection/demo/stroke receipts. Frozen policies:
+`configs/sway-progress-fast.json`, `configs/sway-progress-conservative.json`.
+Full explanation: `docs/PROGRESS_TRAINING_2026-11-19.md`.
+
+**Validation:** 67 local tests pass; log
+`experiments/reports/repository-tests-progress-2026-11-19.txt`. New tests cover
+bounded periodic strokes, startup/bias limits, rejection of full spins, and
+recording that does not alter physics. Additional development/selection/stress/
+ablation checks total 264 rollouts, plus three saved-state demonstrations.
+
+```sh
+.venv/bin/python experiments/train_progress.py --output experiments/reports/motor-training-progress-next.json
+.venv/bin/python experiments/select_progress.py experiments/reports/motor-training-progress-next.json --output experiments/reports/motor-training-progress-fast-next.json
+.venv/bin/python -m reachy_locomotion.sway --config configs/motors-datasheet.json --gait configs/sway-progress-fast.json --cycles 38 --output experiments/generated/progress-next.json
+```
+
+The last CLI command uses its documented two-cycle warmup and config's 2 ms;
+the shown video uses three warmup cycles and 1 ms, as specified in the report.
+Next: identify battery-powered motor response/contact properties and add bounded
+heading feedback/phase adaptation to retain speed across model variations.
+Do not deploy this open-loop candidate to hardware based solely on its nominal
+video; the existing commissioning guard and measured-state workflow still apply.
+
 ## November 19, 2026 — clarified speed regression with matched-duration runs
 
 User pointed out that the earlier demo moved forward much better. Confirmed:

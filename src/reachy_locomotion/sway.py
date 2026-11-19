@@ -28,20 +28,30 @@ class Gait:
     y_phase_deg: float = 0.0
     z_mm: float = 0.0
     mirror: float = 1.0
+    roll_sharpness: float = 0.0
+    yaw_sharpness: float = 0.0
+    roll_bias_deg: float = 0.0
+    yaw_bias_deg: float = 0.0
 
     def __post_init__(self):
         if not all(math.isfinite(v) for v in asdict(self).values()):
             raise ValueError("Gait values must be finite")
-        if not .25 <= self.frequency_hz <= 5 or abs(self.roll_deg) > 40 or abs(self.yaw_deg) > 60:
+        if not .25 <= self.frequency_hz <= 5 or abs(self.roll_deg) + abs(self.roll_bias_deg) > 40 or abs(self.yaw_deg) + abs(self.yaw_bias_deg) > 60:
             raise ValueError("Sway outside exploratory frequency/angle bounds")
+        if not 0 <= self.roll_sharpness <= 5 or not 0 <= self.yaw_sharpness <= 5:
+            raise ValueError("Swing sharpness must lie in [0, 5]")
         if abs(self.pitch_deg) + abs(self.pitch_bias_deg) > 40 or self.mirror not in (-1, 1):
             raise ValueError("Invalid pitch or mirror value")
         if max(abs(self.x_mm), abs(self.y_mm), abs(self.z_mm)) > 25:
             raise ValueError("Translation outside exploratory 25 mm bound")
 
     def pose(self, phase, envelope=1.0):
-        r = self.mirror * self.roll_deg * math.sin(phase)
-        y = self.mirror * self.yaw_deg * math.sin(phase + math.radians(self.yaw_phase_deg))
+        # Smooth, bounded swing-and-hold. Large sharpness shortens the stroke
+        # and lengthens its end dwell. It never changes motor torque/rate caps.
+        def swing(p, sharpness):
+            return math.sin(p) if sharpness == 0 else math.tanh(sharpness * math.sin(p)) / math.tanh(sharpness)
+        r = self.mirror * (self.roll_bias_deg + self.roll_deg * swing(phase, self.roll_sharpness))
+        y = self.mirror * (self.yaw_bias_deg + self.yaw_deg * swing(phase + math.radians(self.yaw_phase_deg), self.yaw_sharpness))
         p = self.pitch_bias_deg + self.pitch_deg * math.sin(2 * phase + math.radians(self.pitch_phase_deg))
         pose = np.eye(4)
         pose[:3, :3] = rotation(np.radians([r, p, y]) * envelope)
@@ -152,6 +162,8 @@ class SwaySimulator:
         trajectory, boundaries = [], []
         reason = None
         max_tilt = max_closure = max_track = 0.0
+        max_heading = max_lateral = 0.0
+        previous_heading = unwrapped_heading = 0.0
         torque_saturated = measured_steps = foot_contact_steps = 0
         left_unloaded = right_unloaded = 0
         max_side_clearance = 0.0
@@ -191,12 +203,36 @@ class SwaySimulator:
             if measuring:
                 max_track = max(max_track, angle(desired, actual))
                 velocity_samples.append(state.qvel[:6].copy())
+                heading = math.atan2(state.xmat[self.base].reshape(3, 3)[1, 0], state.xmat[self.base].reshape(3, 3)[0, 0])
+                if frame == warmup_frames:
+                    previous_heading = heading
+                unwrapped_heading += (heading - previous_heading + math.pi) % (2 * math.pi) - math.pi
+                previous_heading = heading
+                max_heading = max(max_heading, abs(unwrapped_heading))
+                displacement = start_rot.T @ (state.xpos[self.base] - start)
+                max_lateral = max(max_lateral, abs(float(displacement[1])))
                 if (frame - warmup_frames) % frames_per_cycle == 0:
                     displacement = start_rot.T @ (state.xpos[self.base] - start)
                     boundaries.append({"cycle": (frame - warmup_frames) // frames_per_cycle,
                                        "foot_displacement_m": displacement.tolist()})
             if record:
+                mujoco.mj_subtreeVel(model, state)
+                head_body = int(model.site_bodyid[model.site("head").id])
+                side_forces = [0.0, 0.0]
+                for ci, contact in enumerate(state.contact):
+                    if {int(contact.geom1), int(contact.geom2)} == {self.foot, self.floor} and contact.efc_address >= 0:
+                        wrench = np.zeros(6)
+                        mujoco.mj_contactForce(model, state, ci, wrench)
+                        point = state.xmat[self.base].reshape(3, 3).T @ (contact.pos - state.xpos[self.base])
+                        side_forces[int(point[1] >= 0)] += abs(float(wrench[0]))
                 trajectory.append({"time_s": float(state.time), "measuring": measuring,
+                                   "phase_rad": phase % (2 * math.pi),
+                                   "foot_side_normal_forces_n_right_left": side_forces,
+                                   "qvel": state.qvel.tolist(),
+                                   "motor_torque_nm": state.actuator_force.tolist(),
+                                   "motor_velocity_rad_s": state.actuator_velocity.tolist(),
+                                   "head_subtree_angular_momentum_world": state.subtree_angmom[head_body].tolist(),
+                                   "head_subtree_com_world_m": state.subtree_com[head_body].tolist(),
                                    "qpos": state.qpos.tolist(), "ctrl": state.ctrl.tolist(),
                                    "foot_xyz_m": state.xpos[self.base].tolist(),
                                    "foot_rpy_rad": euler(state.xmat[self.base].reshape(3, 3)).tolist(),
@@ -265,6 +301,9 @@ class SwaySimulator:
                   "measured_seconds": measured_seconds, "forward_m": float(displacement[0]),
                   "lateral_m": float(displacement[1]), "heading_change_rad": (yaw-initial_yaw+math.pi)%(2*math.pi)-math.pi,
                   "forward_m_per_s": float(displacement[0])/measured_seconds if measured_seconds else 0.0,
+                  "max_heading_excursion_rad": max_heading,
+                  "unwrapped_heading_change_rad": unwrapped_heading,
+                  "max_lateral_excursion_m": max_lateral,
                   "max_foot_tilt_deg": math.degrees(max_tilt), "max_closure_error_m": max_closure,
                   "max_head_orientation_tracking_error_deg": math.degrees(max_track),
                   "max_side_rim_clearance_m": max_side_clearance,

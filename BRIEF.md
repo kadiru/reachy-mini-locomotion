@@ -6,6 +6,13 @@ Reproduce the user's previously observed motion before treating autonomous locom
 
 ## User context
 
+November 19 steering: prioritize **forward progress over smoothness**, with less
+turning and realistic motor bounds. User describes compound roll/yaw, edge
+support, and a sudden head stop transferring reaction torque to the body.
+Treat that as a mechanism to test against the physical video; preserve the
+fast candidate as a development baseline, while reporting model sensitivity.
+
+
 November 18 clarification: the headset was **Meta Quest 3S**. User requests a
 GitHub repository and a learning/sim-to-real project based on head-driven
 penguin-like motion in [reachy reach](https://vimeo.com/kadiru/demo-reachy-reach).

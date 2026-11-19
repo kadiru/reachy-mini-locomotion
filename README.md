@@ -8,19 +8,19 @@ The opening sequence shows controller-driven head motion, whole-body rocking
 and apparent base progress. [Video observations](docs/VIMEO_OBSERVATIONS_2026-11-18.md)
 separate what is visible from what still needs measurement.
 
-**Current state (November 18, 2026):** CPU gait training now uses published
-Dynamixel torque/speed data, motor-specific limits, command smoothing/latency,
-and corrected total mass. [Motor sources and assumptions](docs/MOTOR_LIMITS.md)
-and [training protocol/results](docs/MOTOR_TRAINING_2026-11-18.md) distinguish
-measured manufacturer specifications from uncalibrated model parameters.
-The refined candidate advances **3.2 cm in 13 simulated seconds**, with about
-64% lower sampled body acceleration than the first trained candidate. It passes
-our walking check in **8/12 fresh held-out cases** (up from 2/12); all 12 move
-forward. [Watch the real-time simulation](media/simulation/motors-trained-2026-11-18.mp4).
-The smoother gait sacrifices substantial speed. [Matched-duration comparison](docs/FORWARD_PROGRESS_COMPARISON_2026-11-19.md)
-separates the motor-model change from the steering/speed tradeoff.
-Sim-to-real transfer remains unverified. The historical 15.8 cm demo used an
-unrealistic 1.2 Nm head-motor cap and is retained only as an exploratory result.
+**Current state (November 19, 2026):** a larger compound head swing advances
+**36.4 cm in 20.5 simulated seconds**, about **7.15× faster** than the prior smooth
+gait over the same duration, under unchanged motor torque bounds and corrected
+mass. Net measured heading change is 7.8°; peak excursion is 9.0° after startup.
+[Watch at real-time speed](media/simulation/progress-fast-2026-11-19.mp4).
+[Full results and mechanism checks](docs/PROGRESS_TRAINING_2026-11-19.md).
+
+**This is a nominal-model success:** 0/12 varied-model stress cases satisfy the
+full turning/drift criteria, although all advance without numerical failures.
+Motor phase lag, contact and mass distribution remain uncalibrated; physical
+transfer is unverified. [Motor sources and assumptions](docs/MOTOR_LIMITS.md).
+The original 15.8 cm demo used a 1.2 Nm head cap; [matched comparisons](docs/FORWARD_PROGRESS_COMPARISON_2026-11-19.md)
+explain that earlier model and the speed/steering tradeoff.
 
 ## Start here
 
@@ -65,7 +65,7 @@ The user's observation is retained and now supported by a supplied GIF showing c
 PYTHONPATH=src .venv/bin/python -m reachy_locomotion session-smoke --output data/synthetic/my-session-check
 ```
 
-Use a new output directory. Current validation: **63 local tests pass**; the [CPU workflow](https://github.com/kadiru/reachy-mini-locomotion/actions/workflows/tests.yml) runs the suite on GitHub. The latest local log is `experiments/reports/repository-tests-motors-final-2026-11-18.txt`. The earlier full synthetic UDP/HTTP/video pipeline and threaded CLI loss/shutdown check also passed; their generated captures remain local-only.
+Use a new output directory. Current validation: **67 local tests pass**; the [CPU workflow](https://github.com/kadiru/reachy-mini-locomotion/actions/workflows/tests.yml) runs the suite on GitHub. The latest local log is `experiments/reports/repository-tests-progress-2026-11-19.txt`. The earlier full synthetic UDP/HTTP/video pipeline and threaded CLI loss/shutdown check also passed; their generated captures remain local-only.
 
 ## Run locally
 

@@ -32,3 +32,5 @@ media/simulation/*
 !experiments/reports/motor-training-*.json
 !media/simulation/motors-trained-2026-11-18.mp4
 !media/simulation/motors-trained-2026-11-18.png
+!media/simulation/progress-fast-2026-11-19.mp4
+!media/simulation/progress-fast-2026-11-19.png
