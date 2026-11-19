@@ -1,5 +1,39 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 19, 2026 — personal repository identity audit completed
+
+Audited all 31 `kadiru`-owned GitHub repositories plus three other accessible
+repositories: 221 branches and 34 tags (including a concurrently published
+Roboturk branch, separately checked and clean). The additional affected GitHub repository
+was Sircus: five incorrect author/committer identities corrected, with 424 commit
+hashes and all 162 branch tips changing. Published atomically with exact leases;
+all published refs and GitHub attribution for the five repaired commits verified.
+Three signatures on rehashed commits were removed because they could no longer
+verify the changed objects. Original signed objects remain in recovery bundles.
+
+Also corrected 17 local Roboturk commits and one local personal-portfolio commit;
+these repositories have no remotes, so nothing was uploaded from them. Code,
+messages, timestamps, other contributors, and working files/indexes were preserved.
+Roboturk acquired concurrent uncommitted work during the audit; the first apply
+stopped, that work was separately backed up, and the metadata-only repair preserved
+it. All 21 non-Nimbus local worktrees now have clean active attribution and the
+correct personal author/committer identity. Existing project hooks are retained
+behind the global identity dispatcher. Guard tests cover new-repository creation,
+identity overrides, hook delegation, push input, and old-history rejection.
+
+User clarification: `kadiru` and `KineticUtopia` are distinct users. Nimbus/EY is
+excluded from this cleanup; never upload EY code to personal GitHub. No Nimbus
+history or code was changed or uploaded. Ten Nimbus local configs touched during
+the initial broad audit were restored exactly. Scope and account separation are
+saved in global Codex instructions; excluded checkouts reject personal pushes.
+
+Report: `experiments/reports/personal-git-identity-audit-2026-11-19.json`.
+Private bundles, mappings and worktree snapshots remain in each repaired repo's
+`.git/identity-repair/20261119-other-repositories/`. Hashes changed; other clones
+must resynchronize with the corrected remote history without merging old commits.
+The earlier Reachy/humanoid correction below remains in place.
+
+
 ## November 19, 2026 — corrected GitHub attribution to kadiru
 
 User requires all future authoring/committing/pushing through `kadiru`, never

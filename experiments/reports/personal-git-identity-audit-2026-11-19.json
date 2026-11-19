@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-19",
+  "scope": "Personal kadiru repositories; Nimbus/EY explicitly excluded by the user.",
+  "github_repository_count": 34,
+  "kadiru_owned_repositories": 31,
+  "other_accessible_repositories_audited": 3,
+  "branches_audited": 221,
+  "tags_audited": 34,
+  "additional_repaired_repositories": [
+    {
+      "repository": "kadiru/sircus",
+      "identities_corrected": 5,
+      "commits_rehashed": 424,
+      "branches_updated_atomically": 162,
+      "previous_signatures_removed_because_hash_changed": 3,
+      "published": true,
+      "github_author_and_committer_login_verified": "kadiru"
+    },
+    {
+      "repository": "local Roboturk modern",
+      "identities_corrected": 17,
+      "published": false,
+      "no_remote_configured": true
+    },
+    {
+      "repository": "local personal portfolio",
+      "identities_corrected": 1,
+      "published": false,
+      "no_remote_configured": true
+    }
+  ],
+  "previously_repaired": {
+    "reachy-mini-locomotion": 8,
+    "humanoid-sitting-control": 826
+  },
+  "personal_or_non_nimbus_local_worktrees_verified": 21,
+  "non_nimbus_git_databases_with_explicit_identity": 17,
+  "identity": {
+    "name": "Kadir Uyanik",
+    "email": "717445+kadiru@users.noreply.github.com",
+    "github_login": "kadiru"
+  },
+  "preserved": [
+    "All code trees, commit messages, author and committer timestamps, and commit topology",
+    "Other contributors author and committer metadata",
+    "Existing repository hooks",
+    "Uncommitted files and staged content; Roboturk concurrent edits were re-snapshotted before its metadata update"
+  ],
+  "verification": [
+    "All 162 published Sircus refs equal the prepared replacements",
+    "All 426 Sircus commits reachable from published branches have no retired attribution",
+    "GitHub resolves both author and committer to kadiru for each of the five corrected Sircus commits",
+    "All 34 tag refs inspected; no incorrect tagger attribution",
+    "All non-Nimbus local branches, tags and remote-tracking refs are free of retired attribution",
+    "Identity guard tests: initialization, author/committer overrides, existing-hook delegation and rejection, pre-push input preservation, old-history rejection",
+    "Excluded checkout rejects a personal GitHub destination without contacting it",
+    "A concurrently published metu-ros-pkg Roboturk branch was fetched only into a remote-tracking ref and its full history re-audited: no retired attribution."
+  ],
+  "exclusions": {
+    "nimbus_ey": "No history rewritten or code uploaded. Ten local Git configs restored byte-for-byte to their pre-audit values. Account separation saved in global Codex instructions.",
+    "backups": "Original commits remain only in deliberate recovery bundles, reflogs and internal checkpoint history; do not merge them into corrected personal history."
+  },
+  "backup_locations": [
+    ".git/identity-repair/20261119-other-repositories/ in Sircus, Roboturk modern and personal portfolio",
+    "/Users/kadir/.config/git/identity-repair-20261119-all-repositories/"
+  ],
+  "collaboration_note": "Commit hashes changed. Other clones must resynchronize with corrected remote history; do not merge old attribution back."
+}
