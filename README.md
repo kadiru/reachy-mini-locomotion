@@ -14,6 +14,16 @@ The opening sequence shows controller-driven head motion, whole-body rocking
 and apparent base progress. [Video observations](docs/VIMEO_OBSERVATIONS_2026-11-18.md)
 separate what is visible from what still needs measurement.
 
+**Faster feedback gait (November 19):** retraining the failures and shortening
+phase pauses gives **112.1 mm in 30.44 s of stepping**, **3.68 mm/s**—**25.8% faster**
+than the preceding balance gait—with 15.3° body roll and 7.52° maximum pair-end
+heading. All **26 previously seen cases** now pass; the four formerly failing
+cases also pass at 0.125 ms. New frozen qualification passes **14/16**: one tilt
+guard and one heading/progress failure remain. Waist target and physical motor
+limits are unchanged. **105 tests pass**; no hardware transfer is claimed.
+[Watch the best real-time video](media/simulation/faster-penguin-best-2026-11-19.mp4).
+[Training, limits and complete results](docs/FASTER_PENGUIN_2026-11-19.md).
+
 **Bilateral feedback follow-up (November 19):** delayed roll/rate feedback and
 progress-based primitive selection produce **88.6 mm forward in two pairs**
 (eight rock/pivot bursts), **15.3° bilateral roll**, and **0.60° maximum pair-end

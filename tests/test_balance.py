@@ -64,5 +64,23 @@ class BalanceFeedbackTests(unittest.TestCase):
         self.assertAlmostEqual(pose[2,3],.177)
         self.assertLess(abs(pose[1,3]),.011)
 
+    def test_feedback_transition_waits_until_after_the_catch(self):
+        c=BalanceController(Primitive(),BalanceFeedback(trigger_deg=2,prediction_s=0,roll_kp=-1.5,
+                           recovery_gain_after_catch_s=.2,recovery_gain_blend_s=.12))
+        for frame in range(36,45):c.target(frame*.02,4)
+        self.assertLess(c.correction,0)
+        for frame in range(45,75):c.target(frame*.02,4)
+        self.assertAlmostEqual(c.correction,6,places=5)
+
+    def test_timestamp_compensation_does_not_bypass_sensor_delay(self):
+        c=BalanceController(Primitive(),BalanceFeedback(sensor_delay_frames=2,
+                           sensor_latency_compensation=1,trigger_deg=10))
+        c.target(.70,0);c.target(.72,20);c.target(.74,20)
+        self.assertEqual(c.sensed,0)
+        self.assertIsNone(c.catch_trigger)
+        c.target(.76,20)
+        self.assertEqual(c.sensed,20)
+        self.assertEqual(c.catch_trigger,.76)
+
 
 if __name__=='__main__':unittest.main()

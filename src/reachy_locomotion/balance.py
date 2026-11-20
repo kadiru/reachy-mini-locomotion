@@ -42,6 +42,9 @@ class BalanceFeedback:
     emergency_roll_deg: float = 0.
     emergency_prediction_s: float = .04
     emergency_blend_s: float = .12
+    recovery_gain_after_catch_s: float = -1.
+    recovery_gain_blend_s: float = .2
+    sensor_latency_compensation: float = 0.
 
     def __post_init__(self):
         if not all(math.isfinite(x) for x in asdict(self).values()):
@@ -72,6 +75,9 @@ class BalanceFeedback:
         if self.emergency_roll_deg and not 15<=self.emergency_roll_deg<=30:raise ValueError('Invalid recovery override')
         if not 0<=self.emergency_prediction_s<=.15 or not .04<=self.emergency_blend_s<=.3:
             raise ValueError('Invalid recovery override timing')
+        if not -1<=self.recovery_gain_after_catch_s<=2 or not .04<=self.recovery_gain_blend_s<=.5:
+            raise ValueError('Invalid recovery feedback transition')
+        if not 0<=self.sensor_latency_compensation<=1.5:raise ValueError('Invalid timestamp compensation')
 
 
 class BalanceController:
@@ -111,13 +117,16 @@ class BalanceController:
         raw_rate=(self.sensed-self.previous_roll)/.02 if t else 0.
         self.previous_roll=self.sensed
         self.rate+=(1-math.exp(-.02/f.rate_filter_s))*(raw_rate-self.rate)
-        self.predicted=self.sensed+f.prediction_s*self.rate
+        # Compensate known observation age relative to the nominal 20 ms
+        # sensor, using only the configured/timestamped sensing pipeline.
+        age_correction=f.sensor_latency_compensation*max(0,f.sensor_delay_frames-1)*.02
+        self.predicted=self.sensed+(f.prediction_s+age_correction)*self.rate
         side=1 if self.p.roll_deg>=0 else -1
         risk=abs(self.predicted) if not f.catch_direction else f.catch_direction*side*self.predicted
         if self.base.catch_trigger is None and t>=.2+self.p.preload_s and risk>=f.trigger_deg:
             self.base.catch_trigger=t
         if self.p.yaw_deg and (self.base.catch_trigger is not None or f.yaw_before_catch) and self.base.yaw_trigger is None:
-            predicted_yaw_roll=self.sensed+f.yaw_prediction_s*self.rate
+            predicted_yaw_roll=self.sensed+(f.yaw_prediction_s+age_correction)*self.rate
             yaw_phase=abs(predicted_yaw_roll) if not f.yaw_direction else f.yaw_direction*side*predicted_yaw_roll
             earliest=.2+self.p.preload_s if f.yaw_before_catch else self.base.catch_trigger+f.yaw_delay_after_catch_s
             if t>=earliest and yaw_phase>=self.p.yaw_at_roll_deg:
@@ -128,11 +137,15 @@ class BalanceController:
         self.correction=0.
         if self.catch_trigger is not None:
             active=blend((t-self.catch_trigger)/f.activation_s)
-            self.correction=float(np.clip(f.roll_kp*self.sensed+f.roll_kd_s*self.rate,-f.correction_limit_deg,f.correction_limit_deg))*active
+            mix=0. if f.recovery_gain_after_catch_s<0 else blend((t-self.catch_trigger-f.recovery_gain_after_catch_s)/f.recovery_gain_blend_s)
+            pivot_correction=f.roll_kp*self.sensed+f.roll_kd_s*self.rate
+            recovery_correction=1.5*self.sensed-.12*self.rate
+            self.correction=float(np.clip((1-mix)*pivot_correction+mix*recovery_correction,-f.correction_limit_deg,f.correction_limit_deg))*active
             angles=euler(pose)
             angles[0]=math.radians(float(np.clip(math.degrees(angles[0])+self.correction,-40,40)))
             pose[:3,:3]=rotation(angles)
-            lateral=f.y_per_roll_mm_deg*self.correction+active*(f.y_roll_kp_mm_deg*self.sensed+f.y_roll_kd_mm_s_deg*self.rate)
+            pivot_lateral=f.y_per_roll_mm_deg*self.correction+active*(f.y_roll_kp_mm_deg*self.sensed+f.y_roll_kd_mm_s_deg*self.rate)
+            lateral=(1-mix)*pivot_lateral+mix*.6*self.correction
             pose[1,3]=float(np.clip(pose[1,3]+lateral/1000,-.025,.025))
             stage='feedback '+stage
         if f.state_dependent_yaw and self.yaw_trigger is not None:

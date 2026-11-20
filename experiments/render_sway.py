@@ -21,6 +21,7 @@ def main():
     parser.add_argument("--diagnostics", action="store_true", help="Show recorded support and yaw deceleration")
     parser.add_argument("--frame-path", action="store_true", help="Use fixed cameras framing the entire saved path")
     parser.add_argument("--follow-front", action="store_true", help="Follow the base in the front close-up; keep the side camera fixed")
+    parser.add_argument("--until",type=float,help="End the video at this recorded time; physics report remains complete")
     args = parser.parse_args()
     output = Path(args.output)
     if output.exists():
@@ -89,6 +90,7 @@ def main():
     cycle_frames = round(50/result['actual_frequency_hz']) if completed_cycle_rule else 1
     try:
         for frame_index, row in enumerate(result["trajectory"]):
+            if args.until is not None and row['time_s']>args.until+1e-8:break
             if completed_cycle_rule and frame_index and frame_index % cycle_frames == 0:
                 last_cycle_heading = np.degrees(row['heading_from_startup_rad'])
             data.qpos[:] = row["qpos"]

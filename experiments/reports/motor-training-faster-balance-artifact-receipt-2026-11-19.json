@@ -1,0 +1,1004 @@
+{
+  "completed": true,
+  "evidence": "uncalibrated_simulation",
+  "hardware_ready": false,
+  "base_commit": "8b7219b37466556c56110cb10b81847cbd3082d4",
+  "python": "3.9.6",
+  "mujoco": "3.3.7",
+  "numpy": "2.0.2",
+  "selected_policy": "configs/penguin-faster-feedback-trained.json",
+  "selected_start_side": -1,
+  "seen": {
+    "passed": 26,
+    "total": 26
+  },
+  "unseen": {
+    "passed": 14,
+    "total": 16,
+    "seed": 2026111992
+  },
+  "finer_former_failures": {
+    "passed": 4,
+    "total": 4
+  },
+  "nominal_four_pair_checks": {
+    "passed": 4,
+    "total": 4
+  },
+  "open_failures": [
+    {
+      "id": "unseen-3",
+      "side": -1,
+      "termination": "tilt_reached_35_deg",
+      "complete": false,
+      "forward_mm": 15.974287507104432,
+      "heading_deg": 0.0
+    },
+    {
+      "id": "unseen-7",
+      "side": -1,
+      "termination": "completed",
+      "complete": false,
+      "forward_mm": 6.325659877350767,
+      "heading_deg": 23.142204743791055
+    }
+  ],
+  "stepping_speed_gain_percent": 25.826205457140027,
+  "finer_speed_difference_percent": -0.13672248845709722,
+  "selected_demo": {
+    "completed_steps": 8,
+    "requested_steps": 8,
+    "steps": [
+      {
+        "index": 0,
+        "side": -1,
+        "start_s": 0.0,
+        "end_s": 2.7800000000000002,
+        "heading_deg": 11.358643593233404,
+        "target_heading_deg": 12,
+        "repeats": 1,
+        "turn_goal_met": true
+      },
+      {
+        "index": 1,
+        "side": 1,
+        "start_s": 2.8000000000000003,
+        "end_s": 5.5600000000000005,
+        "heading_deg": 0.6066079366362365,
+        "target_heading_deg": 0.0,
+        "repeats": 1,
+        "turn_goal_met": true
+      },
+      {
+        "index": 2,
+        "side": -1,
+        "start_s": 5.58,
+        "end_s": 8.36,
+        "heading_deg": 11.9578152681514,
+        "target_heading_deg": 12,
+        "repeats": 1,
+        "turn_goal_met": true
+      },
+      {
+        "index": 3,
+        "side": 1,
+        "start_s": 8.379999999999999,
+        "end_s": 11.1,
+        "heading_deg": 1.9508050064923856,
+        "target_heading_deg": 0.0,
+        "repeats": 1,
+        "turn_goal_met": true
+      },
+      {
+        "index": 4,
+        "side": -1,
+        "start_s": 11.12,
+        "end_s": 13.88,
+        "heading_deg": 12.504371089339738,
+        "target_heading_deg": 12,
+        "repeats": 1,
+        "turn_goal_met": true
+      },
+      {
+        "index": 5,
+        "side": 1,
+        "start_s": 13.9,
+        "end_s": 19.38,
+        "heading_deg": -7.515791903934697,
+        "target_heading_deg": 0.0,
+        "repeats": 2,
+        "turn_goal_met": true
+      },
+      {
+        "index": 6,
+        "side": -1,
+        "start_s": 19.4,
+        "end_s": 24.94,
+        "heading_deg": 13.408932955596516,
+        "target_heading_deg": 12,
+        "repeats": 2,
+        "turn_goal_met": true
+      },
+      {
+        "index": 7,
+        "side": 1,
+        "start_s": 24.96,
+        "end_s": 30.44,
+        "heading_deg": -6.599364933049074,
+        "target_heading_deg": 0.0,
+        "repeats": 2,
+        "turn_goal_met": true
+      }
+    ],
+    "bursts": [
+      {
+        "side": -1,
+        "start_s": 0.0,
+        "end_s": 2.7800000000000002,
+        "heading_deg": 11.358643593233404,
+        "observed_turn_progress_deg": 11.553397518159162,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 2.8000000000000003,
+        "end_s": 5.5600000000000005,
+        "heading_deg": 0.6066079366362365,
+        "observed_turn_progress_deg": 11.053260896270872,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 5.58,
+        "end_s": 8.36,
+        "heading_deg": 11.9578152681514,
+        "observed_turn_progress_deg": 11.585530994646696,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 8.379999999999999,
+        "end_s": 11.1,
+        "heading_deg": 1.9508050064923856,
+        "observed_turn_progress_deg": 10.138742355573186,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 11.12,
+        "end_s": 13.88,
+        "heading_deg": 12.504371089339738,
+        "observed_turn_progress_deg": 10.327471857778546,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 13.9,
+        "end_s": 16.62,
+        "heading_deg": 2.5030115859432787,
+        "observed_turn_progress_deg": 9.72696251465993,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 16.64,
+        "end_s": 19.38,
+        "heading_deg": -7.515791903934697,
+        "observed_turn_progress_deg": 9.965793462266069,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 19.4,
+        "end_s": 22.16,
+        "heading_deg": 2.8345491978580064,
+        "observed_turn_progress_deg": 10.168621871212046,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 22.18,
+        "end_s": 24.94,
+        "heading_deg": 13.408932955596516,
+        "observed_turn_progress_deg": 10.612653682130404,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 24.96,
+        "end_s": 27.7,
+        "heading_deg": 3.4074358808771392,
+        "observed_turn_progress_deg": 10.125693090402539,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 27.72,
+        "end_s": 30.44,
+        "heading_deg": -6.599364933049074,
+        "observed_turn_progress_deg": 10.1067158668878,
+        "policy": "primary",
+        "emergency_recovery": false
+      }
+    ],
+    "completed": true,
+    "max_completed_cycle_heading_deg": 7.515791903934697,
+    "cycle_end_headings_deg": [
+      0.6066079366362365,
+      1.9508050064923856,
+      -7.515791903934697,
+      -6.599364933049074
+    ],
+    "physical_state_resets_between_steps": false,
+    "target_step_turn_deg": 12,
+    "heading_sensor_delay_s": 0.02,
+    "heading_sensor_noise_deg": 0.1,
+    "fallback_activated": false,
+    "sequencing": {
+      "min_step_s": 1.2,
+      "settle_s": 0.04,
+      "post_catch_s": 0.6,
+      "head_return_margin_s": 0.0,
+      "head_settle_yaw_deg": 0.0,
+      "head_settle_rate_deg_s": 15.0
+    },
+    "passed": true,
+    "stable": true,
+    "course_ok": true,
+    "mean_stride_mm": 28.012888477150142,
+    "min_bilateral_roll_deg": 15.25509877099498,
+    "forward_mm": 112.05056567460745,
+    "speed_mm_s": 3.681030409809706,
+    "full_trial_speed_mm_s": 3.1125157131835404,
+    "pairs": [
+      {
+        "forward_mm": 21.215986987604385,
+        "heading_deg": 0.6066079366362365,
+        "bilateral_roll_deg": 15.32647584885766,
+        "duration_s": 5.5600000000000005
+      },
+      {
+        "forward_mm": 20.637702515921394,
+        "heading_deg": 1.9508050064923856,
+        "bilateral_roll_deg": 15.25509877099498,
+        "duration_s": 5.52
+      },
+      {
+        "forward_mm": 30.124703937351303,
+        "heading_deg": -7.515791903934697,
+        "bilateral_roll_deg": 15.258305941136719,
+        "duration_s": 8.26
+      },
+      {
+        "forward_mm": 40.07316046772348,
+        "heading_deg": -6.599364933049074,
+        "bilateral_roll_deg": 15.264257976004306,
+        "duration_s": 11.040000000000003
+      }
+    ],
+    "score": 1212.0505656746075
+  },
+  "finer_demo": {
+    "completed_steps": 8,
+    "requested_steps": 8,
+    "steps": [
+      {
+        "index": 0,
+        "side": -1,
+        "start_s": 0.0,
+        "end_s": 2.7800000000000002,
+        "heading_deg": 11.350420710590761,
+        "target_heading_deg": 12,
+        "repeats": 1,
+        "turn_goal_met": true
+      },
+      {
+        "index": 1,
+        "side": 1,
+        "start_s": 2.8000000000000003,
+        "end_s": 5.5600000000000005,
+        "heading_deg": 0.6298999668589998,
+        "target_heading_deg": 0.0,
+        "repeats": 1,
+        "turn_goal_met": true
+      },
+      {
+        "index": 2,
+        "side": -1,
+        "start_s": 5.58,
+        "end_s": 8.36,
+        "heading_deg": 11.971107863491328,
+        "target_heading_deg": 12,
+        "repeats": 1,
+        "turn_goal_met": true
+      },
+      {
+        "index": 3,
+        "side": 1,
+        "start_s": 8.379999999999999,
+        "end_s": 11.1,
+        "heading_deg": 1.9683191339019617,
+        "target_heading_deg": 0.0,
+        "repeats": 1,
+        "turn_goal_met": true
+      },
+      {
+        "index": 4,
+        "side": -1,
+        "start_s": 11.12,
+        "end_s": 13.88,
+        "heading_deg": 12.534398001137564,
+        "target_heading_deg": 12,
+        "repeats": 1,
+        "turn_goal_met": true
+      },
+      {
+        "index": 5,
+        "side": 1,
+        "start_s": 13.9,
+        "end_s": 19.38,
+        "heading_deg": -7.479458669234568,
+        "target_heading_deg": 0.0,
+        "repeats": 2,
+        "turn_goal_met": true
+      },
+      {
+        "index": 6,
+        "side": -1,
+        "start_s": 19.4,
+        "end_s": 24.94,
+        "heading_deg": 13.475052006617771,
+        "target_heading_deg": 12,
+        "repeats": 2,
+        "turn_goal_met": true
+      },
+      {
+        "index": 7,
+        "side": 1,
+        "start_s": 24.96,
+        "end_s": 30.44,
+        "heading_deg": -6.516488225829619,
+        "target_heading_deg": 0.0,
+        "repeats": 2,
+        "turn_goal_met": true
+      }
+    ],
+    "bursts": [
+      {
+        "side": -1,
+        "start_s": 0.0,
+        "end_s": 2.7800000000000002,
+        "heading_deg": 11.350420710590761,
+        "observed_turn_progress_deg": 11.545161204829238,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 2.8000000000000003,
+        "end_s": 5.5600000000000005,
+        "heading_deg": 0.6298999668589998,
+        "observed_turn_progress_deg": 11.021729889937601,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 5.58,
+        "end_s": 8.36,
+        "heading_deg": 11.971107863491328,
+        "observed_turn_progress_deg": 11.575512263813884,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 8.379999999999999,
+        "end_s": 11.1,
+        "heading_deg": 1.9683191339019617,
+        "observed_turn_progress_deg": 10.134487572992844,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 11.12,
+        "end_s": 13.88,
+        "heading_deg": 12.534398001137564,
+        "observed_turn_progress_deg": 10.339957717680766,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 13.9,
+        "end_s": 16.62,
+        "heading_deg": 2.5361893547235885,
+        "observed_turn_progress_deg": 9.723784175579318,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 16.64,
+        "end_s": 19.38,
+        "heading_deg": -7.479458669234568,
+        "observed_turn_progress_deg": 9.962607650384808,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 19.4,
+        "end_s": 22.16,
+        "heading_deg": 2.8847686209669896,
+        "observed_turn_progress_deg": 10.18245490379944,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 22.18,
+        "end_s": 24.94,
+        "heading_deg": 13.475052006617771,
+        "observed_turn_progress_deg": 10.62855311089568,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 24.96,
+        "end_s": 27.7,
+        "heading_deg": 3.472782572268116,
+        "observed_turn_progress_deg": 10.126413698492529,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 27.72,
+        "end_s": 30.44,
+        "heading_deg": -6.516488225829619,
+        "observed_turn_progress_deg": 10.089205899930406,
+        "policy": "primary",
+        "emergency_recovery": false
+      }
+    ],
+    "completed": true,
+    "max_completed_cycle_heading_deg": 7.479458669234568,
+    "cycle_end_headings_deg": [
+      0.6298999668589998,
+      1.9683191339019617,
+      -7.479458669234568,
+      -6.516488225829619
+    ],
+    "physical_state_resets_between_steps": false,
+    "target_step_turn_deg": 12,
+    "heading_sensor_delay_s": 0.02,
+    "heading_sensor_noise_deg": 0.1,
+    "fallback_activated": false,
+    "sequencing": {
+      "min_step_s": 1.2,
+      "settle_s": 0.04,
+      "post_catch_s": 0.6,
+      "head_return_margin_s": 0.0,
+      "head_settle_yaw_deg": 0.0,
+      "head_settle_rate_deg_s": 15.0
+    },
+    "passed": true,
+    "stable": true,
+    "course_ok": true,
+    "mean_stride_mm": 27.974575775348228,
+    "min_bilateral_roll_deg": 15.246835526342316,
+    "forward_mm": 111.89736735288687,
+    "speed_mm_s": 3.6759976134325516,
+    "full_trial_speed_mm_s": 3.1082602042468577,
+    "pairs": [
+      {
+        "forward_mm": 21.180989907664745,
+        "heading_deg": 0.6298999668589998,
+        "bilateral_roll_deg": 15.304006743473078,
+        "duration_s": 5.5600000000000005
+      },
+      {
+        "forward_mm": 20.612489908168683,
+        "heading_deg": 1.9683191339019617,
+        "bilateral_roll_deg": 15.246835526342316,
+        "duration_s": 5.52
+      },
+      {
+        "forward_mm": 30.088951632188387,
+        "heading_deg": -7.479458669234568,
+        "bilateral_roll_deg": 15.251117264297893,
+        "duration_s": 8.26
+      },
+      {
+        "forward_mm": 40.0158716533711,
+        "heading_deg": -6.516488225829619,
+        "bilateral_roll_deg": 15.26040295345184,
+        "duration_s": 11.040000000000003
+      }
+    ],
+    "score": 1211.897367352887
+  },
+  "right_start_demo": {
+    "completed_steps": 8,
+    "requested_steps": 8,
+    "steps": [
+      {
+        "index": 0,
+        "side": 1,
+        "start_s": 0.0,
+        "end_s": 2.7600000000000002,
+        "heading_deg": -10.712961793421321,
+        "target_heading_deg": -12,
+        "repeats": 1,
+        "turn_goal_met": true
+      },
+      {
+        "index": 1,
+        "side": -1,
+        "start_s": 2.7800000000000002,
+        "end_s": 5.5600000000000005,
+        "heading_deg": -0.44399191852249087,
+        "target_heading_deg": 0.0,
+        "repeats": 1,
+        "turn_goal_met": true
+      },
+      {
+        "index": 2,
+        "side": 1,
+        "start_s": 5.58,
+        "end_s": 8.34,
+        "heading_deg": -11.154048823791468,
+        "target_heading_deg": -12,
+        "repeats": 1,
+        "turn_goal_met": true
+      },
+      {
+        "index": 3,
+        "side": -1,
+        "start_s": 8.36,
+        "end_s": 11.120000000000001,
+        "heading_deg": -0.8865287263508623,
+        "target_heading_deg": 0.0,
+        "repeats": 1,
+        "turn_goal_met": true
+      },
+      {
+        "index": 4,
+        "side": 1,
+        "start_s": 11.14,
+        "end_s": 13.86,
+        "heading_deg": -10.898961047117727,
+        "target_heading_deg": -12,
+        "repeats": 1,
+        "turn_goal_met": true
+      },
+      {
+        "index": 5,
+        "side": -1,
+        "start_s": 13.879999999999999,
+        "end_s": 16.64,
+        "heading_deg": -0.6255013329034252,
+        "target_heading_deg": 0.0,
+        "repeats": 1,
+        "turn_goal_met": true
+      },
+      {
+        "index": 6,
+        "side": 1,
+        "start_s": 16.66,
+        "end_s": 19.400000000000002,
+        "heading_deg": -10.642162485948933,
+        "target_heading_deg": -12,
+        "repeats": 1,
+        "turn_goal_met": true
+      },
+      {
+        "index": 7,
+        "side": -1,
+        "start_s": 19.42,
+        "end_s": 22.2,
+        "heading_deg": -0.3693863199842756,
+        "target_heading_deg": 0.0,
+        "repeats": 1,
+        "turn_goal_met": true
+      }
+    ],
+    "bursts": [
+      {
+        "side": 1,
+        "start_s": 0.0,
+        "end_s": 2.7600000000000002,
+        "heading_deg": -10.712961793421321,
+        "observed_turn_progress_deg": 10.624406294284498,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 2.7800000000000002,
+        "end_s": 5.5600000000000005,
+        "heading_deg": -0.44399191852249087,
+        "observed_turn_progress_deg": 10.064181935357906,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 5.58,
+        "end_s": 8.34,
+        "heading_deg": -11.154048823791468,
+        "observed_turn_progress_deg": 10.480159417908062,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 8.36,
+        "end_s": 11.120000000000001,
+        "heading_deg": -0.8865287263508623,
+        "observed_turn_progress_deg": 10.118316110877469,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 11.14,
+        "end_s": 13.86,
+        "heading_deg": -10.898961047117727,
+        "observed_turn_progress_deg": 9.876844425657188,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 13.879999999999999,
+        "end_s": 16.64,
+        "heading_deg": -0.6255013329034252,
+        "observed_turn_progress_deg": 10.324723248530328,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 16.66,
+        "end_s": 19.400000000000002,
+        "heading_deg": -10.642162485948933,
+        "observed_turn_progress_deg": 10.159506701699973,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 19.42,
+        "end_s": 22.2,
+        "heading_deg": -0.3693863199842756,
+        "observed_turn_progress_deg": 10.343337853951489,
+        "policy": "primary",
+        "emergency_recovery": false
+      }
+    ],
+    "completed": true,
+    "max_completed_cycle_heading_deg": 0.8865287263508623,
+    "cycle_end_headings_deg": [
+      -0.44399191852249087,
+      -0.8865287263508623,
+      -0.6255013329034252,
+      -0.3693863199842756
+    ],
+    "physical_state_resets_between_steps": false,
+    "target_step_turn_deg": 12,
+    "heading_sensor_delay_s": 0.02,
+    "heading_sensor_noise_deg": 0.1,
+    "fallback_activated": false,
+    "sequencing": {
+      "min_step_s": 1.2,
+      "settle_s": 0.04,
+      "post_catch_s": 0.6,
+      "head_return_margin_s": 0.0,
+      "head_settle_yaw_deg": 0.0,
+      "head_settle_rate_deg_s": 15.0
+    },
+    "passed": true,
+    "stable": true,
+    "course_ok": true,
+    "mean_stride_mm": 20.240100732927182,
+    "min_bilateral_roll_deg": 15.15295623209214,
+    "forward_mm": 80.9610806756719,
+    "speed_mm_s": 3.6468955259311664,
+    "full_trial_speed_mm_s": 2.2489189076575524,
+    "pairs": [
+      {
+        "forward_mm": 20.5377363835394,
+        "heading_deg": -0.44399191852249087,
+        "bilateral_roll_deg": 15.223831000740399,
+        "duration_s": 5.5600000000000005
+      },
+      {
+        "forward_mm": 20.51849504119646,
+        "heading_deg": -0.8865287263508623,
+        "bilateral_roll_deg": 15.217992017194648,
+        "duration_s": 5.540000000000001
+      },
+      {
+        "forward_mm": 19.947239337840934,
+        "heading_deg": -0.6255013329034252,
+        "bilateral_roll_deg": 15.15295623209214,
+        "duration_s": 5.5
+      },
+      {
+        "forward_mm": 19.956932169131942,
+        "heading_deg": -0.3693863199842756,
+        "bilateral_roll_deg": 15.155873284850772,
+        "duration_s": 5.539999999999999
+      }
+    ],
+    "score": 1180.9610806756718
+  },
+  "physical_limit_audit": {
+    "trials": 52,
+    "constant_waist_target_rad": 0,
+    "tilt_guard_deg": 35,
+    "torque_caps_respected": true,
+    "position_and_closure_guards_respected_in_passes": true,
+    "software_profile_unchanged": true
+  },
+  "unchanged_from_base": [
+    "configs/balance-recovery-trained.json",
+    "configs/contact-proxy.json",
+    "configs/first-session-preview.json",
+    "configs/heading-faster-trained.json",
+    "configs/heading-rocking-experimental.json",
+    "configs/heading-sensor-assumed.json",
+    "configs/heading-speed-trained.json",
+    "configs/heading-trained.json",
+    "configs/motors-datasheet.json",
+    "configs/motors-speed-trained.json",
+    "configs/penguin-feedback-experimental.json",
+    "configs/primitive-catch-experimental.json",
+    "configs/primitive-fall-experimental.json",
+    "configs/primitive-pivot-experimental.json",
+    "configs/sway-cad-proxy.json",
+    "configs/sway-candidate.json",
+    "configs/sway-faster-trained.json",
+    "configs/sway-heading-trained.json",
+    "configs/sway-progress-conservative.json",
+    "configs/sway-progress-fast.json",
+    "configs/sway-rocking-experimental.json",
+    "configs/sway-speed-trained.json",
+    "configs/sway-trained.json",
+    "src/reachy_locomotion/motors.py",
+    "src/reachy_locomotion/sway.py",
+    "src/reachy_locomotion/contact_probe.py",
+    "src/reachy_locomotion/primitives.py"
+  ],
+  "independent_qualification_matches_selected_recording": true,
+  "other_recording_replay": {
+    "completed": true,
+    "frames": 1801,
+    "max_absolute_errors": {
+      "qpos": 0.0,
+      "qvel": 0.0,
+      "foot_xyz_m": 0.0
+    },
+    "note": "Independent initializations; nominal replay does not activate the differing rescue selection rule."
+  },
+  "tests": {
+    "count": 105,
+    "passed": true,
+    "log": "experiments/reports/repository-tests-faster-balance-2026-11-19.txt"
+  },
+  "video": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1280,
+        "height": 580,
+        "r_frame_rate": "25/1",
+        "nb_frames": "787"
+      }
+    ],
+    "format": {
+      "duration": "31.480000"
+    }
+  },
+  "render_until_s": 31.44,
+  "full_simulation_horizon_s": 36,
+  "video_playback_rate": 1,
+  "visual_review": [
+    "selected front/side framing",
+    "support and heading overlays",
+    "speed comparison and all-outcome plot"
+  ],
+  "report_inventory": [
+    {
+      "path": "experiments/reports/motor-training-faster-balance-composition-2026-11-19.json",
+      "completed": true,
+      "records": 30
+    },
+    {
+      "path": "experiments/reports/motor-training-faster-balance-demo-2026-11-19.json",
+      "completed": null,
+      "records": 0
+    },
+    {
+      "path": "experiments/reports/motor-training-faster-balance-fallback-feedback-2026-11-19.json",
+      "completed": true,
+      "records": 24
+    },
+    {
+      "path": "experiments/reports/motor-training-faster-balance-fallback-launch-2026-11-19.json",
+      "completed": true,
+      "records": 192
+    },
+    {
+      "path": "experiments/reports/motor-training-faster-balance-feedback-2026-11-19.json",
+      "completed": true,
+      "records": 24
+    },
+    {
+      "path": "experiments/reports/motor-training-faster-balance-feedback-demo-2026-11-19.json",
+      "completed": null,
+      "records": 0
+    },
+    {
+      "path": "experiments/reports/motor-training-faster-balance-feedback-qualified-2026-11-19.json",
+      "completed": true,
+      "records": 45
+    },
+    {
+      "path": "experiments/reports/motor-training-faster-balance-fine-timing-2026-11-19.json",
+      "completed": true,
+      "records": 76
+    },
+    {
+      "path": "experiments/reports/motor-training-faster-balance-finer-failures-2026-11-19.json",
+      "completed": true,
+      "records": 4
+    },
+    {
+      "path": "experiments/reports/motor-training-faster-balance-head-settling-2026-11-19.json",
+      "completed": true,
+      "records": 6
+    },
+    {
+      "path": "experiments/reports/motor-training-faster-balance-heading-2026-11-19.json",
+      "completed": true,
+      "records": 12
+    },
+    {
+      "path": "experiments/reports/motor-training-faster-balance-launch-composition-2026-11-19.json",
+      "completed": true,
+      "records": 10
+    },
+    {
+      "path": "experiments/reports/motor-training-faster-balance-left-demo-2026-11-19.json",
+      "completed": null,
+      "records": 0
+    },
+    {
+      "path": "experiments/reports/motor-training-faster-balance-left-finer-2026-11-19.json",
+      "completed": null,
+      "records": 0
+    },
+    {
+      "path": "experiments/reports/motor-training-faster-balance-primary-stress-2026-11-19.json",
+      "completed": true,
+      "records": 52
+    },
+    {
+      "path": "experiments/reports/motor-training-faster-balance-primary-stress-v2-2026-11-19.json",
+      "completed": true,
+      "records": 52
+    },
+    {
+      "path": "experiments/reports/motor-training-faster-balance-progress-rescue-2026-11-19.json",
+      "completed": true,
+      "records": 4
+    },
+    {
+      "path": "experiments/reports/motor-training-faster-balance-qualified-2026-11-19.json",
+      "completed": false,
+      "records": 12
+    },
+    {
+      "path": "experiments/reports/motor-training-faster-balance-recording-replay-2026-11-19.json",
+      "completed": true,
+      "records": 0
+    },
+    {
+      "path": "experiments/reports/motor-training-faster-balance-sensor-age-2026-11-19.json",
+      "completed": true,
+      "records": 6
+    },
+    {
+      "path": "experiments/reports/motor-training-faster-balance-timing-2026-11-19.json",
+      "completed": true,
+      "records": 114
+    },
+    {
+      "path": "experiments/reports/motor-training-faster-balance-transition-2026-11-19.json",
+      "completed": true,
+      "records": 32
+    }
+  ],
+  "hashes": {
+    ".gitignore": "bdab0486e47c79a2e9f7da34373e362098834f43cc2157394f231ca2fe2e32c0",
+    "BRIEF.md": "52658686b850c9d15f23777ab8e81703332f51e1db190cdfe7ae04004a73b619",
+    "README.md": "8a50abb70892daac7106d008349e43d0af6faeff46a7d4cc005251850ec44dd3",
+    "STATUS.md": "0a69d83f9b6e323d6d7fd8cee7806221d602cafcc94f6aab64772745e221e69f",
+    "configs/penguin-faster-feedback-trained.json": "ad4d6f07b1ab4298bb3d1ef8d776fbf75bae45194466f3369a9a56942ed5fcd0",
+    "configs/penguin-faster-trained.json": "74d2b2b1d45527b0d4740b752f9acf242340292a10dc31cefed09ea9a8fa2b5b",
+    "docs/FASTER_PENGUIN_2026-11-19.md": "a7fd08731033e68cf979168ae092540472dad0fd7fcacb19f341de9fe47cefc7",
+    "experiments/check_faster_fine_failures.py": "8a1417f65f0a4f8cd30c0a3d8707a5dd509c5adff15f288f5656150bc3563584",
+    "experiments/check_faster_launch_composition.py": "4622d4c8759c768f19c78b02f28532acc519f917ce4856758f58da49f33a14c1",
+    "experiments/check_progress_rescue.py": "246a94975811590462faa7aafc0ad53660423959d1baf2d93ea27f7d08058ad4",
+    "experiments/finalize_faster_penguin.py": "433f50e3aff93595f32b73d7786c82478bd0a9c186266dbae07f59fe8e26526b",
+    "experiments/generated/faster-balance/best-feedback-four-pairs.json": "77e063360ab9904d2b07bd57d51f18a5fd5b137b2b44db3bb18f5a3b52320aae",
+    "experiments/generated/faster-balance/best-left-four-pairs.json": "b1f2a34bedc336adb8b0dc5c8bb8d809d0a72c312501f8349daa096da14c5a24",
+    "experiments/plot_faster_penguin.py": "a6fbd8a17c2e9e9a83145ff2715da2a7a6e2eed21fe2517ea5b1dac9399a36d2",
+    "experiments/qualify_faster_feedback.py": "3fef2aea35b0de8705e02e6213127b9552307563ba3f6e07a567b372f610b161",
+    "experiments/qualify_faster_penguin.py": "fd67f8c16a4c9d96e33f5a58c94107edeab3ee316cd466eb1706e0da31b2dc31",
+    "experiments/qualify_policy_bank.py": "a72e2e7ac3a7106a782f64970bf701345fb1dac4025a28b8df5bb011434b75af",
+    "experiments/refine_faster_balance.py": "28b6c2468bd68c1cbde293be21edf48b4bbdd46107304bf86738d48ca535b82e",
+    "experiments/refine_faster_heading.py": "934fea277a99d25c8e4b608d7f1e7fcd447d62045d2db2dae926862f2f81b5a6",
+    "experiments/refine_head_settling.py": "ab5b84e79d25053d992023dd88935ba5921ed509cb014691a11c306d7e04ee66",
+    "experiments/render_sway.py": "f40ce10c20a4c55ff7b7e236ef407ec2fe0e6b1bf79080299290a9ecb0db78de",
+    "experiments/reports/motor-training-faster-balance-composition-2026-11-19.json": "1e35916f0712ca0d7a99980cedb9d0171de63975a19a9aba2f68e88a5fd5ebb5",
+    "experiments/reports/motor-training-faster-balance-demo-2026-11-19.json": "bd48a2581fecb4270318002d6b1e7004b3e493aa26fa6defb923666b687bc682",
+    "experiments/reports/motor-training-faster-balance-fallback-feedback-2026-11-19.json": "984d34b6ff715a37de7c395238e245d1d4993822f508f183bd23f04270e4bb14",
+    "experiments/reports/motor-training-faster-balance-fallback-launch-2026-11-19.json": "575c01a423aa8c864f2f4f4f0dba4003d3cec0e05fbe2625b4df81feaa3a2c70",
+    "experiments/reports/motor-training-faster-balance-feedback-2026-11-19.json": "cba6efa74964d546b5c20feab6387cbb042ae20c49dc15f59cb4558ab6f2eb57",
+    "experiments/reports/motor-training-faster-balance-feedback-demo-2026-11-19.json": "1b1448742cb31dc98dc2e5d82b5d5174fcc6b74624da13e7a4678ff516402163",
+    "experiments/reports/motor-training-faster-balance-feedback-qualified-2026-11-19.json": "23c126d3b897bac55c1e1fe6bb4f3d2b2bd50e967ebe9d8bb2ef2edc336d76a5",
+    "experiments/reports/motor-training-faster-balance-fine-timing-2026-11-19.json": "1ec8acc853c4d592b7ea8bdcf8b1c972855c01740c7325aa9b54fe028e0be1bc",
+    "experiments/reports/motor-training-faster-balance-finer-failures-2026-11-19.json": "0520dca4fe89f3e9d93ffa340c5fc50a1fdc8c2c375b0b95575e833c46543342",
+    "experiments/reports/motor-training-faster-balance-head-settling-2026-11-19.json": "8d6e68a4118fb8bb8c6dff989e4053e40501d7f7149a7f1936f8040f0697fb96",
+    "experiments/reports/motor-training-faster-balance-heading-2026-11-19.json": "cda00266d19b8d3d722fcb00ae86aa8e2911cf27809ffe6737986eaec84f0d7d",
+    "experiments/reports/motor-training-faster-balance-launch-composition-2026-11-19.json": "93a806e84a122a75f9562c5a79cd4e4c49ca94b8910fb86d2218fe1a35a7d847",
+    "experiments/reports/motor-training-faster-balance-left-demo-2026-11-19.json": "8e47433dacb3e74b9c70a24dd4fe816222022e25167ff953531035c0c6fd6a13",
+    "experiments/reports/motor-training-faster-balance-left-finer-2026-11-19.json": "74c374a86d800f6a3942725c8d8a29e7ad74411be60014bf0cf0279e17d6fdd5",
+    "experiments/reports/motor-training-faster-balance-primary-stress-2026-11-19.json": "da3212bcce20a9eba65d57dedb124a7fdbb1e48ea8440f1be1b065adffb3710b",
+    "experiments/reports/motor-training-faster-balance-primary-stress-v2-2026-11-19.json": "fbbe6bdc45a2d48a3d880686371b056a3931107e8c57b5e47bf1f4993d6f624a",
+    "experiments/reports/motor-training-faster-balance-progress-rescue-2026-11-19.json": "8c643760290d9cf1aba81b1142065447a1371d126814f9cc54bb1a5e19a30cc9",
+    "experiments/reports/motor-training-faster-balance-qualified-2026-11-19.json": "d0c107f52d1a198ce96334eb739e43856315148d5f21b0fb3bcdf1727fbb11b1",
+    "experiments/reports/motor-training-faster-balance-recording-replay-2026-11-19.json": "73c6abe741cf3361645b6362938d6447a4d7160d65f8158c9f9c80a74badf94e",
+    "experiments/reports/motor-training-faster-balance-sensor-age-2026-11-19.json": "55d249280ee6a24139df2a153500d612bbc73ba42654dfc0d709180be827f088",
+    "experiments/reports/motor-training-faster-balance-timing-2026-11-19.json": "baca235e9d53e80917cf4cd5a7bcdf5d264765b2ff72107695fdeff9597ee289",
+    "experiments/reports/motor-training-faster-balance-transition-2026-11-19.json": "07ed9dac547993246273f50e27bee3dfe8882a1a2f2fc59f20997ba416f4a06d",
+    "experiments/reports/repository-tests-faster-balance-2026-11-19.txt": "a678106e30e7aed1852bb85f175a38fb4a679b0ff6b236df9628b9f7a03cfed9",
+    "experiments/train_faster_balance.py": "144e690d6de5063f9957064cd890b33dc436c48992fd979170fe998e46759cc5",
+    "experiments/train_faster_fallback_launch.py": "b887d4508b35c2055c622872a54ec297070605d66672906d127989b9bc9f8bdd",
+    "experiments/train_faster_feedback.py": "639f2d01e8fa7627af7cb3676645f86a504f386ad25d5da57ed8a7d40c5363cc",
+    "experiments/train_faster_penguin.py": "f2a85af8a8417a9a32d7c53fdd64ee53435eaf85ac8e604a79021f53da20eaa2",
+    "experiments/train_faster_recovery_transition.py": "84dcb31f0b9b20e15855fbc673cfca858dbfb0de1c6c834b2ae540634bde5c3a",
+    "experiments/train_sensor_age_compensation.py": "39041efa74ccf043d4df90d92a37f37c79037b3992c84b77c41efb230996b71c",
+    "media/simulation/faster-penguin-2026-11-19-chart.png": "d6250fe9567c2614295f819a1b86d89a7f6f240bdfe77f9cbd2f46e3a6216b81",
+    "media/simulation/faster-penguin-best-2026-11-19.mp4": "e864a4decf88f56e4d1aaa15d4e05b52c845c43803b04a062e2551d1f9b196e8",
+    "media/simulation/faster-penguin-best-2026-11-19.png": "ce2ae716501415f9834fca98a3e8767942588cf6a44b1f8c3e03147369c282f1",
+    "src/reachy_locomotion/balance.py": "714be230fdeae93f7d2387c9f0d7dc2176ec101d3c09b49a1c20fb2da42d9e91",
+    "src/reachy_locomotion/penguin.py": "ba55c710ea9cd49dc9207df2e299547eb15de8d0c0bd1403716c1c00d3c358a2",
+    "tests/test_balance.py": "157291e07dc1bbc554adc4d612773d09bfe946116872131c491716939e475428",
+    "tests/test_penguin.py": "af3dc38e53241fbae763b481063c402946f1bf8a55af1ca01a2b2bf6060142ad"
+  },
+  "notes": [
+    "All earlier failing walking conditions repaired; unseen failures remain.",
+    "Qualification counts are trials, not independent robots or guarantees.",
+    "Stepping speed excludes the post-finish idle tail; video removes only idle tail.",
+    "Earlier age-only qualification is incomplete and superseded; all partial evidence preserved.",
+    "No hardware or shared GPU/Nimbus/EY work used."
+  ]
+}

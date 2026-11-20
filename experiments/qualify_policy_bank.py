@@ -22,11 +22,15 @@ def evaluate(job):
     if key not in CACHE:
         CACHE[key] = PrimitiveSimulator('experiments/upstream-reachy-mini', config)
     sim = CACHE[key]; g = p['primary']['recipe']; f = p['primary']['feedback']
-    ctl = PenguinController(g, f, cycles=job.get('cycles', 1), min_step_s=3., start_side=side,
+    sequencing=dict(min_step_s=3.)
+    sequencing.update(p.get('sequencing',{}))
+    ctl = PenguinController(g, f, cycles=job.get('cycles', 1), start_side=side,
                             checked_ik=sim.checked_ik, target_step_turn_deg=p['target_step_turn_deg'],
                             max_repeats=p['max_repeats'], pivot_only=pivot,
                             heading_noise_deg=job.get('heading_noise_deg', .1), heading_seed=job.get('heading_seed', 42),
-                            fallback_policy=p['fallback'], switch_below_deg=p['switch_below_deg'])
+                            fallback_policy=p['fallback'], switch_below_deg=p['switch_below_deg'],
+                            delayed_sensor_fallback=p.get('delayed_sensor_fallback'),
+                            rescue_after_weak_fallback_deg=p.get('rescue_after_weak_fallback_deg',0.),**sequencing)
     r = sim.run_primitive(mirrored(g, side), seconds=job.get('seconds', 15 if pivot else 28),
                           waist_mode='hold_neutral', controller=ctl, tilt_limit_deg=35, record=job.get('record', False))
     summary = ctl.report(); pm = pivot_metrics(r)
@@ -71,7 +75,7 @@ def main():
             p = copy.deepcopy(policy)
             sensor = dict(sensor_delay_frames=int(rng.integers(1, 3)), sensor_noise_deg=float(rng.uniform(.05, .15)),
                           sensor_seed=int(rng.integers(0, 100000)))
-            for name in ['primary', 'fallback']:
+            for name in [n for n in ['primary','fallback','delayed_sensor_fallback'] if n in p]:
                 p[name]['feedback'].update(sensor)
             append(f'fresh-{i}', config, p, side, int(rng.integers(0, 100000)))
     for side in [-1, 1]:

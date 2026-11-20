@@ -1,5 +1,54 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 19 — faster penguin gait and repaired known failures
+
+Trained on the previous failing models and shortened state-gated pauses. All
+**26 previously seen walking cases pass** at 0.25 ms; the four formerly failing
+cases also pass at **0.125 ms**. A new frozen split (seed 2026111992) gives
+**14/16 passes**: unseen-3 left hits the 35° guard; unseen-7 left stays upright
+but exhausts turn attempts, advances only 6.33 mm and ends 23.14° off heading.
+No tuning followed that split. Do not claim universal no-fall robustness.
+
+Selected policy: `configs/penguin-faster-feedback-trained.json`. The primary
+catch uses 14° predicted signed roll, 80 ms prediction and a 20 ms response
+delay. Physical forward-head return starts 0.6 s after catch over 0.4 s; yaw
+return is 0.4 s. Shorter phase floors retain the same low roll/rate checks.
+A regular fallback is selected after <3° observed signed turn. A learned rescue
+launch is used only if that fallback also gives <5°, with older roll samples.
+Selection uses feedback and known sensor age, never hidden model parameters.
+The initial age-only selection policy is retained as experimental evidence and
+is superseded. Gain-transition, prediction-age and head-settling variants remain
+optional, disabled in the selected config. Earlier policies are preserved.
+
+**Best nominal video:** left start, four complete pairs / eleven bursts,
+**112.05 mm in 30.44 s of stepping**, **3.681 mm/s** versus 2.925 (**+25.8%**).
+Minimum bilateral roll 15.26°, peak rim-height difference 29.77 mm, maximum
+pair-end heading 7.52°. Burst intervals are typically 2.76 s versus 3.78 s.
+The full 36 s simulation remains settled; video shows motion plus one second
+of rest at 1×. The right start is also valid: 80.96 mm in 22.20 s, 3.647 mm/s,
+0.89° maximum pair-end heading, four pairs / eight bursts.
+
+Both four-pair directions pass at 0.125 ms. The selected left run gives
+111.90 mm, 3.676 mm/s and 7.48° heading, a 0.14% speed change. Some stress-case
+progress remains timestep-sensitive (fresh-3 left: 24.90 vs 20.73 mm), although
+both checks pass. Waist target remains zero; its measured angle deflects
+−2.63…+2.62°, with 0.0787 Nm peak holding torque. Physical motor/profile limits,
+mass/contact model and all failure guards are unchanged. No robot, shared GPU,
+Nimbus or EY work was touched; everything remains uncalibrated simulation.
+
+Media: `media/simulation/faster-penguin-best-2026-11-19.mp4` and
+`media/simulation/faster-penguin-2026-11-19-chart.png`.
+Method and commands: `docs/FASTER_PENGUIN_2026-11-19.md`.
+Frozen qualification: `experiments/reports/motor-training-faster-balance-feedback-qualified-2026-11-19.json`.
+Fine failure checks: `experiments/reports/motor-training-faster-balance-finer-failures-2026-11-19.json`.
+Artifact receipt: `experiments/reports/motor-training-faster-balance-artifact-receipt-2026-11-19.json`.
+**105 tests pass** in `experiments/reports/repository-tests-faster-balance-2026-11-19.txt`.
+
+Next: promote the two newly exposed cases to development; improve catch recovery
+and weak-step selection without reducing the speed already achieved. Reserve
+another unseen split. Do not execute on hardware before motor/contact/sensing
+calibration. Personal Git identity remains kadiru / Kadir Uyanik.
+
 ## November 19, 2026 — bilateral feedback and composed steps
 
 Implemented and trained signed roll/rate feedback with bounded head correction,

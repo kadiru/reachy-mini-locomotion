@@ -2,6 +2,17 @@
 
 ## Priority
 
+Latest outcome: faster feedback gait is 25.8% faster nominally; all 26 previously
+seen cases and all four finer failure rechecks pass. Fresh validation is 14/16,
+with one tilt guard and one heading/progress failure still open. Selected config:
+`configs/penguin-faster-feedback-trained.json`; see STATUS and
+`docs/FASTER_PENGUIN_2026-11-19.md`.
+
+Current follow-up: retrain on the failed conditions and shorten pauses to make
+the composed gait faster without falls. Keep fixed waist target, physical motor
+and command-profile limits and all guards. Preserve previous policies/evidence,
+use a new unseen qualification split, and record the best tested result.
+
 Latest result: bilateral feedback recovery passes 26/26 and pivot/walking pass
 20/20 original development checks. The two-pair video advances 88.6 mm, but
 broader unseen checks still fail (13/16 passes for each mode). See STATUS and

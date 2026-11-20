@@ -1,0 +1,10 @@
+{
+  "completed": true,
+  "frames": 1801,
+  "max_absolute_errors": {
+    "qpos": 0.0,
+    "qvel": 0.0,
+    "foot_xyz_m": 0.0
+  },
+  "note": "Independent initializations; nominal replay does not activate the differing rescue selection rule."
+}
