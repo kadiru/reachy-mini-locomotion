@@ -1,0 +1,764 @@
+{
+  "completed": true,
+  "evidence": "uncalibrated_simulation",
+  "hardware_ready": false,
+  "python": "3.9.6",
+  "mujoco": "3.3.7",
+  "numpy": "2.0.2",
+  "base_commit": "5c6311f44d644e0fb7d621dc740bb51f108d81a3",
+  "upstream_commit": "a9a2a42adcc1abc7d9c90d390889bbebf930c96c",
+  "unchanged_from_base": [
+    "configs/contact-proxy.json",
+    "configs/first-session-preview.json",
+    "configs/heading-faster-trained.json",
+    "configs/heading-rocking-experimental.json",
+    "configs/heading-sensor-assumed.json",
+    "configs/heading-speed-trained.json",
+    "configs/heading-trained.json",
+    "configs/motors-datasheet.json",
+    "configs/motors-speed-trained.json",
+    "configs/primitive-catch-experimental.json",
+    "configs/primitive-fall-experimental.json",
+    "configs/primitive-pivot-experimental.json",
+    "configs/sway-cad-proxy.json",
+    "configs/sway-candidate.json",
+    "configs/sway-faster-trained.json",
+    "configs/sway-heading-trained.json",
+    "configs/sway-progress-conservative.json",
+    "configs/sway-progress-fast.json",
+    "configs/sway-rocking-experimental.json",
+    "configs/sway-speed-trained.json",
+    "configs/sway-trained.json",
+    "src/reachy_locomotion/motors.py",
+    "src/reachy_locomotion/sway.py",
+    "src/reachy_locomotion/contact_probe.py"
+  ],
+  "tests": {
+    "count": 100,
+    "result": "passed",
+    "log": "experiments/reports/repository-tests-bilateral-final-2026-11-19.txt"
+  },
+  "physical_limit_audit": {
+    "trials": 84,
+    "waist_target_rad": 0,
+    "torque_caps_respected": true,
+    "software_profile_unchanged": true,
+    "tilt_guard_deg": 35,
+    "external_forces": false
+  },
+  "recovery": {
+    "passed": 26,
+    "total": 26
+  },
+  "qualification": {
+    "development-pivot": {
+      "passed": 10,
+      "total": 10
+    },
+    "development-walking": {
+      "passed": 10,
+      "total": 10
+    },
+    "fresh-pivot": {
+      "passed": 13,
+      "total": 16
+    },
+    "fresh-walking": {
+      "passed": 13,
+      "total": 16
+    },
+    "nominal-pivot": {
+      "passed": 2,
+      "total": 2
+    },
+    "nominal-walking": {
+      "passed": 2,
+      "total": 2
+    }
+  },
+  "demonstration": {
+    "completed_steps": 4,
+    "requested_steps": 4,
+    "steps": [
+      {
+        "index": 0,
+        "side": 1,
+        "start_s": 0.0,
+        "end_s": 7.58,
+        "heading_deg": -18.93134862611418,
+        "target_heading_deg": -15,
+        "repeats": 2,
+        "turn_goal_met": true
+      },
+      {
+        "index": 1,
+        "side": -1,
+        "start_s": 7.6,
+        "end_s": 15.16,
+        "heading_deg": -0.32436546632815727,
+        "target_heading_deg": 0.0,
+        "repeats": 2,
+        "turn_goal_met": true
+      },
+      {
+        "index": 2,
+        "side": 1,
+        "start_s": 15.18,
+        "end_s": 22.72,
+        "heading_deg": -19.24104660899138,
+        "target_heading_deg": -15,
+        "repeats": 2,
+        "turn_goal_met": true
+      },
+      {
+        "index": 3,
+        "side": -1,
+        "start_s": 22.74,
+        "end_s": 30.3,
+        "heading_deg": -0.6002581767043823,
+        "target_heading_deg": 0.0,
+        "repeats": 2,
+        "turn_goal_met": true
+      }
+    ],
+    "bursts": [
+      {
+        "side": 1,
+        "start_s": 0.0,
+        "end_s": 3.7800000000000002,
+        "heading_deg": -9.2734530524948,
+        "observed_turn_progress_deg": 9.410276147949855,
+        "policy": "primary"
+      },
+      {
+        "side": 1,
+        "start_s": 3.8000000000000003,
+        "end_s": 7.58,
+        "heading_deg": -18.93134862611418,
+        "observed_turn_progress_deg": 9.360654157072101,
+        "policy": "primary"
+      },
+      {
+        "side": -1,
+        "start_s": 7.6,
+        "end_s": 11.36,
+        "heading_deg": -9.592642105228705,
+        "observed_turn_progress_deg": 9.112993868439416,
+        "policy": "primary"
+      },
+      {
+        "side": -1,
+        "start_s": 11.379999999999999,
+        "end_s": 15.16,
+        "heading_deg": -0.32436546632815727,
+        "observed_turn_progress_deg": 9.419071086231089,
+        "policy": "primary"
+      },
+      {
+        "side": 1,
+        "start_s": 15.18,
+        "end_s": 18.94,
+        "heading_deg": -9.607656142482545,
+        "observed_turn_progress_deg": 9.33521482816567,
+        "policy": "primary"
+      },
+      {
+        "side": 1,
+        "start_s": 18.96,
+        "end_s": 22.72,
+        "heading_deg": -19.24104660899138,
+        "observed_turn_progress_deg": 9.538130112634107,
+        "policy": "primary"
+      },
+      {
+        "side": -1,
+        "start_s": 22.74,
+        "end_s": 26.52,
+        "heading_deg": -9.861705760155237,
+        "observed_turn_progress_deg": 9.347249312481496,
+        "policy": "primary"
+      },
+      {
+        "side": -1,
+        "start_s": 26.54,
+        "end_s": 30.3,
+        "heading_deg": -0.6002581767043823,
+        "observed_turn_progress_deg": 8.99646745420685,
+        "policy": "primary"
+      }
+    ],
+    "completed": true,
+    "max_completed_cycle_heading_deg": 0.6002581767043823,
+    "cycle_end_headings_deg": [
+      -0.32436546632815727,
+      -0.6002581767043823
+    ],
+    "physical_state_resets_between_steps": false,
+    "target_step_turn_deg": 15,
+    "heading_sensor_delay_s": 0.02,
+    "heading_sensor_noise_deg": 0.1,
+    "fallback_activated": false,
+    "passed": true,
+    "stable": true,
+    "course_ok": true,
+    "mean_stride_mm": 44.32131813615635,
+    "min_bilateral_roll_deg": 15.269240662333985,
+    "forward_mm": 88.6422832286921,
+    "speed_mm_s": 2.9254878953363725,
+    "full_trial_speed_mm_s": 2.770071350896628,
+    "pairs": [
+      {
+        "forward_mm": 44.39439434513163,
+        "heading_deg": -0.32436546632815727,
+        "bilateral_roll_deg": 15.272686163952386,
+        "duration_s": 15.16
+      },
+      {
+        "forward_mm": 44.24824192718106,
+        "heading_deg": -0.6002581767043823,
+        "bilateral_roll_deg": 15.269240662333985,
+        "duration_s": 15.120000000000001
+      }
+    ],
+    "score": 1188.6422832286921
+  },
+  "finer_demonstration": {
+    "completed_steps": 4,
+    "requested_steps": 4,
+    "steps": [
+      {
+        "index": 0,
+        "side": 1,
+        "start_s": 0.0,
+        "end_s": 7.58,
+        "heading_deg": -19.07804710094014,
+        "target_heading_deg": -15,
+        "repeats": 2,
+        "turn_goal_met": true
+      },
+      {
+        "index": 1,
+        "side": -1,
+        "start_s": 7.6,
+        "end_s": 15.16,
+        "heading_deg": -0.5150051306447063,
+        "target_heading_deg": 0.0,
+        "repeats": 2,
+        "turn_goal_met": true
+      },
+      {
+        "index": 2,
+        "side": 1,
+        "start_s": 15.18,
+        "end_s": 22.72,
+        "heading_deg": -19.60782138759169,
+        "target_heading_deg": -15,
+        "repeats": 2,
+        "turn_goal_met": true
+      },
+      {
+        "index": 3,
+        "side": -1,
+        "start_s": 22.74,
+        "end_s": 30.3,
+        "heading_deg": -1.034723847471808,
+        "target_heading_deg": 0.0,
+        "repeats": 2,
+        "turn_goal_met": true
+      }
+    ],
+    "bursts": [
+      {
+        "side": 1,
+        "start_s": 0.0,
+        "end_s": 3.7800000000000002,
+        "heading_deg": -9.33488804390745,
+        "observed_turn_progress_deg": 9.471711357030967,
+        "policy": "primary"
+      },
+      {
+        "side": 1,
+        "start_s": 3.8000000000000003,
+        "end_s": 7.58,
+        "heading_deg": -19.07804710094014,
+        "observed_turn_progress_deg": 9.445917654814396,
+        "policy": "primary"
+      },
+      {
+        "side": -1,
+        "start_s": 7.6,
+        "end_s": 11.36,
+        "heading_deg": -9.769091037676668,
+        "observed_turn_progress_deg": 9.083243854479756,
+        "policy": "primary"
+      },
+      {
+        "side": -1,
+        "start_s": 11.379999999999999,
+        "end_s": 15.16,
+        "heading_deg": -0.5150051306447063,
+        "observed_turn_progress_deg": 9.404880333574805,
+        "policy": "primary"
+      },
+      {
+        "side": 1,
+        "start_s": 15.18,
+        "end_s": 18.94,
+        "heading_deg": -9.875094537356253,
+        "observed_turn_progress_deg": 9.412013983758644,
+        "policy": "primary"
+      },
+      {
+        "side": 1,
+        "start_s": 18.96,
+        "end_s": 22.72,
+        "heading_deg": -19.60782138759169,
+        "observed_turn_progress_deg": 9.637466506232597,
+        "policy": "primary"
+      },
+      {
+        "side": -1,
+        "start_s": 22.74,
+        "end_s": 26.52,
+        "heading_deg": -10.287929623534414,
+        "observed_turn_progress_deg": 9.287800680314396,
+        "policy": "primary"
+      },
+      {
+        "side": -1,
+        "start_s": 26.54,
+        "end_s": 30.3,
+        "heading_deg": -1.034723847471808,
+        "observed_turn_progress_deg": 8.988225632650018,
+        "policy": "primary"
+      }
+    ],
+    "completed": true,
+    "max_completed_cycle_heading_deg": 1.034723847471808,
+    "cycle_end_headings_deg": [
+      -0.5150051306447063,
+      -1.034723847471808
+    ],
+    "physical_state_resets_between_steps": false,
+    "target_step_turn_deg": 15,
+    "heading_sensor_delay_s": 0.02,
+    "heading_sensor_noise_deg": 0.1,
+    "fallback_activated": false,
+    "passed": true,
+    "stable": true,
+    "course_ok": true,
+    "mean_stride_mm": 44.58099931959855,
+    "min_bilateral_roll_deg": 15.241493574248842,
+    "forward_mm": 89.16164683083349,
+    "speed_mm_s": 2.942628608278333,
+    "full_trial_speed_mm_s": 2.7863014634635466,
+    "pairs": [
+      {
+        "forward_mm": 44.70159217878368,
+        "heading_deg": -0.5150051306447063,
+        "bilateral_roll_deg": 15.249368658701083,
+        "duration_s": 15.16
+      },
+      {
+        "forward_mm": 44.46040646041342,
+        "heading_deg": -1.034723847471808,
+        "bilateral_roll_deg": 15.241493574248842,
+        "duration_s": 15.120000000000001
+      }
+    ],
+    "score": 1189.1616468308334
+  },
+  "independent_replay": {
+    "completed": true,
+    "checks": [
+      {
+        "recording": "experiments/generated/bilateral/recovery-left.json",
+        "frames": 251,
+        "max_absolute_errors": {
+          "qpos": 0.0,
+          "qvel": 0.0,
+          "time_s": 0.0,
+          "foot_xyz_m": 0.0,
+          "heading_from_startup_rad": 0.0
+        },
+        "passed": true
+      },
+      {
+        "recording": "experiments/generated/bilateral/recovery-right.json",
+        "frames": 251,
+        "max_absolute_errors": {
+          "qpos": 0.0,
+          "qvel": 0.0,
+          "time_s": 0.0,
+          "foot_xyz_m": 0.0,
+          "heading_from_startup_rad": 0.0
+        },
+        "passed": true
+      },
+      {
+        "recording": "experiments/generated/bilateral/penguin-two-cycles.json",
+        "frames": 1601,
+        "max_absolute_errors": {
+          "qpos": 0.0,
+          "qvel": 0.0,
+          "time_s": 0.0,
+          "foot_xyz_m": 0.0,
+          "heading_from_startup_rad": 0.0
+        },
+        "passed": true
+      }
+    ]
+  },
+  "video": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1280,
+        "height": 580,
+        "r_frame_rate": "25/1",
+        "nb_frames": "1053"
+      }
+    ],
+    "format": {
+      "duration": "42.120000"
+    }
+  },
+  "video_chapters_s": {
+    "left_recovery": [
+      0,
+      5.04
+    ],
+    "right_recovery": [
+      5.04,
+      10.08
+    ],
+    "penguin": [
+      10.08,
+      42.12
+    ]
+  },
+  "visual_review": [
+    "both recovery clips",
+    "walking head/support visibility",
+    "walking summary frame",
+    "all-outcome chart"
+  ],
+  "report_inventory": [
+    {
+      "path": "experiments/reports/motor-training-balance-adaptive-pivots-2026-11-19.json",
+      "completed": true,
+      "record_count": 20,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-anticipatory-margin-2026-11-19.json",
+      "completed": true,
+      "record_count": 72,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-anticipatory-pivot-2026-11-19.json",
+      "completed": true,
+      "record_count": 72,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-emergency-development-2026-11-19.json",
+      "completed": false,
+      "record_count": 4,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-emergency-screen-2026-11-19.json",
+      "completed": true,
+      "record_count": 72,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-lateral-2026-11-19.json",
+      "completed": true,
+      "record_count": 72,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-lateral-negative-2026-11-19.json",
+      "completed": true,
+      "record_count": 54,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-lateral-stress-2026-11-19.json",
+      "completed": true,
+      "record_count": 90,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-launch-2026-11-19.json",
+      "completed": true,
+      "record_count": 24,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-launch-stress-2026-11-19.json",
+      "completed": true,
+      "record_count": 60,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-measured-brake-2026-11-19.json",
+      "completed": true,
+      "record_count": 48,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-neutral-qualified-2026-11-19.json",
+      "completed": true,
+      "record_count": 26,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-neutral-recovery-2026-11-19.json",
+      "completed": true,
+      "record_count": 96,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-phase-aligned-2026-11-19.json",
+      "completed": true,
+      "record_count": 54,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-pivot-energy-2026-11-19.json",
+      "completed": true,
+      "record_count": 60,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-pivot-phase-2026-11-19.json",
+      "completed": true,
+      "record_count": 48,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-pivot-probe-2026-11-19.json",
+      "completed": true,
+      "record_count": 96,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-pivot-stress-2026-11-19.json",
+      "completed": true,
+      "record_count": 120,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-probe-2026-11-19.json",
+      "completed": true,
+      "record_count": 72,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-recovery-conservative-2026-11-19.json",
+      "completed": true,
+      "record_count": 26,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-recovery-final-2026-11-19.json",
+      "completed": true,
+      "record_count": 26,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-recovery-qualified-2026-11-19.json",
+      "completed": true,
+      "record_count": 26,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-recovery-refined-2026-11-19.json",
+      "completed": true,
+      "record_count": 72,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-signed-2026-11-19.json",
+      "completed": true,
+      "record_count": 96,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-state-yaw-2026-11-19.json",
+      "completed": true,
+      "record_count": 96,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-balance-stress-2026-11-19.json",
+      "completed": true,
+      "record_count": 80,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-bilateral-replay-2026-11-19.json",
+      "completed": true,
+      "record_count": 3,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-penguin-demo-2026-11-19.json",
+      "completed": null,
+      "record_count": 0,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-penguin-demo-finer-2026-11-19.json",
+      "completed": null,
+      "record_count": 0,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-penguin-lateral-probe-2026-11-19.json",
+      "completed": true,
+      "record_count": 24,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-penguin-lateral-stress-2026-11-19.json",
+      "completed": true,
+      "record_count": 20,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-penguin-neutral-return-2026-11-19.json",
+      "completed": true,
+      "record_count": 30,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-penguin-probe-2026-11-19.json",
+      "completed": true,
+      "record_count": 36,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-penguin-stress-2026-11-19.json",
+      "completed": true,
+      "record_count": 20,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-policy-bank-development-2026-11-19.json",
+      "completed": true,
+      "record_count": 20,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-policy-bank-emergency-2026-11-19.json",
+      "completed": true,
+      "record_count": 32,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    },
+    {
+      "path": "experiments/reports/motor-training-policy-bank-qualified-2026-11-19.json",
+      "completed": true,
+      "record_count": 56,
+      "note": "Record counts include repeated recipes and nested development/qualification; not independent samples."
+    }
+  ],
+  "hashes": {
+    ".gitignore": "2685c3537e7fbcaa06ec1fca224bf7f8960bb3fdd665f7aa081fab16995bbe55",
+    "BRIEF.md": "6a1040126e7a808950a14553a7a9bb939d5c701b5c5d433f7b52622e3353fd9f",
+    "README.md": "46e4e671b48ec95e818f492c56a3cf804d496b3efa6445d4a611601793074dc6",
+    "STATUS.md": "eb78d13529a97570d083db7b0ba58024e04cf3500007b7c857659f12b33c71a0",
+    "configs/balance-recovery-trained.json": "5ce27b6171cb8dcc8dd9c7a1d843df139b5ae23acfb4667e90da1b28c585bba6",
+    "configs/penguin-feedback-experimental.json": "52e1a89bd2b07bf3a821a1e6ba533f4be1ec05ce05ea53f9ea58ac3fb2c18ca4",
+    "docs/BILATERAL_BALANCE_2026-11-19.md": "03be212feeef759d035bba9041d05318a69793dbf8414be9c3ed27b90675a011",
+    "experiments/finalize_bilateral.py": "9a9a4b939cb31d225a00fc7264dde72a39b8baeeb1f242011657980f47175953",
+    "experiments/generated/bilateral/penguin-two-cycles.json": "a1547271e173097964590a1bc9c9f101e8c698079e77ad59cb93241d3f22ed8f",
+    "experiments/generated/bilateral/recovery-left.json": "7bd4d0063e95371f805a33599100b5bf7285a43dd506fbb1556df7c564ad2559",
+    "experiments/generated/bilateral/recovery-right.json": "da39865ce05c528e56fe43d82710b700750d3c24299e9bd8e88f291c0f913b29",
+    "experiments/plot_bilateral.py": "9a29ff0dffc60ea58aec830dc0a3be7533a9e8cb1dd82a62b804452a3c6858be",
+    "experiments/qualify_balance.py": "8dde357fcb8e26cca339b26d90279194abafa5dc5f7c2f46135fa0d11ecfa293",
+    "experiments/qualify_emergency_bank.py": "1effc4a21b48e04a2b2f9dba4041ab3c1b9d33f60ac2e8e3277805e0dfefdd00",
+    "experiments/qualify_policy_bank.py": "fffbaf91890663ef7ff96f4ebef31153f3921aa38723e3c8eedb6789a67ccd8d",
+    "experiments/refine_balance.py": "0905209eab0b0e23e6580fa8e8c4c88fb6cf80ad93887e4675bda0694214b56d",
+    "experiments/refine_emergency_balance.py": "2ec0ab3046d3165da704aae67218551786492cad122cbe79b894e4664dcf5f6a",
+    "experiments/refine_penguin.py": "e727654274611efe158d81aac61c01596b53a9ae41f0317663bc01a8f809a095",
+    "experiments/refine_pivot_energy.py": "363f293737ca00ef6ef83f092ff39cba137e4052d67f1c8f57c0669e618e6f41",
+    "experiments/refine_pivot_phase.py": "14cddbc271638596422a8816c190d47a9ba304e58b87bab293ffea7e6835cbdc",
+    "experiments/refine_recovery.py": "bc3589ce61350d0891fc115fe67e5e4a613dc8ea288aae25b6e0cc325ffc25f1",
+    "experiments/render_sway.py": "448c5bba0680235c53b71bdb4b5a6bfe4130a378be28b59b1b0ad6852126e105",
+    "experiments/reports/motor-training-balance-adaptive-pivots-2026-11-19.json": "29307f67b3c513a161739993d362008ce4a6ba5860ea4b8e4c18d7371eb8c848",
+    "experiments/reports/motor-training-balance-anticipatory-margin-2026-11-19.json": "c88632774c694333cc58827c34c437849679c347ecec2523ea04bb303c853cdd",
+    "experiments/reports/motor-training-balance-anticipatory-pivot-2026-11-19.json": "60ea840d92aae33d42557db2ea0903e77fae7f3acf8cd83add69d370abdc454e",
+    "experiments/reports/motor-training-balance-emergency-development-2026-11-19.json": "7c66ab122142a18ad0e1aacd3d746040a817c21c807cd9723f843a754996f71c",
+    "experiments/reports/motor-training-balance-emergency-screen-2026-11-19.json": "c10e1d644dbff09c0258777a8d84bfd219ba977a2ff78cbc45f49d43507f9e80",
+    "experiments/reports/motor-training-balance-lateral-2026-11-19.json": "9a1c687808fd1221309be48447fbe83cc4de75430fcde98a25b4c4921d2b615e",
+    "experiments/reports/motor-training-balance-lateral-negative-2026-11-19.json": "d9c1046ecbd41597c946e5654bc5722144ee2f5331c8d3df8c76b0b584e382ad",
+    "experiments/reports/motor-training-balance-lateral-stress-2026-11-19.json": "5af82e65d472cec8e00236fb751a204c62769ccd4bd547abfb5c1ed4d1158d5f",
+    "experiments/reports/motor-training-balance-launch-2026-11-19.json": "07a0fe03756ae19e56dae65efcf7b2d9951c3f2207fc7b01497c90c7418dee25",
+    "experiments/reports/motor-training-balance-launch-stress-2026-11-19.json": "c09d185c9c7b1a17c1e7519874a55d8f93be312e4dd04bc8399db17868146f67",
+    "experiments/reports/motor-training-balance-measured-brake-2026-11-19.json": "3f8a6da618977a55a9d658d60e3e0dc6c97127eaa9139fbbbe7b904ef27d351b",
+    "experiments/reports/motor-training-balance-neutral-qualified-2026-11-19.json": "4adfc54ed301ad2cd98da490bad17278749bc870732601321c8b4db0b1cf7929",
+    "experiments/reports/motor-training-balance-neutral-recovery-2026-11-19.json": "b60c6382ba3fe09bd106d5c321e63a9c0831c52d51e7597e4b13f5d1cb8837b2",
+    "experiments/reports/motor-training-balance-phase-aligned-2026-11-19.json": "91e02f0fac436ac1e7fd708973b7d166b82d062b7b988618e621074c08a6c5ab",
+    "experiments/reports/motor-training-balance-pivot-energy-2026-11-19.json": "5a29007d8de3958cb1597a0aebd882900edf67b922943f35bd9ead3f6bfec7f5",
+    "experiments/reports/motor-training-balance-pivot-phase-2026-11-19.json": "a3bfe26145a46b11733d37986d6e74f572b80d99dc9f7a2feb355fe65098c87a",
+    "experiments/reports/motor-training-balance-pivot-probe-2026-11-19.json": "2f65cb8e80439cddad5a12b4ff054333150cc60ac1f0aa919713966bf54e5c35",
+    "experiments/reports/motor-training-balance-pivot-stress-2026-11-19.json": "b6da10f24d2fa4cc534a72d23c2b21c81843d38eac08482c1abe5c88725d5312",
+    "experiments/reports/motor-training-balance-probe-2026-11-19.json": "ffdfdd792d7aeb6eac0b2c524c1cd10f340a8a4b2cdb0865908d549a2789a003",
+    "experiments/reports/motor-training-balance-recovery-conservative-2026-11-19.json": "2fcf5798a1d1d0e2abfe8043f6930f21cc876b7c116d97552429928102df1317",
+    "experiments/reports/motor-training-balance-recovery-final-2026-11-19.json": "8ec3ce5dcb9bdaa90f95dedd718eb202bb107530c6a0560a329312b760c8cc2b",
+    "experiments/reports/motor-training-balance-recovery-qualified-2026-11-19.json": "fc7cb96c0de5041d25ac0e9e372a8162320bfcadd4a40f3f4a71505fa5783d77",
+    "experiments/reports/motor-training-balance-recovery-refined-2026-11-19.json": "24848492d15f59ac75c449e0552d52f8a511bd464a45d43f45ed0c8f9ae2ef7d",
+    "experiments/reports/motor-training-balance-signed-2026-11-19.json": "f2cbdc7e447158bb538a2e7a9da2187126fcb39149cca55f2ffc10efba3bdca8",
+    "experiments/reports/motor-training-balance-state-yaw-2026-11-19.json": "997292f4c4c16196a4eeef1212371188b8f9bf642c21baf0be0d44adbd9a0052",
+    "experiments/reports/motor-training-balance-stress-2026-11-19.json": "192e06f2a4f65db14dd0308807ca7ad5f59a5f09a42d34d182012f59643a6c2c",
+    "experiments/reports/motor-training-bilateral-replay-2026-11-19.json": "e695b4ff1d434cc7a849ad9bb62c97f5d85f734f7cf1e237bb97ecd809dff897",
+    "experiments/reports/motor-training-penguin-demo-2026-11-19.json": "64c003d7c98890d111ffab5bd7f15811e2d79ce7c4b99a240a218126ade5e4aa",
+    "experiments/reports/motor-training-penguin-demo-finer-2026-11-19.json": "2052f07cb2cbc4f656fdff29ddc62cf96316d9b49b29532f6ab5c5dd81a50162",
+    "experiments/reports/motor-training-penguin-lateral-probe-2026-11-19.json": "cdb340edc90a24fa4cea4db8096af69a6ce559495eac91c12c7747b2edd1fd04",
+    "experiments/reports/motor-training-penguin-lateral-stress-2026-11-19.json": "26d4374a4ee3e5836d54f5bdcafe647b3c0d4698d6a6e060f74c1b054d556643",
+    "experiments/reports/motor-training-penguin-neutral-return-2026-11-19.json": "af9671eaf113828f662c4e807b97304874128bc706aa29a60e8817267c03aba8",
+    "experiments/reports/motor-training-penguin-probe-2026-11-19.json": "90713d93e85b5a516f03a61b2d52299cae26c8932fad1645f8800d5d47c21522",
+    "experiments/reports/motor-training-penguin-stress-2026-11-19.json": "2fdbbd0b8fa3e3525ce3699c748acc89b90bb2c080b58ef4797fc2498a37d8f0",
+    "experiments/reports/motor-training-policy-bank-development-2026-11-19.json": "87a2daf77d67f8547b1190b465f9649f6b6447bf8f2c0992e7144524757900c3",
+    "experiments/reports/motor-training-policy-bank-emergency-2026-11-19.json": "758695c028f11629c13a62a6448450af840f23673e8c7417e3468271e5031689",
+    "experiments/reports/motor-training-policy-bank-qualified-2026-11-19.json": "c1f735db98b6d7694c76f46ded7070a981c35268dfbd78a7fad70269b7079983",
+    "experiments/reports/repository-tests-bilateral-2026-11-19.txt": "47a61216385388ff457f6578c68b293fc3a73de0ea09b1b86c3a0881ade57060",
+    "experiments/reports/repository-tests-bilateral-final-2026-11-19.txt": "561631d2fea9fb8a98886c6c7ae86a330cfe298a48f944eff5dfb5966df50880",
+    "experiments/run_balance.py": "3bd1de41b0fb24669e84f7c421c4c315d15e247d854b7cacf740a577be52642e",
+    "experiments/run_penguin.py": "96c0ed0f7bfb3444f712eb26e562f5dff25ea28025328b1edf7e3d02166a1c3a",
+    "experiments/train_adaptive_penguin.py": "593186edd98f03cd65f4b12955c1cef06bcbd43cea451a8fa55a7162b38d5c6a",
+    "experiments/train_anticipatory_pivot.py": "45e7b9785542d3cf0065e1f606c450040bad2c6b7ad074d3c40c644b2923392f",
+    "experiments/train_balance.py": "81269a5c326824f1a2d9bd6927ddb30d2efc069e81589e278a220b1640407acf",
+    "experiments/train_balance_launch.py": "1704bda92902f89f2a3094835e487e1743eb3f470623ee8aa9b5d4f12d9c1a4b",
+    "experiments/train_balance_pivot.py": "af11b31d3f235a3574e236cafeb50573503f5e45ae2662412621acd6860440f8",
+    "experiments/train_lateral_balance.py": "9e821dd503010faffec30366fac55788a579fb6bae2f4abd15c3e59d135dc027",
+    "experiments/train_measured_brake.py": "e3810f809e436df3663d7b5476608927048c5a1cba4a26b5f26db0d5c7521e7b",
+    "experiments/train_neutral_recovery.py": "c767418bb9759ecd1126e5a865a041dbb9a6d5b0525fe4afda8b772674c0fe9a",
+    "experiments/train_penguin.py": "cd1a1061dba4dc33dd31c2c50c30cf4c8852761c5728f1e04950e216cf90e9ed",
+    "experiments/train_phase_aligned_pivot.py": "cbfc2c8c1e333c1fa0ee5ea8593f72b31b311b3a574dd0fe4b9cf90f76a11128",
+    "experiments/train_policy_bank.py": "7e3c5fd24f4b86d3d164070b9195776795d694feda6a65b680b26733c3f64a38",
+    "experiments/train_signed_balance.py": "c055a942728f0512de09bf4d0f89cafe7f5ec382be704edbd43f920288522c1d",
+    "experiments/verify_bilateral_replay.py": "71ac845def297a4d6d284cc2536da5cf87004e2ee16ff8dec21563d99b9a04f3",
+    "media/simulation/bilateral-penguin-2026-11-19-chart.png": "e3ef4f81c1d8fbf8cc06be41124ff652a9db3e36a2b9f0c83574f84ac94c2c97",
+    "media/simulation/bilateral-penguin-2026-11-19.mp4": "b72adebf13763c05158ec787e10ae0296a913f5817de4243bbdf7741e05ab943",
+    "media/simulation/bilateral-penguin-2026-11-19.png": "1645953a07eb2611e745821e812ae70c99553982ae6a6983d7ad2002f5044b01",
+    "src/reachy_locomotion/balance.py": "9c623ed466f31ddc9d76fe371bb8847d1426ea8f43cd09eaa3169a35131f6a73",
+    "src/reachy_locomotion/penguin.py": "6cf93d045ec5ab057a6ec83f24a253db1d4a1defc2906be4e46a74eccdd785dc",
+    "src/reachy_locomotion/primitives.py": "7ab98d3a893b8b4b205602c267b3909fe3e8971f4d988edd732de7d37e53ad3a",
+    "tests/test_balance.py": "620bb6ff3cf18e3e9f378bcbbf2c0efb7d4e53df2b3d2ee16e4e489ecb7c20d7",
+    "tests/test_penguin.py": "6f734f630500eaccb5c14594511c67e166564991c8d21d1bb6465e930ee61dc5"
+  },
+  "limitations": [
+    "Original development passes; unseen pivot and walking each pass 13/16.",
+    "Guard stops are failures; five guard records repeat some initial-condition prefixes across modes.",
+    "Emergency override remains experimental and is disabled in the selected/video policy.",
+    "Frozen job feedback settings are authoritative for sensor delay in older reports.",
+    "No hardware or shared GPU/Nimbus/EY work was touched."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "completed": true,
+  "checks": [
+    {
+      "recording": "experiments/generated/bilateral/recovery-left.json",
+      "frames": 251,
+      "max_absolute_errors": {
+        "qpos": 0.0,
+        "qvel": 0.0,
+        "time_s": 0.0,
+        "foot_xyz_m": 0.0,
+        "heading_from_startup_rad": 0.0
+      },
+      "passed": true
+    },
+    {
+      "recording": "experiments/generated/bilateral/recovery-right.json",
+      "frames": 251,
+      "max_absolute_errors": {
+        "qpos": 0.0,
+        "qvel": 0.0,
+        "time_s": 0.0,
+        "foot_xyz_m": 0.0,
+        "heading_from_startup_rad": 0.0
+      },
+      "passed": true
+    },
+    {
+      "recording": "experiments/generated/bilateral/penguin-two-cycles.json",
+      "frames": 1601,
+      "max_absolute_errors": {
+        "qpos": 0.0,
+        "qvel": 0.0,
+        "time_s": 0.0,
+        "foot_xyz_m": 0.0,
+        "heading_from_startup_rad": 0.0
+      },
+      "passed": true
+    }
+  ]
+}

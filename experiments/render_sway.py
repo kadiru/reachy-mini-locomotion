@@ -132,6 +132,8 @@ def main():
                     drift=1000*float(np.linalg.norm(data.xpos[base,:2]-start[:2]))
                     turn=np.degrees(row['heading_from_startup_rad'])
                     label=f"t = {row['time_s']:.2f} s   |   center shift = {drift:.1f} mm   |   base yaw = {turn:+.1f} deg"
+                    if 'penguin' in result:
+                        label=f"t = {row['time_s']:.2f} s   |   forward = {distance:+.1f} mm   |   base yaw = {turn:+.1f} deg"
             if not row["measuring"]:
                 label = f"t = {row['time_s']:.2f} s   |   startup / warm-up (excluded from displacement)"
             draw.text((20, 544), label, font=font, fill="white")
@@ -159,6 +161,13 @@ def main():
                     draw.text((908,96),'Waist: '+waist,font=font,fill=(110,210,235))
                     draw.text((908,122),f"Roll: {np.degrees(row['foot_rpy_rad'][0]):+.1f} deg",font=font,fill='white')
                     draw.text((908,148),f"Edge height difference: {row['side_height_difference_mm']:.1f} mm",font=font,fill='white')
+                    if 'penguin' in result:
+                        done=[s for s in result['penguin']['steps'] if s['end_s']<=row['time_s']+1e-8]
+                        pairs=[s for i,s in enumerate(done) if i%2]
+                        heading=f"{pairs[-1]['heading_deg']:+.1f} deg" if pairs else 'pending'
+                        draw.rectangle((12,470,625,530),fill=(15,22,32))
+                        draw.text((20,474),f"Completed left-right pairs: {len(pairs)}",font=font,fill='white')
+                        draw.text((20,501),f"Last pair heading: {heading}",font=font,fill=(110,210,235))
                 elif completed_cycle_rule:
                     draw.rectangle((925,92,1268,149), fill=(15,22,32))
                     draw.text((933,96), f"Last cycle: {last_cycle_heading:+.1f} / +/-20 deg", font=font, fill=(110,210,235))

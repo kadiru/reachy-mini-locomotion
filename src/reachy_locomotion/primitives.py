@@ -126,10 +126,12 @@ def classify_trial(reason,tail,peak_roll):
 
 
 class PrimitiveSimulator(SwaySimulator):
-    def run_primitive(self,recipe,seconds=3.6,waist_mode='off',record=False):
+    def run_primitive(self,recipe,seconds=3.6,waist_mode='off',record=False,
+                      controller=None,tilt_limit_deg=80):
         if not isinstance(recipe,Primitive):recipe=Primitive(**recipe)
         if waist_mode not in ('off','hold_neutral'):raise ValueError('Unknown waist mode')
-        if not 1<=seconds<=8 or self.servos is None:raise ValueError('Require bounded datasheet simulation')
+        if not 1<=seconds<=60 or self.servos is None:raise ValueError('Require bounded datasheet simulation')
+        if tilt_limit_deg not in (35,80):raise ValueError('Use walking or diagnostic tilt guard')
         m=self.model;d=mujoco.MjData(m);d.qpos[:]=self.initial_qpos;d.qvel[:]=self.initial_qvel;d.ctrl[:]=self.initial_ctrl
         self.servos.reset(self.initial_targets)
         waist=m.actuator('yaw_body').id;torso=m.body('body_down_3dprint').id
@@ -144,7 +146,7 @@ class PrimitiveSimulator(SwaySimulator):
         if any(w.number for w in d.warning):raise ValueError('Initialization warning')
         start=d.xpos[self.base].copy();waist_qadr=self.servos.qadr[waist];waist_start=float(d.qpos[waist_qadr])
         bodies=[self.base,torso];previous=[math.atan2(d.xmat[i][3],d.xmat[i][0]) for i in bodies]
-        angles=np.zeros(2);initial_yaw=previous[0];controller=PrimitiveController(recipe)
+        angles=np.zeros(2);initial_yaw=previous[0];controller=controller or PrimitiveController(recipe)
         trace=[];trajectory=[];reason=None;first35=None;peak_roll=peak_tilt=peak_lift=peak_slip=0.
         peak_torque=np.zeros(m.nu);waist_work=head_braking=0.;joint_margin=1e9;max_closure=0.
         edge_time=edge_yaw=slip_distance=0.;last_roll=0.;previous_edge=False
@@ -157,6 +159,9 @@ class PrimitiveSimulator(SwaySimulator):
                 yaw=math.atan2(d.xmat[body][3],d.xmat[body][0]);delta=(yaw-previous[j]+math.pi)%(2*math.pi)-math.pi
                 angles[j]+=delta;previous[j]=yaw
                 if j==0:yaw_step=delta
+            if hasattr(controller,'observe_heading'):controller.observe_heading(t,math.degrees(angles[0]))
+            if hasattr(controller,'observe_head'):
+                controller.observe_head(t,math.degrees(euler(relative_head_pose(m,d))[2]))
             roll_rate=(roll-last_roll)/.02 if frame else 0.;last_roll=roll
             forces=np.zeros(2);points=[];weights=[]
             for ci,c in enumerate(d.contact):
@@ -184,8 +189,10 @@ class PrimitiveSimulator(SwaySimulator):
                      waist_angle_change_deg=math.degrees(float(d.qpos[waist_qadr])-waist_start),
                      normal_n=float(sum(forces)),edge_support=edge,contact_slip_m_s=slip,
                      base_angular_speed_rad_s=float(np.linalg.norm(base_velocity[:3])),base_speed_m_s=float(np.linalg.norm(base_velocity[3:])),
-                     com_world_m=d.subtree_com[self.base].tolist(),contact_world_m=contact.tolist() if contact is not None else None)
+                     com_world_m=d.subtree_com[self.base].tolist(),contact_world_m=contact.tolist() if contact is not None else None,
+                     foot_xyz_m=d.xpos[self.base].tolist())
             pose,stage,sensed=controller.target(t,roll);row.update(stage=stage,sensed_roll_deg=sensed);trace.append(row)
+            if hasattr(controller,'diagnostics'):row.update(controller.diagnostics())
             peak_roll=max(peak_roll,abs(roll));peak_tilt=max(peak_tilt,tilt);peak_lift=max(peak_lift,lift)
             if record:
                 trajectory.append(dict(time_s=t,measuring=True,qpos=d.qpos.tolist(),qvel=d.qvel.tolist(),
@@ -209,7 +216,7 @@ class PrimitiveSimulator(SwaySimulator):
                 peak_roll=max(peak_roll,abs(math.degrees(math.atan2(d.xmat[self.base][7],d.xmat[self.base][8]))))
                 peak_lift=max(peak_lift,abs(2*self.config['foot_radius_m']*float(d.xmat[self.base][7]))*1000)
                 if tilt>=35 and first35 is None:first35=float(d.time)
-                if tilt>=80:reason='tilt_reached_80_deg'
+                if tilt>=tilt_limit_deg:reason=f'tilt_reached_{tilt_limit_deg}_deg'
                 closure=float(np.max(np.linalg.norm(d.site_xpos[self.closing_a]-d.site_xpos[self.closing_b],axis=1)))
                 max_closure=max(max_closure,closure)
                 if closure>.001:reason='loop_closure_error_exceeded_1_mm'
@@ -220,7 +227,7 @@ class PrimitiveSimulator(SwaySimulator):
                     pair={int(c.geom1),int(c.geom2)}
                     if self.floor in pair and self.foot not in pair and c.efc_address>=0:
                         wrench=np.zeros(6);mujoco.mj_contactForce(m,d,ci,wrench)
-                        if abs(wrench[0])>.5 and reason in (None,'tilt_reached_80_deg'):reason='nonfoot_floor_contact'
+                        if abs(wrench[0])>.5 and reason in (None,f'tilt_reached_{tilt_limit_deg}_deg'):reason='nonfoot_floor_contact'
                 peak_torque=np.maximum(peak_torque,np.abs(d.actuator_force))
                 waist_work+=abs(float(d.actuator_force[waist]*d.actuator_velocity[waist]))*self.dt
                 head_braking+=float(np.maximum(-d.actuator_force[head_act]*d.actuator_velocity[head_act],0).sum())*self.dt
@@ -230,9 +237,11 @@ class PrimitiveSimulator(SwaySimulator):
         flags=classify_trial(reason,tail,peak_roll)
         terminal=dict(time_s=float(d.time),foot_rpy_rad=euler(d.xmat[self.base].reshape(3,3)).tolist(),
                       qpos=d.qpos.tolist(),qvel=d.qvel.tolist(),com_world_m=d.subtree_com[self.base].tolist())
+        feedback=getattr(getattr(controller,'child',controller),'f',None)
+        sensor_delay=.02*feedback.sensor_delay_frames if feedback is not None else .02
         result=dict(evidence='uncalibrated_simulation',hardware_ready=False,primitive_trial=True,recipe=asdict(recipe),config=self.config,
                     requested_seconds=seconds,elapsed_seconds=float(d.time),termination=reason or 'completed',**flags,
-                    diagnostic_falls_allowed=True,walking_fall_guard_unchanged=True,waist_mode=waist_mode,
+                    diagnostic_falls_allowed=tilt_limit_deg==80,tilt_limit_deg=tilt_limit_deg,walking_fall_guard_unchanged=True,waist_mode=waist_mode,
                     waist_peak_torque_nm=float(peak_torque[waist]),waist_absolute_motor_work_j=waist_work,
                     commanded_waist_position_range_rad=[float(self.initial_targets[waist])]*2,
                     measured_waist_angle_range_deg=[min(x['waist_angle_change_deg'] for x in trace),max(x['waist_angle_change_deg'] for x in trace)],
@@ -244,7 +253,7 @@ class PrimitiveSimulator(SwaySimulator):
                     planar_displacement_m=(d.xpos[self.base]-start)[:2].tolist(),
                     catch_trigger_s=controller.catch_trigger,yaw_trigger_s=controller.yaw_trigger,
                     peak_sampled_roll_rate_deg_s=max(abs(x['roll_rate_deg_s']) for x in trace),terminal_state=terminal,
-                    control_rate_hz=50,roll_sensor_delay_s=.02,roll_sensor_assumption='simulated base roll; physical estimator not calibrated',
+                    control_rate_hz=50,roll_sensor_delay_s=sensor_delay,roll_sensor_assumption='simulated base roll; physical estimator not calibrated',
                     external_forces_applied=False,upstream_xml_sha256=self.source_sha256,kinematics_sha256=self.ik.source_sha256,
                     trace=trace,motor_diagnostics=self.servos.report(),render_forward_frame='startup')
         if waist_mode=='off':assert result['waist_peak_torque_nm']==0 and waist_work==0

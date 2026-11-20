@@ -5,15 +5,30 @@ then evaluate sim-to-real transfer on Reachy Mini Wireless.
 
 The intended gait library has [two styles](docs/GAIT_STYLES.md): rapid small
 steps and larger alternating-edge steps driven by sway, head turning and braking.
-Both now have simulation candidates. The larger-rocking mode is experimental:
-its twenty-second demonstration passes, while longer-run steering remains unsolved.
+Both have simulation candidates. The latest balance-first controller adds
+bilateral recovery and slower, larger step pairs; the earlier fast modes remain
+available. Generalization beyond the tested conditions remains incomplete.
 
 Reference: Kadir's [reachy reach video](https://vimeo.com/kadiru/demo-reachy-reach).
 The opening sequence shows controller-driven head motion, whole-body rocking
 and apparent base progress. [Video observations](docs/VIMEO_OBSERVATIONS_2026-11-18.md)
 separate what is visible from what still needs measurement.
 
-**New primitive curriculum (November 19):** before further walking optimization,
+**Bilateral feedback follow-up (November 19):** delayed roll/rate feedback and
+progress-based primitive selection produce **88.6 mm forward in two pairs**
+(eight rock/pivot bursts), **15.3° bilateral roll**, and **0.60° maximum pair-end
+heading error**, with a fixed zero waist target and unchanged motor limits.
+The recording lasts 32 s; progress speed is 2.93 mm/s through the last step.
+Recovery passes **26/26** checks. Isolated pivots and composed pairs pass **20/20
+original development checks** at both 0.5 and 0.25 ms. Broader frozen qualification
+passes **13/16 pivots and 13/16 walking trials**: two new conditions hit the tilt
+guard, and one pivot turns too little on its edge. All four nominal 0.125 ms
+checks pass; the two-pair replay at that timestep advances 89.2 mm.
+**Robustness across all stress conditions is not yet achieved.**
+[Watch bilateral recovery → penguin steps](media/simulation/bilateral-penguin-2026-11-19.mp4).
+[Method, complete outcomes and reproduction](docs/BILATERAL_BALANCE_2026-11-19.md).
+
+**Earlier primitive curriculum (November 19):** before further walking optimization,
 learn sideways lift, recovery and edge pivots. With the waist holding a constant
 zero target, the selected simulation recovers from **30.03° roll / 55.59 mm
 opposite-rim height difference**, settling with **2.82 mm center drift**. A

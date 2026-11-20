@@ -2,6 +2,19 @@
 
 ## Priority
 
+Latest result: bilateral feedback recovery passes 26/26 and pivot/walking pass
+20/20 original development checks. The two-pair video advances 88.6 mm, but
+broader unseen checks still fail (13/16 passes for each mode). See STATUS and
+`docs/BILATERAL_BALANCE_2026-11-19.md`; those failures remain the next priority.
+
+Current request: train both sides using signed roll and roll-rate feedback so
+recovery and edge pivots pass the disclosed model stress tests, then combine
+them into alternating penguin steps and show a recorded simulation video.
+The waist holds a constant neutral target with bounded torque; motor limits,
+joint guards and the 20° full-cycle heading criterion remain in force. Train
+against the previous failing conditions and reserve fresh conditions for final
+qualification. A failed or incomplete check must not be counted as a pass.
+
 Latest user direction: learn a **primitive curriculum before more walking
 optimization**. First discover how pure head sway lifts an edge and produces a
 sideways fall; then learn to arrest that fall and recover; then add head yaw and

@@ -1,5 +1,62 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 19, 2026 — bilateral feedback and composed steps
+
+Implemented and trained signed roll/rate feedback with bounded head correction,
+predictive catch/yaw timing, checked-IK projection, physical head return, and
+heading-based sequencing. Two learned launch patterns are selected from observed
+progress, never hidden model parameters. Waist target stays zero with bounded
+holding torque; motor limits/profile, joint guards and old walking configs are
+unchanged. New trials use the 35° guard. No physical state reset between bursts.
+
+- **Recovery: 26/26** at 0.25 ms, both sides of five development models plus
+  sixteen fresh noisy/delayed-sensor checks. Frozen config:
+  `configs/balance-recovery-trained.json` (fresh seed 2026111963).
+- **Pivot + walking development: 20/20** at both 0.5 and 0.25 ms. Five models ×
+  both initial sides × isolated pivot/full-pair walking. Frozen policy:
+  `configs/penguin-feedback-experimental.json`.
+- **Broader frozen qualification: 13/16 pivots and 13/16 walking trials pass**
+  at 0.25 ms (seed 2026111971). Fresh-3 left and fresh-7 left hit the 35° guard;
+  fresh-7 right walking also hits it on the later left half. Fresh-5 right pivot
+  recovers but has only 4.73° net edge-supported turn, below the 5° gate. These
+  are failures, not no-fall successes. No complete stress robustness is claimed.
+- **Finer nominal checks: 4/4** at 0.125 ms, both starting sides and both modes.
+  Separate two-pair test moves 89.16 mm with 1.03° maximum pair-end heading.
+- **Video:** left and right recovery, then two complete pairs / eight bursts.
+  The 0.25 ms gait advances **88.64 mm**, 44.32 mm per pair, with 15.27° minimum
+  bilateral roll, 29.78 mm peak rim-height difference, and pair-end headings
+  −0.32° / −0.60°. Eight bursts finish at 30.30 s; recording continues to 32 s.
+  Speed is 2.93 mm/s through the final step, 2.77 mm/s including final rest.
+  This deliberate settling gait is slower than the preserved rapid mode.
+
+The video is `media/simulation/bilateral-penguin-2026-11-19.mp4`, 42.12 s at
+25 fps / 1×, including both recovery demonstrations. It renders saved physical
+states. Companion `-chart.png` displays every qualification outcome. In the gait,
+waist torque peaks at 0.0780 Nm and its measured angle deflects −2.48…+2.44°;
+a fixed target is not a welded or unpowered waist. Peak body tilt is 18.46°.
+
+A further emergency neutral-return controller was screened after promoting the
+two new failing conditions to development. It does not fix the complete sequence
+and introduces another joint-guard/missed-goal failure. Kept as an optional
+experimental feature, **not selected in the frozen/video policy**. Early aborted
+screen evidence is retained as incomplete; no failure is discarded or relabeled.
+All motor/contact/sensing assumptions remain uncalibrated, and hardware-ready
+flags remain false. **100 tests pass** in
+`experiments/reports/repository-tests-bilateral-final-2026-11-19.txt`.
+
+Evidence and commands: `docs/BILATERAL_BALANCE_2026-11-19.md`;
+`experiments/reports/motor-training-policy-bank-qualified-2026-11-19.json`;
+`experiments/reports/motor-training-balance-neutral-qualified-2026-11-19.json`;
+`experiments/reports/motor-training-bilateral-artifact-receipt-2026-11-19.json`.
+No hardware, shared Ubuntu GPU, Nimbus or EY work was touched. GitHub CLI access
+resumed; authenticated login verified as `kadiru`, and the remote history was
+fetched without changing local work. Personal author/committer guards remain on.
+
+Next: retrain the phase transition and recovery from partially completed pivots
+using the newly exposed left-side failures; qualify on a new frozen unseen split.
+Then reduce the settling pause while retaining the strict gates. Do not deploy
+this policy to hardware or claim it passes every stress test.
+
 ## November 19, 2026 — sideways recovery and edge pivot primitives
 
 Latest instruction supersedes speed optimization: learn to lift/tip sideways,
