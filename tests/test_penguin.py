@@ -97,5 +97,63 @@ class PenguinFeedbackTests(unittest.TestCase):
         self.assertEqual(c.active_policy,'fallback_delayed_sensor')
         self.assertEqual(c.child.p.roll_deg,20)
 
+    def test_fallback_learning_can_be_independent_for_each_side(self):
+        regular=dict(recipe=asdict(Primitive(roll_deg=25)),feedback=dict(return_x_after_catch_s=.2))
+        c=PenguinController(asdict(Primitive()),dict(return_x_after_catch_s=.2),cycles=2,
+                            min_step_s=3.,target_step_turn_deg=15,max_repeats=4,
+                            fallback_policy=regular,per_side_fallback=True)
+        for frame in range(500):
+            t=frame*.02;local=t-c.started
+            # First right burst is weak; its retry succeeds. The left side
+            # must retain the primary recipe and its own observed history.
+            heading=0 if not c.bursts else (-16 if not c.steps else 0)
+            c.observe_heading(t,heading);c.target(t,12 if .8<local<1 else 0)
+            if len(c.steps)==1:
+                self.assertEqual(c.active_policy,'primary')
+                self.assertFalse(c.fallback_active)
+                self.assertTrue(c.report()['fallback_activated'])
+            if len(c.steps)==2:break
+        self.assertEqual(len(c.steps),2)
+        self.assertEqual(c.side,1)
+        self.assertTrue(c.fallback_active)
+        self.assertEqual(c.active_policy,'fallback')
+        self.assertEqual(c.side_fallback,{1:True,-1:False})
+
+    def test_sustained_cycle_budget_is_bounded(self):
+        c=PenguinController(asdict(Primitive()),{},cycles=30)
+        self.assertEqual(c.report()['requested_steps'],60)
+        self.assertFalse(c.report()['completed'])
+        with self.assertRaises(ValueError):PenguinController(asdict(Primitive()),{},cycles=31)
+
+    def test_twenty_cycles_keep_the_same_heading_reference(self):
+        c=PenguinController(asdict(Primitive()),dict(return_x_after_catch_s=.2),cycles=20,
+                            min_step_s=3.,target_step_turn_deg=15,max_repeats=1)
+        for frame in range(7000):
+            t=frame*.02;local=t-c.started
+            c.observe_heading(t,-16 if c.side==1 else 0)
+            c.target(t,12 if .8<local<1 else 0)
+            if c.finished:break
+        r=c.report()
+        self.assertTrue(r['completed'])
+        self.assertEqual(len(r['cycle_end_headings_deg']),20)
+        self.assertEqual([s['target_heading_deg'] for s in r['steps']],[-15,0]*20)
+
+    def test_budget_tolerance_requires_a_progressing_final_retry(self):
+        for tolerance,expected in [(2,False),(4,True)]:
+            c=self.controller(max_repeats=2,exhaustion_tolerance_deg=tolerance)
+            for frame in range(350):
+                t=frame*.02;local=t-c.started
+                c.observe_heading(t,-6 if not c.bursts else -12)
+                c.target(t,12 if .8<local<1 else 0)
+                if c.finished:break
+            self.assertEqual(len(c.bursts),2)
+            self.assertEqual(c.report()['completed'],expected)
+        c=self.controller(max_repeats=2,exhaustion_tolerance_deg=4)
+        for frame in range(350):
+            t=frame*.02;local=t-c.started;c.observe_heading(t,-12)
+            c.target(t,12 if .8<local<1 else 0)
+            if c.finished:break
+        self.assertFalse(c.report()['completed'])
+
 
 if __name__=='__main__':unittest.main()

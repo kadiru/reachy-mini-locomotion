@@ -30,6 +30,20 @@ UPSTREAM=ROOT/'experiments/upstream-reachy-mini'
 
 @unittest.skipUnless(importlib.util.find_spec('mujoco') and (UPSTREAM/'.git').exists(),'Needs simulation assets')
 class PrimitivePhysicsTests(unittest.TestCase):
+    def test_finish_settling_preserves_every_physical_frame(self):
+        from reachy_locomotion.primitives import PrimitiveSimulator
+        class FinishedController(PrimitiveController):
+            finished=True
+        s=PrimitiveSimulator(UPSTREAM,json.loads((ROOT/'configs/motors-speed-trained.json').read_text()))
+        p=Primitive(preload_roll_deg=-15,roll_deg=15)
+        full=s.run_primitive(p,seconds=1.2,record=True,controller=FinishedController(p))
+        short=s.run_primitive(p,seconds=1.2,record=True,controller=FinishedController(p),finish_settle_s=.8)
+        self.assertTrue(short['stopped_after_controller_finish'])
+        self.assertEqual(short['max_duration_seconds'],1.2)
+        self.assertAlmostEqual(short['elapsed_seconds'],.8)
+        self.assertEqual(short['trajectory'],full['trajectory'][:len(short['trajectory'])])
+        with self.assertRaises(ValueError):s.run_primitive(p,finish_settle_s=.4)
+
     def test_disabled_waist_has_zero_torque_and_recording_does_not_change_physics(self):
         from reachy_locomotion.primitives import PrimitiveSimulator
         s=PrimitiveSimulator(UPSTREAM,json.loads((ROOT/'configs/motors-speed-trained.json').read_text()))

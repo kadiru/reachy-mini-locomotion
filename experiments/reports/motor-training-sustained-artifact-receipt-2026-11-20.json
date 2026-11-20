@@ -1,0 +1,1387 @@
+{
+  "completed": true,
+  "evidence": "uncalibrated_simulation",
+  "hardware_ready": false,
+  "base_commit": "980724ee6194c79bb445f90ff202c3bc88e7fe29",
+  "python": "3.9.6",
+  "mujoco": "3.3.7",
+  "numpy": "2.0.2",
+  "selected_policy": "configs/penguin-sustained-trained.json",
+  "selected_record": "experiments/generated/sustained-penguin/selected-twenty-left.json",
+  "groups": {
+    "single-pair": {
+      "passed": 42,
+      "total": 42
+    },
+    "four-pairs": {
+      "passed": 6,
+      "total": 6
+    },
+    "finer-single-pair": {
+      "passed": 6,
+      "total": 6
+    },
+    "twenty-pairs-0.00025": {
+      "passed": 2,
+      "total": 2
+    },
+    "twenty-pairs-0.000125": {
+      "passed": 2,
+      "total": 2
+    },
+    "finer-four-pairs": {
+      "passed": 2,
+      "total": 2
+    },
+    "heldout-four-pairs": {
+      "passed": 11,
+      "total": 16
+    }
+  },
+  "failures": [
+    {
+      "report": "experiments/reports/motor-training-sustained-qualification-final-2026-11-20.json",
+      "id": "heldout-1",
+      "side": 1,
+      "variant": "heldout-four-pairs",
+      "termination": "completed",
+      "forward_mm": 42.727746541932625,
+      "cycle_heading_deg": 2.4941040826665515
+    },
+    {
+      "report": "experiments/reports/motor-training-sustained-qualification-final-2026-11-20.json",
+      "id": "heldout-3",
+      "side": -1,
+      "variant": "heldout-four-pairs",
+      "termination": "tilt_reached_35_deg",
+      "forward_mm": 4.477808300615186,
+      "cycle_heading_deg": 0.0
+    },
+    {
+      "report": "experiments/reports/motor-training-sustained-qualification-final-2026-11-20.json",
+      "id": "heldout-3",
+      "side": 1,
+      "variant": "heldout-four-pairs",
+      "termination": "tilt_reached_35_deg",
+      "forward_mm": 69.99768993703618,
+      "cycle_heading_deg": 1.4104279226876637
+    },
+    {
+      "report": "experiments/reports/motor-training-sustained-qualification-final-2026-11-20.json",
+      "id": "heldout-6",
+      "side": -1,
+      "variant": "heldout-four-pairs",
+      "termination": "completed",
+      "forward_mm": 3.4514296248283727,
+      "cycle_heading_deg": 0.0
+    },
+    {
+      "report": "experiments/reports/motor-training-sustained-qualification-final-2026-11-20.json",
+      "id": "heldout-7",
+      "side": 1,
+      "variant": "heldout-four-pairs",
+      "termination": "completed",
+      "forward_mm": 46.7691842666301,
+      "cycle_heading_deg": 4.616814455344992
+    }
+  ],
+  "audited_physical_trials": 76,
+  "unchanged_files": [
+    "configs/balance-recovery-trained.json",
+    "configs/contact-proxy.json",
+    "configs/first-session-preview.json",
+    "configs/heading-faster-trained.json",
+    "configs/heading-rocking-experimental.json",
+    "configs/heading-sensor-assumed.json",
+    "configs/heading-speed-trained.json",
+    "configs/heading-trained.json",
+    "configs/motors-datasheet.json",
+    "configs/motors-speed-trained.json",
+    "configs/penguin-faster-feedback-trained.json",
+    "configs/penguin-faster-trained.json",
+    "configs/penguin-feedback-experimental.json",
+    "configs/primitive-catch-experimental.json",
+    "configs/primitive-fall-experimental.json",
+    "configs/primitive-pivot-experimental.json",
+    "configs/sway-cad-proxy.json",
+    "configs/sway-candidate.json",
+    "configs/sway-faster-trained.json",
+    "configs/sway-heading-trained.json",
+    "configs/sway-progress-conservative.json",
+    "configs/sway-progress-fast.json",
+    "configs/sway-rocking-experimental.json",
+    "configs/sway-speed-trained.json",
+    "configs/sway-trained.json",
+    "src/reachy_locomotion/motors.py",
+    "src/reachy_locomotion/sway.py",
+    "src/reachy_locomotion/contact_probe.py"
+  ],
+  "tests": 110,
+  "video": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1280,
+        "height": 580,
+        "r_frame_rate": "25/1",
+        "nb_frames": "4107"
+      }
+    ],
+    "format": {
+      "duration": "164.280000"
+    }
+  },
+  "selected_demo": {
+    "completed_steps": 40,
+    "requested_steps": 40,
+    "steps": [
+      {
+        "index": 0,
+        "side": -1,
+        "start_s": 0.0,
+        "end_s": 2.64,
+        "heading_deg": 11.334067398334025,
+        "target_heading_deg": 12,
+        "repeats": 1,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 1,
+        "side": 1,
+        "start_s": 2.66,
+        "end_s": 5.28,
+        "heading_deg": 0.6183002013037765,
+        "target_heading_deg": 0.0,
+        "repeats": 1,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 2,
+        "side": -1,
+        "start_s": 5.3,
+        "end_s": 7.92,
+        "heading_deg": 11.100022997118021,
+        "target_heading_deg": 12,
+        "repeats": 1,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 3,
+        "side": 1,
+        "start_s": 7.9399999999999995,
+        "end_s": 10.56,
+        "heading_deg": 0.38485208124353054,
+        "target_heading_deg": 0.0,
+        "repeats": 1,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 4,
+        "side": -1,
+        "start_s": 10.58,
+        "end_s": 13.200000000000001,
+        "heading_deg": 10.867205507352212,
+        "target_heading_deg": 12,
+        "repeats": 1,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 5,
+        "side": 1,
+        "start_s": 13.22,
+        "end_s": 15.82,
+        "heading_deg": 0.8766614267514072,
+        "target_heading_deg": 0.0,
+        "repeats": 1,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 6,
+        "side": -1,
+        "start_s": 15.84,
+        "end_s": 18.46,
+        "heading_deg": 11.362966752320188,
+        "target_heading_deg": 12,
+        "repeats": 1,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 7,
+        "side": 1,
+        "start_s": 18.48,
+        "end_s": 21.080000000000002,
+        "heading_deg": 1.3714272697274335,
+        "target_heading_deg": 0.0,
+        "repeats": 1,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 8,
+        "side": -1,
+        "start_s": 21.1,
+        "end_s": 23.72,
+        "heading_deg": 11.880426550362856,
+        "target_heading_deg": 12,
+        "repeats": 1,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 9,
+        "side": 1,
+        "start_s": 23.74,
+        "end_s": 28.92,
+        "heading_deg": -8.093644644656946,
+        "target_heading_deg": 0.0,
+        "repeats": 2,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 10,
+        "side": -1,
+        "start_s": 28.94,
+        "end_s": 34.2,
+        "heading_deg": 12.782141334434243,
+        "target_heading_deg": 12,
+        "repeats": 2,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 11,
+        "side": 1,
+        "start_s": 34.220000000000006,
+        "end_s": 39.4,
+        "heading_deg": -7.1833298881400935,
+        "target_heading_deg": 0.0,
+        "repeats": 2,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 12,
+        "side": -1,
+        "start_s": 39.42,
+        "end_s": 44.7,
+        "heading_deg": 14.603560031251838,
+        "target_heading_deg": 12,
+        "repeats": 2,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 13,
+        "side": 1,
+        "start_s": 44.720000000000006,
+        "end_s": 49.96,
+        "heading_deg": -6.08253420579672,
+        "target_heading_deg": 0.0,
+        "repeats": 2,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 14,
+        "side": -1,
+        "start_s": 49.980000000000004,
+        "end_s": 55.26,
+        "heading_deg": 15.748464341551772,
+        "target_heading_deg": 12,
+        "repeats": 2,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 15,
+        "side": 1,
+        "start_s": 55.28,
+        "end_s": 60.480000000000004,
+        "heading_deg": -4.22951875086491,
+        "target_heading_deg": 0.0,
+        "repeats": 2,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 16,
+        "side": -1,
+        "start_s": 60.50000000000001,
+        "end_s": 65.76,
+        "heading_deg": 16.776927488385965,
+        "target_heading_deg": 12,
+        "repeats": 2,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 17,
+        "side": 1,
+        "start_s": 65.78,
+        "end_s": 71.02,
+        "heading_deg": -3.8919998354906506,
+        "target_heading_deg": 0.0,
+        "repeats": 2,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 18,
+        "side": -1,
+        "start_s": 71.03999999999999,
+        "end_s": 76.32000000000001,
+        "heading_deg": 17.96887961659637,
+        "target_heading_deg": 12,
+        "repeats": 2,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 19,
+        "side": 1,
+        "start_s": 76.34,
+        "end_s": 81.58,
+        "heading_deg": -2.7217043366480533,
+        "target_heading_deg": 0.0,
+        "repeats": 2,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 20,
+        "side": -1,
+        "start_s": 81.6,
+        "end_s": 86.88,
+        "heading_deg": 19.174114540692145,
+        "target_heading_deg": 12,
+        "repeats": 2,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 21,
+        "side": 1,
+        "start_s": 86.89999999999999,
+        "end_s": 92.16,
+        "heading_deg": -2.235431932938098,
+        "target_heading_deg": 0.0,
+        "repeats": 2,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 22,
+        "side": -1,
+        "start_s": 92.17999999999999,
+        "end_s": 97.46000000000001,
+        "heading_deg": 19.70034408725084,
+        "target_heading_deg": 12,
+        "repeats": 2,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 23,
+        "side": 1,
+        "start_s": 97.48,
+        "end_s": 102.72,
+        "heading_deg": -1.0050674552250807,
+        "target_heading_deg": 0.0,
+        "repeats": 2,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 24,
+        "side": -1,
+        "start_s": 102.74,
+        "end_s": 105.38,
+        "heading_deg": 10.288967007361364,
+        "target_heading_deg": 12,
+        "repeats": 1,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 25,
+        "side": 1,
+        "start_s": 105.39999999999999,
+        "end_s": 107.98,
+        "heading_deg": 0.30793820269521843,
+        "target_heading_deg": 0.0,
+        "repeats": 1,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 26,
+        "side": -1,
+        "start_s": 108.0,
+        "end_s": 110.62,
+        "heading_deg": 10.78969949838925,
+        "target_heading_deg": 12,
+        "repeats": 1,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 27,
+        "side": 1,
+        "start_s": 110.64,
+        "end_s": 113.24000000000001,
+        "heading_deg": 0.799316264069032,
+        "target_heading_deg": 0.0,
+        "repeats": 1,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 28,
+        "side": -1,
+        "start_s": 113.26,
+        "end_s": 115.88,
+        "heading_deg": 11.28557711341876,
+        "target_heading_deg": 12,
+        "repeats": 1,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 29,
+        "side": 1,
+        "start_s": 115.89999999999999,
+        "end_s": 118.5,
+        "heading_deg": 1.292351034220814,
+        "target_heading_deg": 0.0,
+        "repeats": 1,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 30,
+        "side": -1,
+        "start_s": 118.52,
+        "end_s": 121.14,
+        "heading_deg": 11.822504751686575,
+        "target_heading_deg": 12,
+        "repeats": 1,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 31,
+        "side": 1,
+        "start_s": 121.16,
+        "end_s": 123.74000000000001,
+        "heading_deg": 1.8489157185199445,
+        "target_heading_deg": 0.0,
+        "repeats": 1,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 32,
+        "side": -1,
+        "start_s": 123.76,
+        "end_s": 126.38000000000001,
+        "heading_deg": 12.357514814554213,
+        "target_heading_deg": 12,
+        "repeats": 1,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 33,
+        "side": 1,
+        "start_s": 126.4,
+        "end_s": 131.62,
+        "heading_deg": -8.287050046104998,
+        "target_heading_deg": 0.0,
+        "repeats": 2,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 34,
+        "side": -1,
+        "start_s": 131.64000000000001,
+        "end_s": 136.92000000000002,
+        "heading_deg": 13.491199294876612,
+        "target_heading_deg": 12,
+        "repeats": 2,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 35,
+        "side": 1,
+        "start_s": 136.94000000000003,
+        "end_s": 142.16,
+        "heading_deg": -7.198871316375676,
+        "target_heading_deg": 0.0,
+        "repeats": 2,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 36,
+        "side": -1,
+        "start_s": 142.18,
+        "end_s": 147.46,
+        "heading_deg": 14.530417835909267,
+        "target_heading_deg": 12,
+        "repeats": 2,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 37,
+        "side": 1,
+        "start_s": 147.48000000000002,
+        "end_s": 152.70000000000002,
+        "heading_deg": -6.168721062258472,
+        "target_heading_deg": 0.0,
+        "repeats": 2,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 38,
+        "side": -1,
+        "start_s": 152.72000000000003,
+        "end_s": 158.02,
+        "heading_deg": 16.47837719620016,
+        "target_heading_deg": 12,
+        "repeats": 2,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      },
+      {
+        "index": 39,
+        "side": 1,
+        "start_s": 158.04000000000002,
+        "end_s": 163.26,
+        "heading_deg": -4.215589578919454,
+        "target_heading_deg": 0.0,
+        "repeats": 2,
+        "turn_goal_met": true,
+        "turn_goal_tolerance_deg": 2.0
+      }
+    ],
+    "bursts": [
+      {
+        "side": -1,
+        "start_s": 0.0,
+        "end_s": 2.64,
+        "heading_deg": 11.334067398334025,
+        "observed_turn_progress_deg": 11.192411011708392,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 2.66,
+        "end_s": 5.28,
+        "heading_deg": 0.6183002013037765,
+        "observed_turn_progress_deg": 10.626070645361516,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 5.3,
+        "end_s": 7.92,
+        "heading_deg": 11.100022997118021,
+        "observed_turn_progress_deg": 10.543619276324883,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 7.9399999999999995,
+        "end_s": 10.56,
+        "heading_deg": 0.38485208124353054,
+        "observed_turn_progress_deg": 10.708385375420457,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 10.58,
+        "end_s": 13.200000000000001,
+        "heading_deg": 10.867205507352212,
+        "observed_turn_progress_deg": 10.42936704345749,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 13.22,
+        "end_s": 15.82,
+        "heading_deg": 0.8766614267514072,
+        "observed_turn_progress_deg": 10.025252842291684,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 15.84,
+        "end_s": 18.46,
+        "heading_deg": 11.362966752320188,
+        "observed_turn_progress_deg": 10.565317010253892,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 18.48,
+        "end_s": 21.080000000000002,
+        "heading_deg": 1.3714272697274335,
+        "observed_turn_progress_deg": 9.751430802622021,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 21.1,
+        "end_s": 23.72,
+        "heading_deg": 11.880426550362856,
+        "observed_turn_progress_deg": 10.119326238326375,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 23.74,
+        "end_s": 26.32,
+        "heading_deg": 1.908406447775399,
+        "observed_turn_progress_deg": 9.643155922106022,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 26.34,
+        "end_s": 28.92,
+        "heading_deg": -8.093644644656946,
+        "observed_turn_progress_deg": 10.156678722657908,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 28.94,
+        "end_s": 31.560000000000002,
+        "heading_deg": 2.207047530852558,
+        "observed_turn_progress_deg": 10.366968511807388,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 31.580000000000002,
+        "end_s": 34.2,
+        "heading_deg": 12.782141334434243,
+        "observed_turn_progress_deg": 10.455824394912922,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 34.220000000000006,
+        "end_s": 36.800000000000004,
+        "heading_deg": 2.820924318437229,
+        "observed_turn_progress_deg": 10.027289471631967,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 36.82000000000001,
+        "end_s": 39.4,
+        "heading_deg": -7.1833298881400935,
+        "observed_turn_progress_deg": 9.834536851952695,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 39.42,
+        "end_s": 42.06,
+        "heading_deg": 4.013957482647191,
+        "observed_turn_progress_deg": 11.038562429009248,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 42.080000000000005,
+        "end_s": 44.7,
+        "heading_deg": 14.603560031251838,
+        "observed_turn_progress_deg": 10.568730973759541,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 44.720000000000006,
+        "end_s": 47.32,
+        "heading_deg": 4.632682875814164,
+        "observed_turn_progress_deg": 9.722997045453095,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 47.34,
+        "end_s": 49.96,
+        "heading_deg": -6.08253420579672,
+        "observed_turn_progress_deg": 11.082547823801306,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 49.980000000000004,
+        "end_s": 52.620000000000005,
+        "heading_deg": 5.12818284676327,
+        "observed_turn_progress_deg": 11.431434452120964,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 52.64000000000001,
+        "end_s": 55.26,
+        "heading_deg": 15.748464341551772,
+        "observed_turn_progress_deg": 10.55800739546245,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 55.28,
+        "end_s": 57.88,
+        "heading_deg": 5.78216308012293,
+        "observed_turn_progress_deg": 9.971745873517357,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 57.900000000000006,
+        "end_s": 60.480000000000004,
+        "heading_deg": -4.22951875086491,
+        "observed_turn_progress_deg": 10.02150041043681,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 60.50000000000001,
+        "end_s": 63.120000000000005,
+        "heading_deg": 6.145322145614699,
+        "observed_turn_progress_deg": 10.36580040029676,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 63.14000000000001,
+        "end_s": 65.76,
+        "heading_deg": 16.776927488385965,
+        "observed_turn_progress_deg": 10.816589610900598,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 65.78,
+        "end_s": 68.38,
+        "heading_deg": 6.813678609347533,
+        "observed_turn_progress_deg": 10.049394981899603,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 68.39999999999999,
+        "end_s": 71.02,
+        "heading_deg": -3.8919998354906506,
+        "observed_turn_progress_deg": 10.793669140793682,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 71.03999999999999,
+        "end_s": 73.68,
+        "heading_deg": 7.32999786153961,
+        "observed_turn_progress_deg": 11.24386803632718,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 73.7,
+        "end_s": 76.32000000000001,
+        "heading_deg": 17.96887961659637,
+        "observed_turn_progress_deg": 10.610622314952879,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 76.34,
+        "end_s": 78.94,
+        "heading_deg": 8.000539375322377,
+        "observed_turn_progress_deg": 9.756833381679991,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 78.96,
+        "end_s": 81.58,
+        "heading_deg": -2.7217043366480533,
+        "observed_turn_progress_deg": 10.892657388533069,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 81.6,
+        "end_s": 84.24,
+        "heading_deg": 8.520384409606484,
+        "observed_turn_progress_deg": 11.304151191117597,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 84.25999999999999,
+        "end_s": 86.88,
+        "heading_deg": 19.174114540692145,
+        "observed_turn_progress_deg": 10.575291532468476,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 86.89999999999999,
+        "end_s": 89.52,
+        "heading_deg": 8.48548970449699,
+        "observed_turn_progress_deg": 10.581412024398237,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 89.53999999999999,
+        "end_s": 92.16,
+        "heading_deg": -2.235431932938098,
+        "observed_turn_progress_deg": 10.642486798065548,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 92.17999999999999,
+        "end_s": 94.82000000000001,
+        "heading_deg": 9.011831689517246,
+        "observed_turn_progress_deg": 11.082928954886086,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 94.84,
+        "end_s": 97.46000000000001,
+        "heading_deg": 19.70034408725084,
+        "observed_turn_progress_deg": 10.580498345317352,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 97.48,
+        "end_s": 100.08,
+        "heading_deg": 9.733358125552346,
+        "observed_turn_progress_deg": 9.781436235209611,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 100.1,
+        "end_s": 102.72,
+        "heading_deg": -1.0050674552250807,
+        "observed_turn_progress_deg": 10.813660414625073,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 102.74,
+        "end_s": 105.38,
+        "heading_deg": 10.288967007361364,
+        "observed_turn_progress_deg": 11.39286544105668,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 105.39999999999999,
+        "end_s": 107.98,
+        "heading_deg": 0.30793820269521843,
+        "observed_turn_progress_deg": 10.223698000781091,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 108.0,
+        "end_s": 110.62,
+        "heading_deg": 10.78969949838925,
+        "observed_turn_progress_deg": 10.578561613598536,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 110.64,
+        "end_s": 113.24000000000001,
+        "heading_deg": 0.799316264069032,
+        "observed_turn_progress_deg": 9.886530772320752,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 113.26,
+        "end_s": 115.88,
+        "heading_deg": 11.28557711341876,
+        "observed_turn_progress_deg": 10.566810386782322,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 115.89999999999999,
+        "end_s": 118.5,
+        "heading_deg": 1.292351034220814,
+        "observed_turn_progress_deg": 10.224145186759522,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 118.52,
+        "end_s": 121.14,
+        "heading_deg": 11.822504751686575,
+        "observed_turn_progress_deg": 10.594889820169868,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 121.16,
+        "end_s": 123.74000000000001,
+        "heading_deg": 1.8489157185199445,
+        "observed_turn_progress_deg": 9.889380297880772,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 123.76,
+        "end_s": 126.38000000000001,
+        "heading_deg": 12.357514814554213,
+        "observed_turn_progress_deg": 10.386079964571588,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 126.4,
+        "end_s": 128.98,
+        "heading_deg": 2.395863959692968,
+        "observed_turn_progress_deg": 9.907407066861065,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 129.0,
+        "end_s": 131.62,
+        "heading_deg": -8.287050046104998,
+        "observed_turn_progress_deg": 10.8326108563021,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 131.64000000000001,
+        "end_s": 134.28,
+        "heading_deg": 2.906568035159189,
+        "observed_turn_progress_deg": 11.302772133906352,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 134.3,
+        "end_s": 136.92000000000002,
+        "heading_deg": 13.491199294876612,
+        "observed_turn_progress_deg": 10.726161742893725,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 136.94000000000003,
+        "end_s": 139.56,
+        "heading_deg": 2.80290702730997,
+        "observed_turn_progress_deg": 10.690849785049911,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 139.58,
+        "end_s": 142.16,
+        "heading_deg": -7.198871316375676,
+        "observed_turn_progress_deg": 10.020378448132599,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 142.18,
+        "end_s": 144.8,
+        "heading_deg": 3.11443459846664,
+        "observed_turn_progress_deg": 10.242260380500673,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 144.82000000000002,
+        "end_s": 147.46,
+        "heading_deg": 14.530417835909267,
+        "observed_turn_progress_deg": 11.306831916090767,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 147.48000000000002,
+        "end_s": 150.1,
+        "heading_deg": 3.8328612857646,
+        "observed_turn_progress_deg": 10.52892624486967,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 150.12,
+        "end_s": 152.70000000000002,
+        "heading_deg": -6.168721062258472,
+        "observed_turn_progress_deg": 9.928484381387936,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 152.72000000000003,
+        "end_s": 155.36,
+        "heading_deg": 5.042259379243532,
+        "observed_turn_progress_deg": 10.962827808651895,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": -1,
+        "start_s": 155.38000000000002,
+        "end_s": 158.02,
+        "heading_deg": 16.47837719620016,
+        "observed_turn_progress_deg": 11.527942817166817,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 158.04000000000002,
+        "end_s": 160.66,
+        "heading_deg": 5.793516608274676,
+        "observed_turn_progress_deg": 10.570544164175097,
+        "policy": "primary",
+        "emergency_recovery": false
+      },
+      {
+        "side": 1,
+        "start_s": 160.68,
+        "end_s": 163.26,
+        "heading_deg": -4.215589578919454,
+        "observed_turn_progress_deg": 10.178716753715474,
+        "policy": "primary",
+        "emergency_recovery": false
+      }
+    ],
+    "completed": true,
+    "max_completed_cycle_heading_deg": 8.287050046104998,
+    "cycle_end_headings_deg": [
+      0.6183002013037765,
+      0.38485208124353054,
+      0.8766614267514072,
+      1.3714272697274335,
+      -8.093644644656946,
+      -7.1833298881400935,
+      -6.08253420579672,
+      -4.22951875086491,
+      -3.8919998354906506,
+      -2.7217043366480533,
+      -2.235431932938098,
+      -1.0050674552250807,
+      0.30793820269521843,
+      0.799316264069032,
+      1.292351034220814,
+      1.8489157185199445,
+      -8.287050046104998,
+      -7.198871316375676,
+      -6.168721062258472,
+      -4.215589578919454
+    ],
+    "physical_state_resets_between_steps": false,
+    "target_step_turn_deg": 12,
+    "heading_sensor_delay_s": 0.02,
+    "heading_sensor_noise_deg": 0.1,
+    "fallback_activated": false,
+    "per_side_fallback": false,
+    "side_fallback": {
+      "-1": false,
+      "1": false
+    },
+    "exhaustion_tolerance_deg": 6.0,
+    "sequencing": {
+      "min_step_s": 1.2,
+      "settle_s": 0.04,
+      "post_catch_s": 0.6,
+      "head_return_margin_s": 0.0,
+      "head_settle_yaw_deg": 0.0,
+      "head_settle_rate_deg_s": 15.0
+    },
+    "passed": true,
+    "stable": true,
+    "course_ok": true,
+    "mean_stride_mm": 31.672278716085856,
+    "min_bilateral_roll_deg": 15.256665918184028,
+    "forward_mm": 633.4485340731444,
+    "speed_mm_s": 3.879998371145072,
+    "full_trial_speed_mm_s": 3.167242670365722,
+    "pairs": [
+      {
+        "forward_mm": 21.220621408104492,
+        "heading_deg": 0.6183002013037765,
+        "bilateral_roll_deg": 15.329690316534883,
+        "duration_s": 5.28
+      },
+      {
+        "forward_mm": 20.615983654127554,
+        "heading_deg": 0.38485208124353054,
+        "bilateral_roll_deg": 15.327306436982067,
+        "duration_s": 5.260000000000001
+      },
+      {
+        "forward_mm": 20.091984084840433,
+        "heading_deg": 0.8766614267514072,
+        "bilateral_roll_deg": 15.26961897795151,
+        "duration_s": 5.24
+      },
+      {
+        "forward_mm": 20.08040519306148,
+        "heading_deg": 1.3714272697274335,
+        "bilateral_roll_deg": 15.274237211622792,
+        "duration_s": 5.240000000000002
+      },
+      {
+        "forward_mm": 30.11993539183902,
+        "heading_deg": -8.093644644656946,
+        "bilateral_roll_deg": 15.257015845298328,
+        "duration_s": 7.82
+      },
+      {
+        "forward_mm": 40.11171353693951,
+        "heading_deg": -7.1833298881400935,
+        "bilateral_roll_deg": 15.262393411176472,
+        "duration_s": 10.459999999999997
+      },
+      {
+        "forward_mm": 41.23954032026631,
+        "heading_deg": -6.08253420579672,
+        "bilateral_roll_deg": 15.28382473759472,
+        "duration_s": 10.54
+      },
+      {
+        "forward_mm": 40.62937267649255,
+        "heading_deg": -4.22951875086491,
+        "bilateral_roll_deg": 15.292417222898138,
+        "duration_s": 10.5
+      },
+      {
+        "forward_mm": 40.445162181518754,
+        "heading_deg": -3.8919998354906506,
+        "bilateral_roll_deg": 15.299866585408777,
+        "duration_s": 10.519999999999989
+      },
+      {
+        "forward_mm": 40.99736691840927,
+        "heading_deg": -2.7217043366480533,
+        "bilateral_roll_deg": 15.312431488600298,
+        "duration_s": 10.540000000000006
+      },
+      {
+        "forward_mm": 41.347697158900296,
+        "heading_deg": -2.235431932938098,
+        "bilateral_roll_deg": 15.36810273007806,
+        "duration_s": 10.560000000000002
+      },
+      {
+        "forward_mm": 40.83321699953807,
+        "heading_deg": -1.0050674552250807,
+        "bilateral_roll_deg": 15.316279232518065,
+        "duration_s": 10.540000000000006
+      },
+      {
+        "forward_mm": 20.73091386209719,
+        "heading_deg": 0.30793820269521843,
+        "bilateral_roll_deg": 15.259940648291739,
+        "duration_s": 5.240000000000009
+      },
+      {
+        "forward_mm": 20.100148875135005,
+        "heading_deg": 0.799316264069032,
+        "bilateral_roll_deg": 15.268912811096069,
+        "duration_s": 5.240000000000009
+      },
+      {
+        "forward_mm": 20.086823956156074,
+        "heading_deg": 1.292351034220814,
+        "bilateral_roll_deg": 15.27353575214552,
+        "duration_s": 5.239999999999995
+      },
+      {
+        "forward_mm": 20.057774332281397,
+        "heading_deg": 1.8489157185199445,
+        "bilateral_roll_deg": 15.256665918184028,
+        "duration_s": 5.220000000000013
+      },
+      {
+        "forward_mm": 30.625163910231233,
+        "heading_deg": -8.287050046104998,
+        "bilateral_roll_deg": 15.259799604702792,
+        "duration_s": 7.859999999999999
+      },
+      {
+        "forward_mm": 41.23393098158201,
+        "heading_deg": -7.198871316375676,
+        "bilateral_roll_deg": 15.327133504119065,
+        "duration_s": 10.519999999999982
+      },
+      {
+        "forward_mm": 41.175388035918694,
+        "heading_deg": -6.168721062258472,
+        "bilateral_roll_deg": 15.338860463078573,
+        "duration_s": 10.52000000000001
+      },
+      {
+        "forward_mm": 41.70243084427783,
+        "heading_deg": -4.215589578919454,
+        "bilateral_roll_deg": 15.353314933262945,
+        "duration_s": 10.539999999999964
+      }
+    ],
+    "score": 1733.4485340731444
+  },
+  "waist_range_deg": [
+    -2.6324121837148224,
+    2.6173556875615884
+  ],
+  "waist_peak_torque_nm": 0.0787214717238456,
+  "nominal_speed_gain_percent": 5.137071303477958,
+  "independent_nominal_replay": {
+    "completed": true,
+    "frames": 10001,
+    "max_absolute_errors": {
+      "qpos": 0.0,
+      "qvel": 0.0,
+      "foot_xyz_m": 0.0
+    },
+    "selected_policy": "configs/penguin-sustained-trained.json",
+    "max_bursts_per_half": 2,
+    "note": "Fresh final-policy rollout matches the pre-tolerance-change nominal rollout exactly. The final-retry exception is never reached in this nominal trial."
+  },
+  "hashes": {
+    ".gitignore": "db680394e6af93bfdfb12505ae6c18a796ec9cd4ae0ec59f63d60f93c96410d3",
+    "BRIEF.md": "40dab1437b654f9d82b46f28ebeae2fbbebd6bc53fe04532167fd851a150b49c",
+    "README.md": "eff4fc7c9053718fd18fe0ef8da4b2c2ffb6e8a1512d56c5bdafd8724da8fc6c",
+    "STATUS.md": "e32dcb9e59a915ea800f293d0388dccc4e870704cbbc8b4476511b8aed33353a",
+    "configs/penguin-sustained-trained.json": "71e67630c5c0be7346cfd90fc74ea6e6680ca8d614a9e8b9f234b0c317bcd296",
+    "docs/SUSTAINED_PENGUIN_2026-11-20.md": "564c7b859dbd0b4dba1e213ee48eadc8421509843e73eefebef0ddd1f42cf608",
+    "experiments/build_sustained_qualification.py": "0a46ca7919b5b73cb5b1f6e4280c2322da8ba3746abc4828797ca6db041b7850",
+    "experiments/finalize_sustained_penguin.py": "adbc2679f35c99f9122386d5203231c3074c7a751bb7335fd97db2bc1c051333",
+    "experiments/generated/sustained-penguin/selected-twenty-left.json": "5650677c3e52bacc0a628903d72df9b3858c71ab16807898ed31b8057ef87113",
+    "experiments/plot_sustained_penguin.py": "9a20d728b2e9defbb66235b0e2e3898195fc6c0c228a4de119ba7c51da9e3ec6",
+    "experiments/qualify_policy_bank.py": "e020c3ef6a85def472737e78ee373fcc1cbd43871a5ce702cc92fc512d2d881c",
+    "experiments/qualify_sustained_penguin.py": "c1b101b8bbd805b0911f3fe2091fd6dd9bc4fe6bc205a6161121299e30e50633",
+    "experiments/reports/motor-training-sustained-cadence-2026-11-20.json": "3a46124d75a0b3f1e00e5814234f714103b746d9e6f405bdff217ebcba7e0d1e",
+    "experiments/reports/motor-training-sustained-development-2026-11-20.json": "a9b46f09213e5dea1719372e4f5f1d205ec97a49ce3b6e4546b593bff2f15cba",
+    "experiments/reports/motor-training-sustained-development-final-2026-11-20.json": "cb4dfb3876c47cc458dde05624d68df5208aca7efc8cccc23e34bbacb8b711f7",
+    "experiments/reports/motor-training-sustained-fine-final-2026-11-20.json": "9a446a5de06eb583a2fff5759f29b056f18107675f2ca372efb7c5d096640299",
+    "experiments/reports/motor-training-sustained-finer-single-repair-2026-11-20.json": "1221c1087e5de2b75d9abdd3e0e101a5ca233a700faf85b3615fcd61deca127d",
+    "experiments/reports/motor-training-sustained-fresh-final-2026-11-20.json": "635beff94cf00e02827635385f4cd33b6d70001664a5a3e3e4c0ee7964c75a3a",
+    "experiments/reports/motor-training-sustained-goal-refinement-2026-11-20.json": "8a5157df71017e45ddfb5b59641759913f5498e046f6fa46697d1b92895c990e",
+    "experiments/reports/motor-training-sustained-long-final-2026-11-20.json": "8fc388c701863797e616753917e127775181d2d74f47d78cdfbb4f8d59fd5b67",
+    "experiments/reports/motor-training-sustained-long-screen-2026-11-20.json": "0021b043040042762c7d5a5b9e0a2195500b621c7aa5eef49f8c890dc696d7b1",
+    "experiments/reports/motor-training-sustained-nearby-2026-11-20.json": "f3f9859cf854167bba559e4a9e63baf16a0eb5ea5d972831db68a9afbdc01f0f",
+    "experiments/reports/motor-training-sustained-qualification-final-2026-11-20.json": "8d4c2cb22d7f44fba47601da1f4d5399787693f301b98742e9cb364d231450aa",
+    "experiments/reports/motor-training-sustained-recording-replay-2026-11-20.json": "77619d86d8f758c9a59f27e8d4882afb21c58fb255dd71a27db3dd3d22b15ff3",
+    "experiments/reports/motor-training-sustained-recovery-screen-2026-11-20.json": "4acded9e120a0aecc55d009ff1cce39e420bf26195f5c72ec3c4feb51fb305b2",
+    "experiments/reports/motor-training-sustained-repair-screen-2026-11-20.json": "26c4542a6716ff459756635dd1c7eeed4a6126153adea5d66ff472f46a4feddc",
+    "experiments/reports/motor-training-sustained-repeated-repair-2026-11-20.json": "973a81651b9aedc7d124dcb8014e66d56d950a2e0a71c6794119e192a41b955d",
+    "experiments/reports/motor-training-sustained-rescue-cem-g0-2026-11-20.json": "8b0c527a10f7aad793958bceccf864ba8d52fefaa99a89c0fda875255739643c",
+    "experiments/reports/motor-training-sustained-rescue-feedback-2026-11-20.json": "47178523d56b55988051f993b2bd8a7dff25cf36a72c0fb1c74e239a38e54ad5",
+    "experiments/reports/motor-training-sustained-rescue-screen-2026-11-20.json": "8dbf27f0641268b7167b2fa2c6501e3722d9266570c4eba3b44e6f8c25ecb549",
+    "experiments/reports/motor-training-sustained-selected-demo-2026-11-20.json": "ed7ac927fde8ec44b4b56860f97b6f6a8a3ced4ac38e7289671273a0ef50c3bf",
+    "experiments/reports/motor-training-sustained-sequence-screen-2026-11-20.json": "0571c21f50a2a0a884465f3b2841de84163c2a5317373cd6b040a5d656732ed2",
+    "experiments/reports/motor-training-sustained-tolerance-repair-2026-11-20.json": "ee8f4390cf5045a540394b0b672334b7284bfbc9468de68e0593519adf966672",
+    "experiments/reports/motor-training-sustained-tolerance6-repair-2026-11-20.json": "dc4dbed99656af333324ed17a26bb5ca44a082ac6f54be8134995379d6ffa2e8",
+    "experiments/reports/motor-training-sustained-weak-turn-2026-11-20.json": "0ccc01feb2bf9ae598e2027187ce424ecee34cc40903aa871069fd8155dad830",
+    "experiments/reports/repository-tests-sustained-2026-11-20.txt": "e83e80d908ec7cd2a8c6abed4f9b3b7dc7358acae4b8c929152b920898fa843f",
+    "experiments/reports/repository-tests-sustained-final-2026-11-20.txt": "cbb77a8e53d093bba246a776515ab0922284fc8de0166a4688c9cca6f3e85242",
+    "experiments/train_sustained_penguin.py": "54e097638c1c2aae772b3d9e82556abc04491e00da8719a4aa2c8b8e26f124ee",
+    "experiments/train_sustained_rescue.py": "d806fb3ab62638554aac69c855eac95432946105cbe1f3a00332b044a91586b2",
+    "media/simulation/sustained-penguin-2026-11-20-chart.png": "a1e772bc6961d66cab3a4db3c96362641535e5dd7631b1f844f425e9e8aeb533",
+    "media/simulation/sustained-penguin-best-2026-11-20.mp4": "3548c3a252e2c72e70946e0fe70b0096459927314c85c61579e2cb43a93b2c09",
+    "media/simulation/sustained-penguin-best-2026-11-20.png": "06418dbe5c700874882bbacdb40fb497a78f98408a06a9e393d75c90fb12c142",
+    "src/reachy_locomotion/penguin.py": "52b23ae282d0505188b3e33b10e4f1d85a0ab1fc3fa2b55f86181c6d39cbd84a",
+    "src/reachy_locomotion/primitives.py": "db4f4c89ac8552e94fc0941bb1b76f2ef5cd8e464a6de910558fd8c8a2fca304",
+    "tests/test_penguin.py": "80c2b08a8c1fb4272654085ae41ef9d41aa5189348755ee71dbbc5f8f3b9fc52",
+    "tests/test_primitives.py": "73f9a395e4bbe306ef2c95469447a31993a0bb397a918d7c10582878ffb392ee"
+  },
+  "limits": [
+    "Simulation only; motor dynamics, battery bus, sensing and contact remain uncalibrated.",
+    "No thermal model or hardware endurance claim.",
+    "Known cases were used for development; new held-out cases were evaluated after freezing the policy.",
+    "Speed uses stepping duration; video is real time and only removes final idle frames."
+  ]
+}

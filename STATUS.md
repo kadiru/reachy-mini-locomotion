@@ -1,5 +1,61 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 20 — sustained gait, known repairs and fresh limits
+
+Selected policy: `configs/penguin-sustained-trained.json`. Trained the previously
+failing catch and rescue launch, shortened requested yaw return from 0.40 to
+0.25 s, and preserved the 12° half-turn target. Normal steering tolerance is
+2°; only a progressing fourth/final retry may accept 6°. The actual 20° cycle
+heading gate, 15 mm pair-distance gate, positive pair progress, bilateral roll,
+35° tilt, joint, closure, motor and contact guards are unchanged.
+
+**Best nominal recording:** 20 complete pairs / 62 bursts, **633.45 mm in
+163.26 s of stepping**, **3.880 mm/s**. The same-side previous 20-pair baseline
+is 3.690 mm/s, so the gain is **5.14%**. Maximum cycle-end heading is 8.29°;
+minimum bilateral roll 15.26°, peak tilt 17.53°, peak rim-height difference
+29.78 mm. The other side gives 650.85 mm / 168.08 s / 3.872 mm/s / 9.00°.
+Both directions pass 20 pairs at 0.125 ms (3.867 and 3.865 mm/s), within 0.33%
+of coarse speeds. Full nominal trials last 200 s; video shows stepping plus
+one second of rest at 1×. Final-policy replay matches all 10,001 saved physical
+frames of the independent nominal rollout exactly.
+
+**Qualification:** 42/42 known single-pair checks, 6/6 difficult four-pair
+checks, 6/6 finer difficult single-pair checks, 2/2 finer repeated repairs and
+4/4 nominal 20-pair checks pass. New frozen seed 2026112007 gives **11/16**
+four-pair passes: heldout-3 hits the 35° guard on both sides; heldout-6 left
+misses its turn goal; heldout-1/7 right complete upright but have only
+10.68/11.69 mm mean pair distance. No tuning followed this split. These are
+longer tests than the earlier one-pair holdout; pass rates are not directly
+comparable. **No universal no-fall robustness is claimed.**
+
+Final aggregate: 71/76 checks pass. It explicitly records inherited successful
+paths versus direct rollouts: enlarging only the final-retry steering tolerance
+cannot change an old successful path that already met the tighter test.
+Three old failed checks were rerun under the final policy, including both
+repeated-walk cases at both timesteps. Earlier failed candidates and all
+superseded evidence remain. `experiments/build_sustained_qualification.py`
+checks that policy difference and records each source.
+
+The fixed waist target remains zero; measured deflection is −2.63…+2.62°,
+peak holding torque 0.0787 Nm and absolute waist work 0.383 J over 200 s.
+All physical model assumptions and the 10.7 rad/s / 360 rad/s² / 25 Hz target
+profile remain unchanged. There is no thermal model or hardware endurance
+claim. No robot, shared GPU, Nimbus or EY work was touched.
+
+The bounded simulator supports up to 600 s and the controller up to 30 pairs.
+Optional training termination after one second of physical finish settling
+preserves every preceding frame, verified by integration test. **110 tests pass**
+in `experiments/reports/repository-tests-sustained-final-2026-11-20.txt`.
+
+Video: `media/simulation/sustained-penguin-best-2026-11-20.mp4`.
+Plot: `media/simulation/sustained-penguin-2026-11-20-chart.png`.
+Commands and limitations: `docs/SUSTAINED_PENGUIN_2026-11-20.md`.
+Evidence: `experiments/reports/motor-training-sustained-qualification-final-2026-11-20.json`,
+`motor-training-sustained-recording-replay-2026-11-20.json` and the artifact receipt.
+Next: promote the new guard/weak-progress cases to development, reserve a fresh
+split, and calibrate real motor response, sensing, battery bus and floor contact
+before physical execution. Personal Git identity remains kadiru / Kadir Uyanik.
+
 ## November 19 — faster penguin gait and repaired known failures
 
 Trained on the previous failing models and shortened state-gated pauses. All

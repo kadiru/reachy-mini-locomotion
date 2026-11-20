@@ -30,9 +30,12 @@ def evaluate(job):
                             heading_noise_deg=job.get('heading_noise_deg', .1), heading_seed=job.get('heading_seed', 42),
                             fallback_policy=p['fallback'], switch_below_deg=p['switch_below_deg'],
                             delayed_sensor_fallback=p.get('delayed_sensor_fallback'),
+                            per_side_fallback=p.get('per_side_fallback',False),
+                            exhaustion_tolerance_deg=p.get('exhaustion_tolerance_deg',2.),
                             rescue_after_weak_fallback_deg=p.get('rescue_after_weak_fallback_deg',0.),**sequencing)
     r = sim.run_primitive(mirrored(g, side), seconds=job.get('seconds', 15 if pivot else 28),
-                          waist_mode='hold_neutral', controller=ctl, tilt_limit_deg=35, record=job.get('record', False))
+                          waist_mode='hold_neutral', controller=ctl, tilt_limit_deg=35, record=job.get('record', False),
+                          finish_settle_s=job.get('finish_settle_s'))
     summary = ctl.report(); pm = pivot_metrics(r)
     if not pivot:
         summary.update(metrics(r, r['trace'], summary))

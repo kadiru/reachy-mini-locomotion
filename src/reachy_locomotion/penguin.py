@@ -11,8 +11,8 @@ class PenguinController:
                  target_step_turn_deg=0.,max_repeats=1,pivot_only=False,heading_noise_deg=0.,heading_seed=0,
                  fallback_policy=None,switch_below_deg=3.,settle_s=.14,post_catch_s=1.2,head_return_margin_s=.2,
                  head_settle_yaw_deg=0.,head_settle_rate_deg_s=15.,delayed_sensor_fallback=None,
-                 rescue_after_weak_fallback_deg=0.):
-        if type(cycles) is not int or not 1<=cycles<=8 or start_side not in (-1,1):
+                 rescue_after_weak_fallback_deg=0.,per_side_fallback=False,exhaustion_tolerance_deg=2.):
+        if type(cycles) is not int or not 1<=cycles<=30 or start_side not in (-1,1):
             raise ValueError('Invalid cycle count or starting side')
         if not .8<=min_step_s<=max_step_s<=8 or type(max_repeats) is not int or not 1<=max_repeats<=4:
             raise ValueError('Invalid settling/repetition budget')
@@ -27,6 +27,8 @@ class PenguinController:
         if delayed_sensor_fallback and (not fallback_policy or delayed_sensor_fallback['feedback'].get('return_x_after_catch_s',-1)<0):
             raise ValueError('Delayed-sensor fallback requires the same neutral-return contract')
         if not 0<=rescue_after_weak_fallback_deg<=10:raise ValueError('Invalid fallback progress threshold')
+        if type(per_side_fallback) is not bool:raise ValueError('Invalid per-side fallback option')
+        if not 2<=exhaustion_tolerance_deg<=10:raise ValueError('Invalid exhausted-budget turn tolerance')
         self.recipe=dict(recipe);self.feedback=dict(feedback)
         self.cycles=cycles;self.min_step_s=min_step_s;self.max_step_s=max_step_s
         self.settle_s=settle_s;self.post_catch_s=post_catch_s;self.head_return_margin_s=head_return_margin_s
@@ -47,6 +49,9 @@ class PenguinController:
         self.fallback_policy=fallback_policy;self.fallback_active=False;self.switch_below_deg=switch_below_deg
         self.delayed_sensor_fallback=delayed_sensor_fallback;self.active_policy='primary'
         self.rescue_threshold=rescue_after_weak_fallback_deg;self.rescue_active=False
+        self.per_side_fallback=per_side_fallback
+        self.exhaustion_tolerance_deg=exhaustion_tolerance_deg
+        self.side_fallback={-1:False,1:False};self.side_rescue={-1:False,1:False}
         self.burst_start_heading=0.
 
     def observe_heading(self,t,heading_deg):
@@ -95,19 +100,29 @@ class PenguinController:
             if self.active_policy=='fallback' and self.rescue_threshold and progress<self.rescue_threshold:
                 self.rescue_active=True
             if self.fallback_policy and progress<self.switch_below_deg:self.fallback_active=True
+            self.side_fallback[self.side]=self.fallback_active
+            self.side_rescue[self.side]=self.rescue_active
             target=-self.start_side*self.target_turn if len(self.steps)%2==0 else 0.
-            achieved=not self.target_turn or -self.side*(self.sensed_heading-target)>=-2
+            # A progressing final retry may accept a small steering residual.
+            # Normal bursts retain the tighter target; all pair-end heading,
+            # displacement and physical guards are still evaluated separately.
+            tolerance=self.exhaustion_tolerance_deg if self.repeats>=self.max_repeats and progress>0 else 2.
+            achieved=not self.target_turn or -self.side*(self.sensed_heading-target)>=-tolerance
             half_complete=achieved or self.repeats>=self.max_repeats
             if half_complete:
                 self.goal_missed|=not achieved
                 self.steps.append(dict(index=len(self.steps),side=self.side,start_s=self.half_started,end_s=t,
-                                       heading_deg=self.heading,target_heading_deg=target,repeats=self.repeats,turn_goal_met=achieved))
+                                       heading_deg=self.heading,target_heading_deg=target,repeats=self.repeats,turn_goal_met=achieved,
+                                       turn_goal_tolerance_deg=tolerance))
                 if len(self.steps)>=self.requested_steps or not achieved:self.finished=True
                 if not self.finished:self.side=-self.side
                 self.repeats=0;self.half_started=t+.02
             if not self.finished:
                 previous=self.child
                 self.started=t+.02;self.ready_since=None
+                if self.per_side_fallback:
+                    self.fallback_active=self.side_fallback[self.side]
+                    self.rescue_active=self.side_rescue[self.side]
                 alternate=self.fallback_policy
                 self.active_policy='fallback' if self.fallback_active else 'primary'
                 if (self.fallback_active and self.delayed_sensor_fallback and self.feedback.get('sensor_delay_frames',1)>=2
@@ -135,7 +150,9 @@ class PenguinController:
                     max_completed_cycle_heading_deg=max(map(abs,headings),default=0.),
                     cycle_end_headings_deg=headings,physical_state_resets_between_steps=False,
                     target_step_turn_deg=self.target_turn,heading_sensor_delay_s=.02,heading_sensor_noise_deg=self.heading_noise,
-                    fallback_activated=self.fallback_active,
+                    fallback_activated=any(self.side_fallback.values()),
+                    per_side_fallback=self.per_side_fallback,side_fallback=dict(self.side_fallback),
+                    exhaustion_tolerance_deg=self.exhaustion_tolerance_deg,
                     sequencing=dict(min_step_s=self.min_step_s,settle_s=self.settle_s,post_catch_s=self.post_catch_s,
                                     head_return_margin_s=self.head_return_margin_s,head_settle_yaw_deg=self.head_settle_yaw_deg,
                                     head_settle_rate_deg_s=self.head_settle_rate_deg_s))

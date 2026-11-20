@@ -14,6 +14,17 @@ The opening sequence shows controller-driven head motion, whole-body rocking
 and apparent base progress. [Video observations](docs/VIMEO_OBSERVATIONS_2026-11-18.md)
 separate what is visible from what still needs measurement.
 
+**Sustained penguin gait (November 20):** **633.4 mm in 163.26 s of stepping**,
+**3.88 mm/s**, over **20 complete pairs** with no falls or guard stops and
+8.29° maximum cycle-end heading. This is **5.14% faster** than the previous
+policy over the same 20-pair check. Both starting sides pass at 0.25 and 0.125 ms.
+All **42 known single-pair cases** and **six difficult four-pair cases** pass;
+the new frozen four-pair split passes **11/16** (two tilt guards and three
+turn/progress failures). Robustness across new conditions is still incomplete.
+Waist target and motor limits are unchanged; **110 tests pass**.
+[Watch the best real-time video](media/simulation/sustained-penguin-best-2026-11-20.mp4).
+[Training, qualification methods and limitations](docs/SUSTAINED_PENGUIN_2026-11-20.md).
+
 **Faster feedback gait (November 19):** retraining the failures and shortening
 phase pauses gives **112.1 mm in 30.44 s of stepping**, **3.68 mm/s**—**25.8% faster**
 than the preceding balance gait—with 15.3° body roll and 7.52° maximum pair-end

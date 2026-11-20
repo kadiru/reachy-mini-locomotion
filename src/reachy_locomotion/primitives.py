@@ -127,11 +127,13 @@ def classify_trial(reason,tail,peak_roll):
 
 class PrimitiveSimulator(SwaySimulator):
     def run_primitive(self,recipe,seconds=3.6,waist_mode='off',record=False,
-                      controller=None,tilt_limit_deg=80):
+                      controller=None,tilt_limit_deg=80,finish_settle_s=None):
         if not isinstance(recipe,Primitive):recipe=Primitive(**recipe)
         if waist_mode not in ('off','hold_neutral'):raise ValueError('Unknown waist mode')
-        if not 1<=seconds<=60 or self.servos is None:raise ValueError('Require bounded datasheet simulation')
+        if not 1<=seconds<=600 or self.servos is None:raise ValueError('Require bounded datasheet simulation')
         if tilt_limit_deg not in (35,80):raise ValueError('Use walking or diagnostic tilt guard')
+        if finish_settle_s is not None and not .6<=finish_settle_s<=2:
+            raise ValueError('Require at least 0.6 seconds of physical finish settling')
         m=self.model;d=mujoco.MjData(m);d.qpos[:]=self.initial_qpos;d.qvel[:]=self.initial_qvel;d.ctrl[:]=self.initial_ctrl
         self.servos.reset(self.initial_targets)
         waist=m.actuator('yaw_body').id;torso=m.body('body_down_3dprint').id
@@ -151,6 +153,7 @@ class PrimitiveSimulator(SwaySimulator):
         peak_torque=np.zeros(m.nu);waist_work=head_braking=0.;joint_margin=1e9;max_closure=0.
         edge_time=edge_yaw=slip_distance=0.;last_roll=0.;previous_edge=False
         total_frames=round(seconds/.02);base_velocity=np.zeros(6)
+        finished_at=None;duration_budget=seconds;early_finish=False
         for frame in range(total_frames+1):
             t=frame*.02;R=d.xmat[self.base].reshape(3,3);rpy=euler(R);roll=math.degrees(rpy[0])
             tilt=math.degrees(math.acos(float(np.clip(R[2,2],-1,1))))
@@ -193,6 +196,10 @@ class PrimitiveSimulator(SwaySimulator):
                      foot_xyz_m=d.xpos[self.base].tolist())
             pose,stage,sensed=controller.target(t,roll);row.update(stage=stage,sensed_roll_deg=sensed);trace.append(row)
             if hasattr(controller,'diagnostics'):row.update(controller.diagnostics())
+            if finish_settle_s is not None and getattr(controller,'finished',False):
+                if finished_at is None:finished_at=t
+                if t-finished_at>=finish_settle_s-1e-9:
+                    early_finish=True;seconds=t
             peak_roll=max(peak_roll,abs(roll));peak_tilt=max(peak_tilt,tilt);peak_lift=max(peak_lift,lift)
             if record:
                 trajectory.append(dict(time_s=t,measuring=True,qpos=d.qpos.tolist(),qvel=d.qvel.tolist(),
@@ -201,7 +208,7 @@ class PrimitiveSimulator(SwaySimulator):
                                        heading_from_startup_rad=float(angles[0]),foot_side_normal_forces_n_right_left=forces.tolist(),
                                        primitive_stage=stage,side_height_difference_mm=lift,torso_yaw_deg=math.degrees(angles[1]),
                                        waist_torque_nm=float(d.actuator_force[waist])))
-            if frame==total_frames:break
+            if frame==total_frames or early_finish:break
             try:target=self.checked_ik(pose)
             except ValueError as error:reason='invalid_head_target: '+str(error);break
             targets=self.initial_targets.copy();targets[self.act]=target;targets[waist]=self.initial_targets[waist]
@@ -241,6 +248,7 @@ class PrimitiveSimulator(SwaySimulator):
         sensor_delay=.02*feedback.sensor_delay_frames if feedback is not None else .02
         result=dict(evidence='uncalibrated_simulation',hardware_ready=False,primitive_trial=True,recipe=asdict(recipe),config=self.config,
                     requested_seconds=seconds,elapsed_seconds=float(d.time),termination=reason or 'completed',**flags,
+                    max_duration_seconds=duration_budget,stopped_after_controller_finish=early_finish,
                     diagnostic_falls_allowed=tilt_limit_deg==80,tilt_limit_deg=tilt_limit_deg,walking_fall_guard_unchanged=True,waist_mode=waist_mode,
                     waist_peak_torque_nm=float(peak_torque[waist]),waist_absolute_motor_work_j=waist_work,
                     commanded_waist_position_range_rad=[float(self.initial_targets[waist])]*2,

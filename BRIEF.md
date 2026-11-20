@@ -2,6 +2,17 @@
 
 ## Priority
 
+November 20 outcome: 20-cycle nominal walking reaches 3.88 mm/s, 5.14% faster
+than the previous 20-cycle baseline; both directions pass at both timesteps.
+All 42 known single-pair and six difficult four-pair conditions pass. New
+four-pair qualification is 11/16: two tilt guards and three turn/progress
+failures remain. Selected policy: `configs/penguin-sustained-trained.json`.
+See `docs/SUSTAINED_PENGUIN_2026-11-20.md` for direct versus equivalent-path
+validation, bounded final-retry steering tolerance, and full failed evidence.
+The waist target and motor limits remain unchanged; no hardware calibration
+or transfer has been performed. Next priorities are the new holdout failures
+and physical system identification, preserving the achieved nominal speed.
+
 Latest outcome: faster feedback gait is 25.8% faster nominally; all 26 previously
 seen cases and all four finer failure rechecks pass. Fresh validation is 14/16,
 with one tilt guard and one heading/progress failure still open. Selected config:

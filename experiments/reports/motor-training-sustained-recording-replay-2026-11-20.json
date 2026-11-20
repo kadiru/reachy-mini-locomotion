@@ -1,0 +1,12 @@
+{
+  "completed": true,
+  "frames": 10001,
+  "max_absolute_errors": {
+    "qpos": 0.0,
+    "qvel": 0.0,
+    "foot_xyz_m": 0.0
+  },
+  "selected_policy": "configs/penguin-sustained-trained.json",
+  "max_bursts_per_half": 2,
+  "note": "Fresh final-policy rollout matches the pre-tolerance-change nominal rollout exactly. The final-retry exception is never reached in this nominal trial."
+}
