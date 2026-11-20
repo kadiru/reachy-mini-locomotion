@@ -14,6 +14,15 @@ The opening sequence shows controller-driven head motion, whole-body rocking
 and apparent base progress. [Video observations](docs/VIMEO_OBSERVATIONS_2026-11-18.md)
 separate what is visible from what still needs measurement.
 
+**Front/back balance (November 20):** from an explicitly raised posture, the
+new controllers hold the front/back edge for **19.76/19.54 seconds** in
+20-second simulations near ±32° pitch. Natural lift-and-catch from flat is
+still unresolved. The frozen hold policies pass **9/18** sensitivity checks;
+noise and mass variation remain failures. Waist target and motor limits are
+unchanged. **131 tests pass.**
+[Watch the raised-start holds](media/simulation/foreaft-balance-2026-11-20.mp4).
+[Method, failures and replay](docs/FOREAFT_BALANCE_2026-11-20.md).
+
 **Sustained edge balance (November 20):** both sides lift from flat, arrest the
 rock and balance at about **31–32°**, with one rim about **58–60 mm** above the
 other. The nominal 60-second trials contain **57.36/56.74 seconds of continuous

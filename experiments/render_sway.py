@@ -94,6 +94,12 @@ def main():
         for sample in result['trace']:
             ok=sample['edge_support'] and abs(side*sample['roll_deg']-target)<=2 and abs(sample['roll_rate_deg_s'])<=5 and abs(sample['pitch_deg'])<=5
             hold=hold+.02 if ok and previous_ok else 0.;edge_holds.append(hold);previous_ok=ok
+    if 'foreaft_balance' in result:
+        side=result['foreaft_balance']['side'];target=result['foreaft_balance']['policy']['feedback']['target_roll_deg']
+        for sample in result['trace']:
+            forces=sample['foot_front_back_normal_forces_n_back_front'];loaded=1 if side==1 else 0
+            ok=sample['foreaft_edge_support'] and forces[loaded]>.5 and forces[1-loaded]<.1 and abs(side*sample['pitch_deg']-target)<=2 and abs(sample['pitch_rate_deg_s'])<=5 and abs(sample['roll_deg'])<=5
+            hold=hold+.02 if ok and previous_ok else 0.;edge_holds.append(hold);previous_ok=ok
     try:
         for frame_index, row in enumerate(result["trajectory"]):
             if args.until is not None and row['time_s']>args.until+1e-8:break
@@ -155,6 +161,11 @@ def main():
                     support = 'RIGHT EDGE'
                 elif sum(forces) < .1:
                     support = 'UNLOADED'
+                if 'foreaft_balance' in result:
+                    forces=row['foot_front_back_normal_forces_n_back_front'];support='BOTH ENDS'
+                    if forces[0]<.1 and forces[1]>.5:support='FRONT EDGE'
+                    elif forces[1]<.1 and forces[0]>.5:support='BACK EDGE'
+                    elif sum(forces)<.1:support='UNLOADED'
                 if row.get('terminal_event'):
                     support='BODY CONTACT' if row['terminal_event']=='nonfoot_floor_contact' else 'TERMINATED'
                 draw.rectangle((12,92,335,148), fill=(15,22,32))
@@ -169,7 +180,11 @@ def main():
                     draw.text((908,96),'Waist: '+waist,font=font,fill=(110,210,235))
                     draw.text((908,122),f"Roll: {np.degrees(row['foot_rpy_rad'][0]):+.1f} deg",font=font,fill='white')
                     draw.text((908,148),f"Edge height difference: {row['side_height_difference_mm']:.1f} mm",font=font,fill='white')
-                    if 'edge_balance' in result:
+                    if 'foreaft_balance' in result:
+                        draw.rectangle((900,118,1268,177),fill=(15,22,32))
+                        draw.text((908,122),f"Pitch: {np.degrees(row['foot_rpy_rad'][1]):+.1f} deg",font=font,fill='white')
+                        draw.text((908,148),f"Front/back height gap: {row['front_back_height_difference_mm']:.1f} mm",font=font,fill='white')
+                    if 'edge_balance' in result or 'foreaft_balance' in result:
                         draw.rectangle((12,470,625,530),fill=(15,22,32))
                         label='ARTIFICIAL TILTED START' if not result.get('natural_upright_start',True) else 'Natural lift from flat'
                         draw.text((20,474),label,font=font,fill='white')

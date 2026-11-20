@@ -127,7 +127,8 @@ def classify_trial(reason,tail,peak_roll):
 
 class PrimitiveSimulator(SwaySimulator):
     def run_primitive(self,recipe,seconds=3.6,waist_mode='off',record=False,
-                      controller=None,tilt_limit_deg=80,finish_settle_s=None,diagnostic_initial_roll_deg=None):
+                      controller=None,tilt_limit_deg=80,finish_settle_s=None,diagnostic_initial_roll_deg=None,
+                      diagnostic_initial_pitch_deg=None):
         if not isinstance(recipe,Primitive):recipe=Primitive(**recipe)
         if waist_mode not in ('off','hold_neutral'):raise ValueError('Unknown waist mode')
         if not 1<=seconds<=600 or self.servos is None:raise ValueError('Require bounded datasheet simulation')
@@ -147,12 +148,16 @@ class PrimitiveSimulator(SwaySimulator):
         mujoco.mj_forward(m,d);d.time=0.
         # Curriculum-only reset, explicitly marked in the result. Never used
         # as evidence that the head can launch/capture from upright.
-        if diagnostic_initial_roll_deg is not None:
-            if not math.isfinite(diagnostic_initial_roll_deg) or not 20<=abs(diagnostic_initial_roll_deg)<=33:
+        if diagnostic_initial_roll_deg is not None and diagnostic_initial_pitch_deg is not None:
+            raise ValueError('Choose one diagnostic reset axis')
+        reset_angle=diagnostic_initial_roll_deg if diagnostic_initial_roll_deg is not None else diagnostic_initial_pitch_deg
+        if reset_angle is not None:
+            if not math.isfinite(reset_angle) or not 20<=abs(reset_angle)<=33:
                 raise ValueError('Diagnostic edge reset must be between 20 and 33 degrees')
-            angle=math.radians(diagnostic_initial_roll_deg);qa=m.jnt_qposadr[m.joint('floating_foot').id]
+            angle=math.radians(reset_angle);qa=m.jnt_qposadr[m.joint('floating_foot').id]
             d.qpos[qa+2]=self.config['foot_radius_m']*abs(math.sin(angle))-.00002
-            d.qpos[qa+3:qa+7]=[math.cos(angle/2),math.sin(angle/2),0,0]
+            d.qpos[qa+3:qa+7]=[math.cos(angle/2),math.sin(angle/2) if diagnostic_initial_roll_deg is not None else 0,
+                              math.sin(angle/2) if diagnostic_initial_pitch_deg is not None else 0,0]
             d.qvel[:]=0.;mujoco.mj_forward(m,d)
         if any(w.number for w in d.warning):raise ValueError('Initialization warning')
         start=d.xpos[self.base].copy();waist_qadr=self.servos.qadr[waist];waist_start=float(d.qpos[waist_qadr])
@@ -160,7 +165,7 @@ class PrimitiveSimulator(SwaySimulator):
         angles=np.zeros(2);initial_yaw=previous[0];controller=controller or PrimitiveController(recipe)
         trace=[];trajectory=[];reason=None;first35=None;peak_roll=peak_tilt=peak_lift=peak_slip=0.
         peak_torque=np.zeros(m.nu);waist_work=head_braking=0.;joint_margin=1e9;max_closure=0.
-        edge_time=edge_yaw=slip_distance=0.;last_roll=0.;previous_edge=False
+        edge_time=edge_yaw=slip_distance=0.;last_roll=last_pitch=0.;previous_edge=False
         total_frames=round(seconds/.02);base_velocity=np.zeros(6)
         finished_at=None;duration_budget=seconds;early_finish=False
         for frame in range(total_frames+1):
@@ -179,15 +184,19 @@ class PrimitiveSimulator(SwaySimulator):
             if hasattr(controller,'observe_head_state'):
                 controller.observe_head_state(t,relative_head_pose(m,d))
             roll_rate=(roll-last_roll)/.02 if frame else 0.;last_roll=roll
-            forces=np.zeros(2);points=[];weights=[]
+            pitch=math.degrees(rpy[1]);pitch_rate=(pitch-last_pitch)/.02 if frame else 0.;last_pitch=pitch
+            forces=np.zeros(2);foreaft_forces=np.zeros(2);points=[];weights=[]
             for ci,c in enumerate(d.contact):
                 if {int(c.geom1),int(c.geom2)}=={self.foot,self.floor} and c.efc_address>=0:
                     wrench=np.zeros(6);mujoco.mj_contactForce(m,d,ci,wrench);normal=abs(float(wrench[0]))
                     local=R.T@(c.pos-d.xpos[self.base]);forces[int(local[1]>=0)]+=normal
+                    foreaft_forces[int(local[0]>=0)]+=normal
                     if normal>.01:points.append(c.pos.copy());weights.append(normal)
             rims=[d.xpos[self.base]+R@np.array([0,sign*self.config['foot_radius_m'],0]) for sign in [-1,1]]
             lift=abs(float(rims[1][2]-rims[0][2]))*1000
             edge=bool(min(forces)<.1 and max(forces)>.5 and lift>=10)
+            foreaft_lift=abs(2*self.config['foot_radius_m']*float(R[2,0]))*1000
+            foreaft_edge=bool(min(foreaft_forces)<.1 and max(foreaft_forces)>.5 and foreaft_lift>=10)
             slip=0.;contact=None
             if points:
                 contact=np.average(np.asarray(points),axis=0,weights=weights)
@@ -200,7 +209,9 @@ class PrimitiveSimulator(SwaySimulator):
                 if previous_edge:edge_yaw+=yaw_step
             previous_edge=edge;peak_slip=max(peak_slip,slip)
             mujoco.mj_objectVelocity(m,d,mujoco.mjtObj.mjOBJ_XBODY,self.base,base_velocity,0)
-            row=dict(time_s=t,roll_deg=roll,pitch_deg=math.degrees(rpy[1]),roll_rate_deg_s=roll_rate,tilt_deg=tilt,
+            row=dict(time_s=t,roll_deg=roll,pitch_deg=pitch,roll_rate_deg_s=roll_rate,pitch_rate_deg_s=pitch_rate,tilt_deg=tilt,
+                     foreaft_edge_support=foreaft_edge,front_back_height_difference_mm=foreaft_lift,
+                     foot_front_back_normal_forces_n_back_front=foreaft_forces.tolist(),
                      side_height_difference_mm=lift,foot_yaw_deg=math.degrees(angles[0]),torso_yaw_deg=math.degrees(angles[1]),
                      waist_angle_change_deg=math.degrees(float(d.qpos[waist_qadr])-waist_start),
                      normal_n=float(sum(forces)),edge_support=edge,contact_slip_m_s=slip,
@@ -219,6 +230,7 @@ class PrimitiveSimulator(SwaySimulator):
                                        foot_xyz_m=d.xpos[self.base].tolist(),foot_rpy_rad=rpy.tolist(),
                                        head_rpy_rad=euler(relative_head_pose(m,d)).tolist(),target_head_rpy_rad=euler(pose).tolist(),
                                        heading_from_startup_rad=float(angles[0]),foot_side_normal_forces_n_right_left=forces.tolist(),
+                                       foot_front_back_normal_forces_n_back_front=foreaft_forces.tolist(),front_back_height_difference_mm=foreaft_lift,
                                        primitive_stage=stage,side_height_difference_mm=lift,torso_yaw_deg=math.degrees(angles[1]),
                                        waist_torque_nm=float(d.actuator_force[waist])))
             if frame==total_frames or early_finish:break
@@ -263,7 +275,8 @@ class PrimitiveSimulator(SwaySimulator):
                     requested_seconds=seconds,elapsed_seconds=float(d.time),termination=reason or 'completed',**flags,
                     max_duration_seconds=duration_budget,stopped_after_controller_finish=early_finish,
                     diagnostic_falls_allowed=tilt_limit_deg==80,tilt_limit_deg=tilt_limit_deg,walking_fall_guard_unchanged=True,waist_mode=waist_mode,
-                    diagnostic_initial_roll_deg=diagnostic_initial_roll_deg,natural_upright_start=diagnostic_initial_roll_deg is None,
+                    diagnostic_initial_roll_deg=diagnostic_initial_roll_deg,diagnostic_initial_pitch_deg=diagnostic_initial_pitch_deg,
+                    natural_upright_start=reset_angle is None,
                     waist_peak_torque_nm=float(peak_torque[waist]),waist_absolute_motor_work_j=waist_work,
                     commanded_waist_position_range_rad=[float(self.initial_targets[waist])]*2,
                     measured_waist_angle_range_deg=[min(x['waist_angle_change_deg'] for x in trace),max(x['waist_angle_change_deg'] for x in trace)],

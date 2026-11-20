@@ -1,5 +1,45 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 20 — front/back edge holding, natural capture unresolved
+
+Added separate front/back dynamics identification, pitch/rate feedback,
+physical front/back contact diagnostics, explicit pitch-reset curriculum,
+training/replay commands and a real-time video. The physical robot/model is
+unchanged; only controller coordinates are rotated. Frozen policies:
+`configs/foreaft-balance-experimental.json`.
+
+From explicitly **artificial raised starts**, both complete 20 seconds with
+19.76 s front / 19.54 s back continuous hold. Final pitch is +31.658° / −32.008°;
+peak physical tilt 32.10° / 34.54°, peak rim gap 59.52 / 63.43 mm. Head motor
+torques peak at 0.104 / 0.154 Nm under the unchanged 0.416 Nm cap. The waist
+target remains zero; deflection stays below 0.03°. Existing motor profile,
+joint, closure, contact and 35° guards remain intact. No hardware or shared
+GPU use, and no Nimbus/EY changes.
+
+Frozen hold sensitivity suite: **9/18 pass**. Both pass 0.25/0.125/0.1 ms and
+zero rolling friction. Only front passes 40 ms observation delay. Both fail
+0.02°/0.05° attitude noise and ±10% total mass, reaching the tilt guard.
+Removing feedback makes front hit the guard and back return flat.
+
+**Natural lift-and-capture is NOT learned yet:** 289 natural-start search and
+diagnostic rollouts, including repeats, produce zero final-five-second passes;
+the longest strict hold is 0.04 s. The 64-episode identification sets for each
+edge, raised-start holds and all failed natural trials are retained separately.
+Do not relabel the reset as a head-driven launch or the video as a continuous
+front-to-back transition. No neural RL or sim-to-real transfer is claimed.
+
+Video: `media/simulation/foreaft-balance-2026-11-20.mp4`, two independent
+20-second raised-start holds; chart shares the filename stem plus `-chart.png`.
+Detailed evidence and exact replay commands: `docs/FOREAFT_BALANCE_2026-11-20.md`.
+Reports: `experiments/reports/motor-training-foreaft-*.json`; local suite:
+**131 tests pass**, `repository-tests-foreaft-balance-2026-11-20.txt`.
+
+Replay: `.venv/bin/python experiments/run_foreaft_balance.py configs/foreaft-balance-experimental.json --edge front --diagnostic-raised-start --seconds 20 --record --output experiments/generated/front-hold-replay.json`.
+Use `--edge back` for the other edge and a new output path. Omitting the raised
+start flag exercises an unqualified natural launch. Next: widen the capture
+region, reduce angular/head velocity at handoff and train noise tolerance,
+then qualify natural starts. Preserve the existing left/right and gait skills.
+
 ## November 20 — natural lift and sustained edge balance
 
 Selected experimental skill: `configs/edge-balance-experimental.json`.

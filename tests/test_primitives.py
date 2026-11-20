@@ -30,6 +30,28 @@ UPSTREAM=ROOT/'experiments/upstream-reachy-mini'
 
 @unittest.skipUnless(importlib.util.find_spec('mujoco') and (UPSTREAM/'.git').exists(),'Needs simulation assets')
 class PrimitivePhysicsTests(unittest.TestCase):
+    def test_pitch_curriculum_reset_is_labeled_and_loads_the_requested_edge(self):
+        from reachy_locomotion.primitives import PrimitiveSimulator
+        config=json.loads((ROOT/'configs/motors-speed-trained.json').read_text())
+        config['timestep_s']=.00025
+        sim=PrimitiveSimulator(UPSTREAM,config)
+        for side in [-1,1]:
+            result=sim.run_primitive(Primitive(),seconds=1,waist_mode='hold_neutral',
+                                     tilt_limit_deg=35,diagnostic_initial_pitch_deg=side*32.1)
+            self.assertFalse(result['natural_upright_start'])
+            self.assertEqual(result['diagnostic_initial_pitch_deg'],side*32.1)
+            self.assertIsNone(result['diagnostic_initial_roll_deg'])
+            row=result['trace'][0]
+            self.assertAlmostEqual(row['pitch_deg'],side*32.1)
+            self.assertAlmostEqual(row['roll_deg'],0)
+            loaded=1 if side==1 else 0
+            self.assertGreater(row['foot_front_back_normal_forces_n_back_front'][loaded],.5)
+            self.assertLess(row['foot_front_back_normal_forces_n_back_front'][1-loaded],.1)
+            self.assertGreater(row['front_back_height_difference_mm'],59)
+            self.assertFalse(result['external_forces_applied'])
+        with self.assertRaises(ValueError):
+            sim.run_primitive(Primitive(),diagnostic_initial_roll_deg=30,diagnostic_initial_pitch_deg=30)
+
     def test_finish_settling_preserves_every_physical_frame(self):
         from reachy_locomotion.primitives import PrimitiveSimulator
         class FinishedController(PrimitiveController):

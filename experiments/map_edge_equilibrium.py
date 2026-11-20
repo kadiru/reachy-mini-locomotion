@@ -14,7 +14,7 @@ from reachy_locomotion.primitives import PrimitiveSimulator, blend
 
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',required=True);a=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',required=True);p.add_argument('--axis',choices=['roll','pitch'],default='roll');a=p.parse_args()
     out=Path(a.output)
     if out.exists():p.error('Preserve previous evidence')
     config=json.loads(Path('configs/motors-speed-trained.json').read_text());config['timestep_s']=.0005
@@ -30,7 +30,9 @@ def main():
                 data.qpos[model.jnt_qposadr[j]:model.jnt_qposadr[j]+n]=sim.initial_qpos[sim.model.jnt_qposadr[old]:sim.model.jnt_qposadr[old]+n]
             servos.reset(sim.initial_targets);valid=True
             for frame in range(101):
-                u=blend(frame*.02);pose=np.eye(4);pose[:3,:3]=rotation(np.radians([u*roll,0,0]));pose[:3,3]=[0,u*y/1000,.177]
+                u=blend(frame*.02);pose=np.eye(4)
+                pose[:3,:3]=rotation(np.radians([u*roll,0,0] if a.axis=='roll' else [0,u*roll,0]))
+                pose[:3,3]=[0,u*y/1000,.177] if a.axis=='roll' else [u*y/1000,0,.177]
                 try:target=sim.checked_ik(pose)
                 except ValueError:valid=False;break
                 targets=sim.initial_targets.copy();targets[sim.act]=target;servos.command(targets)
@@ -38,8 +40,12 @@ def main():
             mujoco.mj_forward(model,data);com=data.subtree_com[base]-data.xpos[base]
             row=dict(head_roll_deg=roll,head_y_mm=y,valid=valid,com_local_m=com.tolist(),
                      positive_roll_equilibrium_deg=math.degrees(math.atan2(.056+com[1],com[2])))
+            if a.axis=='pitch':
+                row=dict(head_pitch_deg=roll,head_x_mm=y,valid=valid,com_local_m=com.tolist(),
+                         front_equilibrium_pitch_deg=math.degrees(math.atan2(.056-com[0],com[2])),
+                         back_equilibrium_pitch_deg=-math.degrees(math.atan2(.056+com[0],com[2])))
             rows.append(row);print(row,flush=True)
-    out.write_text(json.dumps(dict(evidence='uncalibrated_simulation',anchored_diagnostic_only=True,rows=rows),indent=2)+'\n')
+    out.write_text(json.dumps(dict(evidence='uncalibrated_simulation',anchored_diagnostic_only=True,axis=a.axis,rows=rows),indent=2)+'\n')
 
 
 if __name__=='__main__':main()

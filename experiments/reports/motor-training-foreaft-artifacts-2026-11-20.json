@@ -1,0 +1,156 @@
+{
+  "evidence": "uncalibrated_simulation",
+  "hardware_ready": false,
+  "completed": true,
+  "policy": {
+    "path": "configs/foreaft-balance-experimental.json",
+    "bytes": 42041,
+    "sha256": "51b92599c198d35fe8149aa73164afc414ca1d5299b9dd233febb1992359d96e"
+  },
+  "recordings": [
+    {
+      "path": "experiments/generated/foreaft-balance/hold-front.json",
+      "bytes": 4932918,
+      "sha256": "df51a868d37d9fd9154311df8234cbe936f350bc2fd7c5fd5a4b2924fee8198a",
+      "edge": "front",
+      "frames": 1001,
+      "metrics": {
+        "longest_strict_hold_s": 19.76,
+        "soft_hold_s": 19.92596273760672,
+        "final_five_seconds_pass": true,
+        "target_pitch_deg": 32.1,
+        "final_pitch_deg": 31.657933696531646,
+        "tail_pitch_range_deg": [
+          31.652293572805256,
+          31.660997720442122
+        ],
+        "tail_max_pitch_rate_deg_s": 0.016728916623343082,
+        "peak_front_back_height_difference_mm": 59.51664090602527,
+        "peak_sampled_pitch_deg": 32.099999999999994,
+        "strict_definition": "Requested front/back edge loaded; pitch error <=2 deg; |pitch rate| <=5 deg/s; |roll| <=5 deg"
+      }
+    },
+    {
+      "path": "experiments/generated/foreaft-balance/hold-back.json",
+      "bytes": 4972866,
+      "sha256": "cbfa11e45530180a87db81c5a21e8ce38776ee904fed293047ab06c4c78d1d87",
+      "edge": "back",
+      "frames": 1001,
+      "metrics": {
+        "longest_strict_hold_s": 19.54,
+        "soft_hold_s": 19.9332435777609,
+        "final_five_seconds_pass": true,
+        "target_pitch_deg": -32.1,
+        "final_pitch_deg": -32.00847126462456,
+        "tail_pitch_range_deg": [
+          -32.00847127680305,
+          -32.0084712323518
+        ],
+        "tail_max_pitch_rate_deg_s": 2.0282513446545636e-07,
+        "peak_front_back_height_difference_mm": 63.4255398327751,
+        "peak_sampled_pitch_deg": 34.49257706539597,
+        "strict_definition": "Requested front/back edge loaded; pitch error <=2 deg; |pitch rate| <=5 deg/s; |roll| <=5 deg"
+      }
+    }
+  ],
+  "media": [
+    {
+      "path": "media/simulation/foreaft-balance-2026-11-20-chart.png",
+      "bytes": 111548,
+      "sha256": "e85407373cd960efb9a7227e1048dad730bea66b98096d69294561f61c71acb6"
+    },
+    {
+      "path": "media/simulation/foreaft-balance-2026-11-20.mp4",
+      "bytes": 1142092,
+      "sha256": "449dacf8ef1583fb7397fe3a1819c0db40698774cb9d8cf0d2d320d2db9b56d0"
+    },
+    {
+      "path": "media/simulation/foreaft-balance-2026-11-20.png",
+      "bytes": 297822,
+      "sha256": "224f6c2eb677e2fcc52ece298f97ef75fe8e4b3b8ccef207230a5a242d00be76"
+    }
+  ],
+  "video": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1280,
+        "height": 580,
+        "avg_frame_rate": "25/1",
+        "nb_frames": "1002"
+      }
+    ],
+    "format": {
+      "duration": "40.080000",
+      "size": "1142092"
+    }
+  },
+  "reports": [
+    {
+      "path": "experiments/reports/motor-training-foreaft-ablation-2026-11-20.json",
+      "bytes": 60737,
+      "sha256": "5743cc589eafe5e6b086dc132dec7778a172cca32a85d316d33d7680c52ee71e"
+    },
+    {
+      "path": "experiments/reports/motor-training-foreaft-catch-a-2026-11-20.json",
+      "bytes": 1441622,
+      "sha256": "02085fd06cccbbd880311be6a7edf592a858cf87256bcb6212bd2f6d3c8c5ca3"
+    },
+    {
+      "path": "experiments/reports/motor-training-foreaft-diagnose-2026-11-20.json",
+      "bytes": 30942,
+      "sha256": "65eea28096ba1e2f8cdf21310b0a4f7ff19acdbbd2a884e6e396968931953cd9"
+    },
+    {
+      "path": "experiments/reports/motor-training-foreaft-equilibrium-2026-11-20.json",
+      "bytes": 2995,
+      "sha256": "535bcaf9e3a0a8aa90b7ea9418707ba286ac9cb92cf18dc1dba315dc66f5c382"
+    },
+    {
+      "path": "experiments/reports/motor-training-foreaft-hold-qualification-2026-11-20.json",
+      "bytes": 538307,
+      "sha256": "9b7ae9673ffb8b83ccc5ed7de562d9db9f4b277c1f5111fbf89f3229ed3d7713"
+    },
+    {
+      "path": "experiments/reports/motor-training-foreaft-identification-back-2026-11-20.json",
+      "bytes": 4927335,
+      "sha256": "49079b075f46c5231db64c9f3fa7c394232f2102f69baa07efd4f019769ec944"
+    },
+    {
+      "path": "experiments/reports/motor-training-foreaft-identification-front-2026-11-20.json",
+      "bytes": 3403939,
+      "sha256": "d69a0dfd32735f04754b262b517eb2663ab2309cddfddb7024bd76eb56ea173e"
+    },
+    {
+      "path": "experiments/reports/motor-training-foreaft-probe-a-2026-11-20.json",
+      "bytes": 847982,
+      "sha256": "91874e032d56c69e574c40b15c7041e6b20fff3e96b78a9bbacc265de23ee4d9"
+    },
+    {
+      "path": "experiments/reports/motor-training-foreaft-pump-cem-2026-11-20.json",
+      "bytes": 4386421,
+      "sha256": "541e2af96592938786a867e31c9c9cd21896e1c07c41981ab5f01fd9b4bc9d54"
+    },
+    {
+      "path": "experiments/reports/motor-training-foreaft-pump-front-a-2026-11-20.json",
+      "bytes": 1070537,
+      "sha256": "ac8e0f62d3dd37d93ff37403c9f7a830f6f203aa9af70377ec6365904a5c29b5"
+    },
+    {
+      "path": "experiments/reports/motor-training-foreaft-refine-a-2026-11-20.json",
+      "bytes": 1136725,
+      "sha256": "b6cc70975d06da56a8ce07feb3c8285e18cfeac46b7142d8a1e51717df30bff0"
+    }
+  ],
+  "natural_start_rollouts": 289,
+  "natural_start_passes": 0,
+  "longest_natural_strict_hold_s": 0.04,
+  "raised_start_qualification_passes": 9,
+  "raised_start_qualification_trials": 18,
+  "tests": {
+    "path": "experiments/reports/repository-tests-foreaft-balance-2026-11-20.txt",
+    "bytes": 11960,
+    "sha256": "310cdfd155dd85012e4b557e22824b0193a8297ce8c1c99a2cd96b81a594c0db"
+  }
+}

@@ -2,6 +2,16 @@
 
 ## Priority
 
+Latest request: extend edge balancing to the **front and back rims**. Separate
+fore–aft dynamics models and pitch/rate feedback now hold both edges from
+explicitly raised starts for 19.76/19.54 seconds in 20-second simulations.
+Natural launch/capture from flat remains unresolved; the hold sensitivity
+suite passes 9/18, with noise and mass failures. Keep the same motor limits
+and fixed waist target. Policy: `configs/foreaft-balance-experimental.json`;
+methods and limitations: `docs/FOREAFT_BALANCE_2026-11-20.md`. Next: improve
+the capture region and launch timing, then qualify natural starts. Preserve
+the previous left/right skill and walking policies.
+
 Current request: learn a separate **sustained balance on either base edge**.
 Start flat, lift one side with the head, arrest the outward fall near the
 tipping equilibrium, and hold there. Keep the waist target zero and the

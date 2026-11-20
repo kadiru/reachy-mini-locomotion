@@ -1,0 +1,115 @@
+{
+  "evidence": "uncalibrated_simulation",
+  "anchored_diagnostic_only": true,
+  "axis": "pitch",
+  "rows": [
+    {
+      "head_pitch_deg": -35,
+      "head_x_mm": -20,
+      "valid": true,
+      "com_local_m": [
+        -0.00936479786654652,
+        -0.00022578387303642483,
+        0.08707859060534301
+      ],
+      "front_equilibrium_pitch_deg": 36.89341123219631,
+      "back_equilibrium_pitch_deg": -28.1714101827367
+    },
+    {
+      "head_pitch_deg": -35,
+      "head_x_mm": 0,
+      "valid": true,
+      "com_local_m": [
+        -0.004914796508717478,
+        -0.00028980177480644455,
+        0.08549970261239798
+      ],
+      "front_equilibrium_pitch_deg": 35.468209052179795,
+      "back_equilibrium_pitch_deg": -30.857888183677748
+    },
+    {
+      "head_pitch_deg": -35,
+      "head_x_mm": 20,
+      "valid": true,
+      "com_local_m": [
+        -0.0016695064287494095,
+        -0.0002145075693966644,
+        0.08339217838364557
+      ],
+      "front_equilibrium_pitch_deg": 34.66563144379503,
+      "back_equilibrium_pitch_deg": -33.084479525598276
+    },
+    {
+      "head_pitch_deg": 0,
+      "head_x_mm": -20,
+      "valid": true,
+      "com_local_m": [
+        -0.0037927989508739495,
+        -0.00017778601436275497,
+        0.08894779240694241
+      ],
+      "front_equilibrium_pitch_deg": 33.90992281665167,
+      "back_equilibrium_pitch_deg": -30.410465244757027
+    },
+    {
+      "head_pitch_deg": 0,
+      "head_x_mm": 0,
+      "valid": true,
+      "com_local_m": [
+        0.0005807775043936833,
+        -0.00018059466891454394,
+        0.08902988929132408
+      ],
+      "front_equilibrium_pitch_deg": 31.90139014726203,
+      "back_equilibrium_pitch_deg": -32.437004954834336
+    },
+    {
+      "head_pitch_deg": 0,
+      "head_x_mm": 20,
+      "valid": true,
+      "com_local_m": [
+        0.004937264280368269,
+        -0.00018302769054889757,
+        0.08890658164681878
+      ],
+      "front_equilibrium_pitch_deg": 29.870537407913726,
+      "back_equilibrium_pitch_deg": -34.427043341105296
+    },
+    {
+      "head_pitch_deg": 35,
+      "head_x_mm": -20,
+      "valid": true,
+      "com_local_m": [
+        0.002903451100370838,
+        -0.001121456274432537,
+        0.08263639292018063
+      ],
+      "front_equilibrium_pitch_deg": 32.72205340754182,
+      "back_equilibrium_pitch_deg": -35.48137736222752
+    },
+    {
+      "head_pitch_deg": 35,
+      "head_x_mm": 0,
+      "valid": true,
+      "com_local_m": [
+        0.006655369216431661,
+        -0.0001642011193436648,
+        0.08660867144780394
+      ],
+      "front_equilibrium_pitch_deg": 29.67199816632699,
+      "back_equilibrium_pitch_deg": -35.883130759755616
+    },
+    {
+      "head_pitch_deg": 35,
+      "head_x_mm": 20,
+      "valid": true,
+      "com_local_m": [
+        0.008081625258914154,
+        -0.0003074737174838849,
+        0.08832753868634091
+      ],
+      "front_equilibrium_pitch_deg": 28.480174447774285,
+      "back_equilibrium_pitch_deg": -35.96088349108482
+    }
+  ]
+}
