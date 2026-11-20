@@ -1,0 +1,105 @@
+{
+  "evidence": "uncalibrated_simulation",
+  "anchored_diagnostic_only": true,
+  "rows": [
+    {
+      "head_roll_deg": -35,
+      "head_y_mm": -20,
+      "valid": true,
+      "com_local_m": [
+        0.0013657620096045235,
+        0.0026298676455948924,
+        0.08262716797562382
+      ],
+      "positive_roll_equilibrium_deg": 35.358418341538346
+    },
+    {
+      "head_roll_deg": -35,
+      "head_y_mm": 0,
+      "valid": true,
+      "com_local_m": [
+        0.001288268117219327,
+        0.005764106283973567,
+        0.08516909299969687
+      ],
+      "positive_roll_equilibrium_deg": 35.94939304477533
+    },
+    {
+      "head_roll_deg": -35,
+      "head_y_mm": 20,
+      "valid": false,
+      "com_local_m": [
+        0.0005304847798882849,
+        0.009172113545276847,
+        0.08726535144059029
+      ],
+      "positive_roll_equilibrium_deg": 36.75336566053336
+    },
+    {
+      "head_roll_deg": 0,
+      "head_y_mm": -20,
+      "valid": true,
+      "com_local_m": [
+        0.0005960880547703194,
+        -0.004557062408995735,
+        0.08893679250798403
+      ],
+      "positive_roll_equilibrium_deg": 30.04600399727571
+    },
+    {
+      "head_roll_deg": 0,
+      "head_y_mm": 0,
+      "valid": true,
+      "com_local_m": [
+        0.0005807775043936833,
+        -0.00018059466891454394,
+        0.08902988929132408
+      ],
+      "positive_roll_equilibrium_deg": 32.086633281937445
+    },
+    {
+      "head_roll_deg": 0,
+      "head_y_mm": 20,
+      "valid": true,
+      "com_local_m": [
+        0.0005691156560778541,
+        0.004193922917733977,
+        0.088918813813991
+      ],
+      "positive_roll_equilibrium_deg": 34.09618244737537
+    },
+    {
+      "head_roll_deg": 35,
+      "head_y_mm": -20,
+      "valid": false,
+      "com_local_m": [
+        0.0005207565492989086,
+        -0.009443528122027933,
+        0.08703954945025352
+      ],
+      "positive_roll_equilibrium_deg": 28.14182326633992
+    },
+    {
+      "head_roll_deg": 35,
+      "head_y_mm": 0,
+      "valid": true,
+      "com_local_m": [
+        0.0007036390465569001,
+        -0.006114586342709944,
+        0.08509320074893582
+      ],
+      "positive_roll_equilibrium_deg": 30.380725838335703
+    },
+    {
+      "head_roll_deg": 35,
+      "head_y_mm": 20,
+      "valid": true,
+      "com_local_m": [
+        0.00131654312346344,
+        -0.0024259116112223303,
+        0.08393840217993359
+      ],
+      "positive_roll_equilibrium_deg": 32.54825013915666
+    }
+  ]
+}

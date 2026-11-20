@@ -14,6 +14,15 @@ The opening sequence shows controller-driven head motion, whole-body rocking
 and apparent base progress. [Video observations](docs/VIMEO_OBSERVATIONS_2026-11-18.md)
 separate what is visible from what still needs measurement.
 
+**Sustained edge balance (November 20):** both sides lift from flat, arrest the
+rock and balance at about **31–32°**, with one rim about **58–60 mm** above the
+other. The nominal 60-second trials contain **57.36/56.74 seconds of continuous
+edge hold**. Waist target and motor limits are unchanged. This is an
+experimental learned feedback skill: sensor-noise/delay checks and several
+timestep checks still fail. It is not ready for a physical robot. **123 tests pass.**
+[Watch both sides at real speed](media/simulation/edge-balance-bilateral-2026-11-20.mp4).
+[Training, successful trials and failed checks](docs/EDGE_BALANCE_2026-11-20.md).
+
 **Sustained penguin gait (November 20):** **633.4 mm in 163.26 s of stepping**,
 **3.88 mm/s**, over **20 complete pairs** with no falls or guard stops and
 8.29° maximum cycle-end heading. This is **5.14% faster** than the previous

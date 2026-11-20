@@ -2,6 +2,21 @@
 
 ## Priority
 
+Current request: learn a separate **sustained balance on either base edge**.
+Start flat, lift one side with the head, arrest the outward fall near the
+tipping equilibrium, and hold there. Keep the waist target zero and the
+existing motor/IK/joint/contact limits. Flat recovery and transient roll peaks
+do not count as edge balancing. Artificial tilted resets are permitted for
+isolated curriculum training but must be labeled and excluded from evidence
+of a natural lift-and-capture. Preserve the walking policies.
+
+Outcome: both sides now lift naturally and hold their edge for about 57 seconds
+in 60-second nominal simulations at 0.125 ms, around 31–32° roll. Selected
+policy: `configs/edge-balance-experimental.json`; video and exact evidence are
+in `docs/EDGE_BALANCE_2026-11-20.md`. Sensor-noise/delay checks and several
+timestep checks still fail; capture robustness is the next priority. The
+waist target and motor limits remain unchanged, with no hardware transfer.
+
 November 20 outcome: 20-cycle nominal walking reaches 3.88 mm/s, 5.14% faster
 than the previous 20-cycle baseline; both directions pass at both timesteps.
 All 42 known single-pair and six difficult four-pair conditions pass. New

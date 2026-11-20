@@ -1,0 +1,787 @@
+{
+  "evidence": "uncalibrated_simulation",
+  "hardware_ready": false,
+  "source_sha256": {
+    "configs/edge-balance-experimental.json": "330a1fc3e6b66241a16b92cd36962013ac945392c6e3f3cc32fbe4399224f912",
+    "configs/motors-speed-trained.json": "ac2196618707b161ba2f9e6f5181474dadad8dc7ccc72e8f36f596ab03ff8ffd",
+    "src/reachy_locomotion/edge_balance.py": "0251fc779981733be1f4d6b38d6fe25313fcf60e8e07bbffac90f18b177cfa72",
+    "src/reachy_locomotion/edge_linear.py": "a7baff5388109e4cdc030b5c481a08ba9410ad18ff8d1a80caa8c2638dd59688",
+    "src/reachy_locomotion/primitives.py": "2478d5dfae476b39bda0e3393aa58560fad9681056ccdf1d05a22fa534ea9ebb",
+    "src/reachy_locomotion/motors.py": "e17ed3834e5842def618a8fdaa8d7782f4bbd66e27cd6762eb4b7e2a16c89675",
+    "src/reachy_locomotion/sway.py": "c096bffc6831c8d07371c52912cf27cbcb7d5aa016ec0369ea90e2263bb0f83c",
+    "experiments/render_sway.py": "669d0a19380836d675458e8e59aeab2cd7899d1cfd5f688c509808aed695f7b4",
+    "/Users/kadir/linkedin/projects/reachy-mini-locomotion/experiments/finalize_edge_balance.py": "b9909022e98d2d014ee2bd2a00850adab50542938ddc426a5a7634bbae40cb83"
+  },
+  "demos": {
+    "left": {
+      "recording": "experiments/generated/edge-balance/final-left.json",
+      "sha256": "b1361dfe8ae4229fc02b6ebcb2c369fa0dc25b50b5d65195aad8da3512746476",
+      "metrics": {
+        "longest_strict_hold_s": 17.36,
+        "soft_hold_s": 17.637751057018566,
+        "final_five_seconds_pass": true,
+        "final_roll_deg": -32.0602262977097,
+        "final_roll_rate_deg_s": 3.77496935044519e-05,
+        "tail_roll_range_deg": [
+          -32.06059214434755,
+          -32.05996449943434
+        ],
+        "tail_max_roll_rate_deg_s": 0.0017589460476585828,
+        "tail_mean_com_contact_distance_mm": 4.046007001721604e-05,
+        "target_roll_deg": -32.1,
+        "strict_definition": "One-edge support; roll error <=2 deg; |roll rate| <=5 deg/s; |pitch| <=5 deg"
+      },
+      "peak_roll_deg": 32.69709124430691,
+      "peak_tilt_deg": 32.890961263993574,
+      "peak_side_height_difference_mm": 60.37521442383816,
+      "min_joint_margin_rad": 0.04787054943093372,
+      "max_closure_error_m": 2.8820936574074675e-05,
+      "waist_peak_torque_nm": 0.05060847253004597,
+      "waist_absolute_motor_work_j": 0.001608475218790818,
+      "measured_waist_angle_range_deg": [
+        -1.0557929047199321,
+        0.7218211499504757
+      ],
+      "head_braking_work_j": 0.3644608367633056,
+      "peak_motor_torque_nm": [
+        0.05060847253004597,
+        0.203117420616258,
+        0.26197458535714324,
+        0.21799105304479333,
+        0.26828721300415465,
+        0.22772325230135557,
+        0.29855515811106115,
+        0.0033097645152914724,
+        0.0026806316695700176
+      ],
+      "motor_diagnostics": {
+        "model": "unidentified_PWM_DC_approximation",
+        "hardware_ready": false,
+        "stall_torque_nm": [
+          0.93,
+          0.52,
+          0.52,
+          0.52,
+          0.52,
+          0.52,
+          0.52,
+          0.215,
+          0.215
+        ],
+        "torque_caps_nm": [
+          0.7440000000000001,
+          0.41600000000000004,
+          0.41600000000000004,
+          0.41600000000000004,
+          0.41600000000000004,
+          0.41600000000000004,
+          0.41600000000000004,
+          0.17200000000000001,
+          0.17200000000000001
+        ],
+        "no_load_speed_rad_s": [
+          8.482300164692441,
+          10.786134777324955,
+          10.786134777324955,
+          10.786134777324955,
+          10.786134777324955,
+          10.786134777324955,
+          10.786134777324955,
+          40.10766621082969,
+          40.10766621082969
+        ],
+        "any_pwm_saturated_fraction_including_warmup": 0.015817073170731707,
+        "max_filtered_command_speed_rad_s": 10.7,
+        "max_filtered_command_acceleration_rad_s2": 360.0,
+        "thermal_model": false,
+        "current_estimate": "not_calibrated_not_reported"
+      },
+      "catch_trigger_s": 2.22
+    },
+    "right": {
+      "recording": "experiments/generated/edge-balance/final-right.json",
+      "sha256": "57534092d9830af54b35b423dfec9d0b61b65f003d6013d991241693f574ec04",
+      "metrics": {
+        "longest_strict_hold_s": 16.74,
+        "soft_hold_s": 17.220613571331967,
+        "final_five_seconds_pass": true,
+        "final_roll_deg": 30.91361028235502,
+        "final_roll_rate_deg_s": 0.42539844556035433,
+        "tail_roll_range_deg": [
+          30.870688337940962,
+          31.17239331065865
+        ],
+        "tail_max_roll_rate_deg_s": 0.6707850871906729,
+        "tail_mean_com_contact_distance_mm": 0.04476888236133631,
+        "target_roll_deg": 32.1,
+        "strict_definition": "One-edge support; roll error <=2 deg; |roll rate| <=5 deg/s; |pitch| <=5 deg"
+      },
+      "peak_roll_deg": 32.311421530802114,
+      "peak_tilt_deg": 32.46914869320345,
+      "peak_side_height_difference_mm": 59.76439031740563,
+      "min_joint_margin_rad": 0.05477841562084529,
+      "max_closure_error_m": 3.0092035852308148e-05,
+      "waist_peak_torque_nm": 0.048795554107447625,
+      "waist_absolute_motor_work_j": 0.0015416519853018015,
+      "measured_waist_angle_range_deg": [
+        -0.6313937679128481,
+        1.038528657794467
+      ],
+      "head_braking_work_j": 0.4354078533522186,
+      "peak_motor_torque_nm": [
+        0.048795554107447625,
+        0.2871176841267482,
+        0.22609945862538242,
+        0.26007495788263313,
+        0.21378999508001312,
+        0.25568924594503206,
+        0.20606238089949608,
+        0.0024453789159892343,
+        0.003684171297603079
+      ],
+      "motor_diagnostics": {
+        "model": "unidentified_PWM_DC_approximation",
+        "hardware_ready": false,
+        "stall_torque_nm": [
+          0.93,
+          0.52,
+          0.52,
+          0.52,
+          0.52,
+          0.52,
+          0.52,
+          0.215,
+          0.215
+        ],
+        "torque_caps_nm": [
+          0.7440000000000001,
+          0.41600000000000004,
+          0.41600000000000004,
+          0.41600000000000004,
+          0.41600000000000004,
+          0.41600000000000004,
+          0.41600000000000004,
+          0.17200000000000001,
+          0.17200000000000001
+        ],
+        "no_load_speed_rad_s": [
+          8.482300164692441,
+          10.786134777324955,
+          10.786134777324955,
+          10.786134777324955,
+          10.786134777324955,
+          10.786134777324955,
+          10.786134777324955,
+          40.10766621082969,
+          40.10766621082969
+        ],
+        "any_pwm_saturated_fraction_including_warmup": 0.016310975609756098,
+        "max_filtered_command_speed_rad_s": 10.7,
+        "max_filtered_command_acceleration_rad_s2": 360.0,
+        "thermal_model": false,
+        "current_estimate": "not_calibrated_not_reported"
+      },
+      "catch_trigger_s": 2.2
+    }
+  },
+  "ablations": {
+    "left": {
+      "termination": "completed",
+      "hold": {
+        "longest_strict_hold_s": 0.12,
+        "soft_hold_s": 0.40194039151626254,
+        "final_five_seconds_pass": false,
+        "final_roll_deg": 0.0014868528776287196,
+        "final_roll_rate_deg_s": 7.557633296311275e-08,
+        "tail_roll_range_deg": [
+          0.0014868419595234247,
+          0.0014869741503092976
+        ],
+        "tail_max_roll_rate_deg_s": 5.006266594310103e-07,
+        "tail_mean_com_contact_distance_mm": 2.8494793823570573e-05,
+        "target_roll_deg": -32.1,
+        "strict_definition": "One-edge support; roll error <=2 deg; |roll rate| <=5 deg/s; |pitch| <=5 deg"
+      },
+      "identical_prefix_frames": 114,
+      "identical_through_s": 2.2600000000000002
+    },
+    "right": {
+      "termination": "tilt_reached_35_deg",
+      "hold": {
+        "longest_strict_hold_s": 0.16,
+        "soft_hold_s": 0.42163950947081946,
+        "final_five_seconds_pass": false,
+        "final_roll_deg": 34.27658180521919,
+        "final_roll_rate_deg_s": 17.461861283581115,
+        "tail_roll_range_deg": [
+          -20.064388970163975,
+          34.27658180521919
+        ],
+        "tail_max_roll_rate_deg_s": 215.4248099480207,
+        "tail_mean_com_contact_distance_mm": 17.797381643174926,
+        "target_roll_deg": 32.1,
+        "strict_definition": "One-edge support; roll error <=2 deg; |roll rate| <=5 deg/s; |pitch| <=5 deg"
+      },
+      "identical_prefix_frames": 113,
+      "identical_through_s": 2.24
+    }
+  },
+  "checks": [
+    {
+      "source": "experiments/reports/motor-training-edge-final-2026-11-20.json",
+      "id": "final-left-dt0.000125",
+      "termination": "completed",
+      "metrics": {
+        "longest_strict_hold_s": 17.36,
+        "soft_hold_s": 17.637751057018566,
+        "final_five_seconds_pass": true,
+        "final_roll_deg": -32.0602262977097,
+        "final_roll_rate_deg_s": 3.77496935044519e-05,
+        "tail_roll_range_deg": [
+          -32.06059214434755,
+          -32.05996449943434
+        ],
+        "tail_max_roll_rate_deg_s": 0.0017589460476585828,
+        "tail_mean_com_contact_distance_mm": 4.046007001721604e-05,
+        "target_roll_deg": -32.1,
+        "strict_definition": "One-edge support; roll error <=2 deg; |roll rate| <=5 deg/s; |pitch| <=5 deg"
+      }
+    },
+    {
+      "source": "experiments/reports/motor-training-edge-final-2026-11-20.json",
+      "id": "final-left-dt0.0001",
+      "termination": "tilt_reached_35_deg",
+      "metrics": {
+        "longest_strict_hold_s": 0.0,
+        "soft_hold_s": 0.059056063737005365,
+        "final_five_seconds_pass": false,
+        "final_roll_deg": -33.67550151132731,
+        "final_roll_rate_deg_s": -84.12289616282251,
+        "tail_roll_range_deg": [
+          -33.67550151132731,
+          20.07048862844723
+        ],
+        "tail_max_roll_rate_deg_s": 229.88885898529963,
+        "tail_mean_com_contact_distance_mm": 20.489772942310843,
+        "target_roll_deg": -32.1,
+        "strict_definition": "One-edge support; roll error <=2 deg; |roll rate| <=5 deg/s; |pitch| <=5 deg"
+      }
+    },
+    {
+      "source": "experiments/reports/motor-training-edge-final-2026-11-20.json",
+      "id": "final-left-dt0.00025",
+      "termination": "tilt_reached_35_deg",
+      "metrics": {
+        "longest_strict_hold_s": 0.0,
+        "soft_hold_s": 0.17773072006119958,
+        "final_five_seconds_pass": false,
+        "final_roll_deg": -33.627296925342826,
+        "final_roll_rate_deg_s": -70.13524248507146,
+        "tail_roll_range_deg": [
+          -33.627296925342826,
+          20.078699094412464
+        ],
+        "tail_max_roll_rate_deg_s": 229.19151313339125,
+        "tail_mean_com_contact_distance_mm": 18.88832143777711,
+        "target_roll_deg": -32.1,
+        "strict_definition": "One-edge support; roll error <=2 deg; |roll rate| <=5 deg/s; |pitch| <=5 deg"
+      }
+    },
+    {
+      "source": "experiments/reports/motor-training-edge-final-2026-11-20.json",
+      "id": "final-left-noise0.02",
+      "termination": "tilt_reached_35_deg",
+      "metrics": {
+        "longest_strict_hold_s": 0.0,
+        "soft_hold_s": 0.08087313918504432,
+        "final_five_seconds_pass": false,
+        "final_roll_deg": -34.481560118894464,
+        "final_roll_rate_deg_s": -42.839669631199584,
+        "tail_roll_range_deg": [
+          -34.481560118894464,
+          20.06613383549957
+        ],
+        "tail_max_roll_rate_deg_s": 230.27152341774658,
+        "tail_mean_com_contact_distance_mm": 20.11647580504627,
+        "target_roll_deg": -32.1,
+        "strict_definition": "One-edge support; roll error <=2 deg; |roll rate| <=5 deg/s; |pitch| <=5 deg"
+      }
+    },
+    {
+      "source": "experiments/reports/motor-training-edge-final-2026-11-20.json",
+      "id": "final-left-noise0.05",
+      "termination": "tilt_reached_35_deg",
+      "metrics": {
+        "longest_strict_hold_s": 0.0,
+        "soft_hold_s": 0.06780783620028237,
+        "final_five_seconds_pass": false,
+        "final_roll_deg": -34.2063697912279,
+        "final_roll_rate_deg_s": -70.8101994582659,
+        "tail_roll_range_deg": [
+          -34.2063697912279,
+          20.06646802598394
+        ],
+        "tail_max_roll_rate_deg_s": 230.27152341774658,
+        "tail_mean_com_contact_distance_mm": 20.271565800126275,
+        "target_roll_deg": -32.1,
+        "strict_definition": "One-edge support; roll error <=2 deg; |roll rate| <=5 deg/s; |pitch| <=5 deg"
+      }
+    },
+    {
+      "source": "experiments/reports/motor-training-edge-final-2026-11-20.json",
+      "id": "final-left-delay40ms",
+      "termination": "tilt_reached_35_deg",
+      "metrics": {
+        "longest_strict_hold_s": 0.0,
+        "soft_hold_s": 0.09282788898323426,
+        "final_five_seconds_pass": false,
+        "final_roll_deg": -34.24642337598407,
+        "final_roll_rate_deg_s": -78.88197599410347,
+        "tail_roll_range_deg": [
+          -34.24642337598407,
+          20.05736191351709
+        ],
+        "tail_max_roll_rate_deg_s": 230.27152341774658,
+        "tail_mean_com_contact_distance_mm": 20.145671291204728,
+        "target_roll_deg": -32.1,
+        "strict_definition": "One-edge support; roll error <=2 deg; |roll rate| <=5 deg/s; |pitch| <=5 deg"
+      }
+    },
+    {
+      "source": "experiments/reports/motor-training-edge-final-2026-11-20.json",
+      "id": "final-left-no-roll-friction",
+      "termination": "completed",
+      "metrics": {
+        "longest_strict_hold_s": 9.18,
+        "soft_hold_s": 9.655531428990322,
+        "final_five_seconds_pass": true,
+        "final_roll_deg": -32.06219642648047,
+        "final_roll_rate_deg_s": -0.007340503501040985,
+        "tail_roll_range_deg": [
+          -32.10267952111226,
+          -32.01748855208612
+        ],
+        "tail_max_roll_rate_deg_s": 0.2284860563257496,
+        "tail_mean_com_contact_distance_mm": 0.005015175371791266,
+        "target_roll_deg": -32.1,
+        "strict_definition": "One-edge support; roll error <=2 deg; |roll rate| <=5 deg/s; |pitch| <=5 deg"
+      }
+    },
+    {
+      "source": "experiments/reports/motor-training-edge-final-2026-11-20.json",
+      "id": "final-left-feedback-disabled",
+      "termination": "completed",
+      "metrics": {
+        "longest_strict_hold_s": 0.12,
+        "soft_hold_s": 0.40194039151626254,
+        "final_five_seconds_pass": false,
+        "final_roll_deg": 0.0014868528776287196,
+        "final_roll_rate_deg_s": 7.557633296311275e-08,
+        "tail_roll_range_deg": [
+          0.0014868419595234247,
+          0.0014869741503092976
+        ],
+        "tail_max_roll_rate_deg_s": 5.006266594310103e-07,
+        "tail_mean_com_contact_distance_mm": 2.8494793823570573e-05,
+        "target_roll_deg": -32.1,
+        "strict_definition": "One-edge support; roll error <=2 deg; |roll rate| <=5 deg/s; |pitch| <=5 deg"
+      }
+    },
+    {
+      "source": "experiments/reports/motor-training-edge-final-2026-11-20.json",
+      "id": "final-right-dt0.000125",
+      "termination": "completed",
+      "metrics": {
+        "longest_strict_hold_s": 16.74,
+        "soft_hold_s": 17.220613571331967,
+        "final_five_seconds_pass": true,
+        "final_roll_deg": 30.91361028235502,
+        "final_roll_rate_deg_s": 0.42539844556035433,
+        "tail_roll_range_deg": [
+          30.870688337940962,
+          31.17239331065865
+        ],
+        "tail_max_roll_rate_deg_s": 0.6707850871906729,
+        "tail_mean_com_contact_distance_mm": 0.04476888236133631,
+        "target_roll_deg": 32.1,
+        "strict_definition": "One-edge support; roll error <=2 deg; |roll rate| <=5 deg/s; |pitch| <=5 deg"
+      }
+    },
+    {
+      "source": "experiments/reports/motor-training-edge-final-2026-11-20.json",
+      "id": "final-right-dt0.0001",
+      "termination": "completed",
+      "metrics": {
+        "longest_strict_hold_s": 17.18,
+        "soft_hold_s": 17.234953379918814,
+        "final_five_seconds_pass": true,
+        "final_roll_deg": 30.950044415747318,
+        "final_roll_rate_deg_s": 0.5513454196563572,
+        "tail_roll_range_deg": [
+          30.870597037068265,
+          31.172488835029935
+        ],
+        "tail_max_roll_rate_deg_s": 0.672021319234517,
+        "tail_mean_com_contact_distance_mm": 0.04464830235023365,
+        "target_roll_deg": 32.1,
+        "strict_definition": "One-edge support; roll error <=2 deg; |roll rate| <=5 deg/s; |pitch| <=5 deg"
+      }
+    },
+    {
+      "source": "experiments/reports/motor-training-edge-final-2026-11-20.json",
+      "id": "final-right-dt0.00025",
+      "termination": "tilt_reached_35_deg",
+      "metrics": {
+        "longest_strict_hold_s": 0.0,
+        "soft_hold_s": 0.40806322082373164,
+        "final_five_seconds_pass": false,
+        "final_roll_deg": 33.90382298794963,
+        "final_roll_rate_deg_s": 58.12772125176018,
+        "tail_roll_range_deg": [
+          -20.05119419652438,
+          33.90382298794963
+        ],
+        "tail_max_roll_rate_deg_s": 214.6202164657445,
+        "tail_mean_com_contact_distance_mm": 16.591969651152223,
+        "target_roll_deg": 32.1,
+        "strict_definition": "One-edge support; roll error <=2 deg; |roll rate| <=5 deg/s; |pitch| <=5 deg"
+      }
+    },
+    {
+      "source": "experiments/reports/motor-training-edge-final-2026-11-20.json",
+      "id": "final-right-noise0.02",
+      "termination": "tilt_reached_35_deg",
+      "metrics": {
+        "longest_strict_hold_s": 0.0,
+        "soft_hold_s": 0.057034224766421275,
+        "final_five_seconds_pass": false,
+        "final_roll_deg": 34.13998143129297,
+        "final_roll_rate_deg_s": 74.31289273057367,
+        "tail_roll_range_deg": [
+          -20.064634411020975,
+          34.13998143129297
+        ],
+        "tail_max_roll_rate_deg_s": 215.43122625435834,
+        "tail_mean_com_contact_distance_mm": 20.562139965549278,
+        "target_roll_deg": 32.1,
+        "strict_definition": "One-edge support; roll error <=2 deg; |roll rate| <=5 deg/s; |pitch| <=5 deg"
+      }
+    },
+    {
+      "source": "experiments/reports/motor-training-edge-final-2026-11-20.json",
+      "id": "final-right-noise0.05",
+      "termination": "tilt_reached_35_deg",
+      "metrics": {
+        "longest_strict_hold_s": 0.0,
+        "soft_hold_s": 0.06898649180531208,
+        "final_five_seconds_pass": false,
+        "final_roll_deg": 34.30303676797803,
+        "final_roll_rate_deg_s": 52.397738463889,
+        "tail_roll_range_deg": [
+          -20.06500205786157,
+          34.30303676797803
+        ],
+        "tail_max_roll_rate_deg_s": 215.44072179141844,
+        "tail_mean_com_contact_distance_mm": 20.397724142012837,
+        "target_roll_deg": 32.1,
+        "strict_definition": "One-edge support; roll error <=2 deg; |roll rate| <=5 deg/s; |pitch| <=5 deg"
+      }
+    },
+    {
+      "source": "experiments/reports/motor-training-edge-final-2026-11-20.json",
+      "id": "final-right-delay40ms",
+      "termination": "tilt_reached_35_deg",
+      "metrics": {
+        "longest_strict_hold_s": 0.0,
+        "soft_hold_s": 0.0782541547031328,
+        "final_five_seconds_pass": false,
+        "final_roll_deg": 34.944070848202635,
+        "final_roll_rate_deg_s": 84.83222261653509,
+        "tail_roll_range_deg": [
+          -20.05007103175647,
+          34.944070848202635
+        ],
+        "tail_max_roll_rate_deg_s": 214.84454888067182,
+        "tail_mean_com_contact_distance_mm": 20.299413511680164,
+        "target_roll_deg": 32.1,
+        "strict_definition": "One-edge support; roll error <=2 deg; |roll rate| <=5 deg/s; |pitch| <=5 deg"
+      }
+    },
+    {
+      "source": "experiments/reports/motor-training-edge-final-2026-11-20.json",
+      "id": "final-right-no-roll-friction",
+      "termination": "completed",
+      "metrics": {
+        "longest_strict_hold_s": 9.16,
+        "soft_hold_s": 9.441484500398682,
+        "final_five_seconds_pass": true,
+        "final_roll_deg": 30.885014261132348,
+        "final_roll_rate_deg_s": -0.28408504750760954,
+        "tail_roll_range_deg": [
+          30.870678950794417,
+          31.17236767787168
+        ],
+        "tail_max_roll_rate_deg_s": 0.6708619857274556,
+        "tail_mean_com_contact_distance_mm": 0.042709819920279925,
+        "target_roll_deg": 32.1,
+        "strict_definition": "One-edge support; roll error <=2 deg; |roll rate| <=5 deg/s; |pitch| <=5 deg"
+      }
+    },
+    {
+      "source": "experiments/reports/motor-training-edge-final-2026-11-20.json",
+      "id": "final-right-feedback-disabled",
+      "termination": "tilt_reached_35_deg",
+      "metrics": {
+        "longest_strict_hold_s": 0.16,
+        "soft_hold_s": 0.42163950947081946,
+        "final_five_seconds_pass": false,
+        "final_roll_deg": 34.27658180521919,
+        "final_roll_rate_deg_s": 17.461861283581115,
+        "tail_roll_range_deg": [
+          -20.064388970163975,
+          34.27658180521919
+        ],
+        "tail_max_roll_rate_deg_s": 215.4248099480207,
+        "tail_mean_com_contact_distance_mm": 17.797381643174926,
+        "target_roll_deg": 32.1,
+        "strict_definition": "One-edge support; roll error <=2 deg; |roll rate| <=5 deg/s; |pitch| <=5 deg"
+      }
+    },
+    {
+      "source": "experiments/reports/motor-training-edge-extended-2026-11-20.json",
+      "id": "extended-left",
+      "termination": "completed",
+      "metrics": {
+        "longest_strict_hold_s": 57.36,
+        "soft_hold_s": 57.62279772227594,
+        "final_five_seconds_pass": true,
+        "final_roll_deg": -32.060205848175556,
+        "final_roll_rate_deg_s": 2.4868995751603507e-11,
+        "tail_roll_range_deg": [
+          -32.06020584818065,
+          -32.06020584816754
+        ],
+        "tail_max_roll_rate_deg_s": 1.1368683772161603e-10,
+        "tail_mean_com_contact_distance_mm": 8.393173740304273e-13,
+        "target_roll_deg": -32.1,
+        "strict_definition": "One-edge support; roll error <=2 deg; |roll rate| <=5 deg/s; |pitch| <=5 deg"
+      }
+    },
+    {
+      "source": "experiments/reports/motor-training-edge-extended-2026-11-20.json",
+      "id": "extended-right",
+      "termination": "completed",
+      "metrics": {
+        "longest_strict_hold_s": 56.74,
+        "soft_hold_s": 56.197278731823616,
+        "final_five_seconds_pass": true,
+        "final_roll_deg": 30.979444226001657,
+        "final_roll_rate_deg_s": 0.6086574704808001,
+        "tail_roll_range_deg": [
+          30.870690272118875,
+          31.17240150640712
+        ],
+        "tail_max_roll_rate_deg_s": 0.670804167004313,
+        "tail_mean_com_contact_distance_mm": 0.04424927406908733,
+        "target_roll_deg": 32.1,
+        "strict_definition": "One-edge support; roll error <=2 deg; |roll rate| <=5 deg/s; |pitch| <=5 deg"
+      }
+    }
+  ],
+  "searches": [
+    {
+      "path": "experiments/reports/motor-training-edge-bounded-a-2026-11-20.json",
+      "sha256": "a626d7e99922a34a67b6bd5399b47a304148530789e77e2da2703d8f8c10803f",
+      "completed": true,
+      "recorded_trials": 16
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-bounded-cross-2026-11-20.json",
+      "sha256": "1dcc05816ae46d01e23bf913a62f498bf44b836370acca89e0a878f8b1bfc1fc",
+      "completed": true,
+      "recorded_trials": 8
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-capture-a-2026-11-20.json",
+      "sha256": "99abda3dfb8682a7fbe9eb004886e9e26da0ce390109ac108342fc878939ee48",
+      "completed": true,
+      "recorded_trials": 12
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-capture-b-2026-11-20.json",
+      "sha256": "ec2396823d4eed9b366f98ac9454f1dcc78f64a54eb2d26b2bc6d1919dcf3bcf",
+      "completed": true,
+      "recorded_trials": 16
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-capture-c-2026-11-20.json",
+      "sha256": "9b4f217e8010c7a6a06624b844cc5c41a9798ea736b58ea058964e8c02da9007",
+      "completed": true,
+      "recorded_trials": 30
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-capture-inspect-2026-11-20.json",
+      "sha256": "3aff1ebeb7e0f6b89abe58e1da289ce10f007e823b7439b91f3d7969f69dbe61",
+      "completed": true,
+      "recorded_trials": 1
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-capture-interp-a-2026-11-20.json",
+      "sha256": "ccf939b6ae209d41c38b7a50f92446b433f28bbd9bb60371bbd978c775d92e9b",
+      "completed": true,
+      "recorded_trials": 9
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-energy-a-2026-11-20.json",
+      "sha256": "c000017fe54ec382adb13dcf14e5149b660c8d7d1a9e9e129539d4e2316c119b",
+      "completed": true,
+      "recorded_trials": 18
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-extended-2026-11-20.json",
+      "sha256": "dbb6deced51fce6c96079570bb7710af88b599494fe683f48676dcdefc39ba99",
+      "completed": true,
+      "recorded_trials": 2
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-final-2026-11-20.json",
+      "sha256": "ee0a88d18fe39a33f1fd9a5ef0d10d963972fb233593763abf97ccd42ef2059f",
+      "completed": true,
+      "recorded_trials": 16
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-fine-a-2026-11-20.json",
+      "sha256": "43b9c5877ce0eb8d85146f1718ffec0a8f11128259f83e03ed8abd5809300682",
+      "completed": true,
+      "recorded_trials": 12
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-hold-d-2026-11-20.json",
+      "sha256": "a4b76a074dffae2f015d5fed0fc645c467d21a583b8960c1140bbc889684e21c",
+      "completed": false,
+      "recorded_trials": 216
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-hold-e-2026-11-20.json",
+      "sha256": "77ba751da5a90edb8c63811ce3deddcd4c092080f3c7cf8e337184a7ab92dfdd",
+      "completed": true,
+      "recorded_trials": 256
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-hold-f-2026-11-20.json",
+      "sha256": "f750742143385708d2dd1fa3cf7d14a9822ab5afe2e94858273f10832d7f7d2c",
+      "completed": true,
+      "recorded_trials": 320
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-inspect-e-2026-11-20.json",
+      "sha256": "0da020091f0b9b90225c59c843e49be69b9d3122ae44e4b0ce79a64bb61530b8",
+      "completed": true,
+      "recorded_trials": 1
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-interpolation-a-2026-11-20.json",
+      "sha256": "d7d68473cfe000c09773fe75889aafe15a4995dd04e8db1eb12b4582d3021766",
+      "completed": true,
+      "recorded_trials": 8
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-isolated-fine-2026-11-20.json",
+      "sha256": "957c1e9ce6f76e755420e05ff5b50e06b464255890e0c200f72258feca6310e2",
+      "completed": true,
+      "recorded_trials": 6
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-launch-a-2026-11-20.json",
+      "sha256": "87711a6017146d298165248e39c3dff0035c4d92c5e881ea5b1955ecf8141696",
+      "completed": true,
+      "recorded_trials": 36
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-left-cross-a-2026-11-20.json",
+      "sha256": "cbe81d7f4f024747e80eb0064d8d80207c064a3b9a2f3f2eb37797b8d98c4710",
+      "completed": true,
+      "recorded_trials": 6
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-linear-a-2026-11-20.json",
+      "sha256": "1a67166637b805035221dad9cb41605b12199d8be309a1370d7ec2ef36d5adaf",
+      "completed": true,
+      "recorded_trials": 8
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-long-a-2026-11-20.json",
+      "sha256": "ff5adb58f8acd84380884c5bb36e772c59227460b43c680975b6387bc5cf73d1",
+      "completed": true,
+      "recorded_trials": 4
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-mirror-final-2026-11-20.json",
+      "sha256": "4a4f600cea6dd7396b0662b192070a1376773c5f8f2ac700509ca79621573ba4",
+      "completed": true,
+      "recorded_trials": 2
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-natural-left-a-2026-11-20.json",
+      "sha256": "100a353a5277259a5e42d4230fc23ac207ad58eb47dd4cfc990631eb1b945b21",
+      "completed": false,
+      "recorded_trials": 49
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-natural-left-b-2026-11-20.json",
+      "sha256": "c6bac1305628c21e5d0452f27b29440d4243c9d5f0dec37174484a5aef16ff39",
+      "completed": false,
+      "recorded_trials": 123
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-natural-right-b-2026-11-20.json",
+      "sha256": "14c2313b1ca2e71e47698a13aea2ea80cfe6a7a403119183044c5ea5d235fa63",
+      "completed": true,
+      "recorded_trials": 256
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-right-a-2026-11-20.json",
+      "sha256": "5ad705c793546adf9cbe6eda92c3613b287c5aa13e0ecb4738ce2d7c71b29600",
+      "completed": true,
+      "recorded_trials": 26
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-right-inspect-2026-11-20.json",
+      "sha256": "08611d7ed8865ef43a89f56407452c353df58c38d6962eba99fa6c0355e429ce",
+      "completed": true,
+      "recorded_trials": 1
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-search-a-2026-11-20.json",
+      "sha256": "4489cb63637869effbde789f8d549ab301f6cb9ad3128401aac1848c7210f5bd",
+      "completed": false,
+      "recorded_trials": 29
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-search-b-2026-11-20.json",
+      "sha256": "42689eb70deba0096e79194eb8790a9b074a8c378469f61186add64491e71047",
+      "completed": false,
+      "recorded_trials": 50
+    },
+    {
+      "path": "experiments/reports/motor-training-edge-search-c-2026-11-20.json",
+      "sha256": "c1a54b7e495032e91f08f44a0b89cf475b7d17193c4b23beb64907805786dabc",
+      "completed": true,
+      "recorded_trials": 192
+    }
+  ],
+  "artifacts": {
+    "media/simulation/edge-balance-2026-11-20-chart.png": {
+      "bytes": 141807,
+      "sha256": "4c8a2c632130b1d26616a273f6a443fd06bf9836633f4949fc16f4990519c3e8"
+    },
+    "media/simulation/edge-balance-bilateral-2026-11-20.mp4": {
+      "bytes": 3082902,
+      "sha256": "c94bf0a2f41944d503138dc023850f94d2946f2df6898c622628cdcca1c62983"
+    },
+    "media/simulation/edge-balance-bilateral-2026-11-20.png": {
+      "bytes": 120909,
+      "sha256": "3c617588d8ed7648218605ac5d02a591a14ac0d7251a9a93a7d29073f0577542"
+    }
+  }
+}

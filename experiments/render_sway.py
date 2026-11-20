@@ -88,6 +88,12 @@ def main():
     last_cycle_heading = 0.
     completed_cycle_rule = result.get('evaluation_heading_rule') == 'completed_cycle'
     cycle_frames = round(50/result['actual_frequency_hz']) if completed_cycle_rule else 1
+    edge_holds=[];hold=0.;previous_ok=False
+    if 'edge_balance' in result:
+        side=result['edge_balance']['side'];target=result['edge_balance']['policy']['feedback']['target_roll_deg']
+        for sample in result['trace']:
+            ok=sample['edge_support'] and abs(side*sample['roll_deg']-target)<=2 and abs(sample['roll_rate_deg_s'])<=5 and abs(sample['pitch_deg'])<=5
+            hold=hold+.02 if ok and previous_ok else 0.;edge_holds.append(hold);previous_ok=ok
     try:
         for frame_index, row in enumerate(result["trajectory"]):
             if args.until is not None and row['time_s']>args.until+1e-8:break
@@ -163,6 +169,11 @@ def main():
                     draw.text((908,96),'Waist: '+waist,font=font,fill=(110,210,235))
                     draw.text((908,122),f"Roll: {np.degrees(row['foot_rpy_rad'][0]):+.1f} deg",font=font,fill='white')
                     draw.text((908,148),f"Edge height difference: {row['side_height_difference_mm']:.1f} mm",font=font,fill='white')
+                    if 'edge_balance' in result:
+                        draw.rectangle((12,470,625,530),fill=(15,22,32))
+                        label='ARTIFICIAL TILTED START' if not result.get('natural_upright_start',True) else 'Natural lift from flat'
+                        draw.text((20,474),label,font=font,fill='white')
+                        draw.text((20,501),f"Continuous stable edge hold: {edge_holds[frame_index]:.2f} s",font=font,fill=(110,210,235))
                     if 'penguin' in result:
                         done=[s for s in result['penguin']['steps'] if s['end_s']<=row['time_s']+1e-8]
                         pairs=[s for i,s in enumerate(done) if i%2]

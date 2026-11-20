@@ -1,5 +1,47 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 20 — natural lift and sustained edge balance
+
+Selected experimental skill: `configs/edge-balance-experimental.json`.
+Both sides lift from flat and complete **60 seconds** at 0.125 ms physics,
+with **57.36/56.74 seconds of continuous qualified edge hold**. Final body roll
+is about −32.06° on the left and +30.87…31.17° on the right. Each 20-second
+recording shows a natural launch, capture and 17.36/16.74 seconds holding.
+Peak tilt is 32.89/32.47°, rim-height difference 60.38/59.76 mm.
+
+The waist target remains exactly zero with bounded holding torque; actual
+deflection is about ±1.1°. Head torque peaks are 0.299/0.287 Nm, under the
+unchanged 0.416 Nm cap. Actual joint margins remain positive. The motor model,
+10.7 rad/s / 360 rad/s² target profile, IK and 35° tilt guards are unchanged.
+No robot, shared GPU, Nimbus or EY work was touched.
+
+The hold uses a locally identified dynamics model, quadratic feedback and
+delayed body/head motion observations. Identification used explicitly
+artificial tilted starts, separate from final natural-start evidence. The
+two natural launch recipes were trained independently. No COM/contact or
+hidden model identity enters the policy. This is not neural RL.
+
+**Robust capture is still unresolved:** the final regular suite passes 5/14,
+plus both 60-second extensions. The right policy also passes at 0.1 ms; the
+left fails there, and both fail at 0.25 ms. All six 0.02°/0.05° sensor-noise and
+40 ms delay checks hit the tilt guard. Both pass with rolling friction set to
+zero. Without feedback after the same launch, left returns flat and right
+hits the tilt guard. Do not claim timestep convergence or hardware readiness.
+
+Acceptance requires full completion, continuous one-edge support, signed roll
+within 2° of target, |roll rate| <=5°/s and |pitch| <=5° through the final five
+seconds. Flat recovery and brief peaks do not count. **123 tests pass** in
+`experiments/reports/repository-tests-edge-balance-2026-11-20.txt`.
+
+Video: `media/simulation/edge-balance-bilateral-2026-11-20.mp4` (two independent
+20-second trials, real time). Methods and exact replay commands:
+`docs/EDGE_BALANCE_2026-11-20.md`. Final/extended outcomes and artifact hashes:
+`experiments/reports/motor-training-edge-{final,extended,artifacts}-2026-11-20.json`.
+All failed searches are retained; interrupted reports remain incomplete.
+Next: train a wider natural capture region under noisy sensing and varied
+dynamics, then compose the primitive into steps. Preserve earlier walking
+policies and the present successful nominal demonstrations.
+
 ## November 20 — sustained gait, known repairs and fresh limits
 
 Selected policy: `configs/penguin-sustained-trained.json`. Trained the previously

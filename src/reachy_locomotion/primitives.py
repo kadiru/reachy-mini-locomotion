@@ -127,7 +127,7 @@ def classify_trial(reason,tail,peak_roll):
 
 class PrimitiveSimulator(SwaySimulator):
     def run_primitive(self,recipe,seconds=3.6,waist_mode='off',record=False,
-                      controller=None,tilt_limit_deg=80,finish_settle_s=None):
+                      controller=None,tilt_limit_deg=80,finish_settle_s=None,diagnostic_initial_roll_deg=None):
         if not isinstance(recipe,Primitive):recipe=Primitive(**recipe)
         if waist_mode not in ('off','hold_neutral'):raise ValueError('Unknown waist mode')
         if not 1<=seconds<=600 or self.servos is None:raise ValueError('Require bounded datasheet simulation')
@@ -145,6 +145,15 @@ class PrimitiveSimulator(SwaySimulator):
             if waist_mode=='off':d.ctrl[waist]=0
             mujoco.mj_step(m,d)
         mujoco.mj_forward(m,d);d.time=0.
+        # Curriculum-only reset, explicitly marked in the result. Never used
+        # as evidence that the head can launch/capture from upright.
+        if diagnostic_initial_roll_deg is not None:
+            if not math.isfinite(diagnostic_initial_roll_deg) or not 20<=abs(diagnostic_initial_roll_deg)<=33:
+                raise ValueError('Diagnostic edge reset must be between 20 and 33 degrees')
+            angle=math.radians(diagnostic_initial_roll_deg);qa=m.jnt_qposadr[m.joint('floating_foot').id]
+            d.qpos[qa+2]=self.config['foot_radius_m']*abs(math.sin(angle))-.00002
+            d.qpos[qa+3:qa+7]=[math.cos(angle/2),math.sin(angle/2),0,0]
+            d.qvel[:]=0.;mujoco.mj_forward(m,d)
         if any(w.number for w in d.warning):raise ValueError('Initialization warning')
         start=d.xpos[self.base].copy();waist_qadr=self.servos.qadr[waist];waist_start=float(d.qpos[waist_qadr])
         bodies=[self.base,torso];previous=[math.atan2(d.xmat[i][3],d.xmat[i][0]) for i in bodies]
@@ -165,6 +174,10 @@ class PrimitiveSimulator(SwaySimulator):
             if hasattr(controller,'observe_heading'):controller.observe_heading(t,math.degrees(angles[0]))
             if hasattr(controller,'observe_head'):
                 controller.observe_head(t,math.degrees(euler(relative_head_pose(m,d))[2]))
+            if hasattr(controller,'observe_attitude'):
+                controller.observe_attitude(t,math.degrees(rpy[1]))
+            if hasattr(controller,'observe_head_state'):
+                controller.observe_head_state(t,relative_head_pose(m,d))
             roll_rate=(roll-last_roll)/.02 if frame else 0.;last_roll=roll
             forces=np.zeros(2);points=[];weights=[]
             for ci,c in enumerate(d.contact):
@@ -187,7 +200,7 @@ class PrimitiveSimulator(SwaySimulator):
                 if previous_edge:edge_yaw+=yaw_step
             previous_edge=edge;peak_slip=max(peak_slip,slip)
             mujoco.mj_objectVelocity(m,d,mujoco.mjtObj.mjOBJ_XBODY,self.base,base_velocity,0)
-            row=dict(time_s=t,roll_deg=roll,roll_rate_deg_s=roll_rate,tilt_deg=tilt,
+            row=dict(time_s=t,roll_deg=roll,pitch_deg=math.degrees(rpy[1]),roll_rate_deg_s=roll_rate,tilt_deg=tilt,
                      side_height_difference_mm=lift,foot_yaw_deg=math.degrees(angles[0]),torso_yaw_deg=math.degrees(angles[1]),
                      waist_angle_change_deg=math.degrees(float(d.qpos[waist_qadr])-waist_start),
                      normal_n=float(sum(forces)),edge_support=edge,contact_slip_m_s=slip,
@@ -250,6 +263,7 @@ class PrimitiveSimulator(SwaySimulator):
                     requested_seconds=seconds,elapsed_seconds=float(d.time),termination=reason or 'completed',**flags,
                     max_duration_seconds=duration_budget,stopped_after_controller_finish=early_finish,
                     diagnostic_falls_allowed=tilt_limit_deg==80,tilt_limit_deg=tilt_limit_deg,walking_fall_guard_unchanged=True,waist_mode=waist_mode,
+                    diagnostic_initial_roll_deg=diagnostic_initial_roll_deg,natural_upright_start=diagnostic_initial_roll_deg is None,
                     waist_peak_torque_nm=float(peak_torque[waist]),waist_absolute_motor_work_j=waist_work,
                     commanded_waist_position_range_rad=[float(self.initial_targets[waist])]*2,
                     measured_waist_angle_range_deg=[min(x['waist_angle_change_deg'] for x in trace),max(x['waist_angle_change_deg'] for x in trace)],
