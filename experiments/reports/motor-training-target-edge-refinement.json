@@ -1,0 +1,5343 @@
+{
+  "excluded_after_joint_stop": [
+    "delayed_sensor_fallback-10-+1"
+  ],
+  "results": [
+    {
+      "target_deg": 0.0,
+      "torso_deg": 0.16329991125169577,
+      "base_deg": 0.1633285607943524,
+      "max_tail_error_deg": 0.1633295148824643,
+      "signed_edge_deg": 0.4939734612408644,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.4939734612408644
+      },
+      "edge_s": 0.14,
+      "lift_mm": 19.66390860678654,
+      "slip_mm": 0.975135119308618,
+      "max_excursion_mm": 2.4699245695213947,
+      "drift_mm": 0.8016564286519519,
+      "waist_range_deg": [
+        -0.2728913028426933,
+        1.3924405784340375
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "primary-10--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 9.668363498374429,
+          "end_s": 4.4,
+          "measured_turn_deg": 0.11662268625545671
+        }
+      ],
+      "peak_tilt_deg": 10.260172745404377,
+      "min_joint_margin_rad": 0.08427925871428177,
+      "max_closure_error_m": 2.9512590431356118e-05,
+      "peak_motor_torque_nm": 0.2760054510512381,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.975135119308618
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 0.7053031708367357,
+      "base_deg": 0.7053297168324065,
+      "max_tail_error_deg": 0.7053301626621045,
+      "signed_edge_deg": 0.4428008429196101,
+      "edge_deg_by_rim": {
+        "left": -0.29231667976150966,
+        "right": 0.7351175226811197
+      },
+      "edge_s": 0.25999999999999995,
+      "lift_mm": 23.52214485657175,
+      "slip_mm": 1.5754134773248762,
+      "max_excursion_mm": 2.6128403487778646,
+      "drift_mm": 2.2011579922877074,
+      "waist_range_deg": [
+        -0.5613841893475489,
+        1.7311517713710514
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "primary-10--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.330298336077279,
+          "end_s": 4.4,
+          "measured_turn_deg": 0.6521021147521381
+        }
+      ],
+      "peak_tilt_deg": 12.383571595273988,
+      "min_joint_margin_rad": 0.08294138989346367,
+      "max_closure_error_m": 3.0195768232960233e-05,
+      "peak_motor_torque_nm": 0.2821599859431773,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.5754134773248762
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 0.2449867768806129,
+      "base_deg": 0.2450156706580381,
+      "max_tail_error_deg": 0.24501669952312788,
+      "signed_edge_deg": 0.02103071796103556,
+      "edge_deg_by_rim": {
+        "left": -0.4028071287894685,
+        "right": 0.42383784675050407
+      },
+      "edge_s": 0.19999999999999998,
+      "lift_mm": 20.19868809917527,
+      "slip_mm": 1.3166269064159195,
+      "max_excursion_mm": 2.51147884384953,
+      "drift_mm": 0.9683086424941458,
+      "waist_range_deg": [
+        -1.5104642511893633,
+        0.27612348095506145
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "primary-10-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 10.827417020875739,
+          "end_s": 4.4,
+          "measured_turn_deg": 0.19830993171969946
+        }
+      ],
+      "peak_tilt_deg": 10.545967787178846,
+      "min_joint_margin_rad": 0.07372301099352452,
+      "max_closure_error_m": 2.8770177480975416e-05,
+      "peak_motor_torque_nm": 0.2665592836038409,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.3166269064159195
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -0.5821875542158372,
+      "base_deg": -0.5821666259718667,
+      "max_tail_error_deg": 0.5821887528540506,
+      "signed_edge_deg": 0.029354089751882806,
+      "edge_deg_by_rim": {
+        "left": -0.6243453987238431,
+        "right": 0.6536994884757259
+      },
+      "edge_s": 0.27999999999999997,
+      "lift_mm": 23.821696121800255,
+      "slip_mm": 1.6950067256972978,
+      "max_excursion_mm": 2.587561311877012,
+      "drift_mm": 2.1791303366531882,
+      "waist_range_deg": [
+        -1.9605311961628562,
+        0.5567746037242085
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "primary-10-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.048952347341377,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.6353939079105795
+        }
+      ],
+      "peak_tilt_deg": 12.535927550788848,
+      "min_joint_margin_rad": 0.07296250995570519,
+      "max_closure_error_m": 2.8416825495765376e-05,
+      "peak_motor_torque_nm": 0.2652068407735158,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.6950067256972978
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 0.13120568660483556,
+      "base_deg": 0.13123563115076198,
+      "max_tail_error_deg": 0.13123657008246217,
+      "signed_edge_deg": 0.4939734612408644,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.4939734612408644
+      },
+      "edge_s": 0.14,
+      "lift_mm": 19.66390860678654,
+      "slip_mm": 0.975135119308618,
+      "max_excursion_mm": 2.4699245695213947,
+      "drift_mm": 1.2020592507387298,
+      "waist_range_deg": [
+        -0.2728913028426933,
+        1.5898947339974865
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "primary-25--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 9.668363498374429,
+          "end_s": 4.4,
+          "measured_turn_deg": 0.08452971890015665
+        }
+      ],
+      "peak_tilt_deg": 10.260172745404377,
+      "min_joint_margin_rad": 0.08427925871428177,
+      "max_closure_error_m": 2.9512590431356118e-05,
+      "peak_motor_torque_nm": 0.2760054510512381,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.975135119308618
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 0.4133168340604232,
+      "base_deg": 0.41334529503827233,
+      "max_tail_error_deg": 0.4133457160990063,
+      "signed_edge_deg": 0.6560626494859431,
+      "edge_deg_by_rim": {
+        "left": -0.07905487319517668,
+        "right": 0.7351175226811197
+      },
+      "edge_s": 0.25999999999999995,
+      "lift_mm": 23.52214485657175,
+      "slip_mm": 1.5551619104861942,
+      "max_excursion_mm": 3.140102611377298,
+      "drift_mm": 2.8691571706584282,
+      "waist_range_deg": [
+        -0.6029876303968668,
+        1.9220241897354102
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "primary-25--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.330298336077279,
+          "end_s": 4.4,
+          "measured_turn_deg": 0.3601176289105381
+        }
+      ],
+      "peak_tilt_deg": 12.383571595273988,
+      "min_joint_margin_rad": 0.08294138989346367,
+      "max_closure_error_m": 3.173229100379142e-05,
+      "peak_motor_torque_nm": 0.29538753283420843,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.5551619104861942
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 0.29647325534091384,
+      "base_deg": 0.296500337466581,
+      "max_tail_error_deg": 0.2965013854929098,
+      "signed_edge_deg": 0.018712345873866554,
+      "edge_deg_by_rim": {
+        "left": -0.4028071287894685,
+        "right": 0.42151947466333506
+      },
+      "edge_s": 0.19999999999999998,
+      "lift_mm": 20.19868809917527,
+      "slip_mm": 1.3120682223423432,
+      "max_excursion_mm": 2.51147884384953,
+      "drift_mm": 1.3789794627572605,
+      "waist_range_deg": [
+        -1.6018124781760166,
+        0.27612348095506145
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "primary-25-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 10.827417020875739,
+          "end_s": 4.4,
+          "measured_turn_deg": 0.2497946471815945
+        }
+      ],
+      "peak_tilt_deg": 10.545967787178846,
+      "min_joint_margin_rad": 0.07372301099352452,
+      "max_closure_error_m": 2.8770177480975416e-05,
+      "peak_motor_torque_nm": 0.2665592836038409,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.3120682223423432
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -0.4947532077260823,
+      "base_deg": -0.4947333208386392,
+      "max_tail_error_deg": 0.49475331760987007,
+      "signed_edge_deg": -0.28078787614687933,
+      "edge_deg_by_rim": {
+        "left": -0.6243453987238431,
+        "right": 0.34355752257696376
+      },
+      "edge_s": 0.3,
+      "lift_mm": 23.821696121800255,
+      "slip_mm": 1.8122055334829537,
+      "max_excursion_mm": 2.91520036339216,
+      "drift_mm": 2.7255516349527054,
+      "waist_range_deg": [
+        -2.0185610960655813,
+        0.7403091976033798
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "primary-25-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.048952347341377,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.5479605728704436
+        }
+      ],
+      "peak_tilt_deg": 12.535927550788848,
+      "min_joint_margin_rad": 0.07296250995570519,
+      "max_closure_error_m": 2.8416825495765376e-05,
+      "peak_motor_torque_nm": 0.2652068407735158,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.8122055334829537
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -0.22269526049443222,
+      "base_deg": -0.22266267956876656,
+      "max_tail_error_deg": 0.2227206502578436,
+      "signed_edge_deg": 0.4939734612408644,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.4939734612408644
+      },
+      "edge_s": 0.14,
+      "lift_mm": 19.66390860678654,
+      "slip_mm": 0.975135119308618,
+      "max_excursion_mm": 2.4699245695213947,
+      "drift_mm": 1.5506929007528367,
+      "waist_range_deg": [
+        -0.306769961440503,
+        1.802096085002239
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "primary-40--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 9.668363498374429,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.2693686667544615
+        }
+      ],
+      "peak_tilt_deg": 10.260172745404377,
+      "min_joint_margin_rad": 0.08427925871428177,
+      "max_closure_error_m": 3.4187844038901837e-05,
+      "peak_motor_torque_nm": 0.3080393308918598,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.975135119308618
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 0.5850016023269248,
+      "base_deg": 0.585022091714907,
+      "max_tail_error_deg": 0.585022645465329,
+      "signed_edge_deg": 0.8455756968473757,
+      "edge_deg_by_rim": {
+        "left": 0.11045817416625592,
+        "right": 0.7351175226811197
+      },
+      "edge_s": 0.25999999999999995,
+      "lift_mm": 23.52214485657175,
+      "slip_mm": 1.537238949515014,
+      "max_excursion_mm": 3.714789449805747,
+      "drift_mm": 3.3366510824470224,
+      "waist_range_deg": [
+        -1.2078396800358608,
+        2.028932941443928
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "primary-40--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.330298336077279,
+          "end_s": 4.4,
+          "measured_turn_deg": 0.5317947512950046
+        }
+      ],
+      "peak_tilt_deg": 12.383571595273988,
+      "min_joint_margin_rad": 0.08294138989346367,
+      "max_closure_error_m": 3.0195768232960233e-05,
+      "peak_motor_torque_nm": 0.2821599859431773,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.537238949515014
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 0.09462696918812982,
+      "base_deg": 0.09465297984207303,
+      "max_tail_error_deg": 0.09465403787447771,
+      "signed_edge_deg": 0.009097278093138261,
+      "edge_deg_by_rim": {
+        "left": -0.4028071287894685,
+        "right": 0.41190440688260677
+      },
+      "edge_s": 0.19999999999999998,
+      "lift_mm": 20.19868809917527,
+      "slip_mm": 1.3087921927473973,
+      "max_excursion_mm": 2.51147884384953,
+      "drift_mm": 1.6728319454077378,
+      "waist_range_deg": [
+        -1.715632455707009,
+        0.5064195711773278
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "primary-40-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 10.827417020875739,
+          "end_s": 4.4,
+          "measured_turn_deg": 0.04794731568905808
+        }
+      ],
+      "peak_tilt_deg": 10.545967787178846,
+      "min_joint_margin_rad": 0.07372301099352452,
+      "max_closure_error_m": 2.968232053968229e-05,
+      "peak_motor_torque_nm": 0.27135984571598193,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.3087921927473973
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -0.3789014057217403,
+      "base_deg": -0.37887708129893577,
+      "max_tail_error_deg": 0.37892344509513504,
+      "signed_edge_deg": -0.4750908359004511,
+      "edge_deg_by_rim": {
+        "left": -0.6243453987238431,
+        "right": 0.149254562823392
+      },
+      "edge_s": 0.3,
+      "lift_mm": 23.821696121800255,
+      "slip_mm": 1.8055705265021895,
+      "max_excursion_mm": 3.571340721822189,
+      "drift_mm": 3.23943199108288,
+      "waist_range_deg": [
+        -2.1075167176068414,
+        1.0771533622501501
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "primary-40-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.048952347341377,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.4321045158568957
+        }
+      ],
+      "peak_tilt_deg": 12.535927550788848,
+      "min_joint_margin_rad": 0.07296250995570519,
+      "max_closure_error_m": 3.0783569302174026e-05,
+      "peak_motor_torque_nm": 0.2923044953981321,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.8055705265021895
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 0.01191136301713616,
+      "base_deg": 0.011942684742399982,
+      "max_tail_error_deg": 0.011943668805280538,
+      "signed_edge_deg": 0.0013887129396185638,
+      "edge_deg_by_rim": {
+        "left": -0.4028071287894685,
+        "right": 0.40419584172908707
+      },
+      "edge_s": 0.19999999999999998,
+      "lift_mm": 20.19868809917527,
+      "slip_mm": 1.304866286843223,
+      "max_excursion_mm": 2.51147884384953,
+      "drift_mm": 2.0368074042768667,
+      "waist_range_deg": [
+        -1.836566007726218,
+        0.7417825563984527
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "primary-55-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 10.827417020875739,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.03476315650545175
+        }
+      ],
+      "peak_tilt_deg": 10.545967787178846,
+      "min_joint_margin_rad": 0.07372301099352452,
+      "max_closure_error_m": 3.305132864316122e-05,
+      "peak_motor_torque_nm": 0.3080264861711704,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.304866286843223
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -0.733825158118111,
+      "base_deg": -0.7337913235587011,
+      "max_tail_error_deg": 0.7339130604974142,
+      "signed_edge_deg": -0.6298877905736049,
+      "edge_deg_by_rim": {
+        "left": -0.6243453987238431,
+        "right": -0.005542391849761852
+      },
+      "edge_s": 0.3,
+      "lift_mm": 23.821696121800255,
+      "slip_mm": 1.792922529014069,
+      "max_excursion_mm": 4.127217111941789,
+      "drift_mm": 3.8868534513913455,
+      "waist_range_deg": [
+        -2.3301218188407997,
+        1.673424735741939
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "primary-55-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.048952347341377,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.78701913167118
+        }
+      ],
+      "peak_tilt_deg": 12.535927550788848,
+      "min_joint_margin_rad": 0.07296250995570519,
+      "max_closure_error_m": 3.532556346571232e-05,
+      "peak_motor_torque_nm": 0.32900331687208195,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.792922529014069
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -0.6371601705067912,
+      "base_deg": -0.6371219744394647,
+      "max_tail_error_deg": 0.6371659759005056,
+      "signed_edge_deg": 0.45695222012265846,
+      "edge_deg_by_rim": {
+        "left": -0.5108570356547031,
+        "right": 0.9678092557773615
+      },
+      "edge_s": 0.27999999999999997,
+      "lift_mm": 21.960613830636742,
+      "slip_mm": 1.9982988872601581,
+      "max_excursion_mm": 2.5316371720700124,
+      "drift_mm": 2.5178611990710364,
+      "waist_range_deg": [
+        -0.5701747728955023,
+        0.506654945841641
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "fallback-10--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 11.308559428697327,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.6838256569572234
+        }
+      ],
+      "peak_tilt_deg": 11.319952507541567,
+      "min_joint_margin_rad": 0.08040107574409494,
+      "max_closure_error_m": 3.1801008528655005e-05,
+      "peak_motor_torque_nm": 0.29525732663968834,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.9982988872601581
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -3.0847161480583654,
+      "base_deg": -3.084687160066295,
+      "max_tail_error_deg": 3.0847207671277785,
+      "signed_edge_deg": -0.33266314799538266,
+      "edge_deg_by_rim": {
+        "left": -0.9333382134298356,
+        "right": 0.6006750654344529
+      },
+      "edge_s": 0.38000000000000006,
+      "lift_mm": 27.12944278020369,
+      "slip_mm": 2.6610195786154462,
+      "max_excursion_mm": 3.034340858680938,
+      "drift_mm": 2.895962393375526,
+      "waist_range_deg": [
+        -0.9159698134002342,
+        1.6326452472302118
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "fallback-10--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 14.066970663294533,
+          "end_s": 4.4,
+          "measured_turn_deg": -3.1379123505282527
+        }
+      ],
+      "peak_tilt_deg": 14.088214841145772,
+      "min_joint_margin_rad": 0.07908925793909605,
+      "max_closure_error_m": 3.229727784034148e-05,
+      "peak_motor_torque_nm": 0.2936604233923097,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 2.6610195786154462
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 2.2197971402348293,
+      "base_deg": 2.2198413915822046,
+      "max_tail_error_deg": 2.2198433615267086,
+      "signed_edge_deg": 0.2298911957619829,
+      "edge_deg_by_rim": {
+        "left": -0.48351426015736054,
+        "right": 0.7134054559193435
+      },
+      "edge_s": 0.34,
+      "lift_mm": 26.13430582770062,
+      "slip_mm": 2.2945181582907277,
+      "max_excursion_mm": 2.588965822840843,
+      "drift_mm": 2.5406380281236016,
+      "waist_range_deg": [
+        -1.5091708661923675,
+        0.6475312876547645
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "fallback-10-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 13.572821580002826,
+          "end_s": 4.4,
+          "measured_turn_deg": 2.173137501934766
+        }
+      ],
+      "peak_tilt_deg": 13.558655861629859,
+      "min_joint_margin_rad": 0.05018664538693951,
+      "max_closure_error_m": 3.320988236095997e-05,
+      "peak_motor_torque_nm": 0.2989205190634535,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 2.2945181582907277
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -0.39179479294644964,
+      "base_deg": -0.3917693546143907,
+      "max_tail_error_deg": 0.3918205264050527,
+      "signed_edge_deg": -1.3263850501449046,
+      "edge_deg_by_rim": {
+        "left": -0.5438800717559502,
+        "right": -0.7825049783889544
+      },
+      "edge_s": 0.21999999999999997,
+      "lift_mm": 15.978111129507838,
+      "slip_mm": 1.6110152498004442,
+      "max_excursion_mm": 1.4529447824765125,
+      "drift_mm": 1.4497206255803723,
+      "waist_range_deg": [
+        -0.7562149550760222,
+        0.4816018348597505
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "fallback-10-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 8.343657001163221,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.4449966653090327
+        }
+      ],
+      "peak_tilt_deg": 8.40382555738174,
+      "min_joint_margin_rad": 0.049040762382263736,
+      "max_closure_error_m": 3.143193538840218e-05,
+      "peak_motor_torque_nm": 0.2976499088744753,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.6110152498004442
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -0.6335839207335141,
+      "base_deg": -0.6335329965265412,
+      "max_tail_error_deg": 0.6336629525275161,
+      "signed_edge_deg": 0.45695222012265846,
+      "edge_deg_by_rim": {
+        "left": -0.5108570356547031,
+        "right": 0.9678092557773615
+      },
+      "edge_s": 0.27999999999999997,
+      "lift_mm": 21.960613830636742,
+      "slip_mm": 1.9982988872601581,
+      "max_excursion_mm": 2.53153535077264,
+      "drift_mm": 2.5191956346363775,
+      "waist_range_deg": [
+        -0.5701747728955023,
+        0.5328370367064268
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "fallback-25--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 11.308559428697327,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.680237009195443
+        }
+      ],
+      "peak_tilt_deg": 11.319952507541567,
+      "min_joint_margin_rad": 0.08040107574409494,
+      "max_closure_error_m": 3.1801008528655005e-05,
+      "peak_motor_torque_nm": 0.29525732663968834,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.9982988872601581
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -3.1587594931426732,
+      "base_deg": -3.1587209760437194,
+      "max_tail_error_deg": 3.1588219765938965,
+      "signed_edge_deg": -0.33266314799538266,
+      "edge_deg_by_rim": {
+        "left": -0.9333382134298356,
+        "right": 0.6006750654344529
+      },
+      "edge_s": 0.38000000000000006,
+      "lift_mm": 27.12944278020369,
+      "slip_mm": 2.6610195786154462,
+      "max_excursion_mm": 3.299407568520977,
+      "drift_mm": 3.2797104376925157,
+      "waist_range_deg": [
+        -0.9159698134002342,
+        1.812578378958948
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "fallback-25--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 14.066970663294533,
+          "end_s": 4.4,
+          "measured_turn_deg": -3.2119464813171064
+        }
+      ],
+      "peak_tilt_deg": 14.088214841145772,
+      "min_joint_margin_rad": 0.07908925793909605,
+      "max_closure_error_m": 3.229727784034148e-05,
+      "peak_motor_torque_nm": 0.2936604233923097,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 2.6610195786154462
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 2.293329637496455,
+      "base_deg": 2.293359931842559,
+      "max_tail_error_deg": 2.2933731867787492,
+      "signed_edge_deg": 0.2298911957619829,
+      "edge_deg_by_rim": {
+        "left": -0.48351426015736054,
+        "right": 0.7134054559193435
+      },
+      "edge_s": 0.34,
+      "lift_mm": 26.13430582770062,
+      "slip_mm": 2.2945181582907277,
+      "max_excursion_mm": 2.899176122206618,
+      "drift_mm": 2.886196309605426,
+      "waist_range_deg": [
+        -1.6463080603019498,
+        0.6475312876547645
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "fallback-25-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 13.572821580002826,
+          "end_s": 4.4,
+          "measured_turn_deg": 2.246656307314759
+        }
+      ],
+      "peak_tilt_deg": 13.558655861629859,
+      "min_joint_margin_rad": 0.05018664538693951,
+      "max_closure_error_m": 3.320988236095997e-05,
+      "peak_motor_torque_nm": 0.2989205190634535,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 2.2945181582907277
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -0.41878870768119325,
+      "base_deg": -0.41876620768132056,
+      "max_tail_error_deg": 0.41879482839896637,
+      "signed_edge_deg": -1.3352055193985635,
+      "edge_deg_by_rim": {
+        "left": -0.5438800717559502,
+        "right": -0.7913254476426134
+      },
+      "edge_s": 0.21999999999999997,
+      "lift_mm": 15.978111129507838,
+      "slip_mm": 1.6103406742810453,
+      "max_excursion_mm": 1.5424525543670145,
+      "drift_mm": 1.534747182475994,
+      "waist_range_deg": [
+        -1.0385252969634926,
+        0.4816018348597505
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "fallback-25-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 8.343657001163221,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.4719934329726242
+        }
+      ],
+      "peak_tilt_deg": 8.40382555738174,
+      "min_joint_margin_rad": 0.049040762382263736,
+      "max_closure_error_m": 3.143193538840218e-05,
+      "peak_motor_torque_nm": 0.2976499088744753,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.6103406742810453
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -0.6316688683952837,
+      "base_deg": -0.6316429092917707,
+      "max_tail_error_deg": 0.6316688683952837,
+      "signed_edge_deg": 0.45695222012265846,
+      "edge_deg_by_rim": {
+        "left": -0.5108570356547031,
+        "right": 0.9678092557773615
+      },
+      "edge_s": 0.27999999999999997,
+      "lift_mm": 21.960613830636742,
+      "slip_mm": 1.9982988872601581,
+      "max_excursion_mm": 2.5427047939399303,
+      "drift_mm": 2.5303047455714696,
+      "waist_range_deg": [
+        -0.9147491847587691,
+        0.7593834564704364
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "fallback-40--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 11.308559428697327,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.678346105533659
+        }
+      ],
+      "peak_tilt_deg": 11.319952507541567,
+      "min_joint_margin_rad": 0.08040107574409494,
+      "max_closure_error_m": 3.1801008528655005e-05,
+      "peak_motor_torque_nm": 0.29525732663968834,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.9982988872601581
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -3.3831838233874247,
+      "base_deg": -3.3831961861343136,
+      "max_tail_error_deg": 3.3831961861343136,
+      "signed_edge_deg": -0.33266314799538266,
+      "edge_deg_by_rim": {
+        "left": -0.9333382134298356,
+        "right": 0.6006750654344529
+      },
+      "edge_s": 0.38000000000000006,
+      "lift_mm": 27.12944278020369,
+      "slip_mm": 2.6610195786154462,
+      "max_excursion_mm": 3.732286377965332,
+      "drift_mm": 3.7088326394157365,
+      "waist_range_deg": [
+        -1.0607350838722691,
+        2.0103742201053163
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "fallback-40--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 14.066970663294533,
+          "end_s": 4.4,
+          "measured_turn_deg": -3.4364203013212657
+        }
+      ],
+      "peak_tilt_deg": 14.088214841145772,
+      "min_joint_margin_rad": 0.07908925793909605,
+      "max_closure_error_m": 3.229727784034148e-05,
+      "peak_motor_torque_nm": 0.2936604233923097,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 2.6610195786154462
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 2.403642346715754,
+      "base_deg": 2.403731585536934,
+      "max_tail_error_deg": 2.4037327647401776,
+      "signed_edge_deg": 0.2298911957619829,
+      "edge_deg_by_rim": {
+        "left": -0.48351426015736054,
+        "right": 0.7134054559193435
+      },
+      "edge_s": 0.34,
+      "lift_mm": 26.13430582770062,
+      "slip_mm": 2.2945181582907277,
+      "max_excursion_mm": 3.2328536410957187,
+      "drift_mm": 3.217348079776016,
+      "waist_range_deg": [
+        -1.8294383970397257,
+        1.0107933642284608
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "fallback-40-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 13.572821580002826,
+          "end_s": 4.4,
+          "measured_turn_deg": 2.357025926451637
+        }
+      ],
+      "peak_tilt_deg": 13.558655861629859,
+      "min_joint_margin_rad": 0.05018664538693951,
+      "max_closure_error_m": 3.320988236095997e-05,
+      "peak_motor_torque_nm": 0.2989205190634535,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 2.2945181582907277
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -0.4678577874012926,
+      "base_deg": -0.46783297510043237,
+      "max_tail_error_deg": 0.4678805631127894,
+      "signed_edge_deg": -1.3405867906735733,
+      "edge_deg_by_rim": {
+        "left": -0.5438800717559502,
+        "right": -0.796706718917623
+      },
+      "edge_s": 0.21999999999999997,
+      "lift_mm": 15.978111129507838,
+      "slip_mm": 1.6114102901257699,
+      "max_excursion_mm": 1.5468205471992877,
+      "drift_mm": 1.5387854172248716,
+      "waist_range_deg": [
+        -1.2511505033069459,
+        0.6314938870852942
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "fallback-40-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 8.343657001163221,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.5210603179194145
+        }
+      ],
+      "peak_tilt_deg": 8.40382555738174,
+      "min_joint_margin_rad": 0.049040762382263736,
+      "max_closure_error_m": 3.143193538840218e-05,
+      "peak_motor_torque_nm": 0.2976499088744753,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.6114102901257699
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -0.6315236339727672,
+      "base_deg": -0.6315832740428877,
+      "max_tail_error_deg": 0.6315832740428877,
+      "signed_edge_deg": 0.45695222012265846,
+      "edge_deg_by_rim": {
+        "left": -0.5108570356547031,
+        "right": 0.9678092557773615
+      },
+      "edge_s": 0.27999999999999997,
+      "lift_mm": 21.960613830636742,
+      "slip_mm": 1.9982988872601581,
+      "max_excursion_mm": 2.5453437548725737,
+      "drift_mm": 2.53028466971145,
+      "waist_range_deg": [
+        -1.331850498708886,
+        1.0455961059491266
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "fallback-55--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 11.308559428697327,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.6782836974971278
+        }
+      ],
+      "peak_tilt_deg": 11.319952507541567,
+      "min_joint_margin_rad": 0.08040107574409494,
+      "max_closure_error_m": 3.1801008528655005e-05,
+      "peak_motor_torque_nm": 0.29525732663968834,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.9982988872601581
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -3.52605727848656,
+      "base_deg": -3.5261661466520833,
+      "max_tail_error_deg": 3.5261661466520833,
+      "signed_edge_deg": -0.33266314799538266,
+      "edge_deg_by_rim": {
+        "left": -0.9333382134298356,
+        "right": 0.6006750654344529
+      },
+      "edge_s": 0.38000000000000006,
+      "lift_mm": 27.12944278020369,
+      "slip_mm": 2.6610195786154462,
+      "max_excursion_mm": 4.060145959293731,
+      "drift_mm": 4.02425711775621,
+      "waist_range_deg": [
+        -1.55155139487577,
+        2.2369704593735418
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "fallback-55--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 14.066970663294533,
+          "end_s": 4.4,
+          "measured_turn_deg": -3.579387216925749
+        }
+      ],
+      "peak_tilt_deg": 14.088214841145772,
+      "min_joint_margin_rad": 0.07908925793909605,
+      "max_closure_error_m": 3.241183475048979e-05,
+      "peak_motor_torque_nm": 0.3234145591925819,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 2.6610195786154462
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 2.358885247147214,
+      "base_deg": 2.359055788429567,
+      "max_tail_error_deg": 2.3590559349271114,
+      "signed_edge_deg": 0.2298911957619829,
+      "edge_deg_by_rim": {
+        "left": -0.48351426015736054,
+        "right": 0.7134054559193435
+      },
+      "edge_s": 0.34,
+      "lift_mm": 26.13430582770062,
+      "slip_mm": 2.2945181582907277,
+      "max_excursion_mm": 3.547436067281164,
+      "drift_mm": 3.526523677033749,
+      "waist_range_deg": [
+        -1.9842849140918235,
+        1.247821578095137
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "fallback-55-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 13.572821580002826,
+          "end_s": 4.4,
+          "measured_turn_deg": 2.3123472344745415
+        }
+      ],
+      "peak_tilt_deg": 13.558655861629859,
+      "min_joint_margin_rad": 0.05018664538693951,
+      "max_closure_error_m": 3.320988236095997e-05,
+      "peak_motor_torque_nm": 0.32197881828411606,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 2.2945181582907277
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -0.4702844825029942,
+      "base_deg": -0.47024994513252344,
+      "max_tail_error_deg": 0.4703750562550082,
+      "signed_edge_deg": -1.3435288346417438,
+      "edge_deg_by_rim": {
+        "left": -0.5438800717559502,
+        "right": -0.7996487628857937
+      },
+      "edge_s": 0.21999999999999997,
+      "lift_mm": 15.978111129507838,
+      "slip_mm": 1.6123042327933148,
+      "max_excursion_mm": 1.542042911051059,
+      "drift_mm": 1.5346616151389234,
+      "waist_range_deg": [
+        -1.3883489372159734,
+        1.0292773064041862
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "fallback-55-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 8.343657001163221,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.5234776896892248
+        }
+      ],
+      "peak_tilt_deg": 8.40382555738174,
+      "min_joint_margin_rad": 0.049040762382263736,
+      "max_closure_error_m": 3.143193538840218e-05,
+      "peak_motor_torque_nm": 0.2976499088744753,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.6123042327933148
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 2.756164556955509,
+      "base_deg": 2.7562016595993555,
+      "max_tail_error_deg": 2.7562038410865464,
+      "signed_edge_deg": 0.6891424460852107,
+      "edge_deg_by_rim": {
+        "left": 0.48499331790455025,
+        "right": 0.20414912818066044
+      },
+      "edge_s": 0.3,
+      "lift_mm": 23.758996340568462,
+      "slip_mm": 1.7579383358333098,
+      "max_excursion_mm": 5.700998173906509,
+      "drift_mm": 5.260821319939651,
+      "waist_range_deg": [
+        -0.8946540545886214,
+        1.899249075883197
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "delayed_sensor_fallback-10--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.037816370916255,
+          "end_s": 4.4,
+          "measured_turn_deg": 2.709498171901741
+        }
+      ],
+      "peak_tilt_deg": 12.588677707554123,
+      "min_joint_margin_rad": 0.15649544638465596,
+      "max_closure_error_m": 2.8381511007156323e-05,
+      "peak_motor_torque_nm": 0.27546343157032804,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.7579383358333098
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -1.7612666460199526,
+      "base_deg": -1.7612234926015546,
+      "max_tail_error_deg": 1.7613518226687792,
+      "signed_edge_deg": 1.4790818287329757,
+      "edge_deg_by_rim": {
+        "left": 1.017180735513328,
+        "right": 0.4619010932196477
+      },
+      "edge_s": 0.25999999999999995,
+      "lift_mm": 20.985794242345925,
+      "slip_mm": 1.9421458083572667,
+      "max_excursion_mm": 4.032535371966926,
+      "drift_mm": 1.3558460275522244,
+      "waist_range_deg": [
+        -0.38622802564083897,
+        1.1155148016754128
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "delayed_sensor_fallback-10--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 11.043468356429868,
+          "end_s": 4.4,
+          "measured_turn_deg": -1.8144487318944662
+        }
+      ],
+      "peak_tilt_deg": 11.014318111284828,
+      "min_joint_margin_rad": 0.1553166930580132,
+      "max_closure_error_m": 3.0049961737716364e-05,
+      "peak_motor_torque_nm": 0.29168067689358546,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.9421458083572667
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 2.7066899524631247,
+      "base_deg": 2.7067343275512776,
+      "max_tail_error_deg": 2.7067361026075987,
+      "signed_edge_deg": 1.00870896922719,
+      "edge_deg_by_rim": {
+        "left": 0.8045598410465296,
+        "right": 0.20414912818066044
+      },
+      "edge_s": 0.3,
+      "lift_mm": 23.758996340568462,
+      "slip_mm": 1.744196270710723,
+      "max_excursion_mm": 6.179406513822385,
+      "drift_mm": 5.918493944447834,
+      "waist_range_deg": [
+        -0.8946540545886214,
+        2.082339145001977
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "delayed_sensor_fallback-25--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.037816370916255,
+          "end_s": 4.4,
+          "measured_turn_deg": 2.660029917050988
+        }
+      ],
+      "peak_tilt_deg": 12.588677707554123,
+      "min_joint_margin_rad": 0.15649544638465596,
+      "max_closure_error_m": 3.122233722776425e-05,
+      "peak_motor_torque_nm": 0.30951659456980396,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.744196270710723
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -1.6305550045712016,
+      "base_deg": -1.630494562313055,
+      "max_tail_error_deg": 1.6307576338432428,
+      "signed_edge_deg": 1.4790818287329757,
+      "edge_deg_by_rim": {
+        "left": 1.017180735513328,
+        "right": 0.4619010932196477
+      },
+      "edge_s": 0.25999999999999995,
+      "lift_mm": 20.985794242345925,
+      "slip_mm": 1.9421458083572667,
+      "max_excursion_mm": 4.032535371966926,
+      "drift_mm": 1.484273864370326,
+      "waist_range_deg": [
+        -0.6079498632775638,
+        1.1811105009176406
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "delayed_sensor_fallback-25--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 11.043468356429868,
+          "end_s": 4.4,
+          "measured_turn_deg": -1.6837204097935663
+        }
+      ],
+      "peak_tilt_deg": 11.014318111284828,
+      "min_joint_margin_rad": 0.1553166930580132,
+      "max_closure_error_m": 3.1361103918583564e-05,
+      "peak_motor_torque_nm": 0.30580080589409236,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.9421458083572667
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -2.0816857982277717,
+      "base_deg": -2.081657725025821,
+      "max_tail_error_deg": 2.0816857982277717,
+      "signed_edge_deg": -1.137538804370768,
+      "edge_deg_by_rim": {
+        "left": -0.3200871039506217,
+        "right": -0.8174517004201461
+      },
+      "edge_s": 0.38000000000000006,
+      "lift_mm": 22.217022400916765,
+      "slip_mm": 2.3764653568542498,
+      "max_excursion_mm": 4.220658619482812,
+      "drift_mm": 3.8202801427551196,
+      "waist_range_deg": [
+        -1.9507752435580943,
+        0.8871949247496052
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "delayed_sensor_fallback-25-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 11.63918642461646,
+          "end_s": 4.4,
+          "measured_turn_deg": -2.128361251722074
+        }
+      ],
+      "peak_tilt_deg": 11.680053053679119,
+      "min_joint_margin_rad": 0.1308368471319319,
+      "max_closure_error_m": 2.774106567162633e-05,
+      "peak_motor_torque_nm": 0.2681862942496471,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 2.3764653568542498
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -0.595907828381764,
+      "base_deg": -0.5958889889329596,
+      "max_tail_error_deg": 0.595907828381764,
+      "signed_edge_deg": -0.8338980320772098,
+      "edge_deg_by_rim": {
+        "left": -0.4545066319971083,
+        "right": -0.3793914000801015
+      },
+      "edge_s": 0.25999999999999995,
+      "lift_mm": 19.706151940061375,
+      "slip_mm": 1.9097379627728104,
+      "max_excursion_mm": 3.209952622893597,
+      "drift_mm": 2.4244456690521736,
+      "waist_range_deg": [
+        -0.6720024799239309,
+        0.5832552515771886
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "delayed_sensor_fallback-25-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 9.882532386940317,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.6491133362042992
+        }
+      ],
+      "peak_tilt_deg": 10.134071762589207,
+      "min_joint_margin_rad": 0.12982212074020572,
+      "max_closure_error_m": 2.646029881602411e-05,
+      "peak_motor_torque_nm": 0.27086965303344857,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.9097379627728104
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 2.888526886361632,
+      "base_deg": 2.888476927573306,
+      "max_tail_error_deg": 2.8890211335632667,
+      "signed_edge_deg": 1.2609381949434912,
+      "edge_deg_by_rim": {
+        "left": 1.0567890667628308,
+        "right": 0.20414912818066044
+      },
+      "edge_s": 0.3,
+      "lift_mm": 23.758996340568462,
+      "slip_mm": 1.7347059462838794,
+      "max_excursion_mm": 6.957868659694107,
+      "drift_mm": 6.538476824282733,
+      "waist_range_deg": [
+        -1.0046184801818607,
+        2.293348360579976
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "delayed_sensor_fallback-40--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.037816370916255,
+          "end_s": 4.4,
+          "measured_turn_deg": 2.841773117013693
+        }
+      ],
+      "peak_tilt_deg": 12.588677707554123,
+      "min_joint_margin_rad": 0.15649544638465596,
+      "max_closure_error_m": 3.4758167074672444e-05,
+      "peak_motor_torque_nm": 0.34496899229070194,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.7347059462838794
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -1.4596690105648356,
+      "base_deg": -1.4596377407143932,
+      "max_tail_error_deg": 1.4596752627902245,
+      "signed_edge_deg": 1.4790818287329757,
+      "edge_deg_by_rim": {
+        "left": 1.017180735513328,
+        "right": 0.4619010932196477
+      },
+      "edge_s": 0.25999999999999995,
+      "lift_mm": 20.985794242345925,
+      "slip_mm": 1.9421458083572667,
+      "max_excursion_mm": 4.032535371966926,
+      "drift_mm": 1.606372438850959,
+      "waist_range_deg": [
+        -1.027762267941658,
+        1.3131018099494254
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "delayed_sensor_fallback-40--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 11.043468356429868,
+          "end_s": 4.4,
+          "measured_turn_deg": -1.5128624569448592
+        }
+      ],
+      "peak_tilt_deg": 11.014318111284828,
+      "min_joint_margin_rad": 0.1553166930580132,
+      "max_closure_error_m": 3.931325958229768e-05,
+      "peak_motor_torque_nm": 0.3777899644753839,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.9421458083572667
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -2.1501412548165924,
+      "base_deg": -2.1500427085922476,
+      "max_tail_error_deg": 2.1505372144458,
+      "signed_edge_deg": -1.2937058126901313,
+      "edge_deg_by_rim": {
+        "left": -0.3200871039506217,
+        "right": -0.9736187087395095
+      },
+      "edge_s": 0.38000000000000006,
+      "lift_mm": 22.217022400916765,
+      "slip_mm": 2.3756425405438164,
+      "max_excursion_mm": 4.690149190141938,
+      "drift_mm": 4.215344157383194,
+      "waist_range_deg": [
+        -2.1190676489354066,
+        1.054373474207575
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "delayed_sensor_fallback-40-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 11.63918642461646,
+          "end_s": 4.4,
+          "measured_turn_deg": -2.196748654229848
+        }
+      ],
+      "peak_tilt_deg": 11.680053053679119,
+      "min_joint_margin_rad": 0.1308368471319319,
+      "max_closure_error_m": 2.9344779753044667e-05,
+      "peak_motor_torque_nm": 0.2934517666946062,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 2.3756425405438164
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -0.6416800250757094,
+      "base_deg": -0.6416264514130245,
+      "max_tail_error_deg": 0.6418451254782037,
+      "signed_edge_deg": -0.8338980320772098,
+      "edge_deg_by_rim": {
+        "left": -0.4545066319971083,
+        "right": -0.3793914000801015
+      },
+      "edge_s": 0.25999999999999995,
+      "lift_mm": 19.706151940061375,
+      "slip_mm": 1.9097379627728104,
+      "max_excursion_mm": 3.209952622893597,
+      "drift_mm": 2.4330277537671408,
+      "waist_range_deg": [
+        -0.8855608178712554,
+        1.0078603923937057
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "delayed_sensor_fallback-40-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 9.882532386940317,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.6948524468577235
+        }
+      ],
+      "peak_tilt_deg": 10.134071762589207,
+      "min_joint_margin_rad": 0.12982212074020572,
+      "max_closure_error_m": 3.139020120954703e-05,
+      "peak_motor_torque_nm": 0.31267737056136446,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.9097379627728104
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 3.386899045365341,
+      "base_deg": 3.3866835594003657,
+      "max_tail_error_deg": 3.388429531175852,
+      "signed_edge_deg": 1.454630785539857,
+      "edge_deg_by_rim": {
+        "left": 1.2504816573591966,
+        "right": 0.20414912818066044
+      },
+      "edge_s": 0.3,
+      "lift_mm": 23.758996340568462,
+      "slip_mm": 1.7272582879774647,
+      "max_excursion_mm": 7.39095214815506,
+      "drift_mm": 7.011850998162661,
+      "waist_range_deg": [
+        -1.6477982715958532,
+        2.349529994902802
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "delayed_sensor_fallback-55--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.037816370916255,
+          "end_s": 4.4,
+          "measured_turn_deg": 3.339984396843646
+        }
+      ],
+      "peak_tilt_deg": 12.588677707554123,
+      "min_joint_margin_rad": 0.15649544638465596,
+      "max_closure_error_m": 3.8562094160869966e-05,
+      "peak_motor_torque_nm": 0.3636537065090506,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.7272582879774647
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -1.3081045646856566,
+      "base_deg": -1.3081302229504,
+      "max_tail_error_deg": 1.3081302229504,
+      "signed_edge_deg": 1.4790818287329757,
+      "edge_deg_by_rim": {
+        "left": 1.017180735513328,
+        "right": 0.4619010932196477
+      },
+      "edge_s": 0.25999999999999995,
+      "lift_mm": 20.985794242345925,
+      "slip_mm": 1.9421458083572667,
+      "max_excursion_mm": 4.032535371966926,
+      "drift_mm": 1.7089051932604304,
+      "waist_range_deg": [
+        -1.6060429865013937,
+        1.4103941560976905
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "delayed_sensor_fallback-55--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 11.043468356429868,
+          "end_s": 4.4,
+          "measured_turn_deg": -1.3613528031242603
+        }
+      ],
+      "peak_tilt_deg": 11.014318111284828,
+      "min_joint_margin_rad": 0.1553166930580132,
+      "max_closure_error_m": 4.1106846029915615e-05,
+      "peak_motor_torque_nm": 0.39542926391100464,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.9421458083572667
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -2.6003755416366796,
+      "base_deg": -2.6001850693978303,
+      "max_tail_error_deg": 2.601364885384126,
+      "signed_edge_deg": -1.4189197699102445,
+      "edge_deg_by_rim": {
+        "left": -0.3200871039506217,
+        "right": -1.0988326659596228
+      },
+      "edge_s": 0.38000000000000006,
+      "lift_mm": 22.217022400916765,
+      "slip_mm": 2.366113924838433,
+      "max_excursion_mm": 5.109193230337955,
+      "drift_mm": 4.786608279677176,
+      "waist_range_deg": [
+        -2.3355200065831183,
+        1.34390469782082
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "delayed_sensor_fallback-55-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 11.63918642461646,
+          "end_s": 4.4,
+          "measured_turn_deg": -2.6468943177083744
+        }
+      ],
+      "peak_tilt_deg": 11.680053053679119,
+      "min_joint_margin_rad": 0.1308368471319319,
+      "max_closure_error_m": 3.438265099771608e-05,
+      "peak_motor_torque_nm": 0.32169187408406813,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 2.366113924838433
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -0.6901107149153465,
+      "base_deg": -0.6900076281608575,
+      "max_tail_error_deg": 0.690623846746481,
+      "signed_edge_deg": -0.8338980320772098,
+      "edge_deg_by_rim": {
+        "left": -0.4545066319971083,
+        "right": -0.3793914000801015
+      },
+      "edge_s": 0.25999999999999995,
+      "lift_mm": 19.706151940061375,
+      "slip_mm": 1.9097379627728104,
+      "max_excursion_mm": 3.209952622893597,
+      "drift_mm": 2.4371762061047186,
+      "waist_range_deg": [
+        -1.1406513110848475,
+        1.3779126181659944
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "delayed_sensor_fallback-55-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 9.882532386940317,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.7432358007023349
+        }
+      ],
+      "peak_tilt_deg": 10.134071762589207,
+      "min_joint_margin_rad": 0.12982212074020572,
+      "max_closure_error_m": 3.5750197224077423e-05,
+      "peak_motor_torque_nm": 0.36132095853643204,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.9097379627728104
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -6.733762956408267,
+      "base_deg": -6.733520433329954,
+      "max_tail_error_deg": 6.734899116072558,
+      "signed_edge_deg": 0.9541132322754715,
+      "edge_deg_by_rim": {
+        "left": 0.3222094310194702,
+        "right": 0.6319038012560013
+      },
+      "edge_s": 0.6800000000000003,
+      "lift_mm": 25.8205201527561,
+      "slip_mm": 4.558605279061398,
+      "max_excursion_mm": 5.986149249247172,
+      "drift_mm": 3.1988939267155585,
+      "waist_range_deg": [
+        -0.9227200885590547,
+        1.152117846695406
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": false,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-0--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 13.146436895363719,
+          "end_s": 4.4,
+          "measured_turn_deg": -6.780224004840782
+        }
+      ],
+      "peak_tilt_deg": 13.457310302502725,
+      "min_joint_margin_rad": 0.04838226640727172,
+      "max_closure_error_m": 3.2098158787819505e-05,
+      "peak_motor_torque_nm": 0.33300410769363503,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 4.558605279061398
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -9.566875364107254,
+      "base_deg": -9.56414678341611,
+      "max_tail_error_deg": 9.587581167653363,
+      "signed_edge_deg": -0.9248821705224728,
+      "edge_deg_by_rim": {
+        "left": -1.8277898296590354,
+        "right": 0.9029076591365626
+      },
+      "edge_s": 1.3800000000000008,
+      "lift_mm": 27.51431366118658,
+      "slip_mm": 9.385832438613642,
+      "max_excursion_mm": 6.432163318107541,
+      "drift_mm": 4.057572593403975,
+      "waist_range_deg": [
+        -1.070050216845845,
+        1.4388518012574418
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": false,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-0--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 14.55836208901222,
+          "end_s": 4.4,
+          "measured_turn_deg": -9.617571202490534
+        }
+      ],
+      "peak_tilt_deg": 14.650156672908102,
+      "min_joint_margin_rad": 0.05096919988583548,
+      "max_closure_error_m": 3.337389266144994e-05,
+      "peak_motor_torque_nm": 0.3457526011441693,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 9.385832438613642
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 6.31668003707933,
+      "base_deg": 6.316564804158561,
+      "max_tail_error_deg": 6.317860850513959,
+      "signed_edge_deg": -0.39759208927109174,
+      "edge_deg_by_rim": {
+        "left": -0.47616808438513697,
+        "right": 0.07857599511404521
+      },
+      "edge_s": 0.6400000000000002,
+      "lift_mm": 26.405947243541835,
+      "slip_mm": 4.200433842236317,
+      "max_excursion_mm": 5.051096900190969,
+      "drift_mm": 2.9417227918820896,
+      "waist_range_deg": [
+        -1.2813284147473367,
+        1.0474518171228786
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": false,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-0-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 13.862302658617859,
+          "end_s": 4.4,
+          "measured_turn_deg": 6.2698736079045325
+        }
+      ],
+      "peak_tilt_deg": 13.828984533220156,
+      "min_joint_margin_rad": 0.05071973599930035,
+      "max_closure_error_m": 2.973156672453107e-05,
+      "peak_motor_torque_nm": 0.2874733669644864,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 4.200433842236317
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 8.332048989312472,
+      "base_deg": 8.331619917912539,
+      "max_tail_error_deg": 8.335774238144717,
+      "signed_edge_deg": 2.0918065917051654,
+      "edge_deg_by_rim": {
+        "left": -0.6725375831963177,
+        "right": 2.764344174901483
+      },
+      "edge_s": 0.9800000000000005,
+      "lift_mm": 27.510094458819577,
+      "slip_mm": 7.35985114887186,
+      "max_excursion_mm": 4.004938733271233,
+      "drift_mm": 3.1100473183990247,
+      "waist_range_deg": [
+        -0.7382034970115877,
+        1.105356652821944
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": false,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-0-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 14.184162448552904,
+          "end_s": 4.4,
+          "measured_turn_deg": 8.278430685209601
+        }
+      ],
+      "peak_tilt_deg": 14.566369505342774,
+      "min_joint_margin_rad": 0.04125969753678915,
+      "max_closure_error_m": 2.843490559167691e-05,
+      "peak_motor_torque_nm": 0.31542768055757486,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 7.35985114887186
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 0.4087505119832697,
+      "base_deg": 0.40879115137315986,
+      "max_tail_error_deg": 0.4087917655627973,
+      "signed_edge_deg": -0.5025642858784634,
+      "edge_deg_by_rim": {
+        "left": 0.2845728563799401,
+        "right": -0.7871371422584035
+      },
+      "edge_s": 0.32,
+      "lift_mm": 20.60072208463706,
+      "slip_mm": 1.9270905430705247,
+      "max_excursion_mm": 4.7410052146078385,
+      "drift_mm": 4.734465455495348,
+      "waist_range_deg": [
+        -0.8826472611230414,
+        1.0671126098327817
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-2--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 10.196063837460184,
+          "end_s": 4.4,
+          "measured_turn_deg": 0.3620845283671295
+        }
+      ],
+      "peak_tilt_deg": 10.761831890254477,
+      "min_joint_margin_rad": 0.05261560312463298,
+      "max_closure_error_m": 2.4000059690700052e-05,
+      "peak_motor_torque_nm": 0.24064004658793123,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.9270905430705247
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 2.1545606221707776,
+      "base_deg": 2.1546032097920085,
+      "max_tail_error_deg": 2.1546032594428843,
+      "signed_edge_deg": -0.9546618678893547,
+      "edge_deg_by_rim": {
+        "left": 0.10786405750587394,
+        "right": -1.0625259253952286
+      },
+      "edge_s": 0.4400000000000001,
+      "lift_mm": 24.05383859252295,
+      "slip_mm": 2.2282069147904346,
+      "max_excursion_mm": 5.998398169192289,
+      "drift_mm": 5.574158954534252,
+      "waist_range_deg": [
+        -1.1433010912760027,
+        1.166500630022438
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-2--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.625235813950315,
+          "end_s": 4.4,
+          "measured_turn_deg": 2.1013746865350917
+        }
+      ],
+      "peak_tilt_deg": 12.688907653275345,
+      "min_joint_margin_rad": 0.05881470115763521,
+      "max_closure_error_m": 2.481052853991052e-05,
+      "peak_motor_torque_nm": 0.24731760451510318,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 2.2282069147904346
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -1.100730043518709,
+      "base_deg": -1.1007136584001644,
+      "max_tail_error_deg": 1.100730043518709,
+      "signed_edge_deg": 1.07107633352476,
+      "edge_deg_by_rim": {
+        "left": 0.8057387517541672,
+        "right": 0.26533758177059263
+      },
+      "edge_s": 0.34,
+      "lift_mm": 21.052322791752793,
+      "slip_mm": 1.9551492003648812,
+      "max_excursion_mm": 4.273415282755421,
+      "drift_mm": 4.259317605698302,
+      "waist_range_deg": [
+        -1.161309398063112,
+        0.8700206134107522
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-2-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 11.266918826989695,
+          "end_s": 4.4,
+          "measured_turn_deg": -1.1474190781600702
+        }
+      ],
+      "peak_tilt_deg": 11.016937873440387,
+      "min_joint_margin_rad": 0.05448093217609129,
+      "max_closure_error_m": 2.4430253410836563e-05,
+      "peak_motor_torque_nm": 0.24001942169657214,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.9551492003648812
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -2.07381542535893,
+      "base_deg": -2.0738063751675533,
+      "max_tail_error_deg": 2.07381542535893,
+      "signed_edge_deg": 1.2624558555145147,
+      "edge_deg_by_rim": {
+        "left": 0.945930603784293,
+        "right": 0.3165252517302218
+      },
+      "edge_s": 0.4000000000000001,
+      "lift_mm": 24.315535250768573,
+      "slip_mm": 2.136621877131873,
+      "max_excursion_mm": 5.381516573297354,
+      "drift_mm": 4.937406912065008,
+      "waist_range_deg": [
+        -1.3779768419760594,
+        1.0279852607078832
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-2-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.328015305935898,
+          "end_s": 4.4,
+          "measured_turn_deg": -2.127033191801218
+        }
+      ],
+      "peak_tilt_deg": 12.847588487634436,
+      "min_joint_margin_rad": 0.06111614496661888,
+      "max_closure_error_m": 2.510803748344921e-05,
+      "peak_motor_torque_nm": 0.24614931065308795,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 2.136621877131873
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 1.8389828327717899,
+      "base_deg": 1.8389607421269631,
+      "max_tail_error_deg": 1.8392338817078808,
+      "signed_edge_deg": 1.0477349369108597,
+      "edge_deg_by_rim": {
+        "left": 0.6986632514038538,
+        "right": 0.34907168550700585
+      },
+      "edge_s": 0.32,
+      "lift_mm": 24.472643022864027,
+      "slip_mm": 1.8305211251176492,
+      "max_excursion_mm": 2.853402410622874,
+      "drift_mm": 2.1952785970795845,
+      "waist_range_deg": [
+        -0.665772113666704,
+        1.6847491322708859
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-4--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.526735094391546,
+          "end_s": 4.4,
+          "measured_turn_deg": 1.7922534582225855
+        }
+      ],
+      "peak_tilt_deg": 12.77337495812245,
+      "min_joint_margin_rad": 0.13809800103909442,
+      "max_closure_error_m": 3.071970742153114e-05,
+      "peak_motor_torque_nm": 0.30098883798927506,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.8305211251176492
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 5.448288436196145,
+      "base_deg": 5.448272699952687,
+      "max_tail_error_deg": 5.448482733019709,
+      "signed_edge_deg": 2.2144957470818656,
+      "edge_deg_by_rim": {
+        "left": 2.0142882143114083,
+        "right": 0.20020753277045733
+      },
+      "edge_s": 0.4200000000000001,
+      "lift_mm": 27.15789564599703,
+      "slip_mm": 2.09111209117724,
+      "max_excursion_mm": 4.886204341472532,
+      "drift_mm": 4.006570381876259,
+      "waist_range_deg": [
+        -1.2117421664834318,
+        2.3804682101879178
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": false,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-4--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 14.008401806768994,
+          "end_s": 4.4,
+          "measured_turn_deg": 5.3950441352462475
+        }
+      ],
+      "peak_tilt_deg": 14.28399759398655,
+      "min_joint_margin_rad": 0.13713928267290054,
+      "max_closure_error_m": 2.913198214499357e-05,
+      "peak_motor_torque_nm": 0.2756092273049279,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 2.09111209117724
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -3.070481766759503,
+      "base_deg": -3.0704206936524567,
+      "max_tail_error_deg": 3.0707054121480324,
+      "signed_edge_deg": -1.1973081414487,
+      "edge_deg_by_rim": {
+        "left": -0.30366051655406445,
+        "right": -0.8936476248946353
+      },
+      "edge_s": 0.36000000000000004,
+      "lift_mm": 24.56066308679488,
+      "slip_mm": 1.9351574524496622,
+      "max_excursion_mm": 3.0309990455006903,
+      "drift_mm": 2.205304580477883,
+      "waist_range_deg": [
+        -1.5636346810946808,
+        0.8358896986298923
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-4-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.736407036988988,
+          "end_s": 4.4,
+          "measured_turn_deg": -3.117128282560477
+        }
+      ],
+      "peak_tilt_deg": 12.827593627999226,
+      "min_joint_margin_rad": 0.13948155707119025,
+      "max_closure_error_m": 3.0491244112968866e-05,
+      "peak_motor_torque_nm": 0.29037641737811426,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.9351574524496622
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -5.213177963711146,
+      "base_deg": -5.213130783805429,
+      "max_tail_error_deg": 5.213373183151768,
+      "signed_edge_deg": -2.1006302121914375,
+      "edge_deg_by_rim": {
+        "left": -0.1600063269623072,
+        "right": -1.9406238852291302
+      },
+      "edge_s": 0.4400000000000001,
+      "lift_mm": 27.194573293334315,
+      "slip_mm": 2.155184893469701,
+      "max_excursion_mm": 4.83602862327965,
+      "drift_mm": 4.282728593828874,
+      "waist_range_deg": [
+        -2.396891394182149,
+        1.1620684563304862
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": false,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-4-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 14.25080152585931,
+          "end_s": 4.4,
+          "measured_turn_deg": -5.2663597237708855
+        }
+      ],
+      "peak_tilt_deg": 14.323239701229243,
+      "min_joint_margin_rad": 0.13847464950735233,
+      "max_closure_error_m": 3.2807477093790804e-05,
+      "peak_motor_torque_nm": 0.31134879716779545,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 2.155184893469701
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 0.4549279545510109,
+      "base_deg": 0.4550059402010637,
+      "max_tail_error_deg": 0.455007229815736,
+      "signed_edge_deg": -0.3413663861498068,
+      "edge_deg_by_rim": {
+        "left": 0.28594573932014317,
+        "right": -0.62731212546995
+      },
+      "edge_s": 0.34,
+      "lift_mm": 22.245891834650152,
+      "slip_mm": 2.3620553046625417,
+      "max_excursion_mm": 4.136537726466699,
+      "drift_mm": 4.123107983904476,
+      "waist_range_deg": [
+        -0.492923943534545,
+        1.3806784517766155
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-5--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 11.443850357424079,
+          "end_s": 4.4,
+          "measured_turn_deg": 0.40830050603584067
+        }
+      ],
+      "peak_tilt_deg": 11.510212842610185,
+      "min_joint_margin_rad": 0.07922751412658213,
+      "max_closure_error_m": 2.9531094290410544e-05,
+      "peak_motor_torque_nm": 0.3157612905760668,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 2.3620553046625417
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -2.167774764817368,
+      "base_deg": -2.167739297764785,
+      "max_tail_error_deg": 2.16788324739033,
+      "signed_edge_deg": -1.1469771794112074,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": -1.1469771794112074
+      },
+      "edge_s": 0.14,
+      "lift_mm": 18.756267249478192,
+      "slip_mm": 1.0555841035328226,
+      "max_excursion_mm": 3.198386778960366,
+      "drift_mm": 1.0159702956921277,
+      "waist_range_deg": [
+        -0.4864920676366029,
+        0.6746922108559504
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-5--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 9.781730777940528,
+          "end_s": 4.4,
+          "measured_turn_deg": -2.2209675280900454
+        }
+      ],
+      "peak_tilt_deg": 9.714692619224499,
+      "min_joint_margin_rad": 0.07880704441083886,
+      "max_closure_error_m": 2.25309406285252e-05,
+      "peak_motor_torque_nm": 0.24737959600605397,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.0555841035328226
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 2.1332603760119526,
+      "base_deg": 2.133276506460914,
+      "max_tail_error_deg": 2.133401760555896,
+      "signed_edge_deg": 0.5459925630135158,
+      "edge_deg_by_rim": {
+        "left": 0.5921795808218828,
+        "right": -0.04618701780836704
+      },
+      "edge_s": 0.34,
+      "lift_mm": 22.794287809782254,
+      "slip_mm": 2.3346615197553193,
+      "max_excursion_mm": 3.019925547340787,
+      "drift_mm": 2.860940498512475,
+      "waist_range_deg": [
+        -1.8129384992847344,
+        0.4362595478338343
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-5-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 11.754988300253963,
+          "end_s": 4.4,
+          "measured_turn_deg": 2.086573561757289
+        }
+      ],
+      "peak_tilt_deg": 11.837931711406371,
+      "min_joint_margin_rad": 0.08077500033273455,
+      "max_closure_error_m": 3.1167083738924054e-05,
+      "peak_motor_torque_nm": 0.321120980145767,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 2.3346615197553193
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 2.7555510623176485,
+      "base_deg": 2.755563101642099,
+      "max_tail_error_deg": 2.7556141948447155,
+      "signed_edge_deg": 1.1058787674197226,
+      "edge_deg_by_rim": {
+        "left": 1.1058787674197226,
+        "right": 0.0
+      },
+      "edge_s": 0.14,
+      "lift_mm": 20.106115766206155,
+      "slip_mm": 1.0264705669647127,
+      "max_excursion_mm": 3.3751280156500187,
+      "drift_mm": 0.7691579027372025,
+      "waist_range_deg": [
+        -0.914798562691656,
+        0.6325199727775843
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-5-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 10.39377828578965,
+          "end_s": 4.4,
+          "measured_turn_deg": 2.702336129645794
+        }
+      ],
+      "peak_tilt_deg": 10.439514276215228,
+      "min_joint_margin_rad": 0.08520732491533689,
+      "max_closure_error_m": 2.1091277911382135e-05,
+      "peak_motor_torque_nm": 0.23743089765469136,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.0264705669647127
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -6.703479646210043,
+      "base_deg": -6.703440916760059,
+      "max_tail_error_deg": 6.7036889777873085,
+      "signed_edge_deg": 0.2897336167566449,
+      "edge_deg_by_rim": {
+        "left": -3.130871610344441,
+        "right": 3.420605227101086
+      },
+      "edge_s": 0.38000000000000006,
+      "lift_mm": 24.459024719190722,
+      "slip_mm": 3.014085965596666,
+      "max_excursion_mm": 14.4759209229234,
+      "drift_mm": 13.799743869897284,
+      "waist_range_deg": [
+        -1.8506266996567293,
+        1.6910016586670165
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": false,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-7--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.545632359755917,
+          "end_s": 4.4,
+          "measured_turn_deg": -6.750153109207861
+        }
+      ],
+      "peak_tilt_deg": 12.935861777170809,
+      "min_joint_margin_rad": 0.08578509330854578,
+      "max_closure_error_m": 3.0511443821740555e-05,
+      "peak_motor_torque_nm": 0.31738119909596135,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 3.014085965596666
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -1.7180744591552932,
+      "base_deg": -1.7180600903501269,
+      "max_tail_error_deg": 1.718109935995614,
+      "signed_edge_deg": 3.9686956051064692,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 3.9686956051064692
+      },
+      "edge_s": 0.14,
+      "lift_mm": 21.178233589095974,
+      "slip_mm": 1.0497061983349956,
+      "max_excursion_mm": 11.35728461688802,
+      "drift_mm": 10.801058724081326,
+      "waist_range_deg": [
+        -1.646247821587193,
+        1.6410922207024732
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-7--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 11.108476827852556,
+          "end_s": 4.4,
+          "measured_turn_deg": -1.7712906937186845
+        }
+      ],
+      "peak_tilt_deg": 10.941721317567403,
+      "min_joint_margin_rad": 0.1511461166052499,
+      "max_closure_error_m": 3.080591312274096e-05,
+      "peak_motor_torque_nm": 0.3193027980326709,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.0497061983349956
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 6.899072154230413,
+      "base_deg": 6.899029069454364,
+      "max_tail_error_deg": 6.899404972210976,
+      "signed_edge_deg": -0.1955931621603928,
+      "edge_deg_by_rim": {
+        "left": -3.6854225459811545,
+        "right": 3.4898293838207617
+      },
+      "edge_s": 0.38000000000000006,
+      "lift_mm": 24.571333890505855,
+      "slip_mm": 3.2232997816286995,
+      "max_excursion_mm": 14.83944880924976,
+      "drift_mm": 14.364999822482277,
+      "waist_range_deg": [
+        -1.8523993677304182,
+        1.8377423683410483
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": false,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-7-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.681196608926294,
+          "end_s": 4.4,
+          "measured_turn_deg": 6.8523202716001315
+        }
+      ],
+      "peak_tilt_deg": 12.958954768883213,
+      "min_joint_margin_rad": 0.0893802210079857,
+      "max_closure_error_m": 3.0333826447378864e-05,
+      "peak_motor_torque_nm": 0.3247767043765193,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 3.2232997816286995
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 1.4929227685353006,
+      "base_deg": 1.49292380494833,
+      "max_tail_error_deg": 1.4929943309223033,
+      "signed_edge_deg": -4.030157929924688,
+      "edge_deg_by_rim": {
+        "left": -4.030157929924688,
+        "right": 0.0
+      },
+      "edge_s": 0.14,
+      "lift_mm": 19.666283232210453,
+      "slip_mm": 1.111599621546472,
+      "max_excursion_mm": 10.891400607011239,
+      "drift_mm": 10.49186417764991,
+      "waist_range_deg": [
+        -1.6395824139396313,
+        1.6963693369355572
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-7-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 10.132080495700867,
+          "end_s": 4.4,
+          "measured_turn_deg": 1.4396942887712734
+        }
+      ],
+      "peak_tilt_deg": 10.13870406986425,
+      "min_joint_margin_rad": 0.1246287470475913,
+      "max_closure_error_m": 2.4979334944560507e-05,
+      "peak_motor_torque_nm": 0.3288281625045578,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.111599621546472
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -4.570495897718346,
+      "base_deg": -4.570054812315885,
+      "max_tail_error_deg": 4.572956736344493,
+      "signed_edge_deg": 0.9222356791865132,
+      "edge_deg_by_rim": {
+        "left": 0.25642335088175683,
+        "right": 0.6658123283047563
+      },
+      "edge_s": 0.6200000000000002,
+      "lift_mm": 23.483260634967976,
+      "slip_mm": 4.319149589753478,
+      "max_excursion_mm": 2.4924661108430097,
+      "drift_mm": 1.870949814328908,
+      "waist_range_deg": [
+        -0.7538427927390623,
+        1.9347340890624347
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-8--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.071513844353833,
+          "end_s": 4.4,
+          "measured_turn_deg": -4.616765028353166
+        }
+      ],
+      "peak_tilt_deg": 12.188839521180059,
+      "min_joint_margin_rad": 0.09382078456526233,
+      "max_closure_error_m": 3.3644402321000684e-05,
+      "peak_motor_torque_nm": 0.33642353339573366,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 4.319149589753478
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -5.7116319417677754,
+      "base_deg": -5.714383018717441,
+      "max_tail_error_deg": 5.714383018717441,
+      "signed_edge_deg": -2.1538547370196985,
+      "edge_deg_by_rim": {
+        "left": -3.1532671348396404,
+        "right": 0.9994123978199421
+      },
+      "edge_s": 1.620000000000001,
+      "lift_mm": 23.45522343221074,
+      "slip_mm": 11.496485532303726,
+      "max_excursion_mm": 4.814683258304199,
+      "drift_mm": 4.810372269611442,
+      "waist_range_deg": [
+        -0.7205442088172385,
+        1.5620391260869526
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": false,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-8--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.134906223725043,
+          "end_s": 4.4,
+          "measured_turn_deg": -5.767539862606477
+        }
+      ],
+      "peak_tilt_deg": 12.323336167452556,
+      "min_joint_margin_rad": 0.15800463691333966,
+      "max_closure_error_m": 3.617834582028694e-05,
+      "peak_motor_torque_nm": 0.3534849702065006,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 11.496485532303726
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 4.503682010078241,
+      "base_deg": 4.503288460587878,
+      "max_tail_error_deg": 4.506165506829709,
+      "signed_edge_deg": -1.0789452025229243,
+      "edge_deg_by_rim": {
+        "left": -0.9893336984065764,
+        "right": -0.08961150411634788
+      },
+      "edge_s": 0.6200000000000002,
+      "lift_mm": 23.355245439854087,
+      "slip_mm": 4.34841694820314,
+      "max_excursion_mm": 3.8553775461483686,
+      "drift_mm": 0.4246538171423343,
+      "waist_range_deg": [
+        -1.4527324192005362,
+        0.6410230896506881
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-8-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.177874901016816,
+          "end_s": 4.4,
+          "measured_turn_deg": 4.4565854413711845
+        }
+      ],
+      "peak_tilt_deg": 12.107540350862267,
+      "min_joint_margin_rad": 0.08088073445139465,
+      "max_closure_error_m": 3.3484164591324226e-05,
+      "peak_motor_torque_nm": 0.35180597438269356,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 4.34841694820314
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 5.958639246813281,
+      "base_deg": 5.958596286628999,
+      "max_tail_error_deg": 5.961071397189879,
+      "signed_edge_deg": 2.6958236392610164,
+      "edge_deg_by_rim": {
+        "left": -1.0424316953964812,
+        "right": 3.738255334657498
+      },
+      "edge_s": 1.740000000000001,
+      "lift_mm": 23.440835406242677,
+      "slip_mm": 12.377752032950673,
+      "max_excursion_mm": 5.960769532791747,
+      "drift_mm": 5.142739704198041,
+      "waist_range_deg": [
+        -0.8955013321619484,
+        0.7717401016591223
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": false,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-8-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.213257566512983,
+          "end_s": 4.4,
+          "measured_turn_deg": 5.905490112715506
+        }
+      ],
+      "peak_tilt_deg": 12.289775065410732,
+      "min_joint_margin_rad": 0.1593349282726637,
+      "max_closure_error_m": 3.0212916242902365e-05,
+      "peak_motor_torque_nm": 0.36008511285708383,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 12.377752032950673
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 0.3206303310122876,
+      "base_deg": 0.3207296551660593,
+      "max_tail_error_deg": 0.3210657963485207,
+      "signed_edge_deg": 0.0,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "edge_s": 0.0,
+      "lift_mm": 0.9021318469230398,
+      "slip_mm": 0.0,
+      "max_excursion_mm": 0.8808611886476115,
+      "drift_mm": 0.7118930086147837,
+      "waist_range_deg": [
+        -0.6870341715464784,
+        0.4145157614679709
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-10--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 0.6318214458421867,
+          "end_s": 4.4,
+          "measured_turn_deg": 0.2739726095672658
+        }
+      ],
+      "peak_tilt_deg": 0.46210751660455873,
+      "min_joint_margin_rad": 0.1843262797177445,
+      "max_closure_error_m": 6.002381964671418e-05,
+      "peak_motor_torque_nm": 0.4036923076923077,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.0
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 0.015482568504579103,
+      "base_deg": 0.015323918350309381,
+      "max_tail_error_deg": 0.019081353186377516,
+      "signed_edge_deg": 0.0,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "edge_s": 0.0,
+      "lift_mm": 1.625529160392679,
+      "slip_mm": 0.0,
+      "max_excursion_mm": 0.8917209601861138,
+      "drift_mm": 0.780402954379595,
+      "waist_range_deg": [
+        -0.6959833237066473,
+        0.5276518462812261
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-10--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 0.7665308828448077,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.0378685443758784
+        }
+      ],
+      "peak_tilt_deg": 0.9267074501017067,
+      "min_joint_margin_rad": 0.17921087423717585,
+      "max_closure_error_m": 6.0163280528335106e-05,
+      "peak_motor_torque_nm": 0.40738461538461546,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.0
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -0.776221303222146,
+      "base_deg": -0.7749589724764399,
+      "max_tail_error_deg": 0.7788241296281712,
+      "signed_edge_deg": 0.0,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "edge_s": 0.0,
+      "lift_mm": 0.9724927336846413,
+      "slip_mm": 0.0,
+      "max_excursion_mm": 1.1417908962592551,
+      "drift_mm": 1.1394083794853584,
+      "waist_range_deg": [
+        -0.4492090132951882,
+        0.6749218741287569
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-10-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 0.7067896591053298,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.8215040885759697
+        }
+      ],
+      "peak_tilt_deg": 0.4979737409754755,
+      "min_joint_margin_rad": 0.1880563643755666,
+      "max_closure_error_m": 5.7077867065392564e-05,
+      "peak_motor_torque_nm": 0.4036923076923077,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.0
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -1.5286400043226263,
+      "base_deg": -1.5275408530099563,
+      "max_tail_error_deg": 1.530766189894643,
+      "signed_edge_deg": 0.0,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "edge_s": 0.0,
+      "lift_mm": 1.2754511369214736,
+      "slip_mm": 0.0,
+      "max_excursion_mm": 1.5357228986431022,
+      "drift_mm": 1.530831581589586,
+      "waist_range_deg": [
+        -0.47332704373946594,
+        0.683135155697013
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-10-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 0.7101299882241657,
+          "end_s": 4.4,
+          "measured_turn_deg": -1.5805968225532507
+        }
+      ],
+      "peak_tilt_deg": 0.6529283237011856,
+      "min_joint_margin_rad": 0.18776959327820797,
+      "max_closure_error_m": 5.8401194058684505e-05,
+      "peak_motor_torque_nm": 0.40738461538461546,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.0
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -3.813076432765905,
+      "base_deg": -3.813269299593816,
+      "max_tail_error_deg": 3.813270345841222,
+      "signed_edge_deg": 2.3879807047599337,
+      "edge_deg_by_rim": {
+        "left": -0.005942243876698283,
+        "right": 2.393922948636632
+      },
+      "edge_s": 0.6000000000000002,
+      "lift_mm": 22.694187264691198,
+      "slip_mm": 4.218998874294239,
+      "max_excursion_mm": 7.200071015748588,
+      "drift_mm": 5.363660603319948,
+      "waist_range_deg": [
+        -1.0027758605118129,
+        2.3586847816909056
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-12--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 11.508799923556179,
+          "end_s": 4.4,
+          "measured_turn_deg": -3.8599780208162477
+        }
+      ],
+      "peak_tilt_deg": 11.711599072121851,
+      "min_joint_margin_rad": 0.08996723015882613,
+      "max_closure_error_m": 3.417858781539156e-05,
+      "peak_motor_torque_nm": 0.3436241785811928,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 4.218998874294239
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -6.323591491799745,
+      "base_deg": -6.323746876488371,
+      "max_tail_error_deg": 6.323748324580337,
+      "signed_edge_deg": 2.0157614757216025,
+      "edge_deg_by_rim": {
+        "left": -1.0622106400319455,
+        "right": 3.077972115753548
+      },
+      "edge_s": 0.5400000000000001,
+      "lift_mm": 23.51153702383021,
+      "slip_mm": 3.7998452333930555,
+      "max_excursion_mm": 8.212815554799045,
+      "drift_mm": 7.458368619649031,
+      "waist_range_deg": [
+        -1.0632725776353176,
+        2.2518913386200796
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": false,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-12--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.123595946460883,
+          "end_s": 4.4,
+          "measured_turn_deg": -6.376977185892483
+        }
+      ],
+      "peak_tilt_deg": 12.502136085832216,
+      "min_joint_margin_rad": 0.07854286430737534,
+      "max_closure_error_m": 3.294881713045827e-05,
+      "peak_motor_torque_nm": 0.33268853037638996,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 3.7998452333930555
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 1.4134052642726112,
+      "base_deg": 1.4136162378111796,
+      "max_tail_error_deg": 1.4136162378111796,
+      "signed_edge_deg": -2.270433587717264,
+      "edge_deg_by_rim": {
+        "left": -2.47680812531744,
+        "right": 0.2063745376001762
+      },
+      "edge_s": 0.6200000000000002,
+      "lift_mm": 22.208311789121954,
+      "slip_mm": 4.5954854133838285,
+      "max_excursion_mm": 7.687227570905259,
+      "drift_mm": 7.681054525381334,
+      "waist_range_deg": [
+        -1.8257157167105311,
+        1.1366719906331428
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-12-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 11.597607182348709,
+          "end_s": 4.4,
+          "measured_turn_deg": 1.3668950883705733
+        }
+      ],
+      "peak_tilt_deg": 11.47701444173721,
+      "min_joint_margin_rad": 0.10714604153926333,
+      "max_closure_error_m": 3.1963002254733034e-05,
+      "peak_motor_torque_nm": 0.3519637873593988,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 4.5954854133838285
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 6.292999329499782,
+      "base_deg": 6.293077100976931,
+      "max_tail_error_deg": 6.293077100976931,
+      "signed_edge_deg": -1.8599853155507207,
+      "edge_deg_by_rim": {
+        "left": -3.069050229945347,
+        "right": 1.2090649143946264
+      },
+      "edge_s": 0.5400000000000001,
+      "lift_mm": 23.364177020862165,
+      "slip_mm": 3.680321745233223,
+      "max_excursion_mm": 8.679607088593306,
+      "drift_mm": 8.059135151130732,
+      "waist_range_deg": [
+        -2.1980341959383622,
+        1.115240823850206
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": false,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-12-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.048863774350794,
+          "end_s": 4.4,
+          "measured_turn_deg": 6.239838419264181
+        }
+      ],
+      "peak_tilt_deg": 12.387091942704185,
+      "min_joint_margin_rad": 0.11176188191145875,
+      "max_closure_error_m": 3.237672347057402e-05,
+      "peak_motor_torque_nm": 0.3441352094550716,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 3.680321745233223
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -5.3080527084013385,
+      "base_deg": -5.305299330533789,
+      "max_tail_error_deg": 5.323147439192797,
+      "signed_edge_deg": 0.0,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "edge_s": 0.0,
+      "lift_mm": 1.792564113002882,
+      "slip_mm": 0.0,
+      "max_excursion_mm": 14.282567450120785,
+      "drift_mm": 14.250194022069003,
+      "waist_range_deg": [
+        -0.5427136463952826,
+        0.6585085225513722
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": false,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-13-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 1.2269493663789925,
+          "end_s": 4.4,
+          "measured_turn_deg": -5.351978389794665
+        }
+      ],
+      "peak_tilt_deg": 0.9171228803098777,
+      "min_joint_margin_rad": 0.2170806570548518,
+      "max_closure_error_m": 2.8332329579089923e-05,
+      "peak_motor_torque_nm": 0.29141730909658736,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.0
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -4.379848704250139,
+      "base_deg": -4.377705589073831,
+      "max_tail_error_deg": 4.392426087600218,
+      "signed_edge_deg": 0.0,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "edge_s": 0.0,
+      "lift_mm": 2.2731885169592494,
+      "slip_mm": 0.0,
+      "max_excursion_mm": 16.23287775755669,
+      "drift_mm": 16.11444051143308,
+      "waist_range_deg": [
+        -0.5560721292969691,
+        0.6623820895504375
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-13-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 1.200765681155387,
+          "end_s": 4.4,
+          "measured_turn_deg": -4.430906992362511
+        }
+      ],
+      "peak_tilt_deg": 1.1630458971792978,
+      "min_joint_margin_rad": 0.21569145183150074,
+      "max_closure_error_m": 2.827590406452537e-05,
+      "peak_motor_torque_nm": 0.29079518531140114,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.0
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 1.643268571002942,
+      "base_deg": 1.6434309643117633,
+      "max_tail_error_deg": 1.643431070130446,
+      "signed_edge_deg": 2.461855261906522,
+      "edge_deg_by_rim": {
+        "left": -1.5641556801901892,
+        "right": 4.026010942096711
+      },
+      "edge_s": 0.32,
+      "lift_mm": 23.394442959957672,
+      "slip_mm": 2.112108531351677,
+      "max_excursion_mm": 11.861584571802847,
+      "drift_mm": 11.861007049148123,
+      "waist_range_deg": [
+        -0.8140352443753299,
+        1.6632658572038477
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-14-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.20499034813558,
+          "end_s": 4.4,
+          "measured_turn_deg": 1.5967222584731655
+        }
+      ],
+      "peak_tilt_deg": 12.181548549786775,
+      "min_joint_margin_rad": 0.1238740559497411,
+      "max_closure_error_m": 3.0764652764641364e-05,
+      "peak_motor_torque_nm": 0.30806394595785785,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 2.112108531351677
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 0.11005441993662726,
+      "base_deg": 0.11008815834840337,
+      "max_tail_error_deg": 0.11008857147113439,
+      "signed_edge_deg": -1.412964816396891,
+      "edge_deg_by_rim": {
+        "left": -1.4496352849070844,
+        "right": 0.03667046851019329
+      },
+      "edge_s": 0.18,
+      "lift_mm": 14.338836631154667,
+      "slip_mm": 0.9950449284962123,
+      "max_excursion_mm": 7.455913435525255,
+      "drift_mm": 7.447718813860394,
+      "waist_range_deg": [
+        -1.0055556157753682,
+        1.465761038819846
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-14-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 7.468159434380223,
+          "end_s": 4.4,
+          "measured_turn_deg": 0.05686042781441135
+        }
+      ],
+      "peak_tilt_deg": 8.033237668013484,
+      "min_joint_margin_rad": 0.12810620314854715,
+      "max_closure_error_m": 3.420831061107732e-05,
+      "peak_motor_torque_nm": 0.32214966401585593,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.9950449284962123
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 2.6935589534165905,
+      "base_deg": 2.6934969109198095,
+      "max_tail_error_deg": 2.694370847881338,
+      "signed_edge_deg": 1.5454753838192385,
+      "edge_deg_by_rim": {
+        "left": 2.2783974372780595,
+        "right": -0.732922053458821
+      },
+      "edge_s": 0.6400000000000002,
+      "lift_mm": 22.33701652690991,
+      "slip_mm": 4.540002267544904,
+      "max_excursion_mm": 12.93781868374264,
+      "drift_mm": 11.575495852004677,
+      "waist_range_deg": [
+        -1.596591369304813,
+        1.3391153159275764
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-16--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 11.243311659302394,
+          "end_s": 4.4,
+          "measured_turn_deg": 2.6468030855478073
+        }
+      ],
+      "peak_tilt_deg": 13.048053078739738,
+      "min_joint_margin_rad": 0.13463077150750302,
+      "max_closure_error_m": 3.4537766559964e-05,
+      "peak_motor_torque_nm": 0.3246292898151863,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 4.540002267544904
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -3.6587536391689577,
+      "base_deg": -3.6590323047458297,
+      "max_tail_error_deg": 3.6590323047458297,
+      "signed_edge_deg": -2.8833534526846347,
+      "edge_deg_by_rim": {
+        "left": 0.5110214937050457,
+        "right": -3.3943749463896804
+      },
+      "edge_s": 0.8800000000000004,
+      "lift_mm": 23.310375402434506,
+      "slip_mm": 6.231215508116366,
+      "max_excursion_mm": 12.732714341026508,
+      "drift_mm": 10.365937005315415,
+      "waist_range_deg": [
+        -1.817286875983758,
+        1.5382530805355805
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-16--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.091122369062411,
+          "end_s": 4.4,
+          "measured_turn_deg": -3.7122272883738314
+        }
+      ],
+      "peak_tilt_deg": 13.117525589172113,
+      "min_joint_margin_rad": 0.13273339174366283,
+      "max_closure_error_m": 3.5119587423311234e-05,
+      "peak_motor_torque_nm": 0.33565500510980273,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 6.231215508116366
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 0.39542264794149573,
+      "base_deg": 0.39604564568319534,
+      "max_tail_error_deg": 0.39604564568319534,
+      "signed_edge_deg": -1.245830950133688,
+      "edge_deg_by_rim": {
+        "left": 1.9636269933543158,
+        "right": -3.2094579434880037
+      },
+      "edge_s": 0.6200000000000002,
+      "lift_mm": 23.37704907006538,
+      "slip_mm": 4.212172775070239,
+      "max_excursion_mm": 14.082885568616515,
+      "drift_mm": 13.927192886416684,
+      "waist_range_deg": [
+        -1.3760019022017065,
+        1.4775124331673504
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-16-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.327633268731164,
+          "end_s": 4.4,
+          "measured_turn_deg": 0.3493338490068753
+        }
+      ],
+      "peak_tilt_deg": 12.62086260868032,
+      "min_joint_margin_rad": 0.13523036295791124,
+      "max_closure_error_m": 2.6003031525373198e-05,
+      "peak_motor_torque_nm": 0.31071524759239394,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 4.212172775070239
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -0.2512162897929919,
+      "base_deg": -0.2497894458205023,
+      "max_tail_error_deg": 0.2602478857432015,
+      "signed_edge_deg": 1.837039062938886,
+      "edge_deg_by_rim": {
+        "left": 7.258097178669047,
+        "right": -5.421058115730161
+      },
+      "edge_s": 1.2800000000000007,
+      "lift_mm": 38.309699176711334,
+      "slip_mm": 6.819649995518243,
+      "max_excursion_mm": 17.74907757533423,
+      "drift_mm": 17.74370654259479,
+      "waist_range_deg": [
+        -2.411893150338856,
+        1.204621387742818
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-16-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 19.929456023971902,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.3030240292045821
+        }
+      ],
+      "peak_tilt_deg": 20.24955601998742,
+      "min_joint_margin_rad": 0.13370057879197073,
+      "max_closure_error_m": 4.1508790810926254e-05,
+      "peak_motor_torque_nm": 0.40258694272339424,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 6.819649995518243
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 3.570887491718871,
+      "base_deg": 3.57079878680308,
+      "max_tail_error_deg": 3.5715139884076046,
+      "signed_edge_deg": 0.5059889177511472,
+      "edge_deg_by_rim": {
+        "left": 1.3233506712723588,
+        "right": -0.8173617535212117
+      },
+      "edge_s": 0.5400000000000001,
+      "lift_mm": 27.58044012690321,
+      "slip_mm": 3.002628342240762,
+      "max_excursion_mm": 3.2447479259396914,
+      "drift_mm": 1.4812249726996691,
+      "waist_range_deg": [
+        -0.8560239089822982,
+        1.7591927253029822
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-18--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 14.544138026373725,
+          "end_s": 4.4,
+          "measured_turn_deg": 3.5240914241066936
+        }
+      ],
+      "peak_tilt_deg": 14.517216250515146,
+      "min_joint_margin_rad": 0.21072858671010097,
+      "max_closure_error_m": 3.611459560411437e-05,
+      "peak_motor_torque_nm": 0.3257580417067389,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 3.002628342240762
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 3.7962808840717788,
+      "base_deg": 3.7962015290862983,
+      "max_tail_error_deg": 3.7968675383110644,
+      "signed_edge_deg": 0.48492384030149993,
+      "edge_deg_by_rim": {
+        "left": 1.5508697691326552,
+        "right": -1.0659459288311552
+      },
+      "edge_s": 0.5600000000000002,
+      "lift_mm": 25.619471584059205,
+      "slip_mm": 3.0378573786278427,
+      "max_excursion_mm": 3.7591008243983626,
+      "drift_mm": 2.26553862745496,
+      "waist_range_deg": [
+        -0.9646080233818957,
+        1.9767607662161122
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-18--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.988267258824504,
+          "end_s": 4.4,
+          "measured_turn_deg": 3.7429731986279395
+        }
+      ],
+      "peak_tilt_deg": 13.529789465819999,
+      "min_joint_margin_rad": 0.20947359791698972,
+      "max_closure_error_m": 3.522376807869781e-05,
+      "peak_motor_torque_nm": 0.33254316663139494,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 3.0378573786278427
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -2.5869155668562733,
+      "base_deg": -2.586757643489587,
+      "max_tail_error_deg": 2.5877074070622563,
+      "signed_edge_deg": -0.7990424906716812,
+      "edge_deg_by_rim": {
+        "left": 0.8542019662957613,
+        "right": -1.6532444569674425
+      },
+      "edge_s": 0.5800000000000002,
+      "lift_mm": 26.478050476252115,
+      "slip_mm": 3.085953127212509,
+      "max_excursion_mm": 3.126547936859329,
+      "drift_mm": 3.07555740130067,
+      "waist_range_deg": [
+        -2.1780955606146764,
+        0.9751246072157941
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-18-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 13.410741715518975,
+          "end_s": 4.4,
+          "measured_turn_deg": -2.6334660317522935
+        }
+      ],
+      "peak_tilt_deg": 13.89044888200804,
+      "min_joint_margin_rad": 0.2121106379728539,
+      "max_closure_error_m": 3.519086855784016e-05,
+      "peak_motor_torque_nm": 0.3215959243287158,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 3.085953127212509
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -2.8620948967656723,
+      "base_deg": -2.8619674415342105,
+      "max_tail_error_deg": 2.86281394334611,
+      "signed_edge_deg": -0.9932974177099033,
+      "edge_deg_by_rim": {
+        "left": 0.9877682738541987,
+        "right": -1.981065691564102
+      },
+      "edge_s": 0.5800000000000002,
+      "lift_mm": 26.79240660068732,
+      "slip_mm": 3.212757188747086,
+      "max_excursion_mm": 3.976167224201936,
+      "drift_mm": 3.8442385535232364,
+      "waist_range_deg": [
+        -2.3189495574998,
+        1.0985063001317505
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-18-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 14.088023265428642,
+          "end_s": 4.4,
+          "measured_turn_deg": -2.915197878750363
+        }
+      ],
+      "peak_tilt_deg": 14.13648847635016,
+      "min_joint_margin_rad": 0.21080167282034212,
+      "max_closure_error_m": 3.4968407611199216e-05,
+      "peak_motor_torque_nm": 0.32488811209068835,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 3.212757188747086
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 1.661349370223068,
+      "base_deg": 1.6613334364231716,
+      "max_tail_error_deg": 1.6617071283883111,
+      "signed_edge_deg": 0.0,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "edge_s": 0.0,
+      "lift_mm": 1.7143650366652405,
+      "slip_mm": 0.0,
+      "max_excursion_mm": 15.950337422491145,
+      "drift_mm": 15.941122997070574,
+      "waist_range_deg": [
+        -0.9779901277149055,
+        0.8024210153956415
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-20--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 1.1881620717779775,
+          "end_s": 4.4,
+          "measured_turn_deg": 1.6147146186762988
+        }
+      ],
+      "peak_tilt_deg": 0.8822967045050497,
+      "min_joint_margin_rad": 0.26020746397912053,
+      "max_closure_error_m": 3.2954297496029374e-05,
+      "peak_motor_torque_nm": 0.3398892175387708,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.0
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 0.9493901630848975,
+      "base_deg": 0.9493886518732965,
+      "max_tail_error_deg": 0.9495345426766023,
+      "signed_edge_deg": 0.0,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "edge_s": 0.0,
+      "lift_mm": 1.8720617918649434,
+      "slip_mm": 0.0,
+      "max_excursion_mm": 16.141666989238765,
+      "drift_mm": 16.131285380049682,
+      "waist_range_deg": [
+        -0.9482080948006653,
+        0.8414844381441249
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-20--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 1.1125062844531128,
+          "end_s": 4.4,
+          "measured_turn_deg": 0.8962415089802014
+        }
+      ],
+      "peak_tilt_deg": 0.9605613854112756,
+      "min_joint_margin_rad": 0.2585604168823026,
+      "max_closure_error_m": 3.325872129038849e-05,
+      "peak_motor_torque_nm": 0.35112699921409446,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.0
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -0.0826606807164896,
+      "base_deg": -0.08219482159215143,
+      "max_tail_error_deg": 0.08645936615740153,
+      "signed_edge_deg": 0.0,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "edge_s": 0.0,
+      "lift_mm": 2.272336117230241,
+      "slip_mm": 0.0,
+      "max_excursion_mm": 15.083862674073808,
+      "drift_mm": 15.074395433017612,
+      "waist_range_deg": [
+        -0.7794600615899513,
+        0.9738750429011577
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-20-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 1.0901248558577934,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.1290150239084459
+        }
+      ],
+      "peak_tilt_deg": 1.166006529195545,
+      "min_joint_margin_rad": 0.261499472711052,
+      "max_closure_error_m": 3.2859028644008116e-05,
+      "peak_motor_torque_nm": 0.3467723164776254,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.0
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 1.2285991148352062,
+      "base_deg": 1.2283949834907733,
+      "max_tail_error_deg": 1.2290691796749618,
+      "signed_edge_deg": 0.0,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "edge_s": 0.0,
+      "lift_mm": 2.365192147990218,
+      "slip_mm": 0.0,
+      "max_excursion_mm": 15.629965154138604,
+      "drift_mm": 15.619762666708628,
+      "waist_range_deg": [
+        -0.8422183852793487,
+        0.9236618852939392
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-20-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 1.2193404791442037,
+          "end_s": 4.4,
+          "measured_turn_deg": 1.1750717485684976
+        }
+      ],
+      "peak_tilt_deg": 1.210995020143301,
+      "min_joint_margin_rad": 0.25980512761310215,
+      "max_closure_error_m": 3.374286197512211e-05,
+      "peak_motor_torque_nm": 0.3576269303370209,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.0
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 1.463362392614257,
+      "base_deg": 1.4639173902936287,
+      "max_tail_error_deg": 1.4639298432794186,
+      "signed_edge_deg": 0.0,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "edge_s": 0.0,
+      "lift_mm": 2.17491806467647,
+      "slip_mm": 0.0,
+      "max_excursion_mm": 20.798905864656046,
+      "drift_mm": 20.787247645325014,
+      "waist_range_deg": [
+        -1.0216546967304008,
+        0.8513223443578299
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-21--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 1.2914896977367665,
+          "end_s": 4.4,
+          "measured_turn_deg": 1.4173038557252482
+        }
+      ],
+      "peak_tilt_deg": 1.1337019260450771,
+      "min_joint_margin_rad": 0.24288332832419002,
+      "max_closure_error_m": 3.278007753382005e-05,
+      "peak_motor_torque_nm": 0.33551467131536866,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.0
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 0.5410572186308946,
+      "base_deg": 0.540849220329786,
+      "max_tail_error_deg": 0.5423751186129537,
+      "signed_edge_deg": 0.6156669855869512,
+      "edge_deg_by_rim": {
+        "left": -0.2278910898656999,
+        "right": 0.843558075452651
+      },
+      "edge_s": 0.19999999999999998,
+      "lift_mm": 21.557404498759986,
+      "slip_mm": 1.4517180043928126,
+      "max_excursion_mm": 10.818564824428762,
+      "drift_mm": 9.776324346933704,
+      "waist_range_deg": [
+        -1.0750021113159793,
+        1.183461319353166
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-21--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 11.267834370138262,
+          "end_s": 4.4,
+          "measured_turn_deg": 0.4876195844805936
+        }
+      ],
+      "peak_tilt_deg": 11.103087699974662,
+      "min_joint_margin_rad": 0.05949834993862879,
+      "max_closure_error_m": 4.675129521119556e-05,
+      "peak_motor_torque_nm": 0.34025004463461445,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.4517180043928126
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -1.0326221380891996,
+      "base_deg": -1.0330807416070116,
+      "max_tail_error_deg": 1.0331124339884439,
+      "signed_edge_deg": 0.0,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "edge_s": 0.0,
+      "lift_mm": 2.1068469838913613,
+      "slip_mm": 0.0,
+      "max_excursion_mm": 20.05572943782149,
+      "drift_mm": 20.044241447890965,
+      "waist_range_deg": [
+        -0.8269250155762627,
+        0.9529890155158153
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-21-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 1.0924295997718498,
+          "end_s": 4.4,
+          "measured_turn_deg": -1.07990317086818
+        }
+      ],
+      "peak_tilt_deg": 1.1113181742288478,
+      "min_joint_margin_rad": 0.2441850069958904,
+      "max_closure_error_m": 3.219209142105002e-05,
+      "peak_motor_torque_nm": 0.3422797358149143,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.0
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 1.2621040376339738,
+      "base_deg": 1.262275311012205,
+      "max_tail_error_deg": 1.262275311012205,
+      "signed_edge_deg": 1.724509701341784,
+      "edge_deg_by_rim": {
+        "left": 1.3883990523431977,
+        "right": 0.33611064899858645
+      },
+      "edge_s": 0.25999999999999995,
+      "lift_mm": 21.832839774061853,
+      "slip_mm": 1.807935152734835,
+      "max_excursion_mm": 8.330922542719287,
+      "drift_mm": 6.3380692690144205,
+      "waist_range_deg": [
+        -1.174339284448521,
+        1.17657972430668
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-21-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 11.000282319263073,
+          "end_s": 4.4,
+          "measured_turn_deg": 1.2090313744542343
+        }
+      ],
+      "peak_tilt_deg": 11.263379492431195,
+      "min_joint_margin_rad": 0.05168580741233253,
+      "max_closure_error_m": 4.7528656858283934e-05,
+      "peak_motor_torque_nm": 0.35576640282709454,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.807935152734835
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -3.9519965311731275,
+      "base_deg": -3.951960723045061,
+      "max_tail_error_deg": 3.9521983304361186,
+      "signed_edge_deg": -0.5424554971507516,
+      "edge_deg_by_rim": {
+        "left": -3.372119626230303,
+        "right": 2.8296641290795512
+      },
+      "edge_s": 0.4000000000000001,
+      "lift_mm": 23.540560307455856,
+      "slip_mm": 3.0985024846896967,
+      "max_excursion_mm": 15.144887572608138,
+      "drift_mm": 12.809529515826346,
+      "waist_range_deg": [
+        -2.0203680434364286,
+        1.8940026348618964
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-23--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.11829618510397,
+          "end_s": 4.4,
+          "measured_turn_deg": -3.9986733030033252
+        }
+      ],
+      "peak_tilt_deg": 12.41101273858517,
+      "min_joint_margin_rad": 0.11105343952644331,
+      "max_closure_error_m": 2.9658549697661822e-05,
+      "peak_motor_torque_nm": 0.29051169697524254,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 3.0985024846896967
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -1.3771047984491596,
+      "base_deg": -1.3770853426006646,
+      "max_tail_error_deg": 1.3772427253844255,
+      "signed_edge_deg": 3.2749492339944783,
+      "edge_deg_by_rim": {
+        "left": -2.3020523335470404,
+        "right": 5.577001567541519
+      },
+      "edge_s": 0.4000000000000001,
+      "lift_mm": 20.822230204623377,
+      "slip_mm": 3.101658199738726,
+      "max_excursion_mm": 16.211473814382053,
+      "drift_mm": 14.097558705373732,
+      "waist_range_deg": [
+        -1.8334963601625132,
+        1.9209912418885084
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-23--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 10.498167999657866,
+          "end_s": 4.4,
+          "measured_turn_deg": -1.4303190453389987
+        }
+      ],
+      "peak_tilt_deg": 11.318287048318016,
+      "min_joint_margin_rad": 0.1536331033899454,
+      "max_closure_error_m": 3.2355372805001704e-05,
+      "peak_motor_torque_nm": 0.3252737549284892,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 3.101658199738726
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 3.8463050028317722,
+      "base_deg": 3.846262871017538,
+      "max_tail_error_deg": 3.8466102044068142,
+      "signed_edge_deg": 0.5777807039517504,
+      "edge_deg_by_rim": {
+        "left": -3.0874430905876697,
+        "right": 3.66522379453942
+      },
+      "edge_s": 0.36000000000000004,
+      "lift_mm": 24.06304476359815,
+      "slip_mm": 2.850799673982843,
+      "max_excursion_mm": 15.35917521960636,
+      "drift_mm": 12.744107689587908,
+      "waist_range_deg": [
+        -1.8891083944344425,
+        2.038064066738209
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-23-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.386718304639546,
+          "end_s": 4.4,
+          "measured_turn_deg": 3.799553198584149
+        }
+      ],
+      "peak_tilt_deg": 12.67834979380393,
+      "min_joint_margin_rad": 0.1262693921579734,
+      "max_closure_error_m": 2.6783405006807453e-05,
+      "peak_motor_torque_nm": 0.2855947114578826,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 2.850799673982843
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 7.894616292131963,
+      "base_deg": 7.893704452583168,
+      "max_tail_error_deg": 7.901775569029769,
+      "signed_edge_deg": 0.47618265493965506,
+      "edge_deg_by_rim": {
+        "left": -2.3163313860641033,
+        "right": 2.7925140410037583
+      },
+      "edge_s": 1.2200000000000006,
+      "lift_mm": 26.520869940637763,
+      "slip_mm": 8.830233901993111,
+      "max_excursion_mm": 18.636629906179124,
+      "drift_mm": 18.12309918550521,
+      "waist_range_deg": [
+        -2.6247345630934844,
+        1.8523681828395333
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": false,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-23-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 13.672170827627273,
+          "end_s": 4.4,
+          "measured_turn_deg": 7.840512229397505
+        }
+      ],
+      "peak_tilt_deg": 13.907508622378852,
+      "min_joint_margin_rad": 0.16695254555335537,
+      "max_closure_error_m": 3.0020007455160835e-05,
+      "peak_motor_torque_nm": 0.32379175059816445,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 8.830233901993111
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -4.962632759016777,
+      "base_deg": -4.962801449200351,
+      "max_tail_error_deg": 4.962804081803042,
+      "signed_edge_deg": 1.5548274672654232,
+      "edge_deg_by_rim": {
+        "left": -0.9985555472407937,
+        "right": 2.553383014506217
+      },
+      "edge_s": 0.4200000000000001,
+      "lift_mm": 23.65224887395744,
+      "slip_mm": 2.9838842519372384,
+      "max_excursion_mm": 12.16188531707519,
+      "drift_mm": 11.20024142083594,
+      "waist_range_deg": [
+        -1.0999316738727913,
+        2.2398859205992894
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-24--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.163644933189117,
+          "end_s": 4.4,
+          "measured_turn_deg": -5.009513824527809
+        }
+      ],
+      "peak_tilt_deg": 12.82059328354064,
+      "min_joint_margin_rad": 0.19525274125262726,
+      "max_closure_error_m": 2.9829350252314648e-05,
+      "peak_motor_torque_nm": 0.30893765993991923,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 2.9838842519372384
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -0.11747626368412716,
+      "base_deg": -0.11752305971613006,
+      "max_tail_error_deg": 0.11752437739431204,
+      "signed_edge_deg": 0.04199189491148214,
+      "edge_deg_by_rim": {
+        "left": -1.2932514082973219,
+        "right": 1.335243303208804
+      },
+      "edge_s": 0.27999999999999997,
+      "lift_mm": 26.861425092998157,
+      "slip_mm": 1.8195695334161832,
+      "max_excursion_mm": 10.908179913584107,
+      "drift_mm": 10.891063688386,
+      "waist_range_deg": [
+        -1.0769153153224285,
+        0.8460610712180826
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-24--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 14.11858988204497,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.17075395818843367
+        }
+      ],
+      "peak_tilt_deg": 13.88016377891648,
+      "min_joint_margin_rad": 0.19398922218200743,
+      "max_closure_error_m": 2.8876328433936944e-05,
+      "peak_motor_torque_nm": 0.2890545911508412,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.8195695334161832
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 0.6093980385618327,
+      "base_deg": 0.609586459118187,
+      "max_tail_error_deg": 0.609586459118187,
+      "signed_edge_deg": 1.2123208652395348,
+      "edge_deg_by_rim": {
+        "left": -0.7066883345333771,
+        "right": 1.9190091997729117
+      },
+      "edge_s": 0.32,
+      "lift_mm": 25.71654141826766,
+      "slip_mm": 2.0916217878103938,
+      "max_excursion_mm": 11.703319998967892,
+      "drift_mm": 11.663141556908624,
+      "waist_range_deg": [
+        -0.955047653069837,
+        1.101199402801025
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-24-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 13.085157516999566,
+          "end_s": 4.4,
+          "measured_turn_deg": 0.5628663417562265
+        }
+      ],
+      "peak_tilt_deg": 13.365559877800932,
+      "min_joint_margin_rad": 0.19671129413371236,
+      "max_closure_error_m": 2.8818194784821174e-05,
+      "peak_motor_torque_nm": 0.3140523480807629,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 2.0916217878103938
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -2.024988575267159,
+      "base_deg": -2.024948839817499,
+      "max_tail_error_deg": 2.0252549753374365,
+      "signed_edge_deg": -2.224667485704511,
+      "edge_deg_by_rim": {
+        "left": -2.224667485704511,
+        "right": 0.0
+      },
+      "edge_s": 0.18,
+      "lift_mm": 24.126022594672346,
+      "slip_mm": 1.245125634878365,
+      "max_excursion_mm": 10.55025502958379,
+      "drift_mm": 9.086652419011573,
+      "waist_range_deg": [
+        -0.8317165367579615,
+        1.0850590407046845
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-24-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.55379805217237,
+          "end_s": 4.4,
+          "measured_turn_deg": -2.0781828668096427
+        }
+      ],
+      "peak_tilt_deg": 12.447455196628914,
+      "min_joint_margin_rad": 0.19538888669291432,
+      "max_closure_error_m": 2.6892564919046488e-05,
+      "peak_motor_torque_nm": 0.295459862781716,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 1.245125634878365
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 0.3008628072779117,
+      "base_deg": 0.3012666321769464,
+      "max_tail_error_deg": 0.30130332874133675,
+      "signed_edge_deg": 0.0,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "edge_s": 0.0,
+      "lift_mm": 1.4885753982272982,
+      "slip_mm": 0.0,
+      "max_excursion_mm": 1.9625019323903032,
+      "drift_mm": 1.3532115407413619,
+      "waist_range_deg": [
+        -1.0663431306753908,
+        1.0522605401410363
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-26--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 0.8932576395840002,
+          "end_s": 4.4,
+          "measured_turn_deg": 0.25459196830788666
+        }
+      ],
+      "peak_tilt_deg": 0.7625018437116318,
+      "min_joint_margin_rad": 0.2100276416080884,
+      "max_closure_error_m": 5.9614023348450555e-05,
+      "peak_motor_torque_nm": 0.4019883770760551,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.0
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 1.2678320735046031,
+      "base_deg": 1.2687345911820178,
+      "max_tail_error_deg": 1.2687821166127886,
+      "signed_edge_deg": 0.0,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "edge_s": 0.0,
+      "lift_mm": 1.890797592145168,
+      "slip_mm": 0.0,
+      "max_excursion_mm": 2.211269759802589,
+      "drift_mm": 2.0431672501785583,
+      "waist_range_deg": [
+        -1.1004827213278463,
+        1.1062342840562607
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-26--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 0.9916913488575628,
+          "end_s": 4.4,
+          "measured_turn_deg": 1.2155343530928033
+        }
+      ],
+      "peak_tilt_deg": 0.9685028846446272,
+      "min_joint_margin_rad": 0.2176057866401646,
+      "max_closure_error_m": 6.03598198352141e-05,
+      "peak_motor_torque_nm": 0.4058415799237497,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.0
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -3.555047848214459,
+      "base_deg": -3.55599940135024,
+      "max_tail_error_deg": 3.556010955783125,
+      "signed_edge_deg": 0.0,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "edge_s": 0.0,
+      "lift_mm": 3.105355426706729,
+      "slip_mm": 0.0,
+      "max_excursion_mm": 2.1147499119535933,
+      "drift_mm": 2.0999052339924402,
+      "waist_range_deg": [
+        -1.0512080508028665,
+        1.104840296502575
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-26-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 1.793767466749912,
+          "end_s": 4.4,
+          "measured_turn_deg": -3.6027043006414297
+        }
+      ],
+      "peak_tilt_deg": 1.6066231986049353,
+      "min_joint_margin_rad": 0.21536824898416795,
+      "max_closure_error_m": 5.812906485530797e-05,
+      "peak_motor_torque_nm": 0.39734743319851107,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.0
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -3.896410465401676,
+      "base_deg": -3.8974452167226508,
+      "max_tail_error_deg": 3.8974731498842696,
+      "signed_edge_deg": 0.0,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "edge_s": 0.0,
+      "lift_mm": 1.9292617422453708,
+      "slip_mm": 0.0,
+      "max_excursion_mm": 2.3080725254905583,
+      "drift_mm": 2.2989063285059603,
+      "waist_range_deg": [
+        -1.0477165045679628,
+        1.1242757931470693
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-26-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 0.9615431458107259,
+          "end_s": 4.4,
+          "measured_turn_deg": -3.9506984479695566
+        }
+      ],
+      "peak_tilt_deg": 0.9879016415611451,
+      "min_joint_margin_rad": 0.18076332522921157,
+      "max_closure_error_m": 5.875423847142803e-05,
+      "peak_motor_torque_nm": 0.40738461538461546,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.0
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -3.3121472579440416,
+      "base_deg": -3.311920371951475,
+      "max_tail_error_deg": 3.3123694422081416,
+      "signed_edge_deg": 1.571212950878511,
+      "edge_deg_by_rim": {
+        "left": 6.719567898507898,
+        "right": -5.148354947629387
+      },
+      "edge_s": 1.560000000000001,
+      "lift_mm": 24.285042286002202,
+      "slip_mm": 10.166214286229554,
+      "max_excursion_mm": 23.644704789347585,
+      "drift_mm": 23.36455985101003,
+      "waist_range_deg": [
+        -1.2273718518371373,
+        1.0502155640972533
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-27-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 12.749897228455154,
+          "end_s": 4.4,
+          "measured_turn_deg": -3.358604908605919
+        }
+      ],
+      "peak_tilt_deg": 12.613848499117998,
+      "min_joint_margin_rad": 0.08917067117860022,
+      "max_closure_error_m": 3.217619879221368e-05,
+      "peak_motor_torque_nm": 0.30890182349312006,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 10.166214286229554
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -8.22117950749801,
+      "base_deg": -8.215670029006583,
+      "max_tail_error_deg": 8.258500213035886,
+      "signed_edge_deg": -2.4584780793277785,
+      "edge_deg_by_rim": {
+        "left": 2.9400893122705893,
+        "right": -5.398567391598368
+      },
+      "edge_s": 1.1600000000000006,
+      "lift_mm": 32.6820277224,
+      "slip_mm": 7.23975008654536,
+      "max_excursion_mm": 25.405656796957874,
+      "drift_mm": 23.414153052948365,
+      "waist_range_deg": [
+        -1.3229808427402945,
+        1.5901274019712994
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": false,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-27-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 16.72542642035989,
+          "end_s": 4.4,
+          "measured_turn_deg": -8.269075686741944
+        }
+      ],
+      "peak_tilt_deg": 17.27011655482257,
+      "min_joint_margin_rad": 0.09927499027489706,
+      "max_closure_error_m": 3.0462343113939175e-05,
+      "peak_motor_torque_nm": 0.3200305773450236,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 7.23975008654536
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -0.6029743790060325,
+      "base_deg": -0.6019449471288706,
+      "max_tail_error_deg": 0.6155183162255549,
+      "signed_edge_deg": 0.0,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "edge_s": 0.0,
+      "lift_mm": 1.506763630434638,
+      "slip_mm": 0.0,
+      "max_excursion_mm": 1.4519004720926085,
+      "drift_mm": 1.4418967698165064,
+      "waist_range_deg": [
+        -0.6384182422741984,
+        0.5221997216067406
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-28--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 0.802931227206073,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.6489921854354892
+        }
+      ],
+      "peak_tilt_deg": 0.7710835188127582,
+      "min_joint_margin_rad": 0.06185254935770734,
+      "max_closure_error_m": 5.2587442547943674e-05,
+      "peak_motor_torque_nm": 0.4036923076923077,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.0
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -0.05746761711488851,
+      "base_deg": -0.058944037619340056,
+      "max_tail_error_deg": 0.06926948238196136,
+      "signed_edge_deg": 0.0,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "edge_s": 0.0,
+      "lift_mm": 1.8625546805175317,
+      "slip_mm": 0.0,
+      "max_excursion_mm": 1.4558943470010277,
+      "drift_mm": 1.394201851496259,
+      "waist_range_deg": [
+        -0.7028637809466528,
+        0.8123983032186376
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": true,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-28--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 1.0688182173992171,
+          "end_s": 4.4,
+          "measured_turn_deg": -0.11254029600294986
+        }
+      ],
+      "peak_tilt_deg": 0.9528739366302871,
+      "min_joint_margin_rad": 0.060539492096685965,
+      "max_closure_error_m": 4.6415844684721896e-05,
+      "peak_motor_torque_nm": 0.3843322018607141,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.0
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 8.178301963896994,
+      "base_deg": 8.175801570461502,
+      "max_tail_error_deg": 8.192459359420594,
+      "signed_edge_deg": 0.0,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "edge_s": 0.0,
+      "lift_mm": 1.4740798606064769,
+      "slip_mm": 0.0,
+      "max_excursion_mm": 17.982830042280955,
+      "drift_mm": 17.969188070629855,
+      "waist_range_deg": [
+        -0.9525177987790102,
+        0.8090780462009726
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": false,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-30--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 1.086041804677468,
+          "end_s": 4.4,
+          "measured_turn_deg": 8.129097830917592
+        }
+      ],
+      "peak_tilt_deg": 0.7560438265190732,
+      "min_joint_margin_rad": 0.23064671559340644,
+      "max_closure_error_m": 3.117797382016627e-05,
+      "peak_motor_torque_nm": 0.3101446996092564,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.0
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": 7.072021043509422,
+      "base_deg": 7.069988536256197,
+      "max_tail_error_deg": 7.084325018564205,
+      "signed_edge_deg": 0.0,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "edge_s": 0.0,
+      "lift_mm": 1.8921570979759526,
+      "slip_mm": 0.0,
+      "max_excursion_mm": 20.06597875376311,
+      "drift_mm": 19.986155107344253,
+      "waist_range_deg": [
+        -0.9497565612445468,
+        0.8217674873943406
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": false,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-30--1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 1.3477479728760808,
+          "end_s": 4.4,
+          "measured_turn_deg": 7.016755596130654
+        }
+      ],
+      "peak_tilt_deg": 0.9697071197047776,
+      "min_joint_margin_rad": 0.229129752155125,
+      "max_closure_error_m": 3.075937541357605e-05,
+      "peak_motor_torque_nm": 0.3048347878916678,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.0
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -7.570075064853676,
+      "base_deg": -7.566812819312135,
+      "max_tail_error_deg": 7.588785191206822,
+      "signed_edge_deg": 0.0,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "edge_s": 0.0,
+      "lift_mm": 1.7932562502277563,
+      "slip_mm": 0.0,
+      "max_excursion_mm": 18.066775357564747,
+      "drift_mm": 18.03929870775664,
+      "waist_range_deg": [
+        -0.7868960829620983,
+        0.8805377670265281
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": false,
+      "condition": "slick",
+      "strokes": [
+        {
+          "option": "search-30-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 1.0968147227681233,
+          "end_s": 4.4,
+          "measured_turn_deg": -7.613521841739609
+        }
+      ],
+      "peak_tilt_deg": 0.9193593106365511,
+      "min_joint_margin_rad": 0.2319781072696807,
+      "max_closure_error_m": 2.952529861060583e-05,
+      "peak_motor_torque_nm": 0.3006081620410436,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.0
+    },
+    {
+      "target_deg": 0.0,
+      "torso_deg": -6.710969871536183,
+      "base_deg": -6.708421621400749,
+      "max_tail_error_deg": 6.7266292239046805,
+      "signed_edge_deg": 0.0,
+      "edge_deg_by_rim": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "edge_s": 0.0,
+      "lift_mm": 1.8719919181116642,
+      "slip_mm": 0.0,
+      "max_excursion_mm": 19.92336901841683,
+      "drift_mm": 19.850816033603227,
+      "waist_range_deg": [
+        -0.7988796742756614,
+        0.9183258897452274
+      ],
+      "waist_command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 5.2,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "passed": false,
+      "condition": "fresh_low",
+      "strokes": [
+        {
+          "option": "search-30-+1",
+          "start_s": 0.0,
+          "residual_deg": 0.0,
+          "peak_sensed_roll_deg": 1.0945596846679206,
+          "end_s": 4.4,
+          "measured_turn_deg": -6.761645629897292
+        }
+      ],
+      "peak_tilt_deg": 0.9580159737031918,
+      "min_joint_margin_rad": 0.23040811210246082,
+      "max_closure_error_m": 2.967326948664722e-05,
+      "peak_motor_torque_nm": 0.3042198648928025,
+      "natural_upright_start": true,
+      "mean_edge_slip_mm_per_stroke": 0.0
+    }
+  ]
+}

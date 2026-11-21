@@ -1,0 +1,6317 @@
+{
+  "options": [
+    {
+      "id": "primary-10--1",
+      "side": -1,
+      "turn_deg": 10.409050476588941,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -2.3902367111312763,
+        "x_mm": 12.345942149499063,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.87815978671055,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 10,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.1,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 10.409050476588941,
+          "edge": 5.855801682148934,
+          "drift": 7.595882092605103,
+          "roll": 15.269064186545293,
+          "delay": 1
+        },
+        {
+          "turn": 5.175194608858786,
+          "edge": 2.5235080550629068,
+          "drift": 5.343193085756694,
+          "roll": 13.391770866664343,
+          "delay": 1
+        },
+        {
+          "turn": 0.409478064003342,
+          "edge": 0.3597634745099374,
+          "drift": 1.4497066279600177,
+          "roll": 11.039709929013112,
+          "delay": 2
+        },
+        {
+          "turn": 12.82496649670133,
+          "edge": 8.647463299506182,
+          "drift": 7.998116161454252,
+          "roll": 18.006525753822388,
+          "delay": 1
+        },
+        {
+          "turn": 5.12436429717494,
+          "edge": 1.6645970914589439,
+          "drift": 5.043851052873935,
+          "roll": 12.46980733632258,
+          "delay": 1
+        },
+        {
+          "turn": 0.16329991125169577,
+          "edge": 0.4939734612408644,
+          "drift": 0.8016564286519519,
+          "roll": 9.668363498374429,
+          "delay": 2
+        },
+        {
+          "turn": 0.7053031708367357,
+          "edge": 0.4428008429196101,
+          "drift": 2.2011579922877074,
+          "roll": 12.330298336077279,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "primary-10-+1",
+      "side": 1,
+      "turn_deg": -9.037334224365324,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -2.3902367111312763,
+        "x_mm": 12.345942149499063,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.87815978671055,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 10,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.1,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -9.037334224365324,
+          "edge": -4.825425116385586,
+          "drift": 8.641165750885696,
+          "roll": 15.343700959487483,
+          "delay": 1
+        },
+        {
+          "turn": -5.055046757919611,
+          "edge": -2.466768296141719,
+          "drift": 5.558124394228949,
+          "roll": 13.070604084111524,
+          "delay": 1
+        },
+        {
+          "turn": 0.10239594070438698,
+          "edge": 0.033885228309086246,
+          "drift": 1.515349717874916,
+          "roll": 11.42672890272137,
+          "delay": 2
+        },
+        {
+          "turn": -15.921627880166955,
+          "edge": -11.24850879625814,
+          "drift": 6.899314148476378,
+          "roll": 17.664608419313787,
+          "delay": 1
+        },
+        {
+          "turn": 1.5842786909693196,
+          "edge": -2.576725565350128,
+          "drift": 2.1323659743393484,
+          "roll": 13.73842033243343,
+          "delay": 1
+        },
+        {
+          "turn": 0.2449867768806129,
+          "edge": 0.02103071796103556,
+          "drift": 0.9683086424941458,
+          "roll": 10.827417020875739,
+          "delay": 2
+        },
+        {
+          "turn": -0.5821875542158372,
+          "edge": 0.029354089751882806,
+          "drift": 2.1791303366531882,
+          "roll": 12.048952347341377,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "primary-25--1",
+      "side": -1,
+      "turn_deg": 10.947468086725399,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -2.3902367111312763,
+        "x_mm": 12.345942149499063,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.87815978671055,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 25,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.1,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 10.947468086725399,
+          "edge": 6.274144537813469,
+          "drift": 8.861906084528789,
+          "roll": 15.269064186545293,
+          "delay": 1
+        },
+        {
+          "turn": 6.104541491226359,
+          "edge": 3.5020471862585882,
+          "drift": 5.773521137542952,
+          "roll": 13.391770866664343,
+          "delay": 1
+        },
+        {
+          "turn": 0.09372075309264989,
+          "edge": 0.40652920761570965,
+          "drift": 1.954102223233579,
+          "roll": 11.039709929013112,
+          "delay": 2
+        },
+        {
+          "turn": 10.593257640671858,
+          "edge": 6.665668813257541,
+          "drift": 10.434108244614443,
+          "roll": 18.006525753822388,
+          "delay": 1
+        },
+        {
+          "turn": 6.602080738353406,
+          "edge": 2.741128228974711,
+          "drift": 6.1337132491532875,
+          "roll": 12.46980733632258,
+          "delay": 1
+        },
+        {
+          "turn": 0.13120568660483556,
+          "edge": 0.4939734612408644,
+          "drift": 1.2020592507387298,
+          "roll": 9.668363498374429,
+          "delay": 2
+        },
+        {
+          "turn": 0.4133168340604232,
+          "edge": 0.6560626494859431,
+          "drift": 2.8691571706584282,
+          "roll": 12.330298336077279,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "primary-25-+1",
+      "side": 1,
+      "turn_deg": -9.80495381661835,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -2.3902367111312763,
+        "x_mm": 12.345942149499063,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.87815978671055,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 25,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.1,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -9.80495381661835,
+          "edge": -5.269832717056231,
+          "drift": 9.720063080288934,
+          "roll": 15.343700959487483,
+          "delay": 1
+        },
+        {
+          "turn": -5.935711915687748,
+          "edge": -2.8977075736875024,
+          "drift": 5.823251599305088,
+          "roll": 13.070604084111524,
+          "delay": 1
+        },
+        {
+          "turn": 0.06551925500078055,
+          "edge": -0.08129174722703436,
+          "drift": 1.9744311233969272,
+          "roll": 11.42672890272137,
+          "delay": 2
+        },
+        {
+          "turn": -14.061983466039878,
+          "edge": -9.082456593904759,
+          "drift": 9.692637005009708,
+          "roll": 17.664608419313787,
+          "delay": 1
+        },
+        {
+          "turn": 1.3404258928920203,
+          "edge": -2.576725565350128,
+          "drift": 1.8355191519049399,
+          "roll": 13.73842033243343,
+          "delay": 1
+        },
+        {
+          "turn": 0.29647325534091384,
+          "edge": 0.018712345873866554,
+          "drift": 1.3789794627572605,
+          "roll": 10.827417020875739,
+          "delay": 2
+        },
+        {
+          "turn": -0.4947532077260823,
+          "edge": -0.28078787614687933,
+          "drift": 2.7255516349527054,
+          "roll": 12.048952347341377,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "primary-40--1",
+      "side": -1,
+      "turn_deg": 11.47769695431113,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -2.3902367111312763,
+        "x_mm": 12.345942149499063,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.87815978671055,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 40,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.1,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 11.47769695431113,
+          "edge": 5.941554943452667,
+          "drift": 10.731243407363083,
+          "roll": 15.269064186545293,
+          "delay": 1
+        },
+        {
+          "turn": 7.217362669426341,
+          "edge": 3.9680239080143442,
+          "drift": 6.174559480475941,
+          "roll": 13.391770866664343,
+          "delay": 1
+        },
+        {
+          "turn": -0.2948355515423444,
+          "edge": 0.42865453394566233,
+          "drift": 2.3240762631526177,
+          "roll": 11.039709929013112,
+          "delay": 2
+        },
+        {
+          "turn": 6.5897197963805425,
+          "edge": 7.407487391576694,
+          "drift": 15.219439732781648,
+          "roll": 18.006525753822388,
+          "delay": 1
+        },
+        {
+          "turn": 8.278535135643153,
+          "edge": 3.853936639288265,
+          "drift": 7.196208995918666,
+          "roll": 12.46980733632258,
+          "delay": 1
+        },
+        {
+          "turn": -0.22269526049443222,
+          "edge": 0.4939734612408644,
+          "drift": 1.5506929007528367,
+          "roll": 9.668363498374429,
+          "delay": 2
+        },
+        {
+          "turn": 0.5850016023269248,
+          "edge": 0.8455756968473757,
+          "drift": 3.3366510824470224,
+          "roll": 12.330298336077279,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "primary-40-+1",
+      "side": 1,
+      "turn_deg": -10.751240675373978,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -2.3902367111312763,
+        "x_mm": 12.345942149499063,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.87815978671055,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 40,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.1,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -10.751240675373978,
+          "edge": -5.643425519858724,
+          "drift": 11.026758951561225,
+          "roll": 15.343700959487483,
+          "delay": 1
+        },
+        {
+          "turn": -6.943741117147344,
+          "edge": -3.3750633086657214,
+          "drift": 6.318644424098304,
+          "roll": 13.070604084111524,
+          "delay": 1
+        },
+        {
+          "turn": 0.14224899202637858,
+          "edge": -0.2023866805855557,
+          "drift": 2.5227974659194556,
+          "roll": 11.42672890272137,
+          "delay": 2
+        },
+        {
+          "turn": -9.567573017182259,
+          "edge": -8.36697766905766,
+          "drift": 14.530163631324344,
+          "roll": 17.664608419313787,
+          "delay": 1
+        },
+        {
+          "turn": 1.3011189197382882,
+          "edge": -2.576725565350128,
+          "drift": 1.3555732964476528,
+          "roll": 13.73842033243343,
+          "delay": 1
+        },
+        {
+          "turn": 0.09462696918812982,
+          "edge": 0.009097278093138261,
+          "drift": 1.6728319454077378,
+          "roll": 10.827417020875739,
+          "delay": 2
+        },
+        {
+          "turn": -0.3789014057217403,
+          "edge": -0.4750908359004511,
+          "drift": 3.23943199108288,
+          "roll": 12.048952347341377,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "primary-55-+1",
+      "side": 1,
+      "turn_deg": -10.691564477666056,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -2.3902367111312763,
+        "x_mm": 12.345942149499063,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.87815978671055,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 55,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.1,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -10.691564477666056,
+          "edge": -6.790962269026426,
+          "drift": 13.695926033946371,
+          "roll": 15.343700959487483,
+          "delay": 1
+        },
+        {
+          "turn": -7.8414849202073285,
+          "edge": -4.433565728551524,
+          "drift": 6.980312346317068,
+          "roll": 13.070604084111524,
+          "delay": 1
+        },
+        {
+          "turn": -0.1441522629312106,
+          "edge": -0.3219146076370243,
+          "drift": 3.1272423625651085,
+          "roll": 11.42672890272137,
+          "delay": 2
+        },
+        {
+          "turn": -10.302380500913003,
+          "edge": -10.74351774398933,
+          "drift": 17.368013722569863,
+          "roll": 17.664608419313787,
+          "delay": 1
+        },
+        {
+          "turn": 1.003889873020783,
+          "edge": -2.576725565350128,
+          "drift": 1.2100941784720687,
+          "roll": 13.73842033243343,
+          "delay": 1
+        },
+        {
+          "turn": 0.01191136301713616,
+          "edge": 0.0013887129396185638,
+          "drift": 2.0368074042768667,
+          "roll": 10.827417020875739,
+          "delay": 2
+        },
+        {
+          "turn": -0.733825158118111,
+          "edge": -0.6298877905736049,
+          "drift": 3.8868534513913455,
+          "roll": 12.048952347341377,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "fallback-10--1",
+      "side": -1,
+      "turn_deg": 2.2973145689479515,
+      "recipe": {
+        "preload_roll_deg": -35.03095906315913,
+        "preload_y_mm": 23.176087421411946,
+        "preload_s": 0.6074049962488124,
+        "roll_deg": 38.09342112172857,
+        "y_mm": -11.004099875887025,
+        "swing_s": 0.12,
+        "pitch_deg": -5.659720203697025,
+        "x_mm": 12.312793911349516,
+        "z_mm": -6.102391067196337,
+        "pump_cycles": 12,
+        "pump_hz": 2.7450191907884114,
+        "pump_y_phase_deg": 30.59454831676678,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 10,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.2,
+        "yaw_return_s": 0.4,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 2.2973145689479515,
+          "edge": 2.1479646182666596,
+          "drift": 2.341711562391343,
+          "roll": 12.301774066411634,
+          "delay": 1
+        },
+        {
+          "turn": -0.8791934026066072,
+          "edge": 0.5844335843754858,
+          "drift": 1.3165942878692551,
+          "roll": 7.850763350562861,
+          "delay": 1
+        },
+        {
+          "turn": -3.364900942962385,
+          "edge": -0.023197024016896495,
+          "drift": 3.3217717951578885,
+          "roll": 12.706324158842417,
+          "delay": 2
+        },
+        {
+          "turn": 12.04035646077474,
+          "edge": 7.898068625801117,
+          "drift": 3.1322655519221354,
+          "roll": 18.645498471993918,
+          "delay": 1
+        },
+        {
+          "turn": 1.7019209868832237,
+          "edge": 0.7058838212184168,
+          "drift": 1.103299694333149,
+          "roll": 12.969003000576445,
+          "delay": 1
+        },
+        {
+          "turn": -0.6371601705067912,
+          "edge": 0.45695222012265846,
+          "drift": 2.5178611990710364,
+          "roll": 11.308559428697327,
+          "delay": 2
+        },
+        {
+          "turn": -3.0847161480583654,
+          "edge": -0.33266314799538266,
+          "drift": 2.895962393375526,
+          "roll": 14.066970663294533,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "fallback-10-+1",
+      "side": 1,
+      "turn_deg": -2.7600186435358536,
+      "recipe": {
+        "preload_roll_deg": -35.03095906315913,
+        "preload_y_mm": 23.176087421411946,
+        "preload_s": 0.6074049962488124,
+        "roll_deg": 38.09342112172857,
+        "y_mm": -11.004099875887025,
+        "swing_s": 0.12,
+        "pitch_deg": -5.659720203697025,
+        "x_mm": 12.312793911349516,
+        "z_mm": -6.102391067196337,
+        "pump_cycles": 12,
+        "pump_hz": 2.7450191907884114,
+        "pump_y_phase_deg": 30.59454831676678,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 10,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.2,
+        "yaw_return_s": 0.4,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -2.7600186435358536,
+          "edge": -2.4004337377179903,
+          "drift": 1.89113716580928,
+          "roll": 12.215177382594767,
+          "delay": 1
+        },
+        {
+          "turn": 1.009863048695545,
+          "edge": -0.6328640585588085,
+          "drift": 2.207976196284951,
+          "roll": 9.306125480207452,
+          "delay": 1
+        },
+        {
+          "turn": 3.2463352289934875,
+          "edge": 0.18159336732450204,
+          "drift": 3.7886835108273837,
+          "roll": 13.952893903494562,
+          "delay": 2
+        },
+        {
+          "turn": -4.124751849470464,
+          "edge": -2.9955354666570595,
+          "drift": 2.643941892130576,
+          "roll": 16.745403327269763,
+          "delay": 1
+        },
+        {
+          "turn": -9.494721427196213,
+          "edge": -6.837273184317304,
+          "drift": 3.499060273373738,
+          "roll": 14.669077274018935,
+          "delay": 1
+        },
+        {
+          "turn": 2.2197971402348293,
+          "edge": 0.2298911957619829,
+          "drift": 2.5406380281236016,
+          "roll": 13.572821580002826,
+          "delay": 2
+        },
+        {
+          "turn": -0.39179479294644964,
+          "edge": -1.3263850501449046,
+          "drift": 1.4497206255803723,
+          "roll": 8.343657001163221,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "fallback-25--1",
+      "side": -1,
+      "turn_deg": 3.403847411535698,
+      "recipe": {
+        "preload_roll_deg": -35.03095906315913,
+        "preload_y_mm": 23.176087421411946,
+        "preload_s": 0.6074049962488124,
+        "roll_deg": 38.09342112172857,
+        "y_mm": -11.004099875887025,
+        "swing_s": 0.12,
+        "pitch_deg": -5.659720203697025,
+        "x_mm": 12.312793911349516,
+        "z_mm": -6.102391067196337,
+        "pump_cycles": 12,
+        "pump_hz": 2.7450191907884114,
+        "pump_y_phase_deg": 30.59454831676678,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 25,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.2,
+        "yaw_return_s": 0.4,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 3.403847411535698,
+          "edge": 2.6528990799126584,
+          "drift": 2.6786927201723594,
+          "roll": 12.301774066411634,
+          "delay": 1
+        },
+        {
+          "turn": -0.5122615129781308,
+          "edge": 0.5844335843754858,
+          "drift": 1.1839873908127185,
+          "roll": 7.850763350562861,
+          "delay": 1
+        },
+        {
+          "turn": -3.358934639703007,
+          "edge": -0.023197024016896495,
+          "drift": 3.3267357867607243,
+          "roll": 12.706324158842417,
+          "delay": 2
+        },
+        {
+          "turn": 11.831385176892434,
+          "edge": 7.761333528646666,
+          "drift": 5.453141535394389,
+          "roll": 18.645498471993918,
+          "delay": 1
+        },
+        {
+          "turn": 1.7607659552053154,
+          "edge": 0.7058838212184168,
+          "drift": 1.1177039183722948,
+          "roll": 12.969003000576445,
+          "delay": 1
+        },
+        {
+          "turn": -0.6335839207335141,
+          "edge": 0.45695222012265846,
+          "drift": 2.5191956346363775,
+          "roll": 11.308559428697327,
+          "delay": 2
+        },
+        {
+          "turn": -3.1587594931426732,
+          "edge": -0.33266314799538266,
+          "drift": 3.2797104376925157,
+          "roll": 14.066970663294533,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "fallback-25-+1",
+      "side": 1,
+      "turn_deg": -3.9156226479764937,
+      "recipe": {
+        "preload_roll_deg": -35.03095906315913,
+        "preload_y_mm": 23.176087421411946,
+        "preload_s": 0.6074049962488124,
+        "roll_deg": 38.09342112172857,
+        "y_mm": -11.004099875887025,
+        "swing_s": 0.12,
+        "pitch_deg": -5.659720203697025,
+        "x_mm": 12.312793911349516,
+        "z_mm": -6.102391067196337,
+        "pump_cycles": 12,
+        "pump_hz": 2.7450191907884114,
+        "pump_y_phase_deg": 30.59454831676678,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 25,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.2,
+        "yaw_return_s": 0.4,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -3.9156226479764937,
+          "edge": -2.8484607683520826,
+          "drift": 2.086185752015052,
+          "roll": 12.215177382594767,
+          "delay": 1
+        },
+        {
+          "turn": 0.8068637493858452,
+          "edge": -0.6328640585588085,
+          "drift": 2.2095955353323644,
+          "roll": 9.306125480207452,
+          "delay": 1
+        },
+        {
+          "turn": 3.4174871615957936,
+          "edge": 0.18159336732450204,
+          "drift": 4.324863844348309,
+          "roll": 13.952893903494562,
+          "delay": 2
+        },
+        {
+          "turn": -5.261914492609234,
+          "edge": -4.332257055218861,
+          "drift": 4.00179410938627,
+          "roll": 16.745403327269763,
+          "delay": 1
+        },
+        {
+          "turn": -10.905170595026942,
+          "edge": -8.208443751058397,
+          "drift": 5.204921057416563,
+          "roll": 14.669077274018935,
+          "delay": 1
+        },
+        {
+          "turn": 2.293329637496455,
+          "edge": 0.2298911957619829,
+          "drift": 2.886196309605426,
+          "roll": 13.572821580002826,
+          "delay": 2
+        },
+        {
+          "turn": -0.41878870768119325,
+          "edge": -1.3352055193985635,
+          "drift": 1.534747182475994,
+          "roll": 8.343657001163221,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "fallback-40--1",
+      "side": -1,
+      "turn_deg": 4.284701497714063,
+      "recipe": {
+        "preload_roll_deg": -35.03095906315913,
+        "preload_y_mm": 23.176087421411946,
+        "preload_s": 0.6074049962488124,
+        "roll_deg": 38.09342112172857,
+        "y_mm": -11.004099875887025,
+        "swing_s": 0.12,
+        "pitch_deg": -5.659720203697025,
+        "x_mm": 12.312793911349516,
+        "z_mm": -6.102391067196337,
+        "pump_cycles": 12,
+        "pump_hz": 2.7450191907884114,
+        "pump_y_phase_deg": 30.59454831676678,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 40,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.2,
+        "yaw_return_s": 0.4,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 4.284701497714063,
+          "edge": 3.1087304752315603,
+          "drift": 3.1894091223611554,
+          "roll": 12.301774066411634,
+          "delay": 1
+        },
+        {
+          "turn": -0.14117995202410677,
+          "edge": 0.5844335843754858,
+          "drift": 1.1641128060794734,
+          "roll": 7.850763350562861,
+          "delay": 1
+        },
+        {
+          "turn": -3.37439815167735,
+          "edge": -0.023197024016896495,
+          "drift": 3.3465135259661856,
+          "roll": 12.706324158842417,
+          "delay": 2
+        },
+        {
+          "turn": 8.069921672695509,
+          "edge": 6.935429937583088,
+          "drift": 9.757985125378243,
+          "roll": 18.645498471993918,
+          "delay": 1
+        },
+        {
+          "turn": 1.9282615864295791,
+          "edge": 0.7058838212184168,
+          "drift": 1.121853313768674,
+          "roll": 12.969003000576445,
+          "delay": 1
+        },
+        {
+          "turn": -0.6316688683952837,
+          "edge": 0.45695222012265846,
+          "drift": 2.5303047455714696,
+          "roll": 11.308559428697327,
+          "delay": 2
+        },
+        {
+          "turn": -3.3831838233874247,
+          "edge": -0.33266314799538266,
+          "drift": 3.7088326394157365,
+          "roll": 14.066970663294533,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "fallback-40-+1",
+      "side": 1,
+      "turn_deg": -4.8786983052032475,
+      "recipe": {
+        "preload_roll_deg": -35.03095906315913,
+        "preload_y_mm": 23.176087421411946,
+        "preload_s": 0.6074049962488124,
+        "roll_deg": 38.09342112172857,
+        "y_mm": -11.004099875887025,
+        "swing_s": 0.12,
+        "pitch_deg": -5.659720203697025,
+        "x_mm": 12.312793911349516,
+        "z_mm": -6.102391067196337,
+        "pump_cycles": 12,
+        "pump_hz": 2.7450191907884114,
+        "pump_y_phase_deg": 30.59454831676678,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 40,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.2,
+        "yaw_return_s": 0.4,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -4.8786983052032475,
+          "edge": -3.291573390659272,
+          "drift": 2.4842607878379295,
+          "roll": 12.215177382594767,
+          "delay": 1
+        },
+        {
+          "turn": 0.8715936973757328,
+          "edge": -0.6328640585588085,
+          "drift": 2.3706838650501956,
+          "roll": 9.306125480207452,
+          "delay": 1
+        },
+        {
+          "turn": 2.8870367445638903,
+          "edge": 0.18159336732450204,
+          "drift": 5.177015996463354,
+          "roll": 13.952893903494562,
+          "delay": 2
+        },
+        {
+          "turn": -7.0052794847225694,
+          "edge": -5.0601382635216545,
+          "drift": 4.533010082860853,
+          "roll": 16.745403327269763,
+          "delay": 1
+        },
+        {
+          "turn": -13.127415856853345,
+          "edge": -10.456110601309764,
+          "drift": 6.871455975543437,
+          "roll": 14.669077274018935,
+          "delay": 1
+        },
+        {
+          "turn": 2.403642346715754,
+          "edge": 0.2298911957619829,
+          "drift": 3.217348079776016,
+          "roll": 13.572821580002826,
+          "delay": 2
+        },
+        {
+          "turn": -0.4678577874012926,
+          "edge": -1.3405867906735733,
+          "drift": 1.5387854172248716,
+          "roll": 8.343657001163221,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "fallback-55--1",
+      "side": -1,
+      "turn_deg": 5.3148804171323,
+      "recipe": {
+        "preload_roll_deg": -35.03095906315913,
+        "preload_y_mm": 23.176087421411946,
+        "preload_s": 0.6074049962488124,
+        "roll_deg": 38.09342112172857,
+        "y_mm": -11.004099875887025,
+        "swing_s": 0.12,
+        "pitch_deg": -5.659720203697025,
+        "x_mm": 12.312793911349516,
+        "z_mm": -6.102391067196337,
+        "pump_cycles": 12,
+        "pump_hz": 2.7450191907884114,
+        "pump_y_phase_deg": 30.59454831676678,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 55,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.2,
+        "yaw_return_s": 0.4,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 5.3148804171323,
+          "edge": 3.8307421012879175,
+          "drift": 3.4897521799120015,
+          "roll": 12.301774066411634,
+          "delay": 1
+        },
+        {
+          "turn": -0.35009438392594516,
+          "edge": 0.5844335843754858,
+          "drift": 1.5191044711531663,
+          "roll": 7.850763350562861,
+          "delay": 1
+        },
+        {
+          "turn": -3.372405872603204,
+          "edge": -0.023197024016896495,
+          "drift": 3.3497819036716305,
+          "roll": 12.706324158842417,
+          "delay": 2
+        },
+        {
+          "turn": 11.067634021097694,
+          "edge": 8.235888171720129,
+          "drift": 12.252894076533348,
+          "roll": 18.645498471993918,
+          "delay": 1
+        },
+        {
+          "turn": 1.817849289353972,
+          "edge": 0.7058838212184168,
+          "drift": 1.1612008210855238,
+          "roll": 12.969003000576445,
+          "delay": 1
+        },
+        {
+          "turn": -0.6315236339727672,
+          "edge": 0.45695222012265846,
+          "drift": 2.53028466971145,
+          "roll": 11.308559428697327,
+          "delay": 2
+        },
+        {
+          "turn": -3.52605727848656,
+          "edge": -0.33266314799538266,
+          "drift": 4.02425711775621,
+          "roll": 14.066970663294533,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "fallback-55-+1",
+      "side": 1,
+      "turn_deg": -5.73368678348725,
+      "recipe": {
+        "preload_roll_deg": -35.03095906315913,
+        "preload_y_mm": 23.176087421411946,
+        "preload_s": 0.6074049962488124,
+        "roll_deg": 38.09342112172857,
+        "y_mm": -11.004099875887025,
+        "swing_s": 0.12,
+        "pitch_deg": -5.659720203697025,
+        "x_mm": 12.312793911349516,
+        "z_mm": -6.102391067196337,
+        "pump_cycles": 12,
+        "pump_hz": 2.7450191907884114,
+        "pump_y_phase_deg": 30.59454831676678,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 55,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.2,
+        "yaw_return_s": 0.4,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -5.73368678348725,
+          "edge": -3.6558699135541333,
+          "drift": 3.0590060139055186,
+          "roll": 12.215177382594767,
+          "delay": 1
+        },
+        {
+          "turn": 0.8117233019470215,
+          "edge": -0.6328640585588085,
+          "drift": 2.4267510625420257,
+          "roll": 9.306125480207452,
+          "delay": 1
+        },
+        {
+          "turn": 2.5491756993329733,
+          "edge": 0.18159336732450204,
+          "drift": 5.579253305340859,
+          "roll": 13.952893903494562,
+          "delay": 2
+        },
+        {
+          "turn": -8.493978316494132,
+          "edge": -5.75815168173807,
+          "drift": 5.670212864644132,
+          "roll": 16.745403327269763,
+          "delay": 1
+        },
+        {
+          "turn": -14.449982972075393,
+          "edge": -11.653639557354015,
+          "drift": 9.13663163235746,
+          "roll": 14.669077274018935,
+          "delay": 1
+        },
+        {
+          "turn": 2.358885247147214,
+          "edge": 0.2298911957619829,
+          "drift": 3.526523677033749,
+          "roll": 13.572821580002826,
+          "delay": 2
+        },
+        {
+          "turn": -0.4702844825029942,
+          "edge": -1.3435288346417438,
+          "drift": 1.5346616151389234,
+          "roll": 8.343657001163221,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "delayed_sensor_fallback-10--1",
+      "side": -1,
+      "turn_deg": -0.6001840359079312,
+      "recipe": {
+        "preload_roll_deg": -35.38049994374311,
+        "preload_y_mm": 20.95187468021859,
+        "preload_s": 0.6884827328246679,
+        "roll_deg": 38.09342112172857,
+        "y_mm": -6.999864454339273,
+        "swing_s": 0.12,
+        "pitch_deg": -1.0403009639340677,
+        "x_mm": 11.91531083557435,
+        "z_mm": -6.832201105860822,
+        "pump_cycles": 12,
+        "pump_hz": 2.958789242716784,
+        "pump_y_phase_deg": 52.358696943971495,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 10,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.2,
+        "yaw_return_s": 0.4,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -0.6001840359079312,
+          "edge": -0.7138149867301942,
+          "drift": 2.2737603144853713,
+          "roll": 9.168577637887566,
+          "delay": 1
+        },
+        {
+          "turn": -0.615982226791973,
+          "edge": 0.9586951716098013,
+          "drift": 1.8133986021007773,
+          "roll": 10.07092683829329,
+          "delay": 1
+        },
+        {
+          "turn": 3.2059500883414276,
+          "edge": 1.4494452439878864,
+          "drift": 6.028047884648029,
+          "roll": 12.327506787778503,
+          "delay": 2
+        },
+        {
+          "turn": 3.888604400155878,
+          "edge": 0.2438321011671316,
+          "drift": 7.685250906919788,
+          "roll": 14.79368851448801,
+          "delay": 1
+        },
+        {
+          "turn": 17.495408498943274,
+          "edge": 14.536874478175145,
+          "drift": 12.814745604545326,
+          "roll": 23.53360970631202,
+          "delay": 1
+        },
+        {
+          "turn": 2.756164556955509,
+          "edge": 0.6891424460852107,
+          "drift": 5.260821319939651,
+          "roll": 12.037816370916255,
+          "delay": 2
+        },
+        {
+          "turn": -1.7612666460199526,
+          "edge": 1.4790818287329757,
+          "drift": 1.3558460275522244,
+          "roll": 11.043468356429868,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "delayed_sensor_fallback-25--1",
+      "side": -1,
+      "turn_deg": -0.39581443860425447,
+      "recipe": {
+        "preload_roll_deg": -35.38049994374311,
+        "preload_y_mm": 20.95187468021859,
+        "preload_s": 0.6884827328246679,
+        "roll_deg": 38.09342112172857,
+        "y_mm": -6.999864454339273,
+        "swing_s": 0.12,
+        "pitch_deg": -1.0403009639340677,
+        "x_mm": 11.91531083557435,
+        "z_mm": -6.832201105860822,
+        "pump_cycles": 12,
+        "pump_hz": 2.958789242716784,
+        "pump_y_phase_deg": 52.358696943971495,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 25,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.2,
+        "yaw_return_s": 0.4,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -0.39581443860425447,
+          "edge": -0.7138149867301942,
+          "drift": 2.3597056751044896,
+          "roll": 9.168577637887566,
+          "delay": 1
+        },
+        {
+          "turn": -0.6171792267151566,
+          "edge": 0.9586951716098013,
+          "drift": 1.810789546196387,
+          "roll": 10.07092683829329,
+          "delay": 1
+        },
+        {
+          "turn": 3.3694153396692927,
+          "edge": 1.7369094832437693,
+          "drift": 6.6575050957177995,
+          "roll": 12.327506787778503,
+          "delay": 2
+        },
+        {
+          "turn": 4.632474113185665,
+          "edge": 1.3907348458821471,
+          "drift": 8.875138332917974,
+          "roll": 14.79368851448801,
+          "delay": 1
+        },
+        {
+          "turn": 8.677477017781813,
+          "edge": 11.277889142217264,
+          "drift": 17.648342849954947,
+          "roll": 23.262244519899326,
+          "delay": 1
+        },
+        {
+          "turn": 2.7066899524631247,
+          "edge": 1.00870896922719,
+          "drift": 5.918493944447834,
+          "roll": 12.037816370916255,
+          "delay": 2
+        },
+        {
+          "turn": -1.6305550045712016,
+          "edge": 1.4790818287329757,
+          "drift": 1.484273864370326,
+          "roll": 11.043468356429868,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "delayed_sensor_fallback-25-+1",
+      "side": 1,
+      "turn_deg": 0.6675085332782374,
+      "recipe": {
+        "preload_roll_deg": -35.38049994374311,
+        "preload_y_mm": 20.95187468021859,
+        "preload_s": 0.6884827328246679,
+        "roll_deg": 38.09342112172857,
+        "y_mm": -6.999864454339273,
+        "swing_s": 0.12,
+        "pitch_deg": -1.0403009639340677,
+        "x_mm": 11.91531083557435,
+        "z_mm": -6.832201105860822,
+        "pump_cycles": 12,
+        "pump_hz": 2.958789242716784,
+        "pump_y_phase_deg": 52.358696943971495,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 25,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.2,
+        "yaw_return_s": 0.4,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 0.6675085332782374,
+          "edge": 0.7067461197237522,
+          "drift": 1.8947652797772878,
+          "roll": 9.49479488342644,
+          "delay": 1
+        },
+        {
+          "turn": -1.961982397343852,
+          "edge": -0.4277580708085246,
+          "drift": 1.6853976051697845,
+          "roll": 9.77461900351905,
+          "delay": 1
+        },
+        {
+          "turn": 1.8747996797466753,
+          "edge": -0.9560484117387956,
+          "drift": 0.8712241642645094,
+          "roll": 10.141369645959939,
+          "delay": 2
+        },
+        {
+          "turn": -3.436726095067055,
+          "edge": -0.41763398121305606,
+          "drift": 7.865451760693625,
+          "roll": 14.692997690528381,
+          "delay": 1
+        },
+        {
+          "turn": -12.406691827322334,
+          "edge": -8.32030604715053,
+          "drift": 12.263957609620892,
+          "roll": 15.867408604983773,
+          "delay": 1
+        },
+        {
+          "turn": -2.0816857982277717,
+          "edge": -1.137538804370768,
+          "drift": 3.8202801427551196,
+          "roll": 11.63918642461646,
+          "delay": 2
+        },
+        {
+          "turn": -0.595907828381764,
+          "edge": -0.8338980320772098,
+          "drift": 2.4244456690521736,
+          "roll": 9.882532386940317,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "delayed_sensor_fallback-40--1",
+      "side": -1,
+      "turn_deg": -0.14609580062311214,
+      "recipe": {
+        "preload_roll_deg": -35.38049994374311,
+        "preload_y_mm": 20.95187468021859,
+        "preload_s": 0.6884827328246679,
+        "roll_deg": 38.09342112172857,
+        "y_mm": -6.999864454339273,
+        "swing_s": 0.12,
+        "pitch_deg": -1.0403009639340677,
+        "x_mm": 11.91531083557435,
+        "z_mm": -6.832201105860822,
+        "pump_cycles": 12,
+        "pump_hz": 2.958789242716784,
+        "pump_y_phase_deg": 52.358696943971495,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 40,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.2,
+        "yaw_return_s": 0.4,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -0.14609580062311214,
+          "edge": -0.7138149867301942,
+          "drift": 2.387550747804504,
+          "roll": 9.168577637887566,
+          "delay": 1
+        },
+        {
+          "turn": -0.6223577644233097,
+          "edge": 0.9586951716098013,
+          "drift": 1.8219200046110209,
+          "roll": 10.07092683829329,
+          "delay": 1
+        },
+        {
+          "turn": 4.078435575879878,
+          "edge": 1.9901323322177569,
+          "drift": 6.913149587635464,
+          "roll": 12.327506787778503,
+          "delay": 2
+        },
+        {
+          "turn": 5.595796107320923,
+          "edge": 1.9083281915878234,
+          "drift": 9.72744091925212,
+          "roll": 14.79368851448801,
+          "delay": 1
+        },
+        {
+          "turn": 11.573669876931083,
+          "edge": 14.104391032155478,
+          "drift": 20.58879242044624,
+          "roll": 23.097838754442417,
+          "delay": 1
+        },
+        {
+          "turn": 2.888526886361632,
+          "edge": 1.2609381949434912,
+          "drift": 6.538476824282733,
+          "roll": 12.037816370916255,
+          "delay": 2
+        },
+        {
+          "turn": -1.4596690105648356,
+          "edge": 1.4790818287329757,
+          "drift": 1.606372438850959,
+          "roll": 11.043468356429868,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "delayed_sensor_fallback-40-+1",
+      "side": 1,
+      "turn_deg": 0.597861488729023,
+      "recipe": {
+        "preload_roll_deg": -35.38049994374311,
+        "preload_y_mm": 20.95187468021859,
+        "preload_s": 0.6884827328246679,
+        "roll_deg": 38.09342112172857,
+        "y_mm": -6.999864454339273,
+        "swing_s": 0.12,
+        "pitch_deg": -1.0403009639340677,
+        "x_mm": 11.91531083557435,
+        "z_mm": -6.832201105860822,
+        "pump_cycles": 12,
+        "pump_hz": 2.958789242716784,
+        "pump_y_phase_deg": 52.358696943971495,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 40,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.2,
+        "yaw_return_s": 0.4,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 0.597861488729023,
+          "edge": 0.7067461197237522,
+          "drift": 1.8597507849720178,
+          "roll": 9.49479488342644,
+          "delay": 1
+        },
+        {
+          "turn": -2.076907622635569,
+          "edge": -0.4277580708085246,
+          "drift": 1.7594507729850344,
+          "roll": 9.77461900351905,
+          "delay": 1
+        },
+        {
+          "turn": 1.8567951976905162,
+          "edge": -0.9560484117387956,
+          "drift": 0.8843245271792726,
+          "roll": 10.141369645959939,
+          "delay": 2
+        },
+        {
+          "turn": -4.6884344010465,
+          "edge": -0.9108069619431154,
+          "drift": 8.317706099052492,
+          "roll": 14.692997690528381,
+          "delay": 1
+        },
+        {
+          "turn": -11.679989396907443,
+          "edge": -10.40939189709893,
+          "drift": 16.92643069383739,
+          "roll": 15.867408604983773,
+          "delay": 1
+        },
+        {
+          "turn": -2.1501412548165924,
+          "edge": -1.2937058126901313,
+          "drift": 4.215344157383194,
+          "roll": 11.63918642461646,
+          "delay": 2
+        },
+        {
+          "turn": -0.6416800250757094,
+          "edge": -0.8338980320772098,
+          "drift": 2.4330277537671408,
+          "roll": 9.882532386940317,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "delayed_sensor_fallback-55--1",
+      "side": -1,
+      "turn_deg": 0.06619328706330953,
+      "recipe": {
+        "preload_roll_deg": -35.38049994374311,
+        "preload_y_mm": 20.95187468021859,
+        "preload_s": 0.6884827328246679,
+        "roll_deg": 38.09342112172857,
+        "y_mm": -6.999864454339273,
+        "swing_s": 0.12,
+        "pitch_deg": -1.0403009639340677,
+        "x_mm": 11.91531083557435,
+        "z_mm": -6.832201105860822,
+        "pump_cycles": 12,
+        "pump_hz": 2.958789242716784,
+        "pump_y_phase_deg": 52.358696943971495,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 55,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.2,
+        "yaw_return_s": 0.4,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 0.06619328706330953,
+          "edge": -0.7138149867301942,
+          "drift": 2.428546816680952,
+          "roll": 9.168577637887566,
+          "delay": 1
+        },
+        {
+          "turn": -0.6179470811473097,
+          "edge": 0.9586951716098013,
+          "drift": 1.8239495131208452,
+          "roll": 10.07092683829329,
+          "delay": 1
+        },
+        {
+          "turn": 4.773242047809669,
+          "edge": 2.182883476649672,
+          "drift": 7.1519686680027466,
+          "roll": 12.327506787778503,
+          "delay": 2
+        },
+        {
+          "turn": 7.591568879475126,
+          "edge": 2.314015301388377,
+          "drift": 10.270617642212375,
+          "roll": 14.79368851448801,
+          "delay": 1
+        },
+        {
+          "turn": 14.871325995087231,
+          "edge": 16.20401800064279,
+          "drift": 23.08767845373415,
+          "roll": 23.484004336528372,
+          "delay": 1
+        },
+        {
+          "turn": 3.386899045365341,
+          "edge": 1.454630785539857,
+          "drift": 7.011850998162661,
+          "roll": 12.037816370916255,
+          "delay": 2
+        },
+        {
+          "turn": -1.3081045646856566,
+          "edge": 1.4790818287329757,
+          "drift": 1.7089051932604304,
+          "roll": 11.043468356429868,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "delayed_sensor_fallback-55-+1",
+      "side": 1,
+      "turn_deg": 0.497648102693884,
+      "recipe": {
+        "preload_roll_deg": -35.38049994374311,
+        "preload_y_mm": 20.95187468021859,
+        "preload_s": 0.6884827328246679,
+        "roll_deg": 38.09342112172857,
+        "y_mm": -6.999864454339273,
+        "swing_s": 0.12,
+        "pitch_deg": -1.0403009639340677,
+        "x_mm": 11.91531083557435,
+        "z_mm": -6.832201105860822,
+        "pump_cycles": 12,
+        "pump_hz": 2.958789242716784,
+        "pump_y_phase_deg": 52.358696943971495,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 55,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.2,
+        "yaw_return_s": 0.4,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 0.497648102693884,
+          "edge": 0.7067461197237522,
+          "drift": 1.9848759683898762,
+          "roll": 9.49479488342644,
+          "delay": 1
+        },
+        {
+          "turn": -2.226767111461805,
+          "edge": -0.4277580708085246,
+          "drift": 1.7109395314110563,
+          "roll": 9.77461900351905,
+          "delay": 1
+        },
+        {
+          "turn": 1.8322065497826503,
+          "edge": -0.9560484117387956,
+          "drift": 0.9031619794504245,
+          "roll": 10.141369645959939,
+          "delay": 2
+        },
+        {
+          "turn": -6.421413491813722,
+          "edge": -1.7374581318417701,
+          "drift": 8.304096820100742,
+          "roll": 14.692997690528381,
+          "delay": 1
+        },
+        {
+          "turn": -12.144150754048328,
+          "edge": -13.660179452582536,
+          "drift": 20.331113532215955,
+          "roll": 15.867408604983773,
+          "delay": 1
+        },
+        {
+          "turn": -2.6003755416366796,
+          "edge": -1.4189197699102445,
+          "drift": 4.786608279677176,
+          "roll": 11.63918642461646,
+          "delay": 2
+        },
+        {
+          "turn": -0.6901107149153465,
+          "edge": -0.8338980320772098,
+          "drift": 2.4371762061047186,
+          "roll": 9.882532386940317,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-0--1",
+      "side": -1,
+      "turn_deg": -0.2920842275630932,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -1.9534054591204084,
+        "x_mm": 13.073725267340542,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.84148899445158,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.2699099096891826,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 15,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -0.2920842275630932,
+          "edge": -1.0397567217809969,
+          "drift": 3.7170416299027473,
+          "roll": 14.393255605930097,
+          "delay": 1
+        },
+        {
+          "turn": -4.158512356005378,
+          "edge": -1.3621048984944495,
+          "drift": 0.7930592745561847,
+          "roll": 15.73016616411997,
+          "delay": 1
+        },
+        {
+          "turn": -7.930885905988638,
+          "edge": -2.479022713327602,
+          "drift": 5.360758026065304,
+          "roll": 13.80513041766538,
+          "delay": 2
+        },
+        {
+          "turn": 4.41562632774401,
+          "edge": 2.619625056569277,
+          "drift": 8.799169410426085,
+          "roll": 18.95720594468448,
+          "delay": 1
+        },
+        {
+          "turn": 0.3051955243918554,
+          "edge": 3.420795556998409,
+          "drift": 2.9590915195202467,
+          "roll": 16.509033157350984,
+          "delay": 1
+        },
+        {
+          "turn": -6.733762956408267,
+          "edge": 0.9541132322754715,
+          "drift": 3.1988939267155585,
+          "roll": 13.146436895363719,
+          "delay": 2
+        },
+        {
+          "turn": -9.566875364107254,
+          "edge": -0.9248821705224728,
+          "drift": 4.057572593403975,
+          "roll": 14.55836208901222,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-0-+1",
+      "side": 1,
+      "turn_deg": 0.22980084189105218,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -1.9534054591204084,
+        "x_mm": 13.073725267340542,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.84148899445158,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.2699099096891826,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 15,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 0.22980084189105218,
+          "edge": 1.0645363358982345,
+          "drift": 3.875077201577016,
+          "roll": 14.31248430058764,
+          "delay": 1
+        },
+        {
+          "turn": 12.903780295454393,
+          "edge": 1.8561127043296168,
+          "drift": 7.973723744716256,
+          "roll": 13.658931742142613,
+          "delay": 1
+        },
+        {
+          "turn": 7.968772515942779,
+          "edge": 1.455375228609129,
+          "drift": 5.836270700765078,
+          "roll": 14.222557147504729,
+          "delay": 2
+        },
+        {
+          "turn": -4.699099356864914,
+          "edge": -3.457442710204273,
+          "drift": 8.550505248520858,
+          "roll": 18.889368815897868,
+          "delay": 1
+        },
+        {
+          "turn": 3.9611801231811956,
+          "edge": -3.5357473667216044,
+          "drift": 0.08658972794332069,
+          "roll": 13.407149241933903,
+          "delay": 1
+        },
+        {
+          "turn": 6.31668003707933,
+          "edge": -0.39759208927109174,
+          "drift": 2.9417227918820896,
+          "roll": 13.862302658617859,
+          "delay": 2
+        },
+        {
+          "turn": 8.332048989312472,
+          "edge": 2.0918065917051654,
+          "drift": 3.1100473183990247,
+          "roll": 14.184162448552904,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-2--1",
+      "side": -1,
+      "turn_deg": 5.674863174657154,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 3.8676111333765277,
+        "x_mm": 9.51568877029873,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.9696651153343128,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.22393048944485724,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 8,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 5.674863174657154,
+          "edge": 1.5475694176197923,
+          "drift": 10.688134920798717,
+          "roll": 15.451587011263474,
+          "delay": 1
+        },
+        {
+          "turn": 2.4399559391539074,
+          "edge": -0.95608143243533,
+          "drift": 6.97091492017073,
+          "roll": 13.587361598305222,
+          "delay": 1
+        },
+        {
+          "turn": 0.9516196200981225,
+          "edge": -0.5634287975303032,
+          "drift": 4.728879493984435,
+          "roll": 11.412363094157568,
+          "delay": 2
+        },
+        {
+          "turn": -0.988139534530518,
+          "edge": -0.19101401757289826,
+          "drift": 14.451680289863669,
+          "roll": 18.719530635074133,
+          "delay": 1
+        },
+        {
+          "turn": 15.200604651782132,
+          "edge": 15.745016668012813,
+          "drift": 18.502103385614973,
+          "roll": 21.228343415720243,
+          "delay": 1
+        },
+        {
+          "turn": 0.4087505119832697,
+          "edge": -0.5025642858784634,
+          "drift": 4.734465455495348,
+          "roll": 10.196063837460184,
+          "delay": 2
+        },
+        {
+          "turn": 2.1545606221707776,
+          "edge": -0.9546618678893547,
+          "drift": 5.574158954534252,
+          "roll": 12.625235813950315,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-2-+1",
+      "side": 1,
+      "turn_deg": -5.866640366762292,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 3.8676111333765277,
+        "x_mm": 9.51568877029873,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.9696651153343128,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.22393048944485724,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 8,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -5.866640366762292,
+          "edge": -1.2263619595343793,
+          "drift": 8.784223832084608,
+          "roll": 15.694794496282066,
+          "delay": 1
+        },
+        {
+          "turn": -3.275082813264721,
+          "edge": 1.1301248269230093,
+          "drift": 6.223669541815946,
+          "roll": 13.207035673964564,
+          "delay": 1
+        },
+        {
+          "turn": -1.5298182385319572,
+          "edge": 1.0381295449338155,
+          "drift": 4.540227216187995,
+          "roll": 11.740308427625857,
+          "delay": 2
+        },
+        {
+          "turn": 0.1978145698167474,
+          "edge": 0.5033243790687689,
+          "drift": 13.939051750920045,
+          "roll": 18.936297304496435,
+          "delay": 1
+        },
+        {
+          "turn": 0.0873979213613818,
+          "edge": 1.587544892120741,
+          "drift": 5.212065853825384,
+          "roll": 13.47403904090322,
+          "delay": 1
+        },
+        {
+          "turn": -1.100730043518709,
+          "edge": 1.07107633352476,
+          "drift": 4.259317605698302,
+          "roll": 11.266918826989695,
+          "delay": 2
+        },
+        {
+          "turn": -2.07381542535893,
+          "edge": 1.2624558555145147,
+          "drift": 4.937406912065008,
+          "roll": 12.328015305935898,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-4--1",
+      "side": -1,
+      "turn_deg": 11.216845515745472,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -0.4604581162873771,
+        "x_mm": 5.86497840191915,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 3.062435062811433,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.36008057561022266,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 8,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 11.216845515745472,
+          "edge": 6.463449141060656,
+          "drift": 6.308467006072917,
+          "roll": 16.53304939796184,
+          "delay": 1
+        },
+        {
+          "turn": 7.135396855670379,
+          "edge": 3.484883100200227,
+          "drift": 5.855088260681441,
+          "roll": 14.856858301264873,
+          "delay": 1
+        },
+        {
+          "turn": 2.9045238657823207,
+          "edge": 1.7799034859978535,
+          "drift": 3.9574993372798626,
+          "roll": 13.156735613092149,
+          "delay": 2
+        },
+        {
+          "turn": 0.22261722408415158,
+          "edge": 1.933872610323533,
+          "drift": 9.873747567742729,
+          "roll": 19.50443339952655,
+          "delay": 1
+        },
+        {
+          "turn": -4.0222293599244825,
+          "edge": 1.4345656241454323,
+          "drift": 2.7615580536860875,
+          "roll": 12.135594901541182,
+          "delay": 1
+        },
+        {
+          "turn": 1.8389828327717899,
+          "edge": 1.0477349369108597,
+          "drift": 2.1952785970795845,
+          "roll": 12.526735094391546,
+          "delay": 2
+        },
+        {
+          "turn": 5.448288436196145,
+          "edge": 2.2144957470818656,
+          "drift": 4.006570381876259,
+          "roll": 14.008401806768994,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-4-+1",
+      "side": 1,
+      "turn_deg": -10.687196986202888,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -0.4604581162873771,
+        "x_mm": 5.86497840191915,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 3.062435062811433,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.36008057561022266,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 8,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -10.687196986202888,
+          "edge": -6.233484227683447,
+          "drift": 7.553524053869098,
+          "roll": 16.89557116379492,
+          "delay": 1
+        },
+        {
+          "turn": -9.004971180593765,
+          "edge": -5.29841136492985,
+          "drift": 6.476003370414213,
+          "roll": 14.886653666529888,
+          "delay": 1
+        },
+        {
+          "turn": -4.739469207104284,
+          "edge": -1.6504841076326975,
+          "drift": 2.531729533997682,
+          "roll": 13.37845857753952,
+          "delay": 2
+        },
+        {
+          "turn": 1.2333663363243468,
+          "edge": -2.5001099869598775,
+          "drift": 10.334126236211358,
+          "roll": 21.334125087749925,
+          "delay": 1
+        },
+        {
+          "turn": 2.8938161553924093,
+          "edge": -1.9620118134184303,
+          "drift": 2.609708516499552,
+          "roll": 12.640741596188,
+          "delay": 1
+        },
+        {
+          "turn": -3.070481766759503,
+          "edge": -1.1973081414487,
+          "drift": 2.205304580477883,
+          "roll": 12.736407036988988,
+          "delay": 2
+        },
+        {
+          "turn": -5.213177963711146,
+          "edge": -2.1006302121914375,
+          "drift": 4.282728593828874,
+          "roll": 14.25080152585931,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-5--1",
+      "side": -1,
+      "turn_deg": 2.2517243631012165,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 5.109685674971623,
+        "x_mm": 5.649105322923273,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.906989439094678,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.263939177585272,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": true,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 2.2517243631012165,
+          "edge": -0.8133069236500705,
+          "drift": 6.7737069611838825,
+          "roll": 12.266037606763426,
+          "delay": 1
+        },
+        {
+          "turn": -0.8998733627001271,
+          "edge": -1.4383573455198164,
+          "drift": 3.7443896496446163,
+          "roll": 10.943566697326743,
+          "delay": 1
+        },
+        {
+          "turn": -0.3393037560268515,
+          "edge": -0.8038663466855698,
+          "drift": 2.5814865871543256,
+          "roll": 8.155234478540125,
+          "delay": 2
+        },
+        {
+          "turn": 6.969059945638185,
+          "edge": 3.6937657801128165,
+          "drift": 8.053111914154028,
+          "roll": 17.816117119134443,
+          "delay": 1
+        },
+        {
+          "turn": 11.197827472658158,
+          "edge": 10.049661347951659,
+          "drift": 8.551054173492336,
+          "roll": 16.0926062955971,
+          "delay": 1
+        },
+        {
+          "turn": 0.4549279545510109,
+          "edge": -0.3413663861498068,
+          "drift": 4.123107983904476,
+          "roll": 11.443850357424079,
+          "delay": 2
+        },
+        {
+          "turn": -2.167774764817368,
+          "edge": -1.1469771794112074,
+          "drift": 1.0159702956921277,
+          "roll": 9.781730777940528,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-5-+1",
+      "side": 1,
+      "turn_deg": -4.320109789033185,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 5.109685674971623,
+        "x_mm": 5.649105322923273,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.906989439094678,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.263939177585272,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": true,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -4.320109789033185,
+          "edge": -0.4841226216779704,
+          "drift": 6.875187953591136,
+          "roll": 13.247606670407865,
+          "delay": 1
+        },
+        {
+          "turn": 0.19263895447190243,
+          "edge": 1.867893827273519,
+          "drift": 3.3781327849812905,
+          "roll": 11.416932496711372,
+          "delay": 1
+        },
+        {
+          "turn": 0.9112314337269513,
+          "edge": 1.2188346395392136,
+          "drift": 2.0133466841191514,
+          "roll": 9.032026952766397,
+          "delay": 2
+        },
+        {
+          "turn": -8.644302503438688,
+          "edge": -5.246690967346034,
+          "drift": 9.11230829163611,
+          "roll": 18.572784433773084,
+          "delay": 1
+        },
+        {
+          "turn": -14.070877019012896,
+          "edge": -12.131281796548988,
+          "drift": 8.603173650038137,
+          "roll": 15.643508893870319,
+          "delay": 1
+        },
+        {
+          "turn": 2.1332603760119526,
+          "edge": 0.5459925630135158,
+          "drift": 2.860940498512475,
+          "roll": 11.754988300253963,
+          "delay": 2
+        },
+        {
+          "turn": 2.7555510623176485,
+          "edge": 1.1058787674197226,
+          "drift": 0.7691579027372025,
+          "roll": 10.39377828578965,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-7--1",
+      "side": -1,
+      "turn_deg": -4.976270197134041,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -11.896529113300144,
+        "x_mm": -6.431012610536385,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.969052827110568,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.27276693830229615,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": true,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -4.976270197134041,
+          "edge": 3.052535641081952,
+          "drift": 12.678635473863531,
+          "roll": 14.12402414173684,
+          "delay": 1
+        },
+        {
+          "turn": -5.418056811598897,
+          "edge": 2.690549695727196,
+          "drift": 15.143495871814748,
+          "roll": 12.870311627189624,
+          "delay": 1
+        },
+        {
+          "turn": -1.1472873829631491,
+          "edge": 4.176743967747644,
+          "drift": 10.336251909165636,
+          "roll": 8.84407700567874,
+          "delay": 2
+        },
+        {
+          "turn": -5.96809938887609,
+          "edge": 5.46576249799049,
+          "drift": 18.14635016352329,
+          "roll": 18.29166482434753,
+          "delay": 1
+        },
+        {
+          "turn": 1.2530229381407232,
+          "edge": -0.5204479163615456,
+          "drift": 23.50596355179244,
+          "roll": 16.569711732554488,
+          "delay": 1
+        },
+        {
+          "turn": -6.703479646210043,
+          "edge": 0.2897336167566449,
+          "drift": 13.799743869897284,
+          "roll": 12.545632359755917,
+          "delay": 2
+        },
+        {
+          "turn": -1.7180744591552932,
+          "edge": 3.9686956051064692,
+          "drift": 10.801058724081326,
+          "roll": 11.108476827852556,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-7-+1",
+      "side": 1,
+      "turn_deg": 6.111577557772402,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -11.896529113300144,
+        "x_mm": -6.431012610536385,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.969052827110568,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.27276693830229615,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": true,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 6.111577557772402,
+          "edge": -2.5791331420716612,
+          "drift": 11.747508787669464,
+          "roll": 14.141055795285196,
+          "delay": 1
+        },
+        {
+          "turn": 4.382865792833544,
+          "edge": -3.179862173295798,
+          "drift": 13.735570310531354,
+          "roll": 11.8363602500635,
+          "delay": 1
+        },
+        {
+          "turn": 1.764549828878493,
+          "edge": -3.0603194508980796,
+          "drift": 10.312846294661515,
+          "roll": 8.428928345943726,
+          "delay": 2
+        },
+        {
+          "turn": 4.090851396186233,
+          "edge": -5.763713688133588,
+          "drift": 19.52309810172099,
+          "roll": 19.282120064428415,
+          "delay": 1
+        },
+        {
+          "turn": -7.899786450832773,
+          "edge": -0.7852555077467693,
+          "drift": 20.381650666498103,
+          "roll": 17.20763587361974,
+          "delay": 1
+        },
+        {
+          "turn": 6.899072154230413,
+          "edge": -0.1955931621603928,
+          "drift": 14.364999822482277,
+          "roll": 12.681196608926294,
+          "delay": 2
+        },
+        {
+          "turn": 1.4929227685353006,
+          "edge": -4.030157929924688,
+          "drift": 10.49186417764991,
+          "roll": 10.132080495700867,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-8--1",
+      "side": -1,
+      "turn_deg": -3.1483223999681234,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 0.6311849665509888,
+        "x_mm": 3.7193676145589873,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 3.028276009057588,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.3856097330455018,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 15,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -3.1483223999681234,
+          "edge": -1.0582014115813791,
+          "drift": 1.3279243372895022,
+          "roll": 14.317823781810588,
+          "delay": 1
+        },
+        {
+          "turn": -10.89723101781818,
+          "edge": -2.2418792419539937,
+          "drift": 7.178595465914033,
+          "roll": 12.040091432691808,
+          "delay": 1
+        },
+        {
+          "turn": -5.2528150683894985,
+          "edge": 0.3652098200917652,
+          "drift": 1.8222019850009212,
+          "roll": 12.27568181214351,
+          "delay": 2
+        },
+        {
+          "turn": -0.08031306463432752,
+          "edge": -0.7703424489295754,
+          "drift": 3.525758667432535,
+          "roll": 18.645485559865634,
+          "delay": 1
+        },
+        {
+          "turn": -4.3689451849426995,
+          "edge": 0.01812496456632029,
+          "drift": 2.8434850804680596,
+          "roll": 15.124601416304657,
+          "delay": 1
+        },
+        {
+          "turn": -4.570495897718346,
+          "edge": 0.9222356791865132,
+          "drift": 1.870949814328908,
+          "roll": 12.071513844353833,
+          "delay": 2
+        },
+        {
+          "turn": -5.7116319417677754,
+          "edge": -2.1538547370196985,
+          "drift": 4.810372269611442,
+          "roll": 12.134906223725043,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-8-+1",
+      "side": 1,
+      "turn_deg": 3.0865780458375607,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 0.6311849665509888,
+        "x_mm": 3.7193676145589873,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 3.028276009057588,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.3856097330455018,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 15,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 3.0865780458375607,
+          "edge": 0.6146460792147292,
+          "drift": 1.3319546800201092,
+          "roll": 14.201087608372342,
+          "delay": 1
+        },
+        {
+          "turn": 6.59454371615954,
+          "edge": 2.094496753207804,
+          "drift": 3.8736736618339602,
+          "roll": 11.736086110904148,
+          "delay": 1
+        },
+        {
+          "turn": 3.9382383505945158,
+          "edge": -0.411091506977504,
+          "drift": 0.8357107451094697,
+          "roll": 11.989056937622731,
+          "delay": 2
+        },
+        {
+          "turn": -2.3701169515288147,
+          "edge": -0.8171915927805218,
+          "drift": 2.46281634659243,
+          "roll": 18.48093436476567,
+          "delay": 1
+        },
+        {
+          "turn": 2.6157476553733088,
+          "edge": -0.4518901873631075,
+          "drift": 1.7606943125068417,
+          "roll": 14.277498371236232,
+          "delay": 1
+        },
+        {
+          "turn": 4.503682010078241,
+          "edge": -1.0789452025229243,
+          "drift": 0.4246538171423343,
+          "roll": 12.177874901016816,
+          "delay": 2
+        },
+        {
+          "turn": 5.958639246813281,
+          "edge": 2.6958236392610164,
+          "drift": 5.142739704198041,
+          "roll": 12.213257566512983,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-10--1",
+      "side": -1,
+      "turn_deg": 0.623310485252644,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 10.45839912049765,
+        "x_mm": -2.898535190660204,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.7355755069132863,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.16990023047050917,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 13,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 0.623310485252644,
+          "edge": 0.0,
+          "drift": 1.6893792069841203,
+          "roll": 0.9331978568857558,
+          "delay": 1
+        },
+        {
+          "turn": 0.5133290072948966,
+          "edge": 0.0,
+          "drift": 1.2385153478244337,
+          "roll": 0.885012534308718,
+          "delay": 1
+        },
+        {
+          "turn": -0.15959942440533642,
+          "edge": 0.0,
+          "drift": 0.9139505326514613,
+          "roll": 0.6311229994295822,
+          "delay": 2
+        },
+        {
+          "turn": 4.295586737368489,
+          "edge": 0.0,
+          "drift": 0.3048434780463937,
+          "roll": 2.62768593408428,
+          "delay": 1
+        },
+        {
+          "turn": 6.582764156420072,
+          "edge": 0.0,
+          "drift": 0.3267577263895338,
+          "roll": 4.1606615951983885,
+          "delay": 1
+        },
+        {
+          "turn": 0.3206303310122876,
+          "edge": 0.0,
+          "drift": 0.7118930086147837,
+          "roll": 0.6318214458421867,
+          "delay": 2
+        },
+        {
+          "turn": 0.015482568504579103,
+          "edge": 0.0,
+          "drift": 0.780402954379595,
+          "roll": 0.7665308828448077,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-10-+1",
+      "side": 1,
+      "turn_deg": -1.9249634438722203,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 10.45839912049765,
+        "x_mm": -2.898535190660204,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.7355755069132863,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.16990023047050917,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 13,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -1.9249634438722203,
+          "edge": 0.0,
+          "drift": 2.1176894699889117,
+          "roll": 0.9843518400379139,
+          "delay": 1
+        },
+        {
+          "turn": -1.9624406609154048,
+          "edge": 0.0,
+          "drift": 1.9674202514105448,
+          "roll": 0.80346372042424,
+          "delay": 1
+        },
+        {
+          "turn": -0.972309423332221,
+          "edge": 0.0,
+          "drift": 1.1839815830998206,
+          "roll": 0.5927038003306647,
+          "delay": 2
+        },
+        {
+          "turn": -5.282674660759921,
+          "edge": 0.0,
+          "drift": 2.009817570503393,
+          "roll": 2.690247309921051,
+          "delay": 1
+        },
+        {
+          "turn": -11.732897206046218,
+          "edge": 0.0,
+          "drift": 1.455733553924129,
+          "roll": 4.037881552353525,
+          "delay": 1
+        },
+        {
+          "turn": -0.776221303222146,
+          "edge": 0.0,
+          "drift": 1.1394083794853584,
+          "roll": 0.7067896591053298,
+          "delay": 2
+        },
+        {
+          "turn": -1.5286400043226263,
+          "edge": 0.0,
+          "drift": 1.530831581589586,
+          "roll": 0.7101299882241657,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-12--1",
+      "side": -1,
+      "turn_deg": -0.15256365273375974,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -6.279231133205175,
+        "x_mm": -4.287242516433929,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 3.0775469546903227,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 55,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.1550537664393854,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 15,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -0.15256365273375974,
+          "edge": 1.595233288235002,
+          "drift": 4.813947744052516,
+          "roll": 12.964970827151722,
+          "delay": 1
+        },
+        {
+          "turn": -5.019696509295109,
+          "edge": 1.5022883104839642,
+          "drift": 6.932681151065811,
+          "roll": 11.648062883548649,
+          "delay": 1
+        },
+        {
+          "turn": -5.481945959774889,
+          "edge": 1.9482585828824839,
+          "drift": 6.189457277747807,
+          "roll": 11.770770993657123,
+          "delay": 2
+        },
+        {
+          "turn": -1.2148351221537415,
+          "edge": 0.889006054196992,
+          "drift": 7.678637481293124,
+          "roll": 14.3207400207481,
+          "delay": 1
+        },
+        {
+          "turn": -8.606957205804994,
+          "edge": -4.9255519478129415,
+          "drift": 9.647895283461239,
+          "roll": 11.257824571345802,
+          "delay": 1
+        },
+        {
+          "turn": -3.813076432765905,
+          "edge": 2.3879807047599337,
+          "drift": 5.363660603319948,
+          "roll": 11.508799923556179,
+          "delay": 2
+        },
+        {
+          "turn": -6.323591491799745,
+          "edge": 2.0157614757216025,
+          "drift": 7.458368619649031,
+          "roll": 12.123595946460883,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-12-+1",
+      "side": 1,
+      "turn_deg": -0.17084091286499659,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -6.279231133205175,
+        "x_mm": -4.287242516433929,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 3.0775469546903227,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 55,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.1550537664393854,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 15,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -0.17084091286499659,
+          "edge": -1.684484909973226,
+          "drift": 4.82477211916466,
+          "roll": 12.656442490489406,
+          "delay": 1
+        },
+        {
+          "turn": 5.075425925774398,
+          "edge": -1.7280225595377185,
+          "drift": 7.546658302458889,
+          "roll": 11.796633014427236,
+          "delay": 1
+        },
+        {
+          "turn": 5.60893970701574,
+          "edge": -2.1326576923401834,
+          "drift": 6.6871942331345195,
+          "roll": 12.232432223354639,
+          "delay": 2
+        },
+        {
+          "turn": 0.7600374333710045,
+          "edge": -1.1042815288006387,
+          "drift": 7.9889070777010955,
+          "roll": 13.794662382438817,
+          "delay": 1
+        },
+        {
+          "turn": 9.288287841989796,
+          "edge": 4.6224613060948805,
+          "drift": 10.08031990486077,
+          "roll": 11.417297154596232,
+          "delay": 1
+        },
+        {
+          "turn": 1.4134052642726112,
+          "edge": -2.270433587717264,
+          "drift": 7.681054525381334,
+          "roll": 11.597607182348709,
+          "delay": 2
+        },
+        {
+          "turn": 6.292999329499782,
+          "edge": -1.8599853155507207,
+          "drift": 8.059135151130732,
+          "roll": 12.048863774350794,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-13-+1",
+      "side": 1,
+      "turn_deg": 3.9929897700512624,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 0.37426107773036144,
+        "x_mm": -6.558205891430728,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.821113045883276,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -55,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.17539119994233207,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 15,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": true,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 3.9929897700512624,
+          "edge": -6.353429706664501,
+          "drift": 20.116109752398252,
+          "roll": 11.380688433830636,
+          "delay": 1
+        },
+        {
+          "turn": 0.9253343825142086,
+          "edge": -0.9742322391033706,
+          "drift": 12.143381597252228,
+          "roll": 10.109281479482854,
+          "delay": 1
+        },
+        {
+          "turn": -5.409647095144994,
+          "edge": 0.0,
+          "drift": 14.87474372256079,
+          "roll": 1.0348888095258277,
+          "delay": 2
+        },
+        {
+          "turn": -0.6917470190295079,
+          "edge": 7.744843889414272,
+          "drift": 19.2100563037228,
+          "roll": 17.211919088502615,
+          "delay": 1
+        },
+        {
+          "turn": 7.99060891479419,
+          "edge": 4.315759775798262,
+          "drift": 7.736453894433883,
+          "roll": 12.171306608413083,
+          "delay": 1
+        },
+        {
+          "turn": -5.3080527084013385,
+          "edge": 0.0,
+          "drift": 14.250194022069003,
+          "roll": 1.2269493663789925,
+          "delay": 2
+        },
+        {
+          "turn": -4.379848704250139,
+          "edge": 0.0,
+          "drift": 16.11444051143308,
+          "roll": 1.200765681155387,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-14-+1",
+      "side": 1,
+      "turn_deg": -1.126848393166746,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -10.689504504757558,
+        "x_mm": 1.8561948695982315,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.7757544937296763,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 55,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.19507003445712418,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 8,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -1.126848393166746,
+          "edge": -5.378763954070877,
+          "drift": 9.098101130033635,
+          "roll": 12.297504186553276,
+          "delay": 1
+        },
+        {
+          "turn": 0.3279725081048071,
+          "edge": -3.233903252359677,
+          "drift": 7.787962217028738,
+          "roll": 8.084304480793385,
+          "delay": 1
+        },
+        {
+          "turn": 4.947713155046277,
+          "edge": 2.650237148435351,
+          "drift": 12.467784392519834,
+          "roll": 14.579391565623599,
+          "delay": 2
+        },
+        {
+          "turn": -1.7489900709846569,
+          "edge": -7.838756429158719,
+          "drift": 11.066898180685849,
+          "roll": 18.15439563480594,
+          "delay": 1
+        },
+        {
+          "turn": -0.5594668885192634,
+          "edge": -2.151480744099539,
+          "drift": 13.62825597149747,
+          "roll": 15.909384708058685,
+          "delay": 1
+        },
+        {
+          "turn": 1.643268571002942,
+          "edge": 2.461855261906522,
+          "drift": 11.861007049148123,
+          "roll": 12.20499034813558,
+          "delay": 2
+        },
+        {
+          "turn": 0.11005441993662726,
+          "edge": -1.412964816396891,
+          "drift": 7.447718813860394,
+          "roll": 7.468159434380223,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-16--1",
+      "side": -1,
+      "turn_deg": 2.1932164599297432,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 7.140142295660942,
+        "x_mm": 15.32099390508131,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.9439781024697798,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.346394268653363,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 15,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 2.1932164599297432,
+          "edge": -2.3529952640879617,
+          "drift": 6.032976809048784,
+          "roll": 12.276808726235252,
+          "delay": 1
+        },
+        {
+          "turn": 2.5795666204854375,
+          "edge": 0.22591548475446244,
+          "drift": 10.296526021127995,
+          "roll": 14.919581836435414,
+          "delay": 1
+        },
+        {
+          "turn": -0.22966898467379757,
+          "edge": 1.6683991395706048,
+          "drift": 12.349167798506762,
+          "roll": 11.466139254014868,
+          "delay": 2
+        },
+        {
+          "turn": 8.153123959890344,
+          "edge": -1.1854176219590427,
+          "drift": 18.079996184899954,
+          "roll": 16.40905787907244,
+          "delay": 1
+        },
+        {
+          "turn": 3.88772020828906,
+          "edge": 3.70925121105806,
+          "drift": 18.257864760904866,
+          "roll": 15.061446942276769,
+          "delay": 1
+        },
+        {
+          "turn": 2.6935589534165905,
+          "edge": 1.5454753838192385,
+          "drift": 11.575495852004677,
+          "roll": 11.243311659302394,
+          "delay": 2
+        },
+        {
+          "turn": -3.6587536391689577,
+          "edge": -2.8833534526846347,
+          "drift": 10.365937005315415,
+          "roll": 12.091122369062411,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-16-+1",
+      "side": 1,
+      "turn_deg": -2.2741743376030574,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 7.140142295660942,
+        "x_mm": 15.32099390508131,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.9439781024697798,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.346394268653363,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 15,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -2.2741743376030574,
+          "edge": 1.8724513511469845,
+          "drift": 12.845408658117396,
+          "roll": 14.759872247390406,
+          "delay": 1
+        },
+        {
+          "turn": 2.0724924623280034,
+          "edge": 2.9053702905090253,
+          "drift": 6.820018286334329,
+          "roll": 12.38772644102592,
+          "delay": 1
+        },
+        {
+          "turn": 1.7065807133611481,
+          "edge": 1.3368287019735523,
+          "drift": 9.795604043715876,
+          "roll": 11.810159815547912,
+          "delay": 2
+        },
+        {
+          "turn": -4.354989092213965,
+          "edge": 0.10522708629190936,
+          "drift": 18.60752407017539,
+          "roll": 18.280069552832963,
+          "delay": 1
+        },
+        {
+          "turn": -2.2035034206581514,
+          "edge": -6.5021054689412665,
+          "drift": 9.964648651559813,
+          "roll": 13.208279211578922,
+          "delay": 1
+        },
+        {
+          "turn": 0.39542264794149573,
+          "edge": -1.245830950133688,
+          "drift": 13.927192886416684,
+          "roll": 12.327633268731164,
+          "delay": 2
+        },
+        {
+          "turn": -0.2512162897929919,
+          "edge": 1.837039062938886,
+          "drift": 17.74370654259479,
+          "roll": 19.929456023971902,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-18--1",
+      "side": -1,
+      "turn_deg": 5.568079810287292,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 3.371182016090251,
+        "x_mm": -2.3430060195322695,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.9641930616416614,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.11103380646047291,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 8,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 5.568079810287292,
+          "edge": 0.3910275661781375,
+          "drift": 3.002460612406201,
+          "roll": 12.934348827077192,
+          "delay": 1
+        },
+        {
+          "turn": 2.717252276171286,
+          "edge": 0.4546373003754898,
+          "drift": 3.243563937513144,
+          "roll": 12.435182279576146,
+          "delay": 1
+        },
+        {
+          "turn": 3.388581368927911,
+          "edge": 0.6396605750992616,
+          "drift": 2.852498826112083,
+          "roll": 14.288933413426737,
+          "delay": 2
+        },
+        {
+          "turn": 0.8913510822252967,
+          "edge": 0.07732754391175584,
+          "drift": 2.394712436084326,
+          "roll": 8.179678462635875,
+          "delay": 1
+        },
+        {
+          "turn": -2.6691152465838233,
+          "edge": 0.6261330185461589,
+          "drift": 7.038917424570384,
+          "roll": 10.120558834625399,
+          "delay": 1
+        },
+        {
+          "turn": 3.570887491718871,
+          "edge": 0.5059889177511472,
+          "drift": 1.4812249726996691,
+          "roll": 14.544138026373725,
+          "delay": 2
+        },
+        {
+          "turn": 3.7962808840717788,
+          "edge": 0.48492384030149993,
+          "drift": 2.26553862745496,
+          "roll": 12.988267258824504,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-18-+1",
+      "side": 1,
+      "turn_deg": -3.164684190388745,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 3.371182016090251,
+        "x_mm": -2.3430060195322695,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.9641930616416614,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.11103380646047291,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 8,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -3.164684190388745,
+          "edge": -0.419727249434684,
+          "drift": 3.026292540948666,
+          "roll": 12.404677292204724,
+          "delay": 1
+        },
+        {
+          "turn": -3.515608565336391,
+          "edge": -0.5297606451724488,
+          "drift": 3.6647013559169226,
+          "roll": 13.347593281069496,
+          "delay": 1
+        },
+        {
+          "turn": -2.670752838429921,
+          "edge": -0.7050172178484522,
+          "drift": 3.3715057824467456,
+          "roll": 13.904383244914422,
+          "delay": 2
+        },
+        {
+          "turn": -3.617980729496532,
+          "edge": 0.5060596377289315,
+          "drift": 3.571513915516623,
+          "roll": 11.726334946399737,
+          "delay": 1
+        },
+        {
+          "turn": -2.2975966981264295,
+          "edge": -2.1171078798916807,
+          "drift": 5.992719438864973,
+          "roll": 10.340354286045034,
+          "delay": 1
+        },
+        {
+          "turn": -2.5869155668562733,
+          "edge": -0.7990424906716812,
+          "drift": 3.07555740130067,
+          "roll": 13.410741715518975,
+          "delay": 2
+        },
+        {
+          "turn": -2.8620948967656723,
+          "edge": -0.9932974177099033,
+          "drift": 3.8442385535232364,
+          "roll": 14.088023265428642,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-20--1",
+      "side": -1,
+      "turn_deg": 0.6176465009398222,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 5.217230426872108,
+        "x_mm": -13.349641585585186,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 3.0245349136617565,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.12671683713446547,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 8,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 0.6176465009398222,
+          "edge": 0.2595868084063422,
+          "drift": 12.09114756255881,
+          "roll": 7.502419965044516,
+          "delay": 1
+        },
+        {
+          "turn": 0.7372954442346838,
+          "edge": 0.0,
+          "drift": 16.677475977872323,
+          "roll": 1.2557617542846278,
+          "delay": 1
+        },
+        {
+          "turn": 1.64554210019735,
+          "edge": 0.0,
+          "drift": 16.090154883961592,
+          "roll": 1.057861899551749,
+          "delay": 2
+        },
+        {
+          "turn": 0.6137570831523029,
+          "edge": 0.2979654732779877,
+          "drift": 0.6094530837315539,
+          "roll": 11.5979274817708,
+          "delay": 1
+        },
+        {
+          "turn": 5.264975112384626,
+          "edge": 1.6125983019641716,
+          "drift": 0.6727571884613976,
+          "roll": 9.232046545836635,
+          "delay": 1
+        },
+        {
+          "turn": 1.661349370223068,
+          "edge": 0.0,
+          "drift": 15.941122997070574,
+          "roll": 1.1881620717779775,
+          "delay": 2
+        },
+        {
+          "turn": 0.9493901630848975,
+          "edge": 0.0,
+          "drift": 16.131285380049682,
+          "roll": 1.1125062844531128,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-20-+1",
+      "side": 1,
+      "turn_deg": -1.7443200628609932,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 5.217230426872108,
+        "x_mm": -13.349641585585186,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 3.0245349136617565,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.12671683713446547,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 8,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -1.7443200628609932,
+          "edge": 0.029426866748699432,
+          "drift": 3.5807138877239315,
+          "roll": 6.433592272191275,
+          "delay": 1
+        },
+        {
+          "turn": 1.7386936067311258,
+          "edge": 0.0,
+          "drift": 16.837695293467714,
+          "roll": 1.6841657096175306,
+          "delay": 1
+        },
+        {
+          "turn": 0.1531035714907629,
+          "edge": 0.0,
+          "drift": 15.225033221274558,
+          "roll": 1.0342685135790906,
+          "delay": 2
+        },
+        {
+          "turn": -1.2796154830762334,
+          "edge": -0.6311219991045798,
+          "drift": 0.8939865259891113,
+          "roll": 12.072950648126426,
+          "delay": 1
+        },
+        {
+          "turn": -1.5687360943974569,
+          "edge": -0.3906072210822993,
+          "drift": 3.3317177595601515,
+          "roll": 7.050015984608814,
+          "delay": 1
+        },
+        {
+          "turn": -0.0826606807164896,
+          "edge": 0.0,
+          "drift": 15.074395433017612,
+          "roll": 1.0901248558577934,
+          "delay": 2
+        },
+        {
+          "turn": 1.2285991148352062,
+          "edge": 0.0,
+          "drift": 15.619762666708628,
+          "roll": 1.2193404791442037,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-21--1",
+      "side": -1,
+      "turn_deg": -1.0451446452249002,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 2.5151530912038726,
+        "x_mm": -12.579908575694159,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.8953530366734643,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.2580984732487202,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 13,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": true,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -1.0451446452249002,
+          "edge": -2.3599463351356285,
+          "drift": 1.2888949078520462,
+          "roll": 10.334312067015109,
+          "delay": 1
+        },
+        {
+          "turn": 6.857816118046817,
+          "edge": 1.9225586243971777,
+          "drift": 13.681100676711113,
+          "roll": 9.998306399730021,
+          "delay": 1
+        },
+        {
+          "turn": 0.882511435634851,
+          "edge": 0.0,
+          "drift": 22.674586949900274,
+          "roll": 1.5317161774666082,
+          "delay": 2
+        },
+        {
+          "turn": 4.942448136627478,
+          "edge": 2.8400082128868473,
+          "drift": 9.800168027757923,
+          "roll": 11.304684478066779,
+          "delay": 1
+        },
+        {
+          "turn": 5.383792367414474,
+          "edge": 3.6692030771757835,
+          "drift": 6.973933680703322,
+          "roll": 10.326614964047005,
+          "delay": 1
+        },
+        {
+          "turn": 1.463362392614257,
+          "edge": 0.0,
+          "drift": 20.787247645325014,
+          "roll": 1.2914896977367665,
+          "delay": 2
+        },
+        {
+          "turn": 0.5410572186308946,
+          "edge": 0.6156669855869512,
+          "drift": 9.776324346933704,
+          "roll": 11.267834370138262,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-21-+1",
+      "side": 1,
+      "turn_deg": 2.6782662442591185,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 2.5151530912038726,
+        "x_mm": -12.579908575694159,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.8953530366734643,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.2580984732487202,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 13,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": true,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 2.6782662442591185,
+          "edge": 2.203719332138927,
+          "drift": 3.164041309718522,
+          "roll": 10.929928098951418,
+          "delay": 1
+        },
+        {
+          "turn": -8.674636920156,
+          "edge": -5.727989896997526,
+          "drift": 10.619128013472537,
+          "roll": 10.627954153677814,
+          "delay": 1
+        },
+        {
+          "turn": 0.32154115476054124,
+          "edge": 0.0,
+          "drift": 22.72457685305619,
+          "roll": 1.7072570674117034,
+          "delay": 2
+        },
+        {
+          "turn": -5.1731705034238935,
+          "edge": -2.9775308162802974,
+          "drift": 8.050531102464783,
+          "roll": 11.940197806476649,
+          "delay": 1
+        },
+        {
+          "turn": -3.851981247822496,
+          "edge": -1.775558835026958,
+          "drift": 4.251169445229607,
+          "roll": 9.903984010360737,
+          "delay": 1
+        },
+        {
+          "turn": -1.0326221380891996,
+          "edge": 0.0,
+          "drift": 20.044241447890965,
+          "roll": 1.0924295997718498,
+          "delay": 2
+        },
+        {
+          "turn": 1.2621040376339738,
+          "edge": 1.724509701341784,
+          "drift": 6.3380692690144205,
+          "roll": 11.000282319263073,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-23--1",
+      "side": -1,
+      "turn_deg": 0.3417517950576876,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -11.047473875214976,
+        "x_mm": -10.994532226717023,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.995660456197677,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.26255832030009485,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 15,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": true,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 0.3417517950576876,
+          "edge": 4.097503333597565,
+          "drift": 8.897239138285794,
+          "roll": 13.194366549095237,
+          "delay": 1
+        },
+        {
+          "turn": -2.106938518927776,
+          "edge": -0.6936627102359623,
+          "drift": 22.937175489148913,
+          "roll": 14.109508564433813,
+          "delay": 1
+        },
+        {
+          "turn": -4.136458313708807,
+          "edge": 0.527517879750429,
+          "drift": 12.482587030908876,
+          "roll": 11.861925003067418,
+          "delay": 2
+        },
+        {
+          "turn": -9.382513896765627,
+          "edge": 3.1043975500489354,
+          "drift": 18.782432141141257,
+          "roll": 16.791063096301848,
+          "delay": 1
+        },
+        {
+          "turn": 0.8498697786186293,
+          "edge": 0.325593258983238,
+          "drift": 19.785374068289524,
+          "roll": 17.989633008450397,
+          "delay": 1
+        },
+        {
+          "turn": -3.9519965311731275,
+          "edge": -0.5424554971507516,
+          "drift": 12.809529515826346,
+          "roll": 12.11829618510397,
+          "delay": 2
+        },
+        {
+          "turn": -1.3771047984491596,
+          "edge": 3.2749492339944783,
+          "drift": 14.097558705373732,
+          "roll": 10.498167999657866,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-23-+1",
+      "side": 1,
+      "turn_deg": 0.10456512363969049,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -11.047473875214976,
+        "x_mm": -10.994532226717023,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.995660456197677,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.26255832030009485,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 15,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": true,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 0.10456512363969049,
+          "edge": -3.952825985604491,
+          "drift": 8.85920927831226,
+          "roll": 13.342525287596157,
+          "delay": 1
+        },
+        {
+          "turn": 5.171647241070048,
+          "edge": 1.2497971002035602,
+          "drift": 25.396670939721453,
+          "roll": 14.09795632933933,
+          "delay": 1
+        },
+        {
+          "turn": 3.356615160916163,
+          "edge": -0.9326130132811268,
+          "drift": 11.552066433349536,
+          "roll": 11.77869741546384,
+          "delay": 2
+        },
+        {
+          "turn": 9.56986021806796,
+          "edge": -4.175500502099192,
+          "drift": 19.482651097607466,
+          "roll": 16.983329777858987,
+          "delay": 1
+        },
+        {
+          "turn": 0.5396070528500713,
+          "edge": -0.061981792082863585,
+          "drift": 19.891653676039788,
+          "roll": 17.48950884234278,
+          "delay": 1
+        },
+        {
+          "turn": 3.8463050028317722,
+          "edge": 0.5777807039517504,
+          "drift": 12.744107689587908,
+          "roll": 12.386718304639546,
+          "delay": 2
+        },
+        {
+          "turn": 7.894616292131963,
+          "edge": 0.47618265493965506,
+          "drift": 18.12309918550521,
+          "roll": 13.672170827627273,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-24--1",
+      "side": -1,
+      "turn_deg": -4.971970141145103,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -3.4709553955549133,
+        "x_mm": -6.093127517351531,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.8154242896509944,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.2773504791115053,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 15,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -4.971970141145103,
+          "edge": -1.1143091293535634,
+          "drift": 10.978376399868166,
+          "roll": 12.969969376080154,
+          "delay": 1
+        },
+        {
+          "turn": -2.0965357193243586,
+          "edge": -1.6778211706656192,
+          "drift": 9.450469615140758,
+          "roll": 14.196433788721476,
+          "delay": 1
+        },
+        {
+          "turn": -6.370164809194049,
+          "edge": 1.3976455927758433,
+          "drift": 16.16982170993988,
+          "roll": 13.160081688425182,
+          "delay": 2
+        },
+        {
+          "turn": 3.9134553979274234,
+          "edge": 4.863253608797162,
+          "drift": 8.64720956369798,
+          "roll": 14.405695599487165,
+          "delay": 1
+        },
+        {
+          "turn": -1.9617113324048356,
+          "edge": 2.5625135295008876,
+          "drift": 10.9217580196942,
+          "roll": 17.22662158191139,
+          "delay": 1
+        },
+        {
+          "turn": -4.962632759016777,
+          "edge": 1.5548274672654232,
+          "drift": 11.20024142083594,
+          "roll": 12.163644933189117,
+          "delay": 2
+        },
+        {
+          "turn": -0.11747626368412716,
+          "edge": 0.04199189491148214,
+          "drift": 10.891063688386,
+          "roll": 14.11858988204497,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-24-+1",
+      "side": 1,
+      "turn_deg": 6.453328291800228,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -3.4709553955549133,
+        "x_mm": -6.093127517351531,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.8154242896509944,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.2773504791115053,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 15,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 6.453328291800228,
+          "edge": -0.28240734509451726,
+          "drift": 10.999152471496084,
+          "roll": 12.630779471764027,
+          "delay": 1
+        },
+        {
+          "turn": 0.7774422419483463,
+          "edge": 1.2472797092179475,
+          "drift": 10.007601939009334,
+          "roll": 13.216172342821002,
+          "delay": 1
+        },
+        {
+          "turn": 3.2005687065933115,
+          "edge": -2.098680251563294,
+          "drift": 12.14362194716421,
+          "roll": 11.387687047549763,
+          "delay": 2
+        },
+        {
+          "turn": -3.5489320114471306,
+          "edge": -4.8059215186634425,
+          "drift": 9.377656428081819,
+          "roll": 14.488984781199912,
+          "delay": 1
+        },
+        {
+          "turn": 12.441681592172738,
+          "edge": 7.218490602084287,
+          "drift": 16.17379682200618,
+          "roll": 18.548556598009505,
+          "delay": 1
+        },
+        {
+          "turn": 0.6093980385618327,
+          "edge": 1.2123208652395348,
+          "drift": 11.663141556908624,
+          "roll": 13.085157516999566,
+          "delay": 2
+        },
+        {
+          "turn": -2.024988575267159,
+          "edge": -2.224667485704511,
+          "drift": 9.086652419011573,
+          "roll": 12.55379805217237,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-26--1",
+      "side": -1,
+      "turn_deg": 2.4107221858189787,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 11.027343086774028,
+        "x_mm": -0.30901289581262337,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 3.0032555741725018,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -55,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.30869175074046784,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 2.4107221858189787,
+          "edge": 0.0,
+          "drift": 1.4328561113661755,
+          "roll": 1.4374675723120214,
+          "delay": 1
+        },
+        {
+          "turn": 0.77921846672242,
+          "edge": 0.0,
+          "drift": 2.197585901856872,
+          "roll": 1.2737125997323024,
+          "delay": 1
+        },
+        {
+          "turn": 0.1627473834321382,
+          "edge": 0.0,
+          "drift": 2.0436794622577605,
+          "roll": 0.8228445970605838,
+          "delay": 2
+        },
+        {
+          "turn": 6.364408936007535,
+          "edge": 0.0,
+          "drift": 0.6880139480144417,
+          "roll": 2.865684799531895,
+          "delay": 1
+        },
+        {
+          "turn": 17.749197681519405,
+          "edge": 0.5591780222230653,
+          "drift": 9.25411276993954,
+          "roll": 9.89793501014155,
+          "delay": 1
+        },
+        {
+          "turn": 0.3008628072779117,
+          "edge": 0.0,
+          "drift": 1.3532115407413619,
+          "roll": 0.8932576395840002,
+          "delay": 2
+        },
+        {
+          "turn": 1.2678320735046031,
+          "edge": 0.0,
+          "drift": 2.0431672501785583,
+          "roll": 0.9916913488575628,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-26-+1",
+      "side": 1,
+      "turn_deg": -5.725016159522946,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 11.027343086774028,
+        "x_mm": -0.30901289581262337,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 3.0032555741725018,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -55,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.30869175074046784,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -5.725016159522946,
+          "edge": 0.0,
+          "drift": 1.7176574562903393,
+          "roll": 1.4768508899284394,
+          "delay": 1
+        },
+        {
+          "turn": -4.28513804573635,
+          "edge": 0.0,
+          "drift": 2.2638622616266386,
+          "roll": 0.9212065098090793,
+          "delay": 1
+        },
+        {
+          "turn": -3.9299908660288536,
+          "edge": 0.0,
+          "drift": 2.2164765632528685,
+          "roll": 1.5977332711251342,
+          "delay": 2
+        },
+        {
+          "turn": -11.597912951519348,
+          "edge": -3.9862743387545496,
+          "drift": 5.926573596394722,
+          "roll": 10.359635477162445,
+          "delay": 1
+        },
+        {
+          "turn": 2.765753535064797,
+          "edge": 0.47375932741110827,
+          "drift": 2.1789553007643736,
+          "roll": 10.605799055117645,
+          "delay": 1
+        },
+        {
+          "turn": -3.555047848214459,
+          "edge": 0.0,
+          "drift": 2.0999052339924402,
+          "roll": 1.793767466749912,
+          "delay": 2
+        },
+        {
+          "turn": -3.896410465401676,
+          "edge": 0.0,
+          "drift": 2.2989063285059603,
+          "roll": 0.9615431458107259,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-27-+1",
+      "side": 1,
+      "turn_deg": -1.0048318208331828,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 2.624136584571068,
+        "x_mm": 17.487736561131797,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.715688151704502,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.26227606055683395,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 15,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": true,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -1.0048318208331828,
+          "edge": 1.335093461943003,
+          "drift": 11.71027966388422,
+          "roll": 12.483577859757519,
+          "delay": 1
+        },
+        {
+          "turn": 6.551284529901796,
+          "edge": -2.059650687518282,
+          "drift": 23.819377019958928,
+          "roll": 13.546254170024229,
+          "delay": 1
+        },
+        {
+          "turn": -5.965022590873724,
+          "edge": -4.473250666558796,
+          "drift": 21.129743558586146,
+          "roll": 14.838167792244453,
+          "delay": 2
+        },
+        {
+          "turn": 0.8244851902541134,
+          "edge": 1.0767731426756346,
+          "drift": 15.98925069943264,
+          "roll": 15.638849708406408,
+          "delay": 1
+        },
+        {
+          "turn": 1.2023179214436142,
+          "edge": -4.646039098291636,
+          "drift": 14.736539719076225,
+          "roll": 11.976147140585997,
+          "delay": 1
+        },
+        {
+          "turn": -3.3121472579440416,
+          "edge": 1.571212950878511,
+          "drift": 23.36455985101003,
+          "roll": 12.749897228455154,
+          "delay": 2
+        },
+        {
+          "turn": -8.22117950749801,
+          "edge": -2.4584780793277785,
+          "drift": 23.414153052948365,
+          "roll": 16.72542642035989,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-28--1",
+      "side": -1,
+      "turn_deg": 0.4233878733401974,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -8.412062222806302,
+        "x_mm": 13.928180059188454,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.5353004754092203,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -30,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.38997149533135583,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 15,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 0.4233878733401974,
+          "edge": 1.0201003534451705,
+          "drift": 2.5307279158272,
+          "roll": 9.096209656159065,
+          "delay": 1
+        },
+        {
+          "turn": -2.1801689152598946,
+          "edge": 0.0,
+          "drift": 3.250725051868047,
+          "roll": 1.4403601121472926,
+          "delay": 1
+        },
+        {
+          "turn": -0.10763411801094622,
+          "edge": 0.0,
+          "drift": 1.9345034115534467,
+          "roll": 0.9680062022038566,
+          "delay": 2
+        },
+        {
+          "turn": -14.932457512481333,
+          "edge": -4.0441968990178285,
+          "drift": 9.644956385399421,
+          "roll": 18.939217056459263,
+          "delay": 1
+        },
+        {
+          "turn": -4.561604764254063,
+          "edge": 0.0220457716902156,
+          "drift": 4.148078504704959,
+          "roll": 14.315598562580739,
+          "delay": 1
+        },
+        {
+          "turn": -0.6029743790060325,
+          "edge": 0.0,
+          "drift": 1.4418967698165064,
+          "roll": 0.802931227206073,
+          "delay": 2
+        },
+        {
+          "turn": -0.05746761711488851,
+          "edge": 0.0,
+          "drift": 1.394201851496259,
+          "roll": 1.0688182173992171,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-30--1",
+      "side": -1,
+      "turn_deg": -3.1991857625036992,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 0.8459382324706715,
+        "x_mm": -10.967509642859925,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.844808635306261,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -55,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.16828127623060166,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": -3.1991857625036992,
+          "edge": -1.4429573168218706,
+          "drift": 9.295100988942474,
+          "roll": 14.584925789998808,
+          "delay": 1
+        },
+        {
+          "turn": 5.66364985873949,
+          "edge": 0.0,
+          "drift": 21.689141742396405,
+          "roll": 1.416127212671977,
+          "delay": 1
+        },
+        {
+          "turn": 8.114939255368126,
+          "edge": 0.0,
+          "drift": 18.958869634519527,
+          "roll": 1.0409907094352793,
+          "delay": 2
+        },
+        {
+          "turn": 0.867452728381421,
+          "edge": 2.22948177786337,
+          "drift": 9.081488063614374,
+          "roll": 8.918221589706004,
+          "delay": 1
+        },
+        {
+          "turn": -1.5129535873472366,
+          "edge": 1.1956058714769724,
+          "drift": 8.989992226682443,
+          "roll": 11.383493670165054,
+          "delay": 1
+        },
+        {
+          "turn": 8.178301963896994,
+          "edge": 0.0,
+          "drift": 17.969188070629855,
+          "roll": 1.086041804677468,
+          "delay": 2
+        },
+        {
+          "turn": 7.072021043509422,
+          "edge": 0.0,
+          "drift": 19.986155107344253,
+          "roll": 1.3477479728760808,
+          "delay": 2
+        }
+      ]
+    },
+    {
+      "id": "search-30-+1",
+      "side": 1,
+      "turn_deg": 5.933304531500227,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 0.8459382324706715,
+        "x_mm": -10.967509642859925,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.844808635306261,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -55,
+        "yaw_at_roll_deg": 5,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.16828127623060166,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 10,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.065
+      },
+      "responses": [
+        {
+          "turn": 5.933304531500227,
+          "edge": 4.815709130144034,
+          "drift": 17.505670604399477,
+          "roll": 12.572941886605733,
+          "delay": 1
+        },
+        {
+          "turn": -5.876250755581193,
+          "edge": 0.0,
+          "drift": 21.23245663462932,
+          "roll": 1.1876986011367041,
+          "delay": 1
+        },
+        {
+          "turn": -7.46705981438654,
+          "edge": 0.0,
+          "drift": 18.97116962933541,
+          "roll": 1.008090301064526,
+          "delay": 2
+        },
+        {
+          "turn": -1.1949695278384496,
+          "edge": -2.3086738567682565,
+          "drift": 6.249631990197544,
+          "roll": 8.334717845546962,
+          "delay": 1
+        },
+        {
+          "turn": -0.23248028987689418,
+          "edge": -1.51043394257256,
+          "drift": 7.773257249980959,
+          "roll": 11.294980227102622,
+          "delay": 1
+        },
+        {
+          "turn": -7.570075064853676,
+          "edge": 0.0,
+          "drift": 18.03929870775664,
+          "roll": 1.0968147227681233,
+          "delay": 2
+        },
+        {
+          "turn": -6.710969871536183,
+          "edge": 0.0,
+          "drift": 19.850816033603227,
+          "roll": 1.0945596846679206,
+          "delay": 2
+        }
+      ]
+    }
+  ],
+  "fit_conditions": [
+    "fit",
+    "dev",
+    "low_fit",
+    "high_fit",
+    "mass_fit",
+    "slick",
+    "fresh_low"
+  ],
+  "control": {
+    "delayed_edge_weight": 0.2,
+    "repeat_margin": 0.1
+  }
+}

@@ -1,5 +1,23 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 21 — Turn the torso to a requested heading
+
+A dedicated MuJoCo policy rocks and replants the base to turn from startup
+toward a signed heading. With the waist target fixed at zero, nominal 90°
+commands settled at 89.1° left and 88.4° right. Each took nine head strokes
+and 40.4 seconds. Maximum center excursion was 47.5/51.0 mm and net base
+turn during same-rim support was 51.6°/52.5°. These are simulation results.
+
+All 61 completed tests settled within 5° on both torso and base. Of 67 total
+tests, 47 met the full pivot criteria, 14 turned too little during single-rim
+contact, and six right turns on the two-frame command-delay, uniform-mass
+model stopped at a joint limit. No body-floor collision was observed. The
+next simulation work is to learn loaded-rim yaw on the low-grip floors and
+increase dynamic joint clearance on repeated right-hand launches.
+[Quarter-turn film](media/simulation/edge-quarter-turns.mp4) ·
+[Every test](media/simulation/target-pivot-all.mp4) ·
+[Training, conditions, results and exact commands](docs/TARGET_EDGE_PIVOT.md).
+
 ## November 21 — Low-cadence edge steps and remaining balance failures
 
 At one directional head swing per second, a new MuJoCo gait advances 25.65 mm

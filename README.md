@@ -3,6 +3,11 @@
 Learn head-driven, penguin-like locomotion from **Meta Quest 3S** demonstrations,
 then evaluate sim-to-real transfer on Reachy Mini Wireless.
 
+A dedicated simulated turn now accepts a signed torso heading. Reachy rocked
+through nine head-driven strokes to make a 90° turn in either direction while
+holding the waist target fixed. [Watch the quarter-turns](media/simulation/edge-quarter-turns.mp4)
+or [inspect the policy and stress tests](docs/TARGET_EDGE_PIVOT.md).
+
 The intended gait library has [two styles](docs/GAIT_STYLES.md): rapid small
 steps and larger alternating-edge steps driven by sway, head turning and braking.
 Both have simulation candidates. The latest balance-first controller adds

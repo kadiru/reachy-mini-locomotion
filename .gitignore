@@ -108,3 +108,6 @@ media/simulation/*
 !experiments/reports/motor-training-overhead-summary-2026-11-20.csv
 !experiments/reports/motor-training-side-impacts-2026-11-20.csv
 !experiments/reports/motor-training-hit-video-index-2026-11-20.csv
+!media/simulation/target-edge-pivot.mp4
+!media/simulation/edge-quarter-turns.mp4
+!media/simulation/target-pivot-all.mp4
