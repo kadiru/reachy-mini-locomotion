@@ -25,10 +25,17 @@ class LinearEdgeController(EdgeBalanceController):
         self.gyro_rng=np.random.default_rng(self.f.sensor_seed+4001)
         self.attitude_correction_s=0.;self.filtered_attitude=None
         self.gyro_mode='lowpass';self.previous_gyro=None
+        self.previous_raw_attitude=None
+        self.attitude_rate_weight=0.
         self.hold_transition_s=0.;self.capture_gain=None
         self.gyro_interval_average=False
         self.capture_attitude_correction_s=None
         self.velocity_command_rate_gain=0.
+        self.disturbance_tracking_limit=0.
+        self.stable_samples=0
+        self.recovery_armed=False
+        self.recovery_until=-1.
+        self.recovery_frames=0
         if linear is not None:
             self.A=np.array(linear['A']);self.B=np.array(linear['B']);self.c=np.array(linear['c'])
             self.K=np.array(linear['gain']);self.xeq=np.array(linear['x_equilibrium']);self.ueq=np.array(linear['u_equilibrium'])
@@ -50,6 +57,9 @@ class LinearEdgeController(EdgeBalanceController):
         self.attitude_correction_s=float(parameters.get('attitude_correction_s',0.))
         self.gyro_mode=parameters.get('gyro_mode','lowpass')
         self.gyro_interval_average=bool(parameters.get('gyro_interval_average',False))
+        self.attitude_rate_weight=float(parameters.get('attitude_rate_weight',0.))
+        if not 0 <= self.attitude_rate_weight <= 1:
+            raise ValueError('Attitude rate weight must be between zero and one')
         self.capture_attitude_correction_s=parameters.get('capture_attitude_correction_s')
         if self.capture_attitude_correction_s is not None and not 0<self.capture_attitude_correction_s<=2:raise ValueError('Invalid capture attitude correction')
         if self.gyro_mode not in ('lowpass','trapezoid'):raise ValueError('Invalid gyro integration')
@@ -83,6 +93,12 @@ class LinearEdgeController(EdgeBalanceController):
             p,q,r=self.filtered_gyro;phi=math.radians(self.side*(position[0]+reference));theta=math.radians(position[1])
             velocity[:2]=np.degrees([p+math.sin(phi)*math.tan(theta)*q+math.cos(phi)*math.tan(theta)*r,
                                      math.cos(phi)*q-math.sin(phi)*r])*[self.side,1]
+            if self.attitude_rate_weight:
+                raw_attitude = position[:2].copy()
+                if self.previous_raw_attitude is not None:
+                    interval_rate = (raw_attitude-self.previous_raw_attitude)/.02
+                    velocity[:2] += self.attitude_rate_weight*(interval_rate-velocity[:2])
+                self.previous_raw_attitude = raw_attitude
             if self.attitude_correction_s:
                 if self.filtered_attitude is None:self.filtered_attitude=position[:2].copy()
                 else:
@@ -97,6 +113,13 @@ class LinearEdgeController(EdgeBalanceController):
         if self.observer is not None:
             self.observed=self.observer.update(position,self.command_history[-1],list(self.command_history)[-2:])
         self.sensor_history.append(self.observed.copy())
+        if self.disturbance_tracking_limit and self.catch_trigger is not None:
+            delayed = self.sensor_history[0]
+            quiet = abs(delayed[0]) < 1.2 and abs(delayed[1]) < 4 and np.linalg.norm(delayed[6:8]) < 5
+            self.stable_samples = self.stable_samples+1 if quiet else 0
+            self.recovery_armed |= self.stable_samples >= 25
+            if self.recovery_armed and (abs(delayed[0]) > 1.8 or np.linalg.norm(delayed[6:8]) > 9):
+                self.recovery_until = t+.4
         self.state=np.r_[self.sensor_history[0],self.command_history[0],self.command_history[1]]
         if self.linear is not None:
             # Predict across the timestamped sensor age using only the learned
@@ -115,8 +138,11 @@ class LinearEdgeController(EdgeBalanceController):
                     u=blend((t-self.catch_trigger-self.hold_transition_s)/.2);gain=(1-u)*self.capture_gain+u*gain
                 action=self.ueq-gain*self.K@(self.state-self.xeq)
             else:action=np.zeros(4)
-            if self.tracking_error_limit:
-                limits=self.tracking_error_limit*np.array([1,1,.5,.5])
+            recovering = t <= self.recovery_until
+            self.recovery_frames += int(recovering)
+            tracking_limit = self.disturbance_tracking_limit if recovering else self.tracking_error_limit
+            if tracking_limit:
+                limits=tracking_limit*np.array([1,1,.5,.5])
                 action=np.clip(action,self.state[2:6]-limits,self.state[2:6]+limits)
             action=np.clip(action,[-40,-40,-25,-25],[40,40,25,25])
             if not self.hold_from_start:

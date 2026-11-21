@@ -69,6 +69,8 @@ Across 722 maneuver search and comparison trials, 134 settled flat, 587 made flo
 
 The 28:02 combined review contains 1,217 simulation trials and controls in 412 chapters. It starts with the 230 original edge-controller impacts, then the 247 fallback and control runs, and ends with all 740 raised-start trials. Its searchable index gives the chapter time, panel, input condition, trial ID and outcome. The 1.200 m/s edge recovery appears at 3:27, the 9.248 m/s return to flat at 18:10, and the measured 40° left-edge catch at 27:38. The three individual section films are also available above. [Search the complete video index](../experiments/reports/motor-training-hit-video-index-2026-11-20.csv).
 
+[Watch the complete 1,217-trial film](../media/simulation/balance-stress-all-1217.mp4).
+
 To assemble the single film from the three published MP4s, this command copies the compressed video without re-encoding it and generates a matching index.
 
 ```sh

@@ -1,0 +1,4945 @@
+{
+  "target_mm": 100.0,
+  "whole_pair_budgets": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "conditions": "nominal 5 V, 0.25 ms, both starting sides, from rest to rest",
+  "winners": [
+    {
+      "name": "trained",
+      "side": -1,
+      "pairs": 10,
+      "completed_pairs": 10,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 113.4778176806152,
+      "lateral_mm": -38.63291075399684,
+      "mm_per_swing": 5.67389088403076,
+      "counts": {
+        "6": {
+          "roll": 21,
+          "yaw": 20,
+          "charged": 21
+        },
+        "10": {
+          "roll": 18,
+          "yaw": 20,
+          "charged": 20
+        },
+        "15": {
+          "roll": 8,
+          "yaw": 19,
+          "charged": 20
+        }
+      },
+      "mean_pair_mm": 11.34778176806152,
+      "pair_end_headings_deg": [
+        0.007978870299878647,
+        1.0640143471667334,
+        -4.4338813388454374,
+        -10.117217319857895,
+        -9.263871658147751,
+        -9.405231006263934,
+        -10.828933423218873,
+        -9.481992010171805,
+        -7.78861046148169,
+        -8.48601293172534
+      ],
+      "max_pair_end_deg": 10.828933423218873,
+      "mean_intrapair_yaw_span_deg": 7.456496817368796,
+      "final_heading_deg": -1.4289646144621349,
+      "peak_tilt_deg": 8.892745973337268,
+      "edge_support_s": 0.8400000000000004,
+      "rim_height_difference_mm": 16.99547609266573,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.378527100797428,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": 1,
+      "pairs": 9,
+      "completed_pairs": 9,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 100.54544131462076,
+      "lateral_mm": 22.500417592953806,
+      "mm_per_swing": 5.585857850812264,
+      "counts": {
+        "6": {
+          "roll": 18,
+          "yaw": 18,
+          "charged": 18
+        },
+        "10": {
+          "roll": 14,
+          "yaw": 18,
+          "charged": 18
+        },
+        "15": {
+          "roll": 8,
+          "yaw": 17,
+          "charged": 18
+        }
+      },
+      "mean_pair_mm": 11.171715701624528,
+      "pair_end_headings_deg": [
+        -0.008090270128711658,
+        -1.0361272006870872,
+        4.9343322120954705,
+        9.115189819651004,
+        11.424699602711023,
+        13.590567782173022,
+        11.913657991761584,
+        12.150681252011864,
+        12.623193649203737
+      ],
+      "max_pair_end_deg": 13.590567782173022,
+      "mean_intrapair_yaw_span_deg": 7.362603861459011,
+      "final_heading_deg": 5.055091202467897,
+      "peak_tilt_deg": 10.62613138539641,
+      "edge_support_s": 0.6600000000000003,
+      "rim_height_difference_mm": 19.7360594838254,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3842406462106567,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": -1,
+      "pairs": 11,
+      "completed_pairs": 11,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 110.58560168331182,
+      "lateral_mm": -46.070140064695394,
+      "mm_per_swing": 5.0266182583323555,
+      "counts": {
+        "6": {
+          "roll": 22,
+          "yaw": 22,
+          "charged": 22
+        },
+        "10": {
+          "roll": 22,
+          "yaw": 22,
+          "charged": 22
+        },
+        "15": {
+          "roll": 20,
+          "yaw": 21,
+          "charged": 22
+        }
+      },
+      "mean_pair_mm": 10.053236516664711,
+      "pair_end_headings_deg": [
+        0.007599589068239146,
+        0.7310646122234328,
+        -2.615086028638553,
+        -3.1401431328665153,
+        -7.168346561255321,
+        -7.775381067522036,
+        -10.366992042622593,
+        -11.87028994302291,
+        -11.306812660146107,
+        -12.745300280575416,
+        -15.25384755818194
+      ],
+      "max_pair_end_deg": 15.25384755818194,
+      "mean_intrapair_yaw_span_deg": 6.911227427737547,
+      "final_heading_deg": -8.359607903558143,
+      "peak_tilt_deg": 8.901275835231374,
+      "edge_support_s": 1.2600000000000007,
+      "rim_height_difference_mm": 16.71750800419791,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3856151690517875,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": 1,
+      "pairs": 10,
+      "completed_pairs": 10,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 104.91045544096913,
+      "lateral_mm": -27.491114619896344,
+      "mm_per_swing": 5.2455227720484565,
+      "counts": {
+        "6": {
+          "roll": 20,
+          "yaw": 20,
+          "charged": 20
+        },
+        "10": {
+          "roll": 20,
+          "yaw": 20,
+          "charged": 20
+        },
+        "15": {
+          "roll": 19,
+          "yaw": 19,
+          "charged": 20
+        }
+      },
+      "mean_pair_mm": 10.491045544096913,
+      "pair_end_headings_deg": [
+        -0.007700135456886608,
+        -0.6605742789547107,
+        2.668980704056082,
+        3.0133998133817683,
+        5.455033768732809,
+        5.866795521808305,
+        4.13937161731834,
+        3.6867521107562586,
+        3.5162916935332054,
+        4.280686689668784
+      ],
+      "max_pair_end_deg": 5.866795521808305,
+      "mean_intrapair_yaw_span_deg": 6.4008304532909674,
+      "final_heading_deg": 2.1163832863802923,
+      "peak_tilt_deg": 8.145850880776749,
+      "edge_support_s": 0.9200000000000005,
+      "rim_height_difference_mm": 15.643528948104366,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3919327823965799,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": -1,
+      "pairs": 11,
+      "completed_pairs": 11,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 107.07101879883822,
+      "lateral_mm": -14.057858437810777,
+      "mm_per_swing": 4.65526168690601,
+      "counts": {
+        "6": {
+          "roll": 22,
+          "yaw": 23,
+          "charged": 23
+        },
+        "10": {
+          "roll": 22,
+          "yaw": 23,
+          "charged": 23
+        },
+        "15": {
+          "roll": 13,
+          "yaw": 22,
+          "charged": 22
+        }
+      },
+      "mean_pair_mm": 9.733728981712567,
+      "pair_end_headings_deg": [
+        -0.0009340300025575725,
+        -3.350952772049211,
+        -0.9248875539620479,
+        -2.1214127196530965,
+        -2.323061701378285,
+        -1.9200360576712143,
+        -2.486696864212239,
+        -2.649225618783582,
+        -2.3098702612196975,
+        -2.8400832767561934,
+        -3.4040716886499416
+      ],
+      "max_pair_end_deg": 3.4040716886499416,
+      "mean_intrapair_yaw_span_deg": 5.0469289943511395,
+      "final_heading_deg": 2.004141576296499,
+      "peak_tilt_deg": 2.6864188925468917,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.717587316220125,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4849132999686123,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": 1,
+      "pairs": 10,
+      "completed_pairs": 10,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 105.75355323135526,
+      "lateral_mm": -3.6097684849149854,
+      "mm_per_swing": 5.035883487207393,
+      "counts": {
+        "6": {
+          "roll": 20,
+          "yaw": 21,
+          "charged": 21
+        },
+        "10": {
+          "roll": 20,
+          "yaw": 21,
+          "charged": 21
+        },
+        "15": {
+          "roll": 9,
+          "yaw": 20,
+          "charged": 20
+        }
+      },
+      "mean_pair_mm": 10.575355323135526,
+      "pair_end_headings_deg": [
+        0.0012417614975070864,
+        3.771301644384118,
+        1.5301419674128083,
+        2.4618671593449273,
+        3.003078863955263,
+        3.937169167185461,
+        4.552433508884448,
+        4.715584173799075,
+        4.825869394511988,
+        5.318127988610818
+      ],
+      "max_pair_end_deg": 5.318127988610818,
+      "mean_intrapair_yaw_span_deg": 5.286584996644805,
+      "final_heading_deg": 0.8592548560630596,
+      "peak_tilt_deg": 2.39003060276462,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.67050321399403,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4875625716562383,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "trials": [
+    {
+      "name": "trained",
+      "side": -1,
+      "pairs": 1,
+      "completed_pairs": 1,
+      "dt": 0.00025,
+      "passed": false,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": -0.0001248675825764668,
+      "lateral_mm": -0.0031273413797582987,
+      "mm_per_swing": -6.24337912882334e-05,
+      "counts": {
+        "6": {
+          "roll": 2,
+          "yaw": 2,
+          "charged": 2
+        },
+        "10": {
+          "roll": 0,
+          "yaw": 2,
+          "charged": 2
+        },
+        "15": {
+          "roll": 0,
+          "yaw": 2,
+          "charged": 2
+        }
+      },
+      "mean_pair_mm": -0.0001248675825764668,
+      "pair_end_headings_deg": [
+        0.007978870299878647
+      ],
+      "max_pair_end_deg": 0.007978870299878647,
+      "mean_intrapair_yaw_span_deg": 0.011865446383516253,
+      "final_heading_deg": -0.0010399940430148018,
+      "peak_tilt_deg": 0.02209188807032301,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 0.04318445064927052,
+      "head_peak_torque_nm": 0.12447881453457907,
+      "min_joint_margin_rad": 0.5926681097591356,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": 1,
+      "pairs": 1,
+      "completed_pairs": 1,
+      "dt": 0.00025,
+      "passed": false,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": -0.000127876522718523,
+      "lateral_mm": 0.0031454788853011997,
+      "mm_per_swing": -6.39382613592615e-05,
+      "counts": {
+        "6": {
+          "roll": 2,
+          "yaw": 2,
+          "charged": 2
+        },
+        "10": {
+          "roll": 0,
+          "yaw": 2,
+          "charged": 2
+        },
+        "15": {
+          "roll": 0,
+          "yaw": 2,
+          "charged": 2
+        }
+      },
+      "mean_pair_mm": -0.000127876522718523,
+      "pair_end_headings_deg": [
+        -0.008090270128711658
+      ],
+      "max_pair_end_deg": 0.008090270128711658,
+      "mean_intrapair_yaw_span_deg": 0.01196436943410207,
+      "final_heading_deg": 0.0010971349193196862,
+      "peak_tilt_deg": 0.021680696565668223,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 0.042371080022905815,
+      "head_peak_torque_nm": 0.12119165080947873,
+      "min_joint_margin_rad": 0.5948413796527485,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": -1,
+      "pairs": 2,
+      "completed_pairs": 2,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 0.6857701612899304,
+      "lateral_mm": 0.0013396010097477557,
+      "mm_per_swing": 0.1714425403224826,
+      "counts": {
+        "6": {
+          "roll": 4,
+          "yaw": 4,
+          "charged": 4
+        },
+        "10": {
+          "roll": 3,
+          "yaw": 4,
+          "charged": 4
+        },
+        "15": {
+          "roll": 3,
+          "yaw": 3,
+          "charged": 4
+        }
+      },
+      "mean_pair_mm": 0.3428850806449652,
+      "pair_end_headings_deg": [
+        0.007978870299878647,
+        1.0640143471667334
+      ],
+      "max_pair_end_deg": 1.0640143471667334,
+      "mean_intrapair_yaw_span_deg": 0.5627977852713627,
+      "final_heading_deg": 1.1217245996732594,
+      "peak_tilt_deg": 1.3358223066954489,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 2.4971522148959373,
+      "head_peak_torque_nm": 0.31493189280401723,
+      "min_joint_margin_rad": 0.3723988538450027,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": 1,
+      "pairs": 2,
+      "completed_pairs": 2,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 0.7109450476875446,
+      "lateral_mm": -0.09804370584503179,
+      "mm_per_swing": 0.17773626192188616,
+      "counts": {
+        "6": {
+          "roll": 4,
+          "yaw": 4,
+          "charged": 4
+        },
+        "10": {
+          "roll": 3,
+          "yaw": 4,
+          "charged": 4
+        },
+        "15": {
+          "roll": 3,
+          "yaw": 3,
+          "charged": 4
+        }
+      },
+      "mean_pair_mm": 0.3554725238437723,
+      "pair_end_headings_deg": [
+        -0.008090270128711658,
+        -1.0361272006870872
+      ],
+      "max_pair_end_deg": 1.0361272006870872,
+      "mean_intrapair_yaw_span_deg": 0.5499600934352042,
+      "final_heading_deg": -1.070258940103327,
+      "peak_tilt_deg": 1.274522463854814,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 2.391948864883882,
+      "head_peak_torque_nm": 0.31909891889260333,
+      "min_joint_margin_rad": 0.37801122606907667,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": -1,
+      "pairs": 3,
+      "completed_pairs": 3,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 10.502250635053135,
+      "lateral_mm": -0.17351071449175687,
+      "mm_per_swing": 1.7503751058421892,
+      "counts": {
+        "6": {
+          "roll": 6,
+          "yaw": 6,
+          "charged": 6
+        },
+        "10": {
+          "roll": 5,
+          "yaw": 6,
+          "charged": 6
+        },
+        "15": {
+          "roll": 4,
+          "yaw": 5,
+          "charged": 6
+        }
+      },
+      "mean_pair_mm": 3.5007502116843785,
+      "pair_end_headings_deg": [
+        0.007978870299878647,
+        1.0640143471667334,
+        -4.4338813388454374
+      ],
+      "max_pair_end_deg": 4.4338813388454374,
+      "mean_intrapair_yaw_span_deg": 2.624751984644088,
+      "final_heading_deg": -2.9277188184513276,
+      "peak_tilt_deg": 5.2569685710096765,
+      "edge_support_s": 0.04,
+      "rim_height_difference_mm": 10.25892818992692,
+      "head_peak_torque_nm": 0.3558208849774584,
+      "min_joint_margin_rad": 0.378527100797428,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": 1,
+      "pairs": 3,
+      "completed_pairs": 3,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 9.777263585837789,
+      "lateral_mm": -1.8963335512145614,
+      "mm_per_swing": 1.6295439309729647,
+      "counts": {
+        "6": {
+          "roll": 6,
+          "yaw": 6,
+          "charged": 6
+        },
+        "10": {
+          "roll": 5,
+          "yaw": 6,
+          "charged": 6
+        },
+        "15": {
+          "roll": 4,
+          "yaw": 5,
+          "charged": 6
+        }
+      },
+      "mean_pair_mm": 3.2590878619459294,
+      "pair_end_headings_deg": [
+        -0.008090270128711658,
+        -1.0361272006870872,
+        4.9343322120954705
+      ],
+      "max_pair_end_deg": 4.9343322120954705,
+      "mean_intrapair_yaw_span_deg": 2.7503728847653295,
+      "final_heading_deg": 4.054011800080143,
+      "peak_tilt_deg": 5.869730056416489,
+      "edge_support_s": 0.1,
+      "rim_height_difference_mm": 11.25679967318049,
+      "head_peak_torque_nm": 0.3513222612307799,
+      "min_joint_margin_rad": 0.3842406462106567,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": -1,
+      "pairs": 4,
+      "completed_pairs": 4,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 24.629922857780283,
+      "lateral_mm": -3.0021983917066857,
+      "mm_per_swing": 3.0787403572225354,
+      "counts": {
+        "6": {
+          "roll": 8,
+          "yaw": 8,
+          "charged": 8
+        },
+        "10": {
+          "roll": 7,
+          "yaw": 8,
+          "charged": 8
+        },
+        "15": {
+          "roll": 4,
+          "yaw": 7,
+          "charged": 8
+        }
+      },
+      "mean_pair_mm": 6.157480714445071,
+      "pair_end_headings_deg": [
+        0.007978870299878647,
+        1.0640143471667334,
+        -4.4338813388454374,
+        -10.117217319857895
+      ],
+      "max_pair_end_deg": 10.117217319857895,
+      "mean_intrapair_yaw_span_deg": 4.837466851513375,
+      "final_heading_deg": -2.975061145301305,
+      "peak_tilt_deg": 8.892745973337268,
+      "edge_support_s": 0.19999999999999998,
+      "rim_height_difference_mm": 16.99547609266573,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.378527100797428,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": 1,
+      "pairs": 4,
+      "completed_pairs": 4,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 25.270709208373507,
+      "lateral_mm": -5.5227367600414565,
+      "mm_per_swing": 3.1588386510466884,
+      "counts": {
+        "6": {
+          "roll": 8,
+          "yaw": 8,
+          "charged": 8
+        },
+        "10": {
+          "roll": 7,
+          "yaw": 8,
+          "charged": 8
+        },
+        "15": {
+          "roll": 4,
+          "yaw": 7,
+          "charged": 8
+        }
+      },
+      "mean_pair_mm": 6.317677302093377,
+      "pair_end_headings_deg": [
+        -0.008090270128711658,
+        -1.0361272006870872,
+        4.9343322120954705,
+        9.115189819651004
+      ],
+      "max_pair_end_deg": 9.115189819651004,
+      "mean_intrapair_yaw_span_deg": 4.679750281136059,
+      "final_heading_deg": 9.20440604664032,
+      "peak_tilt_deg": 10.62613138539641,
+      "edge_support_s": 0.19999999999999998,
+      "rim_height_difference_mm": 19.7360594838254,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3842406462106567,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": -1,
+      "pairs": 5,
+      "completed_pairs": 5,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 37.345454221608826,
+      "lateral_mm": -10.765764495018676,
+      "mm_per_swing": 3.7345454221608825,
+      "counts": {
+        "6": {
+          "roll": 10,
+          "yaw": 10,
+          "charged": 10
+        },
+        "10": {
+          "roll": 8,
+          "yaw": 10,
+          "charged": 10
+        },
+        "15": {
+          "roll": 6,
+          "yaw": 9,
+          "charged": 10
+        }
+      },
+      "mean_pair_mm": 7.469090844321765,
+      "pair_end_headings_deg": [
+        0.007978870299878647,
+        1.0640143471667334,
+        -4.4338813388454374,
+        -10.117217319857895,
+        -9.263871658147751
+      ],
+      "max_pair_end_deg": 10.117217319857895,
+      "mean_intrapair_yaw_span_deg": 5.472890748630816,
+      "final_heading_deg": -1.665022540237348,
+      "peak_tilt_deg": 8.892745973337268,
+      "edge_support_s": 0.3,
+      "rim_height_difference_mm": 16.99547609266573,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.378527100797428,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": 1,
+      "pairs": 5,
+      "completed_pairs": 5,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 42.74181217084275,
+      "lateral_mm": -4.245789389461908,
+      "mm_per_swing": 4.274181217084275,
+      "counts": {
+        "6": {
+          "roll": 10,
+          "yaw": 10,
+          "charged": 10
+        },
+        "10": {
+          "roll": 9,
+          "yaw": 10,
+          "charged": 10
+        },
+        "15": {
+          "roll": 5,
+          "yaw": 9,
+          "charged": 10
+        }
+      },
+      "mean_pair_mm": 8.54836243416855,
+      "pair_end_headings_deg": [
+        -0.008090270128711658,
+        -1.0361272006870872,
+        4.9343322120954705,
+        9.115189819651004,
+        11.424699602711023
+      ],
+      "max_pair_end_deg": 11.424699602711023,
+      "mean_intrapair_yaw_span_deg": 5.54394374655329,
+      "final_heading_deg": 6.9872564658664675,
+      "peak_tilt_deg": 10.62613138539641,
+      "edge_support_s": 0.19999999999999998,
+      "rim_height_difference_mm": 19.7360594838254,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3842406462106567,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": -1,
+      "pairs": 6,
+      "completed_pairs": 6,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 50.7774210794775,
+      "lateral_mm": -17.944372932509737,
+      "mm_per_swing": 4.231451756623125,
+      "counts": {
+        "6": {
+          "roll": 13,
+          "yaw": 12,
+          "charged": 13
+        },
+        "10": {
+          "roll": 10,
+          "yaw": 12,
+          "charged": 12
+        },
+        "15": {
+          "roll": 6,
+          "yaw": 11,
+          "charged": 12
+        }
+      },
+      "mean_pair_mm": 8.46290351324625,
+      "pair_end_headings_deg": [
+        0.007978870299878647,
+        1.0640143471667334,
+        -4.4338813388454374,
+        -10.117217319857895,
+        -9.263871658147751,
+        -9.405231006263934
+      ],
+      "max_pair_end_deg": 10.117217319857895,
+      "mean_intrapair_yaw_span_deg": 6.106236004840617,
+      "final_heading_deg": -2.3625288319003377,
+      "peak_tilt_deg": 8.892745973337268,
+      "edge_support_s": 0.4400000000000001,
+      "rim_height_difference_mm": 16.99547609266573,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.378527100797428,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": 1,
+      "pairs": 6,
+      "completed_pairs": 6,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 57.11617129806687,
+      "lateral_mm": 0.05880348350574809,
+      "mm_per_swing": 4.7596809415055725,
+      "counts": {
+        "6": {
+          "roll": 12,
+          "yaw": 12,
+          "charged": 12
+        },
+        "10": {
+          "roll": 9,
+          "yaw": 12,
+          "charged": 12
+        },
+        "15": {
+          "roll": 5,
+          "yaw": 11,
+          "charged": 12
+        }
+      },
+      "mean_pair_mm": 9.519361883011145,
+      "pair_end_headings_deg": [
+        -0.008090270128711658,
+        -1.0361272006870872,
+        4.9343322120954705,
+        9.115189819651004,
+        11.424699602711023,
+        13.590567782173022
+      ],
+      "max_pair_end_deg": 13.590567782173022,
+      "mean_intrapair_yaw_span_deg": 6.412279273701539,
+      "final_heading_deg": 5.186419273354778,
+      "peak_tilt_deg": 10.62613138539641,
+      "edge_support_s": 0.36000000000000004,
+      "rim_height_difference_mm": 19.7360594838254,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3842406462106567,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": -1,
+      "pairs": 7,
+      "completed_pairs": 7,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 68.08653114471086,
+      "lateral_mm": -21.49580394324709,
+      "mm_per_swing": 4.863323653193633,
+      "counts": {
+        "6": {
+          "roll": 14,
+          "yaw": 14,
+          "charged": 14
+        },
+        "10": {
+          "roll": 12,
+          "yaw": 14,
+          "charged": 14
+        },
+        "15": {
+          "roll": 8,
+          "yaw": 13,
+          "charged": 14
+        }
+      },
+      "mean_pair_mm": 9.726647306387266,
+      "pair_end_headings_deg": [
+        0.007978870299878647,
+        1.0640143471667334,
+        -4.4338813388454374,
+        -10.117217319857895,
+        -9.263871658147751,
+        -9.405231006263934,
+        -10.828933423218873
+      ],
+      "max_pair_end_deg": 10.828933423218873,
+      "mean_intrapair_yaw_span_deg": 6.521844961510139,
+      "final_heading_deg": -2.151016429695269,
+      "peak_tilt_deg": 8.892745973337268,
+      "edge_support_s": 0.5200000000000001,
+      "rim_height_difference_mm": 16.99547609266573,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.378527100797428,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": 1,
+      "pairs": 7,
+      "completed_pairs": 7,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 71.29959148706668,
+      "lateral_mm": 7.852632075286862,
+      "mm_per_swing": 5.092827963361906,
+      "counts": {
+        "6": {
+          "roll": 14,
+          "yaw": 14,
+          "charged": 14
+        },
+        "10": {
+          "roll": 10,
+          "yaw": 14,
+          "charged": 14
+        },
+        "15": {
+          "roll": 6,
+          "yaw": 13,
+          "charged": 14
+        }
+      },
+      "mean_pair_mm": 10.185655926723811,
+      "pair_end_headings_deg": [
+        -0.008090270128711658,
+        -1.0361272006870872,
+        4.9343322120954705,
+        9.115189819651004,
+        11.424699602711023,
+        13.590567782173022,
+        11.913657991761584
+      ],
+      "max_pair_end_deg": 13.590567782173022,
+      "mean_intrapair_yaw_span_deg": 6.8157893118187625,
+      "final_heading_deg": 4.412156721015647,
+      "peak_tilt_deg": 10.62613138539641,
+      "edge_support_s": 0.4400000000000001,
+      "rim_height_difference_mm": 19.7360594838254,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3842406462106567,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": -1,
+      "pairs": 8,
+      "completed_pairs": 8,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 85.37066490170442,
+      "lateral_mm": -25.78502220477526,
+      "mm_per_swing": 5.335666556356526,
+      "counts": {
+        "6": {
+          "roll": 16,
+          "yaw": 16,
+          "charged": 16
+        },
+        "10": {
+          "roll": 14,
+          "yaw": 16,
+          "charged": 16
+        },
+        "15": {
+          "roll": 8,
+          "yaw": 15,
+          "charged": 16
+        }
+      },
+      "mean_pair_mm": 10.671333112713052,
+      "pair_end_headings_deg": [
+        0.007978870299878647,
+        1.0640143471667334,
+        -4.4338813388454374,
+        -10.117217319857895,
+        -9.263871658147751,
+        -9.405231006263934,
+        -10.828933423218873,
+        -9.481992010171805
+      ],
+      "max_pair_end_deg": 10.828933423218873,
+      "mean_intrapair_yaw_span_deg": 6.902436656923683,
+      "final_heading_deg": -0.5253395259174489,
+      "peak_tilt_deg": 8.892745973337268,
+      "edge_support_s": 0.6200000000000002,
+      "rim_height_difference_mm": 16.99547609266573,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.378527100797428,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": 1,
+      "pairs": 8,
+      "completed_pairs": 8,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 85.59012662969668,
+      "lateral_mm": 15.208234832597153,
+      "mm_per_swing": 5.349382914356043,
+      "counts": {
+        "6": {
+          "roll": 15,
+          "yaw": 16,
+          "charged": 16
+        },
+        "10": {
+          "roll": 12,
+          "yaw": 16,
+          "charged": 16
+        },
+        "15": {
+          "roll": 6,
+          "yaw": 15,
+          "charged": 16
+        }
+      },
+      "mean_pair_mm": 10.698765828712085,
+      "pair_end_headings_deg": [
+        -0.008090270128711658,
+        -1.0361272006870872,
+        4.9343322120954705,
+        9.115189819651004,
+        11.424699602711023,
+        13.590567782173022,
+        11.913657991761584,
+        12.150681252011864
+      ],
+      "max_pair_end_deg": 13.590567782173022,
+      "mean_intrapair_yaw_span_deg": 7.1585244644921655,
+      "final_heading_deg": 4.614311368055661,
+      "peak_tilt_deg": 10.62613138539641,
+      "edge_support_s": 0.5400000000000001,
+      "rim_height_difference_mm": 19.7360594838254,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3842406462106567,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": -1,
+      "pairs": 9,
+      "completed_pairs": 9,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 99.33015321627599,
+      "lateral_mm": -31.956298288018306,
+      "mm_per_swing": 5.518341845348666,
+      "counts": {
+        "6": {
+          "roll": 18,
+          "yaw": 18,
+          "charged": 18
+        },
+        "10": {
+          "roll": 16,
+          "yaw": 18,
+          "charged": 18
+        },
+        "15": {
+          "roll": 8,
+          "yaw": 17,
+          "charged": 18
+        }
+      },
+      "mean_pair_mm": 11.036683690697332,
+      "pair_end_headings_deg": [
+        0.007978870299878647,
+        1.0640143471667334,
+        -4.4338813388454374,
+        -10.117217319857895,
+        -9.263871658147751,
+        -9.405231006263934,
+        -10.828933423218873,
+        -9.481992010171805,
+        -7.78861046148169
+      ],
+      "max_pair_end_deg": 10.828933423218873,
+      "mean_intrapair_yaw_span_deg": 7.23753901223802,
+      "final_heading_deg": -0.40473923778932236,
+      "peak_tilt_deg": 8.892745973337268,
+      "edge_support_s": 0.7200000000000003,
+      "rim_height_difference_mm": 16.99547609266573,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.378527100797428,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": 1,
+      "pairs": 9,
+      "completed_pairs": 9,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 100.54544131462076,
+      "lateral_mm": 22.500417592953806,
+      "mm_per_swing": 5.585857850812264,
+      "counts": {
+        "6": {
+          "roll": 18,
+          "yaw": 18,
+          "charged": 18
+        },
+        "10": {
+          "roll": 14,
+          "yaw": 18,
+          "charged": 18
+        },
+        "15": {
+          "roll": 8,
+          "yaw": 17,
+          "charged": 18
+        }
+      },
+      "mean_pair_mm": 11.171715701624528,
+      "pair_end_headings_deg": [
+        -0.008090270128711658,
+        -1.0361272006870872,
+        4.9343322120954705,
+        9.115189819651004,
+        11.424699602711023,
+        13.590567782173022,
+        11.913657991761584,
+        12.150681252011864,
+        12.623193649203737
+      ],
+      "max_pair_end_deg": 13.590567782173022,
+      "mean_intrapair_yaw_span_deg": 7.362603861459011,
+      "final_heading_deg": 5.055091202467897,
+      "peak_tilt_deg": 10.62613138539641,
+      "edge_support_s": 0.6600000000000003,
+      "rim_height_difference_mm": 19.7360594838254,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3842406462106567,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": -1,
+      "pairs": 10,
+      "completed_pairs": 10,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 113.4778176806152,
+      "lateral_mm": -38.63291075399684,
+      "mm_per_swing": 5.67389088403076,
+      "counts": {
+        "6": {
+          "roll": 21,
+          "yaw": 20,
+          "charged": 21
+        },
+        "10": {
+          "roll": 18,
+          "yaw": 20,
+          "charged": 20
+        },
+        "15": {
+          "roll": 8,
+          "yaw": 19,
+          "charged": 20
+        }
+      },
+      "mean_pair_mm": 11.34778176806152,
+      "pair_end_headings_deg": [
+        0.007978870299878647,
+        1.0640143471667334,
+        -4.4338813388454374,
+        -10.117217319857895,
+        -9.263871658147751,
+        -9.405231006263934,
+        -10.828933423218873,
+        -9.481992010171805,
+        -7.78861046148169,
+        -8.48601293172534
+      ],
+      "max_pair_end_deg": 10.828933423218873,
+      "mean_intrapair_yaw_span_deg": 7.456496817368796,
+      "final_heading_deg": -1.4289646144621349,
+      "peak_tilt_deg": 8.892745973337268,
+      "edge_support_s": 0.8400000000000004,
+      "rim_height_difference_mm": 16.99547609266573,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.378527100797428,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": 1,
+      "pairs": 10,
+      "completed_pairs": 10,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 117.39524698303852,
+      "lateral_mm": 28.87845607856549,
+      "mm_per_swing": 5.869762349151926,
+      "counts": {
+        "6": {
+          "roll": 19,
+          "yaw": 20,
+          "charged": 20
+        },
+        "10": {
+          "roll": 16,
+          "yaw": 20,
+          "charged": 20
+        },
+        "15": {
+          "roll": 8,
+          "yaw": 19,
+          "charged": 20
+        }
+      },
+      "mean_pair_mm": 11.739524698303851,
+      "pair_end_headings_deg": [
+        -0.008090270128711658,
+        -1.0361272006870872,
+        4.9343322120954705,
+        9.115189819651004,
+        11.424699602711023,
+        13.590567782173022,
+        11.913657991761584,
+        12.150681252011864,
+        12.623193649203737,
+        12.992289820707937
+      ],
+      "max_pair_end_deg": 13.590567782173022,
+      "mean_intrapair_yaw_span_deg": 7.561470840701607,
+      "final_heading_deg": 4.452122702214258,
+      "peak_tilt_deg": 10.62613138539641,
+      "edge_support_s": 0.7600000000000003,
+      "rim_height_difference_mm": 19.7360594838254,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3842406462106567,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": -1,
+      "pairs": 11,
+      "completed_pairs": 11,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 130.81868456370037,
+      "lateral_mm": -42.626685865504996,
+      "mm_per_swing": 5.946303843804563,
+      "counts": {
+        "6": {
+          "roll": 22,
+          "yaw": 22,
+          "charged": 22
+        },
+        "10": {
+          "roll": 20,
+          "yaw": 22,
+          "charged": 22
+        },
+        "15": {
+          "roll": 10,
+          "yaw": 21,
+          "charged": 22
+        }
+      },
+      "mean_pair_mm": 11.892607687609125,
+      "pair_end_headings_deg": [
+        0.007978870299878647,
+        1.0640143471667334,
+        -4.4338813388454374,
+        -10.117217319857895,
+        -9.263871658147751,
+        -9.405231006263934,
+        -10.828933423218873,
+        -9.481992010171805,
+        -7.78861046148169,
+        -8.48601293172534,
+        -9.693677929463716
+      ],
+      "max_pair_end_deg": 10.828933423218873,
+      "mean_intrapair_yaw_span_deg": 7.598814741112149,
+      "final_heading_deg": -0.9651618181883704,
+      "peak_tilt_deg": 8.892745973337268,
+      "edge_support_s": 0.9000000000000005,
+      "rim_height_difference_mm": 16.99547609266573,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.378527100797428,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": 1,
+      "pairs": 11,
+      "completed_pairs": 11,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 133.7487936060656,
+      "lateral_mm": 34.60132771970203,
+      "mm_per_swing": 6.079490618457527,
+      "counts": {
+        "6": {
+          "roll": 22,
+          "yaw": 22,
+          "charged": 22
+        },
+        "10": {
+          "roll": 18,
+          "yaw": 22,
+          "charged": 22
+        },
+        "15": {
+          "roll": 8,
+          "yaw": 21,
+          "charged": 22
+        }
+      },
+      "mean_pair_mm": 12.158981236915054,
+      "pair_end_headings_deg": [
+        -0.008090270128711658,
+        -1.0361272006870872,
+        4.9343322120954705,
+        9.115189819651004,
+        11.424699602711023,
+        13.590567782173022,
+        11.913657991761584,
+        12.150681252011864,
+        12.623193649203737,
+        12.992289820707937,
+        11.617373307883911
+      ],
+      "max_pair_end_deg": 13.590567782173022,
+      "mean_intrapair_yaw_span_deg": 7.739012517889953,
+      "final_heading_deg": 3.9656162066437934,
+      "peak_tilt_deg": 10.62613138539641,
+      "edge_support_s": 0.8200000000000004,
+      "rim_height_difference_mm": 19.7360594838254,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3842406462106567,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": -1,
+      "pairs": 12,
+      "completed_pairs": 12,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 147.1370435446469,
+      "lateral_mm": -47.805079779814385,
+      "mm_per_swing": 6.1307101476936205,
+      "counts": {
+        "6": {
+          "roll": 24,
+          "yaw": 24,
+          "charged": 24
+        },
+        "10": {
+          "roll": 22,
+          "yaw": 24,
+          "charged": 24
+        },
+        "15": {
+          "roll": 10,
+          "yaw": 23,
+          "charged": 24
+        }
+      },
+      "mean_pair_mm": 12.261420295387241,
+      "pair_end_headings_deg": [
+        0.007978870299878647,
+        1.0640143471667334,
+        -4.4338813388454374,
+        -10.117217319857895,
+        -9.263871658147751,
+        -9.405231006263934,
+        -10.828933423218873,
+        -9.481992010171805,
+        -7.78861046148169,
+        -8.48601293172534,
+        -9.693677929463716,
+        -8.461432629526065
+      ],
+      "max_pair_end_deg": 10.828933423218873,
+      "mean_intrapair_yaw_span_deg": 7.764636863573327,
+      "final_heading_deg": 0.4402698460801065,
+      "peak_tilt_deg": 8.892745973337268,
+      "edge_support_s": 1.0000000000000004,
+      "rim_height_difference_mm": 16.99547609266573,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.378527100797428,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": 1,
+      "pairs": 12,
+      "completed_pairs": 12,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 149.22874604714553,
+      "lateral_mm": 40.177932024491504,
+      "mm_per_swing": 6.217864418631064,
+      "counts": {
+        "6": {
+          "roll": 23,
+          "yaw": 24,
+          "charged": 24
+        },
+        "10": {
+          "roll": 20,
+          "yaw": 24,
+          "charged": 24
+        },
+        "15": {
+          "roll": 8,
+          "yaw": 23,
+          "charged": 24
+        }
+      },
+      "mean_pair_mm": 12.435728837262127,
+      "pair_end_headings_deg": [
+        -0.008090270128711658,
+        -1.0361272006870872,
+        4.9343322120954705,
+        9.115189819651004,
+        11.424699602711023,
+        13.590567782173022,
+        11.913657991761584,
+        12.150681252011864,
+        12.623193649203737,
+        12.992289820707937,
+        11.617373307883911,
+        11.695215465037597
+      ],
+      "max_pair_end_deg": 13.590567782173022,
+      "mean_intrapair_yaw_span_deg": 7.8867668905972925,
+      "final_heading_deg": 4.143602169561238,
+      "peak_tilt_deg": 10.62613138539641,
+      "edge_support_s": 0.9200000000000005,
+      "rim_height_difference_mm": 19.7360594838254,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3842406462106567,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": -1,
+      "pairs": 13,
+      "completed_pairs": 13,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 161.054319265183,
+      "lateral_mm": -54.40753452874536,
+      "mm_per_swing": 6.194396894814731,
+      "counts": {
+        "6": {
+          "roll": 26,
+          "yaw": 26,
+          "charged": 26
+        },
+        "10": {
+          "roll": 24,
+          "yaw": 26,
+          "charged": 26
+        },
+        "15": {
+          "roll": 12,
+          "yaw": 25,
+          "charged": 26
+        }
+      },
+      "mean_pair_mm": 12.388793789629462,
+      "pair_end_headings_deg": [
+        0.007978870299878647,
+        1.0640143471667334,
+        -4.4338813388454374,
+        -10.117217319857895,
+        -9.263871658147751,
+        -9.405231006263934,
+        -10.828933423218873,
+        -9.481992010171805,
+        -7.78861046148169,
+        -8.48601293172534,
+        -9.693677929463716,
+        -8.461432629526065,
+        -7.235714185276248
+      ],
+      "max_pair_end_deg": 10.828933423218873,
+      "mean_intrapair_yaw_span_deg": 7.905791653439538,
+      "final_heading_deg": 0.10156182876800655,
+      "peak_tilt_deg": 8.892745973337268,
+      "edge_support_s": 1.1000000000000005,
+      "rim_height_difference_mm": 16.99547609266573,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.378527100797428,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": 1,
+      "pairs": 13,
+      "completed_pairs": 13,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 164.0198235411077,
+      "lateral_mm": 47.045139947943895,
+      "mm_per_swing": 6.308454751581066,
+      "counts": {
+        "6": {
+          "roll": 26,
+          "yaw": 26,
+          "charged": 26
+        },
+        "10": {
+          "roll": 22,
+          "yaw": 26,
+          "charged": 26
+        },
+        "15": {
+          "roll": 8,
+          "yaw": 25,
+          "charged": 26
+        }
+      },
+      "mean_pair_mm": 12.616909503162132,
+      "pair_end_headings_deg": [
+        -0.008090270128711658,
+        -1.0361272006870872,
+        4.9343322120954705,
+        9.115189819651004,
+        11.424699602711023,
+        13.590567782173022,
+        11.913657991761584,
+        12.150681252011864,
+        12.623193649203737,
+        12.992289820707937,
+        11.617373307883911,
+        11.695215465037597,
+        11.473900776338438
+      ],
+      "max_pair_end_deg": 13.590567782173022,
+      "mean_intrapair_yaw_span_deg": 7.961709972046803,
+      "final_heading_deg": 4.116464371347658,
+      "peak_tilt_deg": 10.62613138539641,
+      "edge_support_s": 1.0000000000000004,
+      "rim_height_difference_mm": 19.7360594838254,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3842406462106567,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": -1,
+      "pairs": 14,
+      "completed_pairs": 14,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 176.57299487756114,
+      "lateral_mm": -59.62993837966125,
+      "mm_per_swing": 6.3061783884843265,
+      "counts": {
+        "6": {
+          "roll": 29,
+          "yaw": 28,
+          "charged": 29
+        },
+        "10": {
+          "roll": 26,
+          "yaw": 28,
+          "charged": 28
+        },
+        "15": {
+          "roll": 13,
+          "yaw": 27,
+          "charged": 28
+        }
+      },
+      "mean_pair_mm": 12.612356776968653,
+      "pair_end_headings_deg": [
+        0.007978870299878647,
+        1.0640143471667334,
+        -4.4338813388454374,
+        -10.117217319857895,
+        -9.263871658147751,
+        -9.405231006263934,
+        -10.828933423218873,
+        -9.481992010171805,
+        -7.78861046148169,
+        -8.48601293172534,
+        -9.693677929463716,
+        -8.461432629526065,
+        -7.235714185276248,
+        -8.342038481119666
+      ],
+      "max_pair_end_deg": 10.828933423218873,
+      "mean_intrapair_yaw_span_deg": 8.02607144123893,
+      "final_heading_deg": -0.5235782922923071,
+      "peak_tilt_deg": 8.892745973337268,
+      "edge_support_s": 1.2400000000000007,
+      "rim_height_difference_mm": 16.99547609266573,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.378527100797428,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "trained",
+      "side": 1,
+      "pairs": 14,
+      "completed_pairs": 14,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 178.62842700756457,
+      "lateral_mm": 54.57499401511512,
+      "mm_per_swing": 6.379586678841592,
+      "counts": {
+        "6": {
+          "roll": 27,
+          "yaw": 28,
+          "charged": 28
+        },
+        "10": {
+          "roll": 24,
+          "yaw": 28,
+          "charged": 28
+        },
+        "15": {
+          "roll": 8,
+          "yaw": 27,
+          "charged": 28
+        }
+      },
+      "mean_pair_mm": 12.759173357683183,
+      "pair_end_headings_deg": [
+        -0.008090270128711658,
+        -1.0361272006870872,
+        4.9343322120954705,
+        9.115189819651004,
+        11.424699602711023,
+        13.590567782173022,
+        11.913657991761584,
+        12.150681252011864,
+        12.623193649203737,
+        12.992289820707937,
+        11.617373307883911,
+        11.695215465037597,
+        11.473900776338438,
+        11.911874355302997
+      ],
+      "max_pair_end_deg": 13.590567782173022,
+      "mean_intrapair_yaw_span_deg": 8.066295650945644,
+      "final_heading_deg": 4.2550067026398075,
+      "peak_tilt_deg": 10.62613138539641,
+      "edge_support_s": 1.1000000000000005,
+      "rim_height_difference_mm": 19.7360594838254,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3842406462106567,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": -1,
+      "pairs": 1,
+      "completed_pairs": 1,
+      "dt": 0.00025,
+      "passed": false,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": -6.706529733851107e-05,
+      "lateral_mm": -0.008413361330717784,
+      "mm_per_swing": -3.3532648669255534e-05,
+      "counts": {
+        "6": {
+          "roll": 2,
+          "yaw": 2,
+          "charged": 2
+        },
+        "10": {
+          "roll": 1,
+          "yaw": 2,
+          "charged": 2
+        },
+        "15": {
+          "roll": 0,
+          "yaw": 2,
+          "charged": 2
+        }
+      },
+      "mean_pair_mm": -6.706529733851107e-05,
+      "pair_end_headings_deg": [
+        0.007599589068239146
+      ],
+      "max_pair_end_deg": 0.007599589068239146,
+      "mean_intrapair_yaw_span_deg": 0.012957915852539116,
+      "final_heading_deg": -0.001562320676823581,
+      "peak_tilt_deg": 0.029697444576337616,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 0.05805044109593327,
+      "head_peak_torque_nm": 0.13481158089579312,
+      "min_joint_margin_rad": 0.6101323664711946,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": 1,
+      "pairs": 1,
+      "completed_pairs": 1,
+      "dt": 0.00025,
+      "passed": false,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": -2.831572558740159e-05,
+      "lateral_mm": 0.00839904062396369,
+      "mm_per_swing": -1.4157862793700795e-05,
+      "counts": {
+        "6": {
+          "roll": 2,
+          "yaw": 2,
+          "charged": 2
+        },
+        "10": {
+          "roll": 1,
+          "yaw": 2,
+          "charged": 2
+        },
+        "15": {
+          "roll": 0,
+          "yaw": 2,
+          "charged": 2
+        }
+      },
+      "mean_pair_mm": -2.831572558740159e-05,
+      "pair_end_headings_deg": [
+        -0.007700135456886608
+      ],
+      "max_pair_end_deg": 0.007700135456886608,
+      "mean_intrapair_yaw_span_deg": 0.012993232171791796,
+      "final_heading_deg": 0.001729424432648163,
+      "peak_tilt_deg": 0.02920410072767577,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 0.05708029891563923,
+      "head_peak_torque_nm": 0.13180151072128718,
+      "min_joint_margin_rad": 0.6121703206401838,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": -1,
+      "pairs": 2,
+      "completed_pairs": 2,
+      "dt": 0.00025,
+      "passed": false,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": -0.04497433415296522,
+      "lateral_mm": -0.11836153476825562,
+      "mm_per_swing": -0.011243583538241305,
+      "counts": {
+        "6": {
+          "roll": 4,
+          "yaw": 4,
+          "charged": 4
+        },
+        "10": {
+          "roll": 4,
+          "yaw": 4,
+          "charged": 4
+        },
+        "15": {
+          "roll": 3,
+          "yaw": 3,
+          "charged": 4
+        }
+      },
+      "mean_pair_mm": -0.02248716707648261,
+      "pair_end_headings_deg": [
+        0.007599589068239146,
+        0.7310646122234328
+      ],
+      "max_pair_end_deg": 0.7310646122234328,
+      "mean_intrapair_yaw_span_deg": 0.40764178620479546,
+      "final_heading_deg": 0.8228037711804825,
+      "peak_tilt_deg": 1.0675322896002362,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 2.0382993254682837,
+      "head_peak_torque_nm": 0.3111634183688434,
+      "min_joint_margin_rad": 0.3771011037073819,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": 1,
+      "pairs": 2,
+      "completed_pairs": 2,
+      "dt": 0.00025,
+      "passed": false,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": -0.022428525101110004,
+      "lateral_mm": 0.040804644132335435,
+      "mm_per_swing": -0.005607131275277501,
+      "counts": {
+        "6": {
+          "roll": 4,
+          "yaw": 4,
+          "charged": 4
+        },
+        "10": {
+          "roll": 4,
+          "yaw": 4,
+          "charged": 4
+        },
+        "15": {
+          "roll": 3,
+          "yaw": 3,
+          "charged": 4
+        }
+      },
+      "mean_pair_mm": -0.011214262550555002,
+      "pair_end_headings_deg": [
+        -0.007700135456886608,
+        -0.6605742789547107
+      ],
+      "max_pair_end_deg": 0.6605742789547107,
+      "mean_intrapair_yaw_span_deg": 0.3779564393293296,
+      "final_heading_deg": -0.7208178347597611,
+      "peak_tilt_deg": 0.9998717354611059,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 1.9184248437429519,
+      "head_peak_torque_nm": 0.31546607042971514,
+      "min_joint_margin_rad": 0.3833265528888765,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": -1,
+      "pairs": 3,
+      "completed_pairs": 3,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 1.2424749347266213,
+      "lateral_mm": -0.45423092375100993,
+      "mm_per_swing": 0.20707915578777022,
+      "counts": {
+        "6": {
+          "roll": 6,
+          "yaw": 6,
+          "charged": 6
+        },
+        "10": {
+          "roll": 6,
+          "yaw": 6,
+          "charged": 6
+        },
+        "15": {
+          "roll": 5,
+          "yaw": 5,
+          "charged": 6
+        }
+      },
+      "mean_pair_mm": 0.41415831157554045,
+      "pair_end_headings_deg": [
+        0.007599589068239146,
+        0.7310646122234328,
+        -2.615086028638553
+      ],
+      "max_pair_end_deg": 2.615086028638553,
+      "mean_intrapair_yaw_span_deg": 2.009590134717967,
+      "final_heading_deg": 0.41214308197118943,
+      "peak_tilt_deg": 3.2550828019979545,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 5.991829042513133,
+      "head_peak_torque_nm": 0.3633048007922077,
+      "min_joint_margin_rad": 0.3856151690517875,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": 1,
+      "pairs": 3,
+      "completed_pairs": 3,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 1.216370225957051,
+      "lateral_mm": -0.40792619819477,
+      "mm_per_swing": 0.20272837099284183,
+      "counts": {
+        "6": {
+          "roll": 6,
+          "yaw": 6,
+          "charged": 6
+        },
+        "10": {
+          "roll": 6,
+          "yaw": 6,
+          "charged": 6
+        },
+        "15": {
+          "roll": 5,
+          "yaw": 5,
+          "charged": 6
+        }
+      },
+      "mean_pair_mm": 0.40545674198568366,
+      "pair_end_headings_deg": [
+        -0.007700135456886608,
+        -0.6605742789547107,
+        2.668980704056082
+      ],
+      "max_pair_end_deg": 2.668980704056082,
+      "mean_intrapair_yaw_span_deg": 1.9740220312786316,
+      "final_heading_deg": -0.5982101974040619,
+      "peak_tilt_deg": 3.3440122786960074,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 6.080354297084157,
+      "head_peak_torque_nm": 0.35819497185522886,
+      "min_joint_margin_rad": 0.3919327823965799,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": -1,
+      "pairs": 4,
+      "completed_pairs": 4,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 11.36990306836431,
+      "lateral_mm": -0.8969374834559275,
+      "mm_per_swing": 1.4212378835455388,
+      "counts": {
+        "6": {
+          "roll": 8,
+          "yaw": 8,
+          "charged": 8
+        },
+        "10": {
+          "roll": 8,
+          "yaw": 8,
+          "charged": 8
+        },
+        "15": {
+          "roll": 6,
+          "yaw": 7,
+          "charged": 8
+        }
+      },
+      "mean_pair_mm": 2.8424757670910776,
+      "pair_end_headings_deg": [
+        0.007599589068239146,
+        0.7310646122234328,
+        -2.615086028638553,
+        -3.1401431328665153
+      ],
+      "max_pair_end_deg": 3.1401431328665153,
+      "mean_intrapair_yaw_span_deg": 2.87301842261563,
+      "final_heading_deg": -0.3401245719809399,
+      "peak_tilt_deg": 5.048430193285207,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 9.841546286750306,
+      "head_peak_torque_nm": 0.3707446462554783,
+      "min_joint_margin_rad": 0.3856151690517875,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": 1,
+      "pairs": 4,
+      "completed_pairs": 4,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 10.186553976595427,
+      "lateral_mm": -2.5898986202588468,
+      "mm_per_swing": 1.2733192470744283,
+      "counts": {
+        "6": {
+          "roll": 8,
+          "yaw": 8,
+          "charged": 8
+        },
+        "10": {
+          "roll": 8,
+          "yaw": 8,
+          "charged": 8
+        },
+        "15": {
+          "roll": 6,
+          "yaw": 7,
+          "charged": 8
+        }
+      },
+      "mean_pair_mm": 2.5466384941488567,
+      "pair_end_headings_deg": [
+        -0.007700135456886608,
+        -0.6605742789547107,
+        2.668980704056082,
+        3.0133998133817683
+      ],
+      "max_pair_end_deg": 3.0133998133817683,
+      "mean_intrapair_yaw_span_deg": 2.833608919053227,
+      "final_heading_deg": -0.33137986456390667,
+      "peak_tilt_deg": 5.186912310225672,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 9.899051628053757,
+      "head_peak_torque_nm": 0.3648155723924438,
+      "min_joint_margin_rad": 0.3919327823965799,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": -1,
+      "pairs": 5,
+      "completed_pairs": 5,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 24.46425298789413,
+      "lateral_mm": -5.398691383354432,
+      "mm_per_swing": 2.4464252987894133,
+      "counts": {
+        "6": {
+          "roll": 10,
+          "yaw": 10,
+          "charged": 10
+        },
+        "10": {
+          "roll": 10,
+          "yaw": 10,
+          "charged": 10
+        },
+        "15": {
+          "roll": 9,
+          "yaw": 9,
+          "charged": 10
+        }
+      },
+      "mean_pair_mm": 4.892850597578827,
+      "pair_end_headings_deg": [
+        0.007599589068239146,
+        0.7310646122234328,
+        -2.615086028638553,
+        -3.1401431328665153,
+        -7.168346561255321
+      ],
+      "max_pair_end_deg": 7.168346561255321,
+      "mean_intrapair_yaw_span_deg": 4.469418436587001,
+      "final_heading_deg": -0.37044405224488763,
+      "peak_tilt_deg": 7.904834280176806,
+      "edge_support_s": 0.21999999999999997,
+      "rim_height_difference_mm": 14.82609840807087,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3856151690517875,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": 1,
+      "pairs": 5,
+      "completed_pairs": 5,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 27.232788574412115,
+      "lateral_mm": -3.6852534216964816,
+      "mm_per_swing": 2.7232788574412115,
+      "counts": {
+        "6": {
+          "roll": 10,
+          "yaw": 10,
+          "charged": 10
+        },
+        "10": {
+          "roll": 10,
+          "yaw": 10,
+          "charged": 10
+        },
+        "15": {
+          "roll": 8,
+          "yaw": 9,
+          "charged": 10
+        }
+      },
+      "mean_pair_mm": 5.446557714882423,
+      "pair_end_headings_deg": [
+        -0.007700135456886608,
+        -0.6605742789547107,
+        2.668980704056082,
+        3.0133998133817683,
+        5.455033768732809
+      ],
+      "max_pair_end_deg": 5.455033768732809,
+      "mean_intrapair_yaw_span_deg": 4.220990356231125,
+      "final_heading_deg": 1.0150949929055382,
+      "peak_tilt_deg": 8.145850880776749,
+      "edge_support_s": 0.12000000000000001,
+      "rim_height_difference_mm": 15.610031371177136,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3919327823965799,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": -1,
+      "pairs": 6,
+      "completed_pairs": 6,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 37.89972601146622,
+      "lateral_mm": -13.248179971054048,
+      "mm_per_swing": 3.1583105009555186,
+      "counts": {
+        "6": {
+          "roll": 12,
+          "yaw": 12,
+          "charged": 12
+        },
+        "10": {
+          "roll": 12,
+          "yaw": 12,
+          "charged": 12
+        },
+        "15": {
+          "roll": 10,
+          "yaw": 11,
+          "charged": 12
+        }
+      },
+      "mean_pair_mm": 6.316621001911037,
+      "pair_end_headings_deg": [
+        0.007599589068239146,
+        0.7310646122234328,
+        -2.615086028638553,
+        -3.1401431328665153,
+        -7.168346561255321,
+        -7.775381067522036
+      ],
+      "max_pair_end_deg": 7.775381067522036,
+      "mean_intrapair_yaw_span_deg": 5.046824275095923,
+      "final_heading_deg": -1.6100257679551806,
+      "peak_tilt_deg": 7.8954183936853495,
+      "edge_support_s": 0.4000000000000001,
+      "rim_height_difference_mm": 14.82609840807087,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3856151690517875,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": 1,
+      "pairs": 6,
+      "completed_pairs": 6,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 44.63731744831851,
+      "lateral_mm": -8.206853097797916,
+      "mm_per_swing": 3.7197764540265426,
+      "counts": {
+        "6": {
+          "roll": 12,
+          "yaw": 12,
+          "charged": 12
+        },
+        "10": {
+          "roll": 12,
+          "yaw": 12,
+          "charged": 12
+        },
+        "15": {
+          "roll": 10,
+          "yaw": 11,
+          "charged": 12
+        }
+      },
+      "mean_pair_mm": 7.439552908053085,
+      "pair_end_headings_deg": [
+        -0.007700135456886608,
+        -0.6605742789547107,
+        2.668980704056082,
+        3.0133998133817683,
+        5.455033768732809,
+        5.866795521808305
+      ],
+      "max_pair_end_deg": 5.866795521808305,
+      "mean_intrapair_yaw_span_deg": 4.866299155981648,
+      "final_heading_deg": 0.48521739353019705,
+      "peak_tilt_deg": 8.145850880776749,
+      "edge_support_s": 0.19999999999999998,
+      "rim_height_difference_mm": 15.610031371177136,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3919327823965799,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": -1,
+      "pairs": 7,
+      "completed_pairs": 7,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 51.69025603196335,
+      "lateral_mm": -19.429843746272553,
+      "mm_per_swing": 3.6921611451402394,
+      "counts": {
+        "6": {
+          "roll": 16,
+          "yaw": 14,
+          "charged": 16
+        },
+        "10": {
+          "roll": 14,
+          "yaw": 14,
+          "charged": 14
+        },
+        "15": {
+          "roll": 12,
+          "yaw": 13,
+          "charged": 14
+        }
+      },
+      "mean_pair_mm": 7.384322290280479,
+      "pair_end_headings_deg": [
+        0.007599589068239146,
+        0.7310646122234328,
+        -2.615086028638553,
+        -3.1401431328665153,
+        -7.168346561255321,
+        -7.775381067522036,
+        -10.366992042622593
+      ],
+      "max_pair_end_deg": 10.366992042622593,
+      "mean_intrapair_yaw_span_deg": 5.756359881030636,
+      "final_heading_deg": -4.249971956879954,
+      "peak_tilt_deg": 8.901275835231374,
+      "edge_support_s": 0.5400000000000001,
+      "rim_height_difference_mm": 16.71750800419791,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3856151690517875,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": 1,
+      "pairs": 7,
+      "completed_pairs": 7,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 58.42014365609783,
+      "lateral_mm": -15.388828789802774,
+      "mm_per_swing": 4.172867404006988,
+      "counts": {
+        "6": {
+          "roll": 14,
+          "yaw": 14,
+          "charged": 14
+        },
+        "10": {
+          "roll": 14,
+          "yaw": 14,
+          "charged": 14
+        },
+        "15": {
+          "roll": 13,
+          "yaw": 13,
+          "charged": 14
+        }
+      },
+      "mean_pair_mm": 8.345734808013976,
+      "pair_end_headings_deg": [
+        -0.007700135456886608,
+        -0.6605742789547107,
+        2.668980704056082,
+        3.0133998133817683,
+        5.455033768732809,
+        5.866795521808305,
+        4.13937161731834
+      ],
+      "max_pair_end_deg": 5.866795521808305,
+      "mean_intrapair_yaw_span_deg": 5.504073123912027,
+      "final_heading_deg": 3.6193061595261984,
+      "peak_tilt_deg": 8.145850880776749,
+      "edge_support_s": 0.4000000000000001,
+      "rim_height_difference_mm": 15.610031371177136,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3919327823965799,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": -1,
+      "pairs": 8,
+      "completed_pairs": 8,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 67.25467002480951,
+      "lateral_mm": -23.95802256821336,
+      "mm_per_swing": 4.203416876550595,
+      "counts": {
+        "6": {
+          "roll": 16,
+          "yaw": 16,
+          "charged": 16
+        },
+        "10": {
+          "roll": 16,
+          "yaw": 16,
+          "charged": 16
+        },
+        "15": {
+          "roll": 14,
+          "yaw": 15,
+          "charged": 16
+        }
+      },
+      "mean_pair_mm": 8.40683375310119,
+      "pair_end_headings_deg": [
+        0.007599589068239146,
+        0.7310646122234328,
+        -2.615086028638553,
+        -3.1401431328665153,
+        -7.168346561255321,
+        -7.775381067522036,
+        -10.366992042622593,
+        -11.87028994302291
+      ],
+      "max_pair_end_deg": 11.87028994302291,
+      "mean_intrapair_yaw_span_deg": 6.078768762051215,
+      "final_heading_deg": -4.305990687709846,
+      "peak_tilt_deg": 8.901275835231374,
+      "edge_support_s": 0.7200000000000003,
+      "rim_height_difference_mm": 16.71750800419791,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3856151690517875,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": 1,
+      "pairs": 8,
+      "completed_pairs": 8,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 74.02904834142808,
+      "lateral_mm": -18.332104127459786,
+      "mm_per_swing": 4.626815521339255,
+      "counts": {
+        "6": {
+          "roll": 16,
+          "yaw": 16,
+          "charged": 16
+        },
+        "10": {
+          "roll": 16,
+          "yaw": 16,
+          "charged": 16
+        },
+        "15": {
+          "roll": 15,
+          "yaw": 15,
+          "charged": 16
+        }
+      },
+      "mean_pair_mm": 9.25363104267851,
+      "pair_end_headings_deg": [
+        -0.007700135456886608,
+        -0.6605742789547107,
+        2.668980704056082,
+        3.0133998133817683,
+        5.455033768732809,
+        5.866795521808305,
+        4.13937161731834,
+        3.6867521107562586
+      ],
+      "max_pair_end_deg": 5.866795521808305,
+      "mean_intrapair_yaw_span_deg": 5.852725207696253,
+      "final_heading_deg": 1.9792468494390842,
+      "peak_tilt_deg": 8.145850880776749,
+      "edge_support_s": 0.6000000000000002,
+      "rim_height_difference_mm": 15.6544896693832,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3919327823965799,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": -1,
+      "pairs": 9,
+      "completed_pairs": 9,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 83.70361733853373,
+      "lateral_mm": -30.518549752136384,
+      "mm_per_swing": 4.650200963251874,
+      "counts": {
+        "6": {
+          "roll": 18,
+          "yaw": 18,
+          "charged": 18
+        },
+        "10": {
+          "roll": 18,
+          "yaw": 18,
+          "charged": 18
+        },
+        "15": {
+          "roll": 16,
+          "yaw": 17,
+          "charged": 18
+        }
+      },
+      "mean_pair_mm": 9.300401926503747,
+      "pair_end_headings_deg": [
+        0.007599589068239146,
+        0.7310646122234328,
+        -2.615086028638553,
+        -3.1401431328665153,
+        -7.168346561255321,
+        -7.775381067522036,
+        -10.366992042622593,
+        -11.87028994302291,
+        -11.306812660146107
+      ],
+      "max_pair_end_deg": 11.87028994302291,
+      "mean_intrapair_yaw_span_deg": 6.295299630085002,
+      "final_heading_deg": -4.900523525491888,
+      "peak_tilt_deg": 8.901275835231374,
+      "edge_support_s": 0.8400000000000004,
+      "rim_height_difference_mm": 16.71750800419791,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3856151690517875,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": 1,
+      "pairs": 9,
+      "completed_pairs": 9,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 89.52580357394322,
+      "lateral_mm": -22.242964845607208,
+      "mm_per_swing": 4.9736557541079565,
+      "counts": {
+        "6": {
+          "roll": 18,
+          "yaw": 18,
+          "charged": 18
+        },
+        "10": {
+          "roll": 18,
+          "yaw": 18,
+          "charged": 18
+        },
+        "15": {
+          "roll": 17,
+          "yaw": 17,
+          "charged": 18
+        }
+      },
+      "mean_pair_mm": 9.947311508215913,
+      "pair_end_headings_deg": [
+        -0.007700135456886608,
+        -0.6605742789547107,
+        2.668980704056082,
+        3.0133998133817683,
+        5.455033768732809,
+        5.866795521808305,
+        4.13937161731834,
+        3.6867521107562586,
+        3.5162916935332054
+      ],
+      "max_pair_end_deg": 5.866795521808305,
+      "mean_intrapair_yaw_span_deg": 6.120356842940747,
+      "final_heading_deg": 1.6080248882937582,
+      "peak_tilt_deg": 8.145850880776749,
+      "edge_support_s": 0.7400000000000003,
+      "rim_height_difference_mm": 15.643528948104366,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3919327823965799,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": -1,
+      "pairs": 10,
+      "completed_pairs": 10,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 96.62369022449211,
+      "lateral_mm": -39.183364269564485,
+      "mm_per_swing": 4.831184511224605,
+      "counts": {
+        "6": {
+          "roll": 20,
+          "yaw": 20,
+          "charged": 20
+        },
+        "10": {
+          "roll": 20,
+          "yaw": 20,
+          "charged": 20
+        },
+        "15": {
+          "roll": 18,
+          "yaw": 19,
+          "charged": 20
+        }
+      },
+      "mean_pair_mm": 9.66236902244921,
+      "pair_end_headings_deg": [
+        0.007599589068239146,
+        0.7310646122234328,
+        -2.615086028638553,
+        -3.1401431328665153,
+        -7.168346561255321,
+        -7.775381067522036,
+        -10.366992042622593,
+        -11.87028994302291,
+        -11.306812660146107,
+        -12.745300280575416
+      ],
+      "max_pair_end_deg": 12.745300280575416,
+      "mean_intrapair_yaw_span_deg": 6.629284804493939,
+      "final_heading_deg": -6.347038386319947,
+      "peak_tilt_deg": 8.901275835231374,
+      "edge_support_s": 1.0200000000000005,
+      "rim_height_difference_mm": 16.71750800419791,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3856151690517875,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": 1,
+      "pairs": 10,
+      "completed_pairs": 10,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 104.91045544096913,
+      "lateral_mm": -27.491114619896344,
+      "mm_per_swing": 5.2455227720484565,
+      "counts": {
+        "6": {
+          "roll": 20,
+          "yaw": 20,
+          "charged": 20
+        },
+        "10": {
+          "roll": 20,
+          "yaw": 20,
+          "charged": 20
+        },
+        "15": {
+          "roll": 19,
+          "yaw": 19,
+          "charged": 20
+        }
+      },
+      "mean_pair_mm": 10.491045544096913,
+      "pair_end_headings_deg": [
+        -0.007700135456886608,
+        -0.6605742789547107,
+        2.668980704056082,
+        3.0133998133817683,
+        5.455033768732809,
+        5.866795521808305,
+        4.13937161731834,
+        3.6867521107562586,
+        3.5162916935332054,
+        4.280686689668784
+      ],
+      "max_pair_end_deg": 5.866795521808305,
+      "mean_intrapair_yaw_span_deg": 6.4008304532909674,
+      "final_heading_deg": 2.1163832863802923,
+      "peak_tilt_deg": 8.145850880776749,
+      "edge_support_s": 0.9200000000000005,
+      "rim_height_difference_mm": 15.643528948104366,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3919327823965799,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": -1,
+      "pairs": 11,
+      "completed_pairs": 11,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 110.58560168331182,
+      "lateral_mm": -46.070140064695394,
+      "mm_per_swing": 5.0266182583323555,
+      "counts": {
+        "6": {
+          "roll": 22,
+          "yaw": 22,
+          "charged": 22
+        },
+        "10": {
+          "roll": 22,
+          "yaw": 22,
+          "charged": 22
+        },
+        "15": {
+          "roll": 20,
+          "yaw": 21,
+          "charged": 22
+        }
+      },
+      "mean_pair_mm": 10.053236516664711,
+      "pair_end_headings_deg": [
+        0.007599589068239146,
+        0.7310646122234328,
+        -2.615086028638553,
+        -3.1401431328665153,
+        -7.168346561255321,
+        -7.775381067522036,
+        -10.366992042622593,
+        -11.87028994302291,
+        -11.306812660146107,
+        -12.745300280575416,
+        -15.25384755818194
+      ],
+      "max_pair_end_deg": 15.25384755818194,
+      "mean_intrapair_yaw_span_deg": 6.911227427737547,
+      "final_heading_deg": -8.359607903558143,
+      "peak_tilt_deg": 8.901275835231374,
+      "edge_support_s": 1.2600000000000007,
+      "rim_height_difference_mm": 16.71750800419791,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3856151690517875,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": 1,
+      "pairs": 11,
+      "completed_pairs": 11,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 120.0514595500212,
+      "lateral_mm": -32.992463396545446,
+      "mm_per_swing": 5.456884525000964,
+      "counts": {
+        "6": {
+          "roll": 22,
+          "yaw": 22,
+          "charged": 22
+        },
+        "10": {
+          "roll": 22,
+          "yaw": 22,
+          "charged": 22
+        },
+        "15": {
+          "roll": 21,
+          "yaw": 21,
+          "charged": 22
+        }
+      },
+      "mean_pair_mm": 10.913769050001928,
+      "pair_end_headings_deg": [
+        -0.007700135456886608,
+        -0.6605742789547107,
+        2.668980704056082,
+        3.0133998133817683,
+        5.455033768732809,
+        5.866795521808305,
+        4.13937161731834,
+        3.6867521107562586,
+        3.5162916935332054,
+        4.280686689668784,
+        4.23015773395055
+      ],
+      "max_pair_end_deg": 5.866795521808305,
+      "mean_intrapair_yaw_span_deg": 6.566064430589617,
+      "final_heading_deg": 2.181393859913545,
+      "peak_tilt_deg": 8.145850880776749,
+      "edge_support_s": 1.0800000000000005,
+      "rim_height_difference_mm": 15.643528948104366,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3919327823965799,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": -1,
+      "pairs": 12,
+      "completed_pairs": 12,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 127.8287072877484,
+      "lateral_mm": -52.3303653886857,
+      "mm_per_swing": 5.326196136989517,
+      "counts": {
+        "6": {
+          "roll": 24,
+          "yaw": 24,
+          "charged": 24
+        },
+        "10": {
+          "roll": 24,
+          "yaw": 24,
+          "charged": 24
+        },
+        "15": {
+          "roll": 22,
+          "yaw": 23,
+          "charged": 24
+        }
+      },
+      "mean_pair_mm": 10.652392273979034,
+      "pair_end_headings_deg": [
+        0.007599589068239146,
+        0.7310646122234328,
+        -2.615086028638553,
+        -3.1401431328665153,
+        -7.168346561255321,
+        -7.775381067522036,
+        -10.366992042622593,
+        -11.87028994302291,
+        -11.306812660146107,
+        -12.745300280575416,
+        -15.25384755818194,
+        -16.035598371454963
+      ],
+      "max_pair_end_deg": 16.035598371454963,
+      "mean_intrapair_yaw_span_deg": 7.060597638633663,
+      "final_heading_deg": -8.33813448962898,
+      "peak_tilt_deg": 8.901275835231374,
+      "edge_support_s": 1.3600000000000008,
+      "rim_height_difference_mm": 16.71750800419791,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3856151690517875,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": 1,
+      "pairs": 12,
+      "completed_pairs": 12,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 135.03482371246022,
+      "lateral_mm": -37.24523979722071,
+      "mm_per_swing": 5.626450988019176,
+      "counts": {
+        "6": {
+          "roll": 24,
+          "yaw": 24,
+          "charged": 24
+        },
+        "10": {
+          "roll": 24,
+          "yaw": 24,
+          "charged": 24
+        },
+        "15": {
+          "roll": 23,
+          "yaw": 23,
+          "charged": 24
+        }
+      },
+      "mean_pair_mm": 11.252901976038352,
+      "pair_end_headings_deg": [
+        -0.007700135456886608,
+        -0.6605742789547107,
+        2.668980704056082,
+        3.0133998133817683,
+        5.455033768732809,
+        5.866795521808305,
+        4.13937161731834,
+        3.6867521107562586,
+        3.5162916935332054,
+        4.280686689668784,
+        4.23015773395055,
+        3.478090186715803
+      ],
+      "max_pair_end_deg": 5.866795521808305,
+      "mean_intrapair_yaw_span_deg": 6.742989051377776,
+      "final_heading_deg": 2.063710333085408,
+      "peak_tilt_deg": 8.145850880776749,
+      "edge_support_s": 1.2600000000000007,
+      "rim_height_difference_mm": 15.643528948104366,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3919327823965799,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": -1,
+      "pairs": 13,
+      "completed_pairs": 13,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 142.6996305029509,
+      "lateral_mm": -60.47903700746907,
+      "mm_per_swing": 5.488447327036573,
+      "counts": {
+        "6": {
+          "roll": 26,
+          "yaw": 26,
+          "charged": 26
+        },
+        "10": {
+          "roll": 26,
+          "yaw": 26,
+          "charged": 26
+        },
+        "15": {
+          "roll": 24,
+          "yaw": 25,
+          "charged": 26
+        }
+      },
+      "mean_pair_mm": 10.976894654073146,
+      "pair_end_headings_deg": [
+        0.007599589068239146,
+        0.7310646122234328,
+        -2.615086028638553,
+        -3.1401431328665153,
+        -7.168346561255321,
+        -7.775381067522036,
+        -10.366992042622593,
+        -11.87028994302291,
+        -11.306812660146107,
+        -12.745300280575416,
+        -15.25384755818194,
+        -16.035598371454963,
+        -15.414576865969277
+      ],
+      "max_pair_end_deg": 16.035598371454963,
+      "mean_intrapair_yaw_span_deg": 7.189467530120071,
+      "final_heading_deg": -7.859798644705518,
+      "peak_tilt_deg": 8.901275835231374,
+      "edge_support_s": 1.4800000000000009,
+      "rim_height_difference_mm": 16.71750800419791,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3856151690517875,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": 1,
+      "pairs": 13,
+      "completed_pairs": 13,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 150.2753070464303,
+      "lateral_mm": -41.128334490796576,
+      "mm_per_swing": 5.779819501785781,
+      "counts": {
+        "6": {
+          "roll": 26,
+          "yaw": 26,
+          "charged": 26
+        },
+        "10": {
+          "roll": 26,
+          "yaw": 26,
+          "charged": 26
+        },
+        "15": {
+          "roll": 25,
+          "yaw": 25,
+          "charged": 26
+        }
+      },
+      "mean_pair_mm": 11.559639003571561,
+      "pair_end_headings_deg": [
+        -0.007700135456886608,
+        -0.6605742789547107,
+        2.668980704056082,
+        3.0133998133817683,
+        5.455033768732809,
+        5.866795521808305,
+        4.13937161731834,
+        3.6867521107562586,
+        3.5162916935332054,
+        4.280686689668784,
+        4.23015773395055,
+        3.478090186715803,
+        3.4693120226469385
+      ],
+      "max_pair_end_deg": 5.866795521808305,
+      "mean_intrapair_yaw_span_deg": 6.856869273519986,
+      "final_heading_deg": 1.870898425088028,
+      "peak_tilt_deg": 8.145850880776749,
+      "edge_support_s": 1.4400000000000008,
+      "rim_height_difference_mm": 15.643528948104366,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3919327823965799,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": -1,
+      "pairs": 14,
+      "completed_pairs": 14,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 155.61276225726968,
+      "lateral_mm": -71.17741529492567,
+      "mm_per_swing": 5.557598652045345,
+      "counts": {
+        "6": {
+          "roll": 28,
+          "yaw": 28,
+          "charged": 28
+        },
+        "10": {
+          "roll": 28,
+          "yaw": 28,
+          "charged": 28
+        },
+        "15": {
+          "roll": 26,
+          "yaw": 27,
+          "charged": 28
+        }
+      },
+      "mean_pair_mm": 11.11519730409069,
+      "pair_end_headings_deg": [
+        0.007599589068239146,
+        0.7310646122234328,
+        -2.615086028638553,
+        -3.1401431328665153,
+        -7.168346561255321,
+        -7.775381067522036,
+        -10.366992042622593,
+        -11.87028994302291,
+        -11.306812660146107,
+        -12.745300280575416,
+        -15.25384755818194,
+        -16.035598371454963,
+        -15.414576865969277,
+        -16.039564611990833
+      ],
+      "max_pair_end_deg": 16.039564611990833,
+      "mean_intrapair_yaw_span_deg": 7.364650069154507,
+      "final_heading_deg": -8.637131298122043,
+      "peak_tilt_deg": 8.901275835231374,
+      "edge_support_s": 1.660000000000001,
+      "rim_height_difference_mm": 16.71750800419791,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3856151690517875,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rocking",
+      "side": 1,
+      "pairs": 14,
+      "completed_pairs": 14,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 165.66348597437408,
+      "lateral_mm": -46.01796670420215,
+      "mm_per_swing": 5.91655307051336,
+      "counts": {
+        "6": {
+          "roll": 28,
+          "yaw": 28,
+          "charged": 28
+        },
+        "10": {
+          "roll": 28,
+          "yaw": 28,
+          "charged": 28
+        },
+        "15": {
+          "roll": 27,
+          "yaw": 27,
+          "charged": 28
+        }
+      },
+      "mean_pair_mm": 11.83310614102672,
+      "pair_end_headings_deg": [
+        -0.007700135456886608,
+        -0.6605742789547107,
+        2.668980704056082,
+        3.0133998133817683,
+        5.455033768732809,
+        5.866795521808305,
+        4.13937161731834,
+        3.6867521107562586,
+        3.5162916935332054,
+        4.280686689668784,
+        4.23015773395055,
+        3.478090186715803,
+        3.4693120226469385,
+        3.9973194605511777
+      ],
+      "max_pair_end_deg": 5.866795521808305,
+      "mean_intrapair_yaw_span_deg": 6.979019577066012,
+      "final_heading_deg": 2.028050150566085,
+      "peak_tilt_deg": 8.145850880776749,
+      "edge_support_s": 1.620000000000001,
+      "rim_height_difference_mm": 15.643528948104366,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.3919327823965799,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": -1,
+      "pairs": 1,
+      "completed_pairs": 1,
+      "dt": 0.00025,
+      "passed": false,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": -0.764422533329423,
+      "lateral_mm": -0.2828604761155204,
+      "mm_per_swing": -0.25480751110980765,
+      "counts": {
+        "6": {
+          "roll": 2,
+          "yaw": 3,
+          "charged": 3
+        },
+        "10": {
+          "roll": 2,
+          "yaw": 3,
+          "charged": 3
+        },
+        "15": {
+          "roll": 2,
+          "yaw": 2,
+          "charged": 2
+        }
+      },
+      "mean_pair_mm": -0.764422533329423,
+      "pair_end_headings_deg": [
+        -0.0009340300025575725
+      ],
+      "max_pair_end_deg": 0.0009340300025575725,
+      "mean_intrapair_yaw_span_deg": 0.0223250934932509,
+      "final_heading_deg": 0.8070933155932679,
+      "peak_tilt_deg": 0.23528188142382,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 0.40586487546373,
+      "head_peak_torque_nm": 0.3368640297110473,
+      "min_joint_margin_rad": 0.4829394779033205,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": 1,
+      "pairs": 1,
+      "completed_pairs": 1,
+      "dt": 0.00025,
+      "passed": false,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": -0.6479093156610256,
+      "lateral_mm": 0.2882503257565126,
+      "mm_per_swing": -0.21596977188700853,
+      "counts": {
+        "6": {
+          "roll": 2,
+          "yaw": 3,
+          "charged": 3
+        },
+        "10": {
+          "roll": 2,
+          "yaw": 3,
+          "charged": 3
+        },
+        "15": {
+          "roll": 2,
+          "yaw": 2,
+          "charged": 2
+        }
+      },
+      "mean_pair_mm": -0.6479093156610256,
+      "pair_end_headings_deg": [
+        0.0012417614975070864
+      ],
+      "max_pair_end_deg": 0.0012417614975070864,
+      "mean_intrapair_yaw_span_deg": 0.02243926942539686,
+      "final_heading_deg": -0.6407409543974254,
+      "peak_tilt_deg": 0.25726916746763695,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 0.44264279934071776,
+      "head_peak_torque_nm": 0.3309192010424663,
+      "min_joint_margin_rad": 0.485501301628668,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": -1,
+      "pairs": 2,
+      "completed_pairs": 2,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 3.2226002484478493,
+      "lateral_mm": -2.3605329754734385,
+      "mm_per_swing": 0.6445200496895699,
+      "counts": {
+        "6": {
+          "roll": 4,
+          "yaw": 5,
+          "charged": 5
+        },
+        "10": {
+          "roll": 3,
+          "yaw": 5,
+          "charged": 5
+        },
+        "15": {
+          "roll": 3,
+          "yaw": 4,
+          "charged": 4
+        }
+      },
+      "mean_pair_mm": 1.6113001242239247,
+      "pair_end_headings_deg": [
+        -0.0009340300025575725,
+        -3.350952772049211
+      ],
+      "max_pair_end_deg": 3.350952772049211,
+      "mean_intrapair_yaw_span_deg": 2.047280447581161,
+      "final_heading_deg": 4.512382927119582,
+      "peak_tilt_deg": 1.3474131164517729,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 2.46419745153148,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4849132999686123,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": 1,
+      "pairs": 2,
+      "completed_pairs": 2,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 4.693326519374839,
+      "lateral_mm": 0.7718817447300105,
+      "mm_per_swing": 0.9386653038749678,
+      "counts": {
+        "6": {
+          "roll": 4,
+          "yaw": 5,
+          "charged": 5
+        },
+        "10": {
+          "roll": 3,
+          "yaw": 5,
+          "charged": 5
+        },
+        "15": {
+          "roll": 3,
+          "yaw": 4,
+          "charged": 4
+        }
+      },
+      "mean_pair_mm": 2.3466632596874195,
+      "pair_end_headings_deg": [
+        0.0012417614975070864,
+        3.771301644384118
+      ],
+      "max_pair_end_deg": 3.771301644384118,
+      "mean_intrapair_yaw_span_deg": 2.180821687930461,
+      "final_heading_deg": -3.7798878594565646,
+      "peak_tilt_deg": 1.644636123721595,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 3.02756049633952,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4875625716562383,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": -1,
+      "pairs": 3,
+      "completed_pairs": 3,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 14.038471593012328,
+      "lateral_mm": -4.1988520935958515,
+      "mm_per_swing": 2.005495941858904,
+      "counts": {
+        "6": {
+          "roll": 6,
+          "yaw": 7,
+          "charged": 7
+        },
+        "10": {
+          "roll": 6,
+          "yaw": 7,
+          "charged": 7
+        },
+        "15": {
+          "roll": 3,
+          "yaw": 6,
+          "charged": 6
+        }
+      },
+      "mean_pair_mm": 4.6794905310041095,
+      "pair_end_headings_deg": [
+        -0.0009340300025575725,
+        -3.350952772049211,
+        -0.9248875539620479
+      ],
+      "max_pair_end_deg": 3.350952772049211,
+      "mean_intrapair_yaw_span_deg": 3.6582441155135186,
+      "final_heading_deg": 3.5135367327391114,
+      "peak_tilt_deg": 2.571100773901376,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.585840383928756,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4849132999686123,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": 1,
+      "pairs": 3,
+      "completed_pairs": 3,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 16.800463198601825,
+      "lateral_mm": 0.7560633932977862,
+      "mm_per_swing": 2.4000661712288323,
+      "counts": {
+        "6": {
+          "roll": 6,
+          "yaw": 7,
+          "charged": 7
+        },
+        "10": {
+          "roll": 6,
+          "yaw": 7,
+          "charged": 7
+        },
+        "15": {
+          "roll": 3,
+          "yaw": 6,
+          "charged": 6
+        }
+      },
+      "mean_pair_mm": 5.600154399533942,
+      "pair_end_headings_deg": [
+        0.0012417614975070864,
+        3.771301644384118,
+        1.5301419674128083
+      ],
+      "max_pair_end_deg": 3.771301644384118,
+      "mean_intrapair_yaw_span_deg": 3.733515921355568,
+      "final_heading_deg": -3.1294455409589967,
+      "peak_tilt_deg": 2.1189807822165307,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 3.8734529213480413,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4875625716562383,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": -1,
+      "pairs": 4,
+      "completed_pairs": 4,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 26.541577903920523,
+      "lateral_mm": -6.701627710910296,
+      "mm_per_swing": 2.949064211546725,
+      "counts": {
+        "6": {
+          "roll": 8,
+          "yaw": 9,
+          "charged": 9
+        },
+        "10": {
+          "roll": 8,
+          "yaw": 9,
+          "charged": 9
+        },
+        "15": {
+          "roll": 4,
+          "yaw": 8,
+          "charged": 8
+        }
+      },
+      "mean_pair_mm": 6.635394475980131,
+      "pair_end_headings_deg": [
+        -0.0009340300025575725,
+        -3.350952772049211,
+        -0.9248875539620479,
+        -2.1214127196530965
+      ],
+      "max_pair_end_deg": 3.350952772049211,
+      "mean_intrapair_yaw_span_deg": 4.288789480154571,
+      "final_heading_deg": 2.231634671552327,
+      "peak_tilt_deg": 2.407262545114774,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.343773630880614,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4849132999686123,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": 1,
+      "pairs": 4,
+      "completed_pairs": 4,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 30.461089737685715,
+      "lateral_mm": -0.61151095279378,
+      "mm_per_swing": 3.384565526409524,
+      "counts": {
+        "6": {
+          "roll": 8,
+          "yaw": 9,
+          "charged": 9
+        },
+        "10": {
+          "roll": 8,
+          "yaw": 9,
+          "charged": 9
+        },
+        "15": {
+          "roll": 4,
+          "yaw": 8,
+          "charged": 8
+        }
+      },
+      "mean_pair_mm": 7.615272434421429,
+      "pair_end_headings_deg": [
+        0.0012417614975070864,
+        3.771301644384118,
+        1.5301419674128083,
+        2.4618671593449273
+      ],
+      "max_pair_end_deg": 3.771301644384118,
+      "mean_intrapair_yaw_span_deg": 4.35081933987944,
+      "final_heading_deg": -2.0569563151764028,
+      "peak_tilt_deg": 2.390207402181608,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.670947005883372,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4875625716562383,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": -1,
+      "pairs": 5,
+      "completed_pairs": 5,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 37.57452009871135,
+      "lateral_mm": -6.578401591861736,
+      "mm_per_swing": 3.415865463519214,
+      "counts": {
+        "6": {
+          "roll": 10,
+          "yaw": 11,
+          "charged": 11
+        },
+        "10": {
+          "roll": 10,
+          "yaw": 11,
+          "charged": 11
+        },
+        "15": {
+          "roll": 6,
+          "yaw": 10,
+          "charged": 10
+        }
+      },
+      "mean_pair_mm": 7.5149040197422705,
+      "pair_end_headings_deg": [
+        -0.0009340300025575725,
+        -3.350952772049211,
+        -0.9248875539620479,
+        -2.1214127196530965,
+        -2.323061701378285
+      ],
+      "max_pair_end_deg": 3.350952772049211,
+      "mean_intrapair_yaw_span_deg": 4.519028400802517,
+      "final_heading_deg": 3.1300516970495567,
+      "peak_tilt_deg": 2.599475204067842,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.705989826284595,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4849132999686123,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": 1,
+      "pairs": 5,
+      "completed_pairs": 5,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 41.537691627390586,
+      "lateral_mm": -2.362636019826327,
+      "mm_per_swing": 3.776153784308235,
+      "counts": {
+        "6": {
+          "roll": 10,
+          "yaw": 11,
+          "charged": 11
+        },
+        "10": {
+          "roll": 10,
+          "yaw": 11,
+          "charged": 11
+        },
+        "15": {
+          "roll": 6,
+          "yaw": 10,
+          "charged": 10
+        }
+      },
+      "mean_pair_mm": 8.307538325478117,
+      "pair_end_headings_deg": [
+        0.0012417614975070864,
+        3.771301644384118,
+        1.5301419674128083,
+        2.4618671593449273,
+        3.003078863955263
+      ],
+      "max_pair_end_deg": 3.771301644384118,
+      "mean_intrapair_yaw_span_deg": 4.751534852531372,
+      "final_heading_deg": -1.1259894018371037,
+      "peak_tilt_deg": 2.39003060276462,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.67050321399403,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4875625716562383,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": -1,
+      "pairs": 6,
+      "completed_pairs": 6,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 48.78190424112587,
+      "lateral_mm": -9.312990811190012,
+      "mm_per_swing": 3.7524541723942977,
+      "counts": {
+        "6": {
+          "roll": 12,
+          "yaw": 13,
+          "charged": 13
+        },
+        "10": {
+          "roll": 12,
+          "yaw": 13,
+          "charged": 13
+        },
+        "15": {
+          "roll": 7,
+          "yaw": 12,
+          "charged": 12
+        }
+      },
+      "mean_pair_mm": 8.13031737352098,
+      "pair_end_headings_deg": [
+        -0.0009340300025575725,
+        -3.350952772049211,
+        -0.9248875539620479,
+        -2.1214127196530965,
+        -2.323061701378285,
+        -1.9200360576712143
+      ],
+      "max_pair_end_deg": 3.350952772049211,
+      "mean_intrapair_yaw_span_deg": 4.700564451896139,
+      "final_heading_deg": 2.071124278063367,
+      "peak_tilt_deg": 2.7279534889793076,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.625080483608272,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4849132999686123,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": 1,
+      "pairs": 6,
+      "completed_pairs": 6,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 54.393355363426444,
+      "lateral_mm": -1.2360292062262075,
+      "mm_per_swing": 4.184104258725111,
+      "counts": {
+        "6": {
+          "roll": 12,
+          "yaw": 13,
+          "charged": 13
+        },
+        "10": {
+          "roll": 12,
+          "yaw": 13,
+          "charged": 13
+        },
+        "15": {
+          "roll": 7,
+          "yaw": 12,
+          "charged": 12
+        }
+      },
+      "mean_pair_mm": 9.06555922723774,
+      "pair_end_headings_deg": [
+        0.0012417614975070864,
+        3.771301644384118,
+        1.5301419674128083,
+        2.4618671593449273,
+        3.003078863955263,
+        3.937169167185461
+      ],
+      "max_pair_end_deg": 3.937169167185461,
+      "mean_intrapair_yaw_span_deg": 4.912409062021555,
+      "final_heading_deg": -1.0315261646361364,
+      "peak_tilt_deg": 2.39003060276462,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.67050321399403,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4875625716562383,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": -1,
+      "pairs": 7,
+      "completed_pairs": 7,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 61.39396605377969,
+      "lateral_mm": -10.550095751437897,
+      "mm_per_swing": 4.092931070251979,
+      "counts": {
+        "6": {
+          "roll": 14,
+          "yaw": 15,
+          "charged": 15
+        },
+        "10": {
+          "roll": 14,
+          "yaw": 15,
+          "charged": 15
+        },
+        "15": {
+          "roll": 8,
+          "yaw": 14,
+          "charged": 14
+        }
+      },
+      "mean_pair_mm": 8.770566579111385,
+      "pair_end_headings_deg": [
+        -0.0009340300025575725,
+        -3.350952772049211,
+        -0.9248875539620479,
+        -2.1214127196530965,
+        -2.323061701378285,
+        -1.9200360576712143,
+        -2.486696864212239
+      ],
+      "max_pair_end_deg": 3.350952772049211,
+      "mean_intrapair_yaw_span_deg": 4.758871061970202,
+      "final_heading_deg": 2.023825507313852,
+      "peak_tilt_deg": 2.6864188925468917,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.625080483608272,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4849132999686123,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": 1,
+      "pairs": 7,
+      "completed_pairs": 7,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 67.97518918861996,
+      "lateral_mm": -1.968609605068255,
+      "mm_per_swing": 4.531679279241331,
+      "counts": {
+        "6": {
+          "roll": 14,
+          "yaw": 15,
+          "charged": 15
+        },
+        "10": {
+          "roll": 14,
+          "yaw": 15,
+          "charged": 15
+        },
+        "15": {
+          "roll": 7,
+          "yaw": 14,
+          "charged": 14
+        }
+      },
+      "mean_pair_mm": 9.710741312659994,
+      "pair_end_headings_deg": [
+        0.0012417614975070864,
+        3.771301644384118,
+        1.5301419674128083,
+        2.4618671593449273,
+        3.003078863955263,
+        3.937169167185461,
+        4.552433508884448
+      ],
+      "max_pair_end_deg": 4.552433508884448,
+      "mean_intrapair_yaw_span_deg": 5.070581919336105,
+      "final_heading_deg": 0.11912109041642967,
+      "peak_tilt_deg": 2.39003060276462,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.67050321399403,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4875625716562383,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": -1,
+      "pairs": 8,
+      "completed_pairs": 8,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 72.29412575134637,
+      "lateral_mm": -10.105703694782171,
+      "mm_per_swing": 4.25259563243214,
+      "counts": {
+        "6": {
+          "roll": 16,
+          "yaw": 17,
+          "charged": 17
+        },
+        "10": {
+          "roll": 16,
+          "yaw": 17,
+          "charged": 17
+        },
+        "15": {
+          "roll": 9,
+          "yaw": 16,
+          "charged": 16
+        }
+      },
+      "mean_pair_mm": 9.036765718918296,
+      "pair_end_headings_deg": [
+        -0.0009340300025575725,
+        -3.350952772049211,
+        -0.9248875539620479,
+        -2.1214127196530965,
+        -2.323061701378285,
+        -1.9200360576712143,
+        -2.486696864212239,
+        -2.649225618783582
+      ],
+      "max_pair_end_deg": 3.350952772049211,
+      "mean_intrapair_yaw_span_deg": 4.874015429354705,
+      "final_heading_deg": 2.8348305658456807,
+      "peak_tilt_deg": 2.6864188925468917,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.75626674662214,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4849132999686123,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": 1,
+      "pairs": 8,
+      "completed_pairs": 8,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 79.15505629878507,
+      "lateral_mm": -3.2776656098923778,
+      "mm_per_swing": 4.656179782281475,
+      "counts": {
+        "6": {
+          "roll": 16,
+          "yaw": 17,
+          "charged": 17
+        },
+        "10": {
+          "roll": 16,
+          "yaw": 17,
+          "charged": 17
+        },
+        "15": {
+          "roll": 8,
+          "yaw": 16,
+          "charged": 16
+        }
+      },
+      "mean_pair_mm": 9.894382037348134,
+      "pair_end_headings_deg": [
+        0.0012417614975070864,
+        3.771301644384118,
+        1.5301419674128083,
+        2.4618671593449273,
+        3.003078863955263,
+        3.937169167185461,
+        4.552433508884448,
+        4.715584173799075
+      ],
+      "max_pair_end_deg": 4.715584173799075,
+      "mean_intrapair_yaw_span_deg": 5.160140713533361,
+      "final_heading_deg": -0.4362307190952993,
+      "peak_tilt_deg": 2.39003060276462,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.67050321399403,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4875625716562383,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": -1,
+      "pairs": 9,
+      "completed_pairs": 9,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 83.72989747511845,
+      "lateral_mm": -12.436577551367225,
+      "mm_per_swing": 4.40683670921676,
+      "counts": {
+        "6": {
+          "roll": 18,
+          "yaw": 19,
+          "charged": 19
+        },
+        "10": {
+          "roll": 18,
+          "yaw": 19,
+          "charged": 19
+        },
+        "15": {
+          "roll": 11,
+          "yaw": 18,
+          "charged": 18
+        }
+      },
+      "mean_pair_mm": 9.303321941679828,
+      "pair_end_headings_deg": [
+        -0.0009340300025575725,
+        -3.350952772049211,
+        -0.9248875539620479,
+        -2.1214127196530965,
+        -2.323061701378285,
+        -1.9200360576712143,
+        -2.486696864212239,
+        -2.649225618783582,
+        -2.3098702612196975
+      ],
+      "max_pair_end_deg": 3.350952772049211,
+      "mean_intrapair_yaw_span_deg": 4.961123855684146,
+      "final_heading_deg": 1.5878231597105052,
+      "peak_tilt_deg": 2.6864188925468917,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.625080483608272,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4849132999686123,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": 1,
+      "pairs": 9,
+      "completed_pairs": 9,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 92.12875020171111,
+      "lateral_mm": -2.7014336118142848,
+      "mm_per_swing": 4.848881589563743,
+      "counts": {
+        "6": {
+          "roll": 18,
+          "yaw": 19,
+          "charged": 19
+        },
+        "10": {
+          "roll": 18,
+          "yaw": 19,
+          "charged": 19
+        },
+        "15": {
+          "roll": 9,
+          "yaw": 18,
+          "charged": 18
+        }
+      },
+      "mean_pair_mm": 10.236527800190125,
+      "pair_end_headings_deg": [
+        0.0012417614975070864,
+        3.771301644384118,
+        1.5301419674128083,
+        2.4618671593449273,
+        3.003078863955263,
+        3.937169167185461,
+        4.552433508884448,
+        4.715584173799075,
+        4.825869394511988
+      ],
+      "max_pair_end_deg": 4.825869394511988,
+      "mean_intrapair_yaw_span_deg": 5.219647783506881,
+      "final_heading_deg": 0.06528381109237892,
+      "peak_tilt_deg": 2.39003060276462,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.67050321399403,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4875625716562383,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": -1,
+      "pairs": 10,
+      "completed_pairs": 10,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 96.0323812297933,
+      "lateral_mm": -14.386156715954852,
+      "mm_per_swing": 4.572970534752062,
+      "counts": {
+        "6": {
+          "roll": 20,
+          "yaw": 21,
+          "charged": 21
+        },
+        "10": {
+          "roll": 20,
+          "yaw": 21,
+          "charged": 21
+        },
+        "15": {
+          "roll": 12,
+          "yaw": 20,
+          "charged": 20
+        }
+      },
+      "mean_pair_mm": 9.60323812297933,
+      "pair_end_headings_deg": [
+        -0.0009340300025575725,
+        -3.350952772049211,
+        -0.9248875539620479,
+        -2.1214127196530965,
+        -2.323061701378285,
+        -1.9200360576712143,
+        -2.486696864212239,
+        -2.649225618783582,
+        -2.3098702612196975,
+        -2.8400832767561934
+      ],
+      "max_pair_end_deg": 3.350952772049211,
+      "mean_intrapair_yaw_span_deg": 4.96564612866988,
+      "final_heading_deg": 1.5403841061290515,
+      "peak_tilt_deg": 2.6864188925468917,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.625080483608272,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4849132999686123,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": 1,
+      "pairs": 10,
+      "completed_pairs": 10,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 105.75355323135526,
+      "lateral_mm": -3.6097684849149854,
+      "mm_per_swing": 5.035883487207393,
+      "counts": {
+        "6": {
+          "roll": 20,
+          "yaw": 21,
+          "charged": 21
+        },
+        "10": {
+          "roll": 20,
+          "yaw": 21,
+          "charged": 21
+        },
+        "15": {
+          "roll": 9,
+          "yaw": 20,
+          "charged": 20
+        }
+      },
+      "mean_pair_mm": 10.575355323135526,
+      "pair_end_headings_deg": [
+        0.0012417614975070864,
+        3.771301644384118,
+        1.5301419674128083,
+        2.4618671593449273,
+        3.003078863955263,
+        3.937169167185461,
+        4.552433508884448,
+        4.715584173799075,
+        4.825869394511988,
+        5.318127988610818
+      ],
+      "max_pair_end_deg": 5.318127988610818,
+      "mean_intrapair_yaw_span_deg": 5.286584996644805,
+      "final_heading_deg": 0.8592548560630596,
+      "peak_tilt_deg": 2.39003060276462,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.67050321399403,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4875625716562383,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": -1,
+      "pairs": 11,
+      "completed_pairs": 11,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 107.07101879883822,
+      "lateral_mm": -14.057858437810777,
+      "mm_per_swing": 4.65526168690601,
+      "counts": {
+        "6": {
+          "roll": 22,
+          "yaw": 23,
+          "charged": 23
+        },
+        "10": {
+          "roll": 22,
+          "yaw": 23,
+          "charged": 23
+        },
+        "15": {
+          "roll": 13,
+          "yaw": 22,
+          "charged": 22
+        }
+      },
+      "mean_pair_mm": 9.733728981712567,
+      "pair_end_headings_deg": [
+        -0.0009340300025575725,
+        -3.350952772049211,
+        -0.9248875539620479,
+        -2.1214127196530965,
+        -2.323061701378285,
+        -1.9200360576712143,
+        -2.486696864212239,
+        -2.649225618783582,
+        -2.3098702612196975,
+        -2.8400832767561934,
+        -3.4040716886499416
+      ],
+      "max_pair_end_deg": 3.4040716886499416,
+      "mean_intrapair_yaw_span_deg": 5.0469289943511395,
+      "final_heading_deg": 2.004141576296499,
+      "peak_tilt_deg": 2.6864188925468917,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.717587316220125,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4849132999686123,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": 1,
+      "pairs": 11,
+      "completed_pairs": 11,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 117.04927560208053,
+      "lateral_mm": -5.166948941894818,
+      "mm_per_swing": 5.089098939220892,
+      "counts": {
+        "6": {
+          "roll": 22,
+          "yaw": 23,
+          "charged": 23
+        },
+        "10": {
+          "roll": 22,
+          "yaw": 23,
+          "charged": 23
+        },
+        "15": {
+          "roll": 9,
+          "yaw": 22,
+          "charged": 22
+        }
+      },
+      "mean_pair_mm": 10.640843236552776,
+      "pair_end_headings_deg": [
+        0.0012417614975070864,
+        3.771301644384118,
+        1.5301419674128083,
+        2.4618671593449273,
+        3.003078863955263,
+        3.937169167185461,
+        4.552433508884448,
+        4.715584173799075,
+        4.825869394511988,
+        5.318127988610818,
+        6.0809902432061005
+      ],
+      "max_pair_end_deg": 6.0809902432061005,
+      "mean_intrapair_yaw_span_deg": 5.385571177007515,
+      "final_heading_deg": 0.9564715780918495,
+      "peak_tilt_deg": 2.39003060276462,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.67050321399403,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4875625716562383,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": -1,
+      "pairs": 12,
+      "completed_pairs": 12,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 118.2689332742304,
+      "lateral_mm": -16.86867386923134,
+      "mm_per_swing": 4.730757330969216,
+      "counts": {
+        "6": {
+          "roll": 24,
+          "yaw": 25,
+          "charged": 25
+        },
+        "10": {
+          "roll": 24,
+          "yaw": 25,
+          "charged": 25
+        },
+        "15": {
+          "roll": 15,
+          "yaw": 24,
+          "charged": 24
+        }
+      },
+      "mean_pair_mm": 9.855744439519201,
+      "pair_end_headings_deg": [
+        -0.0009340300025575725,
+        -3.350952772049211,
+        -0.9248875539620479,
+        -2.1214127196530965,
+        -2.323061701378285,
+        -1.9200360576712143,
+        -2.486696864212239,
+        -2.649225618783582,
+        -2.3098702612196975,
+        -2.8400832767561934,
+        -3.4040716886499416,
+        -3.040424763636916
+      ],
+      "max_pair_end_deg": 3.4040716886499416,
+      "mean_intrapair_yaw_span_deg": 5.0947406113128695,
+      "final_heading_deg": 0.952743890762376,
+      "peak_tilt_deg": 2.7096328458825063,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.629865873501197,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4849132999686123,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": 1,
+      "pairs": 12,
+      "completed_pairs": 12,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 129.8079857889408,
+      "lateral_mm": -3.8234357538805144,
+      "mm_per_swing": 5.192319431557633,
+      "counts": {
+        "6": {
+          "roll": 24,
+          "yaw": 25,
+          "charged": 25
+        },
+        "10": {
+          "roll": 24,
+          "yaw": 25,
+          "charged": 25
+        },
+        "15": {
+          "roll": 11,
+          "yaw": 24,
+          "charged": 24
+        }
+      },
+      "mean_pair_mm": 10.817332149078402,
+      "pair_end_headings_deg": [
+        0.0012417614975070864,
+        3.771301644384118,
+        1.5301419674128083,
+        2.4618671593449273,
+        3.003078863955263,
+        3.937169167185461,
+        4.552433508884448,
+        4.715584173799075,
+        4.825869394511988,
+        5.318127988610818,
+        6.0809902432061005,
+        5.882964134546425
+      ],
+      "max_pair_end_deg": 6.0809902432061005,
+      "mean_intrapair_yaw_span_deg": 5.398930375761517,
+      "final_heading_deg": 0.8854100916649739,
+      "peak_tilt_deg": 2.39003060276462,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.67050321399403,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4875625716562383,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": -1,
+      "pairs": 13,
+      "completed_pairs": 13,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 130.90381331800336,
+      "lateral_mm": -18.207251738113378,
+      "mm_per_swing": 4.848289382148272,
+      "counts": {
+        "6": {
+          "roll": 26,
+          "yaw": 27,
+          "charged": 27
+        },
+        "10": {
+          "roll": 26,
+          "yaw": 27,
+          "charged": 27
+        },
+        "15": {
+          "roll": 16,
+          "yaw": 26,
+          "charged": 26
+        }
+      },
+      "mean_pair_mm": 10.069524101384873,
+      "pair_end_headings_deg": [
+        -0.0009340300025575725,
+        -3.350952772049211,
+        -0.9248875539620479,
+        -2.1214127196530965,
+        -2.323061701378285,
+        -1.9200360576712143,
+        -2.486696864212239,
+        -2.649225618783582,
+        -2.3098702612196975,
+        -2.8400832767561934,
+        -3.4040716886499416,
+        -3.040424763636916,
+        -3.5955854059014247
+      ],
+      "max_pair_end_deg": 3.5955854059014247,
+      "mean_intrapair_yaw_span_deg": 5.09545420119454,
+      "final_heading_deg": 0.9568374094730351,
+      "peak_tilt_deg": 2.6864188925468917,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.629865873501197,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4849132999686123,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": 1,
+      "pairs": 13,
+      "completed_pairs": 13,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 143.41304758174195,
+      "lateral_mm": -4.166168703955727,
+      "mm_per_swing": 5.311594354879332,
+      "counts": {
+        "6": {
+          "roll": 26,
+          "yaw": 27,
+          "charged": 27
+        },
+        "10": {
+          "roll": 26,
+          "yaw": 27,
+          "charged": 27
+        },
+        "15": {
+          "roll": 12,
+          "yaw": 26,
+          "charged": 26
+        }
+      },
+      "mean_pair_mm": 11.031772890903227,
+      "pair_end_headings_deg": [
+        0.0012417614975070864,
+        3.771301644384118,
+        1.5301419674128083,
+        2.4618671593449273,
+        3.003078863955263,
+        3.937169167185461,
+        4.552433508884448,
+        4.715584173799075,
+        4.825869394511988,
+        5.318127988610818,
+        6.0809902432061005,
+        5.882964134546425,
+        6.367517247658739
+      ],
+      "max_pair_end_deg": 6.367517247658739,
+      "mean_intrapair_yaw_span_deg": 5.439604558736919,
+      "final_heading_deg": 1.8922259073669376,
+      "peak_tilt_deg": 2.39003060276462,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.67050321399403,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4875625716562383,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": -1,
+      "pairs": 14,
+      "completed_pairs": 14,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 141.79848486075,
+      "lateral_mm": -17.92293322844775,
+      "mm_per_swing": 4.889602926232758,
+      "counts": {
+        "6": {
+          "roll": 28,
+          "yaw": 29,
+          "charged": 29
+        },
+        "10": {
+          "roll": 28,
+          "yaw": 29,
+          "charged": 29
+        },
+        "15": {
+          "roll": 17,
+          "yaw": 28,
+          "charged": 28
+        }
+      },
+      "mean_pair_mm": 10.128463204339285,
+      "pair_end_headings_deg": [
+        -0.0009340300025575725,
+        -3.350952772049211,
+        -0.9248875539620479,
+        -2.1214127196530965,
+        -2.323061701378285,
+        -1.9200360576712143,
+        -2.486696864212239,
+        -2.649225618783582,
+        -2.3098702612196975,
+        -2.8400832767561934,
+        -3.4040716886499416,
+        -3.040424763636916,
+        -3.5955854059014247,
+        -3.6745385994630895
+      ],
+      "max_pair_end_deg": 3.6745385994630895,
+      "mean_intrapair_yaw_span_deg": 5.135315903022123,
+      "final_heading_deg": 1.8501817373240386,
+      "peak_tilt_deg": 2.6864188925468917,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.762237094007172,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4849132999686123,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rapid",
+      "side": 1,
+      "pairs": 14,
+      "completed_pairs": 14,
+      "dt": 0.00025,
+      "passed": true,
+      "physically_completed": true,
+      "settled": true,
+      "fell": false,
+      "termination": "completed",
+      "distance_mm": 154.64527797888022,
+      "lateral_mm": -5.1244884528721135,
+      "mm_per_swing": 5.33259579237518,
+      "counts": {
+        "6": {
+          "roll": 28,
+          "yaw": 29,
+          "charged": 29
+        },
+        "10": {
+          "roll": 28,
+          "yaw": 29,
+          "charged": 29
+        },
+        "15": {
+          "roll": 14,
+          "yaw": 28,
+          "charged": 28
+        }
+      },
+      "mean_pair_mm": 11.04609128420573,
+      "pair_end_headings_deg": [
+        0.0012417614975070864,
+        3.771301644384118,
+        1.5301419674128083,
+        2.4618671593449273,
+        3.003078863955263,
+        3.937169167185461,
+        4.552433508884448,
+        4.715584173799075,
+        4.825869394511988,
+        5.318127988610818,
+        6.0809902432061005,
+        5.882964134546425,
+        6.367517247658739,
+        6.386137354849374
+      ],
+      "max_pair_end_deg": 6.386137354849374,
+      "mean_intrapair_yaw_span_deg": 5.457734491650447,
+      "final_heading_deg": 1.1800908312079441,
+      "peak_tilt_deg": 2.39003060276462,
+      "edge_support_s": 0.0,
+      "rim_height_difference_mm": 4.67050321399403,
+      "head_peak_torque_nm": 0.41600000000000004,
+      "min_joint_margin_rad": 0.4875625716562383,
+      "waist_target_rad": [
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

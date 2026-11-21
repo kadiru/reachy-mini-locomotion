@@ -31,6 +31,8 @@ class Panel:
         self.start = item.get('start_s',0.)
         self.stop = min(item.get('stop_s',self.run['elapsed_seconds']),self.run['elapsed_seconds'])
         self.states = self.run['collision_frames'] if item.get('dense') else self.run['trajectory']
+        if 'overhead' in item:
+            self.states = sorted(self.run['trajectory']+self.run.get('collision_frames',[]),key=lambda row:row['time_s'])
         self.times = np.array([row['time_s'] for row in self.states])
         self.end = self.stop-self.start
         if self.end<=0 or not len(self.states):raise ValueError('Empty trial excerpt')
@@ -43,6 +45,12 @@ class Panel:
         self.camera = mujoco.MjvCamera()
         self.camera.lookat[:] = [0,0,.14]
         self.camera.azimuth, self.camera.elevation, self.camera.distance = 185,-12,.73
+        if 'overhead' in item:
+            self.camera.lookat[:] = [0,0,.21]
+            self.camera.azimuth, self.camera.elevation, self.camera.distance = 162,-11,.90
+            palette = ((1,.42,.11),(.98,.76,.18),(.15,.72,.92))
+            for i in range(len(self.run['config']['disturbance_balls'])):
+                self.model.geom_rgba[self.model.geom(f'disturbance_ball_geom_{i}').id,:3] = palette[i%len(palette)]
         self.renderer = mujoco.Renderer(self.model,height=206,width=488)
         self.last = None
 
@@ -72,6 +80,15 @@ class Panel:
             stamp += '  |  CATCH'
         elif hit is not None and 0 <= t-hit < .36:
             stamp += '  |  HIT'
+        if 'overhead' in self.item:
+            drop = self.item['overhead']
+            stamp = f'{t:.2f} s    {tilt:.1f}°'
+            if drop['floor_s'] is not None and t>=drop['floor_s']:
+                stamp+='    BODY HIT FLOOR'
+            elif drop['first_hit'] is not None and 0<=t-drop['first_hit']<.35:
+                stamp+='    BALL IMPACT'
+            elif drop['count'] and drop['release']<=t and (drop['first_hit'] is None or t<drop['first_hit']):
+                stamp+='    IN FREE FALL'
         pen.rectangle((4,35,260,62),fill=BACKGROUND)
         pen.text((8,38),stamp,font=face(17),fill=ACCENT)
         pen.text((8,242),self.item['outcome'],font=face(18,True),fill=self.item['color'])

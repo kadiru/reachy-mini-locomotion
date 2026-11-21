@@ -1,4 +1,4 @@
-"""Replay an edge hold, controlled return or rolling-ball impact in simulation."""
+"""Replay an edge hold, controlled return or side-ball impact in simulation."""
 import argparse
 import copy
 import json
@@ -18,7 +18,9 @@ def main():
     p.add_argument('--capture-policy',action='store_true');p.add_argument('--config',default='configs/motors-speed-trained.json')
     p.add_argument('--sensor-seed',type=int,help='Override the frozen observation noise seed')
     p.add_argument('--ball-from',choices=['left','right'],default='left',help='Incoming side in single-hit mode')
-    p.add_argument('--ball-speed',type=float,default=.3,help='Single-hit release speed in m/s')
+    p.add_argument('--ball-speed',type=float,default=.3,help='Horizontal single-hit release speed in m/s')
+    p.add_argument('--launch-height',type=float,help='Ball centre height above floor in metres for an airborne release')
+    p.add_argument('--vertical-speed',type=float,help='Upward launch velocity in m/s for an airborne release')
     p.add_argument('--release-at',type=float,default=5.,help='Single-hit release time in seconds')
     p.add_argument('--emergency-return',type=float,nargs=3,metavar=('TRIGGER_DEG','HEAD_ROLL_DEG','HEAD_Y_MM'),
                    help='Single-hit 0.2 s head return after a stable hold and measured outward tilt')
@@ -29,6 +31,8 @@ def main():
     limits.add_argument('--tilt-backstop',type=int,choices=[35,80],help='Reproduce an earlier angle-based stopping rule')
     limits.add_argument('--contact-only',action='store_true',help='Use the default physical termination rules')
     a=p.parse_args();out=Path(a.output)
+    if a.vertical_speed is not None and a.launch_height is None:p.error('--vertical-speed requires --launch-height')
+    if a.launch_height is not None and a.mode!='single-hit':p.error('--launch-height requires --mode single-hit')
     if a.emergency_rate and not a.emergency_return:p.error('--emergency-rate requires --emergency-return')
     if a.emergency_return and a.mode!='single-hit':
         p.error('--emergency-return requires --mode single-hit')
@@ -49,6 +53,8 @@ def main():
         if a.edge not in ('left','right'):p.error('Single-hit mode requires a side edge')
         job['balls'] = [dict(source['rolling_ball'], launch_s=a.release_at,
                              from_side=1 if a.ball_from=='left' else -1, speed_m_s=a.ball_speed)]
+        if a.launch_height is not None:
+            job['balls'][0].update(launch_height_m=a.launch_height,vertical_speed_m_s=a.vertical_speed or 0.)
     if a.emergency_return:
         threshold, head_roll, head_y = a.emergency_return
         policy['return'] = dict(hold_s=30, roll_deg=head_roll, y_mm=head_y, duration_s=.2,

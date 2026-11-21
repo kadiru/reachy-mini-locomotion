@@ -48,6 +48,28 @@ class LinearEdgeTests(unittest.TestCase):
             c.observe_angular_velocity(i*.02,[0,0,0]);c.target(i*.02,a)
             self.assertEqual(c.observed[6],0)
 
+    def test_interval_rate_uses_consecutive_raw_angles_before_fusion(self):
+        c=self.make(delay=0,side=-1)
+        c.configure_sensors(dict(gyro_std_deg_s=0,attitude_rate_weight=.5,attitude_correction_s=1))
+        for i,angle in enumerate([-32.1,-33.1,-34.1]):
+            c.observe_angular_velocity(.02*i,[0,0,0])
+            c.target(.02*i,angle)
+            self.assertAlmostEqual(c.observed[6],25 if i else 0)
+
+    def test_disturbance_limit_arms_after_half_a_second_of_stable_hold(self):
+        c=self.make(delay=0)
+        c.hold_from_start=True
+        c.disturbance_tracking_limit=3.
+        for i in range(24):
+            c.target(i*.02,32.1)
+        self.assertFalse(c.recovery_armed)
+        for i in range(24,27):
+            c.target(i*.02,32.1)
+        self.assertTrue(c.recovery_armed)
+        self.assertEqual(c.recovery_frames,0)
+        c.target(.54,35.)
+        self.assertEqual(c.recovery_frames,1)
+
     def test_edge_actions_stay_within_existing_pose_envelope(self):
         m=model();m['u_equilibrium']=[100,-100,100,-100]
         c=self.make(linear=m);c.hold_from_start=True;pose,_,_=c.target(0,32.1)

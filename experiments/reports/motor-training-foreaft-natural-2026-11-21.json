@@ -1,0 +1,787 @@
+{
+  "evidence": "MuJoCo only, flat starts, fixed waist, physical landing observed",
+  "fit": [
+    {
+      "edge": "front",
+      "params": {
+        "pump_hz": 2.8802161133809014,
+        "phase_deg": -51.0503466768406,
+        "trigger_deg": 23.84178640873163,
+        "blend_s": 0.05702042743731514,
+        "prediction_s": 0.017966589294950545
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.06782105134712052,
+      "peak_pitch_deg": 88.26326424729366,
+      "final_pitch_deg": 86.26828440831932,
+      "first_floor_contact": {
+        "time_s": 6.738250000002489,
+        "body": "body_down_3dprint",
+        "tilt_deg": 72.58484851353099,
+        "normal_force_n": 66.68688129179206
+      },
+      "termination": "completed"
+    },
+    {
+      "edge": "front",
+      "params": {
+        "pump_hz": 3.054586263044879,
+        "phase_deg": -74.67222021053114,
+        "trigger_deg": 30.210220711514044,
+        "blend_s": 0.03201814395197376,
+        "prediction_s": 0.045326948983778786
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.0001323365082734432,
+      "peak_pitch_deg": 15.665557640075708,
+      "final_pitch_deg": -0.01240352265989634,
+      "first_floor_contact": null,
+      "termination": "completed"
+    },
+    {
+      "edge": "front",
+      "params": {
+        "pump_hz": 2.8899121055444628,
+        "phase_deg": -48.05565418355105,
+        "trigger_deg": 28.188435518003935,
+        "blend_s": 0.11347981435410412,
+        "prediction_s": 0.05190085111377066
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.006523964220168322,
+      "peak_pitch_deg": 25.130170934338363,
+      "final_pitch_deg": 4.575310254374348,
+      "first_floor_contact": null,
+      "termination": "completed"
+    },
+    {
+      "edge": "front",
+      "params": {
+        "pump_hz": 2.6129783568857494,
+        "phase_deg": -57.67217962706439,
+        "trigger_deg": 31.343722593775553,
+        "blend_s": 0.0890901666703789,
+        "prediction_s": 0.05912079667889229
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.0011075677770886804,
+      "peak_pitch_deg": 88.01061000323661,
+      "final_pitch_deg": 85.90642917528767,
+      "first_floor_contact": {
+        "time_s": 5.798750000001341,
+        "body": "body_down_3dprint",
+        "tilt_deg": 72.080581981416,
+        "normal_force_n": 59.425004330678675
+      },
+      "termination": "completed"
+    },
+    {
+      "edge": "front",
+      "params": {
+        "pump_hz": 3.153684743373133,
+        "phase_deg": -77.1796108099356,
+        "trigger_deg": 26.813217372051525,
+        "blend_s": 0.028568185486337064,
+        "prediction_s": 0.052510000401412814
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 9.490082818602135e-05,
+      "peak_pitch_deg": 15.024019236165,
+      "final_pitch_deg": -0.012401494959641629,
+      "first_floor_contact": null,
+      "termination": "completed"
+    },
+    {
+      "edge": "front",
+      "params": {
+        "pump_hz": 2.8052142661055406,
+        "phase_deg": -83.83203491317438,
+        "trigger_deg": 27.37191138684346,
+        "blend_s": 0.10429153476258904,
+        "prediction_s": 0.01313502720525205
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 4.921554827181893e-05,
+      "peak_pitch_deg": 12.843985490342538,
+      "final_pitch_deg": -0.1995040830766517,
+      "first_floor_contact": null,
+      "termination": "completed"
+    },
+    {
+      "edge": "front",
+      "params": {
+        "pump_hz": 2.9431951024457876,
+        "phase_deg": -35.57481308963816,
+        "trigger_deg": 25.671124951317243,
+        "blend_s": 0.12391561135845625,
+        "prediction_s": 0.0059999917300903784
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.002513372270012653,
+      "peak_pitch_deg": 79.52612774422926,
+      "final_pitch_deg": -54.56368469209491,
+      "first_floor_contact": {
+        "time_s": 8.434500000003018,
+        "body": "body_down_3dprint",
+        "tilt_deg": 70.00362200995876,
+        "normal_force_n": 60.1663942583745
+      },
+      "termination": "completed"
+    },
+    {
+      "edge": "front",
+      "params": {
+        "pump_hz": 3.1686074340508497,
+        "phase_deg": -41.916920465061054,
+        "trigger_deg": 31.18577143761534,
+        "blend_s": 0.03637661530636337,
+        "prediction_s": 0.08982187069782577
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.0002733437536863547,
+      "peak_pitch_deg": 16.71039887586496,
+      "final_pitch_deg": -0.012478177469537414,
+      "first_floor_contact": null,
+      "termination": "completed"
+    },
+    {
+      "edge": "front",
+      "params": {
+        "pump_hz": 2.6581456268056862,
+        "phase_deg": -59.651035576874506,
+        "trigger_deg": 27.862214969845567,
+        "blend_s": 0.15059162316546404,
+        "prediction_s": 0.08051223924796787
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.0004487673895543176,
+      "peak_pitch_deg": 81.79577202568817,
+      "final_pitch_deg": -81.06058851290494,
+      "first_floor_contact": {
+        "time_s": 4.7557500000000665,
+        "body": "body_down_3dprint",
+        "tilt_deg": 69.45788993173655,
+        "normal_force_n": 47.89851311455571
+      },
+      "termination": "completed"
+    },
+    {
+      "edge": "front",
+      "params": {
+        "pump_hz": 3.0950990985188027,
+        "phase_deg": -42.74045938639127,
+        "trigger_deg": 27.312089059933403,
+        "blend_s": 0.1117098839830088,
+        "prediction_s": 0.035349951555619714
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.0128669360146632,
+      "peak_pitch_deg": 83.6199294689152,
+      "final_pitch_deg": -73.99276406141831,
+      "first_floor_contact": {
+        "time_s": 7.771250000003752,
+        "body": "body_down_3dprint",
+        "tilt_deg": 70.75656513695111,
+        "normal_force_n": 49.73173132799751
+      },
+      "termination": "completed"
+    },
+    {
+      "edge": "front",
+      "params": {
+        "pump_hz": 2.878957210899911,
+        "phase_deg": -36.263419320797986,
+        "trigger_deg": 28.03254206608875,
+        "blend_s": 0.16468281687903036,
+        "prediction_s": 0.04172532284618139
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.00611932069454348,
+      "peak_pitch_deg": 23.650413050658265,
+      "final_pitch_deg": 9.823555615173177,
+      "first_floor_contact": null,
+      "termination": "completed"
+    },
+    {
+      "edge": "front",
+      "params": {
+        "pump_hz": 2.833358649262601,
+        "phase_deg": -77.92745985798089,
+        "trigger_deg": 25.24211233256262,
+        "blend_s": 0.1343925966602116,
+        "prediction_s": 0.08798798240222355
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 8.446976831888087e-05,
+      "peak_pitch_deg": 13.955061043822125,
+      "final_pitch_deg": -0.011120758014735218,
+      "first_floor_contact": null,
+      "termination": "completed"
+    },
+    {
+      "edge": "front",
+      "params": {
+        "pump_hz": 2.7568275800350643,
+        "phase_deg": -66.34415716207972,
+        "trigger_deg": 30.515303534047813,
+        "blend_s": 0.11698824934574406,
+        "prediction_s": 0.03996721621891644
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.0092192852834905,
+      "peak_pitch_deg": 89.24809373683264,
+      "final_pitch_deg": -78.45609539938495,
+      "first_floor_contact": {
+        "time_s": 5.383750000000834,
+        "body": "body_down_3dprint",
+        "tilt_deg": 71.36665067197096,
+        "normal_force_n": 64.1122351340501
+      },
+      "termination": "completed"
+    },
+    {
+      "edge": "front",
+      "params": {
+        "pump_hz": 2.93445711879386,
+        "phase_deg": -62.07367931655258,
+        "trigger_deg": 29.987570288697214,
+        "blend_s": 0.03736272770469926,
+        "prediction_s": 0.007883718769294466
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.021855814021037232,
+      "peak_pitch_deg": 88.27599949660477,
+      "final_pitch_deg": 86.32847541369493,
+      "first_floor_contact": {
+        "time_s": 7.431500000003337,
+        "body": "body_down_3dprint",
+        "tilt_deg": 72.38482708814874,
+        "normal_force_n": 70.415880992383
+      },
+      "termination": "completed"
+    },
+    {
+      "edge": "front",
+      "params": {
+        "pump_hz": 2.650543010043942,
+        "phase_deg": -77.4158815272997,
+        "trigger_deg": 25.614031698096056,
+        "blend_s": 0.1054587245518326,
+        "prediction_s": 0.08913777993418619
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.0003154525728889327,
+      "peak_pitch_deg": 16.88845428907498,
+      "final_pitch_deg": -3.6609583544084208,
+      "first_floor_contact": null,
+      "termination": "completed"
+    },
+    {
+      "edge": "front",
+      "params": {
+        "pump_hz": 3.0414327545323427,
+        "phase_deg": -71.26369994025875,
+        "trigger_deg": 26.811697810731008,
+        "blend_s": 0.08465011070861514,
+        "prediction_s": 0.08466185820395694
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.00045836965534991396,
+      "peak_pitch_deg": 84.78737270890312,
+      "final_pitch_deg": -72.66863405699738,
+      "first_floor_contact": {
+        "time_s": 4.2924999999995,
+        "body": "body_down_3dprint",
+        "tilt_deg": 70.79236015443475,
+        "normal_force_n": 45.51517251932681
+      },
+      "termination": "completed"
+    },
+    {
+      "edge": "back",
+      "params": {
+        "pump_hz": 2.691652278573563,
+        "phase_deg": -69.06837952238146,
+        "trigger_deg": 26.466083748727492,
+        "blend_s": 0.05267970767037325,
+        "prediction_s": 0.07774521951469904
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.00025869370318296417,
+      "peak_pitch_deg": 88.56743247908898,
+      "final_pitch_deg": 87.91821118572483,
+      "first_floor_contact": {
+        "time_s": 3.0947499999996446,
+        "body": "body_down_3dprint",
+        "tilt_deg": 69.35901583283216,
+        "normal_force_n": 56.04940875684323
+      },
+      "termination": "completed"
+    },
+    {
+      "edge": "back",
+      "params": {
+        "pump_hz": 3.024528698683822,
+        "phase_deg": -42.6937229840209,
+        "trigger_deg": 22.836875649507544,
+        "blend_s": 0.1749300840217905,
+        "prediction_s": 0.032661740937978426
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.0005291319578042496,
+      "peak_pitch_deg": 19.16781500069381,
+      "final_pitch_deg": 19.159432830853664,
+      "first_floor_contact": null,
+      "termination": "completed"
+    },
+    {
+      "edge": "back",
+      "params": {
+        "pump_hz": 3.190446329677795,
+        "phase_deg": -81.13530514931023,
+        "trigger_deg": 24.194359291604982,
+        "blend_s": 0.09588021599293614,
+        "prediction_s": 0.0388310088035129
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 5.395742645339616e-05,
+      "peak_pitch_deg": 14.453639484432367,
+      "final_pitch_deg": 0.010654520134207448,
+      "first_floor_contact": null,
+      "termination": "completed"
+    },
+    {
+      "edge": "back",
+      "params": {
+        "pump_hz": 2.9377065696564943,
+        "phase_deg": -61.53265685463621,
+        "trigger_deg": 27.86682890047829,
+        "blend_s": 0.12555956346394312,
+        "prediction_s": 0.07187294767835241
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.00023205566017969477,
+      "peak_pitch_deg": 17.425569258776477,
+      "final_pitch_deg": 0.23587619509917537,
+      "first_floor_contact": null,
+      "termination": "completed"
+    },
+    {
+      "edge": "back",
+      "params": {
+        "pump_hz": 2.6515711042885495,
+        "phase_deg": -38.70696232019201,
+        "trigger_deg": 27.76713412295463,
+        "blend_s": 0.04715988993682769,
+        "prediction_s": 0.08807170272313111
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.001577407846760683,
+      "peak_pitch_deg": 88.79894993574084,
+      "final_pitch_deg": 88.07711233957252,
+      "first_floor_contact": {
+        "time_s": 4.7925000000001114,
+        "body": "body_down_3dprint",
+        "tilt_deg": 69.3319413979759,
+        "normal_force_n": 55.01735492891872
+      },
+      "termination": "completed"
+    },
+    {
+      "edge": "back",
+      "params": {
+        "pump_hz": 2.975278780218984,
+        "phase_deg": -34.655642334902616,
+        "trigger_deg": 22.156506348423996,
+        "blend_s": 0.12061518252076417,
+        "prediction_s": 0.04567793682752957
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.00019300248988657592,
+      "peak_pitch_deg": 20.576659387979532,
+      "final_pitch_deg": 7.204401258055554,
+      "first_floor_contact": null,
+      "termination": "completed"
+    },
+    {
+      "edge": "back",
+      "params": {
+        "pump_hz": 2.619864000353169,
+        "phase_deg": -69.30335743245607,
+        "trigger_deg": 30.291902626723758,
+        "blend_s": 0.056144904534229614,
+        "prediction_s": 0.079624033512497
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.006840789453872914,
+      "peak_pitch_deg": 21.51959988232341,
+      "final_pitch_deg": -9.27624815436904,
+      "first_floor_contact": null,
+      "termination": "completed"
+    },
+    {
+      "edge": "back",
+      "params": {
+        "pump_hz": 2.97022296130645,
+        "phase_deg": -36.74839918778336,
+        "trigger_deg": 25.15223139992602,
+        "blend_s": 0.1706333811020037,
+        "prediction_s": 0.07302058033355348
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.00017699452607949196,
+      "peak_pitch_deg": 21.384709665003246,
+      "final_pitch_deg": 11.973365750087758,
+      "first_floor_contact": null,
+      "termination": "completed"
+    },
+    {
+      "edge": "back",
+      "params": {
+        "pump_hz": 2.583371238593676,
+        "phase_deg": -51.832624595576426,
+        "trigger_deg": 30.93723279287373,
+        "blend_s": 0.16567256295019853,
+        "prediction_s": 0.044077822071822245
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.008709803950551296,
+      "peak_pitch_deg": 87.87264058635617,
+      "final_pitch_deg": 87.87264058635617,
+      "first_floor_contact": {
+        "time_s": 8.290250000003354,
+        "body": "body_down_3dprint",
+        "tilt_deg": 70.59180235966224,
+        "normal_force_n": 60.711040997844336
+      },
+      "termination": "completed"
+    },
+    {
+      "edge": "back",
+      "params": {
+        "pump_hz": 3.0869972132691763,
+        "phase_deg": -61.54047740432274,
+        "trigger_deg": 26.152491432311,
+        "blend_s": 0.06588246852610563,
+        "prediction_s": 0.08330648544279039
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 8.491212312100665e-05,
+      "peak_pitch_deg": 15.43974930742018,
+      "final_pitch_deg": 0.01065577741472473,
+      "first_floor_contact": null,
+      "termination": "completed"
+    },
+    {
+      "edge": "back",
+      "params": {
+        "pump_hz": 2.60675131810838,
+        "phase_deg": -68.41840371734165,
+        "trigger_deg": 23.141408847727423,
+        "blend_s": 0.04585290315103517,
+        "prediction_s": 0.04351012325928669
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.0007296325918388623,
+      "peak_pitch_deg": 17.677086306867807,
+      "final_pitch_deg": 0.543895482931458,
+      "first_floor_contact": null,
+      "termination": "completed"
+    },
+    {
+      "edge": "back",
+      "params": {
+        "pump_hz": 3.131612732720851,
+        "phase_deg": -74.62187156103022,
+        "trigger_deg": 28.20002922807695,
+        "blend_s": 0.07268511549835338,
+        "prediction_s": 0.04207470637122553
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 9.035906465117425e-05,
+      "peak_pitch_deg": 15.4405348274915,
+      "final_pitch_deg": 0.010656247271083052,
+      "first_floor_contact": null,
+      "termination": "completed"
+    },
+    {
+      "edge": "back",
+      "params": {
+        "pump_hz": 2.6049565893470388,
+        "phase_deg": -73.70466247328783,
+        "trigger_deg": 23.686118314646908,
+        "blend_s": 0.1223849626290772,
+        "prediction_s": 0.032631902041688504
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.0023838143348606446,
+      "peak_pitch_deg": 88.29897497411338,
+      "final_pitch_deg": 86.81141269887223,
+      "first_floor_contact": {
+        "time_s": 5.226500000000642,
+        "body": "body_down_3dprint",
+        "tilt_deg": 69.84615921419378,
+        "normal_force_n": 55.56440504785099
+      },
+      "termination": "completed"
+    },
+    {
+      "edge": "back",
+      "params": {
+        "pump_hz": 3.1349411036132007,
+        "phase_deg": -45.421072876309275,
+        "trigger_deg": 30.80669573227886,
+        "blend_s": 0.09215230552250958,
+        "prediction_s": 0.0015453164868093133
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.0034039921009216593,
+      "peak_pitch_deg": 22.159716614418134,
+      "final_pitch_deg": 0.010656715101610691,
+      "first_floor_contact": null,
+      "termination": "completed"
+    },
+    {
+      "edge": "back",
+      "params": {
+        "pump_hz": 2.9856910186262247,
+        "phase_deg": -69.36140373803326,
+        "trigger_deg": 23.589185375449496,
+        "blend_s": 0.060582663444889946,
+        "prediction_s": 0.02453254667141058
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.0001577316724050853,
+      "peak_pitch_deg": 16.459585273865727,
+      "final_pitch_deg": 1.2959317683796596,
+      "first_floor_contact": null,
+      "termination": "completed"
+    },
+    {
+      "edge": "back",
+      "params": {
+        "pump_hz": 2.98898381093508,
+        "phase_deg": -60.41800727254045,
+        "trigger_deg": 26.988559937558986,
+        "blend_s": 0.08085318931984319,
+        "prediction_s": 0.06300250260403552
+      },
+      "seed": 2026112101,
+      "dt": 0.00025,
+      "seconds": 9,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.00023264883298007528,
+      "peak_pitch_deg": 17.492066048587894,
+      "final_pitch_deg": 0.01065439540025594,
+      "first_floor_contact": null,
+      "termination": "completed"
+    }
+  ],
+  "confirmation": [
+    {
+      "edge": "front",
+      "params": {
+        "pump_hz": 2.8802161133809014,
+        "phase_deg": -51.0503466768406,
+        "trigger_deg": 23.84178640873163,
+        "blend_s": 0.05702042743731514,
+        "prediction_s": 0.017966589294950545
+      },
+      "seed": 2026112182,
+      "dt": 0.000125,
+      "seconds": 14,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.0573476802509214,
+      "peak_pitch_deg": 27.642137503849455,
+      "final_pitch_deg": -6.368517368256015,
+      "first_floor_contact": null,
+      "termination": "completed"
+    },
+    {
+      "edge": "front",
+      "params": {
+        "pump_hz": 2.8802161133809014,
+        "phase_deg": -51.0503466768406,
+        "trigger_deg": 23.84178640873163,
+        "blend_s": 0.05702042743731514,
+        "prediction_s": 0.017966589294950545
+      },
+      "seed": 2026112183,
+      "dt": 0.000125,
+      "seconds": 14,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.05727785213464459,
+      "peak_pitch_deg": 27.64170801042485,
+      "final_pitch_deg": -5.203604029039137,
+      "first_floor_contact": null,
+      "termination": "completed"
+    },
+    {
+      "edge": "back",
+      "params": {
+        "pump_hz": 2.583371238593676,
+        "phase_deg": -51.832624595576426,
+        "trigger_deg": 30.93723279287373,
+        "blend_s": 0.16567256295019853,
+        "prediction_s": 0.044077822071822245
+      },
+      "seed": 2026112182,
+      "dt": 0.000125,
+      "seconds": 14,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.0004125744085522145,
+      "peak_pitch_deg": 20.59184656376045,
+      "final_pitch_deg": 0.010707114309618444,
+      "first_floor_contact": null,
+      "termination": "completed"
+    },
+    {
+      "edge": "back",
+      "params": {
+        "pump_hz": 2.583371238593676,
+        "phase_deg": -51.832624595576426,
+        "trigger_deg": 30.93723279287373,
+        "blend_s": 0.16567256295019853,
+        "prediction_s": 0.044077822071822245
+      },
+      "seed": 2026112183,
+      "dt": 0.000125,
+      "seconds": 14,
+      "held": false,
+      "strict_s": 0.0,
+      "soft_s": 0.0004125744085522145,
+      "peak_pitch_deg": 20.59184656376045,
+      "final_pitch_deg": 0.010707114309618444,
+      "first_floor_contact": null,
+      "termination": "completed"
+    }
+  ]
+}

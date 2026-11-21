@@ -1,6 +1,7 @@
 """Render saved MuJoCo states; never rerun or replace recorded physics."""
 import argparse
 import json
+import math
 import subprocess
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -88,6 +89,24 @@ def main():
     last_cycle_heading = 0.
     completed_cycle_rule = result.get('evaluation_heading_rule') == 'completed_cycle'
     cycle_frames = round(50/result['actual_frequency_hz']) if completed_cycle_rule else 1
+    swing = result.get('swing_distance')
+    cadence = result.get('cadence_result')
+    if cadence:
+        from reachy_locomotion.swing_distance import cumulative_strokes
+        rows = result['trajectory']
+        angles = np.degrees([q['head_rpy_rad'] for q in rows])
+        yaw_speed = np.abs(np.gradient(angles[:, 2], .02))
+        yaw_braking = (yaw_speed > 20) & (np.gradient(yaw_speed, .02) < -100)
+        observed_count = np.maximum.reduce([
+            list(cumulative_strokes(angles[:,0])),
+            list(cumulative_strokes(angles[:,2])),
+            list(cumulative_strokes([q['head_y_mm'] for q in rows],5))])
+    if swing:
+        from reachy_locomotion.swing_distance import cumulative_strokes
+        angles = np.degrees([sample['head_rpy_rad'] for sample in result['trajectory']])
+        roll_counts = list(cumulative_strokes(angles[:,0]))
+        yaw_counts = list(cumulative_strokes(angles[:,2]))
+        swing_period = round(50/result['swing_policy']['gait']['frequency_hz'])
     edge_holds=[];hold=0.;previous_ok=False
     if 'edge_balance' in result:
         side=result['edge_balance']['side'];target=result['edge_balance']['policy']['feedback']['target_roll_deg']
@@ -149,7 +168,7 @@ def main():
                     drift=1000*float(np.linalg.norm(data.xpos[base,:2]-start[:2]))
                     turn=np.degrees(row['heading_from_startup_rad'])
                     label=f"t = {row['time_s']:.2f} s   |   center shift = {drift:.1f} mm   |   base yaw = {turn:+.1f} deg"
-                    if 'penguin' in result:
+                    if 'penguin' in result or swing or cadence:
                         label=f"t = {row['time_s']:.2f} s   |   forward = {distance:+.1f} mm   |   base yaw = {turn:+.1f} deg"
             if not row["measuring"]:
                 label = f"t = {row['time_s']:.2f} s   |   startup / warm-up (excluded from displacement)"
@@ -164,6 +183,8 @@ def main():
                     support = 'RIGHT EDGE'
                 elif sum(forces) < .1:
                     support = 'UNLOADED'
+                if cadence and 'EDGE' in support and not result['trace'][frame_index]['edge_support']:
+                    support = support.replace('EDGE', 'SIDE LOADED')
                 if 'foreaft_balance' in result:
                     forces=row['foot_front_back_normal_forces_n_back_front'];support='BOTH ENDS'
                     if forces[0]<.1 and forces[1]>.5:support='FRONT EDGE'
@@ -183,6 +204,23 @@ def main():
                     draw.text((908,96),'Waist: '+waist,font=font,fill=(110,210,235))
                     draw.text((908,122),f"Roll: {np.degrees(row['foot_rpy_rad'][0]):+.1f} deg",font=font,fill='white')
                     draw.text((908,148),f"Edge height difference: {row['side_height_difference_mm']:.1f} mm",font=font,fill='white')
+                    if cadence:
+                        if yaw_braking[frame_index] and result['trace'][frame_index]['edge_support']:
+                            draw.rectangle((12,149,335,178),fill=(22,62,54))
+                            draw.text((20,151),'Head braking on edge',font=font,fill='white')
+                        count = max(observed_count[frame_index],min(cadence['planned_swings'],
+                            math.ceil(row['time_s'] * cadence['planned_swings']/cadence['active_seconds'])))
+                        draw.rectangle((12,470,625,530),fill=(15,22,32))
+                        draw.text((20,474),f"Directional swings: {count}    |    Forward: {distance:.1f} mm",font=font,fill='white')
+                        draw.text((20,501),f"Trial cadence: {60*cadence['cadence_hz']:.0f} swings/min    |    1x = real time",
+                                  font=font,fill=(110,210,235))
+                    if swing:
+                        requested = min(2*swing['pairs'], math.ceil(2*frame_index/swing_period))
+                        count = max(requested, roll_counts[frame_index], yaw_counts[frame_index])
+                        draw.rectangle((12,470,625,530),fill=(15,22,32))
+                        draw.text((20,474),f"Head swings: {count}    |    Forward: {distance:.1f} mm",font=font,fill='white')
+                        if count:
+                            draw.text((20,501),f"Distance per swing: {distance/count:.2f} mm",font=font,fill=(110,210,235))
                     if 'foreaft_balance' in result:
                         draw.rectangle((900,118,1268,177),fill=(15,22,32))
                         draw.text((908,122),f"Pitch: {np.degrees(row['foot_rpy_rad'][1]):+.1f} deg",font=font,fill='white')

@@ -128,7 +128,8 @@ def classify_trial(reason,tail,peak_roll):
 class PrimitiveSimulator(SwaySimulator):
     def run_primitive(self,recipe,seconds=3.6,waist_mode='off',record=False,
                       controller=None,tilt_limit_deg=80,finish_settle_s=None,diagnostic_initial_roll_deg=None,
-                      diagnostic_initial_pitch_deg=None,diagnostic_initial_angular_rate_deg_s=0.,collision_window=None):
+                      diagnostic_initial_pitch_deg=None,diagnostic_initial_angular_rate_deg_s=0.,collision_window=None,
+                      observe_landing=False):
         if collision_window is not None:
             start_s, end_s = collision_window
             if not record or not 0 <= start_s < end_s <= seconds or end_s-start_s > 2:
@@ -142,6 +143,14 @@ class PrimitiveSimulator(SwaySimulator):
         if finish_settle_s is not None and not .6<=finish_settle_s<=2:
             raise ValueError('Require at least 0.6 seconds of physical finish settling')
         m=self.model;d=mujoco.MjData(m);d.qpos[:]=self.initial_qpos;d.qvel[:]=self.initial_qvel;d.ctrl[:]=self.initial_ctrl
+        if observe_landing and (tilt_limit_deg is not None or not np.all(m.jnt_limited[m.actuator_trnid[self.act,0]])):
+            raise ValueError('Landing observation requires physical joint stops and no angle cutoff')
+        floor_event=None
+        joint_event=None
+        balls=None
+        if self.config.get('disturbance_balls'):
+            from .ball_disturbance import BallDisturbances
+            balls=BallDisturbances(m,self.base,self.config['disturbance_balls'])
         self.servos.reset(self.initial_targets)
         waist=m.actuator('yaw_body').id;torso=m.body('body_down_3dprint').id
         head_act=np.array([i for i in range(m.nu) if m.actuator(i).name.startswith('stewart')])
@@ -179,10 +188,6 @@ class PrimitiveSimulator(SwaySimulator):
                 mujoco.mj_forward(m,d)
         if any(w.number for w in d.warning):raise ValueError('Initialization warning')
         start=d.xpos[self.base].copy();waist_qadr=self.servos.qadr[waist];waist_start=float(d.qpos[waist_qadr])
-        balls=None
-        if self.config.get('disturbance_balls'):
-            from .ball_disturbance import BallDisturbances
-            balls=BallDisturbances(m,self.base,self.config['disturbance_balls'])
         bodies=[self.base,torso];previous=[math.atan2(d.xmat[i][3],d.xmat[i][0]) for i in bodies]
         angles=np.zeros(2);initial_yaw=previous[0];controller=controller or PrimitiveController(recipe)
         trace=[];trajectory=[];reason=None;peak_roll=peak_tilt=peak_lift=peak_slip=0.
@@ -264,6 +269,12 @@ class PrimitiveSimulator(SwaySimulator):
                                        foot_front_back_normal_forces_n_back_front=foreaft_forces.tolist(),front_back_height_difference_mm=foreaft_lift,
                                        primitive_stage=stage,side_height_difference_mm=lift,torso_yaw_deg=math.degrees(angles[1]),
                                        waist_torque_nm=float(d.actuator_force[waist])))
+                if getattr(controller, 'record_swing_dynamics', False):
+                    mujoco.mj_subtreeVel(m, d)
+                    head_body = m.site_bodyid[m.site('head').id]
+                    trajectory[-1].update(
+                        head_y_mm=float(1000 * relative_head_pose(m, d)[1, 3]),
+                        head_spin_z_kg_m2_s=float(d.subtree_angmom[head_body, 2]))
             if frame==total_frames or early_finish:break
             try:target=self.checked_ik(pose)
             except ValueError as error:reason='invalid_head_target: '+str(error);break
@@ -297,13 +308,24 @@ class PrimitiveSimulator(SwaySimulator):
                 if closure>.001:reason='loop_closure_error_exceeded_1_mm'
                 q=d.qpos[self.joint_qpos];margin=float(min(np.min(q-self.command_limits[:,0]),np.min(self.command_limits[:,1]-q)))
                 joint_margin=min(joint_margin,margin)
-                if margin<-.005:reason='actual_joint_limit_exceeded'
+                if margin<-.005:
+                    if observe_landing:
+                        if joint_event is None:
+                            joint_event=dict(time_s=float(d.time),margin_rad=margin)
+                    else:
+                        reason='actual_joint_limit_exceeded'
                 for ci,c in enumerate(d.contact):
                     pair={int(c.geom1),int(c.geom2)}
                     other=next(iter(pair-{self.floor}),self.floor)
                     if self.floor in pair and self.foot not in pair and m.body_rootid[m.geom_bodyid[other]]==self.base and c.efc_address>=0:
                         wrench=np.zeros(6);mujoco.mj_contactForce(m,d,ci,wrench)
-                        if abs(wrench[0])>.5 and reason in (None,f'tilt_reached_{tilt_limit_deg}_deg'):reason='nonfoot_floor_contact'
+                        if abs(wrench[0])>.5 and reason in (None,f'tilt_reached_{tilt_limit_deg}_deg'):
+                            if observe_landing:
+                                if floor_event is None and m.geom_bodyid[other]!=self.base:
+                                    floor_event=dict(time_s=float(d.time),body=m.body(m.geom_bodyid[other]).name,
+                                                     tilt_deg=tilt,normal_force_n=float(abs(wrench[0])))
+                            else:
+                                reason='nonfoot_floor_contact'
                 peak_torque=np.maximum(peak_torque,np.abs(d.actuator_force))
                 waist_work+=abs(float(d.actuator_force[waist]*d.actuator_velocity[waist]))*self.dt
                 head_braking+=float(np.maximum(-d.actuator_force[head_act]*d.actuator_velocity[head_act],0).sum())*self.dt
@@ -339,6 +361,9 @@ class PrimitiveSimulator(SwaySimulator):
                     trace=trace,motor_diagnostics=self.servos.report(),render_forward_frame='startup')
         if waist_mode=='off':assert result['waist_peak_torque_nm']==0 and waist_work==0
         if balls is not None:result.update(ball_disturbances=balls.report(),direct_robot_forces_applied=False)
+        if observe_landing:
+            result.update(observe_landing=True,first_body_floor_contact=floor_event,
+                          first_joint_travel_warning=joint_event,fell=floor_event is not None)
         if collision_window is not None:result['collision_frames']=collision_frames
         if record:result['trajectory']=trajectory
         return result

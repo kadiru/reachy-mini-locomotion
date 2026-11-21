@@ -2,6 +2,28 @@
 
 ## Priority
 
+For overhead balance tests, vary simultaneous ball count from one through ten
+on both edges. Continue physics through the landing, recording actual non-foot
+floor contact, a return to flat, and a recovered edge hold separately.
+[Overhead drop results](docs/OVERHEAD_BALL_DROPS.md).
+
+Current side-balance videos should show balls released horizontally in free
+flight, striking Reachy directly from the side before touching the floor.
+Check the contact order for every episode included.
+
+For side balance, compare airborne and rolling hits across speeds on both
+supporting edges. Log the actual first contact, incoming velocity and recovered
+edge hold. Separate floor-first throws, head joint stops and confirmed falls.
+[Results from the frozen policy](docs/SIDE_BALL_IMPACTS.md).
+
+For the separate efficient walking policy, maximize signed forward distance
+over a fixed walking time while minimizing directional head swings per minute.
+The physical demonstration felt close to one swing per second and under two.
+Count one leftward or rightward move as one swing. Allow rapid acceleration and
+braking within a single move and evaluate whether braking coincides with
+single-edge support. Keep the waist target fixed, the battery motor envelope,
+and the 20° limit on heading after each complete pair.
+
 Measure the recovery envelope in simulation. Continue through 35° of body tilt,
 roll faster balls at both supporting edges, and distinguish complete recoveries,
 floor contacts and joint-limit stops. Keep the zero waist target and battery

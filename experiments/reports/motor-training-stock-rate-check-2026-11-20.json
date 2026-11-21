@@ -1,0 +1,91 @@
+{
+  "evidence": "MuJoCo only, no physical sensor data",
+  "policy": "configs/balance-recovery-experimental.json",
+  "physics": "configs/motors-speed-trained.json",
+  "timestep_s": 0.000125,
+  "duration_s": 14,
+  "motion": "unstruck natural-start side-edge balance",
+  "observations": "All sensor assumptions held fixed except gyro_interval_average, which selects 1 kHz interval averaging or one instantaneous sample per 20 ms. Neither reproduces the physical BMI088 internal transfer function.",
+  "rows": [
+    {
+      "side": "left",
+      "seed": 2026112101,
+      "interval_average": true,
+      "held_final_5s": true,
+      "continuous_hold_s": 10.42,
+      "termination": "completed",
+      "elapsed_s": 14.000000000021341,
+      "peak_tilt_deg": 32.91347970801743
+    },
+    {
+      "side": "left",
+      "seed": 2026112101,
+      "interval_average": false,
+      "held_final_5s": false,
+      "continuous_hold_s": 0.0,
+      "termination": "actual_joint_limit_exceeded",
+      "elapsed_s": 3.1072500000009247,
+      "peak_tilt_deg": 46.04330035230217
+    },
+    {
+      "side": "right",
+      "seed": 2026112101,
+      "interval_average": true,
+      "held_final_5s": true,
+      "continuous_hold_s": 9.98,
+      "termination": "completed",
+      "elapsed_s": 14.000000000021341,
+      "peak_tilt_deg": 32.66645070220188
+    },
+    {
+      "side": "right",
+      "seed": 2026112101,
+      "interval_average": false,
+      "held_final_5s": false,
+      "continuous_hold_s": 0.0,
+      "termination": "actual_joint_limit_exceeded",
+      "elapsed_s": 2.7865000000005327,
+      "peak_tilt_deg": 39.34804890291238
+    },
+    {
+      "side": "left",
+      "seed": 2026112231,
+      "interval_average": true,
+      "held_final_5s": true,
+      "continuous_hold_s": 10.4,
+      "termination": "completed",
+      "elapsed_s": 14.000000000021341,
+      "peak_tilt_deg": 32.85931127537841
+    },
+    {
+      "side": "left",
+      "seed": 2026112231,
+      "interval_average": false,
+      "held_final_5s": false,
+      "continuous_hold_s": 0.0,
+      "termination": "actual_joint_limit_exceeded",
+      "elapsed_s": 3.0701250000008793,
+      "peak_tilt_deg": 35.26107184336738
+    },
+    {
+      "side": "right",
+      "seed": 2026112231,
+      "interval_average": true,
+      "held_final_5s": true,
+      "continuous_hold_s": 10.04,
+      "termination": "completed",
+      "elapsed_s": 14.000000000021341,
+      "peak_tilt_deg": 33.86761665291732
+    },
+    {
+      "side": "right",
+      "seed": 2026112231,
+      "interval_average": false,
+      "held_final_5s": false,
+      "continuous_hold_s": 0.0,
+      "termination": "actual_joint_limit_exceeded",
+      "elapsed_s": 2.7682500000005104,
+      "peak_tilt_deg": 38.214507436662686
+    }
+  ]
+}

@@ -34,6 +34,9 @@ def evaluate(job):
     child=ctrl.child if axis=='pitch' else ctrl
     child.control_gain=policy.get('linear_gain_scale',1.)
     child.tracking_error_limit=policy.get('linear_tracking_error_limit',0.)
+    child.disturbance_tracking_limit=float(policy.get('disturbance_tracking_limit',0.))
+    if not 0 <= child.disturbance_tracking_limit <= 40:
+        raise ValueError('Invalid disturbance tracking limit')
     child.command_rate_limit=policy.get('linear_command_rate_limit',0.)
     child.velocity_command_rate_gain=policy.get('velocity_command_rate_gain',0.)
     if not 0<=child.velocity_command_rate_gain<=200:raise ValueError('Invalid adaptive command profile')
@@ -48,7 +51,8 @@ def evaluate(job):
     initial={f'diagnostic_initial_{axis}_deg':None if reset is None else side*reset,
              'diagnostic_initial_angular_rate_deg_s':side*job.get('outward_rate_deg_s',0.)}
     r=sim.run_primitive(policy['recipe'],seconds=job.get('seconds',12),waist_mode='hold_neutral',controller=ctrl,
-                        tilt_limit_deg=job.get('tilt_limit_deg'),record=bool(job.get('record')),collision_window=job.get('collision_window'),**initial)
+                        tilt_limit_deg=job.get('tilt_limit_deg'),record=bool(job.get('record')),collision_window=job.get('collision_window'),
+                        observe_landing=job.get('observe_landing',False),**initial)
     metrics=(foreaft_metrics if axis=='pitch' else balance_metrics)(r,side,child.f.target_roll_deg)
     impacts=impact_metrics(r,axis,side,child.f.target_roll_deg)
     return_started=next((x.get('return_started_s',x.get('virtual_return_started_s')) for x in reversed(r['trace'])
@@ -60,6 +64,8 @@ def evaluate(job):
     r['foreaft_balance' if axis=='pitch' else 'edge_balance']=dict(policy=policy,side=side,metrics=metrics)
     r['balance_curriculum']=dict(axis=axis,edge=edge,impacts=impacts,return_started_s=return_started,hold_return_pass=hold_return,full_sequence_pass=full_sequence,safe_flat_after_impacts=safe_flat,impact_trial_pass=impact_trial)
     r['workspace_projected_frames']=child.projected_frames
+    if child.disturbance_tracking_limit:
+        r['disturbance_tracking_frames']=child.recovery_frames
     r['attitude_sensor_assumption']='Delayed noisy attitude; optional noisy simulated body gyro; ideal head pose; optional causal model observer; no contact/ball input to policy; sensors uncalibrated'
     score=metrics['soft_hold_s']+2*metrics['longest_strict_hold_s']+10*hold_return+5*impacts['all_impacts_pass']+5*safe_flat-.05*(not r['completed'])
     if job.get('record'):

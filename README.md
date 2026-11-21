@@ -14,6 +14,26 @@ The opening sequence shows controller-driven head motion, whole-body rocking
 and apparent base progress. [Video observations](docs/VIMEO_OBSERVATIONS_2026-11-18.md)
 separate what is visible from what still needs measurement.
 
+The newest simulations cover a walk at one directional swing per second and
+balance under direct side hits and overhead drops. The drop film follows all
+78 episodes through recovery, a flat landing, or a topple. The Google Slides
+presentation includes the training methods, sensor inputs, walking and balance clips.
+[Walking at operator cadence](docs/TELEOP_CADENCE.md) ·
+[Direct side hits](docs/SIDE_BALL_IMPACTS.md) ·
+[One through ten overhead balls](docs/OVERHEAD_BALL_DROPS.md) ·
+[Google Slides presentation](https://docs.google.com/presentation/d/1PVjdl7sI0adp9ynv8d7YQ7XYvui_ADdw98XGs95qBeU/edit).
+
+The latest slow gait covers 25.65 mm in 24 head swings and brakes on alternate
+loaded edges in 21 of them. A faster variant covers 37.61 mm in the same time.
+The comparison includes every matched trial, including the 27.19° heading miss.
+[Watch the alternating steps](media/simulation/alternating-edge-brakes.mp4) ·
+[Walking and balance follow-up](docs/EDGE_WALK_AND_BALANCE_FOLLOWUP.md).
+
+After retraining on that heading miss, Reachy passed all ten retests, ten
+new floor/motor trials and two 40-second walks. Its fastest new trial covered
+39.60 mm in 16 swings, with one rim lifting 29.33 mm.
+[Watch the fastest fresh edge walk](media/simulation/edge-walk-fastest-fresh.mp4).
+
 **Faster ball impacts and 40° catches (November 20).** A roll-rate fallback
 kept Reachy upright after a **9.248 m/s** bounce by giving up the edge and
 settling flat in **0.72 s**. A **9.373 m/s** bounce toppled the same simulated

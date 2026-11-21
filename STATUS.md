@@ -1,5 +1,127 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 21 — Low-cadence edge steps and remaining balance failures
+
+At one directional head swing per second, a new MuJoCo gait advances 25.65 mm
+in 24 swings. It brakes on ten left-rim strokes and eleven right-rim strokes.
+Maximum pair-end heading is 14.49° and peak rim height difference is 11.61 mm.
+A faster variant advances 37.61 mm with fewer brakes on its right rim. The old
+shallow walk still covers the most distance at this cadence. The new walks use
+pair-end heading feedback, the bounded battery motor model and a fixed waist.
+Ten fresh floor/motor/start combinations gave ten faster-gait passes and nine
+alternating-gait passes. All 40 matched walking tests stayed upright.
+[Full results, failures, videos and exact commands](docs/EDGE_WALK_AND_BALANCE_FOLLOWUP.md).
+
+Retraining on the 27.19° heading miss reduced it to 7.10° on the same trial.
+The repaired policy passed 10/10 retests, 10/10 fresh conditions and both
+40-second nominal walks. Its fastest fresh trial advanced 39.60 mm on 16
+directional swings, with 29.33 mm peak rim lift and 7.00° maximum pair-end
+heading. It braked on seven left and seven right strokes, and 31.57 mm of
+travel occurred during measured same-rim support. The nominal speed cost was
+about 10%. [Fastest fresh walk](media/simulation/edge-walk-fastest-fresh.mp4) ·
+[All 22 post-repair checks](media/simulation/edge-heading-repair-all.mp4).
+
+None of 36 natural front/back launches held the edge for five seconds.
+The fitted single-sample gyro blend failed on both supporting sides at all
+three fresh seeds. The new tracking limit recovered from fewer direct hits
+than the original side controller. These remain open.
+The Google Slides presentation now has 16 slides and 12 embedded videos,
+including direct airborne hits, overhead drops and the repaired walking policy. Physical work
+is deferred to November 22. The first measurement is a supported, read-only
+sensor recording. No robot was connected for this work.
+
+## Wireless robot transfer check
+
+On the unstruck 14-second balance task, both edges held through the final
+five seconds at two noise seeds with the training-time gyro averaging. All
+four matched runs using a single instantaneous gyro sample per 20 ms reached
+a joint limit after 2.77–3.11 s. The IMU's internal filtering and the latency
+on the user's robot have yet to be measured. The deployment step is to capture
+IMU and encoder-derived head pose with the body supported, verify the
+coordinate frames and end-to-end timing, then qualify a controller trained
+against that measured data path. No physical trial has been run.
+[Eight paired-condition simulation results](experiments/reports/motor-training-stock-rate-check-2026-11-20.json) · [Read-only capture](docs/FIRST_RECORDING_SESSION.md).
+
+## November 20 — Simultaneous overhead drops
+
+Tested one through ten 10 g balls from rest on both edge holds in MuJoCo.
+In the fully matched sweep one ball recovered 4/4 times. Two balls produced
+flat landings on the base 4/4 times. With ten confirmed hits, both right-edge
+trials held and both left-edge trials settled flat. The smallest confirmed
+topple across all conditions was four hits on the left edge. Two wider
+nine-ball releases toppled the right edge, with eight balls striking in each.
+Every episode continued through 14 s with angle-only termination disabled,
+bounded servos, physical joint stops and measured ground contacts.
+The 78 recorded trials include six controls. Next, compare the net angular
+impulse and pre-impact roll rate of the four-ball fall and recoveries.
+[Actual fall](media/simulation/overhead-drop-fall.mp4) · [All 78 episodes](media/simulation/overhead-drops-all.mp4) · [Count table and exact commands](docs/OVERHEAD_BALL_DROPS.md).
+
+## November 20 — Direct airborne side hits
+
+All 24 simulated balls struck the balancing robot before touching the floor.
+Reachy regained its original edge and held it through the final five seconds
+in 12 trials. The remaining 12 stopped on head joint travel. In the fastest
+successful hit, a 5 g ball struck the lower torso at 2.13 m/s and the left
+edge hold resumed 0.83 s later. The new reel shows the 12 verified recoveries.
+[Direct hits video](media/simulation/direct-airborne-recoveries.mp4) · [Recorded outcomes](experiments/reports/motor-training-direct-airborne-2026-11-20.json) · [Reproduction commands](docs/SIDE_BALL_IMPACTS.md#direct-horizontal-releases).
+
+## November 20 — Rolling and airborne hits during side balance
+
+The [successful episodes film](media/simulation/side-impact-recoveries.mp4)
+shows all 14 measured hits after which Reachy regained its original edge and
+held it through the final five seconds. Each chapter shows one complete
+episode and slows down the impact. The first chapter has the largest observed
+change in roll among the recoveries.
+
+The frozen controller recovered on its original edge after 10/30 verified
+airborne hits and 3/16 rolling hits. Two other thrown balls bounced on the
+floor first. All four unstruck controls held their edges. At 1.2 m/s horizontal
+release on the left edge, Reachy recovered from a right-side foot strike at
+6.6 cm. A higher throw struck the lower torso at 13.3 cm, and a head joint
+reached its travel limit. At 2.4 m/s horizontal release all eight airborne trials
+reached a joint limit. Next, test whether a recovery that accounts for remaining
+head joint travel improves that result. Simulation only, using the nominal
+5 V motor model and zero waist target.
+[Comparison film](media/simulation/side-impact-comparison.mp4) · [All 52 tests](media/simulation/side-impact-all.mp4) · [Conditions, findings and replay commands](docs/SIDE_BALL_IMPACTS.md) · [Per-trial CSV](experiments/reports/motor-training-side-impacts-2026-11-20.csv).
+
+## November 20 — One directional head swing per second
+
+A separate cadence-aware walking policy covers 70.97 mm in 24 active seconds
+on 24 measured head swings in MuJoCo. Its mirrored start covers 70.90 mm.
+Both settle upright and remain within 2.85° at each left–right pair end.
+The previous distance-per-swing gait used 400 swings/min. The new gait uses
+60 swings/min. Ten held-out floor, battery and actuator trials passed.
+The selected gait raises the opposite rim by at most 5.26 mm in nominal
+conditions. A comparison trial reached 13.73 mm and braked on an edge on five
+of eight swings, but travelled 30.66 mm backward. The next experiment is to
+time head yaw and braking from measured roll and roll rate to reverse that
+edge pivot's travel. These results are simulation only.
+[Forward video](media/simulation/teleop-cadence.mp4) · [Edge-braking video](media/simulation/teleop-cadence-edge-example.mp4) · [Method and exact replay commands](docs/TELEOP_CADENCE.md) · [Policy](configs/teleop-cadence-trained.json) · [All trials](experiments/reports/motor-training-teleop-cadence-2026-11-20.json).
+
+## November 20 — Forward distance per head swing
+
+Trained a separate simulated policy for signed forward travel per compound head
+swing. In the matched 10 cm stop test it takes 18 or 20 swings depending on
+starting side. The prior rocking gait takes 20 or 22. The selected 80-pair
+recording advances 1,221.86 mm on 160 swings, settles flat, and stays within
+13.59° at every pair end. The 5 V motor model and zero waist target are unchanged.
+The mirrored 80-pair trial reaches an infeasible head target. Eight of twelve
+fresh conditions pass. Next, account for remaining head-joint range in steering.
+[Video](media/simulation/distance-per-swing.mp4) · [Training, failures and exact replay commands](docs/DISTANCE_PER_SWING.md).
+
+## November 20 — Walking and balance presentation
+
+The Google Slides deck contains nine embedded MuJoCo clips covering two walking
+styles, edge pivots, balance on four rims, rolling-ball disturbances and
+prepared 40° catches. Speaker notes give the training parameters and evaluation
+conditions. The opening slide links the original physical Quest demo. The last
+slide links the 28-minute archive and searchable trial index.
+[Open the presentation](https://docs.google.com/presentation/d/1PVjdl7sI0adp9ynv8d7YQ7XYvui_ADdw98XGs95qBeU/edit).
+
+The next physical measurement is the motor-bus voltage during a battery-powered
+head swing, recorded alongside head pose and IMU timing for comparison with the
+simulation.
+
 ## November 20 — faster rolling balls and catches after 40° of measured roll
 
 Balance training and evaluation now record 35° and 40° crossings and continue

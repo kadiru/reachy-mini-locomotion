@@ -1,0 +1,5542 @@
+{
+  "evidence": "uncalibrated MuJoCo simulation",
+  "policy": "configs/balance-recovery-experimental.json",
+  "ball_mass_kg": 0.01,
+  "ball_radius_m": 0.015,
+  "release_height_from_floor_m": 0.48,
+  "timestep_s": 0.000125,
+  "rows": [
+    {
+      "id": "left-00-nominal",
+      "count": 0,
+      "edge": "left",
+      "repeat": false,
+      "release_s": 6.5,
+      "seed": 2026112101,
+      "prequalified": true,
+      "direct_hits": 0,
+      "first_hit_s": null,
+      "last_first_hit_s": null,
+      "outcome": "held edge",
+      "floor_contact": null,
+      "final_hold": true,
+      "settled_flat": false,
+      "end_s": 14.000000000021341,
+      "final_tilt_deg": 32.40591310692168,
+      "peak_tilt_deg": 32.91347970783619,
+      "first_joint_warning": null,
+      "min_joint_margin_rad": 0.047882297763116144,
+      "max_closure_error_m": 2.8821620811365796e-05,
+      "termination": "completed",
+      "first_35_s": null,
+      "first_40_s": null,
+      "balls": []
+    },
+    {
+      "id": "right-00-nominal",
+      "count": 0,
+      "edge": "right",
+      "repeat": false,
+      "release_s": 6.5,
+      "seed": 2026112101,
+      "prequalified": true,
+      "direct_hits": 0,
+      "first_hit_s": null,
+      "last_first_hit_s": null,
+      "outcome": "held edge",
+      "floor_contact": null,
+      "final_hold": true,
+      "settled_flat": false,
+      "end_s": 14.000000000021341,
+      "final_tilt_deg": 30.776869843045347,
+      "peak_tilt_deg": 32.66645069672963,
+      "first_joint_warning": null,
+      "min_joint_margin_rad": 0.05479398750351305,
+      "max_closure_error_m": 3.009291279431375e-05,
+      "termination": "completed",
+      "first_35_s": null,
+      "first_40_s": null,
+      "balls": []
+    },
+    {
+      "id": "left-01-nominal",
+      "count": 1,
+      "edge": "left",
+      "repeat": false,
+      "release_s": 6.5,
+      "seed": 2026112101,
+      "prequalified": true,
+      "direct_hits": 1,
+      "first_hit_s": 6.695124999995734,
+      "last_first_hit_s": 6.695124999995734,
+      "outcome": "held edge",
+      "floor_contact": null,
+      "final_hold": true,
+      "settled_flat": false,
+      "end_s": 14.000000000021341,
+      "final_tilt_deg": 32.405863984073456,
+      "peak_tilt_deg": 35.162347075811894,
+      "first_joint_warning": null,
+      "min_joint_margin_rad": 0.047882297763116144,
+      "max_closure_error_m": 2.8821620811365796e-05,
+      "termination": "completed",
+      "first_35_s": 6.955624999995127,
+      "first_40_s": null,
+      "balls": [
+        {
+          "index": 0,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.695124999995734,
+          "last_robot_contact_s": 6.713499999995691,
+          "normal_impulse_ns": 0.029278161897631157,
+          "peak_normal_force_n": 2.3573507495280657,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.91294999999998
+          ],
+          "incoming_3d_speed_m_s": 1.91294999999998,
+          "first_floor_contact_s": 7.005249999995011,
+          "first_contact_height_m": 0.2800548878977977,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6826629126275592,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.010105677404839454,
+            0.13206761172601555,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        }
+      ]
+    },
+    {
+      "id": "right-01-nominal",
+      "count": 1,
+      "edge": "right",
+      "repeat": false,
+      "release_s": 6.5,
+      "seed": 2026112101,
+      "prequalified": true,
+      "direct_hits": 1,
+      "first_hit_s": 6.695999999995732,
+      "last_first_hit_s": 6.695999999995732,
+      "outcome": "held edge",
+      "floor_contact": null,
+      "final_hold": true,
+      "settled_flat": false,
+      "end_s": 14.000000000021341,
+      "final_tilt_deg": 30.776549482399066,
+      "peak_tilt_deg": 33.30989854820666,
+      "first_joint_warning": null,
+      "min_joint_margin_rad": 0.05479398750351305,
+      "max_closure_error_m": 3.009291279431375e-05,
+      "termination": "completed",
+      "first_35_s": null,
+      "first_40_s": null,
+      "balls": [
+        {
+          "index": 0,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.695999999995732,
+          "last_robot_contact_s": 6.713749999995691,
+          "normal_impulse_ns": 0.030603368827230252,
+          "peak_normal_force_n": 2.530116771186198,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9215337499999798
+          ],
+          "incoming_3d_speed_m_s": 1.9215337499999798,
+          "first_floor_contact_s": 7.029999999994954,
+          "first_contact_height_m": 0.27787732390020026,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.7220760124627952,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.006917973751167733,
+            -0.1361281085548713,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        }
+      ]
+    },
+    {
+      "id": "left-02-nominal",
+      "count": 2,
+      "edge": "left",
+      "repeat": false,
+      "release_s": 6.5,
+      "seed": 2026112101,
+      "prequalified": true,
+      "direct_hits": 2,
+      "first_hit_s": 6.695124999995734,
+      "last_first_hit_s": 6.705874999995709,
+      "outcome": "settled flat",
+      "floor_contact": null,
+      "final_hold": false,
+      "settled_flat": true,
+      "end_s": 14.000000000021341,
+      "final_tilt_deg": 0.010863427834876354,
+      "peak_tilt_deg": 36.00910522671228,
+      "first_joint_warning": {
+        "time_s": 7.624624999993568,
+        "margin_rad": -0.0050015040881334905
+      },
+      "min_joint_margin_rad": -0.009894684208338278,
+      "max_closure_error_m": 3.116712792007939e-05,
+      "termination": "completed",
+      "first_35_s": 6.999249999995025,
+      "first_40_s": null,
+      "balls": [
+        {
+          "index": 0,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.695124999995734,
+          "last_robot_contact_s": 6.713499999995691,
+          "normal_impulse_ns": 0.03070623757686424,
+          "peak_normal_force_n": 2.9315349865942157,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.91294999999998
+          ],
+          "incoming_3d_speed_m_s": 1.91294999999998,
+          "first_floor_contact_s": 7.010874999994998,
+          "first_contact_height_m": 0.2800548878977977,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6911554362412005,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.010105677404839454,
+            0.13206761172601555,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 1,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.705874999995709,
+          "last_robot_contact_s": 6.724249999995666,
+          "normal_impulse_ns": 0.027040412831577095,
+          "peak_normal_force_n": 2.2091242008909378,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.21807677090722677,
+          "incoming_velocity_m_s": [
+            0.006646900819845933,
+            0.21797544980757397,
+            -2.014385059006307
+          ],
+          "incoming_3d_speed_m_s": 2.026155138176039,
+          "first_floor_contact_s": 6.963624999995108,
+          "first_contact_height_m": 0.25971771082381045,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5656622749091504,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.009909573386720348,
+            0.16406701083309377,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        }
+      ]
+    },
+    {
+      "id": "right-02-nominal",
+      "count": 2,
+      "edge": "right",
+      "repeat": false,
+      "release_s": 6.5,
+      "seed": 2026112101,
+      "prequalified": true,
+      "direct_hits": 2,
+      "first_hit_s": 6.695999999995732,
+      "last_first_hit_s": 6.707874999995704,
+      "outcome": "settled flat",
+      "floor_contact": null,
+      "final_hold": false,
+      "settled_flat": true,
+      "end_s": 14.000000000021341,
+      "final_tilt_deg": 0.013068368276068287,
+      "peak_tilt_deg": 34.973674422762706,
+      "first_joint_warning": {
+        "time_s": 7.578624999993675,
+        "margin_rad": -0.005005353667290491
+      },
+      "min_joint_margin_rad": -0.012358695374445006,
+      "max_closure_error_m": 3.009291279431375e-05,
+      "termination": "completed",
+      "first_35_s": null,
+      "first_40_s": null,
+      "balls": [
+        {
+          "index": 0,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.695999999995732,
+          "last_robot_contact_s": 6.713749999995691,
+          "normal_impulse_ns": 0.03105874904068136,
+          "peak_normal_force_n": 2.6873145550915227,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9215337499999798
+          ],
+          "incoming_3d_speed_m_s": 1.9215337499999798,
+          "first_floor_contact_s": 7.033374999994946,
+          "first_contact_height_m": 0.27787732390020026,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.7281359219792731,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.006917973751167733,
+            -0.1361281085548713,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 1,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": -0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.707874999995704,
+          "last_robot_contact_s": 6.726374999995661,
+          "normal_impulse_ns": 0.02614747391245372,
+          "peak_normal_force_n": 2.101952456421878,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.11563395946143906,
+          "incoming_velocity_m_s": [
+            0.0008757436978610397,
+            -0.11563064322966204,
+            -2.047032769963234
+          ],
+          "incoming_3d_speed_m_s": 2.0502961673582867,
+          "first_floor_contact_s": 6.93724999999517,
+          "first_contact_height_m": 0.25673446829514784,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.54151002387658,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.006591495958934579,
+            -0.16812644307795516,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        }
+      ]
+    },
+    {
+      "id": "left-03-nominal",
+      "count": 3,
+      "edge": "left",
+      "repeat": false,
+      "release_s": 6.5,
+      "seed": 2026112101,
+      "prequalified": true,
+      "direct_hits": 3,
+      "first_hit_s": 6.690374999995745,
+      "last_first_hit_s": 6.705999999995709,
+      "outcome": "held edge",
+      "floor_contact": null,
+      "final_hold": true,
+      "settled_flat": false,
+      "end_s": 14.000000000021341,
+      "final_tilt_deg": 32.405891956857644,
+      "peak_tilt_deg": 34.268011027808726,
+      "first_joint_warning": null,
+      "min_joint_margin_rad": 0.047882297763116144,
+      "max_closure_error_m": 2.8821620811365796e-05,
+      "termination": "completed",
+      "first_35_s": null,
+      "first_40_s": null,
+      "balls": [
+        {
+          "index": 0,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.695124999995734,
+          "last_robot_contact_s": 6.713499999995691,
+          "normal_impulse_ns": 0.030627502075983012,
+          "peak_normal_force_n": 2.9247287921045313,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.91294999999998
+          ],
+          "incoming_3d_speed_m_s": 1.91294999999998,
+          "first_floor_contact_s": 7.010249999995,
+          "first_contact_height_m": 0.28003975305958234,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.687808279728499,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.010105677404839454,
+            0.13206761172601555,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 1,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.705999999995709,
+          "last_robot_contact_s": 6.724249999995666,
+          "normal_impulse_ns": 0.02724646576548641,
+          "peak_normal_force_n": 2.2248797394456967,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.21842875285530639,
+          "incoming_velocity_m_s": [
+            0.00628673092700628,
+            0.21833826299614995,
+            -2.0160649125044134
+          ],
+          "incoming_3d_speed_m_s": 2.0278631244503047,
+          "first_floor_contact_s": 6.965999999995103,
+          "first_contact_height_m": 0.25947174100935555,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5682192288571548,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.009909573386720348,
+            0.16406701083309377,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 2,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": -0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.690374999995745,
+          "last_robot_contact_s": 6.708499999995703,
+          "normal_impulse_ns": 0.03198076107043939,
+          "peak_normal_force_n": 2.59763650242998,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8663524999999805
+          ],
+          "incoming_3d_speed_m_s": 1.8663524999999805,
+          "first_floor_contact_s": 7.076874999994844,
+          "first_contact_height_m": 0.28738980847170137,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.8438955078096468,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.01030178142295856,
+            0.10006821261893735,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        }
+      ]
+    },
+    {
+      "id": "right-03-nominal",
+      "count": 3,
+      "edge": "right",
+      "repeat": false,
+      "release_s": 6.5,
+      "seed": 2026112101,
+      "prequalified": true,
+      "direct_hits": 3,
+      "first_hit_s": 6.69262499999574,
+      "last_first_hit_s": 6.707874999995704,
+      "outcome": "settled flat",
+      "floor_contact": null,
+      "final_hold": false,
+      "settled_flat": true,
+      "end_s": 14.000000000021341,
+      "final_tilt_deg": 0.013058625862755253,
+      "peak_tilt_deg": 32.66645069672963,
+      "first_joint_warning": {
+        "time_s": 7.800624999993158,
+        "margin_rad": -0.005125413123542977
+      },
+      "min_joint_margin_rad": -0.01397207840551884,
+      "max_closure_error_m": 3.009291279431375e-05,
+      "termination": "completed",
+      "first_35_s": null,
+      "first_40_s": null,
+      "balls": [
+        {
+          "index": 0,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.695999999995732,
+          "last_robot_contact_s": 6.71387499999569,
+          "normal_impulse_ns": 0.03131317622496686,
+          "peak_normal_force_n": 2.761861076512155,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9215337499999798
+          ],
+          "incoming_3d_speed_m_s": 1.9215337499999798,
+          "first_floor_contact_s": 7.03599999999494,
+          "first_contact_height_m": 0.27787635667319976,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.7263880671060379,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.006917973751167733,
+            -0.1361281085548713,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 1,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": -0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.707874999995704,
+          "last_robot_contact_s": 6.726374999995661,
+          "normal_impulse_ns": 0.02594363608098121,
+          "peak_normal_force_n": 2.0844605778955856,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.14016717219037142,
+          "incoming_velocity_m_s": [
+            0.0010623462573223367,
+            -0.14016314629842888,
+            -2.0470388709317406
+          ],
+          "incoming_3d_speed_m_s": 2.0518321021139476,
+          "first_floor_contact_s": 6.935124999995175,
+          "first_contact_height_m": 0.2567236506743298,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5407113274096105,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.006591495958934579,
+            -0.16812644307795516,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 2,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.69262499999574,
+          "last_robot_contact_s": 6.710749999995698,
+          "normal_impulse_ns": 0.031494271870765325,
+          "peak_normal_force_n": 2.5440171350384837,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8884249999999803
+          ],
+          "incoming_3d_speed_m_s": 1.8884249999999803,
+          "first_floor_contact_s": 7.060749999994882,
+          "first_contact_height_m": 0.2838006317762136,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.7998974028631052,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.0072444515434008875,
+            -0.10412977403178748,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        }
+      ]
+    },
+    {
+      "id": "left-04-nominal",
+      "count": 4,
+      "edge": "left",
+      "repeat": false,
+      "release_s": 6.5,
+      "seed": 2026112101,
+      "prequalified": true,
+      "direct_hits": 4,
+      "first_hit_s": 6.690374999995745,
+      "last_first_hit_s": 6.705999999995709,
+      "outcome": "settled flat",
+      "floor_contact": null,
+      "final_hold": false,
+      "settled_flat": true,
+      "end_s": 14.000000000021341,
+      "final_tilt_deg": 0.010829123220782694,
+      "peak_tilt_deg": 36.46181243836251,
+      "first_joint_warning": {
+        "time_s": 7.654124999993499,
+        "margin_rad": -0.00501336374991368
+      },
+      "min_joint_margin_rad": -0.014572390351013986,
+      "max_closure_error_m": 3.858704432454743e-05,
+      "termination": "completed",
+      "first_35_s": 7.020749999994975,
+      "first_40_s": null,
+      "balls": [
+        {
+          "index": 0,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.695124999995734,
+          "last_robot_contact_s": 6.713499999995691,
+          "normal_impulse_ns": 0.030483533358037898,
+          "peak_normal_force_n": 2.8966577564250846,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.91294999999998
+          ],
+          "incoming_3d_speed_m_s": 1.91294999999998,
+          "first_floor_contact_s": 7.008999999995003,
+          "first_contact_height_m": 0.28003975305958234,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6894736562826396,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.010105677404839454,
+            0.13206761172601555,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 1,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.705999999995709,
+          "last_robot_contact_s": 6.724374999995666,
+          "normal_impulse_ns": 0.027199305832408014,
+          "peak_normal_force_n": 2.2198546421982224,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.2158238035106402,
+          "incoming_velocity_m_s": [
+            0.006207414464250657,
+            0.21573451779320907,
+            -2.015982558462809
+          ],
+          "incoming_3d_speed_m_s": 2.0275023033742903,
+          "first_floor_contact_s": 6.965749999995103,
+          "first_contact_height_m": 0.25945996442754615,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.564232679399501,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.009909573386720348,
+            0.16406701083309377,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 2,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": -0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.690374999995745,
+          "last_robot_contact_s": 6.708499999995703,
+          "normal_impulse_ns": 0.03190880563751925,
+          "peak_normal_force_n": 2.59763650242998,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8663524999999805
+          ],
+          "incoming_3d_speed_m_s": 1.8663524999999805,
+          "first_floor_contact_s": 7.075624999994847,
+          "first_contact_height_m": 0.28738980847170137,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.8402417664795183,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.01030178142295856,
+            0.10006821261893735,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 3,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": 0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.700124999995722,
+          "last_robot_contact_s": 6.718624999995679,
+          "normal_impulse_ns": 0.028372658109836548,
+          "peak_normal_force_n": 2.2883893119648597,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9619999999999793
+          ],
+          "incoming_3d_speed_m_s": 1.9619999999999793,
+          "first_floor_contact_s": 6.978374999995074,
+          "first_contact_height_m": 0.27135038488485763,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6153053042539625,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.01770466713678691,
+            0.1478974802180793,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        }
+      ]
+    },
+    {
+      "id": "right-04-nominal",
+      "count": 4,
+      "edge": "right",
+      "repeat": false,
+      "release_s": 6.5,
+      "seed": 2026112101,
+      "prequalified": true,
+      "direct_hits": 4,
+      "first_hit_s": 6.69262499999574,
+      "last_first_hit_s": 6.707999999995704,
+      "outcome": "held edge",
+      "floor_contact": null,
+      "final_hold": true,
+      "settled_flat": false,
+      "end_s": 14.000000000021341,
+      "final_tilt_deg": 30.776700045341457,
+      "peak_tilt_deg": 32.74683942107007,
+      "first_joint_warning": null,
+      "min_joint_margin_rad": 0.05479398750351305,
+      "max_closure_error_m": 3.009291279431375e-05,
+      "termination": "completed",
+      "first_35_s": null,
+      "first_40_s": null,
+      "balls": [
+        {
+          "index": 0,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.695999999995732,
+          "last_robot_contact_s": 6.71387499999569,
+          "normal_impulse_ns": 0.031129078902881958,
+          "peak_normal_force_n": 2.7155474769587293,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9215337499999798
+          ],
+          "incoming_3d_speed_m_s": 1.9215337499999798,
+          "first_floor_contact_s": 7.034374999994943,
+          "first_contact_height_m": 0.27787635667319976,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.7280049185311717,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.006917973751167733,
+            -0.1361281085548713,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 1,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": -0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.707999999995704,
+          "last_robot_contact_s": 6.726499999995661,
+          "normal_impulse_ns": 0.026006337260631108,
+          "peak_normal_force_n": 2.0940960323757585,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.13292881610414914,
+          "incoming_velocity_m_s": [
+            0.0009617228435819879,
+            -0.13292533708824225,
+            -2.04877552953349
+          ],
+          "incoming_3d_speed_m_s": 2.0530833496392886,
+          "first_floor_contact_s": 6.935999999995173,
+          "first_contact_height_m": 0.2565175938610627,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5398553564591428,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.006591495958934579,
+            -0.16812644307795516,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 2,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.69262499999574,
+          "last_robot_contact_s": 6.710874999995697,
+          "normal_impulse_ns": 0.03150169596057178,
+          "peak_normal_force_n": 2.5417075480224796,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8884249999999803
+          ],
+          "incoming_3d_speed_m_s": 1.8884249999999803,
+          "first_floor_contact_s": 7.060374999994883,
+          "first_contact_height_m": 0.2838006317762136,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.798959018946051,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.0072444515434008875,
+            -0.10412977403178748,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 3,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": -0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.700124999995722,
+          "last_robot_contact_s": 6.7181249999956805,
+          "normal_impulse_ns": 0.02570016176907313,
+          "peak_normal_force_n": 2.104739919614378,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9619999999999793
+          ],
+          "incoming_3d_speed_m_s": 1.9619999999999793,
+          "first_floor_contact_s": 6.93699999999517,
+          "first_contact_height_m": 0.27043306894321395,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6004453439748927,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.02095663572073206,
+            -0.15184453775456785,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        }
+      ]
+    },
+    {
+      "id": "left-05-nominal",
+      "count": 5,
+      "edge": "left",
+      "repeat": false,
+      "release_s": 6.5,
+      "seed": 2026112101,
+      "prequalified": true,
+      "direct_hits": 5,
+      "first_hit_s": 6.690374999995745,
+      "last_first_hit_s": 6.705999999995709,
+      "outcome": "lost edge",
+      "floor_contact": null,
+      "final_hold": false,
+      "settled_flat": false,
+      "end_s": 14.000000000021341,
+      "final_tilt_deg": 32.40656266428444,
+      "peak_tilt_deg": 36.489302777536096,
+      "first_joint_warning": null,
+      "min_joint_margin_rad": 0.047882297763116144,
+      "max_closure_error_m": 2.8821620811365796e-05,
+      "termination": "completed",
+      "first_35_s": 6.991624999995043,
+      "first_40_s": null,
+      "balls": [
+        {
+          "index": 0,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.695124999995734,
+          "last_robot_contact_s": 6.713624999995691,
+          "normal_impulse_ns": 0.030315498837769034,
+          "peak_normal_force_n": 2.867870673274614,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.91294999999998
+          ],
+          "incoming_3d_speed_m_s": 1.91294999999998,
+          "first_floor_contact_s": 7.007999999995005,
+          "first_contact_height_m": 0.2800396837363198,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6909786873250703,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.010105677404839454,
+            0.13206761172601555,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 1,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.705999999995709,
+          "last_robot_contact_s": 6.724374999995666,
+          "normal_impulse_ns": 0.02732329026323665,
+          "peak_normal_force_n": 2.2282404162668428,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.2030798902230177,
+          "incoming_velocity_m_s": [
+            0.005491179164817218,
+            0.20300563727239893,
+            -2.0163977861667832
+          ],
+          "incoming_3d_speed_m_s": 2.0265984984380347,
+          "first_floor_contact_s": 6.9672499999951,
+          "first_contact_height_m": 0.2594268431118816,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5658529447256624,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.009909573386720348,
+            0.16406701083309377,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 2,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": -0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.690374999995745,
+          "last_robot_contact_s": 6.708499999995703,
+          "normal_impulse_ns": 0.031566718504465165,
+          "peak_normal_force_n": 2.565504649640416,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8663524999999805
+          ],
+          "incoming_3d_speed_m_s": 1.8663524999999805,
+          "first_floor_contact_s": 7.071624999994857,
+          "first_contact_height_m": 0.28738980847170137,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.8369131248909687,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.01030178142295856,
+            0.10006821261893735,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 3,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": 0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.700124999995722,
+          "last_robot_contact_s": 6.718624999995679,
+          "normal_impulse_ns": 0.02844002493557645,
+          "peak_normal_force_n": 2.2939217781682624,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9619999999999793
+          ],
+          "incoming_3d_speed_m_s": 1.9619999999999793,
+          "first_floor_contact_s": 6.978874999995073,
+          "first_contact_height_m": 0.2713431749474827,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6153173369433773,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.01770466713678691,
+            0.1478974802180793,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 4,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.027712812921102035,
+            "offset_y_m": -0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.694749999995735,
+          "last_robot_contact_s": 6.712874999995693,
+          "normal_impulse_ns": 0.025597312632262212,
+          "peak_normal_force_n": 2.054204482584707,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.90927124999998
+          ],
+          "incoming_3d_speed_m_s": 1.90927124999998,
+          "first_floor_contact_s": 6.95012499999514,
+          "first_contact_height_m": 0.28213154468851015,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.63065146000491,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.03791602194646582,
+            0.1162377432339518,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        }
+      ]
+    },
+    {
+      "id": "right-05-nominal",
+      "count": 5,
+      "edge": "right",
+      "repeat": false,
+      "release_s": 6.5,
+      "seed": 2026112101,
+      "prequalified": true,
+      "direct_hits": 5,
+      "first_hit_s": 6.69262499999574,
+      "last_first_hit_s": 6.707999999995704,
+      "outcome": "held edge",
+      "floor_contact": null,
+      "final_hold": true,
+      "settled_flat": false,
+      "end_s": 14.000000000021341,
+      "final_tilt_deg": 30.776857892272343,
+      "peak_tilt_deg": 33.805469892347624,
+      "first_joint_warning": null,
+      "min_joint_margin_rad": 0.05479398750351305,
+      "max_closure_error_m": 3.009291279431375e-05,
+      "termination": "completed",
+      "first_35_s": null,
+      "first_40_s": null,
+      "balls": [
+        {
+          "index": 0,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.695999999995732,
+          "last_robot_contact_s": 6.71387499999569,
+          "normal_impulse_ns": 0.031078783690132367,
+          "peak_normal_force_n": 2.7146991124939905,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9215337499999798
+          ],
+          "incoming_3d_speed_m_s": 1.9215337499999798,
+          "first_floor_contact_s": 7.033374999994946,
+          "first_contact_height_m": 0.27787635667319976,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.7285898783962221,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.006917973751167733,
+            -0.1361281085548713,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 1,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": -0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.707999999995704,
+          "last_robot_contact_s": 6.726499999995661,
+          "normal_impulse_ns": 0.025968592455396435,
+          "peak_normal_force_n": 2.0888712577892505,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.13580085361082886,
+          "incoming_velocity_m_s": [
+            0.0007916964792517709,
+            -0.1357985458615611,
+            -2.048642634231493
+          ],
+          "incoming_3d_speed_m_s": 2.053138698342706,
+          "first_floor_contact_s": 6.935749999995173,
+          "first_contact_height_m": 0.2564876337518975,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5396443669625357,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.006591495958934579,
+            -0.16812644307795516,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 2,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.69262499999574,
+          "last_robot_contact_s": 6.710874999995697,
+          "normal_impulse_ns": 0.031198945221956077,
+          "peak_normal_force_n": 2.5145964665480487,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8884249999999803
+          ],
+          "incoming_3d_speed_m_s": 1.8884249999999803,
+          "first_floor_contact_s": 7.056374999994892,
+          "first_contact_height_m": 0.2838006317762136,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.7911533656056902,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.0072444515434008875,
+            -0.10412977403178748,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 3,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": -0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.700124999995722,
+          "last_robot_contact_s": 6.71824999999568,
+          "normal_impulse_ns": 0.025807904213546732,
+          "peak_normal_force_n": 2.116191372736862,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9619999999999793
+          ],
+          "incoming_3d_speed_m_s": 1.9619999999999793,
+          "first_floor_contact_s": 6.937499999995169,
+          "first_contact_height_m": 0.270425077710869,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6001118163181198,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.02095663572073206,
+            -0.15184453775456785,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 4,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.027712812921102035,
+            "offset_y_m": 0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.696374999995731,
+          "last_robot_contact_s": 6.714624999995689,
+          "normal_impulse_ns": 0.02996403239593798,
+          "peak_normal_force_n": 2.408594495748415,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9252124999999798
+          ],
+          "incoming_3d_speed_m_s": 1.9252124999999798,
+          "first_floor_contact_s": 7.019249999994979,
+          "first_contact_height_m": 0.2776017454816868,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6960815182890827,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.034792583223067525,
+            -0.12041167935517477,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        }
+      ]
+    },
+    {
+      "id": "left-06-nominal",
+      "count": 6,
+      "edge": "left",
+      "repeat": false,
+      "release_s": 6.5,
+      "seed": 2026112101,
+      "prequalified": true,
+      "direct_hits": 6,
+      "first_hit_s": 6.690374999995745,
+      "last_first_hit_s": 6.706124999995708,
+      "outcome": "settled flat",
+      "floor_contact": null,
+      "final_hold": false,
+      "settled_flat": true,
+      "end_s": 14.000000000021341,
+      "final_tilt_deg": 0.010859174041046785,
+      "peak_tilt_deg": 36.089300009970025,
+      "first_joint_warning": {
+        "time_s": 7.669999999993462,
+        "margin_rad": -0.005001838429511851
+      },
+      "min_joint_margin_rad": -0.00982337145113088,
+      "max_closure_error_m": 3.1097908568287836e-05,
+      "termination": "completed",
+      "first_35_s": 7.032374999994948,
+      "first_40_s": null,
+      "balls": [
+        {
+          "index": 0,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.695124999995734,
+          "last_robot_contact_s": 6.713624999995691,
+          "normal_impulse_ns": 0.030250685837670075,
+          "peak_normal_force_n": 2.8551793502890157,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.91294999999998
+          ],
+          "incoming_3d_speed_m_s": 1.91294999999998,
+          "first_floor_contact_s": 7.007624999995006,
+          "first_contact_height_m": 0.28003341410948385,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6885821803974173,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.010105677404839454,
+            0.13206761172601555,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 1,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.706124999995708,
+          "last_robot_contact_s": 6.724499999995666,
+          "normal_impulse_ns": 0.027462361743645063,
+          "peak_normal_force_n": 2.2346159114441733,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.20976689824198644,
+          "incoming_velocity_m_s": [
+            0.006290419502138414,
+            0.20967255953164451,
+            -2.0174329310099686
+          ],
+          "incoming_3d_speed_m_s": 2.028309094472915,
+          "first_floor_contact_s": 6.969374999995095,
+          "first_contact_height_m": 0.259183377131559,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.568017254304247,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.009909573386720348,
+            0.16406701083309377,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 2,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": -0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.690374999995745,
+          "last_robot_contact_s": 6.708624999995703,
+          "normal_impulse_ns": 0.031682642148059284,
+          "peak_normal_force_n": 2.5647589974854648,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8663524999999805
+          ],
+          "incoming_3d_speed_m_s": 1.8663524999999805,
+          "first_floor_contact_s": 7.073749999994852,
+          "first_contact_height_m": 0.28738980847170137,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.8425860952696966,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.01030178142295856,
+            0.10006821261893735,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 3,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": 0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.700124999995722,
+          "last_robot_contact_s": 6.718624999995679,
+          "normal_impulse_ns": 0.028301264694116094,
+          "peak_normal_force_n": 2.280456333355977,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9619999999999793
+          ],
+          "incoming_3d_speed_m_s": 1.9619999999999793,
+          "first_floor_contact_s": 6.978624999995073,
+          "first_contact_height_m": 0.27129752177787303,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6178724248809617,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.01770466713678691,
+            0.1478974802180793,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 4,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.027712812921102035,
+            "offset_y_m": -0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.694749999995735,
+          "last_robot_contact_s": 6.712874999995693,
+          "normal_impulse_ns": 0.025780931812051204,
+          "peak_normal_force_n": 2.0664182196869207,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.90927124999998
+          ],
+          "incoming_3d_speed_m_s": 1.90927124999998,
+          "first_floor_contact_s": 6.950624999995139,
+          "first_contact_height_m": 0.2821295219399431,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6286717083987707,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.03791602194646582,
+            0.1162377432339518,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 5,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": -0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.691874999995742,
+          "last_robot_contact_s": 6.709499999995701,
+          "normal_impulse_ns": 0.025760878196522258,
+          "peak_normal_force_n": 2.1435136481409205,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8810674999999804
+          ],
+          "incoming_3d_speed_m_s": 1.8810674999999804,
+          "first_floor_contact_s": 6.951874999995136,
+          "first_contact_height_m": 0.28510498612346724,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6523603304722914,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.017508563118667803,
+            0.11589808111100108,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        }
+      ]
+    },
+    {
+      "id": "right-06-nominal",
+      "count": 6,
+      "edge": "right",
+      "repeat": false,
+      "release_s": 6.5,
+      "seed": 2026112101,
+      "prequalified": true,
+      "direct_hits": 6,
+      "first_hit_s": 6.69262499999574,
+      "last_first_hit_s": 6.707999999995704,
+      "outcome": "held edge",
+      "floor_contact": null,
+      "final_hold": true,
+      "settled_flat": false,
+      "end_s": 14.000000000021341,
+      "final_tilt_deg": 30.77789172431156,
+      "peak_tilt_deg": 32.66645069672963,
+      "first_joint_warning": null,
+      "min_joint_margin_rad": 0.05479398750351305,
+      "max_closure_error_m": 3.009291279431375e-05,
+      "termination": "completed",
+      "first_35_s": null,
+      "first_40_s": null,
+      "balls": [
+        {
+          "index": 0,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.695999999995732,
+          "last_robot_contact_s": 6.71399999999569,
+          "normal_impulse_ns": 0.03097414009701114,
+          "peak_normal_force_n": 2.6895806831618527,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9215337499999798
+          ],
+          "incoming_3d_speed_m_s": 1.9215337499999798,
+          "first_floor_contact_s": 7.0326249999949475,
+          "first_contact_height_m": 0.27787026378525925,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.7260825495797465,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.006917973751167733,
+            -0.1361281085548713,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 1,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": -0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.707999999995704,
+          "last_robot_contact_s": 6.726624999995661,
+          "normal_impulse_ns": 0.026129633751075697,
+          "peak_normal_force_n": 2.0971174933683057,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.12663214334028802,
+          "incoming_velocity_m_s": [
+            0.001301936480790259,
+            -0.12662545039744277,
+            -2.0482078209140675
+          ],
+          "incoming_3d_speed_m_s": 2.0521186557751743,
+          "first_floor_contact_s": 6.937499999995169,
+          "first_contact_height_m": 0.2564391426383472,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5436533463157762,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.006591495958934579,
+            -0.16812644307795516,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 2,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.69262499999574,
+          "last_robot_contact_s": 6.710999999995697,
+          "normal_impulse_ns": 0.03127012137984042,
+          "peak_normal_force_n": 2.5122870006350597,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8884249999999803
+          ],
+          "incoming_3d_speed_m_s": 1.8884249999999803,
+          "first_floor_contact_s": 7.057749999994889,
+          "first_contact_height_m": 0.2838006317762136,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.794731698660732,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.0072444515434008875,
+            -0.10412977403178748,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 3,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": -0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.700124999995722,
+          "last_robot_contact_s": 6.71824999999568,
+          "normal_impulse_ns": 0.02561662867277535,
+          "peak_normal_force_n": 2.089517870320404,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9619999999999793
+          ],
+          "incoming_3d_speed_m_s": 1.9619999999999793,
+          "first_floor_contact_s": 6.936249999995172,
+          "first_contact_height_m": 0.2704317756043311,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5998328492395542,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.02095663572073206,
+            -0.15184453775456785,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 4,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.027712812921102035,
+            "offset_y_m": 0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.696374999995731,
+          "last_robot_contact_s": 6.714749999995688,
+          "normal_impulse_ns": 0.030080421001210028,
+          "peak_normal_force_n": 2.417960509729587,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9252124999999798
+          ],
+          "incoming_3d_speed_m_s": 1.9252124999999798,
+          "first_floor_contact_s": 7.019249999994979,
+          "first_contact_height_m": 0.27759917589468563,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6929564144675577,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.034792583223067525,
+            -0.12041167935517477,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 5,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": 0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.69262499999574,
+          "last_robot_contact_s": 6.7098749999957,
+          "normal_impulse_ns": 0.02327013975240449,
+          "peak_normal_force_n": 2.046160707346601,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8884249999999803
+          ],
+          "incoming_3d_speed_m_s": 1.8884249999999803,
+          "first_floor_contact_s": 6.9176249999952155,
+          "first_contact_height_m": 0.28475912252595653,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6553714196690081,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.020630157928498906,
+            -0.11984620323148404,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        }
+      ]
+    },
+    {
+      "id": "left-07-nominal",
+      "count": 7,
+      "edge": "left",
+      "repeat": false,
+      "release_s": 6.5,
+      "seed": 2026112101,
+      "prequalified": true,
+      "direct_hits": 7,
+      "first_hit_s": 6.690374999995745,
+      "last_first_hit_s": 6.706124999995708,
+      "outcome": "settled flat",
+      "floor_contact": null,
+      "final_hold": false,
+      "settled_flat": true,
+      "end_s": 14.000000000021341,
+      "final_tilt_deg": 0.011049905230738198,
+      "peak_tilt_deg": 34.19332818185779,
+      "first_joint_warning": {
+        "time_s": 7.582624999993666,
+        "margin_rad": -0.005000397948171864
+      },
+      "min_joint_margin_rad": -0.010895298535640974,
+      "max_closure_error_m": 3.063491024223316e-05,
+      "termination": "completed",
+      "first_35_s": null,
+      "first_40_s": null,
+      "balls": [
+        {
+          "index": 0,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.695124999995734,
+          "last_robot_contact_s": 6.713749999995691,
+          "normal_impulse_ns": 0.03009411162814848,
+          "peak_normal_force_n": 2.833032608554149,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.91294999999998
+          ],
+          "incoming_3d_speed_m_s": 1.91294999999998,
+          "first_floor_contact_s": 7.006124999995009,
+          "first_contact_height_m": 0.28003341410948385,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.685311574243301,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.010105677404839454,
+            0.13206761172601555,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 1,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.706124999995708,
+          "last_robot_contact_s": 6.724499999995666,
+          "normal_impulse_ns": 0.02741451373599605,
+          "peak_normal_force_n": 2.232605946799319,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.20790342934811104,
+          "incoming_velocity_m_s": [
+            0.006238831794398554,
+            0.20780979984723097,
+            -2.01741853242518
+          ],
+          "incoming_3d_speed_m_s": 2.028102899486925,
+          "first_floor_contact_s": 6.9691249999950955,
+          "first_contact_height_m": 0.2591785375006191,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5672993018651284,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.009909573386720348,
+            0.16406701083309377,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 2,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": -0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.690374999995745,
+          "last_robot_contact_s": 6.708624999995703,
+          "normal_impulse_ns": 0.03158826837853336,
+          "peak_normal_force_n": 2.5647589974854648,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8663524999999805
+          ],
+          "incoming_3d_speed_m_s": 1.8663524999999805,
+          "first_floor_contact_s": 7.072374999994855,
+          "first_contact_height_m": 0.28738980847170137,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.8382366685935974,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.01030178142295856,
+            0.10006821261893735,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 3,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": 0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.700124999995722,
+          "last_robot_contact_s": 6.718749999995679,
+          "normal_impulse_ns": 0.02830114512244345,
+          "peak_normal_force_n": 2.275632035677916,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9619999999999793
+          ],
+          "incoming_3d_speed_m_s": 1.9619999999999793,
+          "first_floor_contact_s": 6.978624999995073,
+          "first_contact_height_m": 0.27129752177787303,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6174235850811745,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.01770466713678691,
+            0.1478974802180793,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 4,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.027712812921102035,
+            "offset_y_m": -0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.694749999995735,
+          "last_robot_contact_s": 6.712874999995693,
+          "normal_impulse_ns": 0.025579935690767452,
+          "peak_normal_force_n": 2.0552742286096106,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.90927124999998
+          ],
+          "incoming_3d_speed_m_s": 1.90927124999998,
+          "first_floor_contact_s": 6.948999999995142,
+          "first_contact_height_m": 0.2821295219399431,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6332419730512988,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.03791602194646582,
+            0.1162377432339518,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 5,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": -0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.691874999995742,
+          "last_robot_contact_s": 6.709499999995701,
+          "normal_impulse_ns": 0.025702146328996988,
+          "peak_normal_force_n": 2.1435136481409205,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8810674999999804
+          ],
+          "incoming_3d_speed_m_s": 1.8810674999999804,
+          "first_floor_contact_s": 6.951374999995137,
+          "first_contact_height_m": 0.28510498612346724,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6538697639609194,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.017508563118667803,
+            0.11589808111100108,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 6,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.027712812921102035,
+            "offset_y_m": 0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.701999999995718,
+          "last_robot_contact_s": 6.719999999995676,
+          "normal_impulse_ns": 0.027257554658723857,
+          "peak_normal_force_n": 2.2320234277081705,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.980393749999979
+          ],
+          "incoming_3d_speed_m_s": 1.980393749999979,
+          "first_floor_contact_s": 6.960374999995116,
+          "first_contact_height_m": 0.26714442793156123,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5937962051818861,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.03771991792834671,
+            0.14823714234103003,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        }
+      ]
+    },
+    {
+      "id": "right-07-nominal",
+      "count": 7,
+      "edge": "right",
+      "repeat": false,
+      "release_s": 6.5,
+      "seed": 2026112101,
+      "prequalified": true,
+      "direct_hits": 7,
+      "first_hit_s": 6.69262499999574,
+      "last_first_hit_s": 6.707999999995704,
+      "outcome": "held edge",
+      "floor_contact": null,
+      "final_hold": true,
+      "settled_flat": false,
+      "end_s": 14.000000000021341,
+      "final_tilt_deg": 30.776635227501256,
+      "peak_tilt_deg": 33.467770396099986,
+      "first_joint_warning": null,
+      "min_joint_margin_rad": 0.05479398750351305,
+      "max_closure_error_m": 3.009291279431375e-05,
+      "termination": "completed",
+      "first_35_s": null,
+      "first_40_s": null,
+      "balls": [
+        {
+          "index": 0,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.695999999995732,
+          "last_robot_contact_s": 6.71399999999569,
+          "normal_impulse_ns": 0.03082086474135451,
+          "peak_normal_force_n": 2.6695636874466655,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9215337499999798
+          ],
+          "incoming_3d_speed_m_s": 1.9215337499999798,
+          "first_floor_contact_s": 7.030999999994951,
+          "first_contact_height_m": 0.27787026378525925,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.7203633188302785,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.006917973751167733,
+            -0.1361281085548713,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 1,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": -0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.707999999995704,
+          "last_robot_contact_s": 6.726624999995661,
+          "normal_impulse_ns": 0.026061498192521394,
+          "peak_normal_force_n": 2.08947217222985,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.12484178066060546,
+          "incoming_velocity_m_s": [
+            0.001278236814104677,
+            -0.12483523664878356,
+            -2.048026091257846
+          ],
+          "incoming_3d_speed_m_s": 2.0518275611443086,
+          "first_floor_contact_s": 6.93724999999517,
+          "first_contact_height_m": 0.2564318417286994,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.53808103022716,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.006591495958934579,
+            -0.16812644307795516,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 2,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.69262499999574,
+          "last_robot_contact_s": 6.710874999995697,
+          "normal_impulse_ns": 0.031201528906300353,
+          "peak_normal_force_n": 2.5122870006350597,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8884249999999803
+          ],
+          "incoming_3d_speed_m_s": 1.8884249999999803,
+          "first_floor_contact_s": 7.056624999994892,
+          "first_contact_height_m": 0.2838006317762136,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.792704484811613,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.0072444515434008875,
+            -0.10412977403178748,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 3,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": -0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.700124999995722,
+          "last_robot_contact_s": 6.71837499999568,
+          "normal_impulse_ns": 0.0255634900954943,
+          "peak_normal_force_n": 2.079862429808907,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9619999999999793
+          ],
+          "incoming_3d_speed_m_s": 1.9619999999999793,
+          "first_floor_contact_s": 6.935999999995173,
+          "first_contact_height_m": 0.2704317756043311,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5961305822354883,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.02095663572073206,
+            -0.15184453775456785,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 4,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.027712812921102035,
+            "offset_y_m": 0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.696374999995731,
+          "last_robot_contact_s": 6.714749999995688,
+          "normal_impulse_ns": 0.0299219014653936,
+          "peak_normal_force_n": 2.4022634034467725,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9252124999999798
+          ],
+          "incoming_3d_speed_m_s": 1.9252124999999798,
+          "first_floor_contact_s": 7.017499999994983,
+          "first_contact_height_m": 0.27759917589468563,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6940260058567462,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.034792583223067525,
+            -0.12041167935517477,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 5,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": 0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.69262499999574,
+          "last_robot_contact_s": 6.7098749999957,
+          "normal_impulse_ns": 0.023249248936796252,
+          "peak_normal_force_n": 2.046160707346601,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8884249999999803
+          ],
+          "incoming_3d_speed_m_s": 1.8884249999999803,
+          "first_floor_contact_s": 6.917374999995216,
+          "first_contact_height_m": 0.28475912252595653,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6565815766897543,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.020630157928498906,
+            -0.11984620323148404,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 6,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.027712812921102035,
+            "offset_y_m": -0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.702749999995716,
+          "last_robot_contact_s": 6.720749999995674,
+          "normal_impulse_ns": 0.025868713717990165,
+          "peak_normal_force_n": 2.123656273219749,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.987751249999979
+          ],
+          "incoming_3d_speed_m_s": 1.987751249999979,
+          "first_floor_contact_s": 6.9373749999951695,
+          "first_contact_height_m": 0.2671635742161439,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5778585614092047,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.034466105430834365,
+            -0.1524100138782586,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        }
+      ]
+    },
+    {
+      "id": "left-08-nominal",
+      "count": 8,
+      "edge": "left",
+      "repeat": false,
+      "release_s": 6.5,
+      "seed": 2026112101,
+      "prequalified": true,
+      "direct_hits": 7,
+      "first_hit_s": 6.690374999995745,
+      "last_first_hit_s": 6.706124999995708,
+      "outcome": "settled flat",
+      "floor_contact": null,
+      "final_hold": false,
+      "settled_flat": true,
+      "end_s": 14.000000000021341,
+      "final_tilt_deg": 0.011137576419410967,
+      "peak_tilt_deg": 33.08883456936572,
+      "first_joint_warning": {
+        "time_s": 7.638624999993535,
+        "margin_rad": -0.0050006676741363165
+      },
+      "min_joint_margin_rad": -0.008802724466054457,
+      "max_closure_error_m": 3.0073869221855356e-05,
+      "termination": "completed",
+      "first_35_s": null,
+      "first_40_s": null,
+      "balls": [
+        {
+          "index": 0,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.695124999995734,
+          "last_robot_contact_s": 6.713749999995691,
+          "normal_impulse_ns": 0.03002214038989169,
+          "peak_normal_force_n": 2.8139291175184162,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.91294999999998
+          ],
+          "incoming_3d_speed_m_s": 1.91294999999998,
+          "first_floor_contact_s": 7.0059999999950096,
+          "first_contact_height_m": 0.28003341410948385,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6862167557049477,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.010105677404839454,
+            0.13206761172601555,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 1,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.706124999995708,
+          "last_robot_contact_s": 6.724499999995666,
+          "normal_impulse_ns": 0.027559873081033113,
+          "peak_normal_force_n": 2.2440574131803275,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.19547108492197424,
+          "incoming_velocity_m_s": [
+            0.006068285926144601,
+            0.1953768690159923,
+            -2.018332166479063
+          ],
+          "incoming_3d_speed_m_s": 2.027775549533193,
+          "first_floor_contact_s": 6.970624999995092,
+          "first_contact_height_m": 0.2591787798664619,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5731041992321426,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.009909573386720348,
+            0.16406701083309377,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 2,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": -0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.690374999995745,
+          "last_robot_contact_s": 6.708624999995703,
+          "normal_impulse_ns": 0.03165831024799719,
+          "peak_normal_force_n": 2.5647589974854648,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8663524999999805
+          ],
+          "incoming_3d_speed_m_s": 1.8663524999999805,
+          "first_floor_contact_s": 7.072874999994854,
+          "first_contact_height_m": 0.28738980847170137,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.8340463754095926,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.01030178142295856,
+            0.10006821261893735,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 3,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": 0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.700124999995722,
+          "last_robot_contact_s": 6.718749999995679,
+          "normal_impulse_ns": 0.028303726482368365,
+          "peak_normal_force_n": 2.2783803636474635,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9619999999999793
+          ],
+          "incoming_3d_speed_m_s": 1.9619999999999793,
+          "first_floor_contact_s": 6.9789999999950725,
+          "first_contact_height_m": 0.27129752177787303,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6189640967645695,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.01770466713678691,
+            0.1478974802180793,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 4,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.027712812921102035,
+            "offset_y_m": -0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.694749999995735,
+          "last_robot_contact_s": 6.712874999995693,
+          "normal_impulse_ns": 0.02564836327235517,
+          "peak_normal_force_n": 2.0709308017024486,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.90927124999998
+          ],
+          "incoming_3d_speed_m_s": 1.90927124999998,
+          "first_floor_contact_s": 6.949124999995142,
+          "first_contact_height_m": 0.2821295219399431,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6303797815059973,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.03791602194646582,
+            0.1162377432339518,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 5,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": -0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.691874999995742,
+          "last_robot_contact_s": 6.709499999995701,
+          "normal_impulse_ns": 0.028807975831637016,
+          "peak_normal_force_n": 2.9406006735836434,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8810674999999804
+          ],
+          "incoming_3d_speed_m_s": 1.8810674999999804,
+          "first_floor_contact_s": 6.9622499999951115,
+          "first_contact_height_m": 0.28510498612346724,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6589056965607865,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.017508563118667803,
+            0.11589808111100108,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 6,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.027712812921102035,
+            "offset_y_m": 0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.701999999995718,
+          "last_robot_contact_s": 6.719999999995676,
+          "normal_impulse_ns": 0.02730952467237795,
+          "peak_normal_force_n": 2.2363776480635686,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.980393749999979
+          ],
+          "incoming_3d_speed_m_s": 1.980393749999979,
+          "first_floor_contact_s": 6.960999999995114,
+          "first_contact_height_m": 0.26714234845075824,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.594560061136004,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.03771991792834671,
+            0.14823714234103003,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 7,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.05542562584220407,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": null,
+          "last_robot_contact_s": null,
+          "normal_impulse_ns": 0.0,
+          "peak_normal_force_n": 0.0,
+          "robot_bodies": [],
+          "incoming_speed_m_s": null,
+          "incoming_velocity_m_s": null,
+          "incoming_3d_speed_m_s": null,
+          "first_floor_contact_s": 6.806749999995474,
+          "first_contact_height_m": null,
+          "first_robot_body": null,
+          "rebound_speed_m_s": 0.0,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.045318907660294165,
+            0.13172794960306486,
+            0.48
+          ],
+          "contacted_robot": false,
+          "rebounded": false
+        }
+      ]
+    },
+    {
+      "id": "right-08-nominal",
+      "count": 8,
+      "edge": "right",
+      "repeat": false,
+      "release_s": 6.5,
+      "seed": 2026112101,
+      "prequalified": true,
+      "direct_hits": 7,
+      "first_hit_s": 6.69262499999574,
+      "last_first_hit_s": 6.707999999995704,
+      "outcome": "lost edge",
+      "floor_contact": null,
+      "final_hold": false,
+      "settled_flat": false,
+      "end_s": 14.000000000021341,
+      "final_tilt_deg": 30.778131571171123,
+      "peak_tilt_deg": 35.93832143078787,
+      "first_joint_warning": null,
+      "min_joint_margin_rad": 0.05479398750351305,
+      "max_closure_error_m": 3.009291279431375e-05,
+      "termination": "completed",
+      "first_35_s": 7.107499999994773,
+      "first_40_s": null,
+      "balls": [
+        {
+          "index": 0,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.695999999995732,
+          "last_robot_contact_s": 6.71399999999569,
+          "normal_impulse_ns": 0.030796402814231162,
+          "peak_normal_force_n": 2.666207584444894,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9215337499999798
+          ],
+          "incoming_3d_speed_m_s": 1.9215337499999798,
+          "first_floor_contact_s": 7.030874999994952,
+          "first_contact_height_m": 0.27787026378525925,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.7184738830005943,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.006917973751167733,
+            -0.1361281085548713,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 1,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": -0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.707999999995704,
+          "last_robot_contact_s": 6.726624999995661,
+          "normal_impulse_ns": 0.026084120468755842,
+          "peak_normal_force_n": 2.090133737194153,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.12377625317795848,
+          "incoming_velocity_m_s": [
+            0.0014509233196233788,
+            -0.12376774891826484,
+            -2.0478947163781105
+          ],
+          "incoming_3d_speed_m_s": 2.0516318700537277,
+          "first_floor_contact_s": 6.937624999995169,
+          "first_contact_height_m": 0.2564243362229141,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5411099293063566,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.006591495958934579,
+            -0.16812644307795516,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 2,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.69262499999574,
+          "last_robot_contact_s": 6.710999999995697,
+          "normal_impulse_ns": 0.031258743182828765,
+          "peak_normal_force_n": 2.5122870006350597,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8884249999999803
+          ],
+          "incoming_3d_speed_m_s": 1.8884249999999803,
+          "first_floor_contact_s": 7.05724999999489,
+          "first_contact_height_m": 0.2838006317762136,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.790284986653554,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.0072444515434008875,
+            -0.10412977403178748,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 3,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": -0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.700124999995722,
+          "last_robot_contact_s": 6.71837499999568,
+          "normal_impulse_ns": 0.02553154775790982,
+          "peak_normal_force_n": 2.078158780555119,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9619999999999793
+          ],
+          "incoming_3d_speed_m_s": 1.9619999999999793,
+          "first_floor_contact_s": 6.936124999995172,
+          "first_contact_height_m": 0.2704317756043311,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5955732737145207,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.02095663572073206,
+            -0.15184453775456785,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 4,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.027712812921102035,
+            "offset_y_m": 0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.696374999995731,
+          "last_robot_contact_s": 6.714749999995688,
+          "normal_impulse_ns": 0.029989722393035018,
+          "peak_normal_force_n": 2.4143256374237905,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9252124999999798
+          ],
+          "incoming_3d_speed_m_s": 1.9252124999999798,
+          "first_floor_contact_s": 7.0176249999949825,
+          "first_contact_height_m": 0.27759917589468563,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6958098047094257,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.034792583223067525,
+            -0.12041167935517477,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 5,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": 0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.69262499999574,
+          "last_robot_contact_s": 6.7098749999957,
+          "normal_impulse_ns": 0.02797629424719358,
+          "peak_normal_force_n": 2.9657937378678225,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8884249999999803
+          ],
+          "incoming_3d_speed_m_s": 1.8884249999999803,
+          "first_floor_contact_s": 6.927749999995192,
+          "first_contact_height_m": 0.28475912252595653,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6459250441629252,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.020630157928498906,
+            -0.11984620323148404,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 6,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.027712812921102035,
+            "offset_y_m": -0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.702749999995716,
+          "last_robot_contact_s": 6.720749999995674,
+          "normal_impulse_ns": 0.025939247725704224,
+          "peak_normal_force_n": 2.1241578180789107,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.987751249999979
+          ],
+          "incoming_3d_speed_m_s": 1.987751249999979,
+          "first_floor_contact_s": 6.938124999995168,
+          "first_contact_height_m": 0.2671637103395419,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5790675229466875,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.034466105430834365,
+            -0.1524100138782586,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 7,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.05542562584220407,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": null,
+          "last_robot_contact_s": null,
+          "normal_impulse_ns": 0.0,
+          "peak_normal_force_n": 0.0,
+          "robot_bodies": [],
+          "incoming_speed_m_s": null,
+          "incoming_velocity_m_s": null,
+          "incoming_3d_speed_m_s": null,
+          "first_floor_contact_s": 6.806999999995473,
+          "first_contact_height_m": null,
+          "first_robot_body": null,
+          "rebound_speed_m_s": 0.0,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.0485047674003987,
+            -0.13556263243118058,
+            0.48
+          ],
+          "contacted_robot": false,
+          "rebounded": false
+        }
+      ]
+    },
+    {
+      "id": "left-09-nominal",
+      "count": 9,
+      "edge": "left",
+      "repeat": false,
+      "release_s": 6.5,
+      "seed": 2026112101,
+      "prequalified": true,
+      "direct_hits": 7,
+      "first_hit_s": 6.690374999995745,
+      "last_first_hit_s": 6.706124999995708,
+      "outcome": "settled flat",
+      "floor_contact": null,
+      "final_hold": false,
+      "settled_flat": true,
+      "end_s": 14.000000000021341,
+      "final_tilt_deg": 0.01118088985550794,
+      "peak_tilt_deg": 32.91347970783619,
+      "first_joint_warning": {
+        "time_s": 7.70074999999339,
+        "margin_rad": -0.005001366918570893
+      },
+      "min_joint_margin_rad": -0.009186673817940694,
+      "max_closure_error_m": 3.3496491350324e-05,
+      "termination": "completed",
+      "first_35_s": null,
+      "first_40_s": null,
+      "balls": [
+        {
+          "index": 0,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.695124999995734,
+          "last_robot_contact_s": 6.713749999995691,
+          "normal_impulse_ns": 0.02997269385125455,
+          "peak_normal_force_n": 2.7932778265508627,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.91294999999998
+          ],
+          "incoming_3d_speed_m_s": 1.91294999999998,
+          "first_floor_contact_s": 7.00574999999501,
+          "first_contact_height_m": 0.28003341410948385,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6815396027867535,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.010105677404839454,
+            0.13206761172601555,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 1,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.706124999995708,
+          "last_robot_contact_s": 6.724499999995666,
+          "normal_impulse_ns": 0.027577465347285744,
+          "peak_normal_force_n": 2.245227612952263,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.19352388577837698,
+          "incoming_velocity_m_s": [
+            0.005977621737140909,
+            0.1934315444934718,
+            -2.0183455835104667
+          ],
+          "incoming_3d_speed_m_s": 2.0276021278453444,
+          "first_floor_contact_s": 6.970874999995091,
+          "first_contact_height_m": 0.2591766432870807,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5704304657738917,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.009909573386720348,
+            0.16406701083309377,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 2,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": -0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.690374999995745,
+          "last_robot_contact_s": 6.708624999995703,
+          "normal_impulse_ns": 0.03158831239555708,
+          "peak_normal_force_n": 2.5647589974854648,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8663524999999805
+          ],
+          "incoming_3d_speed_m_s": 1.8663524999999805,
+          "first_floor_contact_s": 7.072249999994855,
+          "first_contact_height_m": 0.28738980847170137,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.8352216886919772,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.01030178142295856,
+            0.10006821261893735,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 3,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": 0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.700124999995722,
+          "last_robot_contact_s": 6.718749999995679,
+          "normal_impulse_ns": 0.028313824226359963,
+          "peak_normal_force_n": 2.2808513570419517,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9619999999999793
+          ],
+          "incoming_3d_speed_m_s": 1.9619999999999793,
+          "first_floor_contact_s": 6.9789999999950725,
+          "first_contact_height_m": 0.27129752177787303,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6183082558112318,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.01770466713678691,
+            0.1478974802180793,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 4,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.027712812921102035,
+            "offset_y_m": -0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.694749999995735,
+          "last_robot_contact_s": 6.713249999995692,
+          "normal_impulse_ns": 0.029142481342669828,
+          "peak_normal_force_n": 2.8756013263894133,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.90927124999998
+          ],
+          "incoming_3d_speed_m_s": 1.90927124999998,
+          "first_floor_contact_s": 6.9613749999951136,
+          "first_contact_height_m": 0.2821295219399431,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6348261213661797,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.03791602194646582,
+            0.1162377432339518,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 5,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": -0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.691874999995742,
+          "last_robot_contact_s": 6.709499999995701,
+          "normal_impulse_ns": 0.028913917993480247,
+          "peak_normal_force_n": 2.9406006735836434,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8810674999999804
+          ],
+          "incoming_3d_speed_m_s": 1.8810674999999804,
+          "first_floor_contact_s": 6.962624999995111,
+          "first_contact_height_m": 0.28510498612346724,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6588028379915076,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.017508563118667803,
+            0.11589808111100108,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 6,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.027712812921102035,
+            "offset_y_m": 0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.701999999995718,
+          "last_robot_contact_s": 6.719999999995676,
+          "normal_impulse_ns": 0.02726836977886906,
+          "peak_normal_force_n": 2.2362541775104456,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.980393749999979
+          ],
+          "incoming_3d_speed_m_s": 1.980393749999979,
+          "first_floor_contact_s": 6.960874999995115,
+          "first_contact_height_m": 0.26714234845075824,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5926264581200622,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.03771991792834671,
+            0.14823714234103003,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 7,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.05542562584220407,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": null,
+          "last_robot_contact_s": null,
+          "normal_impulse_ns": 0.0,
+          "peak_normal_force_n": 0.0,
+          "robot_bodies": [],
+          "incoming_speed_m_s": null,
+          "incoming_velocity_m_s": null,
+          "incoming_3d_speed_m_s": null,
+          "first_floor_contact_s": 6.806749999995474,
+          "first_contact_height_m": null,
+          "first_robot_body": null,
+          "rebound_speed_m_s": 0.0,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.045318907660294165,
+            0.13172794960306486,
+            0.48
+          ],
+          "contacted_robot": false,
+          "rebounded": false
+        },
+        {
+          "index": 8,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.05542562584220407,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": null,
+          "last_robot_contact_s": null,
+          "normal_impulse_ns": 0.0,
+          "peak_normal_force_n": 0.0,
+          "robot_bodies": [],
+          "incoming_speed_m_s": null,
+          "incoming_velocity_m_s": null,
+          "incoming_3d_speed_m_s": null,
+          "first_floor_contact_s": 6.807749999995472,
+          "first_contact_height_m": null,
+          "first_robot_body": null,
+          "rebound_speed_m_s": 0.0,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.06553026246997307,
+            0.13240727384896625,
+            0.48
+          ],
+          "contacted_robot": false,
+          "rebounded": false
+        }
+      ]
+    },
+    {
+      "id": "right-09-nominal",
+      "count": 9,
+      "edge": "right",
+      "repeat": false,
+      "release_s": 6.5,
+      "seed": 2026112101,
+      "prequalified": true,
+      "direct_hits": 8,
+      "first_hit_s": 6.69262499999574,
+      "last_first_hit_s": 6.713249999995692,
+      "outcome": "floor contact",
+      "floor_contact": {
+        "time_s": 8.799999999996512,
+        "body": "xl_330",
+        "tilt_deg": 70.3959282341235,
+        "normal_force_n": 36.4615908189606
+      },
+      "final_hold": false,
+      "settled_flat": false,
+      "end_s": 14.000000000021341,
+      "final_tilt_deg": 72.7706227726984,
+      "peak_tilt_deg": 77.58189268296373,
+      "first_joint_warning": {
+        "time_s": 8.222499999993754,
+        "margin_rad": -0.005070014353490304
+      },
+      "min_joint_margin_rad": -0.011016724526075494,
+      "max_closure_error_m": 3.604418335951989e-05,
+      "termination": "completed",
+      "first_35_s": 7.121124999994741,
+      "first_40_s": 8.641749999995756,
+      "balls": [
+        {
+          "index": 0,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.695999999995732,
+          "last_robot_contact_s": 6.71399999999569,
+          "normal_impulse_ns": 0.030782936475439063,
+          "peak_normal_force_n": 2.6592510537917815,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9215337499999798
+          ],
+          "incoming_3d_speed_m_s": 1.9215337499999798,
+          "first_floor_contact_s": 7.030749999994952,
+          "first_contact_height_m": 0.27787026378525925,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.718465702555121,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.006917973751167733,
+            -0.1361281085548713,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 1,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": -0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.707999999995704,
+          "last_robot_contact_s": 6.726624999995661,
+          "normal_impulse_ns": 0.026067971875616124,
+          "peak_normal_force_n": 2.085656789780623,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.122912477733243,
+          "incoming_velocity_m_s": [
+            0.0014380736715490687,
+            -0.12290406472790132,
+            -2.047835275243301
+          ],
+          "incoming_3d_speed_m_s": 2.0515206047498844,
+          "first_floor_contact_s": 6.937499999995169,
+          "first_contact_height_m": 0.25642397852855187,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5387946004389363,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.006591495958934579,
+            -0.16812644307795516,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 2,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.69262499999574,
+          "last_robot_contact_s": 6.710999999995697,
+          "normal_impulse_ns": 0.03125844859620805,
+          "peak_normal_force_n": 2.5122870006350597,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8884249999999803
+          ],
+          "incoming_3d_speed_m_s": 1.8884249999999803,
+          "first_floor_contact_s": 7.05724999999489,
+          "first_contact_height_m": 0.2838006317762136,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.7917146444696144,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.0072444515434008875,
+            -0.10412977403178748,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 3,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": -0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.700124999995722,
+          "last_robot_contact_s": 6.71837499999568,
+          "normal_impulse_ns": 0.025540844044661948,
+          "peak_normal_force_n": 2.077985947643688,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9619999999999793
+          ],
+          "incoming_3d_speed_m_s": 1.9619999999999793,
+          "first_floor_contact_s": 6.936124999995172,
+          "first_contact_height_m": 0.2704317756043311,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.594730891579555,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.02095663572073206,
+            -0.15184453775456785,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 4,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.027712812921102035,
+            "offset_y_m": 0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.696374999995731,
+          "last_robot_contact_s": 6.714749999995688,
+          "normal_impulse_ns": 0.03062521597845684,
+          "peak_normal_force_n": 2.663819551612311,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9252124999999798
+          ],
+          "incoming_3d_speed_m_s": 1.9252124999999798,
+          "first_floor_contact_s": 7.021249999994974,
+          "first_contact_height_m": 0.27759917589468563,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.701485112135179,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.034792583223067525,
+            -0.12041167935517477,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 5,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": 0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.69262499999574,
+          "last_robot_contact_s": 6.7098749999957,
+          "normal_impulse_ns": 0.028025171834997444,
+          "peak_normal_force_n": 2.9657937378678225,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8884249999999803
+          ],
+          "incoming_3d_speed_m_s": 1.8884249999999803,
+          "first_floor_contact_s": 6.927874999995192,
+          "first_contact_height_m": 0.28475912252595653,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6432836885457323,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.020630157928498906,
+            -0.11984620323148404,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 6,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.027712812921102035,
+            "offset_y_m": -0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.702749999995716,
+          "last_robot_contact_s": 6.720749999995674,
+          "normal_impulse_ns": 0.025842145350740503,
+          "peak_normal_force_n": 2.125308787730936,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.987751249999979
+          ],
+          "incoming_3d_speed_m_s": 1.987751249999979,
+          "first_floor_contact_s": 6.937499999995169,
+          "first_contact_height_m": 0.2671637103395419,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5761220467115624,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.034466105430834365,
+            -0.1524100138782586,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 7,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.05542562584220407,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": null,
+          "last_robot_contact_s": null,
+          "normal_impulse_ns": 0.0,
+          "peak_normal_force_n": 0.0,
+          "robot_bodies": [],
+          "incoming_speed_m_s": null,
+          "incoming_velocity_m_s": null,
+          "incoming_3d_speed_m_s": null,
+          "first_floor_contact_s": 6.806999999995473,
+          "first_contact_height_m": null,
+          "first_robot_body": null,
+          "rebound_speed_m_s": 0.0,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.0485047674003987,
+            -0.13556263243118058,
+            0.48
+          ],
+          "contacted_robot": false,
+          "rebounded": false
+        },
+        {
+          "index": 8,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.05542562584220407,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.713249999995692,
+          "last_robot_contact_s": 6.726124999995662,
+          "normal_impulse_ns": 0.009176550023191472,
+          "peak_normal_force_n": 1.1274065389544077,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.17172488275959144,
+          "incoming_velocity_m_s": [
+            -0.14140968280526148,
+            -0.097430677754549,
+            -2.100153822848776
+          ],
+          "incoming_3d_speed_m_s": 2.107162906608106,
+          "first_floor_contact_s": 6.825999999995429,
+          "first_contact_height_m": 0.24906353177239482,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.916075852203117,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.062340714902734164,
+            -0.13669358467856205,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        }
+      ]
+    },
+    {
+      "id": "left-10-nominal",
+      "count": 10,
+      "edge": "left",
+      "repeat": false,
+      "release_s": 6.5,
+      "seed": 2026112101,
+      "prequalified": true,
+      "direct_hits": 8,
+      "first_hit_s": 6.690374999995745,
+      "last_first_hit_s": 6.710874999995697,
+      "outcome": "settled flat",
+      "floor_contact": null,
+      "final_hold": false,
+      "settled_flat": true,
+      "end_s": 14.000000000021341,
+      "final_tilt_deg": 0.010823362511413664,
+      "peak_tilt_deg": 32.91347970783619,
+      "first_joint_warning": {
+        "time_s": 7.324874999994266,
+        "margin_rad": -0.005001593523666692
+      },
+      "min_joint_margin_rad": -0.008780316647982955,
+      "max_closure_error_m": 3.360071471217989e-05,
+      "termination": "completed",
+      "first_35_s": null,
+      "first_40_s": null,
+      "balls": [
+        {
+          "index": 0,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.695124999995734,
+          "last_robot_contact_s": 6.713624999995691,
+          "normal_impulse_ns": 0.029934723073820436,
+          "peak_normal_force_n": 2.7932778265508627,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.91294999999998
+          ],
+          "incoming_3d_speed_m_s": 1.91294999999998,
+          "first_floor_contact_s": 7.005499999995011,
+          "first_contact_height_m": 0.28003341410948385,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6872502584034974,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.010105677404839454,
+            0.13206761172601555,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 1,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.706124999995708,
+          "last_robot_contact_s": 6.724499999995666,
+          "normal_impulse_ns": 0.027430660543373425,
+          "peak_normal_force_n": 2.229145320440642,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.19352388577837698,
+          "incoming_velocity_m_s": [
+            0.005977621737140909,
+            0.1934315444934718,
+            -2.0183455835104667
+          ],
+          "incoming_3d_speed_m_s": 2.0276021278453444,
+          "first_floor_contact_s": 6.9691249999950955,
+          "first_contact_height_m": 0.2591766432870807,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5679882788240518,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.009909573386720348,
+            0.16406701083309377,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 2,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": -0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.690374999995745,
+          "last_robot_contact_s": 6.708624999995703,
+          "normal_impulse_ns": 0.03158831239555708,
+          "peak_normal_force_n": 2.5647589974854648,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8663524999999805
+          ],
+          "incoming_3d_speed_m_s": 1.8663524999999805,
+          "first_floor_contact_s": 7.072249999994855,
+          "first_contact_height_m": 0.28738980847170137,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.8352216886919772,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.01030178142295856,
+            0.10006821261893735,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 3,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": 0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.700124999995722,
+          "last_robot_contact_s": 6.718624999995679,
+          "normal_impulse_ns": 0.029467360163389692,
+          "peak_normal_force_n": 2.8034955404090023,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9619999999999793
+          ],
+          "incoming_3d_speed_m_s": 1.9619999999999793,
+          "first_floor_contact_s": 6.982249999995065,
+          "first_contact_height_m": 0.27129752177787303,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.624797355043597,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.01770466713678691,
+            0.1478974802180793,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 4,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.027712812921102035,
+            "offset_y_m": -0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.694749999995735,
+          "last_robot_contact_s": 6.713249999995692,
+          "normal_impulse_ns": 0.0291332297712595,
+          "peak_normal_force_n": 2.8756013263894133,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.90927124999998
+          ],
+          "incoming_3d_speed_m_s": 1.90927124999998,
+          "first_floor_contact_s": 6.9613749999951136,
+          "first_contact_height_m": 0.2821295219399431,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6395380273559885,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.03791602194646582,
+            0.1162377432339518,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 5,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": -0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.691874999995742,
+          "last_robot_contact_s": 6.709499999995701,
+          "normal_impulse_ns": 0.02890477584543016,
+          "peak_normal_force_n": 2.9406006735836434,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8810674999999804
+          ],
+          "incoming_3d_speed_m_s": 1.8810674999999804,
+          "first_floor_contact_s": 6.962499999995111,
+          "first_contact_height_m": 0.28510498612346724,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6563944947403169,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.017508563118667803,
+            0.11589808111100108,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 6,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.027712812921102035,
+            "offset_y_m": 0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.701999999995718,
+          "last_robot_contact_s": 6.719999999995676,
+          "normal_impulse_ns": 0.027210578927804596,
+          "peak_normal_force_n": 2.23115652139044,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.980393749999979
+          ],
+          "incoming_3d_speed_m_s": 1.980393749999979,
+          "first_floor_contact_s": 6.960374999995116,
+          "first_contact_height_m": 0.26714234845075824,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5924574049700504,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.03771991792834671,
+            0.14823714234103003,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 7,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.05542562584220407,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": null,
+          "last_robot_contact_s": null,
+          "normal_impulse_ns": 0.0,
+          "peak_normal_force_n": 0.0,
+          "robot_bodies": [],
+          "incoming_speed_m_s": null,
+          "incoming_velocity_m_s": null,
+          "incoming_3d_speed_m_s": null,
+          "first_floor_contact_s": 6.806749999995474,
+          "first_contact_height_m": null,
+          "first_robot_body": null,
+          "rebound_speed_m_s": 0.0,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.045318907660294165,
+            0.13172794960306486,
+            0.48
+          ],
+          "contacted_robot": false,
+          "rebounded": false
+        },
+        {
+          "index": 8,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.05542562584220407,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": null,
+          "last_robot_contact_s": null,
+          "normal_impulse_ns": 0.0,
+          "peak_normal_force_n": 0.0,
+          "robot_bodies": [],
+          "incoming_speed_m_s": null,
+          "incoming_velocity_m_s": null,
+          "incoming_3d_speed_m_s": null,
+          "first_floor_contact_s": 6.807749999995472,
+          "first_contact_height_m": null,
+          "first_robot_body": null,
+          "rebound_speed_m_s": 0.0,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.06553026246997307,
+            0.13240727384896625,
+            0.48
+          ],
+          "contacted_robot": false,
+          "rebounded": false
+        },
+        {
+          "index": 9,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": 0.048,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.710874999995697,
+          "last_robot_contact_s": 6.727749999995658,
+          "normal_impulse_ns": 0.026407197464952528,
+          "peak_normal_force_n": 2.3197732039682863,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.18265723762212668,
+          "incoming_velocity_m_s": [
+            -0.009354308649518278,
+            0.18241755224055495,
+            -2.060516577580623
+          ],
+          "incoming_3d_speed_m_s": 2.068596682038408,
+          "first_floor_contact_s": 6.946874999995147,
+          "first_contact_height_m": 0.2493062698974903,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5294190611668206,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.017900771154906014,
+            0.17989687932515752,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        }
+      ]
+    },
+    {
+      "id": "right-10-nominal",
+      "count": 10,
+      "edge": "right",
+      "repeat": false,
+      "release_s": 6.5,
+      "seed": 2026112101,
+      "prequalified": true,
+      "direct_hits": 9,
+      "first_hit_s": 6.69262499999574,
+      "last_first_hit_s": 6.715999999995685,
+      "outcome": "settled flat",
+      "floor_contact": null,
+      "final_hold": false,
+      "settled_flat": true,
+      "end_s": 14.000000000021341,
+      "final_tilt_deg": 0.01307145099410441,
+      "peak_tilt_deg": 32.66645069672963,
+      "first_joint_warning": {
+        "time_s": 7.410499999994067,
+        "margin_rad": -0.005038657807017621
+      },
+      "min_joint_margin_rad": -0.017679730887482314,
+      "max_closure_error_m": 3.009291279431375e-05,
+      "termination": "completed",
+      "first_35_s": null,
+      "first_40_s": null,
+      "balls": [
+        {
+          "index": 0,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.695999999995732,
+          "last_robot_contact_s": 6.71399999999569,
+          "normal_impulse_ns": 0.030721680874425956,
+          "peak_normal_force_n": 2.6592510537917815,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9215337499999798
+          ],
+          "incoming_3d_speed_m_s": 1.9215337499999798,
+          "first_floor_contact_s": 7.0304999999949525,
+          "first_contact_height_m": 0.27787026378525925,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.723666783951338,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.006917973751167733,
+            -0.1361281085548713,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 1,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": -0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.707999999995704,
+          "last_robot_contact_s": 6.726624999995661,
+          "normal_impulse_ns": 0.025974362189249776,
+          "peak_normal_force_n": 2.0890642775652113,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.12268402635052379,
+          "incoming_velocity_m_s": [
+            0.001435331874543037,
+            -0.12267562978842186,
+            -2.0478002406909575
+          ],
+          "incoming_3d_speed_m_s": 2.0514719583985346,
+          "first_floor_contact_s": 6.936874999995171,
+          "first_contact_height_m": 0.25642396281516944,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5376208523095163,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.006591495958934579,
+            -0.16812644307795516,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 2,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.0,
+            "offset_y_m": 0.032,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.69262499999574,
+          "last_robot_contact_s": 6.710999999995697,
+          "normal_impulse_ns": 0.0312941728862328,
+          "peak_normal_force_n": 2.5122870006350597,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8884249999999803
+          ],
+          "incoming_3d_speed_m_s": 1.8884249999999803,
+          "first_floor_contact_s": 7.0574999999948895,
+          "first_contact_height_m": 0.2838006317762136,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.7922411174339363,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.0072444515434008875,
+            -0.10412977403178748,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 3,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": -0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.700124999995722,
+          "last_robot_contact_s": 6.71824999999568,
+          "normal_impulse_ns": 0.029657222473102977,
+          "peak_normal_force_n": 2.9837845465572146,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9619999999999793
+          ],
+          "incoming_3d_speed_m_s": 1.9619999999999793,
+          "first_floor_contact_s": 6.947624999995146,
+          "first_contact_height_m": 0.2704317756043311,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6002964110428606,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.02095663572073206,
+            -0.15184453775456785,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 4,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.027712812921102035,
+            "offset_y_m": 0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.696374999995731,
+          "last_robot_contact_s": 6.714749999995688,
+          "normal_impulse_ns": 0.030641320731275748,
+          "peak_normal_force_n": 2.663819551612311,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.9252124999999798
+          ],
+          "incoming_3d_speed_m_s": 1.9252124999999798,
+          "first_floor_contact_s": 7.021374999994974,
+          "first_contact_height_m": 0.27759917589468563,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6999905909009505,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.034792583223067525,
+            -0.12041167935517477,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 5,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": 0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.69262499999574,
+          "last_robot_contact_s": 6.7098749999957,
+          "normal_impulse_ns": 0.02799856099292213,
+          "peak_normal_force_n": 2.9657937378678225,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.8884249999999803
+          ],
+          "incoming_3d_speed_m_s": 1.8884249999999803,
+          "first_floor_contact_s": 6.927749999995192,
+          "first_contact_height_m": 0.28475912252595653,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6472151564368451,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.020630157928498906,
+            -0.11984620323148404,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 6,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.027712812921102035,
+            "offset_y_m": -0.016,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.702749999995716,
+          "last_robot_contact_s": 6.720749999995674,
+          "normal_impulse_ns": 0.025796900611190245,
+          "peak_normal_force_n": 2.1191308118072096,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.0,
+          "incoming_velocity_m_s": [
+            0.0,
+            0.0,
+            -1.987751249999979
+          ],
+          "incoming_3d_speed_m_s": 1.987751249999979,
+          "first_floor_contact_s": 6.9373749999951695,
+          "first_contact_height_m": 0.2671637103395419,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.5766725195293674,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.034466105430834365,
+            -0.1524100138782586,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 7,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.05542562584220407,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": null,
+          "last_robot_contact_s": null,
+          "normal_impulse_ns": 0.0,
+          "peak_normal_force_n": 0.0,
+          "robot_bodies": [],
+          "incoming_speed_m_s": null,
+          "incoming_velocity_m_s": null,
+          "incoming_3d_speed_m_s": null,
+          "first_floor_contact_s": 6.806999999995473,
+          "first_contact_height_m": null,
+          "first_robot_body": null,
+          "rebound_speed_m_s": 0.0,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.0485047674003987,
+            -0.13556263243118058,
+            0.48
+          ],
+          "contacted_robot": false,
+          "rebounded": false
+        },
+        {
+          "index": 8,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": -0.05542562584220407,
+            "offset_y_m": 0.0,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.713249999995692,
+          "last_robot_contact_s": 6.726124999995662,
+          "normal_impulse_ns": 0.009233786873742942,
+          "peak_normal_force_n": 1.1265635867529913,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.17126756110668576,
+          "incoming_velocity_m_s": [
+            -0.14103887943176677,
+            -0.09716281169286888,
+            -2.1000882557002343
+          ],
+          "incoming_3d_speed_m_s": 2.107060335922416,
+          "first_floor_contact_s": 6.826124999995429,
+          "first_contact_height_m": 0.2490627505700542,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.918127348472375,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            -0.062340714902734164,
+            -0.13669358467856205,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 9,
+          "parameters": {
+            "drop_height_m": 0.48,
+            "offset_x_m": 0.027712812921102035,
+            "offset_y_m": -0.048,
+            "launch_s": 6.5,
+            "radius_m": 0.015,
+            "mass_kg": 0.01,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 6.715999999995685,
+          "last_robot_contact_s": 6.732749999995646,
+          "normal_impulse_ns": 0.017625758101091973,
+          "peak_normal_force_n": 1.5712564626923344,
+          "robot_bodies": [
+            "xl_330"
+          ],
+          "incoming_speed_m_s": 0.6544585319462846,
+          "incoming_velocity_m_s": [
+            -0.019932275753653864,
+            -0.6541549315113097,
+            -2.1224717374188593
+          ],
+          "incoming_3d_speed_m_s": 2.221081323630253,
+          "first_floor_contact_s": 6.867374999995333,
+          "first_contact_height_m": 0.240292663052659,
+          "first_robot_body": "xl_330",
+          "rebound_speed_m_s": 1.6046151222164347,
+          "incoming_direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "release_s": 6.5,
+          "release_position_m": [
+            0.021283113512965215,
+            -0.1838428722776517,
+            0.48
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        }
+      ]
+    }
+  ]
+}
