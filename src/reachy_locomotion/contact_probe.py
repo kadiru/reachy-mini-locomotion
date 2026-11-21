@@ -79,6 +79,9 @@ def scene_xml(upstream, config, free=True):
     if "motor_model" in config:
         from .motors import modify_physics_xml
         modify_physics_xml(root, config["motor_model"])
+    if free and config.get('disturbance_balls'):
+        from .ball_disturbance import add_balls
+        add_balls(world,config['disturbance_balls'])
     return ET.tostring(root, encoding="unicode"), hashlib.sha256(original).hexdigest()
 
 

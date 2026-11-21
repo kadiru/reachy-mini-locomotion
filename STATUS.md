@@ -1,5 +1,65 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 20 — physical rolling-ball recovery and controlled return
+
+New selected policy: `configs/balance-recovery-experimental.json`. Two 32-second
+nominal simulations start flat, lift naturally onto the left/right rim, take
+one rolling ball from the left and one from the right, recover, and return flat.
+Both complete without falls or guard stops. All four contacts have measured
+impulses and separated rebounds; recovery begins at 0.325/0.815 s on the left
+and 1.339/0.799 s on the right, verified by a subsequent 0.5 s strict hold.
+The balls are **8 cm diameter, 10 g, released at 0.3 m/s**. These are gentle
+impacts, causing up to 2.02° departure from the pre-impact mean attitude.
+
+The waist target remains zero with bounded servo holding, not a welded joint.
+Peak waist torque is 0.0507 Nm, peak head torque 0.299 Nm under the unchanged
+0.416 Nm cap; minimum actual joint margin is 0.0479 rad. Motor speed/torque,
+10.7 rad/s / 360 rad/s² command profile, IK, closure, robot-floor and 35° guards
+are unchanged. Balls are initialized once and then move through physical
+contact integration; the environment never resets or directly pushes the robot.
+The policy receives no ball position, impact timing or contact-force input.
+
+Frozen qualification, with no retuning afterward:
+
+- Impact recovery: **7/28** (left 4/14, right 3/14). Both nominal incoming
+  directions and fresh seeds pass. Both fail timestep changes, higher gyro
+  noise, 40 ms delay, ±5% mass, stronger balls and smaller balls; left alone
+  also passes 0.1° attitude noise. Guard stops and failure to launch count as
+  failures. Do not claim robust recovery or timestep convergence.
+- Hold/return: **6/8**. Natural left/right pass at 0.125 ms but fail at 0.25 ms.
+  Front/back raised-start hold/return pass at both timesteps. Back still uses
+  the old noiseless-angle baseline; this is not robust four-edge capture.
+- Moving front capture/return: **1/2**. An artificial 31° pitch / 10°/s outward
+  start passes at 0.25 ms. At 0.125 ms it returns flat but only holds strictly
+  for 4.42 s, below the 4.9 s qualification threshold.
+- Another 24 natural front-launch trials fail, longest strict hold 0.06 s.
+  Natural fore-aft launch remains unresolved; prior failed evidence is preserved.
+
+Sensor improvement uses noisy attitude plus noisy body gyro with causal
+integration/correction and capture-specific settings. The selected left/right
+policy averages simulated gyro readings at 1 kHz into 50 Hz control with 20 ms
+delay and 0.05° attitude noise. **This is not the stock SDK's 50 Hz IMU readout**;
+ideal head sensing, contact restitution and actuator behavior also remain
+uncalibrated. No hardware, Ubuntu/GPU or Nimbus/EY work was touched.
+
+Video: `media/simulation/ball-balance-recovery-2026-11-20.mp4`, two independent
+29.04 s clips at 1×, each including natural launch, both impacts and return.
+The full recorded simulations continue to 32 s. Chart shares the stem plus
+`-chart.png`. Full methods, limitations and commands:
+`docs/BALL_BALANCE_2026-11-20.md`. Failed searches and the frozen 38-check suite
+remain in `experiments/reports/motor-training-ball-*.json`.
+**140 tests pass** in `repository-tests-ball-balance-final-2026-11-20.txt`.
+The saved-policy CLI replay matches all 1,601 recorded physical frames,
+controller trace rows and curriculum results of the left demonstration exactly.
+
+Replay: `.venv/bin/python experiments/run_balance_curriculum.py configs/balance-recovery-experimental.json --edge left --mode impacts --seconds 32 --record --output experiments/generated/left-ball-replay.json`.
+Use `--edge right` and a new output for the other sequence. Return-only is
+`--mode cycle`; front/back additionally require `--raised-start-deg 32.1`
+for the qualified raised-start cases. Moving front capture uses
+`--edge front --capture-policy --mode cycle --raised-start-deg 31 --outward-rate-deg-s 10 --timestep 0.00025`.
+Next: repair timestep sensitivity and match gyro processing to hardware,
+then train the frozen failures and reserve a fresh qualification split.
+
 ## November 20 — front/back edge holding, natural capture unresolved
 
 Added separate front/back dynamics identification, pitch/rate feedback,

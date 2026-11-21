@@ -1,0 +1,664 @@
+{
+  "evidence": "uncalibrated_simulation",
+  "hardware_ready": false,
+  "demonstrations": {
+    "left": {
+      "completed": true,
+      "fell": false,
+      "settled": true,
+      "peak_tilt_deg": 33.02080556760359,
+      "waist_peak_torque_nm": 0.050608412165781186,
+      "measured_waist_angle_range_deg": [
+        -1.0556282026275436,
+        0.7217994026009036
+      ],
+      "min_joint_margin_rad": 0.04788229776311148,
+      "max_closure_error_m": 2.882162081136315e-05,
+      "balance_curriculum": {
+        "axis": "roll",
+        "edge": "left",
+        "impacts": {
+          "events": [
+            {
+              "index": 0,
+              "contacted_robot": true,
+              "rebounded": true,
+              "balanced_before_impact": true,
+              "recovery_s": 0.32462500000484695,
+              "peak_angle_departure_deg": 0.9172969414706387,
+              "peak_impact_angle_change_deg": 0.9015439989002445,
+              "normal_impulse_ns": 0.008744804243077074,
+              "pass_impact": true
+            },
+            {
+              "index": 1,
+              "contacted_robot": true,
+              "rebounded": true,
+              "balanced_before_impact": true,
+              "recovery_s": 0.8148749999847471,
+              "peak_angle_departure_deg": 1.7260882511940245,
+              "peak_impact_angle_change_deg": 1.589113323835619,
+              "normal_impulse_ns": 0.00902458531233851,
+              "pass_impact": true
+            }
+          ],
+          "all_impacts_pass": true
+        },
+        "return_started_s": 25.46,
+        "hold_return_pass": true,
+        "full_sequence_pass": true,
+        "safe_flat_after_impacts": true,
+        "impact_trial_pass": true
+      },
+      "ball_disturbances": [
+        {
+          "index": 0,
+          "parameters": {
+            "launch_s": 8,
+            "from_side": 1,
+            "radius_m": 0.04,
+            "mass_kg": 0.01,
+            "speed_m_s": 0.3,
+            "distance_m": 0.3,
+            "offset_x_m": 0.0,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 8.515374999995153,
+          "last_robot_contact_s": 8.533124999995238,
+          "normal_impulse_ns": 0.008744804243077074,
+          "peak_normal_force_n": 1.0567424696316865,
+          "robot_bodies": [
+            "body_down_3dprint"
+          ],
+          "rebound_speed_m_s": 0.20289374465332588,
+          "incoming_direction": [
+            -0.00626587919531153,
+            -0.9999803691862704,
+            -0.0
+          ],
+          "release_s": 8.0,
+          "release_position_m": [
+            -0.00501549379190731,
+            0.3104291461319413,
+            0.040100000000000004
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 1,
+          "parameters": {
+            "launch_s": 12,
+            "from_side": -1,
+            "radius_m": 0.04,
+            "mass_kg": 0.01,
+            "speed_m_s": 0.3,
+            "distance_m": 0.3,
+            "offset_x_m": 0.0,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 12.725125000015254,
+          "last_robot_contact_s": 12.742750000015338,
+          "normal_impulse_ns": 0.00902458531233851,
+          "peak_normal_force_n": 1.1070300486230928,
+          "robot_bodies": [
+            "body_foot_3dprint"
+          ],
+          "rebound_speed_m_s": 0.2054834935548795,
+          "incoming_direction": [
+            0.006340996798916614,
+            0.9999798956777062,
+            0.0
+          ],
+          "release_s": 12.0,
+          "release_position_m": [
+            -0.008805034738125331,
+            -0.28971072510959106,
+            0.040100000000000004
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        }
+      ]
+    },
+    "right": {
+      "completed": true,
+      "fell": false,
+      "settled": true,
+      "peak_tilt_deg": 32.792744554188246,
+      "waist_peak_torque_nm": 0.04879313633681873,
+      "measured_waist_angle_range_deg": [
+        -0.6313114537488649,
+        1.0383618256060587
+      ],
+      "min_joint_margin_rad": 0.05479398750347597,
+      "max_closure_error_m": 3.0092912794423718e-05,
+      "balance_curriculum": {
+        "axis": "roll",
+        "edge": "right",
+        "impacts": {
+          "events": [
+            {
+              "index": 0,
+              "contacted_robot": true,
+              "rebounded": true,
+              "balanced_before_impact": true,
+              "recovery_s": 1.3388750000038652,
+              "peak_angle_departure_deg": 2.8702309786155773,
+              "peak_impact_angle_change_deg": 2.0161923033037716,
+              "normal_impulse_ns": 0.008395366669318297,
+              "pass_impact": true
+            },
+            {
+              "index": 1,
+              "contacted_robot": true,
+              "rebounded": true,
+              "balanced_before_impact": true,
+              "recovery_s": 0.7993749999857229,
+              "peak_angle_departure_deg": 1.416614867702286,
+              "peak_impact_angle_change_deg": 1.132502265816207,
+              "normal_impulse_ns": 0.008900721579058671,
+              "pass_impact": true
+            }
+          ],
+          "all_impacts_pass": true
+        },
+        "return_started_s": 24.96,
+        "hold_return_pass": true,
+        "full_sequence_pass": true,
+        "safe_flat_after_impacts": true,
+        "impact_trial_pass": true
+      },
+      "ball_disturbances": [
+        {
+          "index": 0,
+          "parameters": {
+            "launch_s": 8,
+            "from_side": 1,
+            "radius_m": 0.04,
+            "mass_kg": 0.01,
+            "speed_m_s": 0.3,
+            "distance_m": 0.3,
+            "offset_x_m": 0.0,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 8.721124999996135,
+          "last_robot_contact_s": 8.73899999999622,
+          "normal_impulse_ns": 0.008395366669318297,
+          "peak_normal_force_n": 1.0024661734519031,
+          "robot_bodies": [
+            "body_foot_3dprint"
+          ],
+          "rebound_speed_m_s": 0.2031739900834641,
+          "incoming_direction": [
+            0.010296713041768718,
+            -0.9999469874451022,
+            -0.0
+          ],
+          "release_s": 8.0,
+          "release_position_m": [
+            -0.008228166316497969,
+            0.2906758807131738,
+            0.040100000000000004
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        },
+        {
+          "index": 1,
+          "parameters": {
+            "launch_s": 12,
+            "from_side": -1,
+            "radius_m": 0.04,
+            "mass_kg": 0.01,
+            "speed_m_s": 0.3,
+            "distance_m": 0.3,
+            "offset_x_m": 0.0,
+            "stiffness": 25000.0,
+            "damping": 35.0
+          },
+          "released": true,
+          "first_robot_contact_s": 12.520625000014277,
+          "last_robot_contact_s": 12.538375000014362,
+          "normal_impulse_ns": 0.008900721579058671,
+          "peak_normal_force_n": 1.0806231417130496,
+          "robot_bodies": [
+            "body_down_3dprint"
+          ],
+          "rebound_speed_m_s": 0.20382316789197424,
+          "incoming_direction": [
+            -0.00869882616087075,
+            0.9999621644959488,
+            0.0
+          ],
+          "release_s": 12.0,
+          "release_position_m": [
+            -0.0024414812797646916,
+            -0.3094467964755391,
+            0.040100000000000004
+          ],
+          "contacted_robot": true,
+          "rebounded": true
+        }
+      ]
+    }
+  },
+  "qualification": {
+    "impact_trials": {
+      "passed": 7,
+      "total": 28,
+      "checks": [
+        {
+          "id": "qual-left-nominal-left",
+          "passed": true,
+          "termination": "completed",
+          "natural_start": true
+        },
+        {
+          "id": "qual-left-nominal-right",
+          "passed": true,
+          "termination": "completed",
+          "natural_start": true
+        },
+        {
+          "id": "qual-left-dt100-left",
+          "passed": false,
+          "termination": "tilt_reached_35_deg",
+          "natural_start": true
+        },
+        {
+          "id": "qual-left-dt100-right",
+          "passed": false,
+          "termination": "tilt_reached_35_deg",
+          "natural_start": true
+        },
+        {
+          "id": "qual-left-dt250-left",
+          "passed": false,
+          "termination": "tilt_reached_35_deg",
+          "natural_start": true
+        },
+        {
+          "id": "qual-left-dt250-right",
+          "passed": false,
+          "termination": "tilt_reached_35_deg",
+          "natural_start": true
+        },
+        {
+          "id": "qual-left-fresh-seed",
+          "passed": true,
+          "termination": "completed",
+          "natural_start": true
+        },
+        {
+          "id": "qual-left-noise010",
+          "passed": true,
+          "termination": "completed",
+          "natural_start": true
+        },
+        {
+          "id": "qual-left-gyro030",
+          "passed": false,
+          "termination": "tilt_reached_35_deg",
+          "natural_start": true
+        },
+        {
+          "id": "qual-left-delay40",
+          "passed": false,
+          "termination": "tilt_reached_35_deg",
+          "natural_start": true
+        },
+        {
+          "id": "qual-left-mass-low",
+          "passed": false,
+          "termination": "completed",
+          "natural_start": true
+        },
+        {
+          "id": "qual-left-mass-high",
+          "passed": false,
+          "termination": "completed",
+          "natural_start": true
+        },
+        {
+          "id": "qual-left-stronger",
+          "passed": false,
+          "termination": "actual_joint_limit_exceeded",
+          "natural_start": true
+        },
+        {
+          "id": "qual-left-smaller",
+          "passed": false,
+          "termination": "tilt_reached_35_deg",
+          "natural_start": true
+        },
+        {
+          "id": "qual-right-nominal-left",
+          "passed": true,
+          "termination": "completed",
+          "natural_start": true
+        },
+        {
+          "id": "qual-right-nominal-right",
+          "passed": true,
+          "termination": "completed",
+          "natural_start": true
+        },
+        {
+          "id": "qual-right-dt100-left",
+          "passed": false,
+          "termination": "tilt_reached_35_deg",
+          "natural_start": true
+        },
+        {
+          "id": "qual-right-dt100-right",
+          "passed": false,
+          "termination": "tilt_reached_35_deg",
+          "natural_start": true
+        },
+        {
+          "id": "qual-right-dt250-left",
+          "passed": false,
+          "termination": "tilt_reached_35_deg",
+          "natural_start": true
+        },
+        {
+          "id": "qual-right-dt250-right",
+          "passed": false,
+          "termination": "tilt_reached_35_deg",
+          "natural_start": true
+        },
+        {
+          "id": "qual-right-fresh-seed",
+          "passed": true,
+          "termination": "completed",
+          "natural_start": true
+        },
+        {
+          "id": "qual-right-noise010",
+          "passed": false,
+          "termination": "actual_joint_limit_exceeded",
+          "natural_start": true
+        },
+        {
+          "id": "qual-right-gyro030",
+          "passed": false,
+          "termination": "tilt_reached_35_deg",
+          "natural_start": true
+        },
+        {
+          "id": "qual-right-delay40",
+          "passed": false,
+          "termination": "tilt_reached_35_deg",
+          "natural_start": true
+        },
+        {
+          "id": "qual-right-mass-low",
+          "passed": false,
+          "termination": "completed",
+          "natural_start": true
+        },
+        {
+          "id": "qual-right-mass-high",
+          "passed": false,
+          "termination": "completed",
+          "natural_start": true
+        },
+        {
+          "id": "qual-right-stronger",
+          "passed": false,
+          "termination": "actual_joint_limit_exceeded",
+          "natural_start": true
+        },
+        {
+          "id": "qual-right-smaller",
+          "passed": false,
+          "termination": "tilt_reached_35_deg",
+          "natural_start": true
+        }
+      ]
+    },
+    "hold_return_trials": {
+      "passed": 6,
+      "total": 8,
+      "checks": [
+        {
+          "id": "qual-cycle-left-0.000125",
+          "passed": true,
+          "termination": "completed",
+          "natural_start": true
+        },
+        {
+          "id": "qual-cycle-left-0.00025",
+          "passed": false,
+          "termination": "tilt_reached_35_deg",
+          "natural_start": true
+        },
+        {
+          "id": "qual-cycle-right-0.000125",
+          "passed": true,
+          "termination": "completed",
+          "natural_start": true
+        },
+        {
+          "id": "qual-cycle-right-0.00025",
+          "passed": false,
+          "termination": "tilt_reached_35_deg",
+          "natural_start": true
+        },
+        {
+          "id": "qual-cycle-front-0.000125",
+          "passed": true,
+          "termination": "completed",
+          "natural_start": false
+        },
+        {
+          "id": "qual-cycle-front-0.00025",
+          "passed": true,
+          "termination": "completed",
+          "natural_start": false
+        },
+        {
+          "id": "qual-cycle-back-0.000125",
+          "passed": true,
+          "termination": "completed",
+          "natural_start": false
+        },
+        {
+          "id": "qual-cycle-back-0.00025",
+          "passed": true,
+          "termination": "completed",
+          "natural_start": false
+        }
+      ]
+    },
+    "moving_front_capture_trials": {
+      "passed": 1,
+      "total": 2,
+      "checks": [
+        {
+          "id": "qual-moving-front-0.000125",
+          "passed": false,
+          "termination": "completed",
+          "natural_start": false
+        },
+        {
+          "id": "qual-moving-front-0.00025",
+          "passed": true,
+          "termination": "completed",
+          "natural_start": false
+        }
+      ]
+    }
+  },
+  "cli_replay": {
+    "trajectory_frames": 1601,
+    "trajectory_exact_match": true,
+    "trace_exact_match": true,
+    "curriculum_exact_match": true
+  },
+  "artifacts": {
+    "/Users/kadir/linkedin/projects/reachy-mini-locomotion/experiments/summarize_balance_curriculum.py": {
+      "bytes": 6010,
+      "sha256": "fb1744308e5a92584631900b98aa0e08ab614bfebff1243e140bfccf489d11af"
+    },
+    "configs/balance-recovery-experimental.json": {
+      "bytes": 106155,
+      "sha256": "85bcf3bbd83607fe49b590b686b0c4a0b3e63bfa199e54c3ec3079b00841af7b"
+    },
+    "experiments/generated/ball-balance/bilateral-left.json": {
+      "bytes": 8408337,
+      "sha256": "d36d208c814318db6bf950ae943946ba8ec52ee29f7f991f4e8e29b3cdcd4bdf"
+    },
+    "experiments/generated/ball-balance/bilateral-right.json": {
+      "bytes": 8375478,
+      "sha256": "535f0ff784fd591c315a762bfac1b1c049660afa969fa54d1db632d27c99c0ef"
+    },
+    "experiments/generated/ball-balance/cli-left-replay.json": {
+      "bytes": 8408338,
+      "sha256": "91429b2175a3278b2e6498095bae8caca08742d321bc14ac06fd8b8c2abaeb85"
+    },
+    "experiments/reports/motor-training-ball-averaged-a-2026-11-20.json": {
+      "bytes": 687570,
+      "sha256": "d96c8f321a8cc9db40c281318ae3b3c0dd5c7b026ead0a9499e6cd2b673e126e"
+    },
+    "experiments/reports/motor-training-ball-back-identification-2026-11-20.json": {
+      "bytes": 4903312,
+      "sha256": "d0439edacb04e6965dea66ae2a461d2e4b3157f54eb0dba2ce78b4a31d1a57aa"
+    },
+    "experiments/reports/motor-training-ball-back-tune-2026-11-20.json": {
+      "bytes": 639833,
+      "sha256": "9a8322accc7733087c88fe8bfee668d9bf99af15071405111bd2571455c7e205"
+    },
+    "experiments/reports/motor-training-ball-baseline-2026-11-20.json": {
+      "bytes": 124444,
+      "sha256": "8fc4e32334ebc06be9e150b34e297e6316c93c6933bbbaa9d4bb33b54bc1bc8b"
+    },
+    "experiments/reports/motor-training-ball-basin-a-2026-11-20.json": {
+      "bytes": 1361654,
+      "sha256": "3cf193babc9042adcc7de8cbc085840bbb9ec8cd1468041fe59d8c6ab084b468"
+    },
+    "experiments/reports/motor-training-ball-basin-b-2026-11-20.json": {
+      "bytes": 386914,
+      "sha256": "a967673e11deaac6898113a7c03f22e41e452dfe198bc2b1c644a728ade8192f"
+    },
+    "experiments/reports/motor-training-ball-bilateral-2026-11-20.json": {
+      "bytes": 95248,
+      "sha256": "72c698196d3e43e294fab1a9e7c1d7ccaf753323ba7a179cb2062ce50997a4c9"
+    },
+    "experiments/reports/motor-training-ball-filtered-impact-2026-11-20.json": {
+      "bytes": 880449,
+      "sha256": "27b94b4f2c94d998e70119db128d735840a64b7249a83208664936f809c4e0d8"
+    },
+    "experiments/reports/motor-training-ball-front-natural-2026-11-20.json": {
+      "bytes": 1045058,
+      "sha256": "5d03f40a4d38a2c0a43a8a934ffa141e56a39aa76f3f8273f8912cb92f6aff7f"
+    },
+    "experiments/reports/motor-training-ball-fusion-a-2026-11-20.json": {
+      "bytes": 511567,
+      "sha256": "c505fcc543757b39d13e980d09af52ae68191ac4067c6360a2ab91845e5e32ee"
+    },
+    "experiments/reports/motor-training-ball-fusion-b-2026-11-20.json": {
+      "bytes": 1534670,
+      "sha256": "e55238171465bda0915c7715df06a11dd7d977c86514dccb6dd339e04ad77d9f"
+    },
+    "experiments/reports/motor-training-ball-gain-a-2026-11-20.json": {
+      "bytes": 719816,
+      "sha256": "7f5af940310c3cec399533692ac4fef4fed4c72626b23cfa68639cae5261f3fa"
+    },
+    "experiments/reports/motor-training-ball-gyro-a-2026-11-20.json": {
+      "bytes": 765036,
+      "sha256": "dfee0f18269ee15edf391f97580bef0a9e914c70a58d11c37be5b632e17f930e"
+    },
+    "experiments/reports/motor-training-ball-hold-bank-2026-11-20.json": {
+      "bytes": 868962,
+      "sha256": "46e420863684f220e0cbbf512b6a34dd750f6a4af6b3927d14879b470ea7217d"
+    },
+    "experiments/reports/motor-training-ball-impact-a-2026-11-20.json": {
+      "bytes": 535164,
+      "sha256": "1582deea798600dc10cf61e000148ec77bc491e7d19ee2059bc238aff60febbc"
+    },
+    "experiments/reports/motor-training-ball-natural-a-2026-11-20.json": {
+      "bytes": 522734,
+      "sha256": "0aa5a7eee022a2a40e801eec43579729083cf1a09149d1fc387d00a97bd8a0b5"
+    },
+    "experiments/reports/motor-training-ball-observer-a-2026-11-20.json": {
+      "bytes": 481813,
+      "sha256": "d3c454b1ac52f48c5470c249a7d42cddc4ec6eea828dcfef5ea5d5a535fe928f"
+    },
+    "experiments/reports/motor-training-ball-observer-b-2026-11-20.json": {
+      "bytes": 511325,
+      "sha256": "0bb5723c5032ff0cf80c9cf2db50ca2973796a5bb5952eec685965a9988e7e4b"
+    },
+    "experiments/reports/motor-training-ball-outward-a-2026-11-20.json": {
+      "bytes": 533101,
+      "sha256": "f2576a84f24574138548f5068e8338774d31735b16a9c50b6dde9b1205ef36ce"
+    },
+    "experiments/reports/motor-training-ball-phase-a-2026-11-20.json": {
+      "bytes": 1033908,
+      "sha256": "50ea7d34911722ce8825c5c5684378470af72d3a8d66cfaa48662948c322e8df"
+    },
+    "experiments/reports/motor-training-ball-qualification-2026-11-20.json": {
+      "bytes": 1696178,
+      "sha256": "b8d1ec47551e4066dcb2d23829bc82135f3f390b8b56af30ad2a8b1a55ecb3f7"
+    },
+    "experiments/reports/motor-training-ball-rescue-a-2026-11-20.json": {
+      "bytes": 1068395,
+      "sha256": "5c65b7bba6254c036e9ba2078169b3bbd0ffbf1c9e74469630571f1bea340902"
+    },
+    "experiments/reports/motor-training-ball-return-a-2026-11-20.json": {
+      "bytes": 683837,
+      "sha256": "3edbced6b80e58f3a94dd796114eab05f685614f2b19f05a510784b92a1a89e9"
+    },
+    "experiments/reports/motor-training-ball-return-b-2026-11-20.json": {
+      "bytes": 513384,
+      "sha256": "b5859c83b76af48700a995d4bf7dc17d8583d56e4c24cd622635c32a5c59d269"
+    },
+    "experiments/reports/motor-training-ball-return-c-2026-11-20.json": {
+      "bytes": 687201,
+      "sha256": "5b19e6b0c688764ccdadcf2a3058a7176ddfcca828010d05bf580bd791cd021b"
+    },
+    "experiments/reports/motor-training-ball-right-filtered-2026-11-20.json": {
+      "bytes": 542027,
+      "sha256": "05e1a63499919e2724d213299e70f85162aac75edc5764931246d05597ee4ff3"
+    },
+    "experiments/reports/motor-training-ball-right-out-2026-11-20.json": {
+      "bytes": 535284,
+      "sha256": "bfdb16da2506290969d636bd3b3d42a8309cda02f77ffc3c10b0cdce01c252e8"
+    },
+    "experiments/reports/motor-training-ball-round-a-2026-11-20.json": {
+      "bytes": 887587,
+      "sha256": "d2cd90fc5d836474d772f563be716f0423fb9eb71b7cf81f42cb31cade2dda5c"
+    },
+    "experiments/reports/motor-training-ball-side-tune-2026-11-20.json": {
+      "bytes": 1543648,
+      "sha256": "5cdae302e295be17b5c7a1bf78c1a486fdb85aee145df6cbf3462e00fadac2d1"
+    },
+    "experiments/reports/repository-tests-ball-balance-final-2026-11-20.txt": {
+      "bytes": 12907,
+      "sha256": "3a71ec31b3d5d01a21b90c9f4cedf9239524668d62f4278d707268e7688e1e66"
+    },
+    "experiments/run_balance_curriculum.py": {
+      "bytes": 2307,
+      "sha256": "efda7b3dae222843a44520aa1e0270fc7d760bf471f95e93e770418aadbf75c1"
+    },
+    "media/simulation/ball-balance-recovery-2026-11-20-chart.png": {
+      "bytes": 211134,
+      "sha256": "7d5e05b524620c13b7aed9f608b6c4eacba7d1e9076c2224505e01fbcbc5c860"
+    },
+    "media/simulation/ball-balance-recovery-2026-11-20.mp4": {
+      "bytes": 3394885,
+      "sha256": "4711aefe107c126e081169eb50d4311e370c0175c597ff99a55af3db70e8df32"
+    },
+    "media/simulation/ball-balance-recovery-2026-11-20.png": {
+      "bytes": 330924,
+      "sha256": "42948ff350960df00124ea5046748cc91243cf92a24ab709009e63d755a1f443"
+    }
+  }
+}

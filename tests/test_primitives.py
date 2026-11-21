@@ -30,6 +30,35 @@ UPSTREAM=ROOT/'experiments/upstream-reachy-mini'
 
 @unittest.skipUnless(importlib.util.find_spec('mujoco') and (UPSTREAM/'.git').exists(),'Needs simulation assets')
 class PrimitivePhysicsTests(unittest.TestCase):
+    def test_moving_curriculum_starts_with_zero_velocity_at_the_supporting_rim(self):
+        import mujoco
+        import numpy as np
+        from reachy_locomotion.primitives import PrimitiveSimulator
+        config=json.loads((ROOT/'configs/motors-speed-trained.json').read_text());config['timestep_s']=.00025
+        sim=PrimitiveSimulator(UPSTREAM,config);m=sim.model
+        for axis,angle,rate in [('roll',-31,-10),('pitch',31,10)]:
+            r=sim.run_primitive(Primitive(),seconds=1,record=True,tilt_limit_deg=35,
+                                diagnostic_initial_angular_rate_deg_s=rate,**{f'diagnostic_initial_{axis}_deg':angle})
+            self.assertFalse(r['natural_upright_start']);self.assertEqual(r['diagnostic_initial_angular_rate_deg_s'],rate)
+            d=mujoco.MjData(m);d.qpos[:]=r['trajectory'][0]['qpos'];d.qvel[:]=r['trajectory'][0]['qvel'];mujoco.mj_forward(m,d)
+            rim=np.zeros(3);rim[1 if axis=='roll' else 0]=config['foot_radius_m']*np.sign(angle)*(-1 if axis=='roll' else 1)
+            point=d.xpos[sim.base]+d.xmat[sim.base].reshape(3,3)@rim;jac=np.zeros((3,m.nv))
+            mujoco.mj_jac(m,d,jac,None,point,sim.base)
+            np.testing.assert_allclose(jac@d.qvel,0,atol=1e-10)
+
+    def test_ball_floor_contact_does_not_disable_robot_floor_guard(self):
+        from reachy_locomotion.primitives import PrimitiveSimulator
+        config=json.loads((ROOT/'configs/motors-speed-trained.json').read_text())
+        config['timestep_s']=.00025;config['disturbance_balls']=[dict(launch_s=2)]
+        sim=PrimitiveSimulator(UPSTREAM,config)
+        result=sim.run_primitive(Primitive(preload_roll_deg=0,roll_deg=0),seconds=1.2,waist_mode='hold_neutral',tilt_limit_deg=35)
+        self.assertTrue(result['completed'])
+        self.assertFalse(result['ball_disturbances'][0]['released'])
+        self.assertFalse(result['ball_disturbances'][0]['contacted_robot'])
+        self.assertEqual(result['tilt_limit_deg'],35)
+        self.assertFalse(result['direct_robot_forces_applied'])
+        self.assertAlmostEqual(sim.model.body_subtreemass[sim.base],config['motor_model']['total_mass_kg'],places=10)
+
     def test_pitch_curriculum_reset_is_labeled_and_loads_the_requested_edge(self):
         from reachy_locomotion.primitives import PrimitiveSimulator
         config=json.loads((ROOT/'configs/motors-speed-trained.json').read_text())

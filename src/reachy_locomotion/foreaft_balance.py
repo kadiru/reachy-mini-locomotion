@@ -40,6 +40,9 @@ class ForeAftController:
 
     def observe_head_state(self,t,pose):self.child.observe_head_state(t,virtual_pose(pose))
 
+    def observe_angular_velocity(self,t,body_angular_velocity_rad_s):
+        self.child.observe_angular_velocity(t,Q.T@body_angular_velocity_rad_s)
+
     def target(self,t,roll_deg):
         body=rotation(np.radians([roll_deg,self.pitch,0]))
         angles=np.degrees(euler(Q.T@body@Q))

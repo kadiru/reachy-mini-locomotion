@@ -34,6 +34,20 @@ class LinearEdgeTests(unittest.TestCase):
             m=model();m[key]=value
             with self.assertRaises(ValueError):self.make(linear=m)
 
+    def test_simulated_gyro_has_the_same_delay_as_attitude(self):
+        c=self.make();c.configure_sensors(dict(gyro_std_deg_s=0))
+        c.observe_angular_velocity(0,[0,0,0]);c.target(0,32.1)
+        c.observe_angular_velocity(.02,np.radians([10,0,0]));c.target(.02,32.1)
+        self.assertEqual(c.state[6],0)
+        c.observe_angular_velocity(.04,np.radians([10,0,0]));c.target(.04,32.1)
+        self.assertAlmostEqual(c.state[6],10)
+
+    def test_noisy_angles_do_not_get_differentiated_when_gyro_is_used(self):
+        c=self.make(delay=0);c.configure_sensors(dict(gyro_std_deg_s=0))
+        for i,a in enumerate([32.1,32.2,32.0]):
+            c.observe_angular_velocity(i*.02,[0,0,0]);c.target(i*.02,a)
+            self.assertEqual(c.observed[6],0)
+
     def test_edge_actions_stay_within_existing_pose_envelope(self):
         m=model();m['u_equilibrium']=[100,-100,100,-100]
         c=self.make(linear=m);c.hold_from_start=True;pose,_,_=c.target(0,32.1)

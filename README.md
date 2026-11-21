@@ -14,6 +14,17 @@ The opening sequence shows controller-driven head motion, whole-body rocking
 and apparent base progress. [Video observations](docs/VIMEO_OBSERVATIONS_2026-11-18.md)
 separate what is visible from what still needs measurement.
 
+**Ball-impact recovery (November 20):** two complete simulations now start flat,
+lift onto the left/right edge, withstand a rolling ball from each side, and
+return flat without falling. All **four physical bounces** regain qualified
+balance within **0.32–1.34 seconds**. The balls are 8 cm diameter, 10 g and
+released at 0.3 m/s. The waist target and motor limits are unchanged.
+The frozen impact sensitivity suite passes **7/28**; stronger hits, timestep
+changes and added delay still fail. The new gyro processing is an uncalibrated
+simulation assumption, not the stock robot SDK. **140 tests pass.**
+[Watch both complete sequences at real speed](media/simulation/ball-balance-recovery-2026-11-20.mp4).
+[Method, qualification failures and replay](docs/BALL_BALANCE_2026-11-20.md).
+
 **Front/back balance (November 20):** from an explicitly raised posture, the
 new controllers hold the front/back edge for **19.76/19.54 seconds** in
 20-second simulations near ±32° pitch. Natural lift-and-catch from flat is

@@ -2,6 +2,21 @@
 
 ## Priority
 
+Latest request: train noisy capture, hold and controlled return, adding actual
+rolling-ball collisions from both directions during left/right edge balance.
+Two nominal natural-start sequences now pass all four bounces and return flat;
+the selected balls are 8 cm diameter, 10 g, released at 0.3 m/s. Recovery begins
+within 0.32–1.34 s and is confirmed by at least 0.5 s of strict edge balance.
+Frozen impact qualification is **7/28**, hold/return is **6/8** (front/back
+artificially raised), and moving-front capture/return is **1/2**. Natural
+front/back launch and broad disturbance robustness remain unresolved.
+Policy: `configs/balance-recovery-experimental.json`; methods and failures:
+`docs/BALL_BALANCE_2026-11-20.md`. Keep the fixed waist target, existing motor
+model, all guards and earlier evidence. The selected 1 kHz gyro averaging into
+50 Hz feedback differs from stock SDK processing and needs hardware matching.
+Next: resolve timestep/contact sensitivity and qualify the actual IMU pipeline
+before increasing impact severity or composing these holds into walking.
+
 Latest request: extend edge balancing to the **front and back rims**. Separate
 fore–aft dynamics models and pitch/rate feedback now hold both edges from
 explicitly raised starts for 19.76/19.54 seconds in 20-second simulations.

@@ -27,6 +27,10 @@ def evaluate(job):
         ctrl.control_gain=policy.get('linear_gain_scale',1.)
         ctrl.tracking_error_limit=policy.get('linear_tracking_error_limit',0.)
         ctrl.command_rate_limit=policy.get('linear_command_rate_limit',0.)
+        ctrl.configure_observer(policy.get('observer'))
+        ctrl.configure_sensors(policy.get('sensors'))
+        ctrl.configure_phase_tuning(policy.get('phase_tuning'))
+        ctrl.velocity_command_rate_gain=policy.get('velocity_command_rate_gain',0.)
     else:ctrl=EdgeBalanceController(g,f,job.get('side',1),sim.checked_ik)
     ctrl.stop_when_flat=job.get('early_stop_flat',False)
     reset=job.get('diagnostic_initial_roll_deg');ctrl.hold_from_start=reset is not None

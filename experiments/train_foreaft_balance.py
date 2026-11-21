@@ -24,6 +24,10 @@ def evaluate(job):
     ctrl=ForeAftController(p['recipe'],p['feedback'],side,sim.checked_ik,p.get('linear'),job.get('excitation_seed'))
     c=ctrl.child;c.hold_from_start=reset is not None;c.stop_when_flat=job.get('early_stop_flat',False)
     c.control_gain=p.get('linear_gain_scale',1.);c.tracking_error_limit=p.get('linear_tracking_error_limit',0.);c.command_rate_limit=p.get('linear_command_rate_limit',0.)
+    c.configure_observer(p.get('observer'))
+    c.configure_sensors(p.get('sensors'))
+    c.configure_phase_tuning(p.get('phase_tuning'))
+    c.velocity_command_rate_gain=p.get('velocity_command_rate_gain',0.)
     r=sim.run_primitive(p['recipe'],seconds=job.get('seconds',10),waist_mode='hold_neutral',controller=ctrl,
                         tilt_limit_deg=35,record=bool(job.get('record')),diagnostic_initial_pitch_deg=reset,
                         finish_settle_s=.6 if c.stop_when_flat else None)

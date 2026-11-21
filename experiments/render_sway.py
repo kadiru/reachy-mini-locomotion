@@ -128,6 +128,9 @@ def main():
             draw = ImageDraw.Draw(canvas)
             draw.text((20, 12), args.title + "  |  UNCALIBRATED SIMULATION", font=big, fill="white")
             draw.text((1030, 16), f"{1/args.slowdown:g}x playback", font=font, fill=(110, 210, 235))
+            if result.get('ball_disturbances'):
+                ball=result['ball_disturbances'][0]['parameters']
+                draw.text((20,42),f"Rolling spheres: {200*ball['radius_m']:g} cm diameter / {1000*ball['mass_kg']:g} g / {ball['speed_m_s']:g} m/s at release",font=font,fill=(255,195,100))
             draw.text((20, 65), "Head close-up (following)" if args.follow_front else "Front view", font=font, fill="white")
             draw.text((660, 65), "Side view  |  green arrow = forward (+X)", font=font, fill="white")
             distance = float((data.xpos[base]-start) @ start_rotation)*1000 if start is not None else 0
@@ -151,7 +154,7 @@ def main():
             if not row["measuring"]:
                 label = f"t = {row['time_s']:.2f} s   |   startup / warm-up (excluded from displacement)"
             draw.text((20, 544), label, font=font, fill="white")
-            draw.text((870, 544), "5 cm grid  |  no external pushes", font=font, fill=(110,210,235))
+            draw.text((870, 544), "5 cm grid  |  physical ball impacts" if result.get('ball_disturbances') else "5 cm grid  |  no external pushes", font=font, fill=(110,210,235))
             if args.diagnostics:
                 forces = row.get('foot_side_normal_forces_n_right_left') or [0,0]
                 support = 'BOTH SIDES'
@@ -189,6 +192,10 @@ def main():
                         label='ARTIFICIAL TILTED START' if not result.get('natural_upright_start',True) else 'Natural lift from flat'
                         draw.text((20,474),label,font=font,fill='white')
                         draw.text((20,501),f"Continuous stable edge hold: {edge_holds[frame_index]:.2f} s",font=font,fill=(110,210,235))
+                        if result.get('ball_disturbances'):
+                            hits=sum(x['first_robot_contact_s'] is not None and x['first_robot_contact_s']<=row['time_s'] for x in result['ball_disturbances'])
+                            draw.rectangle((900,184,1268,216),fill=(15,22,32))
+                            draw.text((908,188),f"Measured ball impacts: {hits}/{len(result['ball_disturbances'])}",font=font,fill=(255,195,100))
                     if 'penguin' in result:
                         done=[s for s in result['penguin']['steps'] if s['end_s']<=row['time_s']+1e-8]
                         pairs=[s for i,s in enumerate(done) if i%2]
