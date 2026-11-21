@@ -1,5 +1,25 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 20 — video of all 38 frozen balance tests
+
+[Watch the complete simulation suite](media/simulation/balance-qualification-all-38.mp4)
+or [look up a test by condition and time](media/simulation/balance-qualification-all-38.md).
+The film shows 28 single-ball trials, eight hold-and-return trials and two moving front catches.
+Every chapter includes the full motion at real speed and two seconds on the recorded terminal pose.
+The guard pose comes from the physics substep that triggered the stop.
+
+Of the 21 failed ball trials, 13 stop before release. Four runs with altered robot mass
+never achieve a qualifying edge hold, even though the ball strikes and rebounds.
+Both heavier, faster balls trigger a joint limit after contact. Both smaller balls trigger
+the 35° tilt guard after contact. The two failed side return trials also reach the tilt
+guard. The failed moving front catch settles flat after 4.42 s of continuous qualifying hold,
+short of the required 4.90 s. Each replay is checked against the original report before rendering.
+
+Reproduce from the project root with `.venv/bin/python experiments/film_balance_qualification.py --work experiments/generated/qualification-film-new --output experiments/generated/qualification-film-new/all-38.mp4`.
+The script records missing trajectories from the frozen job configurations and writes a
+chaptered MP4 and timestamp index. The open training question is whether launch feedback
+can catch the edge consistently across physics timesteps before a disturbance is applied.
+
 ## November 20 — physical rolling-ball recovery and controlled return
 
 New selected policy: `configs/balance-recovery-experimental.json`. Two 32-second

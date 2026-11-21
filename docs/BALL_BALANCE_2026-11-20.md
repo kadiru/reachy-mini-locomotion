@@ -99,6 +99,17 @@ Motor/contact assumptions remain uncalibrated; no robot or shared GPU was used.
 
 ## Frozen qualification and failures
 
+[Watch all 38 qualification trials](../media/simulation/balance-qualification-all-38.mp4).
+The [chapter index](../media/simulation/balance-qualification-all-38.md) lists the start
+time, condition and measured outcome for each trial.
+
+In the two 20 g, 0.5 m/s trials, the joint stop occurs about four tenths of a second
+after ball contact. In test 13, head linkage motor `stewart_5` reaches +80.287°
+against a +80° upper limit. In test 27, `stewart_2` reaches −80.287° against a
+−80° lower limit. Test 22 shows a different joint stop under 0.1° attitude noise.
+Motor `stewart_4` reaches −80.287° during launch, before the ball release.
+These values come from joint positions in the recorded terminal states.
+
 The selected policy was frozen before 38 qualification trials, with no
 parameter retuning afterward. A strict hold requires the requested edge to
 support the body, signed tilt within 2° of target, tilt rate at most 5°/s
