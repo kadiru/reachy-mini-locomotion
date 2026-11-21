@@ -1,5 +1,13 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 21 — Continuous spins driven by the head
+
+From a stationary start, the fast MuJoCo policy completed 6.08 turns in its fastest reserved minute, with a peak center excursion of 25.9 mm. The waist held a zero target under the existing battery motor envelope. All 8 matched and 8 reserved one-minute trials passed in both directions without a fall or a joint stop. On the nominal floor, separate three-minute runs made 12.68 left and 12.26 right revolutions. Holding the head still at 12 s left only 4.00° of additional rotation on the nominal floor.
+
+The rim-loaded variant completed 2.80 left and 2.76 right turns on a reserved nominal-like floor. In the left film, 516° of rotation occurred on a loaded rim. The nominal right trial stayed upright but missed the center-travel and forward-motion requirements. The next simulation target is to lengthen continuous rim loading while reducing that right-turn drift. Physical traction, bus voltage, motor tracking and temperature during repeated head motion remain unmeasured.
+
+Replay with `.venv/bin/python experiments/train_continuous_spin.py record` or `.venv/bin/python experiments/train_continuous_spin.py record_rim`. [Fast spin](media/simulation/continuous-spin.mp4) · [Rim spin](media/simulation/continuous-rim-spin.mp4) · [Measurements and full reproduction commands](docs/CONTINUOUS_SPIN.md).
+
 ## November 21 — Four-stroke right turns on the slick floor
 
 The matched 90° right command now settles at 86.8° in 4 strokes and 18.4 s, down from eight strokes and 36.0 s on the 4.80 V, friction-0.55 model. Measured directional head swings fell from 42 to 37. The waist servo holds zero with the same motor envelope. The best recorded same-floor trial settled at 88.3°.

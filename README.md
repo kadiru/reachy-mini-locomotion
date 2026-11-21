@@ -3,6 +3,8 @@
 Learn head-driven, penguin-like locomotion from **Meta Quest 3S** demonstrations,
 then evaluate sim-to-real transfer on Reachy Mini Wireless.
 
+Reachy can also spin continuously with its waist held still. In simulation it completed 12.68 left turns or 12.26 right turns in three minutes. A more tilted policy put 516° of base rotation onto a loaded rim in one minute. [Watch the fastest spin](media/simulation/continuous-spin.mp4) · [Watch the rim spin](media/simulation/continuous-rim-spin.mp4) · [Compare the policies](docs/CONTINUOUS_SPIN.md).
+
 The slick-floor pivot policy halves the original right quarter-turn from eight strokes to four with the waist held at zero. It passed 95/95 matched simulation trials and 7/10 final held-out checks. [Watch the turn](media/simulation/slick-four-stroke-turn.mp4) or [inspect the loaded-rim measurements](docs/SLICK_QUARTER_TURN.md).
 
 The earlier edge-pivot policy makes nominal 90° turns in four rightward strokes

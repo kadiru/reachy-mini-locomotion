@@ -1,0 +1,22 @@
+{
+  "orbit": {
+    "period_frames": 12,
+    "roll_deg": 26.128598790390758,
+    "pitch_deg": 25.90541858735779,
+    "pitch_phase_deg": -91.3399762046248,
+    "xy_mm": 7.9356589374228514,
+    "xy_phase_deg": -131.9088880189998,
+    "yaw_deg": -22.408081961508415,
+    "yaw_phase_deg": 61.53544204492614,
+    "z_mm": -2.4220994730005407,
+    "pitch_bias_deg": -0.7635880911882376,
+    "yaw_harmonic": 1,
+    "vertical_mm": 10.954055913859746,
+    "vertical_phase_deg": 102.54525521901482,
+    "yaw_stroke_fraction": 0.0
+  },
+  "positive_mirror_direction": 1,
+  "command_hz": 50,
+  "waist_target_rad": 0.0,
+  "motor_config_sha256": "ac2196618707b161ba2f9e6f5181474dadad8dc7ccc72e8f36f596ab03ff8ffd"
+}

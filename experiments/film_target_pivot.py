@@ -8,7 +8,7 @@ import mujoco
 from PIL import Image, ImageDraw
 
 from film_balance_qualification import font
-from reachy_locomotion.contact_probe import scene_xml
+from reachy_locomotion.contact_probe import BASE, scene_xml
 from train_target_pivot import read
 
 
@@ -46,13 +46,19 @@ def main():
                 ET.SubElement(root.find('worldbody'),'geom',type='capsule',size='.00025',
                               fromto=f'{a} {b} .0003 {c} {d} .0003',rgba='.55 .65 .7 .8',
                               contype='0',conaffinity='0')
+        spin = run['metrics'].get('mode') == 'continuous_spin'
+        if spin:
+            # Render-only base index mark; the trajectory was integrated without it.
+            body=root.find(f".//worldbody/body[@name='{BASE}']")
+            ET.SubElement(body,'site',type='capsule',fromto='.057 0 .005 .057 0 .029',
+                          size='.003',rgba='.21 .94 .87 1',group='0')
         model = mujoco.MjModel.from_xml_string(ET.tostring(root, encoding='unicode'))
         data = mujoco.MjData(model)
         camera = mujoco.MjvCamera()
         camera.azimuth, camera.elevation, camera.distance = 195, -18, .79
         camera.lookat[:] = [0,0,.145]
         metrics = run['metrics']
-        goal = metrics['target_deg']
+        goal = metrics.get('target_deg',0.)
         start = run['trace'][0]['foot_xyz_m']
         with mujoco.Renderer(model,height=408,width=600) as renderer:
             rows = run['trace']
@@ -73,7 +79,7 @@ def main():
                     frames += [(len(rows)-1,False)]*12
             for j,slow in frames:
                 row, state = rows[j],run['trajectory'][j]
-                camera.distance = .69 if slow else .79
+                camera.distance = .64 if spin else (.69 if slow else .79)
                 data.qpos[:] = state['qpos']
                 mujoco.mj_forward(model,data)
                 renderer.update_scene(data,camera=camera)
@@ -85,9 +91,12 @@ def main():
                 label(20,8,run.get('title','Head-driven edge pivot'),32)
                 playback = 'strongest rim contact    /    0.5×' if slow else 'real-time replay'
                 label(22,49,f'Reachy Mini    /    MuJoCo simulation    /    {playback}',16,'#c3d2d9')
-                label(625,14,f"Turn {abs(goal):g}° {'left' if goal>0 else 'right'}",26)
+                if spin:
+                    label(625,14,'Spin '+('left' if metrics['direction']==1 else 'right'),26)
+                else:
+                    label(625,14,f"Turn {abs(goal):g}° {'left' if goal>0 else 'right'}",26)
                 condition_label=f"{metrics['condition']} condition   ·   fixed waist target"
-                if 'head_swings' in row:
+                if spin or 'head_swings' in row:
                     condition_label=f"{run['config']['motor_model']['voltage_v']:.2f} V   ·   friction {run['config']['friction_slide_torsion_roll'][0]:.3g}   ·   fixed waist"
                 label(625,51,condition_label,16,'#c3d2d9')
                 center = (775,228)
@@ -96,9 +105,17 @@ def main():
                 label(724,98,'Start heading',16)
                 ray(pen,center,94,goal,'#ffbd69',3)
                 ray(pen,center,74,row['torso_yaw_deg'],'#65e3de',6)
-                label(630,345,f"Target   {goal:+.0f}°",19,'#ffbd69')
-                label(630,375,f"Torso   {row['torso_yaw_deg']:+.1f}°",26,'#65e3de')
-                label(630,417,f"Base   {row['foot_yaw_deg']:+.1f}°",19)
+                if spin:
+                    prev=rows[max(0,j-25)]
+                    dt=row['time_s']-prev['time_s']
+                    rpm=(row['foot_yaw_deg']-prev['foot_yaw_deg'])/(6*dt) if dt else 0.
+                    label(630,339,f"Base turns   {abs(row['foot_yaw_deg'])/360:.2f}",26,'#65e3de')
+                    label(630,375,f"Base speed   {rpm*metrics['direction']:.1f} rpm",19)
+                    label(630,412,f"Torso   {row['torso_yaw_deg']:+.0f}°",19)
+                else:
+                    label(630,345,f"Target   {goal:+.0f}°",19,'#ffbd69')
+                    label(630,375,f"Torso   {row['torso_yaw_deg']:+.1f}°",26,'#65e3de')
+                    label(630,417,f"Base   {row['foot_yaw_deg']:+.1f}°",19)
                 xy = row['foot_xyz_m']
                 drift = 1000*math.hypot(xy[0]-start[0],xy[1]-start[1])
                 label(630,449,f'Center travel from start   {drift:.1f} mm',16)
@@ -108,8 +125,16 @@ def main():
 
                 t = row['time_s']
                 rim = ('Right rim loaded' if row['roll_deg']>0 else 'Left rim loaded') if row['edge_support'] else 'Between edge contacts'
+                if spin:
+                    if row['foreaft_edge_support'] and not row['edge_support']:
+                        back,front=row['foot_front_back_normal_forces_n_back_front']
+                        rim='Front rim loaded' if front>back else 'Back rim loaded'
+                    elif not row['edge_support']:
+                        rim='Between confirmed rim loads'
+                    label(510,501,f"Body tilt   {row['tilt_deg']:.1f}°",19)
+                else:
+                    label(510,501,f"Rim height difference   {row['side_height_difference_mm']:.1f} mm",19)
                 label(20,501,f'{t:5.2f} s     {rim}',19)
-                label(510,501,f"Rim height difference   {row['side_height_difference_mm']:.1f} mm",19)
                 stream.stdin.write(frame.tobytes())
             for _ in range(18):
                 stream.stdin.write(frame.tobytes())
