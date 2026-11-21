@@ -41,6 +41,32 @@ class SwayTests(unittest.TestCase):
         camera = state.cam_xmat[sim.model.camera("eye_camera").id].reshape(3,3)
         self.assertGreater(-camera[0,2], .9)
 
+    def test_body_yaw_rotates_head_in_foot_coordinates_and_is_bounded(self):
+        import mujoco
+        from reachy_locomotion.contact_probe import relative_head_pose
+        from reachy_locomotion.geometry import rotation, angle
+        sim = self.sim
+        yaw = np.radians(45.)
+        pose = np.eye(4)
+        pose[:3, :3] = rotation(np.radians([9., -4., 0.])) @ rotation((0., 0., yaw))
+        pose[:3, 3] = [.004, -.005, .177]
+        state = mujoco.MjData(sim.model)
+        state.qpos[:] = sim.initial_qpos
+        state.ctrl[:] = sim.initial_ctrl
+        state.ctrl[sim.act] = sim.checked_ik(pose, yaw)
+        for _ in range(2000):
+            mujoco.mj_step(sim.model, state)
+        mujoco.mj_forward(sim.model, state)
+        actual = relative_head_pose(sim.model, state)
+        self.assertLess(angle(actual, pose), np.radians(1.))
+        self.assertLess(np.linalg.norm(actual[:3, 3] - pose[:3, 3]), .001)
+        for invalid in (-161., 161.):
+            target = np.eye(4)
+            target[2, 3] = .177
+            target[:3, :3] = rotation((0., 0., np.radians(invalid)))
+            with self.assertRaises(ValueError):
+                sim.checked_ik(target, np.radians(invalid))
+
     def test_unreachable_ik_is_rejected_not_clamped(self):
         pose = np.eye(4)
         pose[2,3] = 1

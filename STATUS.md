@@ -1,5 +1,13 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 21 — Active waist turning on a single foot edge
+
+Reachy launched from flat on both sides and held a roughly 32° lean through three 12-second torso sweeps, covering about 179° in world heading. Separate 125-second trials completed ten full cycles on each side, continuously holding the edge for 121.84 seconds on the left and 121.64 seconds on the right. At ±90° commanded waist travel, the simulation confirmed the original left or right rim sector stayed continuously loaded at 8 kHz. The center of pressure moved less than 4.9 mm across the floor after the sweep began. Fixing the head after capture lost either edge in under a second.
+
+The stock waist is limited to ±160°. A three-times-faster return stroke produced less than 0.08° of additional net world rotation per settled cycle. The frozen sweep passed 1/8 reserved floor, voltage, sensing and timestep checks. The seven failures happened before the sweep started. The next priority is robust natural capture under small changes in friction and IMU uncertainty, followed by validation of the waist motor model. All results are in simulation.
+
+Replay with `.venv/bin/python experiments/train_waist_balance.py record`. [Real-time film of both edges](media/simulation/active-waist-edge-sweep.mp4) · [Active-waist measurements and reproduction commands](docs/ACTIVE_WAIST_EDGE_BALANCE.md).
+
 ## November 21 — Continuous spins driven by the head
 
 From a stationary start, the fast MuJoCo policy completed 6.08 turns in its fastest reserved minute, with a peak center excursion of 25.9 mm. The waist held a zero target under the existing battery motor envelope. All 8 matched and 8 reserved one-minute trials passed in both directions without a fall or a joint stop. On the nominal floor, separate three-minute runs made 12.68 left and 12.26 right revolutions. Holding the head still at 12 s left only 4.00° of additional rotation on the nominal floor.

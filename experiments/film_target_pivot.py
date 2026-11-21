@@ -27,6 +27,7 @@ def main():
     parser.add_argument('record', nargs='+')
     parser.add_argument('--output', required=True)
     parser.add_argument('--slow-edge',action='store_true',help='Replay the strongest continuous rim contact at half speed')
+    parser.add_argument('--first-cycle',action='store_true',help='Show launch and the first full active-waist sweep')
     args = parser.parse_args()
     style = {s:font(s, s >= 25) for s in (16, 19, 26, 32)}
     stream = subprocess.Popen(['ffmpeg','-v','error','-n','-f','rawvideo','-pix_fmt','rgb24',
@@ -47,6 +48,7 @@ def main():
                               fromto=f'{a} {b} .0003 {c} {d} .0003',rgba='.55 .65 .7 .8',
                               contype='0',conaffinity='0')
         spin = run['metrics'].get('mode') == 'continuous_spin'
+        waist_sweep = run['metrics'].get('mode') == 'waist_balance'
         if spin:
             # Render-only base index mark; the trajectory was integrated without it.
             body=root.find(f".//worldbody/body[@name='{BASE}']")
@@ -63,6 +65,11 @@ def main():
         with mujoco.Renderer(model,height=408,width=600) as renderer:
             rows = run['trace']
             frames = [(j,False) for j in range(0,len(rows),2)]
+            if args.first_cycle:
+                if not waist_sweep or metrics['start_s'] is None:
+                    raise ValueError('A full-cycle replay requires an active-waist capture')
+                stop = metrics['start_s'] + metrics['period_s']
+                frames = [(j,slow) for j,slow in frames if rows[j]['time_s'] <= stop]
             if args.slow_edge:
                 best_gain, best_window, first = 0., None, 0
                 for j in range(1,len(rows)):
@@ -79,7 +86,7 @@ def main():
                     frames += [(len(rows)-1,False)]*12
             for j,slow in frames:
                 row, state = rows[j],run['trajectory'][j]
-                camera.distance = .64 if spin else (.69 if slow else .79)
+                camera.distance = .64 if spin or waist_sweep else (.69 if slow else .79)
                 data.qpos[:] = state['qpos']
                 mujoco.mj_forward(model,data)
                 renderer.update_scene(data,camera=camera)
@@ -90,12 +97,29 @@ def main():
                     pen.text((x,y),s,font=style[size],fill=color)
                 label(20,8,run.get('title','Head-driven edge pivot'),32)
                 playback = 'strongest rim contact    /    0.5×' if slow else 'real-time replay'
+                if args.first_cycle:
+                    playback = 'first sweep cycle   /   real time'
                 label(22,49,f'Reachy Mini    /    MuJoCo simulation    /    {playback}',16,'#c3d2d9')
-                if spin:
+                if waist_sweep:
+                    # Foot-fixed inset. The dot comes from the measured center of pressure.
+                    pen.rounded_rectangle((15,90,147,209),radius=8,fill='#13232d')
+                    label(29,96,'Foot contact',16)
+                    cx,cy,radius=81,161,33
+                    box=(cx-radius,cy-radius,cx+radius,cy+radius)
+                    pen.ellipse(box,outline='#829ba6',width=2)
+                    arc=180 if metrics['side']<0 else 0
+                    pen.arc(box,arc-15,arc+15,fill='#ffbd69',width=5)
+                    point=row['contact_foot_xy_m']
+                    if point is not None:
+                        scale=radius/run['config']['foot_radius_m']
+                        x,y=cx-point[1]*scale,cy-point[0]*scale
+                        pen.ellipse((x-4,y-4,x+4,y+4),fill='#65e3de')
+                    label(625,14,('Left' if metrics['side'] < 0 else 'Right') + ' foot edge',26)
+                elif spin:
                     label(625,14,'Spin '+('left' if metrics['direction']==1 else 'right'),26)
                 else:
                     label(625,14,f"Turn {abs(goal):g}° {'left' if goal>0 else 'right'}",26)
-                condition_label=f"{metrics['condition']} condition   ·   fixed waist target"
+                condition_label="Active waist   ·   head balance feedback" if waist_sweep else f"{metrics['condition']} condition   ·   fixed waist target"
                 if spin or 'head_swings' in row:
                     condition_label=f"{run['config']['motor_model']['voltage_v']:.2f} V   ·   friction {run['config']['friction_slide_torsion_roll'][0]:.3g}   ·   fixed waist"
                 label(625,51,condition_label,16,'#c3d2d9')
@@ -105,7 +129,11 @@ def main():
                 label(724,98,'Start heading',16)
                 ray(pen,center,94,goal,'#ffbd69',3)
                 ray(pen,center,74,row['torso_yaw_deg'],'#65e3de',6)
-                if spin:
+                if waist_sweep:
+                    label(630,345,f"Waist encoder   {row['waist_angle_change_deg']:+.1f}°",26,'#65e3de')
+                    label(630,388,f"Torso heading   {row['torso_yaw_deg']:+.1f}°",19)
+                    label(630,417,f"Foot heading   {row['foot_yaw_deg']:+.1f}°",19)
+                elif spin:
                     prev=rows[max(0,j-25)]
                     dt=row['time_s']-prev['time_s']
                     rpm=(row['foot_yaw_deg']-prev['foot_yaw_deg'])/(6*dt) if dt else 0.
@@ -125,7 +153,7 @@ def main():
 
                 t = row['time_s']
                 rim = ('Right rim loaded' if row['roll_deg']>0 else 'Left rim loaded') if row['edge_support'] else 'Between edge contacts'
-                if spin:
+                if spin or waist_sweep:
                     if row['foreaft_edge_support'] and not row['edge_support']:
                         back,front=row['foot_front_back_normal_forces_n_back_front']
                         rim='Front rim loaded' if front>back else 'Back rim loaded'

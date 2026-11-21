@@ -1,0 +1,9 @@
+{
+  "base_policy": "configs/edge-balance-experimental.json",
+  "motors": "configs/motors-speed-trained.json",
+  "amplitude": 90,
+  "period": 12,
+  "gain_change": 0.25,
+  "com_offset_mm": 0.0,
+  "integration_step_s": 0.000125
+}

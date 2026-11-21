@@ -129,7 +129,7 @@ class PrimitiveSimulator(SwaySimulator):
     def run_primitive(self,recipe,seconds=3.6,waist_mode='off',record=False,
                       controller=None,tilt_limit_deg=80,finish_settle_s=None,diagnostic_initial_roll_deg=None,
                       diagnostic_initial_pitch_deg=None,diagnostic_initial_angular_rate_deg_s=0.,collision_window=None,
-                      observe_landing=False):
+                      observe_landing=False, step_audit=None):
         if collision_window is not None:
             start_s, end_s = collision_window
             if not record or not 0 <= start_s < end_s <= seconds or end_s-start_s > 2:
@@ -137,7 +137,9 @@ class PrimitiveSimulator(SwaySimulator):
         collision_frames = []
         capture_stride = max(1,round(.002/self.dt))
         if not isinstance(recipe,Primitive):recipe=Primitive(**recipe)
-        if waist_mode not in ('off','hold_neutral'):raise ValueError('Unknown waist mode')
+        if waist_mode == 'position' and not (hasattr(controller, 'waist_target_rad') and hasattr(controller, 'observe_waist')):
+            raise ValueError('Active waist mode requires a position controller')
+        if waist_mode not in ('off','hold_neutral','position'):raise ValueError('Unknown waist mode')
         if not 1<=seconds<=600 or self.servos is None:raise ValueError('Require bounded datasheet simulation')
         if tilt_limit_deg not in (None,35,80):raise ValueError('Use a supported tilt limit or contact-only termination')
         if finish_settle_s is not None and not .6<=finish_settle_s<=2:
@@ -199,6 +201,7 @@ class PrimitiveSimulator(SwaySimulator):
         finished_at=None;duration_budget=seconds;early_finish=False
         average_gyro=getattr(controller,'gyro_interval_average',False)
         gyro_sum=np.zeros(3);gyro_count=0;gyro_velocity=np.zeros(6);gyro_stride=max(1,round(.001/self.dt))
+        waist_commands = [float(self.initial_targets[waist])]
         for frame in range(total_frames+1):
             t=frame*.02
             if balls is not None:balls.release(d,t)
@@ -214,6 +217,8 @@ class PrimitiveSimulator(SwaySimulator):
                 controller.observe_head(t,math.degrees(euler(relative_head_pose(m,d))[2]))
             if hasattr(controller,'observe_attitude'):
                 controller.observe_attitude(t,math.degrees(rpy[1]))
+            if waist_mode == 'position':
+                controller.observe_waist(float(d.qpos[waist_qadr]))
             if hasattr(controller,'observe_head_state'):
                 controller.observe_head_state(t,relative_head_pose(m,d))
             roll_rate=(roll-last_roll)/.02 if frame else 0.;last_roll=roll
@@ -254,6 +259,10 @@ class PrimitiveSimulator(SwaySimulator):
                      base_angular_speed_rad_s=float(np.linalg.norm(base_velocity[:3])),base_speed_m_s=float(np.linalg.norm(base_velocity[3:])),
                      com_world_m=d.subtree_com[self.base].tolist(),contact_world_m=contact.tolist() if contact is not None else None,
                      foot_xyz_m=d.xpos[self.base].tolist())
+            if waist_mode == 'position':
+                local_contact = R.T @ (contact - d.xpos[self.base]) if contact is not None else None
+                row['contact_foot_xy_m'] = local_contact[:2].tolist() if local_contact is not None else None
+                row['waist_target_deg'] = math.degrees(controller.waist_target_rad)
             pose,stage,sensed=controller.target(t,roll);row.update(stage=stage,sensed_roll_deg=sensed);trace.append(row)
             if hasattr(controller,'diagnostics'):row.update(controller.diagnostics())
             if finish_settle_s is not None and getattr(controller,'finished',False):
@@ -276,9 +285,17 @@ class PrimitiveSimulator(SwaySimulator):
                         head_y_mm=float(1000 * relative_head_pose(m, d)[1, 3]),
                         head_spin_z_kg_m2_s=float(d.subtree_angmom[head_body, 2]))
             if frame==total_frames or early_finish:break
-            try:target=self.checked_ik(pose)
+            try:
+                if waist_mode == 'position':
+                    target = self.checked_ik(pose, controller.waist_target_rad)
+                    waist_commands.append(float(target[0]))
+                    row['waist_target_deg'] = math.degrees(target[0])
+                else:
+                    target = self.checked_ik(pose)
             except ValueError as error:reason='invalid_head_target: '+str(error);break
-            targets=self.initial_targets.copy();targets[self.act]=target;targets[waist]=self.initial_targets[waist]
+            targets=self.initial_targets.copy();targets[self.act]=target
+            if waist_mode != 'position':
+                targets[waist] = self.initial_targets[waist]
             self.servos.command(targets)
             dense = collision_window is not None and t < end_s and t+.02 > start_s+1e-9
             if dense and t >= start_s-1e-9 and not collision_frames:
@@ -287,6 +304,8 @@ class PrimitiveSimulator(SwaySimulator):
                 self.servos.apply(d)
                 if waist_mode=='off':d.ctrl[waist]=0.
                 mujoco.mj_step(m,d);mujoco.mj_forward(m,d)
+                if step_audit is not None:
+                    step_audit(self, d)
                 if (dense and start_s-1e-9 <= d.time <= end_s+1e-9
                         and (not collision_frames or (substep+1)%capture_stride==0)):
                     collision_frames.append(dict(time_s=float(d.time),qpos=d.qpos.tolist(),
@@ -345,7 +364,7 @@ class PrimitiveSimulator(SwaySimulator):
                     diagnostic_initial_angular_rate_deg_s=diagnostic_initial_angular_rate_deg_s,
                     natural_upright_start=reset_angle is None,
                     waist_peak_torque_nm=float(peak_torque[waist]),waist_absolute_motor_work_j=waist_work,
-                    commanded_waist_position_range_rad=[float(self.initial_targets[waist])]*2,
+                    commanded_waist_position_range_rad=[min(waist_commands), max(waist_commands)],
                     measured_waist_angle_range_deg=[min(x['waist_angle_change_deg'] for x in trace),max(x['waist_angle_change_deg'] for x in trace)],
                     peak_motor_torque_nm=peak_torque.tolist(),head_braking_work_j=head_braking,min_joint_margin_rad=joint_margin,
                     max_closure_error_m=max_closure,peak_roll_deg=peak_roll,peak_tilt_deg=peak_tilt,first_35deg_time_s=first35,first_40deg_time_s=first40,

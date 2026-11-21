@@ -1,0 +1,3877 @@
+{
+  "simulation_only": true,
+  "policy": {
+    "base_policy": "configs/edge-balance-experimental.json",
+    "motors": "configs/motors-speed-trained.json",
+    "amplitude": 90,
+    "period": 12,
+    "gain_change": 0.25,
+    "com_offset_mm": 0.0,
+    "integration_step_s": 0.000125
+  },
+  "conditions": {
+    "nominal": [
+      0.7,
+      5.0,
+      1.0,
+      0.0,
+      0.000125
+    ],
+    "floor": [
+      0.67,
+      5.0,
+      1.0,
+      0.0,
+      0.000125
+    ],
+    "battery": [
+      0.7,
+      4.95,
+      0.99,
+      0.0,
+      0.000125
+    ],
+    "sensing": [
+      0.7,
+      5.0,
+      1.0,
+      0.03,
+      0.000125
+    ],
+    "timestep": [
+      0.7,
+      5.0,
+      1.0,
+      0.0,
+      0.0001
+    ]
+  },
+  "screen": [
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 0,
+        "period": 8,
+        "seconds": 13,
+        "direction": 1
+      },
+      "start_s": 3.16,
+      "same_edge_s": 9.84,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        0.65512
+      ],
+      "full_cycles": 1,
+      "waist_range_deg": [
+        -0.07985135909049444,
+        0.13748575453939219
+      ],
+      "foot_yaw_range_deg": [
+        -0.7030232120770721,
+        -0.1820570313397918
+      ],
+      "torso_yaw_range_deg": [
+        -0.9657610248094435,
+        0.16726839787199774
+      ],
+      "roll_range_deg": [
+        -32.37573539915823,
+        -31.13703427776186
+      ],
+      "rim_azimuth_error_deg": 1.3518351128687822,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.05060847253004597,
+      "actual_joint_margin_rad": 0.04787054943093372,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 13.000000000016566,
+      "passed": true
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 12,
+        "period": 8,
+        "seconds": 13,
+        "direction": 1
+      },
+      "start_s": 3.16,
+      "same_edge_s": 9.84,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        -2.74258
+      ],
+      "full_cycles": 1,
+      "waist_range_deg": [
+        -11.821356839830747,
+        11.727728611054737
+      ],
+      "foot_yaw_range_deg": [
+        -1.8549749842996264,
+        0.8701190264638272
+      ],
+      "torso_yaw_range_deg": [
+        -14.237474542040298,
+        13.436235688050235
+      ],
+      "roll_range_deg": [
+        -32.51158298373897,
+        -31.13700813258852
+      ],
+      "rim_azimuth_error_deg": 1.3518351128687822,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.05060847253004597,
+      "actual_joint_margin_rad": 0.04787054943093372,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -0.20943951023931956,
+        0.20943951023931956
+      ],
+      "elapsed_s": 13.000000000016566,
+      "passed": true
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 35,
+        "period": 8,
+        "seconds": 13,
+        "direction": 1
+      },
+      "start_s": 3.16,
+      "same_edge_s": 9.84,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        -8.23931
+      ],
+      "full_cycles": 1,
+      "waist_range_deg": [
+        -34.62441198021236,
+        34.559342780979726
+      ],
+      "foot_yaw_range_deg": [
+        -4.823750591946695,
+        3.1632417085792874
+      ],
+      "torso_yaw_range_deg": [
+        -40.056085015053355,
+        38.21618563122649
+      ],
+      "roll_range_deg": [
+        -33.484917470238734,
+        -30.810753391859553
+      ],
+      "rim_azimuth_error_deg": 2.539146257883452,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.05060847253004597,
+      "actual_joint_margin_rad": 0.04787054943093372,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -0.6108652381980153,
+        0.6108652381980153
+      ],
+      "elapsed_s": 13.000000000016566,
+      "passed": true
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 70,
+        "period": 12,
+        "seconds": 17,
+        "direction": 1
+      },
+      "start_s": 3.16,
+      "same_edge_s": 13.84,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        -11.45161
+      ],
+      "full_cycles": 1,
+      "waist_range_deg": [
+        -69.68115905408709,
+        69.56631406500631
+      ],
+      "foot_yaw_range_deg": [
+        -6.689341933326831,
+        4.400423064550527
+      ],
+      "torso_yaw_range_deg": [
+        -72.77502297632995,
+        71.54344448226038
+      ],
+      "roll_range_deg": [
+        -33.98489857554245,
+        -30.295901119915467
+      ],
+      "rim_azimuth_error_deg": 5.026821733331742,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.05060847253004597,
+      "actual_joint_margin_rad": 0.04787054943093372,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -1.2217304763960306,
+        1.2217304763960306
+      ],
+      "elapsed_s": 17.000000000035666,
+      "passed": true
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 120,
+        "period": 16,
+        "seconds": 21,
+        "direction": 1
+      },
+      "start_s": 3.16,
+      "same_edge_s": 4.52,
+      "stable_fraction": 0.9559471365638766,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.0811662069406572,
+        119.69819965846682
+      ],
+      "foot_yaw_range_deg": [
+        -8.637821343463756,
+        1.6011781182273024
+      ],
+      "torso_yaw_range_deg": [
+        -0.9657610248094435,
+        117.73736969444201
+      ],
+      "roll_range_deg": [
+        -67.33800512481314,
+        -27.193451828826586
+      ],
+      "rim_azimuth_error_deg": 8.72725680201695,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.05503185893906159,
+      "actual_joint_margin_rad": 0.0013649357200953283,
+      "termination": "nonfoot_floor_contact",
+      "fell": true,
+      "command_rad": [
+        0.0,
+        2.0943951023931953
+      ],
+      "elapsed_s": 7.690749999993414,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 155,
+        "period": 16,
+        "seconds": 21,
+        "direction": 1
+      },
+      "start_s": 3.16,
+      "same_edge_s": 2.66,
+      "stable_fraction": 0.9253731343283582,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.08411004403591928,
+        128.69232117646905
+      ],
+      "foot_yaw_range_deg": [
+        -10.927460100177894,
+        -0.3797989316507917
+      ],
+      "torso_yaw_range_deg": [
+        -0.9657610248094435,
+        112.15236406080186
+      ],
+      "roll_range_deg": [
+        -65.70179022613635,
+        -27.878968698985354
+      ],
+      "rim_azimuth_error_deg": 5.568251277315807,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.07198329901883592,
+      "actual_joint_margin_rad": 0.007646677334154139,
+      "termination": "nonfoot_floor_contact",
+      "fell": true,
+      "command_rad": [
+        0.0,
+        2.339274976615352
+      ],
+      "elapsed_s": 5.832249999997745,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 0,
+        "period": 8,
+        "seconds": 13,
+        "direction": 1
+      },
+      "start_s": 3.36,
+      "same_edge_s": 9.64,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        0.35586
+      ],
+      "full_cycles": 1,
+      "waist_range_deg": [
+        0.021797372663483302,
+        0.08085657027924337
+      ],
+      "foot_yaw_range_deg": [
+        0.5168458714978966,
+        0.6905917688281081
+      ],
+      "torso_yaw_range_deg": [
+        0.051396787261169544,
+        0.5870140000571366
+      ],
+      "roll_range_deg": [
+        30.845534628656686,
+        31.227477363994634
+      ],
+      "rim_azimuth_error_deg": 1.7958412086705715,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.048795554107447625,
+      "actual_joint_margin_rad": 0.05477841562084529,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 13.000000000016566,
+      "passed": true
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 12,
+        "period": 8,
+        "seconds": 13,
+        "direction": 1
+      },
+      "start_s": 3.36,
+      "same_edge_s": 9.64,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        -2.98359
+      ],
+      "full_cycles": 1,
+      "waist_range_deg": [
+        -11.72386390626655,
+        11.824841012034781
+      ],
+      "foot_yaw_range_deg": [
+        -0.8565589234037239,
+        1.8242893541058862
+      ],
+      "torso_yaw_range_deg": [
+        -12.977680164756086,
+        14.087489343021838
+      ],
+      "roll_range_deg": [
+        30.759973650646028,
+        31.376192466017976
+      ],
+      "rim_azimuth_error_deg": 1.7958427865721152,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.048795554107447625,
+      "actual_joint_margin_rad": 0.05477841562084529,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -0.20943951023931956,
+        0.20943951023931956
+      ],
+      "elapsed_s": 13.000000000016566,
+      "passed": true
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 35,
+        "period": 8,
+        "seconds": 13,
+        "direction": 1
+      },
+      "start_s": 3.36,
+      "same_edge_s": 9.64,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        -8.22445
+      ],
+      "full_cycles": 1,
+      "waist_range_deg": [
+        -34.54792574998177,
+        34.65770367586997
+      ],
+      "foot_yaw_range_deg": [
+        -3.7481747808972172,
+        4.117125183531037
+      ],
+      "torso_yaw_range_deg": [
+        -37.65596292287279,
+        39.43695054012792
+      ],
+      "roll_range_deg": [
+        30.347293086537732,
+        32.12895752408119
+      ],
+      "rim_azimuth_error_deg": 2.3922194012354026,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.048795554107447625,
+      "actual_joint_margin_rad": 0.05477841562084529,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -0.6108652381980153,
+        0.6108652381980153
+      ],
+      "elapsed_s": 13.000000000016566,
+      "passed": true
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 70,
+        "period": 12,
+        "seconds": 17,
+        "direction": 1
+      },
+      "start_s": 3.36,
+      "same_edge_s": 13.64,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        -11.02937
+      ],
+      "full_cycles": 1,
+      "waist_range_deg": [
+        -69.56605681142433,
+        69.64975207433156
+      ],
+      "foot_yaw_range_deg": [
+        -5.595821426074125,
+        5.31281719214313
+      ],
+      "torso_yaw_range_deg": [
+        -71.15235566548863,
+        73.14882201100856
+      ],
+      "roll_range_deg": [
+        30.121045745826656,
+        33.34041401855452
+      ],
+      "rim_azimuth_error_deg": 2.9686756980387963,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.048795554107447625,
+      "actual_joint_margin_rad": 0.05477841562084529,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -1.2217304763960306,
+        1.2217304763960306
+      ],
+      "elapsed_s": 17.000000000035666,
+      "passed": true
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 120,
+        "period": 16,
+        "seconds": 21,
+        "direction": 1
+      },
+      "start_s": 3.36,
+      "same_edge_s": 12.280000000000001,
+      "stable_fraction": 0.983739837398374,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        -119.84511029674262,
+        119.69647320216139
+      ],
+      "foot_yaw_range_deg": [
+        -7.577323011152309,
+        6.734089863022317
+      ],
+      "torso_yaw_range_deg": [
+        -115.50747723753926,
+        116.15208305754119
+      ],
+      "roll_range_deg": [
+        27.939304251295706,
+        66.85394218215303
+      ],
+      "rim_azimuth_error_deg": 5.117515299570066,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.052464536073454485,
+      "actual_joint_margin_rad": 0.013709374032787824,
+      "termination": "nonfoot_floor_contact",
+      "fell": true,
+      "command_rad": [
+        -2.0943951023931953,
+        2.0943951023931953
+      ],
+      "elapsed_s": 15.648750000029214,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 155,
+        "period": 16,
+        "seconds": 21,
+        "direction": 1
+      },
+      "start_s": 3.36,
+      "same_edge_s": 12.020000000000001,
+      "stable_fraction": 0.9833887043189369,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        -153.73588558094247,
+        154.65795431294382
+      ],
+      "foot_yaw_range_deg": [
+        -10.027332374972458,
+        8.59063352792448
+      ],
+      "torso_yaw_range_deg": [
+        -150.57664763223252,
+        152.25476897648065
+      ],
+      "roll_range_deg": [
+        26.592521925320586,
+        68.41103332876372
+      ],
+      "rim_azimuth_error_deg": 11.37103635692849,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.06739776697437154,
+      "actual_joint_margin_rad": -0.002286122103171806,
+      "termination": "nonfoot_floor_contact",
+      "fell": true,
+      "command_rad": [
+        -2.705260340591211,
+        2.705260340591211
+      ],
+      "elapsed_s": 15.388875000027973,
+      "passed": false
+    }
+  ],
+  "fit": [
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 80,
+        "period": 12,
+        "seconds": 17,
+        "direction": 1,
+        "gain_change": 0
+      },
+      "start_s": 3.16,
+      "same_edge_s": 13.84,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        -13.11743
+      ],
+      "full_cycles": 1,
+      "waist_range_deg": [
+        -79.68388722350635,
+        79.54242935601427
+      ],
+      "foot_yaw_range_deg": [
+        -7.574663045658138,
+        5.083993773275412
+      ],
+      "torso_yaw_range_deg": [
+        -81.28963591029702,
+        80.24239125749524
+      ],
+      "roll_range_deg": [
+        -34.02100754085372,
+        -30.20549023539996
+      ],
+      "rim_azimuth_error_deg": 5.560549118272132,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.05060847253004597,
+      "actual_joint_margin_rad": 0.04787054943093372,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -1.3962634015954636,
+        1.3962634015954636
+      ],
+      "elapsed_s": 17.000000000035666,
+      "passed": true
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 80,
+        "period": 12,
+        "seconds": 17,
+        "direction": 1,
+        "gain_change": 0
+      },
+      "start_s": 3.36,
+      "same_edge_s": 13.64,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        -12.5975
+      ],
+      "full_cycles": 1,
+      "waist_range_deg": [
+        -79.540423716877,
+        79.61970469490754
+      ],
+      "foot_yaw_range_deg": [
+        -6.488602382474038,
+        5.980064244570847
+      ],
+      "torso_yaw_range_deg": [
+        -79.91269215925462,
+        81.63790393453853
+      ],
+      "roll_range_deg": [
+        29.960554122807384,
+        33.605331973634975
+      ],
+      "rim_azimuth_error_deg": 3.256409310700344,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.048795554107447625,
+      "actual_joint_margin_rad": 0.05477841562084529,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -1.3962634015954636,
+        1.3962634015954636
+      ],
+      "elapsed_s": 17.000000000035666,
+      "passed": true
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 95,
+        "period": 12,
+        "seconds": 17,
+        "direction": 1,
+        "gain_change": 0
+      },
+      "start_s": 3.16,
+      "same_edge_s": 13.84,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        -15.36611
+      ],
+      "full_cycles": 1,
+      "waist_range_deg": [
+        -94.67613509950161,
+        94.50818581023749
+      ],
+      "foot_yaw_range_deg": [
+        -8.89102799288856,
+        6.098493272002255
+      ],
+      "torso_yaw_range_deg": [
+        -93.96543256616368,
+        93.13884504663004
+      ],
+      "roll_range_deg": [
+        -34.03954716015303,
+        -30.06212763588054
+      ],
+      "rim_azimuth_error_deg": 6.254461142754934,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.05060847253004597,
+      "actual_joint_margin_rad": 0.04787054943093372,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -1.6580627893946132,
+        1.6580627893946132
+      ],
+      "elapsed_s": 17.000000000035666,
+      "passed": true
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 95,
+        "period": 12,
+        "seconds": 17,
+        "direction": 1,
+        "gain_change": 0
+      },
+      "start_s": 3.36,
+      "same_edge_s": 11.48,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        -94.51315188412843,
+        94.56980328967508
+      ],
+      "foot_yaw_range_deg": [
+        -7.836665553979412,
+        6.989362706315746
+      ],
+      "torso_yaw_range_deg": [
+        -92.79978550456593,
+        94.1785788310438
+      ],
+      "roll_range_deg": [
+        26.721277636449653,
+        35.93745302612621
+      ],
+      "rim_azimuth_error_deg": 4.183582073423284,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.05221937817561133,
+      "actual_joint_margin_rad": -0.005007711906189982,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        -1.6580627893946132,
+        1.6580627893946132
+      ],
+      "elapsed_s": 14.856625000025431,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 110,
+        "period": 14,
+        "seconds": 19,
+        "direction": 1,
+        "gain_change": 0
+      },
+      "start_s": 3.16,
+      "same_edge_s": 3.8200000000000003,
+      "stable_fraction": 0.9635416666666666,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.08196649648512379,
+        110.12428887145511
+      ],
+      "foot_yaw_range_deg": [
+        -8.943848041485861,
+        1.9656134834790802
+      ],
+      "torso_yaw_range_deg": [
+        -0.9657610248094435,
+        108.78512997067425
+      ],
+      "roll_range_deg": [
+        -52.911339143050334,
+        -28.502129230352043
+      ],
+      "rim_azimuth_error_deg": 5.339881720047211,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.05060847253004597,
+      "actual_joint_margin_rad": -0.0050008588392511655,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        1.9198621771937625
+      ],
+      "elapsed_s": 6.9858749999950565,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 110,
+        "period": 14,
+        "seconds": 19,
+        "direction": 1,
+        "gain_change": 0
+      },
+      "start_s": 3.36,
+      "same_edge_s": 12.280000000000001,
+      "stable_fraction": 0.9821138211382113,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        -109.53341353652078,
+        109.60841612419256
+      ],
+      "foot_yaw_range_deg": [
+        -7.893070476243912,
+        7.00929153756765
+      ],
+      "torso_yaw_range_deg": [
+        -106.0023913072304,
+        107.14845490921583
+      ],
+      "roll_range_deg": [
+        28.56844226891987,
+        70.05608812098512
+      ],
+      "rim_azimuth_error_deg": 4.904434982043033,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.06321963578289233,
+      "actual_joint_margin_rad": 0.05477841562084529,
+      "termination": "nonfoot_floor_contact",
+      "fell": true,
+      "command_rad": [
+        -1.9198621771937625,
+        1.9198621771937625
+      ],
+      "elapsed_s": 15.647750000029209,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 145,
+        "period": 20,
+        "seconds": 25,
+        "direction": 1,
+        "gain_change": -0.35
+      },
+      "start_s": 3.16,
+      "same_edge_s": 9.74,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.08056457972711814,
+        144.62441202658044
+      ],
+      "foot_yaw_range_deg": [
+        -8.449281426927856,
+        7.211689946319997
+      ],
+      "torso_yaw_range_deg": [
+        -0.9657610248094435,
+        139.70685551189143
+      ],
+      "roll_range_deg": [
+        -34.236511150805654,
+        -27.505443206731176
+      ],
+      "rim_azimuth_error_deg": 8.777935456244114,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.0823259800615077,
+      "actual_joint_margin_rad": -0.005044583292725502,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        2.530727415391778
+      ],
+      "elapsed_s": 12.91287500001615,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 145,
+        "period": 20,
+        "seconds": 25,
+        "direction": 1,
+        "gain_change": -0.35
+      },
+      "start_s": 3.36,
+      "same_edge_s": 16.400000000000002,
+      "stable_fraction": 0.9890377588306942,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        -145.2449869134647,
+        144.7065901936298
+      ],
+      "foot_yaw_range_deg": [
+        -7.387217547395125,
+        6.718113926396023
+      ],
+      "torso_yaw_range_deg": [
+        -138.3188080652801,
+        142.0154444893254
+      ],
+      "roll_range_deg": [
+        26.96423248526237,
+        68.40128940984887
+      ],
+      "rim_azimuth_error_deg": 12.540791634730157,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.06278412247614133,
+      "actual_joint_margin_rad": -0.004850119417760812,
+      "termination": "nonfoot_floor_contact",
+      "fell": true,
+      "command_rad": [
+        -2.530727415391778,
+        2.530727415391778
+      ],
+      "elapsed_s": 19.76325000004886,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 155,
+        "period": 18,
+        "seconds": 23,
+        "direction": 1,
+        "gain_change": -0.55
+      },
+      "start_s": 3.16,
+      "same_edge_s": 3.24,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.08285039580876505,
+        136.01571821530933
+      ],
+      "foot_yaw_range_deg": [
+        -9.85137613707213,
+        -0.3748157836536196
+      ],
+      "torso_yaw_range_deg": [
+        -0.9657610248094435,
+        125.24141009935613
+      ],
+      "roll_range_deg": [
+        -37.273379081776916,
+        -28.14117206452844
+      ],
+      "rim_azimuth_error_deg": 3.279839398625872,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.05665579675620257,
+      "actual_joint_margin_rad": -0.005005072472636929,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        2.4477927401303656
+      ],
+      "elapsed_s": 6.408624999996402,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 155,
+        "period": 18,
+        "seconds": 23,
+        "direction": 1,
+        "gain_change": -0.55
+      },
+      "start_s": 3.36,
+      "same_edge_s": 4.540000000000001,
+      "stable_fraction": 0.9605263157894737,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.021797372663483302,
+        154.8895203762289
+      ],
+      "foot_yaw_range_deg": [
+        -8.865500512445934,
+        1.47930813566592
+      ],
+      "torso_yaw_range_deg": [
+        0.05139678724389277,
+        147.7797481163993
+      ],
+      "roll_range_deg": [
+        27.64185240474082,
+        64.65303470146428
+      ],
+      "rim_azimuth_error_deg": 13.2686174362082,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.048795554107447625,
+      "actual_joint_margin_rad": -0.0020574577487568746,
+      "termination": "nonfoot_floor_contact",
+      "fell": true,
+      "command_rad": [
+        0.0,
+        2.705260340591211
+      ],
+      "elapsed_s": 7.918624999992883,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 155,
+        "period": 20,
+        "seconds": 25,
+        "direction": 1,
+        "gain_change": -0.35
+      },
+      "start_s": 3.16,
+      "same_edge_s": 4.38,
+      "stable_fraction": 0.8129770992366412,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.08177101669445602,
+        150.0963903916169
+      ],
+      "foot_yaw_range_deg": [
+        -8.98763085979644,
+        -0.36984911085272804
+      ],
+      "torso_yaw_range_deg": [
+        -0.9657610248094435,
+        146.24667813014278
+      ],
+      "roll_range_deg": [
+        -35.426969665943986,
+        -7.688283476646853
+      ],
+      "rim_azimuth_error_deg": 13.797662965832584,
+      "sampled_same_edge_through_end": false,
+      "first_loss_s": 7.5600000000000005,
+      "peak_waist_torque_nm": 0.07512625654900014,
+      "actual_joint_margin_rad": 0.010632161780295801,
+      "termination": "nonfoot_floor_contact",
+      "fell": true,
+      "command_rad": [
+        0.0,
+        2.705260340591211
+      ],
+      "elapsed_s": 8.385874999994535,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 155,
+        "period": 20,
+        "seconds": 25,
+        "direction": 1,
+        "gain_change": -0.35
+      },
+      "start_s": 3.36,
+      "same_edge_s": 19.880000000000003,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        -154.5899485516243,
+        154.64531098910075
+      ],
+      "foot_yaw_range_deg": [
+        -8.517447859211948,
+        7.1767859336013915
+      ],
+      "torso_yaw_range_deg": [
+        -149.25441937851747,
+        153.129429186848
+      ],
+      "roll_range_deg": [
+        26.641193393031845,
+        34.81975033873234
+      ],
+      "rim_azimuth_error_deg": 9.0313886103485,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.07868771074105012,
+      "actual_joint_margin_rad": -0.005039321755156756,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        -2.705260340591211,
+        2.705260340591211
+      ],
+      "elapsed_s": 23.241500000065468,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 155,
+        "period": 22,
+        "seconds": 27,
+        "direction": 1,
+        "gain_change": 0.25
+      },
+      "start_s": 3.16,
+      "same_edge_s": 3.74,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.08007148843892475,
+        132.05107227757358
+      ],
+      "foot_yaw_range_deg": [
+        -8.256697856942866,
+        0.2066915918965769
+      ],
+      "torso_yaw_range_deg": [
+        -0.9657610248094435,
+        126.4853347557408
+      ],
+      "roll_range_deg": [
+        -33.43567785567767,
+        -27.99300806470995
+      ],
+      "rim_azimuth_error_deg": 7.205734609128561,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.06738815453602079,
+      "actual_joint_margin_rad": -0.005010716429757034,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        2.370637707717816
+      ],
+      "elapsed_s": 6.911124999995231,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 155,
+        "period": 22,
+        "seconds": 27,
+        "direction": 1,
+        "gain_change": 0.25
+      },
+      "start_s": 3.36,
+      "same_edge_s": 15.240000000000002,
+      "stable_fraction": 0.9882198952879581,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        -141.77181796029762,
+        154.74622028762508
+      ],
+      "foot_yaw_range_deg": [
+        -7.186589678859559,
+        6.406320143972298
+      ],
+      "torso_yaw_range_deg": [
+        -128.6195289561139,
+        152.29377880216984
+      ],
+      "roll_range_deg": [
+        27.323061924266216,
+        61.38160256429943
+      ],
+      "rim_azimuth_error_deg": 5.06957210863969,
+      "sampled_same_edge_through_end": false,
+      "first_loss_s": 18.62,
+      "peak_waist_torque_nm": 0.06461181410573001,
+      "actual_joint_margin_rad": -0.004232539160325954,
+      "termination": "nonfoot_floor_contact",
+      "fell": true,
+      "command_rad": [
+        -2.537382623198384,
+        2.705260340591211
+      ],
+      "elapsed_s": 18.629375000043446,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 130,
+        "period": 16,
+        "seconds": 21,
+        "direction": 1,
+        "gain_change": -0.35
+      },
+      "start_s": 3.16,
+      "same_edge_s": 3.54,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.08228093394259166,
+        126.22330438349792
+      ],
+      "foot_yaw_range_deg": [
+        -9.295204620432786,
+        0.7942879811003404
+      ],
+      "torso_yaw_range_deg": [
+        -0.9657610248094435,
+        120.2385781127567
+      ],
+      "roll_range_deg": [
+        -37.54940956454671,
+        -27.849360854816467
+      ],
+      "rim_azimuth_error_deg": 7.208583063850315,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.06464043387765198,
+      "actual_joint_margin_rad": -0.005000028089614528,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        2.232009457768871
+      ],
+      "elapsed_s": 6.709249999995701,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 130,
+        "period": 16,
+        "seconds": 21,
+        "direction": 1,
+        "gain_change": -0.35
+      },
+      "start_s": 3.36,
+      "same_edge_s": 17.34,
+      "stable_fraction": 0.9793103448275862,
+      "cycle_torso_net_deg": [
+        -15.34723
+      ],
+      "full_cycles": 1,
+      "waist_range_deg": [
+        -129.58232075433298,
+        129.71536619050434
+      ],
+      "foot_yaw_range_deg": [
+        -13.246535390694914,
+        7.382404910333285
+      ],
+      "torso_yaw_range_deg": [
+        -124.14114767118673,
+        125.59094909846938
+      ],
+      "roll_range_deg": [
+        6.924915257029629,
+        38.663721811831614
+      ],
+      "rim_azimuth_error_deg": 8.60875839751826,
+      "sampled_same_edge_through_end": false,
+      "first_loss_s": 20.72,
+      "peak_waist_torque_nm": 0.094403573155423,
+      "actual_joint_margin_rad": -0.005161887395183751,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        -2.2689280275926285,
+        2.2689280275926285
+      ],
+      "elapsed_s": 20.75000000005357,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 110,
+        "period": 14,
+        "seconds": 19,
+        "direction": 1,
+        "gain_change": -0.35
+      },
+      "start_s": 3.16,
+      "same_edge_s": 4.98,
+      "stable_fraction": 0.956,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.08196650608126274,
+        109.56386241024386
+      ],
+      "foot_yaw_range_deg": [
+        -8.940087467203577,
+        2.079689737351849
+      ],
+      "torso_yaw_range_deg": [
+        -0.9657610248094435,
+        106.6237143836043
+      ],
+      "roll_range_deg": [
+        -71.74659549084575,
+        -28.029110792006886
+      ],
+      "rim_azimuth_error_deg": 3.0882653708498884,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.05060847253004597,
+      "actual_joint_margin_rad": 0.03613092440945387,
+      "termination": "nonfoot_floor_contact",
+      "fell": true,
+      "command_rad": [
+        0.0,
+        1.9198621771937625
+      ],
+      "elapsed_s": 8.142374999993372,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 110,
+        "period": 14,
+        "seconds": 19,
+        "direction": 1,
+        "gain_change": -0.35
+      },
+      "start_s": 3.36,
+      "same_edge_s": 11.96,
+      "stable_fraction": 0.9833055091819699,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        -109.5483365080077,
+        109.55516407171861
+      ],
+      "foot_yaw_range_deg": [
+        -7.891660851775588,
+        7.060847780904476
+      ],
+      "torso_yaw_range_deg": [
+        -106.09480781533364,
+        107.31022094496663
+      ],
+      "roll_range_deg": [
+        28.165666223060295,
+        68.28281948580096
+      ],
+      "rim_azimuth_error_deg": 6.446621697092198,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.048795554107447625,
+      "actual_joint_margin_rad": 0.03683442515302349,
+      "termination": "nonfoot_floor_contact",
+      "fell": true,
+      "command_rad": [
+        -1.9198621771937625,
+        1.9198621771937625
+      ],
+      "elapsed_s": 15.33387500002771,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 100,
+        "period": 12,
+        "seconds": 17,
+        "direction": 1,
+        "gain_change": -0.5
+      },
+      "start_s": 3.16,
+      "same_edge_s": 4.34,
+      "stable_fraction": 0.954337899543379,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.08252353727624819,
+        99.51226849871789
+      ],
+      "foot_yaw_range_deg": [
+        -9.31403031825756,
+        1.487836104115256
+      ],
+      "torso_yaw_range_deg": [
+        -0.9657610248094435,
+        97.5250675810035
+      ],
+      "roll_range_deg": [
+        -61.8085928752135,
+        -28.28754058456052
+      ],
+      "rim_azimuth_error_deg": 3.295227202738624,
+      "sampled_same_edge_through_end": false,
+      "first_loss_s": 7.5200000000000005,
+      "peak_waist_torque_nm": 0.05060847253004597,
+      "actual_joint_margin_rad": 0.02808721866497854,
+      "termination": "nonfoot_floor_contact",
+      "fell": true,
+      "command_rad": [
+        0.0,
+        1.7453292519943295
+      ],
+      "elapsed_s": 7.536624999993773,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 100,
+        "period": 12,
+        "seconds": 17,
+        "direction": 1,
+        "gain_change": -0.5
+      },
+      "start_s": 3.36,
+      "same_edge_s": 11.22,
+      "stable_fraction": 0.994661921708185,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        -99.50521116428057,
+        99.56911163684023
+      ],
+      "foot_yaw_range_deg": [
+        -8.286202152975024,
+        7.437694820390811
+      ],
+      "torso_yaw_range_deg": [
+        -96.98141122921716,
+        98.4187887237103
+      ],
+      "roll_range_deg": [
+        28.061559409257402,
+        43.1541603289378
+      ],
+      "rim_azimuth_error_deg": 6.7765639513473594,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.048795554107447625,
+      "actual_joint_margin_rad": -0.005017713814034375,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        -1.7453292519943295,
+        1.7453292519943295
+      ],
+      "elapsed_s": 14.583875000024129,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 90,
+        "period": 12,
+        "seconds": 17,
+        "direction": 1,
+        "gain_change": 0.25
+      },
+      "start_s": 3.16,
+      "same_edge_s": 13.84,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        -14.55216
+      ],
+      "full_cycles": 1,
+      "waist_range_deg": [
+        -89.67491038802605,
+        89.51912819326952
+      ],
+      "foot_yaw_range_deg": [
+        -8.457063525217002,
+        5.764867405182266
+      ],
+      "torso_yaw_range_deg": [
+        -89.72755005157121,
+        88.82108945126583
+      ],
+      "roll_range_deg": [
+        -33.952456185826364,
+        -30.17226446564439
+      ],
+      "rim_azimuth_error_deg": 5.66383754072517,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.05060847253004597,
+      "actual_joint_margin_rad": 0.04787054943093372,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -1.5707963267948966,
+        1.5707963267948966
+      ],
+      "elapsed_s": 17.000000000035666,
+      "passed": true
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 90,
+        "period": 12,
+        "seconds": 17,
+        "direction": 1,
+        "gain_change": 0.25
+      },
+      "start_s": 3.36,
+      "same_edge_s": 13.64,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        -14.12034
+      ],
+      "full_cycles": 1,
+      "waist_range_deg": [
+        -89.5175004555908,
+        89.58888888763339
+      ],
+      "foot_yaw_range_deg": [
+        -7.387095378145192,
+        6.651244421303526
+      ],
+      "torso_yaw_range_deg": [
+        -88.52128986684028,
+        89.96147473705744
+      ],
+      "roll_range_deg": [
+        30.07118329172751,
+        33.565666924885804
+      ],
+      "rim_azimuth_error_deg": 3.5442271312837104,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.048795554107447625,
+      "actual_joint_margin_rad": 0.05477841562084529,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -1.5707963267948966,
+        1.5707963267948966
+      ],
+      "elapsed_s": 17.000000000035666,
+      "passed": true
+    }
+  ],
+  "offsets": [
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 110,
+        "period": 14,
+        "seconds": 19,
+        "direction": 1,
+        "com_offset_mm": -6.0
+      },
+      "start_s": 3.16,
+      "same_edge_s": 11.02,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        -110.49359911832065,
+        109.55096260504979
+      ],
+      "foot_yaw_range_deg": [
+        -9.018451376961,
+        6.1030614979487545
+      ],
+      "torso_yaw_range_deg": [
+        -109.29115857329151,
+        106.36157913622347
+      ],
+      "roll_range_deg": [
+        -35.49917925416039,
+        -27.471150683164893
+      ],
+      "rim_azimuth_error_deg": 12.383662275333892,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.06125662276637893,
+      "actual_joint_margin_rad": -0.005028213703241136,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        -1.9198621771937625,
+        1.9198621771937625
+      ],
+      "elapsed_s": 14.19050000002225,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 110,
+        "period": 14,
+        "seconds": 19,
+        "direction": 1,
+        "com_offset_mm": -6.0
+      },
+      "start_s": 3.36,
+      "same_edge_s": 6.360000000000001,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.021797372663483302,
+        109.64972551769556
+      ],
+      "foot_yaw_range_deg": [
+        -7.830598057093725,
+        8.22049214953651
+      ],
+      "torso_yaw_range_deg": [
+        0.051396787261169544,
+        107.48260866585218
+      ],
+      "roll_range_deg": [
+        27.99063904269902,
+        37.67150769323368
+      ],
+      "rim_azimuth_error_deg": 6.08105310088489,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.08184973484191395,
+      "actual_joint_margin_rad": -0.0051268454824655585,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        1.9198621771937625
+      ],
+      "elapsed_s": 9.732875000000966,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 110,
+        "period": 14,
+        "seconds": 19,
+        "direction": 1,
+        "com_offset_mm": 3.0
+      },
+      "start_s": 3.16,
+      "same_edge_s": 2.7800000000000002,
+      "stable_fraction": 0.9,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.08196848814222106,
+        101.00182773480098
+      ],
+      "foot_yaw_range_deg": [
+        -8.869405403279217,
+        -0.3704421689573693
+      ],
+      "torso_yaw_range_deg": [
+        -0.9657610248094435,
+        92.08347284803217
+      ],
+      "roll_range_deg": [
+        -70.71772550629409,
+        -28.16515836878286
+      ],
+      "rim_azimuth_error_deg": 7.242527756958688,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.063109762178753,
+      "actual_joint_margin_rad": 0.04787054943093372,
+      "termination": "nonfoot_floor_contact",
+      "fell": true,
+      "command_rad": [
+        0.0,
+        1.8204987719519297
+      ],
+      "elapsed_s": 5.943249999997486,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 110,
+        "period": 14,
+        "seconds": 19,
+        "direction": 1,
+        "com_offset_mm": 3.0
+      },
+      "start_s": 3.36,
+      "same_edge_s": 3.3000000000000003,
+      "stable_fraction": 0.9698795180722891,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.021797372663483302,
+        107.76167003033972
+      ],
+      "foot_yaw_range_deg": [
+        -7.940460557709273,
+        0.5774561773961562
+      ],
+      "torso_yaw_range_deg": [
+        0.051396787261169544,
+        107.70687788181462
+      ],
+      "roll_range_deg": [
+        15.907672070632511,
+        35.834987573539884
+      ],
+      "rim_azimuth_error_deg": 9.187038464865841,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.048795554107447625,
+      "actual_joint_margin_rad": -0.005014210527702456,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        1.9121333764987203
+      ],
+      "elapsed_s": 6.6668749999958,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 110,
+        "period": 14,
+        "seconds": 19,
+        "direction": 1,
+        "com_offset_mm": 9.0
+      },
+      "start_s": 3.16,
+      "same_edge_s": 2.58,
+      "stable_fraction": 0.9318181818181818,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.08197275031039764,
+        97.85604195500353
+      ],
+      "foot_yaw_range_deg": [
+        -8.712458820775433,
+        -0.3704160818129689
+      ],
+      "torso_yaw_range_deg": [
+        -0.9657610248094435,
+        97.02651370022191
+      ],
+      "roll_range_deg": [
+        -36.638972593337826,
+        -6.71674868430294
+      ],
+      "rim_azimuth_error_deg": 10.665654143306599,
+      "sampled_same_edge_through_end": false,
+      "first_loss_s": 5.76,
+      "peak_waist_torque_nm": 0.09208764937893836,
+      "actual_joint_margin_rad": -0.005213541706486247,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        1.772068244634161
+      ],
+      "elapsed_s": 5.7848749999978555,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 110,
+        "period": 14,
+        "seconds": 19,
+        "direction": 1,
+        "com_offset_mm": 9.0
+      },
+      "start_s": 3.36,
+      "same_edge_s": 2.2600000000000002,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.021797372663483302,
+        89.09070142434237
+      ],
+      "foot_yaw_range_deg": [
+        -8.02175163066533,
+        0.5774561773961562
+      ],
+      "torso_yaw_range_deg": [
+        0.051396787261169544,
+        84.73333884698654
+      ],
+      "roll_range_deg": [
+        30.90173462935597,
+        35.778756578683314
+      ],
+      "rim_azimuth_error_deg": 4.732712037294651,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.048795554107447625,
+      "actual_joint_margin_rad": -0.005068941015179185,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        1.6301615371707265
+      ],
+      "elapsed_s": 5.6389999999981955,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 135,
+        "period": 18,
+        "seconds": 23,
+        "direction": 1,
+        "com_offset_mm": -6.0
+      },
+      "start_s": 3.16,
+      "same_edge_s": 4.3,
+      "stable_fraction": 0.9583333333333334,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.08117595971695954,
+        133.15769085716127
+      ],
+      "foot_yaw_range_deg": [
+        -8.755709693231454,
+        -0.36838170770625284
+      ],
+      "torso_yaw_range_deg": [
+        -0.9657610248094435,
+        124.08726484030142
+      ],
+      "roll_range_deg": [
+        -64.89955187757373,
+        -29.04652857381217
+      ],
+      "rim_azimuth_error_deg": 6.612752072308176,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.05060847253004597,
+      "actual_joint_margin_rad": 0.018808151284069652,
+      "termination": "nonfoot_floor_contact",
+      "fell": true,
+      "command_rad": [
+        0.0,
+        2.350454918836157
+      ],
+      "elapsed_s": 7.475624999993915,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 135,
+        "period": 18,
+        "seconds": 23,
+        "direction": 1,
+        "com_offset_mm": -6.0
+      },
+      "start_s": 3.36,
+      "same_edge_s": 8.98,
+      "stable_fraction": 0.9822222222222222,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.021797372663483302,
+        134.70286377040352
+      ],
+      "foot_yaw_range_deg": [
+        -7.567587965961415,
+        12.166153103408597
+      ],
+      "torso_yaw_range_deg": [
+        0.051396787261169544,
+        131.8494983515385
+      ],
+      "roll_range_deg": [
+        26.69342523279956,
+        61.24794475659892
+      ],
+      "rim_azimuth_error_deg": 9.11572875991577,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.11900764060203779,
+      "actual_joint_margin_rad": -0.005003912834952162,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        2.356194490192345
+      ],
+      "elapsed_s": 12.354000000013482,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 135,
+        "period": 18,
+        "seconds": 23,
+        "direction": 1,
+        "com_offset_mm": 3.0
+      },
+      "start_s": 3.16,
+      "same_edge_s": 2.7800000000000002,
+      "stable_fraction": 0.9142857142857143,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.08116275353413109,
+        106.54523010029604
+      ],
+      "foot_yaw_range_deg": [
+        -8.61651388947942,
+        -0.3683924156452726
+      ],
+      "torso_yaw_range_deg": [
+        -0.9657610248094435,
+        93.09324906991812
+      ],
+      "roll_range_deg": [
+        -70.99322250997977,
+        -29.141508423976994
+      ],
+      "rim_azimuth_error_deg": 3.279014267865492,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.05060847253004597,
+      "actual_joint_margin_rad": 0.016520641551148962,
+      "termination": "nonfoot_floor_contact",
+      "fell": true,
+      "command_rad": [
+        0.0,
+        1.9441278784266498
+      ],
+      "elapsed_s": 5.9436249999974855,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 135,
+        "period": 18,
+        "seconds": 23,
+        "direction": 1,
+        "com_offset_mm": 3.0
+      },
+      "start_s": 3.36,
+      "same_edge_s": 3.3400000000000003,
+      "stable_fraction": 0.54421768707483,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.021797372663483302,
+        120.0429378715976
+      ],
+      "foot_yaw_range_deg": [
+        -7.674006863974366,
+        0.5774561773961562
+      ],
+      "torso_yaw_range_deg": [
+        0.051396787261169544,
+        118.04973936474667
+      ],
+      "roll_range_deg": [
+        5.88669173304908,
+        35.85783684884593
+      ],
+      "rim_azimuth_error_deg": 9.26339095306005,
+      "sampled_same_edge_through_end": false,
+      "first_loss_s": 6.72,
+      "peak_waist_torque_nm": 0.09750582259474151,
+      "actual_joint_margin_rad": -0.005052100623575528,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        2.356194490192345
+      ],
+      "elapsed_s": 9.22037499999852,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 135,
+        "period": 18,
+        "seconds": 23,
+        "direction": 1,
+        "com_offset_mm": 9.0
+      },
+      "start_s": 3.16,
+      "same_edge_s": 2.54,
+      "stable_fraction": 0.9230769230769231,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.08115412463880012,
+        100.31374013763775
+      ],
+      "foot_yaw_range_deg": [
+        -8.466047754876563,
+        -0.36836796693499135
+      ],
+      "torso_yaw_range_deg": [
+        -0.9657610248094435,
+        97.49590706386998
+      ],
+      "roll_range_deg": [
+        -36.36539050983404,
+        -5.683412528740992
+      ],
+      "rim_azimuth_error_deg": 9.043720976015935,
+      "sampled_same_edge_through_end": false,
+      "first_loss_s": 5.72,
+      "peak_waist_torque_nm": 0.09820277815548824,
+      "actual_joint_margin_rad": -0.005159290939759087,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        1.8465342061509333
+      ],
+      "elapsed_s": 5.7411249999979574,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 135,
+        "period": 18,
+        "seconds": 23,
+        "direction": 1,
+        "com_offset_mm": 9.0
+      },
+      "start_s": 3.36,
+      "same_edge_s": 2.3000000000000003,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.021797372663483302,
+        92.08581794916599
+      ],
+      "foot_yaw_range_deg": [
+        -7.754965618490602,
+        0.5774561773961562
+      ],
+      "torso_yaw_range_deg": [
+        0.051396787261169544,
+        86.63373774752336
+      ],
+      "roll_range_deg": [
+        30.910271584093604,
+        35.783413861092875
+      ],
+      "rim_azimuth_error_deg": 5.047836159228063,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.048795554107447625,
+      "actual_joint_margin_rad": -0.005157787801716163,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        1.6949044741339914
+      ],
+      "elapsed_s": 5.662499999998141,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 155,
+        "period": 20,
+        "seconds": 25,
+        "direction": 1,
+        "com_offset_mm": -6.0
+      },
+      "start_s": 3.16,
+      "same_edge_s": 3.9800000000000004,
+      "stable_fraction": 0.955,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.08178014150978352,
+        143.80952272341005
+      ],
+      "foot_yaw_range_deg": [
+        -9.068756985372747,
+        -0.36983036156957
+      ],
+      "torso_yaw_range_deg": [
+        -0.9657610248094435,
+        130.16275103135203
+      ],
+      "roll_range_deg": [
+        -66.97028124618592,
+        -29.12892979760247
+      ],
+      "rim_azimuth_error_deg": 6.119653474545174,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.05060847253004597,
+      "actual_joint_margin_rad": 0.005897540237308707,
+      "termination": "nonfoot_floor_contact",
+      "fell": true,
+      "command_rad": [
+        0.0,
+        2.5675521604502496
+      ],
+      "elapsed_s": 7.147874999994679,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 155,
+        "period": 20,
+        "seconds": 25,
+        "direction": 1,
+        "com_offset_mm": -6.0
+      },
+      "start_s": 3.36,
+      "same_edge_s": 8.82,
+      "stable_fraction": 0.9774266365688488,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.021797372663483302,
+        154.67959664142296
+      ],
+      "foot_yaw_range_deg": [
+        -7.881247534810308,
+        8.66931756949136
+      ],
+      "torso_yaw_range_deg": [
+        0.051396787261169544,
+        153.51514409861878
+      ],
+      "roll_range_deg": [
+        26.972530415222728,
+        62.28240564867149
+      ],
+      "rim_azimuth_error_deg": 9.17738809099753,
+      "sampled_same_edge_through_end": false,
+      "first_loss_s": 12.200000000000001,
+      "peak_waist_torque_nm": 0.058899552024767245,
+      "actual_joint_margin_rad": -0.0036483516026930563,
+      "termination": "nonfoot_floor_contact",
+      "fell": true,
+      "command_rad": [
+        0.0,
+        2.705260340591211
+      ],
+      "elapsed_s": 12.210500000012797,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 155,
+        "period": 20,
+        "seconds": 25,
+        "direction": 1,
+        "com_offset_mm": 3.0
+      },
+      "start_s": 3.16,
+      "same_edge_s": 2.8200000000000003,
+      "stable_fraction": 0.9084507042253521,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.08176648176720133,
+        114.57453583352252
+      ],
+      "foot_yaw_range_deg": [
+        -8.918785815118671,
+        -0.369840860786877
+      ],
+      "torso_yaw_range_deg": [
+        -0.9657610248094435,
+        99.57748454395342
+      ],
+      "roll_range_deg": [
+        -67.68722181368291,
+        -28.064062551085907
+      ],
+      "rim_azimuth_error_deg": 9.066463336373078,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.05060847253004597,
+      "actual_joint_margin_rad": 0.026853066897172262,
+      "termination": "nonfoot_floor_contact",
+      "fell": true,
+      "command_rad": [
+        0.0,
+        2.095232412422162
+      ],
+      "elapsed_s": 5.9873749999973835,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 155,
+        "period": 20,
+        "seconds": 25,
+        "direction": 1,
+        "com_offset_mm": 3.0
+      },
+      "start_s": 3.36,
+      "same_edge_s": 3.3000000000000003,
+      "stable_fraction": 0.61003861003861,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.021797372663483302,
+        128.37008796845993
+      ],
+      "foot_yaw_range_deg": [
+        -7.992912950576143,
+        0.5774561773961562
+      ],
+      "torso_yaw_range_deg": [
+        0.051396787261169544,
+        124.6283130425663
+      ],
+      "roll_range_deg": [
+        5.479095755230294,
+        35.91519323942464
+      ],
+      "rim_azimuth_error_deg": 7.304575933499858,
+      "sampled_same_edge_through_end": false,
+      "first_loss_s": 6.68,
+      "peak_waist_torque_nm": 0.08857584105283657,
+      "actual_joint_margin_rad": -0.005011082753306528,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        2.705260340591211
+      ],
+      "elapsed_s": 8.521374999995182,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 155,
+        "period": 20,
+        "seconds": 25,
+        "direction": 1,
+        "com_offset_mm": 9.0
+      },
+      "start_s": 3.16,
+      "same_edge_s": 2.5599999999999996,
+      "stable_fraction": 0.6269430051813472,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.08175756930910819,
+        106.81903342426047
+      ],
+      "foot_yaw_range_deg": [
+        -8.761780076761497,
+        -0.36981528219993903
+      ],
+      "torso_yaw_range_deg": [
+        -0.9657610248094435,
+        103.81801510827725
+      ],
+      "roll_range_deg": [
+        -36.66465501188209,
+        -5.338431546171266
+      ],
+      "rim_azimuth_error_deg": 10.351175152339,
+      "sampled_same_edge_through_end": false,
+      "first_loss_s": 5.74,
+      "peak_waist_torque_nm": 0.10799527764120853,
+      "actual_joint_margin_rad": -0.005040490404140119,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        2.5276030330944
+      ],
+      "elapsed_s": 7.006624999995008,
+      "passed": false
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 155,
+        "period": 20,
+        "seconds": 25,
+        "direction": 1,
+        "com_offset_mm": 9.0
+      },
+      "start_s": 3.36,
+      "same_edge_s": 2.14,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.021797372663483302,
+        90.66516787955754
+      ],
+      "foot_yaw_range_deg": [
+        -8.076188166305935,
+        0.5774561773961562
+      ],
+      "torso_yaw_range_deg": [
+        0.051396787261169544,
+        84.61267851959661
+      ],
+      "roll_range_deg": [
+        30.90255487627763,
+        35.82173716380982
+      ],
+      "rim_azimuth_error_deg": 5.278550888510296,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.048795554107447625,
+      "actual_joint_margin_rad": -0.005008564760829781,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        1.6848030831593157
+      ],
+      "elapsed_s": 5.5171249999984795,
+      "passed": false
+    }
+  ],
+  "endurance": [
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 70,
+        "period": 12,
+        "seconds": 41,
+        "direction": 1,
+        "audit": true
+      },
+      "start_s": 3.16,
+      "same_edge_s": 37.84,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        -11.45161,
+        -0.08356,
+        -0.08356
+      ],
+      "full_cycles": 3,
+      "waist_range_deg": [
+        -69.68115905408709,
+        69.56631406500631
+      ],
+      "foot_yaw_range_deg": [
+        -6.689341933326831,
+        4.400423064550527
+      ],
+      "torso_yaw_range_deg": [
+        -72.94215180843138,
+        71.54344448226038
+      ],
+      "roll_range_deg": [
+        -33.98489857554245,
+        -30.295901119915467
+      ],
+      "rim_azimuth_error_deg": 5.026821733331742,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.05060847253004597,
+      "actual_joint_margin_rad": 0.04787054943093372,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -1.2217304763960306,
+        1.2217304763960306
+      ],
+      "elapsed_s": 40.99999999989446,
+      "passed": true,
+      "contact_audit": {
+        "samples": 302720,
+        "loaded_samples": 302720,
+        "first_loss_s": null,
+        "longest_loss_s": 0.0,
+        "peak_contact_azimuth_error_deg": 5.0276698170930505
+      }
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 70,
+        "period": 12,
+        "seconds": 41,
+        "direction": 1,
+        "audit": true
+      },
+      "start_s": 3.36,
+      "same_edge_s": 37.64,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        -11.02937,
+        0.01783,
+        0.01784
+      ],
+      "full_cycles": 3,
+      "waist_range_deg": [
+        -69.56606261482982,
+        69.65486133002898
+      ],
+      "foot_yaw_range_deg": [
+        -5.595821426074125,
+        5.349907964898295
+      ],
+      "torso_yaw_range_deg": [
+        -71.15235566548863,
+        73.15817429029443
+      ],
+      "roll_range_deg": [
+        30.121045745826656,
+        33.34041401855452
+      ],
+      "rim_azimuth_error_deg": 2.9686756980387963,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.048795554107447625,
+      "actual_joint_margin_rad": 0.05477841562084529,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -1.2217304763960306,
+        1.2217304763960306
+      ],
+      "elapsed_s": 40.99999999989446,
+      "passed": true,
+      "contact_audit": {
+        "samples": 301120,
+        "loaded_samples": 301120,
+        "first_loss_s": null,
+        "longest_loss_s": 0.0,
+        "peak_contact_azimuth_error_deg": 2.9689882682750754
+      }
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 90,
+        "period": 12,
+        "seconds": 41,
+        "direction": 1,
+        "gain_change": 0.25,
+        "audit": true
+      },
+      "start_s": 3.16,
+      "same_edge_s": 37.84,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        -14.55216,
+        -0.10061,
+        -0.10059
+      ],
+      "full_cycles": 3,
+      "waist_range_deg": [
+        -89.6749208412532,
+        89.51912819326952
+      ],
+      "foot_yaw_range_deg": [
+        -8.457063525217002,
+        5.764867405182266
+      ],
+      "torso_yaw_range_deg": [
+        -89.92870475171799,
+        88.82108945126583
+      ],
+      "roll_range_deg": [
+        -33.95253476361279,
+        -30.17226446564439
+      ],
+      "rim_azimuth_error_deg": 5.664172654879763,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.05060847253004597,
+      "actual_joint_margin_rad": 0.04787054943093372,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -1.5707963267948966,
+        1.5707963267948966
+      ],
+      "elapsed_s": 40.99999999989446,
+      "passed": true,
+      "contact_audit": {
+        "samples": 302720,
+        "loaded_samples": 302720,
+        "first_loss_s": null,
+        "longest_loss_s": 0.0,
+        "peak_contact_azimuth_error_deg": 5.665231859761204
+      }
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 90,
+        "period": 12,
+        "seconds": 41,
+        "direction": 1,
+        "gain_change": 0.25,
+        "audit": true
+      },
+      "start_s": 3.36,
+      "same_edge_s": 37.64,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        -14.12034,
+        0.03027,
+        0.02932
+      ],
+      "full_cycles": 3,
+      "waist_range_deg": [
+        -89.51755951998948,
+        89.59337327434251
+      ],
+      "foot_yaw_range_deg": [
+        -7.387095378145192,
+        6.712614189339484
+      ],
+      "torso_yaw_range_deg": [
+        -88.52128986684028,
+        90.00200469329121
+      ],
+      "roll_range_deg": [
+        30.07118329172751,
+        33.565666924885804
+      ],
+      "rim_azimuth_error_deg": 3.5442271312837104,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.048795554107447625,
+      "actual_joint_margin_rad": 0.05477841562084529,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -1.5707963267948966,
+        1.5707963267948966
+      ],
+      "elapsed_s": 40.99999999989446,
+      "passed": true,
+      "contact_audit": {
+        "samples": 301120,
+        "loaded_samples": 301120,
+        "first_loss_s": null,
+        "longest_loss_s": 0.0,
+        "peak_contact_azimuth_error_deg": 3.544335649007071
+      }
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 80,
+        "period": 12,
+        "seconds": 41,
+        "direction": 1,
+        "gain_change": 0,
+        "audit": true
+      },
+      "start_s": 3.16,
+      "same_edge_s": 37.84,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        -13.11743,
+        -0.10418,
+        -0.10418
+      ],
+      "full_cycles": 3,
+      "waist_range_deg": [
+        -79.68388995481017,
+        79.54242935601427
+      ],
+      "foot_yaw_range_deg": [
+        -7.574663045658138,
+        5.083993773275412
+      ],
+      "torso_yaw_range_deg": [
+        -81.49801481564555,
+        80.24239125749524
+      ],
+      "roll_range_deg": [
+        -34.021023965453566,
+        -30.20549023539996
+      ],
+      "rim_azimuth_error_deg": 5.560557466510849,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.05060847253004597,
+      "actual_joint_margin_rad": 0.04787054943093372,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -1.3962634015954636,
+        1.3962634015954636
+      ],
+      "elapsed_s": 40.99999999989446,
+      "passed": true,
+      "contact_audit": {
+        "samples": 302720,
+        "loaded_samples": 302720,
+        "first_loss_s": null,
+        "longest_loss_s": 0.0,
+        "peak_contact_azimuth_error_deg": 5.561729803968786
+      }
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 80,
+        "period": 12,
+        "seconds": 41,
+        "direction": 1,
+        "gain_change": 0,
+        "audit": true
+      },
+      "start_s": 3.36,
+      "same_edge_s": 37.64,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        -12.5975,
+        0.02806,
+        0.0283
+      ],
+      "full_cycles": 3,
+      "waist_range_deg": [
+        -79.540423716877,
+        79.62499863997303
+      ],
+      "foot_yaw_range_deg": [
+        -6.488602382474038,
+        6.037971887549939
+      ],
+      "torso_yaw_range_deg": [
+        -79.91269215925462,
+        81.6651999828282
+      ],
+      "roll_range_deg": [
+        29.960554122807384,
+        33.605331973634975
+      ],
+      "rim_azimuth_error_deg": 3.256409310700344,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.048795554107447625,
+      "actual_joint_margin_rad": 0.05477841562084529,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -1.3962634015954636,
+        1.3962634015954636
+      ],
+      "elapsed_s": 40.99999999989446,
+      "passed": true,
+      "contact_audit": {
+        "samples": 301120,
+        "loaded_samples": 301120,
+        "first_loss_s": null,
+        "longest_loss_s": 0.0,
+        "peak_contact_azimuth_error_deg": 3.2565446365360304
+      }
+    }
+  ],
+  "challenges": [
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 90,
+        "period": 12,
+        "seconds": 17,
+        "direction": 1,
+        "gain_change": 0.25,
+        "com_offset_mm": 0.0,
+        "audit": true,
+        "condition": "floor"
+      },
+      "start_s": null,
+      "same_edge_s": 0.0,
+      "stable_fraction": 0.0,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.0,
+        0.0
+      ],
+      "foot_yaw_range_deg": [
+        0.0,
+        0.0
+      ],
+      "torso_yaw_range_deg": [
+        0.0,
+        0.0
+      ],
+      "roll_range_deg": [
+        0.0,
+        0.0
+      ],
+      "rim_azimuth_error_deg": null,
+      "sampled_same_edge_through_end": false,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.04883826521395787,
+      "actual_joint_margin_rad": 0.04748296114911055,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 17.000000000035666,
+      "passed": false,
+      "contact_audit": {
+        "samples": 0,
+        "loaded_samples": 0,
+        "first_loss_s": null,
+        "longest_loss_s": 0.0,
+        "peak_contact_azimuth_error_deg": 0.0
+      }
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 90,
+        "period": 12,
+        "seconds": 17,
+        "direction": 1,
+        "gain_change": 0.25,
+        "com_offset_mm": 0.0,
+        "audit": true,
+        "condition": "floor"
+      },
+      "start_s": null,
+      "same_edge_s": 0.0,
+      "stable_fraction": 0.0,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.0,
+        0.0
+      ],
+      "foot_yaw_range_deg": [
+        0.0,
+        0.0
+      ],
+      "torso_yaw_range_deg": [
+        0.0,
+        0.0
+      ],
+      "roll_range_deg": [
+        0.0,
+        0.0
+      ],
+      "rim_azimuth_error_deg": null,
+      "sampled_same_edge_through_end": false,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.04609012079076884,
+      "actual_joint_margin_rad": 0.054148433753393066,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 17.000000000035666,
+      "passed": false,
+      "contact_audit": {
+        "samples": 0,
+        "loaded_samples": 0,
+        "first_loss_s": null,
+        "longest_loss_s": 0.0,
+        "peak_contact_azimuth_error_deg": 0.0
+      }
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 90,
+        "period": 12,
+        "seconds": 17,
+        "direction": 1,
+        "gain_change": 0.25,
+        "com_offset_mm": 0.0,
+        "audit": true,
+        "condition": "battery"
+      },
+      "start_s": null,
+      "same_edge_s": 0.0,
+      "stable_fraction": 0.0,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.0,
+        0.0
+      ],
+      "foot_yaw_range_deg": [
+        0.0,
+        0.0
+      ],
+      "torso_yaw_range_deg": [
+        0.0,
+        0.0
+      ],
+      "roll_range_deg": [
+        0.0,
+        0.0
+      ],
+      "rim_azimuth_error_deg": null,
+      "sampled_same_edge_through_end": false,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.037309668759223924,
+      "actual_joint_margin_rad": 0.04453211874513663,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 17.000000000035666,
+      "passed": false,
+      "contact_audit": {
+        "samples": 0,
+        "loaded_samples": 0,
+        "first_loss_s": null,
+        "longest_loss_s": 0.0,
+        "peak_contact_azimuth_error_deg": 0.0
+      }
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 90,
+        "period": 12,
+        "seconds": 17,
+        "direction": 1,
+        "gain_change": 0.25,
+        "com_offset_mm": 0.0,
+        "audit": true,
+        "condition": "battery"
+      },
+      "start_s": null,
+      "same_edge_s": 0.0,
+      "stable_fraction": 0.0,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.0,
+        0.0
+      ],
+      "foot_yaw_range_deg": [
+        0.0,
+        0.0
+      ],
+      "torso_yaw_range_deg": [
+        0.0,
+        0.0
+      ],
+      "roll_range_deg": [
+        0.0,
+        0.0
+      ],
+      "rim_azimuth_error_deg": null,
+      "sampled_same_edge_through_end": false,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.03548836696736681,
+      "actual_joint_margin_rad": 0.048133437412871016,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 17.000000000035666,
+      "passed": false,
+      "contact_audit": {
+        "samples": 0,
+        "loaded_samples": 0,
+        "first_loss_s": null,
+        "longest_loss_s": 0.0,
+        "peak_contact_azimuth_error_deg": 0.0
+      }
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 90,
+        "period": 12,
+        "seconds": 17,
+        "direction": 1,
+        "gain_change": 0.25,
+        "com_offset_mm": 0.0,
+        "audit": true,
+        "condition": "sensing"
+      },
+      "start_s": null,
+      "same_edge_s": 0.0,
+      "stable_fraction": 0.0,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.0,
+        0.0
+      ],
+      "foot_yaw_range_deg": [
+        0.0,
+        0.0
+      ],
+      "torso_yaw_range_deg": [
+        0.0,
+        0.0
+      ],
+      "roll_range_deg": [
+        0.0,
+        0.0
+      ],
+      "rim_azimuth_error_deg": null,
+      "sampled_same_edge_through_end": false,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.10845967349264853,
+      "actual_joint_margin_rad": 0.028974794537978354,
+      "termination": "nonfoot_floor_contact",
+      "fell": true,
+      "command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 3.227875000001072,
+      "passed": false,
+      "contact_audit": {
+        "samples": 0,
+        "loaded_samples": 0,
+        "first_loss_s": null,
+        "longest_loss_s": 0.0,
+        "peak_contact_azimuth_error_deg": 0.0
+      }
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 90,
+        "period": 12,
+        "seconds": 17,
+        "direction": 1,
+        "gain_change": 0.25,
+        "com_offset_mm": 0.0,
+        "audit": true,
+        "condition": "sensing"
+      },
+      "start_s": null,
+      "same_edge_s": 0.0,
+      "stable_fraction": 0.0,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.0,
+        0.0
+      ],
+      "foot_yaw_range_deg": [
+        0.0,
+        0.0
+      ],
+      "torso_yaw_range_deg": [
+        0.0,
+        0.0
+      ],
+      "roll_range_deg": [
+        0.0,
+        0.0
+      ],
+      "rim_azimuth_error_deg": null,
+      "sampled_same_edge_through_end": false,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.0854492745256206,
+      "actual_joint_margin_rad": -0.005063719677711465,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 3.37362500000125,
+      "passed": false,
+      "contact_audit": {
+        "samples": 0,
+        "loaded_samples": 0,
+        "first_loss_s": null,
+        "longest_loss_s": 0.0,
+        "peak_contact_azimuth_error_deg": 0.0
+      }
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 90,
+        "period": 12,
+        "seconds": 17,
+        "direction": 1,
+        "gain_change": 0.25,
+        "com_offset_mm": 0.0,
+        "audit": true,
+        "condition": "timestep"
+      },
+      "start_s": null,
+      "same_edge_s": 0.0,
+      "stable_fraction": 0.0,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.0,
+        0.0
+      ],
+      "foot_yaw_range_deg": [
+        0.0,
+        0.0
+      ],
+      "torso_yaw_range_deg": [
+        0.0,
+        0.0
+      ],
+      "roll_range_deg": [
+        0.0,
+        0.0
+      ],
+      "rim_azimuth_error_deg": null,
+      "sampled_same_edge_through_end": false,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.11474053428072617,
+      "actual_joint_margin_rad": -0.005020633730458579,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 4.550500000002733,
+      "passed": false,
+      "contact_audit": {
+        "samples": 0,
+        "loaded_samples": 0,
+        "first_loss_s": null,
+        "longest_loss_s": 0.0,
+        "peak_contact_azimuth_error_deg": 0.0
+      }
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 90,
+        "period": 12,
+        "seconds": 17,
+        "direction": 1,
+        "gain_change": 0.25,
+        "com_offset_mm": 0.0,
+        "audit": true,
+        "condition": "timestep"
+      },
+      "start_s": 3.36,
+      "same_edge_s": 13.64,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        -14.16751
+      ],
+      "full_cycles": 1,
+      "waist_range_deg": [
+        -89.51757067020438,
+        89.58895535509075
+      ],
+      "foot_yaw_range_deg": [
+        -7.403272190716221,
+        6.625113745804078
+      ],
+      "torso_yaw_range_deg": [
+        -88.54770730503,
+        89.9357308109254
+      ],
+      "roll_range_deg": [
+        30.07250917881369,
+        33.56480848748183
+      ],
+      "rim_azimuth_error_deg": 3.5949000382998766,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.048839143034575976,
+      "actual_joint_margin_rad": 0.054766615842765765,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -1.5707963267948966,
+        1.5707963267948966
+      ],
+      "elapsed_s": 16.99999999997372,
+      "passed": true,
+      "contact_audit": {
+        "samples": 136400,
+        "loaded_samples": 136400,
+        "first_loss_s": null,
+        "longest_loss_s": 0.0,
+        "peak_contact_azimuth_error_deg": 3.5957627764057225
+      }
+    }
+  ],
+  "reverse_start": [
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 90,
+        "period": 12,
+        "seconds": 17,
+        "direction": -1,
+        "gain_change": 0.25,
+        "com_offset_mm": 0.0,
+        "audit": true
+      },
+      "start_s": 3.16,
+      "same_edge_s": 13.84,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        15.47623
+      ],
+      "full_cycles": 1,
+      "waist_range_deg": [
+        -89.63742386469552,
+        89.51586668810636
+      ],
+      "foot_yaw_range_deg": [
+        -6.479613837084106,
+        7.751387592419112
+      ],
+      "torso_yaw_range_deg": [
+        -89.7255313823511,
+        88.77265185401842
+      ],
+      "roll_range_deg": [
+        -33.95253092079153,
+        -30.207531435463405
+      ],
+      "rim_azimuth_error_deg": 4.449974914523733,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.05060847253004597,
+      "actual_joint_margin_rad": 0.04787054943093372,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -1.5707963267948966,
+        1.5707963267948966
+      ],
+      "elapsed_s": 17.000000000035666,
+      "passed": true,
+      "contact_audit": {
+        "samples": 110720,
+        "loaded_samples": 110720,
+        "first_loss_s": null,
+        "longest_loss_s": 0.0,
+        "peak_contact_azimuth_error_deg": 4.450370632889178
+      }
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 90,
+        "period": 12,
+        "seconds": 17,
+        "direction": -1,
+        "gain_change": 0.25,
+        "com_offset_mm": 0.0,
+        "audit": true
+      },
+      "start_s": 3.36,
+      "same_edge_s": 2.68,
+      "stable_fraction": 0.927007299270073,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        -86.36658623452108,
+        0.06138745137655126
+      ],
+      "foot_yaw_range_deg": [
+        0.5354660861749436,
+        8.529126129938541
+      ],
+      "torso_yaw_range_deg": [
+        -83.94766357812689,
+        0.1439925934650669
+      ],
+      "roll_range_deg": [
+        28.293629176887052,
+        59.97321114745724
+      ],
+      "rim_azimuth_error_deg": 6.280463459117024,
+      "sampled_same_edge_through_end": false,
+      "first_loss_s": 6.0600000000000005,
+      "peak_waist_torque_nm": 0.09312595585224283,
+      "actual_joint_margin_rad": 0.03835596026608057,
+      "termination": "nonfoot_floor_contact",
+      "fell": true,
+      "command_rad": [
+        -1.55394534681808,
+        0.0
+      ],
+      "elapsed_s": 6.085249999997155,
+      "passed": false,
+      "contact_audit": {
+        "samples": 21802,
+        "loaded_samples": 21744,
+        "first_loss_s": 6.002124999997349,
+        "longest_loss_s": 0.0005,
+        "peak_contact_azimuth_error_deg": 180.0
+      }
+    }
+  ],
+  "controls": [
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 90,
+        "period": 12,
+        "seconds": 17,
+        "direction": 1,
+        "gain_change": 0.25,
+        "com_offset_mm": 0.0,
+        "audit": true,
+        "freeze": true
+      },
+      "start_s": 3.16,
+      "same_edge_s": 0.9000000000000004,
+      "stable_fraction": 0.050505050505050504,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.08125466531788027,
+        28.306428225858923
+      ],
+      "foot_yaw_range_deg": [
+        -9.926658843301361,
+        -0.3225404730195456
+      ],
+      "torso_yaw_range_deg": [
+        -0.9657610248094435,
+        18.49357725955091
+      ],
+      "roll_range_deg": [
+        -31.174558427109094,
+        -6.162660646155299
+      ],
+      "rim_azimuth_error_deg": 3.201984245790184,
+      "sampled_same_edge_through_end": false,
+      "first_loss_s": 4.08,
+      "peak_waist_torque_nm": 0.05162283435571562,
+      "actual_joint_margin_rad": 0.04787054943093372,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -1.5707963267948966,
+        1.5707963267948966
+      ],
+      "elapsed_s": 17.000000000035666,
+      "passed": false,
+      "contact_audit": {
+        "samples": 110720,
+        "loaded_samples": 7244,
+        "first_loss_s": 4.065625000001862,
+        "longest_loss_s": 12.934500000016254,
+        "peak_contact_azimuth_error_deg": 179.99754029466686
+      }
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 90,
+        "period": 12,
+        "seconds": 17,
+        "direction": 1,
+        "gain_change": 0.25,
+        "com_offset_mm": 0.0,
+        "audit": true,
+        "freeze": true
+      },
+      "start_s": 3.36,
+      "same_edge_s": 0.9600000000000004,
+      "stable_fraction": 0.055636896046852125,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.021797372663483302,
+        32.79511983650148
+      ],
+      "foot_yaw_range_deg": [
+        -8.614220432740233,
+        0.5774561773961562
+      ],
+      "torso_yaw_range_deg": [
+        0.05139678726900643,
+        24.34910450518954
+      ],
+      "roll_range_deg": [
+        6.455661678421582,
+        31.06463872541328
+      ],
+      "rim_azimuth_error_deg": 2.165076558912434,
+      "sampled_same_edge_through_end": false,
+      "first_loss_s": 4.34,
+      "peak_waist_torque_nm": 0.048795554107447625,
+      "actual_joint_margin_rad": 0.05477841562084529,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -1.5707963267948966,
+        1.5707963267948966
+      ],
+      "elapsed_s": 17.000000000035666,
+      "passed": false,
+      "contact_audit": {
+        "samples": 109120,
+        "loaded_samples": 7737,
+        "first_loss_s": 4.327250000001253,
+        "longest_loss_s": 12.672875000015004,
+        "peak_contact_azimuth_error_deg": 179.99970921378352
+      }
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 90,
+        "period": 12,
+        "seconds": 17,
+        "direction": 1,
+        "gain_change": 0.25,
+        "com_offset_mm": 0.0,
+        "audit": true,
+        "compensate": false
+      },
+      "start_s": 3.16,
+      "same_edge_s": 1.1399999999999997,
+      "stable_fraction": 0.55,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.08021518520511425,
+        41.14945779398715
+      ],
+      "foot_yaw_range_deg": [
+        -11.653228266961897,
+        -0.36909687503577177
+      ],
+      "torso_yaw_range_deg": [
+        -0.9657610248094435,
+        36.69449978246615
+      ],
+      "roll_range_deg": [
+        -32.067625753572514,
+        -25.098096371270536
+      ],
+      "rim_azimuth_error_deg": 9.877450137884985,
+      "sampled_same_edge_through_end": false,
+      "first_loss_s": 4.32,
+      "peak_waist_torque_nm": 0.10063478604082192,
+      "actual_joint_margin_rad": -0.004525112780636276,
+      "termination": "nonfoot_floor_contact",
+      "fell": true,
+      "command_rad": [
+        0.0,
+        1.352050414335788
+      ],
+      "elapsed_s": 5.154624999999324,
+      "passed": false,
+      "contact_audit": {
+        "samples": 15957,
+        "loaded_samples": 9540,
+        "first_loss_s": 4.318750000001272,
+        "longest_loss_s": 0.43774999999996567,
+        "peak_contact_azimuth_error_deg": 178.0990955120045
+      }
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 90,
+        "period": 12,
+        "seconds": 17,
+        "direction": 1,
+        "gain_change": 0.25,
+        "com_offset_mm": 0.0,
+        "audit": true,
+        "compensate": false
+      },
+      "start_s": 3.36,
+      "same_edge_s": 1.3199999999999998,
+      "stable_fraction": 0.65625,
+      "cycle_torso_net_deg": [],
+      "full_cycles": 0,
+      "waist_range_deg": [
+        0.021797372663483302,
+        49.947610477059506
+      ],
+      "foot_yaw_range_deg": [
+        -10.738428229714861,
+        0.5774561773961562
+      ],
+      "torso_yaw_range_deg": [
+        0.05139678726900643,
+        43.98493626138952
+      ],
+      "roll_range_deg": [
+        24.09258483353086,
+        31.186212462349864
+      ],
+      "rim_azimuth_error_deg": 10.78095016168506,
+      "sampled_same_edge_through_end": false,
+      "first_loss_s": 4.7,
+      "peak_waist_torque_nm": 0.0796742798956433,
+      "actual_joint_margin_rad": -0.005012535518273298,
+      "termination": "actual_joint_limit_exceeded",
+      "fell": false,
+      "command_rad": [
+        0.0,
+        1.3173806475196617
+      ],
+      "elapsed_s": 5.262999999999072,
+      "passed": false,
+      "contact_audit": {
+        "samples": 15224,
+        "loaded_samples": 10705,
+        "first_loss_s": 4.698250000000388,
+        "longest_loss_s": 0.5648749999999805,
+        "peak_contact_azimuth_error_deg": 179.70724148974278
+      }
+    }
+  ],
+  "asymmetric": [
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 55,
+        "period": 10,
+        "seconds": 35,
+        "direction": 1,
+        "return_fraction": 0.25,
+        "audit": true
+      },
+      "start_s": 3.16,
+      "same_edge_s": 31.84,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        -6.93759,
+        -0.05412,
+        -0.0541
+      ],
+      "full_cycles": 3,
+      "waist_range_deg": [
+        -54.59797303098538,
+        54.55552400934839
+      ],
+      "foot_yaw_range_deg": [
+        -4.438208639606485,
+        8.267935626249942
+      ],
+      "torso_yaw_range_deg": [
+        -59.334250491831035,
+        57.93546948457395
+      ],
+      "roll_range_deg": [
+        -33.58847137262928,
+        -30.458870328027942
+      ],
+      "rim_azimuth_error_deg": 4.713084608341007,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.05060847253004597,
+      "actual_joint_margin_rad": 0.04787054943093372,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -0.959922667151331,
+        0.959922667151331
+      ],
+      "elapsed_s": 35.000000000036344,
+      "passed": true,
+      "contact_audit": {
+        "samples": 254720,
+        "loaded_samples": 254720,
+        "first_loss_s": null,
+        "longest_loss_s": 0.0,
+        "peak_contact_azimuth_error_deg": 4.714149193278611
+      }
+    },
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 55,
+        "period": 10,
+        "seconds": 35,
+        "direction": -1,
+        "return_fraction": 0.25,
+        "audit": true
+      },
+      "start_s": 3.16,
+      "same_edge_s": 31.84,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        8.23839,
+        -0.07183,
+        -0.07182
+      ],
+      "full_cycles": 3,
+      "waist_range_deg": [
+        -54.67173557335946,
+        54.52828330667806
+      ],
+      "foot_yaw_range_deg": [
+        -8.951108367800623,
+        3.6274545684693287
+      ],
+      "torso_yaw_range_deg": [
+        -59.57534651195753,
+        57.455746422705325
+      ],
+      "roll_range_deg": [
+        -33.767093981410234,
+        -30.429907761207886
+      ],
+      "rim_azimuth_error_deg": 4.655490000700945,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.05060847253004597,
+      "actual_joint_margin_rad": 0.04787054943093372,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -0.959922667151331,
+        0.959922667151331
+      ],
+      "elapsed_s": 35.000000000036344,
+      "passed": true,
+      "contact_audit": {
+        "samples": 254720,
+        "loaded_samples": 254720,
+        "first_loss_s": null,
+        "longest_loss_s": 0.0,
+        "peak_contact_azimuth_error_deg": 4.655634884750642
+      }
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 55,
+        "period": 10,
+        "seconds": 35,
+        "direction": 1,
+        "return_fraction": 0.25,
+        "audit": true
+      },
+      "start_s": 3.36,
+      "same_edge_s": 31.64,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        -7.05158,
+        0.03154,
+        0.03154
+      ],
+      "full_cycles": 3,
+      "waist_range_deg": [
+        -54.552540845857045,
+        54.65401235061909
+      ],
+      "foot_yaw_range_deg": [
+        -3.3648449080596214,
+        9.097884489362915
+      ],
+      "torso_yaw_range_deg": [
+        -57.03680978958007,
+        59.61535429274592
+      ],
+      "roll_range_deg": [
+        30.037612722533133,
+        32.796538018567915
+      ],
+      "rim_azimuth_error_deg": 2.6234317618217973,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.048795554107447625,
+      "actual_joint_margin_rad": 0.05477841562084529,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -0.959922667151331,
+        0.959922667151331
+      ],
+      "elapsed_s": 35.000000000036344,
+      "passed": true,
+      "contact_audit": {
+        "samples": 253120,
+        "loaded_samples": 253120,
+        "first_loss_s": null,
+        "longest_loss_s": 0.0,
+        "peak_contact_azimuth_error_deg": 2.6242513512827768
+      }
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 55,
+        "period": 10,
+        "seconds": 35,
+        "direction": -1,
+        "return_fraction": 0.25,
+        "audit": true
+      },
+      "start_s": 3.36,
+      "same_edge_s": 31.64,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        7.95051,
+        0.00344,
+        0.00345
+      ],
+      "full_cycles": 3,
+      "waist_range_deg": [
+        -54.56256746180265,
+        54.607395341027576
+      ],
+      "foot_yaw_range_deg": [
+        -7.883428047359921,
+        4.590958072831589
+      ],
+      "torso_yaw_range_deg": [
+        -57.432212242664704,
+        59.21184914905783
+      ],
+      "roll_range_deg": [
+        30.107983785632328,
+        32.67613449958539
+      ],
+      "rim_azimuth_error_deg": 1.7958373514620536,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.048795554107447625,
+      "actual_joint_margin_rad": 0.05477841562084529,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -0.959922667151331,
+        0.959922667151331
+      ],
+      "elapsed_s": 35.000000000036344,
+      "passed": true,
+      "contact_audit": {
+        "samples": 253120,
+        "loaded_samples": 253120,
+        "first_loss_s": null,
+        "longest_loss_s": 0.0,
+        "peak_contact_azimuth_error_deg": 1.796329275987667
+      }
+    }
+  ],
+  "sustained": [
+    {
+      "job": {
+        "side": -1,
+        "amplitude": 90,
+        "period": 12,
+        "seconds": 125,
+        "direction": 1,
+        "gain_change": 0.25,
+        "com_offset_mm": 0.0,
+        "audit": true
+      },
+      "start_s": 3.16,
+      "same_edge_s": 121.84,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        -14.55216,
+        -0.10061,
+        -0.10059,
+        -0.10059,
+        -0.10059,
+        -0.10059,
+        -0.10059,
+        -0.10059,
+        -0.10059,
+        -0.10059
+      ],
+      "full_cycles": 10,
+      "waist_range_deg": [
+        -89.6749208532003,
+        89.51912819326952
+      ],
+      "foot_yaw_range_deg": [
+        -8.457063525217002,
+        5.764867405182266
+      ],
+      "torso_yaw_range_deg": [
+        -90.6328119535871,
+        88.82108945126583
+      ],
+      "roll_range_deg": [
+        -33.95253476361279,
+        -30.17226446564439
+      ],
+      "rim_azimuth_error_deg": 5.6641726625943996,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.05060847253004597,
+      "actual_joint_margin_rad": 0.04787054943093372,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -1.5707963267948966,
+        1.5707963267948966
+      ],
+      "elapsed_s": 124.99999999790813,
+      "passed": true,
+      "contact_audit": {
+        "samples": 974720,
+        "loaded_samples": 974720,
+        "first_loss_s": null,
+        "longest_loss_s": 0.0,
+        "peak_contact_azimuth_error_deg": 5.66523188520789
+      }
+    },
+    {
+      "job": {
+        "side": 1,
+        "amplitude": 90,
+        "period": 12,
+        "seconds": 125,
+        "direction": 1,
+        "gain_change": 0.25,
+        "com_offset_mm": 0.0,
+        "audit": true
+      },
+      "start_s": 3.36,
+      "same_edge_s": 121.64,
+      "stable_fraction": 1.0,
+      "cycle_torso_net_deg": [
+        -14.12034,
+        0.03027,
+        0.02932,
+        0.02932,
+        0.02932,
+        0.02932,
+        0.02932,
+        0.02932,
+        0.02932,
+        0.02932
+      ],
+      "full_cycles": 10,
+      "waist_range_deg": [
+        -89.51755951998948,
+        89.59337327434251
+      ],
+      "foot_yaw_range_deg": [
+        -7.387095378145192,
+        6.9178676780697455
+      ],
+      "torso_yaw_range_deg": [
+        -88.52128986684028,
+        90.20725821556994
+      ],
+      "roll_range_deg": [
+        30.07118329172751,
+        33.565666924885804
+      ],
+      "rim_azimuth_error_deg": 3.5442271312837104,
+      "sampled_same_edge_through_end": true,
+      "first_loss_s": null,
+      "peak_waist_torque_nm": 0.048795554107447625,
+      "actual_joint_margin_rad": 0.05477841562084529,
+      "termination": "completed",
+      "fell": false,
+      "command_rad": [
+        -1.5707963267948966,
+        1.5707963267948966
+      ],
+      "elapsed_s": 124.99999999790813,
+      "passed": true,
+      "contact_audit": {
+        "samples": 973120,
+        "loaded_samples": 973120,
+        "first_loss_s": null,
+        "longest_loss_s": 0.0,
+        "peak_contact_azimuth_error_deg": 3.544335649007071
+      }
+    }
+  ],
+  "film_diagnostics": {
+    "left": {
+      "peak_requested_head_roll_pitch_deg": [
+        37.2377296383672,
+        15.868737236473804
+      ],
+      "peak_requested_head_to_body_yaw_deg": 1.187312867803115,
+      "peak_motor_torque_nm": [
+        0.05060847253004597,
+        0.203117420616258,
+        0.26197458535714324,
+        0.21799105304479333,
+        0.26828721300415465,
+        0.22772325230135557,
+        0.29855515811106115,
+        0.0033097645152914724,
+        0.0027335281955170997
+      ],
+      "torque_caps_nm": [
+        0.7440000000000001,
+        0.41600000000000004,
+        0.41600000000000004,
+        0.41600000000000004,
+        0.41600000000000004,
+        0.41600000000000004,
+        0.41600000000000004,
+        0.17200000000000001,
+        0.17200000000000001
+      ],
+      "max_floor_contact_excursion_mm": 4.855954759696924
+    },
+    "right": {
+      "peak_requested_head_roll_pitch_deg": [
+        37.2377296383672,
+        14.628215001506819
+      ],
+      "peak_requested_head_to_body_yaw_deg": 1.4261593606572092,
+      "peak_motor_torque_nm": [
+        0.048795554107447625,
+        0.2871176841267482,
+        0.22609945862538242,
+        0.26007495788263313,
+        0.21378999508001312,
+        0.25568924594503206,
+        0.20606238089949608,
+        0.0029262769438157432,
+        0.003684171297603079
+      ],
+      "torque_caps_nm": [
+        0.7440000000000001,
+        0.41600000000000004,
+        0.41600000000000004,
+        0.41600000000000004,
+        0.41600000000000004,
+        0.41600000000000004,
+        0.41600000000000004,
+        0.17200000000000001,
+        0.17200000000000001
+      ],
+      "max_floor_contact_excursion_mm": 4.871083149328951
+    }
+  }
+}

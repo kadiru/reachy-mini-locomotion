@@ -138,3 +138,32 @@ class PrimitivePhysicsTests(unittest.TestCase):
         self.assertEqual(r['commanded_waist_position_range_rad'],[0.,0.])
         self.assertGreater(r['waist_peak_torque_nm'],0)
         self.assertEqual(r['waist_mode'],'hold_neutral')
+
+    def test_active_waist_moves_and_audit_observes_every_substep(self):
+        import numpy as np
+        from reachy_locomotion.geometry import rotation
+        from reachy_locomotion.primitives import PrimitiveSimulator
+        config = json.loads((ROOT/'configs/motors-speed-trained.json').read_text())
+        sim = PrimitiveSimulator(UPSTREAM, config)
+
+        class Controller:
+            waist_target_rad = 0.
+            catch_trigger = yaw_trigger = None
+
+            def observe_waist(self, position):
+                self.encoder = position
+
+            def target(self, t, roll):
+                self.waist_target_rad = .16 * min(t, 1.)
+                pose = np.eye(4)
+                pose[2, 3] = .177
+                pose[:3, :3] = rotation((0., 0., self.waist_target_rad))
+                return pose, 'sweep', roll
+
+        times = []
+        result = sim.run_primitive(Primitive(), seconds=1.2, waist_mode='position',
+                                   controller=Controller(), step_audit=lambda _, d: times.append(d.time))
+        self.assertTrue(result['completed'])
+        self.assertEqual(result['commanded_waist_position_range_rad'], [0., .16])
+        self.assertGreater(result['measured_waist_angle_range_deg'][1], 7.)
+        self.assertEqual(len(times), round(1.2 / sim.dt))

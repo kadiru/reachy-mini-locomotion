@@ -121,9 +121,9 @@ class HeadIK:
             self.engine.add_branch(branch["branch_position"], np.linalg.inv(branch["T_motor_world"]).tolist(),
                                    1 if branch["solution"] else -1)
 
-    def solve(self, pose):
+    def solve(self, pose, body_yaw=0.):
         try:
-            joints = np.r_[0.0, self.engine.inverse_kinematics(pose.tolist(), 0.0)]
+            joints = np.r_[body_yaw, self.engine.inverse_kinematics(pose.tolist(), body_yaw)]
         except (ValueError, RuntimeError) as error:
             raise ValueError("Unreachable head pose: " + str(error)) from error
         if joints.shape != (7,) or not np.isfinite(joints).all():
@@ -177,8 +177,8 @@ class SwaySimulator:
         if any(w.number for w in state.warning):
             raise ValueError("Numerical warning during neutral initialization")
 
-    def checked_ik(self, pose):
-        joints = self.ik.solve(pose)
+    def checked_ik(self, pose, body_yaw=0.):
+        joints = self.ik.solve(pose, body_yaw)
         limits = self.command_limits
         if np.any(joints < limits[:, 0]) or np.any(joints > limits[:, 1]):
             raise ValueError("IK exceeds inspected model joint limits")
