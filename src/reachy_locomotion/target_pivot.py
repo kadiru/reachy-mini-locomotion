@@ -92,6 +92,9 @@ class TargetPivot:
                 self.finished = True
             else:
                 self.option = self.bank[0] if self.single else self.choose(error)
+                if self.option is None:
+                    self.finished = True
+                    return self.neutral.copy(), 'no qualified stroke', self.rest_roll[0]
                 feedback = dict(self.option['feedback'], sensor_seed=self.seed + len(self.strokes),
                                 sensor_delay_frames=self.delay, sensor_noise_deg=self.noise)
                 if any(abs(stroke['measured_turn_deg']) > 12.5 for stroke in self.strokes):
@@ -116,15 +119,21 @@ class TargetPivot:
         return pose, stage, sensed
 
 
-def pivot_metrics(result, target_deg):
-    rows = result['trace']
-    xy = np.array([row['foot_xyz_m'][:2] for row in rows])
-    excursion = 1000 * np.linalg.norm(xy - xy[0], axis=1)
+def edge_turns(rows, field):
+    """Signed rotation while consecutive samples remain on the same loaded rim."""
     signed = {'left': 0., 'right': 0.}
     for a, b in zip(rows, rows[1:]):
         if a['edge_support'] and b['edge_support'] and a['roll_deg'] * b['roll_deg'] > 0:
             rim = 'right' if b['roll_deg'] > 0 else 'left'
-            signed[rim] += b['foot_yaw_deg'] - a['foot_yaw_deg']
+            signed[rim] += b[field] - a[field]
+    return signed
+
+
+def pivot_metrics(result, target_deg):
+    rows = result['trace']
+    xy = np.array([row['foot_xyz_m'][:2] for row in rows])
+    excursion = 1000 * np.linalg.norm(xy - xy[0], axis=1)
+    signed = edge_turns(rows, 'foot_yaw_deg')
     tail = [r for r in rows if r['time_s'] >= rows[-1]['time_s'] - .6]
     error = max(abs(r[k] - target_deg) for r in tail for k in ('torso_yaw_deg', 'foot_yaw_deg'))
     return dict(target_deg=target_deg, torso_deg=result['final_torso_yaw_deg'],

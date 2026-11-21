@@ -26,6 +26,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('record', nargs='+')
     parser.add_argument('--output', required=True)
+    parser.add_argument('--slow-edge',action='store_true',help='Replay the strongest continuous rim contact at half speed')
     args = parser.parse_args()
     style = {s:font(s, s >= 25) for s in (16, 19, 26, 32)}
     stream = subprocess.Popen(['ffmpeg','-v','error','-n','-f','rawvideo','-pix_fmt','rgb24',
@@ -54,7 +55,25 @@ def main():
         goal = metrics['target_deg']
         start = run['trace'][0]['foot_xyz_m']
         with mujoco.Renderer(model,height=408,width=600) as renderer:
-            for row, state in zip(run['trace'][::2],run['trajectory'][::2]):
+            rows = run['trace']
+            frames = [(j,False) for j in range(0,len(rows),2)]
+            if args.slow_edge:
+                best_gain, best_window, first = 0., None, 0
+                for j in range(1,len(rows)):
+                    a,b = rows[j-1:j+1]
+                    if a['edge_support'] and b['edge_support'] and a['roll_deg']*b['roll_deg']>0:
+                        gain = math.copysign(1.,goal)*(b['torso_yaw_deg']-rows[first]['torso_yaw_deg'])
+                        if gain>best_gain:
+                            best_gain,best_window = gain,(first,j)
+                    else:
+                        first=j
+                if best_window:
+                    frames += [(len(rows)-1,False)]*15
+                    frames += [(j,True) for j in range(max(0,best_window[0]-15),min(len(rows),best_window[1]+16))]
+                    frames += [(len(rows)-1,False)]*12
+            for j,slow in frames:
+                row, state = rows[j],run['trajectory'][j]
+                camera.distance = .69 if slow else .79
                 data.qpos[:] = state['qpos']
                 mujoco.mj_forward(model,data)
                 renderer.update_scene(data,camera=camera)
@@ -64,9 +83,13 @@ def main():
                 def label(x,y,s,size,color='#eff6f8'):
                     pen.text((x,y),s,font=style[size],fill=color)
                 label(20,8,'Head-driven edge pivot',32)
-                label(22,49,'Reachy Mini    /    MuJoCo simulation    /    real-time replay',16,'#c3d2d9')
+                playback = 'strongest rim contact    /    0.5×' if slow else 'real-time replay'
+                label(22,49,f'Reachy Mini    /    MuJoCo simulation    /    {playback}',16,'#c3d2d9')
                 label(625,14,f"Turn {abs(goal):g}° {'left' if goal>0 else 'right'}",26)
-                label(625,51,f"{metrics['condition']} condition   ·   fixed waist target",16,'#c3d2d9')
+                condition_label=f"{metrics['condition']} condition   ·   fixed waist target"
+                if 'head_swings' in row:
+                    condition_label=f"{run['config']['motor_model']['voltage_v']:.2f} V   ·   friction {run['config']['friction_slide_torsion_roll'][0]:.3g}   ·   fixed waist"
+                label(625,51,condition_label,16,'#c3d2d9')
                 center = (775,228)
                 pen.ellipse((680,133,870,323),outline='#648394',width=2)
                 pen.line([(775,125),(775,331)],fill='#617580',width=1)
@@ -79,6 +102,10 @@ def main():
                 xy = row['foot_xyz_m']
                 drift = 1000*math.hypot(xy[0]-start[0],xy[1]-start[1])
                 label(630,449,f'Center travel from start   {drift:.1f} mm',16)
+                if 'head_swings' in row:
+                    label(630,473,f"Torso turn on rim   {row['torso_edge_deg']:+.1f}°",16,'#65e3de')
+                    label(20,86,f"Stroke {row['stroke_number']} of {metrics['strokes']}   ·   measured swings {row['head_swings']}",19)
+
                 t = row['time_s']
                 rim = ('Right rim loaded' if row['roll_deg']>0 else 'Left rim loaded') if row['edge_support'] else 'Between edge contacts'
                 label(20,501,f'{t:5.2f} s     {rim}',19)

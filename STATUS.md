@@ -1,5 +1,23 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 21 — More torso turn per head swing
+
+The frozen waist-neutral policy passed all 67 original pivot cases, including
+all 14 slick-floor failures and all six delayed right-turn joint stops.
+Across 95 MuJoCo tests, it passed 92, with zero falls and zero joint-travel
+stops. Nominal right quarter-turns fell from nine strokes to four and the
+measured head swings fell from 51 to 34. Signed torso rotation on the loaded
+rim rose from 1.40° to 2.42° per measured swing. On the friction-0.55 floor
+the right quarter-turn took eight strokes and the left took five.
+
+All three remaining misses were on reserved cases. On a new slick floor the
+right quarter-turn exceeded the center-travel limit and the left underturned.
+On a new intermediate floor the small right turn rotated too little on the rim.
+The next simulation work is to reduce travel on unfamiliar slick floors and
+retain loaded-rim rotation on short turns. Hardware transfer is unverified.
+[Best real-time turns and slow-motion contacts](media/simulation/efficient-rim-turns.mp4) ·
+[Training, matched comparisons and exact replay commands](docs/EFFICIENT_RIM_TURNS.md).
+
 ## November 21 — Turn the torso to a requested heading
 
 A dedicated MuJoCo policy rocks and replants the base to turn from startup

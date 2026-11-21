@@ -45,8 +45,18 @@ class BalanceFeedback:
     recovery_gain_after_catch_s: float = -1.
     recovery_gain_blend_s: float = .2
     sensor_latency_compensation: float = 0.
+    yaw_windup_deg: float = 0.
+    edge_surge_mm: float = 0.
+    pump_yaw_deg: float = 0.
+    pump_yaw_phase_deg: float = 0.
 
     def __post_init__(self):
+        if abs(self.pump_yaw_deg)>60 or abs(self.pump_yaw_phase_deg)>180:
+            raise ValueError('Invalid compound head oscillation')
+        if abs(self.edge_surge_mm) > 50:
+            raise ValueError('Fore-aft head stroke exceeds workspace diameter')
+        if not 0 <= self.yaw_windup_deg <= 60 or (self.yaw_windup_deg and (not self.state_dependent_yaw or self.measured_yaw_brake)):
+            raise ValueError('Yaw windup needs state-triggered yaw with a scheduled brake')
         if not all(math.isfinite(x) for x in asdict(self).values()):
             raise ValueError('Nonfinite balance parameter')
         if not 0<=self.prediction_s<=.3 or not 2<=self.trigger_deg<=30:
@@ -148,12 +158,20 @@ class BalanceController:
             lateral=(1-mix)*pivot_lateral+mix*.6*self.correction
             pose[1,3]=float(np.clip(pose[1,3]+lateral/1000,-.025,.025))
             stage='feedback '+stage
+        windup = -math.copysign(f.yaw_windup_deg, self.p.yaw_deg)
+        if f.yaw_windup_deg and self.yaw_trigger is None:
+            angles = euler(pose)
+            # Return gently if the launch never reaches the sensed yaw trigger.
+            u = blend((t-.2)/self.p.preload_s) * (1-blend((t-2.5)/.8))
+            angles[2] = math.radians(windup*u)
+            pose[:3,:3] = rotation(angles)
         if f.state_dependent_yaw and self.yaw_trigger is not None:
             elapsed=t-self.yaw_trigger
             if self.yaw_return_start is None and elapsed>=self.p.yaw_s+self.p.yaw_hold_s:
                 if (abs(self.sensed)<f.yaw_return_roll_deg and abs(self.rate)<30) or elapsed>=1.5:
                     self.yaw_return_start=t
-            yaw=self.yaw_amplitude*stroke(elapsed/self.p.yaw_s,self.p.yaw_brake_fraction)
+            origin = windup * (1-blend((self.yaw_trigger-2.5)/.8)) if f.yaw_windup_deg else 0.
+            yaw=origin+(self.yaw_amplitude-origin)*stroke(elapsed/self.p.yaw_s,self.p.yaw_brake_fraction)
             if f.measured_yaw_brake:
                 sign=1 if self.yaw_amplitude>0 else -1
                 if self.brake_target is None and sign*self.head_yaw>=f.yaw_brake_at_deg and abs(self.sensed)>=5:
@@ -163,9 +181,27 @@ class BalanceController:
                 held=self.yaw_amplitude if self.brake_target is None else self.brake_target
                 yaw=held*(1-blend((t-self.yaw_return_start)/self.p.yaw_return_s))
             angles=euler(pose);angles[2]=math.radians(yaw);pose[:3,:3]=rotation(angles)
+        if f.pump_yaw_deg:
+            # Ramp into a yaw oscillation synchronized with the head roll.
+            # Latch its value at the sensed catch and blend into the return.
+            launch = .2+self.p.preload_s
+            age = min(t,self.catch_trigger) - launch if self.catch_trigger is not None else t-launch
+            hz = 50/max(10,round(50/self.p.pump_hz))
+            yaw = f.pump_yaw_deg*side*math.sin(2*math.pi*hz*age+math.radians(f.pump_yaw_phase_deg))
+            yaw *= blend(age/.12)
+            if self.catch_trigger is not None:
+                yaw *= 1-blend((t-self.catch_trigger)/.35)
+            angles=euler(pose)
+            angles[2]=float(np.clip(angles[2]+math.radians(yaw),-math.pi/3,math.pi/3))
+            pose[:3,:3]=rotation(angles)
         self.projection_scale=1.
         if f.return_x_after_catch_s>=0 and self.catch_trigger is not None:
             pose[0,3]*=1-blend((t-self.catch_trigger-f.return_x_after_catch_s)/f.return_x_duration_s)
+        if f.edge_surge_mm and self.yaw_trigger is not None:
+            elapsed = t-self.yaw_trigger
+            thrust = stroke(elapsed/self.p.yaw_s, self.p.yaw_brake_fraction)
+            unwind = 1-blend((elapsed-self.p.yaw_s-self.p.yaw_hold_s)/self.p.yaw_return_s)
+            pose[0,3] = float(np.clip(pose[0,3]+.001*f.edge_surge_mm*thrust*unwind,-.025,.025))
         # A latched neutral recovery response, driven only by delayed roll/rate.
         # The motor profile and the normal IK projection still bound its motion.
         if f.emergency_roll_deg:

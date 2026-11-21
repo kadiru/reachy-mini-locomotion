@@ -3,7 +3,12 @@
 Learn head-driven, penguin-like locomotion from **Meta Quest 3S** demonstrations,
 then evaluate sim-to-real transfer on Reachy Mini Wireless.
 
-A dedicated simulated turn now accepts a signed torso heading. Reachy rocked
+The latest edge-pivot policy makes nominal 90° turns in four rightward strokes
+or five leftward strokes. It also trains directly on slick floors and delayed
+right turns. [Watch the best turns](media/simulation/efficient-rim-turns.mp4)
+or [compare measured rotation per head swing](docs/EFFICIENT_RIM_TURNS.md).
+
+The earlier target-pivot baseline also accepts a signed torso heading. Reachy rocked
 through nine head-driven strokes to make a 90° turn in either direction while
 holding the waist target fixed. [Watch the quarter-turns](media/simulation/edge-quarter-turns.mp4)
 or [inspect the policy and stress tests](docs/TARGET_EDGE_PIVOT.md).
