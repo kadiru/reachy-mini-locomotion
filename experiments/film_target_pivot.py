@@ -82,7 +82,7 @@ def main():
                 pen = ImageDraw.Draw(frame)
                 def label(x,y,s,size,color='#eff6f8'):
                     pen.text((x,y),s,font=style[size],fill=color)
-                label(20,8,'Head-driven edge pivot',32)
+                label(20,8,run.get('title','Head-driven edge pivot'),32)
                 playback = 'strongest rim contact    /    0.5×' if slow else 'real-time replay'
                 label(22,49,f'Reachy Mini    /    MuJoCo simulation    /    {playback}',16,'#c3d2d9')
                 label(625,14,f"Turn {abs(goal):g}° {'left' if goal>0 else 'right'}",26)

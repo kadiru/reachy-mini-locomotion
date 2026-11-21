@@ -1,0 +1,1591 @@
+{
+  "base_policy": "configs/efficient-rim-pivot.json",
+  "base_sha256": "5d5dfb4f94ebf92a247bee938580f056cdef743339af6203c690b666b116ce3c",
+  "extra_actions": [
+    {
+      "id": "catch-local-slick-3-28-28-0.015-0.06",
+      "side": 1,
+      "recipe": {
+        "preload_roll_deg": -33.362615887294794,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.5883364437543098,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -0.12707518949411534,
+        "x_mm": 8.241481009175576,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 3.160436448843308,
+        "pump_y_phase_deg": 36.18880747361926,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -24.661468400557876,
+        "catch_s": 0.04,
+        "catch_hold_s": 0.34037201666072514,
+        "yaw_deg": 26.275183601144487,
+        "yaw_at_roll_deg": 4.841236521349067,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.3696443183273168,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.06081009697619147,
+        "trigger_deg": 5.758668148004286,
+        "roll_kp": -3.1263925776160186,
+        "roll_kd_s": 0.11124244639555954,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.16906083526534366,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.02,
+        "yaw_windup_deg": 0.0,
+        "emergency_roll_deg": 28,
+        "emergency_prediction_s": 0.015,
+        "emergency_blend_s": 0.06
+      }
+    },
+    {
+      "id": "catch-surge-60-28-0.085-0.16",
+      "side": -1,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6405780102774842,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -2.3902367111312763,
+        "x_mm": -8.445171778235753,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.87815978671055,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 25,
+        "yaw_at_roll_deg": 9.04723746198596,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.08425062658888664,
+        "yaw_hold_s": 0.19507320182983193,
+        "yaw_return_s": 0.6340508174023742,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04,
+        "trigger_deg": 11.086516762388435,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08139847865204532,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.08186913748605257,
+        "edge_surge_mm": 43.15166727881045,
+        "yaw_before_catch": true,
+        "emergency_roll_deg": 28,
+        "emergency_prediction_s": 0.085,
+        "emergency_blend_s": 0.16
+      }
+    },
+    {
+      "id": "mirror-16",
+      "side": -1,
+      "recipe": {
+        "preload_roll_deg": -33.362615887294794,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.586368406244114,
+        "roll_deg": 35.27347614237835,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -0.6483398658687718,
+        "x_mm": 10.363265480457482,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 3.065116313708767,
+        "pump_y_phase_deg": 36.18880747361926,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -24.661468400557876,
+        "catch_s": 0.04,
+        "catch_hold_s": 0.34037201666072514,
+        "yaw_deg": 26.275183601144487,
+        "yaw_at_roll_deg": 4.841236521349067,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.3696443183273168,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.06602548863050267,
+        "trigger_deg": 3.605891761468828,
+        "roll_kp": -3.1263925776160186,
+        "roll_kd_s": 0.11124244639555954,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.16906083526534366,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.02,
+        "yaw_windup_deg": 0.0
+      }
+    },
+    {
+      "id": "mirror-43",
+      "side": -1,
+      "recipe": {
+        "preload_roll_deg": -33.362615887294794,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.5439826100540761,
+        "roll_deg": 38.056745948699984,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -0.12361158169567132,
+        "x_mm": 11.996122583346045,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.894004932647119,
+        "pump_y_phase_deg": 36.18880747361926,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -24.661468400557876,
+        "catch_s": 0.04,
+        "catch_hold_s": 0.34037201666072514,
+        "yaw_deg": 26.275183601144487,
+        "yaw_at_roll_deg": 4.841236521349067,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.3696443183273168,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.07158699931820166,
+        "trigger_deg": 4.93423479168232,
+        "roll_kp": -3.1263925776160186,
+        "roll_kd_s": 0.11124244639555954,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.16906083526534366,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.02,
+        "yaw_windup_deg": 0.0
+      }
+    },
+    {
+      "id": "mirror-53",
+      "side": -1,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6485776895330447,
+        "roll_deg": 39.07328505704421,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -1.2779244716479523,
+        "x_mm": 19.341109269202352,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 3.1160448956979976,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -55,
+        "yaw_at_roll_deg": 3.804083322615593,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.06774886857954864,
+        "yaw_hold_s": 0.37459322692256386,
+        "yaw_return_s": 0.4768629922837518,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04832895090987054,
+        "trigger_deg": 20.44260638983977,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.12982931486449972,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": true,
+        "workspace_joint_margin_rad": 0.11375853721745081,
+        "edge_surge_mm": -29.692797767692106
+      }
+    },
+    {
+      "id": "power-15",
+      "side": 1,
+      "recipe": {
+        "preload_roll_deg": -33.362615887294794,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.5639737888851107,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 0.1675936624506872,
+        "x_mm": 9.771739228917054,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 3.099794292249234,
+        "pump_y_phase_deg": 36.18880747361926,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -24.661468400557876,
+        "catch_s": 0.04,
+        "catch_hold_s": 0.39116766987446744,
+        "yaw_deg": 26.798515842132268,
+        "yaw_at_roll_deg": 4.841236521349067,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.3696443183273168,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.06081009697619147,
+        "trigger_deg": 5.169546336696912,
+        "roll_kp": -3.1263925776160186,
+        "roll_kd_s": 0.11124244639555954,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.16906083526534366,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.02,
+        "yaw_windup_deg": 0.0
+      }
+    },
+    {
+      "id": "power-67",
+      "side": 1,
+      "recipe": {
+        "preload_roll_deg": -33.362615887294794,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6148956246773144,
+        "roll_deg": 40.0,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": 0.006565246817720333,
+        "x_mm": 12.01456861067756,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 3.119298979681944,
+        "pump_y_phase_deg": 36.18880747361926,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -24.661468400557876,
+        "catch_s": 0.04,
+        "catch_hold_s": 0.3152450987847233,
+        "yaw_deg": 24.814623764140727,
+        "yaw_at_roll_deg": 4.841236521349067,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.3696443183273168,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.06081009697619147,
+        "trigger_deg": 6.072440763843751,
+        "roll_kp": -3.1263925776160186,
+        "roll_kd_s": 0.11124244639555954,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.16906083526534366,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.02,
+        "yaw_windup_deg": 0.0
+      }
+    },
+    {
+      "id": "slick-stroke-16",
+      "side": 1,
+      "recipe": {
+        "preload_roll_deg": -33.362615887294794,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.586368406244114,
+        "roll_deg": 35.27347614237835,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -0.6483398658687718,
+        "x_mm": 10.363265480457482,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 3.065116313708767,
+        "pump_y_phase_deg": 36.18880747361926,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -24.661468400557876,
+        "catch_s": 0.04,
+        "catch_hold_s": 0.34037201666072514,
+        "yaw_deg": 26.275183601144487,
+        "yaw_at_roll_deg": 4.841236521349067,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.3696443183273168,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.06602548863050267,
+        "trigger_deg": 3.605891761468828,
+        "roll_kp": -3.1263925776160186,
+        "roll_kd_s": 0.11124244639555954,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.16906083526534366,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.02,
+        "yaw_windup_deg": 0.0
+      }
+    },
+    {
+      "id": "slick-stroke-43",
+      "side": 1,
+      "recipe": {
+        "preload_roll_deg": -33.362615887294794,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.5439826100540761,
+        "roll_deg": 38.056745948699984,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -0.12361158169567132,
+        "x_mm": 11.996122583346045,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 2.894004932647119,
+        "pump_y_phase_deg": 36.18880747361926,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -24.661468400557876,
+        "catch_s": 0.04,
+        "catch_hold_s": 0.34037201666072514,
+        "yaw_deg": 26.275183601144487,
+        "yaw_at_roll_deg": 4.841236521349067,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.12,
+        "yaw_hold_s": 0.3696443183273168,
+        "yaw_return_s": 0.25,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.07158699931820166,
+        "trigger_deg": 4.93423479168232,
+        "roll_kp": -3.1263925776160186,
+        "roll_kd_s": 0.11124244639555954,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.16906083526534366,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": false,
+        "workspace_joint_margin_rad": 0.02,
+        "yaw_windup_deg": 0.0
+      }
+    },
+    {
+      "id": "slick-stroke-45",
+      "side": -1,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.605375964268888,
+        "roll_deg": 35.508579190994084,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -0.08168563319084665,
+        "x_mm": -3.3540651151998677,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 3.015611414393424,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": 25,
+        "yaw_at_roll_deg": 9.04723746198596,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.08425062658888664,
+        "yaw_hold_s": 0.19507320182983193,
+        "yaw_return_s": 0.6340508174023742,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.06953176464225702,
+        "trigger_deg": 10.509982377808015,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.08139847865204532,
+        "yaw_delay_after_catch_s": 0.04,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "workspace_joint_margin_rad": 0.08186913748605257,
+        "edge_surge_mm": 38.418722004617486,
+        "yaw_before_catch": true
+      }
+    },
+    {
+      "id": "slick-stroke-53",
+      "side": 1,
+      "recipe": {
+        "preload_roll_deg": -30.632249838080007,
+        "preload_y_mm": 25.0,
+        "preload_s": 0.6485776895330447,
+        "roll_deg": 39.07328505704421,
+        "y_mm": -12.890535316148142,
+        "swing_s": 0.12,
+        "pitch_deg": -1.2779244716479523,
+        "x_mm": 19.341109269202352,
+        "z_mm": -5.551499667769693,
+        "pump_cycles": 12,
+        "pump_hz": 3.1160448956979976,
+        "pump_y_phase_deg": 37.07822129907816,
+        "pump_sharpness": 0.00945730174670937,
+        "catch_at_deg": 6,
+        "catch_delay_s": 0.02,
+        "catch_roll_deg": 40.0,
+        "catch_y_mm": -12.890535316148142,
+        "catch_s": 0.06,
+        "catch_hold_s": 0.2,
+        "yaw_deg": -55,
+        "yaw_at_roll_deg": 3.804083322615593,
+        "yaw_delay_s": 0.0,
+        "yaw_s": 0.06774886857954864,
+        "yaw_hold_s": 0.37459322692256386,
+        "yaw_return_s": 0.4768629922837518,
+        "yaw_brake_fraction": 0.05
+      },
+      "feedback": {
+        "prediction_s": 0.04832895090987054,
+        "trigger_deg": 20.44260638983977,
+        "roll_kp": -1.5,
+        "roll_kd_s": 0.15,
+        "y_per_roll_mm_deg": 0,
+        "correction_limit_deg": 18.0,
+        "rate_filter_s": 0.04,
+        "activation_s": 0.08,
+        "sensor_delay_frames": 1,
+        "sensor_noise_deg": 0.0,
+        "sensor_seed": 0,
+        "catch_direction": -1,
+        "yaw_direction": 1,
+        "yaw_prediction_s": 0.12982931486449972,
+        "yaw_delay_after_catch_s": 0.0,
+        "state_dependent_yaw": true,
+        "workspace_projection": true,
+        "y_roll_kp_mm_deg": -0.9,
+        "y_roll_kd_mm_s_deg": 0.04,
+        "return_x_after_catch_s": 0.6,
+        "return_x_duration_s": 0.4,
+        "yaw_before_catch": true,
+        "workspace_joint_margin_rad": 0.11375853721745081,
+        "edge_surge_mm": -29.692797767692106
+      }
+    }
+  ],
+  "groups": [
+    {
+      "delay": 2,
+      "target_deg": -90,
+      "target_tolerance_deg": 3.0,
+      "opening": "slick-stroke-45",
+      "paths": [
+        [
+          {
+            "action": "slick-stroke-45",
+            "error": -90.0,
+            "turn": -14.256154039873477,
+            "roll": 17.480045008062735
+          },
+          {
+            "action": "power-15",
+            "error": -75.74384596012652,
+            "turn": -28.21898105966183,
+            "roll": 23.835233836847173
+          },
+          {
+            "action": "power-67",
+            "error": -47.52486490046469,
+            "turn": -22.95244655511364,
+            "roll": 25.515039729340035
+          },
+          {
+            "action": "catch-local-slick-3-28-28-0.015-0.06",
+            "error": -24.572418345351053,
+            "turn": -21.411359420412595,
+            "roll": 25.116142976472513
+          }
+        ],
+        [
+          {
+            "action": "slick-stroke-45",
+            "error": -90.0,
+            "turn": -17.46759141585969,
+            "roll": 16.990776437616432
+          },
+          {
+            "action": "slick-stroke-53",
+            "error": -72.53240858414031,
+            "turn": -16.468108537441264,
+            "roll": 12.14548449060618
+          },
+          {
+            "action": "slick-stroke-45",
+            "error": -56.064300046699046,
+            "turn": -20.242534356276288,
+            "roll": 17.64256809321417
+          },
+          {
+            "action": "slick-stroke-45",
+            "error": -35.82176569042276,
+            "turn": -21.561497336994755,
+            "roll": 18.94692292019768
+          },
+          {
+            "action": "catch-surge-60-28-0.085-0.16",
+            "error": -14.260268353428003,
+            "turn": -14.797396488411465,
+            "roll": 17.83825012213221
+          }
+        ],
+        [
+          {
+            "action": "slick-stroke-45",
+            "error": -90.0,
+            "turn": -18.532158326734987,
+            "roll": 16.98283668937119
+          },
+          {
+            "action": "slick-stroke-16",
+            "error": -71.46784167326501,
+            "turn": -15.626713669342422,
+            "roll": 19.591042886860972
+          },
+          {
+            "action": "slick-stroke-45",
+            "error": -55.84112800392259,
+            "turn": -23.192275776496565,
+            "roll": 18.797380620899848
+          },
+          {
+            "action": "slick-stroke-43",
+            "error": -32.648852227426026,
+            "turn": -21.989862696404337,
+            "roll": 20.061805854266126
+          },
+          {
+            "action": "phase-107/+1",
+            "error": -10.658989531021689,
+            "turn": -10.831257979916472,
+            "roll": 14.71558375963508
+          }
+        ],
+        [
+          {
+            "action": "slick-stroke-45",
+            "error": -90.0,
+            "turn": -13.930470383326181,
+            "roll": 17.578223050267834
+          },
+          {
+            "action": "power-15",
+            "error": -76.06952961667382,
+            "turn": -28.709187515285322,
+            "roll": 23.98517974912585
+          },
+          {
+            "action": "power-67",
+            "error": -47.3603421013885,
+            "turn": -24.80126691748538,
+            "roll": 24.992989052631508
+          },
+          {
+            "action": "catch-local-slick-3-28-28-0.015-0.06",
+            "error": -22.55907518390312,
+            "turn": -20.942194583058125,
+            "roll": 25.150899622130183
+          }
+        ],
+        [
+          {
+            "action": "slick-stroke-45",
+            "error": -90.0,
+            "turn": -14.164567561042814,
+            "roll": 17.64492904822382
+          },
+          {
+            "action": "power-15",
+            "error": -75.83543243895718,
+            "turn": -29.281021733196823,
+            "roll": 24.205541326320528
+          },
+          {
+            "action": "power-67",
+            "error": -46.55441070576036,
+            "turn": -24.139886511480356,
+            "roll": 25.1443642318077
+          },
+          {
+            "action": "catch-local-slick-3-28-28-0.015-0.06",
+            "error": -22.414524194280006,
+            "turn": -20.728318813116175,
+            "roll": 24.979132403104074
+          }
+        ],
+        [
+          {
+            "action": "slick-stroke-45",
+            "error": -90.0,
+            "turn": -17.257900626456955,
+            "roll": 17.13372380040985
+          },
+          {
+            "action": "slick-stroke-53",
+            "error": -72.74209937354304,
+            "turn": -16.93473722146768,
+            "roll": 12.280795220115913
+          },
+          {
+            "action": "slick-stroke-45",
+            "error": -55.80736215207536,
+            "turn": -20.069286919776637,
+            "roll": 17.456076348481243
+          },
+          {
+            "action": "slick-stroke-45",
+            "error": -35.738075232298726,
+            "turn": -21.836692110710615,
+            "roll": 18.91122688646977
+          },
+          {
+            "action": "catch-surge-60-28-0.085-0.16",
+            "error": -13.901383121588111,
+            "turn": -14.649600449522964,
+            "roll": 17.852938185109064
+          }
+        ],
+        [
+          {
+            "action": "slick-stroke-45",
+            "error": -90.0,
+            "turn": -17.440721780047124,
+            "roll": 17.197102828717806
+          },
+          {
+            "action": "slick-stroke-53",
+            "error": -72.55927821995287,
+            "turn": -16.091297214021676,
+            "roll": 12.23395821374145
+          },
+          {
+            "action": "slick-stroke-45",
+            "error": -56.4679810059312,
+            "turn": -20.075880903113678,
+            "roll": 17.48191821724413
+          },
+          {
+            "action": "slick-stroke-45",
+            "error": -36.39210010281752,
+            "turn": -21.579731056198682,
+            "roll": 19.026628090274595
+          },
+          {
+            "action": "catch-surge-60-28-0.085-0.16",
+            "error": -14.81236904661884,
+            "turn": -15.019309921644805,
+            "roll": 18.14349990905646
+          }
+        ],
+        [
+          {
+            "action": "slick-stroke-45",
+            "error": -90.0,
+            "turn": -18.27822645502412,
+            "roll": 16.75143188014143
+          },
+          {
+            "action": "slick-stroke-16",
+            "error": -71.72177354497587,
+            "turn": -15.669784623612433,
+            "roll": 19.527272659707464
+          },
+          {
+            "action": "slick-stroke-45",
+            "error": -56.051988921363446,
+            "turn": -23.368161555663875,
+            "roll": 18.740166777073366
+          },
+          {
+            "action": "slick-stroke-43",
+            "error": -32.68382736569957,
+            "turn": -21.090631769970784,
+            "roll": 20.201492769696095
+          },
+          {
+            "action": "phase-107/+1",
+            "error": -11.593195595728787,
+            "turn": -10.357726016214755,
+            "roll": 14.896599188015518
+          }
+        ],
+        [
+          {
+            "action": "slick-stroke-45",
+            "error": -90.0,
+            "turn": -18.545054299752856,
+            "roll": 17.05956308146325
+          },
+          {
+            "action": "slick-stroke-16",
+            "error": -71.45494570024715,
+            "turn": -15.157938167586373,
+            "roll": 19.379812890606008
+          },
+          {
+            "action": "slick-stroke-45",
+            "error": -56.29700753266077,
+            "turn": -23.585585507185947,
+            "roll": 18.824779571264592
+          },
+          {
+            "action": "slick-stroke-43",
+            "error": -32.711422025474825,
+            "turn": -20.729516588447957,
+            "roll": 20.0654583748902
+          },
+          {
+            "action": "phase-107/+1",
+            "error": -11.981905437026867,
+            "turn": -10.738860446656247,
+            "roll": 14.538630359011922
+          }
+        ]
+      ]
+    },
+    {
+      "delay": 2,
+      "target_deg": 90,
+      "target_tolerance_deg": 3.0,
+      "opening": "mirror-43",
+      "paths": [
+        [
+          {
+            "action": "mirror-43",
+            "error": 90.0,
+            "turn": 9.311355757112644,
+            "roll": 16.33787197954645
+          },
+          {
+            "action": "local-slick-3-28/-1",
+            "error": 80.68864424288736,
+            "turn": 21.84017115548119,
+            "roll": 23.37621362998146
+          },
+          {
+            "action": "local-slick-3-28/-1",
+            "error": 58.84847308740616,
+            "turn": 21.077990658567995,
+            "roll": 21.10261882928403
+          },
+          {
+            "action": "local-slick-3-28/-1",
+            "error": 37.77048242883817,
+            "turn": 17.054433493180063,
+            "roll": 27.244089708498134
+          },
+          {
+            "action": "local-slick-3-4/-1",
+            "error": 20.716048935658108,
+            "turn": 18.541348342125943,
+            "roll": 21.418117877375767
+          }
+        ],
+        [
+          {
+            "action": "mirror-43",
+            "error": 90.0,
+            "turn": 12.10767341412612,
+            "roll": 18.404666298520638
+          },
+          {
+            "action": "mirror-53",
+            "error": 77.89232658587387,
+            "turn": 15.639991610371203,
+            "roll": 16.006880765122897
+          },
+          {
+            "action": "mirror-43",
+            "error": 62.25233497550268,
+            "turn": 10.732830084274383,
+            "roll": 17.492827815124127
+          },
+          {
+            "action": "mirror-53",
+            "error": 51.519504891228294,
+            "turn": 7.791926718077882,
+            "roll": 16.231585830069896
+          },
+          {
+            "action": "mirror-43",
+            "error": 43.72757817315041,
+            "turn": 11.265460014839448,
+            "roll": 17.792532494917797
+          },
+          {
+            "action": "phase-107/-1",
+            "error": 32.462118158310965,
+            "turn": 10.116360475607557,
+            "roll": 15.056745209307747
+          },
+          {
+            "action": "phase-107/-1",
+            "error": 22.345757682703407,
+            "turn": 11.307731992186746,
+            "roll": 14.958383659002367
+          },
+          {
+            "action": "phase-107/-1",
+            "error": 11.038025690516662,
+            "turn": 11.20566525874463,
+            "roll": 14.488237023991978
+          }
+        ],
+        [
+          {
+            "action": "mirror-43",
+            "error": 90.0,
+            "turn": 26.106308348211403,
+            "roll": 22.19443217970102
+          },
+          {
+            "action": "mirror-16",
+            "error": 63.8936916517886,
+            "turn": 17.070281097728635,
+            "roll": 19.743497297463275
+          },
+          {
+            "action": "mirror-43",
+            "error": 46.82341055405996,
+            "turn": 21.435779822912394,
+            "roll": 20.36174882429308
+          },
+          {
+            "action": "mirror-16",
+            "error": 25.387630731147567,
+            "turn": 23.600133775871214,
+            "roll": 21.63250225494839
+          }
+        ],
+        [
+          {
+            "action": "mirror-43",
+            "error": 90.0,
+            "turn": 9.462035465654575,
+            "roll": 16.17968037788354
+          },
+          {
+            "action": "surge-60/+1",
+            "error": 80.53796453434542,
+            "turn": 22.904804546769164,
+            "roll": 19.81646710185098
+          },
+          {
+            "action": "local-slick-3-28/-1",
+            "error": 57.63315998757626,
+            "turn": 20.935051199991783,
+            "roll": 20.74422502182085
+          },
+          {
+            "action": "local-slick-3-28/-1",
+            "error": 36.69810878758448,
+            "turn": 23.22534417610931,
+            "roll": 23.52698640241204
+          },
+          {
+            "action": "local-slick-3-4/-1",
+            "error": 13.47276461147517,
+            "turn": 17.5355137694375,
+            "roll": 20.82106828667766
+          }
+        ],
+        [
+          {
+            "action": "mirror-43",
+            "error": 90.0,
+            "turn": 9.364802606916212,
+            "roll": 15.960661657489425
+          },
+          {
+            "action": "local-slick-3-28/-1",
+            "error": 80.63519739308379,
+            "turn": 24.61401123912559,
+            "roll": 21.76474044474219
+          },
+          {
+            "action": "local-slick-3-28/-1",
+            "error": 56.0211861539582,
+            "turn": 21.16858052427684,
+            "roll": 21.392521018308685
+          },
+          {
+            "action": "surge-60/+1",
+            "error": 34.852605629681356,
+            "turn": 13.03916395679672,
+            "roll": 17.784194746178745
+          },
+          {
+            "action": "local-slick-3-28/-1",
+            "error": 21.813441672884636,
+            "turn": 21.19657175269927,
+            "roll": 24.080928285259866
+          }
+        ],
+        [
+          {
+            "action": "mirror-43",
+            "error": 90.0,
+            "turn": 11.88656397733228,
+            "roll": 18.436481476557258
+          },
+          {
+            "action": "mirror-53",
+            "error": 78.11343602266771,
+            "turn": 17.029985756412447,
+            "roll": 12.715360360667209
+          },
+          {
+            "action": "mirror-43",
+            "error": 61.08345026625527,
+            "turn": 10.717462502162608,
+            "roll": 17.19531375749343
+          },
+          {
+            "action": "mirror-53",
+            "error": 50.365987764092665,
+            "turn": 6.614751679677504,
+            "roll": 16.45326390903331
+          },
+          {
+            "action": "mirror-43",
+            "error": 43.75123608441516,
+            "turn": 10.906620361866715,
+            "roll": 17.46561051976562
+          },
+          {
+            "action": "phase-107/-1",
+            "error": 32.84461572254845,
+            "turn": 10.423112475831964,
+            "roll": 15.145554864604568
+          },
+          {
+            "action": "phase-107/-1",
+            "error": 22.421503246716483,
+            "turn": 7.401459891098497,
+            "roll": 14.582016544060039
+          },
+          {
+            "action": "phase-107/-1",
+            "error": 15.020043355617986,
+            "turn": 11.075376539956153,
+            "roll": 14.663467337925447
+          }
+        ],
+        [
+          {
+            "action": "mirror-43",
+            "error": 90.0,
+            "turn": 26.551692498405377,
+            "roll": 21.091748680482706
+          },
+          {
+            "action": "mirror-16",
+            "error": 63.44830750159463,
+            "turn": 18.200389875395356,
+            "roll": 19.982217399269018
+          },
+          {
+            "action": "mirror-43",
+            "error": 45.24791762619927,
+            "turn": 21.993954959288715,
+            "roll": 20.460135533708815
+          },
+          {
+            "action": "mirror-16",
+            "error": 23.253962666910553,
+            "turn": 23.918996271446787,
+            "roll": 21.37779168108697
+          }
+        ],
+        [
+          {
+            "action": "mirror-43",
+            "error": 90.0,
+            "turn": 26.078525774309675,
+            "roll": 22.51920079201664
+          },
+          {
+            "action": "mirror-16",
+            "error": 63.921474225690325,
+            "turn": 17.870398066238252,
+            "roll": 19.902766575746444
+          },
+          {
+            "action": "mirror-43",
+            "error": 46.05107615945207,
+            "turn": 18.37618386062333,
+            "roll": 19.537897090142778
+          },
+          {
+            "action": "mirror-16",
+            "error": 27.674892298828745,
+            "turn": 23.606134140019073,
+            "roll": 21.302192228103078
+          }
+        ],
+        [
+          {
+            "action": "mirror-43",
+            "error": 90.0,
+            "turn": 9.859692777382392,
+            "roll": 16.64864445639805
+          },
+          {
+            "action": "phase-107/-1",
+            "error": 80.14030722261761,
+            "turn": 11.655222131868921,
+            "roll": 14.224891724673862
+          },
+          {
+            "action": "local-slick-3-4/-1",
+            "error": 68.48508509074868,
+            "turn": 15.35395049055607,
+            "roll": 19.70439956854198
+          },
+          {
+            "action": "phase-107/-1",
+            "error": 53.13113460019262,
+            "turn": 11.617192642936722,
+            "roll": 14.513087932431022
+          },
+          {
+            "action": "local-slick-3-4/-1",
+            "error": 41.513941957255895,
+            "turn": 21.30978258859338,
+            "roll": 22.561297676602504
+          },
+          {
+            "action": "phase-107/-1",
+            "error": 20.204159368662516,
+            "turn": 10.547701959780227,
+            "roll": 14.55040606338439
+          },
+          {
+            "action": "phase-68/+1",
+            "error": 9.65645740888229,
+            "turn": 7.269527270674345,
+            "roll": 10.840994557091634
+          }
+        ],
+        [
+          {
+            "action": "mirror-43",
+            "error": 90.0,
+            "turn": 9.852462497762241,
+            "roll": 16.693951419997152
+          },
+          {
+            "action": "phase-107/-1",
+            "error": 80.14753750223775,
+            "turn": 11.335822976228998,
+            "roll": 14.162753497532186
+          },
+          {
+            "action": "local-slick-3-4/-1",
+            "error": 68.81171452600876,
+            "turn": 17.093748426140987,
+            "roll": 20.51745424742191
+          },
+          {
+            "action": "phase-107/-1",
+            "error": 51.71796609986777,
+            "turn": 11.165046220393094,
+            "roll": 14.619974929939056
+          },
+          {
+            "action": "local-slick-3-4/-1",
+            "error": 40.55291987947468,
+            "turn": 22.213696947385777,
+            "roll": 22.67768711485645
+          },
+          {
+            "action": "phase-107/-1",
+            "error": 18.3392229320889,
+            "turn": 10.646438940124483,
+            "roll": 14.571276572667893
+          },
+          {
+            "action": "phase-68/+1",
+            "error": 7.6927839919644185,
+            "turn": 7.691670707377185,
+            "roll": 11.227081293885323
+          }
+        ],
+        [
+          {
+            "action": "mirror-43",
+            "error": 90.0,
+            "turn": 9.842735112899428,
+            "roll": 16.806412745734153
+          },
+          {
+            "action": "phase-107/-1",
+            "error": 80.15726488710057,
+            "turn": 11.636491083736443,
+            "roll": 14.357015042644235
+          },
+          {
+            "action": "local-slick-3-4/-1",
+            "error": 68.52077380336414,
+            "turn": 16.864410361342706,
+            "roll": 20.426656649404197
+          },
+          {
+            "action": "phase-107/-1",
+            "error": 51.65636344202142,
+            "turn": 11.457952429089836,
+            "roll": 14.362738034372148
+          },
+          {
+            "action": "local-slick-3-4/-1",
+            "error": 40.19841101293159,
+            "turn": 24.058679995020185,
+            "roll": 26.535612706754605
+          },
+          {
+            "action": "phase-107/-1",
+            "error": 16.1397310179114,
+            "turn": 10.730319156233364,
+            "roll": 14.635397479191179
+          },
+          {
+            "action": "phase-68/+1",
+            "error": 5.409411861678038,
+            "turn": 7.601469935313375,
+            "roll": 11.127478087388056
+          }
+        ],
+        [
+          {
+            "action": "mirror-43",
+            "error": 90.0,
+            "turn": 16.60662516746114,
+            "roll": 19.60193502816069
+          },
+          {
+            "action": "phase-107/-1",
+            "error": 73.39337483253885,
+            "turn": 11.795054861987015,
+            "roll": 15.060202026644056
+          },
+          {
+            "action": "phase-107/-1",
+            "error": 61.59831997055184,
+            "turn": 11.91241408356699,
+            "roll": 14.881178003369996
+          },
+          {
+            "action": "phase-107/-1",
+            "error": 49.685905886984855,
+            "turn": 10.650276730545286,
+            "roll": 14.924711303464612
+          },
+          {
+            "action": "phase-107/-1",
+            "error": 39.03562915643957,
+            "turn": 10.922063008806568,
+            "roll": 15.062565875388605
+          },
+          {
+            "action": "phase-35/+1",
+            "error": 28.113566147633,
+            "turn": 7.597317261056126,
+            "roll": 16.234502160153497
+          },
+          {
+            "action": "pair-1-8/-1",
+            "error": 20.516248886576875,
+            "turn": 9.868644047275183,
+            "roll": 13.417870442256435
+          },
+          {
+            "action": "phase-35/+1",
+            "error": 10.647604839301692,
+            "turn": 8.013934677469408,
+            "roll": 16.139413067524895
+          }
+        ]
+      ],
+      "match_radius": 1.0
+    },
+    {
+      "delay": 1,
+      "target_deg": -24,
+      "target_tolerance_deg": 3.0,
+      "opening": "evo-inertia-3-12/+1",
+      "paths": [
+        [
+          {
+            "action": "evo-inertia-3-12/+1",
+            "error": -24.0,
+            "turn": -4.662650905422418,
+            "roll": 9.293555646794863
+          },
+          {
+            "action": "surge-77/-1",
+            "error": -19.337349094577583,
+            "turn": -22.777421748939744,
+            "roll": 18.52089358664685
+          }
+        ],
+        [
+          {
+            "action": "evo-inertia-3-12/+1",
+            "error": -24.0,
+            "turn": -14.16969131897379,
+            "roll": 15.321301526100234
+          },
+          {
+            "action": "evo-inertia-3-18/+1",
+            "error": -9.83030868102621,
+            "turn": -14.671094944052737,
+            "roll": 16.39691186916943
+          },
+          {
+            "action": "rim-5/+1",
+            "error": 4.840786263026526,
+            "turn": 3.3858003194113344,
+            "roll": 16.60464959213844
+          }
+        ],
+        [
+          {
+            "action": "evo-inertia-3-12/+1",
+            "error": -24.0,
+            "turn": -10.450338952027963,
+            "roll": 14.196724696843711
+          },
+          {
+            "action": "evo-inertia-3-18/+1",
+            "error": -13.549661047972037,
+            "turn": -8.725959337205374,
+            "roll": 14.468022700878183
+          },
+          {
+            "action": "rim-30/-1",
+            "error": -4.823701710766663,
+            "turn": -5.241539498300803,
+            "roll": 14.027929386388944
+          }
+        ],
+        [
+          {
+            "action": "evo-inertia-3-12/+1",
+            "error": -24.0,
+            "turn": -17.75233869436007,
+            "roll": 17.412931982940822
+          },
+          {
+            "action": "wind-21/+1",
+            "error": -6.24766130563993,
+            "turn": -8.22526830394591,
+            "roll": 19.09765512643785
+          }
+        ],
+        [
+          {
+            "action": "evo-inertia-3-12/+1",
+            "error": -24.0,
+            "turn": -4.012931891565298,
+            "roll": 9.375169593822916
+          },
+          {
+            "action": "surge-77/-1",
+            "error": -19.987068108434702,
+            "turn": -23.76992928283298,
+            "roll": 18.568647894154733
+          }
+        ],
+        [
+          {
+            "action": "evo-inertia-3-12/+1",
+            "error": -24.0,
+            "turn": -4.610435849061706,
+            "roll": 9.177245509589559
+          },
+          {
+            "action": "surge-77/-1",
+            "error": -19.389564150938295,
+            "turn": -23.002460571702212,
+            "roll": 18.436009697551846
+          }
+        ],
+        [
+          {
+            "action": "evo-inertia-3-12/+1",
+            "error": -24.0,
+            "turn": -2.6762003673228367,
+            "roll": 7.113890362200277
+          },
+          {
+            "action": "local-nominal-3-0/+1",
+            "error": -21.323799632677165,
+            "turn": -24.043325686481786,
+            "roll": 16.719449575477842
+          }
+        ],
+        [
+          {
+            "action": "evo-inertia-3-12/+1",
+            "error": -24.0,
+            "turn": -17.10965824562609,
+            "roll": 17.331516871721302
+          },
+          {
+            "action": "wind-21/+1",
+            "error": -6.89034175437391,
+            "turn": -8.738933395456858,
+            "roll": 19.217852139458838
+          }
+        ]
+      ]
+    },
+    {
+      "delay": 2,
+      "target_deg": -24,
+      "target_tolerance_deg": 3.0,
+      "opening": "phase-107/+1",
+      "paths": [
+        [
+          {
+            "action": "phase-107/+1",
+            "error": -24.0,
+            "turn": -10.296863047972312,
+            "roll": 14.323930043985133
+          },
+          {
+            "action": "phase-107/+1",
+            "error": -13.703136952027688,
+            "turn": -10.33098747125839,
+            "roll": 14.084410265387621
+          }
+        ],
+        [
+          {
+            "action": "phase-107/+1",
+            "error": -24.0,
+            "turn": -10.588426948418373,
+            "roll": 14.400466019306744
+          },
+          {
+            "action": "phase-107/+1",
+            "error": -13.411573051581627,
+            "turn": -10.627635136131286,
+            "roll": 14.249531910588917
+          }
+        ],
+        [
+          {
+            "action": "phase-107/+1",
+            "error": -24.0,
+            "turn": -10.020826130584291,
+            "roll": 13.957718578682888
+          },
+          {
+            "action": "phase-107/+1",
+            "error": -13.979173869415709,
+            "turn": -10.311426753304593,
+            "roll": 13.89501181001823
+          }
+        ],
+        [
+          {
+            "action": "phase-107/+1",
+            "error": -24.0,
+            "turn": -10.15369879427343,
+            "roll": 14.52522811488445
+          },
+          {
+            "action": "pair-1-8/+1",
+            "error": -13.84630120572657,
+            "turn": -17.228601660403775,
+            "roll": 13.768513856930236
+          }
+        ]
+      ]
+    }
+  ]
+}

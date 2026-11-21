@@ -3,7 +3,9 @@
 Learn head-driven, penguin-like locomotion from **Meta Quest 3S** demonstrations,
 then evaluate sim-to-real transfer on Reachy Mini Wireless.
 
-The latest edge-pivot policy makes nominal 90° turns in four rightward strokes
+The slick-floor pivot policy halves the original right quarter-turn from eight strokes to four with the waist held at zero. It passed 95/95 matched simulation trials and 7/10 final held-out checks. [Watch the turn](media/simulation/slick-four-stroke-turn.mp4) or [inspect the loaded-rim measurements](docs/SLICK_QUARTER_TURN.md).
+
+The earlier edge-pivot policy makes nominal 90° turns in four rightward strokes
 or five leftward strokes. It also trains directly on slick floors and delayed
 right turns. [Watch the best turns](media/simulation/efficient-rim-turns.mp4)
 or [compare measured rotation per head swing](docs/EFFICIENT_RIM_TURNS.md).

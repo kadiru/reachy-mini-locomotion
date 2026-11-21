@@ -1,5 +1,13 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 21 — Four-stroke right turns on the slick floor
+
+The matched 90° right command now settles at 86.8° in 4 strokes and 18.4 s, down from eight strokes and 36.0 s on the 4.80 V, friction-0.55 model. Measured directional head swings fell from 42 to 37. The waist servo holds zero with the same motor envelope. The best recorded same-floor trial settled at 88.3°.
+
+The final policy passed 95/95 previous tests including the three former misses, 14/14 intermediate stress tests after repair, and 7/10 newly reserved tests. Across these 119 trials there were two falls and zero joint stops. The left turn fell at friction 0.554, the right turn fell at 0.573, and the short turn on a new intermediate floor produced 9.3° of base rotation on a loaded rim against a 9.6° requirement. The intermediate policy had fallen on one left turn. A gentler second stroke recovered the turn in seven strokes. Hardware transfer remains unverified. The next transfer step is a supported recording of floor response, gyro processing and motor-bus voltage.
+
+[Watch the slick-floor quarter-turn](media/simulation/slick-four-stroke-turn.mp4) · [Conditions, measurements, limitations and replay commands](docs/SLICK_QUARTER_TURN.md).
+
 ## November 21 — More torso turn per head swing
 
 The frozen waist-neutral policy passed all 67 original pivot cases, including

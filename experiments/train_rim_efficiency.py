@@ -135,7 +135,7 @@ def measures(result):
                 measured_swings=max(roll,yaw))
 
 
-def run(job):
+def run(job, *, policy_class=None):
     bank, goal, condition, mode, path, *override = job
     sim = simulator(condition)
     delay, noise, seed = MODELS[condition][-3:]
@@ -147,7 +147,8 @@ def run(job):
                                  **read(BANK)['control'])
     else:
         from reachy_locomotion.efficient_pivot import EfficientPivot
-        controller = EfficientPivot(bank,goal,sim.checked_ik,seed=seed,delay=delay,noise=noise,
+        controller_type = policy_class or EfficientPivot
+        controller = controller_type(bank,goal,sim.checked_ik,seed=seed,delay=delay,noise=noise,
                                     settings=override[0] if override else None)
     result = sim.run_primitive(Primitive(),seconds=4.4*controller.max_strokes+1.,controller=controller,
                                waist_mode='hold_neutral',record=True,tilt_limit_deg=None,finish_settle_s=.8)
