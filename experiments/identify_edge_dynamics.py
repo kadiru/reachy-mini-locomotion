@@ -20,7 +20,7 @@ def sample(job):
     s=CACHE[dt];policy=dict(recipe=read('configs/primitive-catch-experimental.json'),feedback=asdict(EdgeFeedback(target_roll_deg=32.1,sensor_delay_frames=0)))
     c=LinearEdgeController(policy['recipe'],policy['feedback'],-1,s.checked_ik,excitation_seed=seed);c.hold_from_start=True
     rng=np.random.default_rng(seed)
-    r=s.run_primitive(policy['recipe'],seconds=2,controller=c,waist_mode='hold_neutral',tilt_limit_deg=35,diagnostic_initial_roll_deg=-32.1+float(rng.uniform(-.8,.8)))
+    r=s.run_primitive(policy['recipe'],seconds=2,controller=c,waist_mode='hold_neutral',tilt_limit_deg=None,diagnostic_initial_roll_deg=-32.1+float(rng.uniform(-.8,.8)))
     return dict(seed=seed,termination=r['termination'],trace=[{k:x[k] for k in ['time_s','edge_state','edge_action','edge_observation']} for x in r['trace']])
 
 def main():

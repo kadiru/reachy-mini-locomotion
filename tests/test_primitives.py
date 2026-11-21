@@ -46,6 +46,27 @@ class PrimitivePhysicsTests(unittest.TestCase):
             mujoco.mj_jac(m,d,jac,None,point,sim.base)
             np.testing.assert_allclose(jac@d.qvel,0,atol=1e-10)
 
+    def test_40_degree_reset_continues_until_contact(self):
+        from reachy_locomotion.primitives import PrimitiveSimulator
+        config = json.loads((ROOT/'configs/motors-speed-trained.json').read_text())
+        config['timestep_s'] = .00025
+        sim = PrimitiveSimulator(UPSTREAM, config)
+        for backstop in (80, None):
+            with self.subTest(backstop=backstop):
+                recording = dict(record=True, collision_window=(.003,.017)) if backstop is None else {}
+                r = sim.run_primitive(Primitive(preload_roll_deg=0, roll_deg=0), seconds=1,
+                                      waist_mode='hold_neutral', diagnostic_initial_roll_deg=40,
+                                      tilt_limit_deg=backstop, **recording)
+                self.assertEqual(r['first_35deg_time_s'], 0)
+                self.assertEqual(r['first_40deg_time_s'], 0)
+                self.assertEqual(r['termination'], 'nonfoot_floor_contact')
+                self.assertGreater(r['peak_tilt_deg'], 60)
+                if recording:
+                    times = [frame['time_s'] for frame in r['collision_frames']]
+                    self.assertGreaterEqual(len(times), 7)
+                    self.assertTrue(all(.003-1e-9 <= t <= .017+1e-9 for t in times))
+                    self.assertLessEqual(max(b-a for a,b in zip(times,times[1:])), .00200001)
+
     def test_ball_floor_contact_does_not_disable_robot_floor_guard(self):
         from reachy_locomotion.primitives import PrimitiveSimulator
         config=json.loads((ROOT/'configs/motors-speed-trained.json').read_text())

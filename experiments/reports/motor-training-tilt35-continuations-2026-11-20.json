@@ -1,0 +1,369 @@
+{
+  "source": "experiments/reports/motor-training-ball-qualification-2026-11-20.json",
+  "source_sha256": "b8d1ec47551e4066dcb2d23829bc82135f3f390b8b56af30ad2a8b1a55ecb3f7",
+  "evidence": "uncalibrated simulation",
+  "selection": "All 16 rows stopped at 35 degrees. Replays within the suite include repeated launches.",
+  "intervention": "Replayed the frozen jobs replacing tilt_limit_deg=35 with tilt_limit_deg=80 in experiments/train_balance_robustness.py, retaining record of first crossing of 35 degrees and all joint/contact/mechanism checks.",
+  "results": {
+    "3": {
+      "id": "qual-left-dt100-left",
+      "matching_prior_trajectory_frames": 119,
+      "first_35_s": 2.373900000000585,
+      "peak_tilt_deg": 36.63975198876891,
+      "terminal_tilt_deg": 29.26739851958969,
+      "terminal_time_s": 3.1411000000022042,
+      "termination": "actual_joint_limit_exceeded",
+      "hold_return_pass": false,
+      "impact_trial_pass": false,
+      "impact_events": [
+        {
+          "index": 0,
+          "contacted_robot": false,
+          "rebounded": false,
+          "balanced_before_impact": false,
+          "recovery_s": null,
+          "peak_angle_departure_deg": null,
+          "peak_impact_angle_change_deg": null,
+          "normal_impulse_ns": 0.0,
+          "pass_impact": false
+        }
+      ]
+    },
+    "4": {
+      "id": "qual-left-dt100-right",
+      "matching_prior_trajectory_frames": 119,
+      "first_35_s": 2.373900000000585,
+      "peak_tilt_deg": 36.63975198876891,
+      "terminal_tilt_deg": 29.26739851958969,
+      "terminal_time_s": 3.1411000000022042,
+      "termination": "actual_joint_limit_exceeded",
+      "hold_return_pass": false,
+      "impact_trial_pass": false,
+      "impact_events": [
+        {
+          "index": 0,
+          "contacted_robot": false,
+          "rebounded": false,
+          "balanced_before_impact": false,
+          "recovery_s": null,
+          "peak_angle_departure_deg": null,
+          "peak_impact_angle_change_deg": null,
+          "normal_impulse_ns": 0.0,
+          "pass_impact": false
+        }
+      ]
+    },
+    "5": {
+      "id": "qual-left-dt250-left",
+      "matching_prior_trajectory_frames": 133,
+      "first_35_s": 2.6512499999998904,
+      "peak_tilt_deg": 72.74181723902112,
+      "terminal_tilt_deg": 72.74181723902112,
+      "terminal_time_s": 3.290999999999536,
+      "termination": "nonfoot_floor_contact",
+      "hold_return_pass": false,
+      "impact_trial_pass": false,
+      "impact_events": [
+        {
+          "index": 0,
+          "contacted_robot": false,
+          "rebounded": false,
+          "balanced_before_impact": false,
+          "recovery_s": null,
+          "peak_angle_departure_deg": null,
+          "peak_impact_angle_change_deg": null,
+          "normal_impulse_ns": 0.0,
+          "pass_impact": false
+        }
+      ]
+    },
+    "6": {
+      "id": "qual-left-dt250-right",
+      "matching_prior_trajectory_frames": 133,
+      "first_35_s": 2.6512499999998904,
+      "peak_tilt_deg": 72.74181723902112,
+      "terminal_tilt_deg": 72.74181723902112,
+      "terminal_time_s": 3.290999999999536,
+      "termination": "nonfoot_floor_contact",
+      "hold_return_pass": false,
+      "impact_trial_pass": false,
+      "impact_events": [
+        {
+          "index": 0,
+          "contacted_robot": false,
+          "rebounded": false,
+          "balanced_before_impact": false,
+          "recovery_s": null,
+          "peak_angle_departure_deg": null,
+          "peak_impact_angle_change_deg": null,
+          "normal_impulse_ns": 0.0,
+          "pass_impact": false
+        }
+      ]
+    },
+    "9": {
+      "id": "qual-left-gyro030",
+      "matching_prior_trajectory_frames": 150,
+      "first_35_s": 2.9957500000007884,
+      "peak_tilt_deg": 36.73290635204287,
+      "terminal_tilt_deg": 33.01260153649097,
+      "terminal_time_s": 14.000000000021341,
+      "termination": "completed",
+      "hold_return_pass": false,
+      "impact_trial_pass": false,
+      "impact_events": [
+        {
+          "index": 0,
+          "contacted_robot": true,
+          "rebounded": true,
+          "balanced_before_impact": false,
+          "recovery_s": null,
+          "peak_angle_departure_deg": 2.934085978763413,
+          "peak_impact_angle_change_deg": 2.9369211557807944,
+          "normal_impulse_ns": 0.008504251497664187,
+          "pass_impact": false
+        }
+      ]
+    },
+    "10": {
+      "id": "qual-left-delay40",
+      "matching_prior_trajectory_frames": 122,
+      "first_35_s": 2.4318750000000993,
+      "peak_tilt_deg": 38.539838836503996,
+      "terminal_tilt_deg": 38.53983883650407,
+      "terminal_time_s": 3.2708750000011246,
+      "termination": "actual_joint_limit_exceeded",
+      "hold_return_pass": false,
+      "impact_trial_pass": false,
+      "impact_events": [
+        {
+          "index": 0,
+          "contacted_robot": false,
+          "rebounded": false,
+          "balanced_before_impact": false,
+          "recovery_s": null,
+          "peak_angle_departure_deg": null,
+          "peak_impact_angle_change_deg": null,
+          "normal_impulse_ns": 0.0,
+          "pass_impact": false
+        }
+      ]
+    },
+    "14": {
+      "id": "qual-left-smaller",
+      "matching_prior_trajectory_frames": 306,
+      "first_35_s": 6.1199999999970744,
+      "peak_tilt_deg": 40.4340949695067,
+      "terminal_tilt_deg": 40.43409496950667,
+      "terminal_time_s": 6.218874999996844,
+      "termination": "actual_joint_limit_exceeded",
+      "hold_return_pass": false,
+      "impact_trial_pass": false,
+      "impact_events": [
+        {
+          "index": 0,
+          "contacted_robot": true,
+          "rebounded": true,
+          "balanced_before_impact": true,
+          "recovery_s": null,
+          "peak_angle_departure_deg": 6.694172426465158,
+          "peak_impact_angle_change_deg": 6.862590993773875,
+          "normal_impulse_ns": 0.06414440261537464,
+          "pass_impact": false
+        }
+      ]
+    },
+    "17": {
+      "id": "qual-right-dt100-left",
+      "matching_prior_trajectory_frames": 178,
+      "first_35_s": 3.543400000003053,
+      "peak_tilt_deg": 35.02503547617916,
+      "terminal_tilt_deg": 30.775123973023835,
+      "terminal_time_s": 13.99999999998071,
+      "termination": "completed",
+      "hold_return_pass": false,
+      "impact_trial_pass": true,
+      "impact_events": [
+        {
+          "index": 0,
+          "contacted_robot": true,
+          "rebounded": true,
+          "balanced_before_impact": true,
+          "recovery_s": 1.0794999999999932,
+          "peak_angle_departure_deg": 2.781731241271846,
+          "peak_impact_angle_change_deg": 1.8197606169885958,
+          "normal_impulse_ns": 0.008403024921163097,
+          "pass_impact": true
+        }
+      ]
+    },
+    "18": {
+      "id": "qual-right-dt100-right",
+      "matching_prior_trajectory_frames": 178,
+      "first_35_s": 3.543400000003053,
+      "peak_tilt_deg": 35.02503547617916,
+      "terminal_tilt_deg": 30.77515045415514,
+      "terminal_time_s": 13.99999999998071,
+      "termination": "completed",
+      "hold_return_pass": false,
+      "impact_trial_pass": true,
+      "impact_events": [
+        {
+          "index": 0,
+          "contacted_robot": true,
+          "rebounded": true,
+          "balanced_before_impact": true,
+          "recovery_s": 0.38109999999952393,
+          "peak_angle_departure_deg": 1.4080515418727089,
+          "peak_impact_angle_change_deg": 0.9294725259237637,
+          "normal_impulse_ns": 0.00898236896357696,
+          "pass_impact": true
+        }
+      ]
+    },
+    "19": {
+      "id": "qual-right-dt250-left",
+      "matching_prior_trajectory_frames": 138,
+      "first_35_s": 2.74249999999984,
+      "peak_tilt_deg": 70.3036429905128,
+      "terminal_tilt_deg": 70.3036429905128,
+      "terminal_time_s": 3.882499999999208,
+      "termination": "nonfoot_floor_contact",
+      "hold_return_pass": false,
+      "impact_trial_pass": false,
+      "impact_events": [
+        {
+          "index": 0,
+          "contacted_robot": false,
+          "rebounded": false,
+          "balanced_before_impact": false,
+          "recovery_s": null,
+          "peak_angle_departure_deg": null,
+          "peak_impact_angle_change_deg": null,
+          "normal_impulse_ns": 0.0,
+          "pass_impact": false
+        }
+      ]
+    },
+    "20": {
+      "id": "qual-right-dt250-right",
+      "matching_prior_trajectory_frames": 138,
+      "first_35_s": 2.74249999999984,
+      "peak_tilt_deg": 70.3036429905128,
+      "terminal_tilt_deg": 70.3036429905128,
+      "terminal_time_s": 3.882499999999208,
+      "termination": "nonfoot_floor_contact",
+      "hold_return_pass": false,
+      "impact_trial_pass": false,
+      "impact_events": [
+        {
+          "index": 0,
+          "contacted_robot": false,
+          "rebounded": false,
+          "balanced_before_impact": false,
+          "recovery_s": null,
+          "peak_angle_departure_deg": null,
+          "peak_impact_angle_change_deg": null,
+          "normal_impulse_ns": 0.0,
+          "pass_impact": false
+        }
+      ]
+    },
+    "23": {
+      "id": "qual-right-gyro030",
+      "matching_prior_trajectory_frames": 137,
+      "first_35_s": 2.731125000000465,
+      "peak_tilt_deg": 35.135880898144066,
+      "terminal_tilt_deg": 31.31704739663183,
+      "terminal_time_s": 3.326000000001192,
+      "termination": "actual_joint_limit_exceeded",
+      "hold_return_pass": false,
+      "impact_trial_pass": false,
+      "impact_events": [
+        {
+          "index": 0,
+          "contacted_robot": false,
+          "rebounded": false,
+          "balanced_before_impact": false,
+          "recovery_s": null,
+          "peak_angle_departure_deg": null,
+          "peak_impact_angle_change_deg": null,
+          "normal_impulse_ns": 0.0,
+          "pass_impact": false
+        }
+      ]
+    },
+    "24": {
+      "id": "qual-right-delay40",
+      "matching_prior_trajectory_frames": 120,
+      "first_35_s": 2.3803750000000363,
+      "peak_tilt_deg": 36.34425416468066,
+      "terminal_tilt_deg": 2.191958708411716,
+      "terminal_time_s": 3.8900000000018813,
+      "termination": "actual_joint_limit_exceeded",
+      "hold_return_pass": false,
+      "impact_trial_pass": false,
+      "impact_events": [
+        {
+          "index": 0,
+          "contacted_robot": false,
+          "rebounded": false,
+          "balanced_before_impact": false,
+          "recovery_s": null,
+          "peak_angle_departure_deg": null,
+          "peak_impact_angle_change_deg": null,
+          "normal_impulse_ns": 0.0,
+          "pass_impact": false
+        }
+      ]
+    },
+    "28": {
+      "id": "qual-right-smaller",
+      "matching_prior_trajectory_frames": 306,
+      "first_35_s": 6.1002499999971205,
+      "peak_tilt_deg": 37.449980622687356,
+      "terminal_tilt_deg": 37.44998062268741,
+      "terminal_time_s": 6.142499999997022,
+      "termination": "actual_joint_limit_exceeded",
+      "hold_return_pass": false,
+      "impact_trial_pass": false,
+      "impact_events": [
+        {
+          "index": 0,
+          "contacted_robot": true,
+          "rebounded": true,
+          "balanced_before_impact": true,
+          "recovery_s": null,
+          "peak_angle_departure_deg": 5.158128323843584,
+          "peak_impact_angle_change_deg": 6.144052934938834,
+          "normal_impulse_ns": 0.07251533913233013,
+          "pass_impact": false
+        }
+      ]
+    },
+    "30": {
+      "id": "qual-cycle-left-0.00025",
+      "matching_prior_trajectory_frames": 133,
+      "first_35_s": 2.6512499999998904,
+      "peak_tilt_deg": 72.74181723902112,
+      "terminal_tilt_deg": 72.74181723902112,
+      "terminal_time_s": 3.290999999999536,
+      "termination": "nonfoot_floor_contact",
+      "hold_return_pass": false,
+      "impact_trial_pass": false,
+      "impact_events": []
+    },
+    "32": {
+      "id": "qual-cycle-right-0.00025",
+      "matching_prior_trajectory_frames": 138,
+      "first_35_s": 2.74249999999984,
+      "peak_tilt_deg": 70.3036429905128,
+      "terminal_tilt_deg": 70.3036429905128,
+      "terminal_time_s": 3.882499999999208,
+      "termination": "nonfoot_floor_contact",
+      "hold_return_pass": false,
+      "impact_trial_pass": false,
+      "impact_events": []
+    }
+  }
+}

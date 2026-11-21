@@ -2,6 +2,12 @@
 
 ## Priority
 
+Measure the recovery envelope in simulation. Continue through 35° of body tilt,
+roll faster balls at both supporting edges, and distinguish complete recoveries,
+floor contacts and joint-limit stops. Keep the zero waist target and battery
+motor model. The 230 baseline ball trials, 247 fallback trials and controls, and 740 raised-start checks are documented
+in [Ball speed and high-tilt catch results](docs/HIT_SPEED_AND_40_DEGREES.md).
+
 Latest request: train noisy capture, hold and controlled return, adding actual
 rolling-ball collisions from both directions during left/right edge balance.
 Two nominal natural-start sequences now pass all four bounces and return flat;

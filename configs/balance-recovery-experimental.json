@@ -3,7 +3,7 @@
   "evidence": "uncalibrated_simulation",
   "hardware_ready": false,
   "waist_mode": "hold_neutral",
-  "tilt_limit_deg": 35,
+  "tilt_limit_deg": null,
   "nominal_timestep_s": 0.000125,
   "edges": {
     "left": {

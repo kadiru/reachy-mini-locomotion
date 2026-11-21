@@ -29,7 +29,7 @@ def evaluate(job):
     c.configure_phase_tuning(p.get('phase_tuning'))
     c.velocity_command_rate_gain=p.get('velocity_command_rate_gain',0.)
     r=sim.run_primitive(p['recipe'],seconds=job.get('seconds',10),waist_mode='hold_neutral',controller=ctrl,
-                        tilt_limit_deg=35,record=bool(job.get('record')),diagnostic_initial_pitch_deg=reset,
+                        tilt_limit_deg=None,record=bool(job.get('record')),diagnostic_initial_pitch_deg=reset,
                         finish_settle_s=.6 if c.stop_when_flat else None)
     metrics=foreaft_metrics(r,side,c.f.target_roll_deg)
     r.update(foreaft_balance=dict(policy=p,side=side,edge='front' if side==1 else 'back',metrics=metrics),workspace_projected_frames=c.projected_frames,

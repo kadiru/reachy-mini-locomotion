@@ -217,9 +217,17 @@ def main():
         assert job["id"] == expected["id"]
         path = args.work / (job["id"]+".json")
         if not path.exists():
-            evaluate(dict(job,record=str(path)))
+            evaluate(dict(job, record=str(path), tilt_limit_deg=expected["result"]["tilt_limit_deg"]))
         run = json.loads(path.read_text())
-        if any(run.get(k)!=v for k,v in expected["result"].items()):
+        # New sensor fields are additive. Every field present in the frozen report must match.
+        comparison = dict(run)
+        if "ball_disturbances" in run:
+            comparison["ball_disturbances"] = [
+                {key: actual[key] for key in old}
+                for actual, old in zip(run["ball_disturbances"], expected["result"]["ball_disturbances"])
+            ]
+            assert len(run["ball_disturbances"]) == len(expected["result"]["ball_disturbances"])
+        if any(comparison.get(k)!=v for k,v in expected["result"].items()):
             raise ValueError(f"Recording differs from the frozen report for {job['id']}")
         title,start,passed,outcome = describe(job,run)
         clip = args.work / f"test-{i:02d}.mp4"

@@ -23,7 +23,7 @@ def evaluate(job):
     sim=CACHE[key];p=job['primitive'];g=mirrored(p['recipe'],job['side'])
     f=dict(p['feedback']);f.update(job['sensors'])
     ctl=BalanceController(g,f,checked_ik=sim.checked_ik)
-    r=sim.run_primitive(g,seconds=5,waist_mode='hold_neutral',controller=ctl,tilt_limit_deg=35)
+    r=sim.run_primitive(g,seconds=5,waist_mode='hold_neutral',controller=ctl,tilt_limit_deg=None)
     trace=r.pop('trace');r.pop('terminal_state')
     return dict(id=job['id'],variant=job['variant'],side=job['side'],primitive=p,result=r,
                 pivot_metrics=pivot_metrics(r),signed_turn_deg=-job['side']*r['final_foot_yaw_deg'],

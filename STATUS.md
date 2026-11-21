@@ -1,5 +1,76 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 20 — faster rolling balls and catches after 40° of measured roll
+
+Balance training and evaluation now record 35° and 40° crossings and continue
+to physical outcomes without an angle cutoff. Physical contact and actuator guards remain active. The frozen walking
+screens and archived qualification replays retain their original criteria.
+
+The 230 ball trials start flat and use an 8 cm, 10 g ball, a zero waist target
+and the existing battery motor envelope. In the nominal five-second-release tests,
+the fastest sustained edge recoveries were 0.840 m/s (left, ball from left),
+0.550 (left, from right), 0.410 (right, from left), and 1.200 (right, from right).
+On the right edge, a 1.175 m/s hit touched the floor, 1.200 m/s recovered in
+2.43 s, and 1.205 m/s touched the floor. Across all conditions, 63/211 hits on a
+previously stable edge recovered strictly, 12 completed without meeting the
+criterion, 29 toppled and 107 reached a joint limit. Nineteen other attempts
+lacked a qualifying pre-hit state or ended before contact. None of the natural
+ball-hit recoveries reached 40°.
+
+In 247 fallback trials and controls, the fastest recovered bounce was 9.248 m/s
+on the left edge. The ball rebounded at 6.82 m/s and Reachy settled flat 0.72 s
+after contact. At 9.373 m/s it toppled. The corresponding fastest right-side
+bounce was 8.873 m/s. Both top results repeated under the second seed and later
+release (all four combinations). Eight unstruck controls held their edges
+without triggering the return. Six finer-timestep trials lacked a qualified
+pre-hit edge. The highest upright finish was 11.999 m/s with no bounce and
+a peak simulated contact force over 2 kN. Collision calibration remains open.
+[Fast impacts filmed from 500 Hz poses](media/simulation/fast-ball-catches.mp4).
+[All 247 fallback trials and controls](media/simulation/ball-emergency-returns.mp4).
+
+A separate 722-case maneuver study found head commands that begin after delayed
+roll first measures 40°. Raised starts at 39.95° left and 39.99° right, moving
+outward at 3°/s and 2°/s respectively, settled flat after reaching 40.45° and
+40.36°. Matched held-head controls contacted the floor near 72.8° and 72.5°.
+Both paired outcomes reproduced at 0.125 and 0.1 ms. The 18 raised-start checks
+with the original edge controller produced 16 joint stops and two floor contacts.
+The calibrated hardware envelope and natural recovery to edge hold from 40°
+remain open. Next, train recovery back onto the edge using the captured pre-failure states,
+including roll rate and remaining head joint travel.
+
+[Videos, measured limits and exact replay commands](docs/HIT_SPEED_AND_40_DEGREES.md).
+[Per-impact CSV](experiments/reports/motor-training-hit-speeds-2026-11-20.csv).
+[Full results with matched initial-state checks](experiments/reports/motor-training-hit-speeds-2026-11-20.json).
+[Search all 1,217 trials in the combined film](experiments/reports/motor-training-hit-video-index-2026-11-20.csv).
+The full test command is `.venv/bin/python -m unittest discover -s tests` (142 passed).
+
+## November 20 — continuing the 16 trials stopped at 35°
+
+The first walking experiment introduced a 35° base-tilt cutoff in commit
+943a27b on November 18. The recorded rationale covers rejecting large tilts
+during gait screening. The experiment supplies no derivation or hardware
+measurement for the value. Later head-neutral model diagnostics place the
+static side-edge equilibrium near 32.09°. Head position changes that equilibrium.
+
+For a matched simulation comparison, the 16 frozen-suite jobs that stopped at
+35° were rerun with the existing 80° diagnostic ceiling. The other guards and
+controller were identical. The full recorded trajectories up to each original
+stop and the physics times of all first 35° crossings matched. Tests 17 and
+18 peaked at 35.025°, recovered and passed both ball-recovery criteria
+(independent ball directions with an identical launch). Test 9 reached
+36.73° and completed the episode, missing the stable-hold requirement.
+Seven cases next reached an actual joint limit. Six made nonfoot floor
+contact at 70.30–72.74°. Counts are suite rows and include repeated launches.
+This comparison raises impact qualification from 7/28 to 9/28 under the
+diagnostic termination rule. The hardware recovery envelope remains unmeasured.
+
+[Per-case comparison](experiments/reports/motor-training-tilt35-continuations-2026-11-20.json).
+The local replay video for test 17 is `experiments/generated/tilt35-audit/test17-past-35.mp4`.
+Replay the locally captured diagnostic jobs into a fresh report with
+`.venv/bin/python experiments/generated/tilt35-audit/diagnostic.py --jobs experiments/generated/tilt35-audit/jobs-no-record.json --output experiments/generated/tilt35-audit/fresh-results.json --workers 4`.
+For future simulation studies, score contact, joint-limit stops, and successful
+recapture separately while logging the peak angle and tilt rate.
+
 ## November 20 — video of all 38 frozen balance tests
 
 [Watch the complete simulation suite](media/simulation/balance-qualification-all-38.mp4)

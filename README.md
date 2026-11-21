@@ -14,6 +14,16 @@ The opening sequence shows controller-driven head motion, whole-body rocking
 and apparent base progress. [Video observations](docs/VIMEO_OBSERVATIONS_2026-11-18.md)
 separate what is visible from what still needs measurement.
 
+**Faster ball impacts and 40° catches (November 20).** A roll-rate fallback
+kept Reachy upright after a **9.248 m/s** bounce by giving up the edge and
+settling flat in **0.72 s**. A **9.373 m/s** bounce toppled the same simulated
+robot. The fastest hit followed by sustained edge balance was **1.200 m/s**.
+A separate head maneuver, triggered after measuring 40°, returned prepared
+outward-moving starts to flat from **40.45° left and 40.36° right**.
+[Watch the fastest bounce and topple in slow motion](media/simulation/fast-ball-catches.mp4) ·
+[Watch the measured 40° catches](media/simulation/measured-40-catches.mp4) ·
+[Results, every trial on video and replay instructions](docs/HIT_SPEED_AND_40_DEGREES.md).
+
 **Ball-impact recovery (November 20):** two complete simulations now start flat,
 lift onto the left/right edge, withstand a rolling ball from each side, and
 return flat without falling. All **four physical bounces** regain qualified

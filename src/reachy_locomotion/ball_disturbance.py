@@ -29,7 +29,7 @@ class RollingBall:
         if self.from_side not in (-1,1):raise ValueError('Ball side must be -1 or 1')
         if not 1<=self.launch_s<=590 or not .015<=self.radius_m<=.06 or not .005<=self.mass_kg<=.2:
             raise ValueError('Invalid ball time, radius or mass')
-        if not .1<=self.speed_m_s<=3 or not .2<=self.distance_m<=1 or abs(self.offset_x_m)>.06:
+        if not .1<=self.speed_m_s<=12 or not .2<=self.distance_m<=1 or abs(self.offset_x_m)>.06:
             raise ValueError('Invalid ball launch')
         if not 5000<=self.stiffness<=50000 or not 10<=self.damping<=200:raise ValueError('Invalid ball contact law')
 
@@ -49,12 +49,14 @@ def add_balls(world, settings):
 class BallDisturbances:
     def __init__(self,model,base,settings):
         self.model=model;self.base=base;self.balls=[RollingBall(**x) for x in settings];self.events=[]
+        self.precontact_speed = [None] * len(self.balls)
         self.geom_ids={model.geom(f'disturbance_ball_geom_{i}').id:i for i in range(len(self.balls))}
         for i,ball in enumerate(self.balls):
             j=model.joint(f'disturbance_ball_joint_{i}').id
             self.events.append(dict(index=i,parameters=asdict(ball),qadr=int(model.jnt_qposadr[j]),vadr=int(model.jnt_dofadr[j]),
                                     released=False,first_robot_contact_s=None,last_robot_contact_s=None,
                                     normal_impulse_ns=0.,peak_normal_force_n=0.,robot_bodies=[],
+                                    incoming_speed_m_s=None,
                                     rebound_speed_m_s=0.,incoming_direction=None))
 
     def release(self,data,t):
@@ -70,6 +72,7 @@ class BallDisturbances:
             velocity=ball.speed_m_s*direction
             data.qvel[v:v+3]=velocity;data.qvel[v+3:v+6]=np.cross([0,0,1],velocity)/ball.radius_m
             event.update(released=True,release_s=t,release_position_m=position.tolist(),incoming_direction=direction.tolist())
+            self.precontact_speed[event["index"]] = ball.speed_m_s
             changed=True
         if changed:mujoco.mj_forward(self.model,data)
 
@@ -84,12 +87,17 @@ class BallDisturbances:
             event=self.events[idx];wrench=np.zeros(6);mujoco.mj_contactForce(m,data,ci,wrench);force=abs(float(wrench[0]))
             if force<.001:continue
             touching.add(idx)
-            if event['first_robot_contact_s'] is None:event['first_robot_contact_s']=float(data.time)
+            if event['first_robot_contact_s'] is None:
+                event['first_robot_contact_s'] = float(data.time)
+                event['incoming_speed_m_s'] = self.precontact_speed[idx]
             event['last_robot_contact_s']=float(data.time);event['normal_impulse_ns']+=force*m.opt.timestep
             event['peak_normal_force_n']=max(event['peak_normal_force_n'],force)
             body=m.body(int(m.geom_bodyid[other])).name
             if body not in event['robot_bodies']:event['robot_bodies'].append(body)
         for event in self.events:
+            if event['released'] and event['first_robot_contact_s'] is None:
+                v = event['vadr']
+                self.precontact_speed[event['index']] = math.hypot(data.qvel[v], data.qvel[v+1])
             if event['first_robot_contact_s'] is not None and event['index'] not in touching and data.time-event['last_robot_contact_s']>=.005:
                 v=event['vadr'];speed=-float(np.dot(data.qvel[v:v+3],event['incoming_direction']))
                 event['rebound_speed_m_s']=max(event['rebound_speed_m_s'],speed)

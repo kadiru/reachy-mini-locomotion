@@ -34,7 +34,7 @@ def evaluate(job):
     else:ctrl=EdgeBalanceController(g,f,job.get('side',1),sim.checked_ik)
     ctrl.stop_when_flat=job.get('early_stop_flat',False)
     reset=job.get('diagnostic_initial_roll_deg');ctrl.hold_from_start=reset is not None
-    r=sim.run_primitive(g,seconds=job.get('seconds',8),waist_mode='hold_neutral',controller=ctrl,tilt_limit_deg=35,record=bool(job.get('record',False)),finish_settle_s=.6 if ctrl.stop_when_flat else None,diagnostic_initial_roll_deg=reset)
+    r=sim.run_primitive(g,seconds=job.get('seconds',8),waist_mode='hold_neutral',controller=ctrl,tilt_limit_deg=None,record=bool(job.get('record',False)),finish_settle_s=.6 if ctrl.stop_when_flat else None,diagnostic_initial_roll_deg=reset)
     metrics=balance_metrics(r,job.get('side',1),f.target_roll_deg)
     r.update(edge_balance=dict(policy=policy,side=job.get('side',1),metrics=metrics),workspace_projected_frames=ctrl.projected_frames)
     score=metrics['soft_hold_s']+2*metrics['longest_strict_hold_s']-.02*(not r['completed'])

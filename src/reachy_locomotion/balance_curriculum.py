@@ -52,7 +52,7 @@ or truth-state diagnostics. The target remains checked by the original IK.
         self.duration=duration_s;self.neutral_at=neutral_at_deg;self.hold_start=None;self.return_start=None;self.neutral_start=None
         self.origin=None;self.neutral_origin=None;self.finished=False
         self.mode=mode;self.lower_to=lower_to_deg
-        if not 0<=emergency_roll_deg<=34.5 or not 0<=emergency_rate_deg_s<=60:raise ValueError('Invalid emergency threshold')
+        if not 0<=emergency_roll_deg<=45 or not 0<=emergency_rate_deg_s<=60:raise ValueError('Invalid emergency threshold')
         self.emergency_roll=emergency_roll_deg;self.emergency_rate=emergency_rate_deg_s;self.armed=False;self.emergency_triggered=False
         if mode=='target_ramp':
             c=controller;H=np.zeros((20,8));H[2:6,:4]=np.eye(4);H[12:16,4:]=np.eye(4);H[16:20,4:]=np.eye(4)

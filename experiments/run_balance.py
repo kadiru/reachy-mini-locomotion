@@ -17,7 +17,7 @@ def main():
     policy=json.loads(Path(args.policy).read_text());config=json.loads(Path('configs/motors-speed-trained.json').read_text());config['timestep_s']=args.timestep
     sim=PrimitiveSimulator('experiments/upstream-reachy-mini',config);g=mirrored(policy['recipe'],args.side)
     controller=BalanceController(g,policy['feedback'],checked_ik=sim.checked_ik)
-    r=sim.run_primitive(g,seconds=args.seconds,waist_mode='hold_neutral',controller=controller,tilt_limit_deg=35,record=args.record)
+    r=sim.run_primitive(g,seconds=args.seconds,waist_mode='hold_neutral',controller=controller,tilt_limit_deg=None,record=args.record)
     if args.record:record_terminal(sim,r)
     r.update(balance_feedback=asdict(controller.f),roll_sensor_delay_s=.02*controller.f.sensor_delay_frames,
              selected_yaw_target_deg=controller.yaw_amplitude,side=args.side)

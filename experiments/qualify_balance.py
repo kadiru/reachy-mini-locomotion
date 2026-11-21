@@ -20,7 +20,7 @@ def evaluate(job):
     key=json.dumps(config,sort_keys=True)
     if key not in CACHE:CACHE[key]=PrimitiveSimulator('experiments/upstream-reachy-mini',config)
     recipe=mirrored(g,side);controller=BalanceController(recipe,f,checked_ik=CACHE[key].checked_ik)
-    r=CACHE[key].run_primitive(recipe,seconds=5,waist_mode='hold_neutral',controller=controller,tilt_limit_deg=35)
+    r=CACHE[key].run_primitive(recipe,seconds=5,waist_mode='hold_neutral',controller=controller,tilt_limit_deg=None)
     r.pop('trace');r.pop('terminal_state')
     r['selected_yaw_target_deg']=controller.yaw_amplitude
     return dict(id=label,recipe=g,feedback=f,side=side,result=r,pivot_metrics=pivot_metrics(r))

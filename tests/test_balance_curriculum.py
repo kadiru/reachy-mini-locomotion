@@ -29,6 +29,16 @@ class BalanceReturnTests(unittest.TestCase):
         c.rate[0]=10;r.target(.72,33.5)
         self.assertEqual(r.return_start,.72);self.assertTrue(r.emergency_triggered)
 
+    def test_40_degree_emergency_waits_for_measured_crossing(self):
+        controller = SensedController()
+        feedback = BalanceReturn(controller, hold_s=30, emergency_roll_deg=40)
+        feedback.target(0, 32.1)
+        feedback.target(.6, 32.1)
+        feedback.target(.62, 39.99)
+        self.assertIsNone(feedback.return_start)
+        feedback.target(.64, 40.01)
+        self.assertEqual(feedback.return_start, .64)
+
     def test_normal_return_requires_continuous_hold_and_tracks_actual_command(self):
         c=SensedController();r=BalanceReturn(c,hold_s=1,roll_deg=20,y_mm=-15,duration_s=.4)
         r.target(0,32.1);r.target(.8,28);r.target(1,32.1);r.target(1.8,32.1)

@@ -28,7 +28,7 @@ def evaluate(job):
     key=json.dumps(config,sort_keys=True)
     if key not in CACHE:CACHE[key]=PrimitiveSimulator('experiments/upstream-reachy-mini',config)
     g=mirrored(recipe,side);c=BalanceController(g,feedback,checked_ik=CACHE[key].checked_ik)
-    r=CACHE[key].run_primitive(g,seconds=seconds,waist_mode='hold_neutral',controller=c,tilt_limit_deg=35)
+    r=CACHE[key].run_primitive(g,seconds=seconds,waist_mode='hold_neutral',controller=c,tilt_limit_deg=None)
     trace=r.pop('trace');r.pop('terminal_state')
     r['max_feedback_correction_deg']=max(abs(x['feedback_roll_correction_deg']) for x in trace)
     r['signed_peak_roll_deg']=[min(x['roll_deg'] for x in trace),max(x['roll_deg'] for x in trace)]

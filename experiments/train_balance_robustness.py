@@ -23,7 +23,10 @@ def evaluate(job):
     config['timestep_s']=job.get('dt',.00025)
     if 'balls' in job:config['disturbance_balls']=job['balls']
     key=json.dumps(config,sort_keys=True)
-    if key not in CACHE:CACHE[key]=PrimitiveSimulator('experiments/upstream-reachy-mini',config)
+    if key not in CACHE:
+        if len(CACHE) >= 4:
+            CACHE.pop(next(iter(CACHE)))
+        CACHE[key] = PrimitiveSimulator('experiments/upstream-reachy-mini', config)
     sim=CACHE[key];policy=job['policy'];edge=job['edge'];side=-1 if edge in ('left','back') else 1
     axis='pitch' if edge in ('front','back') else 'roll'
     args=(policy['recipe'],policy['feedback'],side,sim.checked_ik,policy['linear'])
@@ -45,7 +48,7 @@ def evaluate(job):
     initial={f'diagnostic_initial_{axis}_deg':None if reset is None else side*reset,
              'diagnostic_initial_angular_rate_deg_s':side*job.get('outward_rate_deg_s',0.)}
     r=sim.run_primitive(policy['recipe'],seconds=job.get('seconds',12),waist_mode='hold_neutral',controller=ctrl,
-                        tilt_limit_deg=35,record=bool(job.get('record')),**initial)
+                        tilt_limit_deg=job.get('tilt_limit_deg'),record=bool(job.get('record')),collision_window=job.get('collision_window'),**initial)
     metrics=(foreaft_metrics if axis=='pitch' else balance_metrics)(r,side,child.f.target_roll_deg)
     impacts=impact_metrics(r,axis,side,child.f.target_roll_deg)
     return_started=next((x.get('return_started_s',x.get('virtual_return_started_s')) for x in reversed(r['trace'])
@@ -62,7 +65,7 @@ def evaluate(job):
     if job.get('record'):
         path=Path(job['record']);path.parent.mkdir(parents=True,exist_ok=True)
         with path.open('x') as f:json.dump(r,f,allow_nan=False)
-    r.pop('trajectory',None);r.pop('trace');r.pop('terminal_state')
+    r.pop('collision_frames',None);r.pop('trajectory',None);r.pop('trace');r.pop('terminal_state')
     return dict(id=job['id'],edge=edge,score=score,policy=policy,metrics=metrics,impacts=impacts,result=r)
 
 

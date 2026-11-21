@@ -128,11 +128,17 @@ def classify_trial(reason,tail,peak_roll):
 class PrimitiveSimulator(SwaySimulator):
     def run_primitive(self,recipe,seconds=3.6,waist_mode='off',record=False,
                       controller=None,tilt_limit_deg=80,finish_settle_s=None,diagnostic_initial_roll_deg=None,
-                      diagnostic_initial_pitch_deg=None,diagnostic_initial_angular_rate_deg_s=0.):
+                      diagnostic_initial_pitch_deg=None,diagnostic_initial_angular_rate_deg_s=0.,collision_window=None):
+        if collision_window is not None:
+            start_s, end_s = collision_window
+            if not record or not 0 <= start_s < end_s <= seconds or end_s-start_s > 2:
+                raise ValueError('Request at most two seconds of high-rate recorded poses within the episode')
+        collision_frames = []
+        capture_stride = max(1,round(.002/self.dt))
         if not isinstance(recipe,Primitive):recipe=Primitive(**recipe)
         if waist_mode not in ('off','hold_neutral'):raise ValueError('Unknown waist mode')
         if not 1<=seconds<=600 or self.servos is None:raise ValueError('Require bounded datasheet simulation')
-        if tilt_limit_deg not in (35,80):raise ValueError('Use walking or diagnostic tilt guard')
+        if tilt_limit_deg not in (None,35,80):raise ValueError('Use a supported tilt limit or contact-only termination')
         if finish_settle_s is not None and not .6<=finish_settle_s<=2:
             raise ValueError('Require at least 0.6 seconds of physical finish settling')
         m=self.model;d=mujoco.MjData(m);d.qpos[:]=self.initial_qpos;d.qvel[:]=self.initial_qvel;d.ctrl[:]=self.initial_ctrl
@@ -155,8 +161,9 @@ class PrimitiveSimulator(SwaySimulator):
             raise ValueError('Invalid curriculum angular rate')
         if diagnostic_initial_angular_rate_deg_s and reset_angle is None:raise ValueError('Curriculum rate requires an explicitly tilted reset')
         if reset_angle is not None:
-            if not math.isfinite(reset_angle) or not 20<=abs(reset_angle)<=33:
-                raise ValueError('Diagnostic edge reset must be between 20 and 33 degrees')
+            maximum_reset = 33 if tilt_limit_deg == 35 else 45
+            if not math.isfinite(reset_angle) or not 20<=abs(reset_angle)<=maximum_reset:
+                raise ValueError(f'Diagnostic edge reset must be between 20 and {maximum_reset} degrees')
             angle=math.radians(reset_angle);qa=m.jnt_qposadr[m.joint('floating_foot').id]
             d.qpos[qa+2]=self.config['foot_radius_m']*abs(math.sin(angle))-.00002
             d.qpos[qa+3:qa+7]=[math.cos(angle/2),math.sin(angle/2) if diagnostic_initial_roll_deg is not None else 0,
@@ -178,7 +185,9 @@ class PrimitiveSimulator(SwaySimulator):
             balls=BallDisturbances(m,self.base,self.config['disturbance_balls'])
         bodies=[self.base,torso];previous=[math.atan2(d.xmat[i][3],d.xmat[i][0]) for i in bodies]
         angles=np.zeros(2);initial_yaw=previous[0];controller=controller or PrimitiveController(recipe)
-        trace=[];trajectory=[];reason=None;first35=None;peak_roll=peak_tilt=peak_lift=peak_slip=0.
+        trace=[];trajectory=[];reason=None;peak_roll=peak_tilt=peak_lift=peak_slip=0.
+        first35 = 0. if reset_angle is not None and abs(reset_angle)>=35 else None
+        first40 = 0. if reset_angle is not None and abs(reset_angle)>=40 else None
         peak_torque=np.zeros(m.nu);waist_work=head_braking=0.;joint_margin=1e9;max_closure=0.
         edge_time=edge_yaw=slip_distance=0.;last_roll=last_pitch=0.;previous_edge=False
         total_frames=round(seconds/.02);base_velocity=np.zeros(6)
@@ -260,10 +269,17 @@ class PrimitiveSimulator(SwaySimulator):
             except ValueError as error:reason='invalid_head_target: '+str(error);break
             targets=self.initial_targets.copy();targets[self.act]=target;targets[waist]=self.initial_targets[waist]
             self.servos.command(targets)
+            dense = collision_window is not None and t < end_s and t+.02 > start_s+1e-9
+            if dense and t >= start_s-1e-9 and not collision_frames:
+                collision_frames.append(dict(time_s=t,qpos=d.qpos.tolist(),foot_rpy_rad=rpy.tolist()))
             for substep in range(self.substeps):
                 self.servos.apply(d)
                 if waist_mode=='off':d.ctrl[waist]=0.
                 mujoco.mj_step(m,d);mujoco.mj_forward(m,d)
+                if (dense and start_s-1e-9 <= d.time <= end_s+1e-9
+                        and (not collision_frames or (substep+1)%capture_stride==0)):
+                    collision_frames.append(dict(time_s=float(d.time),qpos=d.qpos.tolist(),
+                                                 foot_rpy_rad=euler(d.xmat[self.base].reshape(3,3)).tolist()))
                 if average_gyro and (substep+1)%gyro_stride==0:
                     mujoco.mj_objectVelocity(m,d,mujoco.mjtObj.mjOBJ_XBODY,self.base,gyro_velocity,1)
                     gyro_sum+=gyro_velocity[:3];gyro_count+=1
@@ -274,7 +290,8 @@ class PrimitiveSimulator(SwaySimulator):
                 peak_roll=max(peak_roll,abs(math.degrees(math.atan2(d.xmat[self.base][7],d.xmat[self.base][8]))))
                 peak_lift=max(peak_lift,abs(2*self.config['foot_radius_m']*float(d.xmat[self.base][7]))*1000)
                 if tilt>=35 and first35 is None:first35=float(d.time)
-                if tilt>=tilt_limit_deg:reason=f'tilt_reached_{tilt_limit_deg}_deg'
+                if tilt>=40 and first40 is None:first40=float(d.time)
+                if tilt_limit_deg is not None and tilt>=tilt_limit_deg:reason=f'tilt_reached_{tilt_limit_deg}_deg'
                 closure=float(np.max(np.linalg.norm(d.site_xpos[self.closing_a]-d.site_xpos[self.closing_b],axis=1)))
                 max_closure=max(max_closure,closure)
                 if closure>.001:reason='loop_closure_error_exceeded_1_mm'
@@ -301,7 +318,7 @@ class PrimitiveSimulator(SwaySimulator):
         result=dict(evidence='uncalibrated_simulation',hardware_ready=False,primitive_trial=True,recipe=asdict(recipe),config=self.config,
                     requested_seconds=seconds,elapsed_seconds=float(d.time),termination=reason or 'completed',**flags,
                     max_duration_seconds=duration_budget,stopped_after_controller_finish=early_finish,
-                    diagnostic_falls_allowed=tilt_limit_deg==80,tilt_limit_deg=tilt_limit_deg,walking_fall_guard_unchanged=True,waist_mode=waist_mode,
+                    diagnostic_falls_allowed=tilt_limit_deg!=35,tilt_limit_deg=tilt_limit_deg,walking_fall_guard_unchanged=True,waist_mode=waist_mode,
                     diagnostic_initial_roll_deg=diagnostic_initial_roll_deg,diagnostic_initial_pitch_deg=diagnostic_initial_pitch_deg,
                     diagnostic_initial_angular_rate_deg_s=diagnostic_initial_angular_rate_deg_s,
                     natural_upright_start=reset_angle is None,
@@ -309,7 +326,7 @@ class PrimitiveSimulator(SwaySimulator):
                     commanded_waist_position_range_rad=[float(self.initial_targets[waist])]*2,
                     measured_waist_angle_range_deg=[min(x['waist_angle_change_deg'] for x in trace),max(x['waist_angle_change_deg'] for x in trace)],
                     peak_motor_torque_nm=peak_torque.tolist(),head_braking_work_j=head_braking,min_joint_margin_rad=joint_margin,
-                    max_closure_error_m=max_closure,peak_roll_deg=peak_roll,peak_tilt_deg=peak_tilt,first_35deg_time_s=first35,
+                    max_closure_error_m=max_closure,peak_roll_deg=peak_roll,peak_tilt_deg=peak_tilt,first_35deg_time_s=first35,first_40deg_time_s=first40,
                     peak_side_height_difference_mm=peak_lift,edge_support_seconds=edge_time,edge_supported_foot_yaw_deg=math.degrees(edge_yaw),
                     edge_contact_slip_distance_mm=slip_distance*1000,peak_contact_slip_m_s=peak_slip,
                     final_foot_yaw_deg=math.degrees(angles[0]),final_torso_yaw_deg=math.degrees(angles[1]),
@@ -322,5 +339,6 @@ class PrimitiveSimulator(SwaySimulator):
                     trace=trace,motor_diagnostics=self.servos.report(),render_forward_frame='startup')
         if waist_mode=='off':assert result['waist_peak_torque_nm']==0 and waist_work==0
         if balls is not None:result.update(ball_disturbances=balls.report(),direct_robot_forces_applied=False)
+        if collision_window is not None:result['collision_frames']=collision_frames
         if record:result['trajectory']=trajectory
         return result

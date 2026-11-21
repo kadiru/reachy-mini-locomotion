@@ -10,7 +10,8 @@ from reachy_locomotion.balance_curriculum import impact_metrics
 
 class RollingBallTests(unittest.TestCase):
     def test_invalid_disturbances_are_rejected(self):
-        for args in [dict(mass_kg=-1),dict(speed_m_s=9),dict(from_side=0),dict(launch_s=float('nan'))]:
+        self.assertEqual(RollingBall(speed_m_s=12).speed_m_s, 12)
+        for args in [dict(mass_kg=-1),dict(speed_m_s=12.01),dict(from_side=0),dict(launch_s=float('nan'))]:
             with self.assertRaises(ValueError):RollingBall(**args)
 
     def test_real_rolling_contact_moves_body_and_rebounds_from_both_sides(self):
@@ -28,6 +29,7 @@ class RollingBallTests(unittest.TestCase):
                 mujoco.mj_step(m,d);mujoco.mj_forward(m,d);balls.observe(d)
             result=balls.report()[0]
             self.assertTrue(result['contacted_robot']);self.assertTrue(result['rebounded'])
+            self.assertAlmostEqual(result['incoming_speed_m_s'], .7, delta=.04)
             self.assertGreater(result['normal_impulse_ns'],.001)
             self.assertGreater(-side*d.qpos[1],.00001)
             old=d.qpos.copy();balls.release(d,2);np.testing.assert_array_equal(d.qpos,old)
