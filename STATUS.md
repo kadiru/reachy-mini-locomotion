@@ -1,5 +1,11 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 22 — Catching tilted releases on the CAD foot
+
+The frozen, fixed-waist controller finishes on the requested edge in all six former right-side shell landings. Four pass the full final-five-second test. At the matched 32.2° release it holds for 7.90 continuous seconds. On 20 fresh releases with initial motion it records zero shell landings, ten edge endpoints, four strict holds, nine safe flat returns and one flat return with a joint warning. The original controller hit the shell seven times. Across 18 additional bus-voltage, gain and floor-grip checks the trained controller finishes on edge 15 times with ten strict passes and no shell contact. Training used 30.117 Wh gross on the M4 CPU over 1,330 rollouts. The hardware session is prepared for read-only, externally supported measurements.
+
+Replay with `.venv/bin/python experiments/archive_release_catch.py replay --workers 6`. Next, compare the observed foot contact and neutral-head deflection in upright, left and right supported poses with the fixed-base simulation. [Matched comparison and all fresh releases](media/simulation/cad-right-release-catch.mp4) · [Test conditions and outcomes](docs/CAD_RELEASE_CATCH.md) · [Supported hardware calibration](docs/SUPPORTED_TILT_CALIBRATION.md)
+
 ## November 21 — Tilted releases on the CAD foot and head-driven side rolling
 
 The original 31° deep roll reproduced on a circular foot. On the pinned CAD shells its launch missed and settled flat. Freezing the head target during the circular-foot roll caused a torso landing 1.15 s later. [Measured support geometry](media/simulation/deep-roll-support.png)

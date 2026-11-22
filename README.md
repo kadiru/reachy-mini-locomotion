@@ -1,5 +1,7 @@
 # Reachy Mini — Quest to Locomotion
 
+The CAD-foot release controller catches all six former right-side falls in simulation. Watch the same release with the old policy, new policy and still-head control, followed by all 20 fresh tests. [Comparison film](media/simulation/cad-right-release-catch.mp4) · [Conditions, outcomes and training cost](docs/CAD_RELEASE_CATCH.md) · [Supported hardware comparison](docs/SUPPORTED_TILT_CALIBRATION.md)
+
 Learn head-driven, penguin-like locomotion from **Meta Quest 3S** demonstrations,
 then evaluate sim-to-real transfer on Reachy Mini Wireless.
 

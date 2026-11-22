@@ -36,6 +36,7 @@ def use_cad_floor(world, base, friction):
 def place_on_floor(model, data, root_z):
     """Translate vertically until the lowest CAD shell vertex just touches the plane."""
     lowest = float('inf')
+    support = None
     for g in range(model.ngeom):
         if model.geom_contype[g] != 8:
             continue
@@ -46,7 +47,12 @@ def place_on_floor(model, data, root_z):
         if not np.all(np.isfinite(height)):
             raise ValueError('Invalid shell vertex height')
         z = data.geom_xpos[g,2] + height.min()
-        lowest = min(lowest, z)
+        if z < lowest:
+            lowest = z
+            support = data.geom_xpos[g] + np.einsum('ij,j->i',data.geom_xmat[g].reshape(3,3),
+                                                     vertices[height.argmin()])
     if lowest == float('inf'):
         raise ValueError('No CAD floor shells to place')
     data.qpos[root_z] -= lowest
+    support[2] -= lowest
+    return support

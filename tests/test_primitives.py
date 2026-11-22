@@ -46,6 +46,33 @@ class PrimitivePhysicsTests(unittest.TestCase):
             mujoco.mj_jac(m,d,jac,None,point,sim.base)
             np.testing.assert_allclose(jac@d.qvel,0,atol=1e-10)
 
+    def test_cad_release_pivots_about_loaded_vertex_on_both_edges(self):
+        import mujoco
+        import numpy as np
+        from reachy_locomotion.primitives import PrimitiveSimulator
+        from reachy_locomotion.shell_contact import place_on_floor
+        config = json.loads((ROOT/'configs/motors-speed-trained.json').read_text())
+        config.update(timestep_s=.00025, cad_shell_floor=True)
+        sim = PrimitiveSimulator(UPSTREAM, config)
+        model = sim.model
+        root_z = model.joint('floating_foot').qposadr[0]+2
+        for side in (-1, 1):
+            result = sim.run_primitive(Primitive(), seconds=1, record=True, waist_mode='hold_neutral',
+                                       tilt_limit_deg=None, observe_landing=True,
+                                       diagnostic_initial_roll_deg=side*32.,
+                                       diagnostic_initial_angular_rate_deg_s=side*2.)
+            data = mujoco.MjData(model)
+            state = result['trajectory'][0]
+            data.qpos[:] = state['qpos']
+            data.qvel[:] = state['qvel']
+            mujoco.mj_forward(model, data)
+            contact = place_on_floor(model, data, root_z)
+            self.assertAlmostEqual(data.qpos[root_z], state['qpos'][root_z], places=9)
+            self.assertAlmostEqual(contact[2], 0., places=10)
+            jac = np.zeros((3, model.nv))
+            mujoco.mj_jac(model, data, jac, None, contact, sim.base)
+            np.testing.assert_allclose(jac@data.qvel, 0., atol=1e-10)
+
     def test_40_degree_reset_continues_until_contact(self):
         from reachy_locomotion.primitives import PrimitiveSimulator
         config = json.loads((ROOT/'configs/motors-speed-trained.json').read_text())

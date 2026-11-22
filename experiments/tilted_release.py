@@ -23,9 +23,11 @@ DRIVE_S = 2.
 
 
 @lru_cache(maxsize=4)
-def plant(cad, dt, battery):
+def plant(cad, dt, battery, sliding_friction=None):
     config = read(MOTORS)
     config.update(cad_shell_floor=cad, timestep_s=dt)
+    if sliding_friction is not None:
+        config['friction_slide_torsion_roll'][0] = sliding_friction
     if battery:
         config['motor_model'].update(voltage_v=4.95, pid_scale=.99)
     sim = PrimitiveSimulator(UPSTREAM, config)
@@ -173,7 +175,8 @@ class StopHead:
 
 
 def balance_controller(sim, side, job):
-    p = read(EDGES)['edges']['left' if side < 0 else 'right']
+    source = job.get('regulator_side', side)
+    p = read(EDGES)['edges']['left' if source < 0 else 'right']
     p['feedback']['sensor_seed'] = job.get('seed',p['feedback']['sensor_seed'])
     if job.get('cad_model'):
         p['linear'] = read(WORK/'cad-model.json')[str(side)]

@@ -151,6 +151,14 @@ def build(rate, rate_basis, receipts=RECEIPTS):
                        '8 development strokes, full net torso turn with zero head contact',
                        (r['termination']=='completed' and r['min_joint_margin_rad']>=0 and 'head' not in r['touch']
                         and abs(r['net_axis_rotation_deg'])>=360 for r in driven))
+    catch_file = 'motor-training-cad-release-catch.json'
+    if (REPORTS/catch_file).exists():
+        report = read(REPORTS/catch_file)
+        checks = [r for r in report['qualification']['trials'] if r['group']=='reserved' and r['controller']=='trained']
+        metered_stages(report,catch_file,'Moving CAD tilted-release catch','configs/cad-release-catch.json',
+                       [c['stage'] for c in report['training_cost']],
+                       '20 reserved moving or stationary releases, strict final 5 seconds',
+                       (r['strict'] for r in checks))
     return rows
 
 

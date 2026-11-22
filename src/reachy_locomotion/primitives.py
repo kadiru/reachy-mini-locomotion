@@ -176,8 +176,6 @@ class PrimitiveSimulator(SwaySimulator):
             cad_floor = self.config.get('cad_shell_floor', False)
             if cad_floor and observe_landing and tilt_limit_deg is None:
                 maximum_reset = 90
-            if cad_floor and diagnostic_initial_angular_rate_deg_s:
-                raise ValueError('CAD shell placement supports stationary releases only')
             if not math.isfinite(reset_angle) or not 20<=abs(reset_angle)<=maximum_reset:
                 raise ValueError(f'Diagnostic edge reset must be between 20 and {maximum_reset} degrees')
             angle=math.radians(reset_angle);qa=m.jnt_qposadr[m.joint('floating_foot').id]
@@ -190,12 +188,13 @@ class PrimitiveSimulator(SwaySimulator):
             mujoco.mj_forward(m,d)
             if cad_floor:
                 from .shell_contact import place_on_floor
-                place_on_floor(m, d, qa+2)
+                support = place_on_floor(m, d, qa+2)
                 mujoco.mj_forward(m,d)
             if diagnostic_initial_angular_rate_deg_s:
                 R=d.xmat[self.base].reshape(3,3);rim=np.zeros(3)
                 rim[1 if diagnostic_initial_roll_deg is not None else 0]=self.config['foot_radius_m']*math.copysign(1,reset_angle)*(-1 if diagnostic_initial_roll_deg is not None else 1)
-                d.qvel[va:va+3]=-np.cross(R@d.qvel[va+3:va+6],R@rim)
+                lever = support-d.xpos[self.base] if cad_floor else R@rim
+                d.qvel[va:va+3]=-np.cross(R@d.qvel[va+3:va+6],lever)
                 mujoco.mj_forward(m,d)
         if any(w.number for w in d.warning):raise ValueError('Initialization warning')
         start=d.xpos[self.base].copy();waist_qadr=self.servos.qadr[waist];waist_start=float(d.qpos[waist_qadr])
