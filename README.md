@@ -3,6 +3,8 @@
 Learn head-driven, penguin-like locomotion from **Meta Quest 3S** demonstrations,
 then evaluate sim-to-real transfer on Reachy Mini Wireless.
 
+[Watch the three-minute trained-skills reel](media/simulation/trained-skills-reel.mp4). Its 11 chapters cover walking, edge balance, impact recovery and turning. Each example pairs recorded simulation telemetry with its test pass count and any measured refit electricity cost.
+
 We measured the home electricity used to refit three Reachy behaviors on the Mac mini and paired each run with its simulation success rate. [Training power, cost and success rates](docs/TRAINING_COMPUTE.md) · [Downloadable comparison data](experiments/reports/training-compute.csv).
 
 Reachy can now sweep its torso through about 179° while balancing on the same left or right foot edge. The waist motor drives the turn and the head corrects the lean. [Watch both edges](media/simulation/active-waist-edge-sweep.mp4) · [Sweep measurements](docs/ACTIVE_WAIST_EDGE_BALANCE.md).

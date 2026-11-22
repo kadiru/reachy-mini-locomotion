@@ -119,3 +119,4 @@ media/simulation/*
 !experiments/reports/compute-meter/
 !experiments/reports/compute-meter/*.json
 !experiments/reports/training-compute.csv
+!media/simulation/trained-skills-reel.mp4

@@ -1,5 +1,11 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 21 — All trained skills on film
+
+The [three-minute simulation reel](media/simulation/trained-skills-reel.mp4) has 11 seekable skill chapters and 16 examples. Walking starts at 0:00, balance at 1:02 and turning at 1:55. Clips retain the original telemetry and replay speeds. Each side panel names the test population behind its pass count. Walking steering repair, continuous spin and active-waist balance show measured Mac system energy, with the refit electricity priced at an illustrative $0.30/kWh. The overhead comparison uses the existing side-balance controller. Hardware transfer remains unverified.
+
+The [edit list](experiments/skill_reel.json) records source clips, cut points, footage-specific results and evidence documents. Rebuild with `.venv/bin/python experiments/make_skill_reel.py --output experiments/generated/skills-replay.mp4`. The next comparison can use these simulation recordings alongside the first measured hardware trials.
+
 ## November 21 — Measured home training cost
 
 Three CPU MuJoCo refits ran sequentially on the 10-core Apple M4 Mac mini. The continuous spin fit used 8.641 Wh for 910 rollouts and passed 8/8 reserved checks. The active-waist sweep used 3.584 Wh for 58 rollouts on the existing balance regulator and passed 1/8. The walking steering repair used 0.699 Wh for 21 rollouts on the existing gait and passed 10/10 fresh trials. These runs took 17 min 29 s elapsed and 111.2 CPU core-minutes in total. The RTX 4090 and RTX 4070 contributed zero training GPU-hours.

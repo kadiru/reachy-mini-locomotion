@@ -1,0 +1,137 @@
+[
+  {
+    "title": "Fast headshake shuffle", "group": "Walking",
+    "examples": [
+      {"variant": "Rapid shuffle", "source": "faster-headshake-2026-11-19", "cuts": [[10.52, 10.20]],
+       "metric": "57.4 mm/s", "detail": "1.149 m forward in the full 20.02-second run.",
+       "passed": [6, 16], "suite": "Fresh stress runs within the 20° heading limit. All 16 stayed upright and moved forward.",
+       "watch": "The left camera follows the head. The fixed camera shows the base advancing across the grid.",
+       "evidence": "FASTER_HEADSHAKE_2026-11-19"}
+    ]
+  },
+  {
+    "title": "Large rocking penguin steps", "group": "Walking",
+    "examples": [
+      {"variant": "Larger sway", "source": "rocking-steps-2026-11-19", "cuts": [[9.96, 11.20]],
+       "metric": "15.94 mm", "detail": "Forward distance per left–right pair in the featured run.",
+       "passed": [0, 16], "suite": "Fresh floor and motor tests meeting the course limit. Eight finished the run.",
+       "watch": "Watch the alternating lift. The robot may swing its torso within a step, then correct heading at the end of the pair.",
+       "evidence": "LARGE_ROCKING_2026-11-19"},
+      {"variant": "Sustained gait", "source": "sustained-penguin-best-2026-11-20", "cuts": [[137, 10]],
+       "metric": "63.3 cm", "detail": "Forward travel over 20 sustained pairs in the full run.",
+       "passed": [11, 16], "suite": "Fresh four-pair trials with the sustained walking policy.",
+       "watch": "This slower variant chains several head-driven pivots into a pair. The on-screen counter advances after both sides finish.",
+       "evidence": "SUSTAINED_PENGUIN_2026-11-20"}
+    ]
+  },
+  {
+    "title": "Walk farther per head swing", "group": "Walking",
+    "examples": [
+      {"variant": "Swing efficiency", "source": "distance-per-swing", "cuts": [[15.24, 10.40]],
+       "metric": "7.64 mm", "detail": "Per directional head swing. The full run traveled 1.22 m in 160 swings.",
+       "passed": [8, 12], "suite": "Fresh 24-pair stress trials. Passing required forward travel, heading control and an upright stop.",
+       "watch": "Follow the swing counter as the head changes direction. The final return to neutral is included in the score.",
+       "evidence": "DISTANCE_PER_SWING"}
+    ]
+  },
+  {
+    "title": "Walk at teleoperation cadence", "group": "Walking",
+    "examples": [
+      {"variant": "Shallow steps", "source": "teleop-cadence", "cuts": [[16.44, 9.20]],
+       "metric": "1 swing/s", "detail": "The shallow walk covered 71.0 mm in 24 directional swings.",
+       "passed": [10, 10], "suite": "Five held-out floor and motor conditions, each tested from both starting sides.",
+       "watch": "Count one swing for each leftward or rightward move. This cadence matches the operator’s estimate.",
+       "evidence": "TELEOP_CADENCE"},
+      {"variant": "Edge braking", "source": "edge-walk-fastest-fresh", "cuts": [[6.44, 11.20]],
+       "metric": "29.3 mm", "detail": "Peak rim lift. The fastest fresh trial advanced 39.6 mm in 16 swings.",
+       "ledger": "Walking heading repair", "suite": "Fresh course trials after steering repair, including both starting sides.",
+       "watch": "The head brakes on alternating loaded edges. Heading feedback brings the base back toward its original course.",
+       "evidence": "EDGE_WALK_AND_BALANCE_FOLLOWUP"}
+    ]
+  },
+  {
+    "title": "Lift onto either side edge", "group": "Balance",
+    "examples": [
+      {"variant": "Left and right holds", "source": "edge-balance-bilateral-2026-11-20", "cuts": [[0, 6.2], [20.04, 6.20]],
+       "metric": "57 s", "detail": "Approximate continuous hold on each side in separate 60-second nominal trials.",
+       "ledger": "Side-edge balance", "suite": "Regular side-balance checks. Capture is sensitive to sensor noise and timing.",
+       "watch": "Each view starts a separate trial from flat. The head catches the outward roll as the opposite rim lifts.",
+       "evidence": "EDGE_BALANCE_2026-11-20"}
+    ]
+  },
+  {
+    "title": "Balance on the front or back edge", "group": "Balance",
+    "examples": [
+      {"variant": "Raised starts", "source": "foreaft-balance-2026-11-20", "cuts": [[0, 4.8], [20.04, 4.8]],
+       "metric": "19.76 s", "detail": "Front-edge hold. The back edge held for 19.54 s in its 20-second trial.",
+       "ledger": "Front/back balance", "suite": "Raised-start checks. In a separate test, 0 of 36 launches from flat held for five seconds.",
+       "watch": "Both clips begin already tilted. Watch the head adjust as the controller holds pitch over one rim.",
+       "evidence": "FOREAFT_BALANCE_2026-11-20"}
+    ]
+  },
+  {
+    "title": "Catch a sideways fall", "group": "Balance",
+    "examples": [
+      {"variant": "Prepared 40° catch", "source": "measured-40-catches", "cuts": [[0, 9.04]],
+       "metric": "40.45°", "detail": "Peak tilt in the left-edge catch. The head command began 40 ms into the trial.",
+       "passed": [8, 22], "suite": "Active catch trials in the confirmation series with prepared starts. Success means settling flat.",
+       "watch": "Matched starts, shown in slow motion. At left the head catches the fall. At right the head holds still and the torso hits the floor.",
+       "evidence": "HIT_SPEED_AND_40_DEGREES"}
+    ]
+  },
+  {
+    "title": "Recover balance after an impact", "group": "Balance",
+    "examples": [
+      {"variant": "Rolling balls", "source": "ball-balance-recovery-2026-11-20", "cuts": [[7.28, 9.20]],
+       "metric": "2 bounces", "detail": "Two 10 g balls rolled in from opposite directions during this left-edge hold.",
+       "passed": [7, 28], "suite": "Frozen impact sensitivity trials requiring a rebound and a sustained edge recovery.",
+       "watch": "Watch the balls approach from opposite sides. After each contact, the tilt settles back toward the edge target.",
+       "evidence": "BALL_BALANCE_2026-11-20"},
+      {"variant": "Direct side hits", "source": "direct-airborne-recoveries", "cuts": [[0, 4.16], [7.76, 3.80]],
+       "metric": "2.13 m/s", "detail": "Incoming speed in the second clip. Both balls hit Reachy before touching the floor.",
+       "passed": [12, 24], "suite": "Direct airborne impacts in the filmed study. A later held-out suite passed 5 of 12.",
+       "watch": "The contact replay slows to one-fifth speed. Watch the recovery timer and the final edge-hold confirmation.",
+       "evidence": "SIDE_BALL_IMPACTS"},
+      {"variant": "Overhead drops", "source": "overhead-drops-all", "cuts": [[183.60, 5.12]],
+       "metric": "10 hits", "detail": "All ten balls struck each robot. The right-edge trial regained its hold.",
+       "ledger": "Overhead disturbance", "suite": "Matched disturbed trials that finished holding the original edge, across one to ten balls.",
+       "watch": "Compare the two drops. The left-edge robot settles flat while the right-edge robot holds its rim.",
+       "evidence": "OVERHEAD_BALL_DROPS"}
+    ]
+  },
+  {
+    "title": "Pivot to a requested heading", "group": "Turning",
+    "examples": [
+      {"variant": "Slick-floor pivot", "source": "slick-four-stroke-turn", "cuts": [[0, 18.96]],
+       "metric": "88.3°", "detail": "Settled torso turn for a 90° right command on the slick floor, in four rocking strokes.",
+       "ledger": "Slick-floor quarter-turn", "suite": "Held-out turns. The final policy also passed all 95 matched tests.",
+       "watch": "The dial shows target and torso heading. The waist holds zero while the head turns the base on its loaded rim.",
+       "evidence": "SLICK_QUARTER_TURN"}
+    ]
+  },
+  {
+    "title": "Spin continuously in place", "group": "Turning",
+    "examples": [
+      {"variant": "Fast spin", "source": "continuous-spin", "cuts": [[48.36, 12.40]],
+       "metric": "6.08 turns", "detail": "In the fastest held-out minute. The base stayed within 25.9 mm of its start.",
+       "ledger": "Continuous spin", "suite": "Held-out one-minute trials across four conditions and both turn directions.",
+       "watch": "The dial counts rotations of the base itself. The waist target stays fixed throughout the spin.",
+       "evidence": "CONTINUOUS_SPIN"},
+      {"variant": "Rim-loaded spin", "source": "continuous-rim-spin", "cuts": [[50.36, 10.40]],
+       "metric": "516°", "detail": "Net base rotation while a rim carried load in the featured 2.80-turn minute.",
+       "passed": [2, 2], "suite": "Reserved directions on one floor. On the nominal floor, only the left direction passed.",
+       "watch": "This variant alternates loaded edges. Follow the live rim-loading indicator as the base turns.",
+       "evidence": "CONTINUOUS_SPIN"}
+    ]
+  },
+  {
+    "title": "Sweep the torso on one edge", "group": "Turning",
+    "examples": [
+      {"variant": "Active waist", "source": "active-waist-edge-sweep", "cuts": [[0, 16.00], [23.04, 7.20]],
+       "metric": "179°", "detail": "Approximate torso heading range while the same foot edge stays loaded.",
+       "ledger": "Active-waist edge sweep", "suite": "Reserved launch and sweep trials. All seven misses occurred before the sweep started.",
+       "watch": "The orange arc marks the supporting rim. The blue contact point stays inside it as the waist turns and the head compensates.",
+       "evidence": "ACTIVE_WAIST_EDGE_BALANCE"}
+    ]
+  }
+]
