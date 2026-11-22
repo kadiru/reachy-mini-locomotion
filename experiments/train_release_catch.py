@@ -45,11 +45,7 @@ class CatchTrim:
         return c.target(t,roll)
 
 
-def simulate(job):
-    side,angle,rate,seed,dt,seconds,policy,clip = job[:8]
-    environment=job[8] if len(job)>8 else {}
-    sim,neutral=plant(True,dt,environment.get('reduced_bus', False),environment.get('sliding_friction'))
-    sim.initial_targets=neutral.copy()
+def make_controller(sim,side,seed,policy):
     def controller(p):
         if p is None:
             return HeadMotion(dict(mode='hold', side=side))
@@ -58,9 +54,16 @@ def simulate(job):
         child=balance_controller(sim,side,dict(p,seed=seed))
         return CatchTrim(child,p) if p.get('adaptive') else child
     if policy and 'specialists' in policy:
-        ctl=ReleaseSelector(side,seed,policy,controller)
-    else:
-        ctl=controller(policy)
+        return ReleaseSelector(side,seed,policy,controller)
+    return controller(policy)
+
+
+def simulate(job):
+    side,angle,rate,seed,dt,seconds,policy,clip = job[:8]
+    environment=job[8] if len(job)>8 else {}
+    sim,neutral=plant(True,dt,environment.get('reduced_bus', False),environment.get('sliding_friction'))
+    sim.initial_targets=neutral.copy()
+    ctl=make_controller(sim,side,seed,policy)
     r=sim.run_primitive(Primitive(),seconds=seconds,controller=ctl,waist_mode='hold_neutral',
         tilt_limit_deg=None,observe_landing=True,record=bool(clip),record_rim_contact=True,
         diagnostic_initial_roll_deg=side*angle,diagnostic_initial_angular_rate_deg_s=side*rate)

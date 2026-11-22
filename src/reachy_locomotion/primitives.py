@@ -129,7 +129,7 @@ class PrimitiveSimulator(SwaySimulator):
     def run_primitive(self,recipe,seconds=3.6,waist_mode='off',record=False,
                       controller=None,tilt_limit_deg=80,finish_settle_s=None,diagnostic_initial_roll_deg=None,
                       diagnostic_initial_pitch_deg=None,diagnostic_initial_angular_rate_deg_s=0.,collision_window=None,
-                      observe_landing=False, step_audit=None, record_rim_contact=False):
+                      observe_landing=False, step_audit=None, record_rim_contact=False, table_motion=None):
         if collision_window is not None:
             start_s, end_s = collision_window
             if not record or not 0 <= start_s < end_s <= seconds or end_s-start_s > 2:
@@ -171,11 +171,19 @@ class PrimitiveSimulator(SwaySimulator):
         if not math.isfinite(diagnostic_initial_angular_rate_deg_s) or abs(diagnostic_initial_angular_rate_deg_s)>100:
             raise ValueError('Invalid curriculum angular rate')
         if diagnostic_initial_angular_rate_deg_s and reset_angle is None:raise ValueError('Curriculum rate requires an explicitly tilted reset')
-        banked = bool(self.config.get('floor_roll_deg'))
-        floor_normal = d.geom_xmat[self.floor].reshape(3,3)[:,2].copy()
+        moving = bool(self.config.get('tilt_table'))
+        if table_motion is not None and not moving:
+            raise ValueError('A moving-table schedule requires a hinged table')
+        if moving:
+            hinge=m.joint('table_roll').id
+            table_q,table_v=m.jnt_qposadr[hinge],m.jnt_dofadr[hinge]
+        banked = moving or bool(self.config.get('floor_roll_deg'))
+        floor_normal = d.geom_xmat[self.floor].reshape(3,3)[:,2]
         if reset_angle is not None:
-            if banked:
+            if self.config.get('floor_roll_deg'):
                 raise ValueError('Tilted resets require a level floor')
+            if moving:
+                d.qpos[table_q]=0.
             maximum_reset = 33 if tilt_limit_deg == 35 else 45
             cad_floor = self.config.get('cad_shell_floor', False)
             if cad_floor and observe_landing and tilt_limit_deg is None:
@@ -264,6 +272,8 @@ class PrimitiveSimulator(SwaySimulator):
                 # contact; movement of the contact centroid is NOT a slip proxy.
                 jac=np.zeros((3,m.nv));mujoco.mj_jac(m,d,jac,None,contact,self.base)
                 point_velocity=jac@d.qvel
+                if moving:
+                    point_velocity-=np.cross([d.qvel[table_v],0.,0.],contact)
                 slip=float(np.linalg.norm(point_velocity-floor_normal*(floor_normal@point_velocity))) if banked else float(np.linalg.norm(point_velocity[:2]))
             if edge and frame:
                 edge_time+=.02;slip_distance+=slip*.02
@@ -284,6 +294,10 @@ class PrimitiveSimulator(SwaySimulator):
                      foot_xyz_m=d.xpos[self.base].tolist())
             if banked:
                 row['tilt_from_floor_deg']=math.degrees(math.acos(float(np.clip(floor_normal@R[:,2],-1,1))))
+            if moving:
+                row['table_deg']=math.degrees(d.qpos[table_q])
+                row['table_rate_deg_s']=math.degrees(d.qvel[table_v])
+                row['side_load_n']=forces.tolist()
             if record_rim_contact or waist_mode == 'position':
                 local_contact = R.T @ (contact - d.xpos[self.base]) if contact is not None else None
                 row['contact_foot_xy_m'] = local_contact[:2].tolist() if local_contact is not None else None
@@ -327,6 +341,8 @@ class PrimitiveSimulator(SwaySimulator):
             if dense and t >= start_s-1e-9 and not collision_frames:
                 collision_frames.append(dict(time_s=t,qpos=d.qpos.tolist(),foot_rpy_rad=rpy.tolist()))
             for substep in range(self.substeps):
+                if table_motion is not None:
+                    table_motion.drive(d,table_v)
                 self.servos.apply(d)
                 if waist_mode=='off':d.ctrl[waist]=0.
                 mujoco.mj_step(m,d);mujoco.mj_forward(m,d)

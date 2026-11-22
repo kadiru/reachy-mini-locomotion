@@ -1,5 +1,7 @@
 # Reachy Mini — Quest to Locomotion
 
+On a moving table, Reachy held its downhill right edge through a 10° tilt and return on 3/3 simulated runs. Replaying the head commands from a level table lost the same edge at 1.04° in all three. [Watch the side-by-side comparison](media/simulation/moving-table-feedback.mp4) · [Slow tilt limits](media/simulation/moving-table-angle.mp4) · [Speed limits and recoveries](media/simulation/moving-table-rate.mp4) · [Measurements](docs/MOVING_PLATFORM_BALANCE.md)
+
 Reachy can lift from flat and balance on its downhill right edge on a 9° simulated ramp. It held on four of four fresh sensor-noise runs, with a best continuous hold of 6.04 seconds. All 16 launches on reserved moderate slopes missed. [Watch the catch and every ramp orientation](media/simulation/inclined-edge-balance.mp4) · [Compare uphill and downhill head swings](docs/SLOPE_EDGE_BALANCE.md)
 
 The CAD-foot release controller catches all six former right-side falls in simulation. Watch the same release with the old policy, new policy and still-head control, followed by all 20 fresh tests. [Comparison film](media/simulation/cad-right-release-catch.mp4) · [Conditions, outcomes and training cost](docs/CAD_RELEASE_CATCH.md) · [Supported hardware comparison](docs/SUPPORTED_TILT_CALIBRATION.md)

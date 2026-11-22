@@ -1,5 +1,11 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 22 — Balancing while a level platform tilts and returns
+
+With its waist held at zero, Reachy maintained the downhill right edge through a 10° tilt and return in all three simulated repeats. Replaying head commands from the level table lost that edge near 1.04° in all three and ended flat. With a 10 mm allowance for contact travel, both left orientations passed to 3.5° and both right orientations to 4.25°. The uphill right edge stayed loaded at 28.75° while traveling 53 cm across the table. On repeated 5° excursions it held continuously at 166°/s, briefly unloaded and recovered at 173.35°/s, and ended flat at 256°/s. All 276 primary trials completed, all 66 duration-matched flat controls held, and all 196 repository tests passed locally. The two metered CPU evaluation intervals used 22.23 Wh gross. Hardware transfer is unverified.
+
+Replay with `.venv/bin/python experiments/film_moving_table.py feedback`, then `.venv/bin/python experiments/film_moving_table.py angle` and `.venv/bin/python experiments/film_moving_table.py rate`. Next, compare the supported physical foot contact with the simulated level starting pose before choosing a hardware table excursion. [Feedback comparison](media/simulation/moving-table-feedback.mp4) · [Angle film](media/simulation/moving-table-angle.mp4) · [Speed film](media/simulation/moving-table-rate.mp4) · [Conditions, footprint displacement and thresholds](docs/MOVING_PLATFORM_BALANCE.md)
+
 ## November 22 — Flat-foot launches on sideways ramps
 
 The frozen CAD-foot controller acquired the downhill right edge of a 9° ramp on all four fresh sensor-noise repeats. Its best quiet hold lasted 6.04 s and ended at 30.82° roll. The original controller settled flat. The mirrored left launch returned flat on four of four repeats. Across 16 reserved launches at 2°, 4°, 6.5° and 8°, the slope-aware policy held zero, landed on its shell five times, returned flat six times and remained in motion five times. All 150 qualification trials began flat on the surface, completed eight seconds and held the waist target at zero. The four CPU fitting stages used 76.08 Wh gross on the Mac M4 over 3,741 rollouts and 19 planning trees. Hardware transfer is unverified.

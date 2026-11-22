@@ -131,3 +131,10 @@ media/simulation/*
 !media/simulation/inclined-edge-balance.mp4
 !media/simulation/inclined-edge-best.mp4
 !media/simulation/inclined-edge-results.png
+
+!experiments/reports/moving-table.json
+!experiments/reports/moving-table-feedback.json
+!media/simulation/moving-table-angle.mp4
+!media/simulation/moving-table-rate.mp4
+!media/simulation/moving-table-feedback.mp4
+!experiments/reports/moving-table-footprint.json

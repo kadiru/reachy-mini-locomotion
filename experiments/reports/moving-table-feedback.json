@@ -1,0 +1,344 @@
+[
+  {
+    "seed": 4915,
+    "level": {
+      "job": {
+        "side": 1,
+        "angle": 10.0,
+        "rate": 2.0,
+        "seed": 4915,
+        "cycles": 1,
+        "flat": true,
+        "dt": 0.000125
+      },
+      "passed": true,
+      "start_ok": true,
+      "continuous_edge": true,
+      "stable_endpoints": true,
+      "quiet_threshold_pass": true,
+      "final_edge": true,
+      "flat_return": false,
+      "shell": null,
+      "first_loss": null,
+      "max_support_gap_ms": 0,
+      "peak_table_deg": 0.0007882537480269116,
+      "peak_table_rate": 0.0002673630831344512,
+      "tracking_error_deg": 0.0007873786575040235,
+      "final_table_deg": 0.0007840665195646218,
+      "final_body_deg": 31.54153186526576,
+      "joint_margin": 0.6844559696960475,
+      "termination": "completed",
+      "duration": 21.72,
+      "elapsed": 21.720000000058203,
+      "waist": [
+        0.0,
+        0.0
+      ],
+      "pre_quiet_fraction": 1.0
+    },
+    "feedback": {
+      "job": {
+        "side": 1,
+        "angle": 10.0,
+        "rate": 2.0,
+        "seed": 4915,
+        "cycles": 1,
+        "flat": false,
+        "dt": 0.000125
+      },
+      "passed": true,
+      "start_ok": true,
+      "continuous_edge": true,
+      "stable_endpoints": true,
+      "quiet_threshold_pass": true,
+      "final_edge": true,
+      "flat_return": false,
+      "shell": null,
+      "first_loss": null,
+      "max_support_gap_ms": 0,
+      "peak_table_deg": 10.00117881250298,
+      "peak_table_rate": 2.00016713677647,
+      "tracking_error_deg": 0.001540148797673103,
+      "final_table_deg": 0.0015332364159498803,
+      "final_body_deg": 31.530919953946388,
+      "joint_margin": 0.6822169690429513,
+      "termination": "completed",
+      "duration": 21.72,
+      "elapsed": 21.720000000058203,
+      "waist": [
+        0.0,
+        0.0
+      ],
+      "pre_quiet_fraction": 1.0
+    },
+    "level_command_replay": {
+      "job": {
+        "side": 1,
+        "angle": 10.0,
+        "rate": 2.0,
+        "seed": 4915,
+        "cycles": 1,
+        "flat": false,
+        "dt": 0.000125
+      },
+      "passed": false,
+      "start_ok": true,
+      "continuous_edge": false,
+      "stable_endpoints": false,
+      "quiet_threshold_pass": false,
+      "final_edge": false,
+      "flat_return": true,
+      "shell": null,
+      "first_loss": {
+        "time_s": 4.639000000000526,
+        "table_deg": 1.0372731399397312,
+        "table_rate_deg_s": 1.2178772600862204
+      },
+      "max_support_gap_ms": 17082,
+      "peak_table_deg": 10.000912156443043,
+      "peak_table_rate": 2.0016639490332455,
+      "tracking_error_deg": 0.001377685743775281,
+      "final_table_deg": 0.0013100812095042421,
+      "final_body_deg": 0.001681914149823898,
+      "joint_margin": 0.6844559696960475,
+      "termination": "completed",
+      "duration": 21.72,
+      "elapsed": 21.720000000058203,
+      "waist": [
+        0.0,
+        0.0
+      ],
+      "pre_quiet_fraction": 1.0
+    },
+    "max_head_command_difference_deg": 8.916902571502035,
+    "max_head_command_difference_mm": 1.1124305875413334
+  },
+  {
+    "seed": 27017,
+    "level": {
+      "job": {
+        "side": 1,
+        "angle": 10.0,
+        "rate": 2.0,
+        "seed": 27017,
+        "cycles": 1,
+        "flat": true,
+        "dt": 0.000125
+      },
+      "passed": true,
+      "start_ok": true,
+      "continuous_edge": true,
+      "stable_endpoints": true,
+      "quiet_threshold_pass": true,
+      "final_edge": true,
+      "flat_return": false,
+      "shell": null,
+      "first_loss": null,
+      "max_support_gap_ms": 0,
+      "peak_table_deg": 0.0007861323223927184,
+      "peak_table_rate": 0.00025110953175077895,
+      "tracking_error_deg": 0.0007861293803945708,
+      "final_table_deg": 0.0007833589291052761,
+      "final_body_deg": 31.64121684166823,
+      "joint_margin": 0.6751885312277911,
+      "termination": "completed",
+      "duration": 21.72,
+      "elapsed": 21.720000000058203,
+      "waist": [
+        0.0,
+        0.0
+      ],
+      "pre_quiet_fraction": 1.0
+    },
+    "feedback": {
+      "job": {
+        "side": 1,
+        "angle": 10.0,
+        "rate": 2.0,
+        "seed": 27017,
+        "cycles": 1,
+        "flat": false,
+        "dt": 0.000125
+      },
+      "passed": true,
+      "start_ok": true,
+      "continuous_edge": true,
+      "stable_endpoints": true,
+      "quiet_threshold_pass": true,
+      "final_edge": true,
+      "flat_return": false,
+      "shell": null,
+      "first_loss": null,
+      "max_support_gap_ms": 0,
+      "peak_table_deg": 10.001179366941304,
+      "peak_table_rate": 2.000059387910681,
+      "tracking_error_deg": 0.0015379439500182832,
+      "final_table_deg": 0.001532406557641323,
+      "final_body_deg": 31.6451266325455,
+      "joint_margin": 0.672788048093773,
+      "termination": "completed",
+      "duration": 21.72,
+      "elapsed": 21.720000000058203,
+      "waist": [
+        0.0,
+        0.0
+      ],
+      "pre_quiet_fraction": 1.0
+    },
+    "level_command_replay": {
+      "job": {
+        "side": 1,
+        "angle": 10.0,
+        "rate": 2.0,
+        "seed": 27017,
+        "cycles": 1,
+        "flat": false,
+        "dt": 0.000125
+      },
+      "passed": false,
+      "start_ok": true,
+      "continuous_edge": false,
+      "stable_endpoints": false,
+      "quiet_threshold_pass": false,
+      "final_edge": false,
+      "flat_return": true,
+      "shell": null,
+      "first_loss": {
+        "time_s": 4.641000000000521,
+        "table_deg": 1.0397120775360829,
+        "table_rate_deg_s": 1.2191835221771197
+      },
+      "max_support_gap_ms": 17080,
+      "peak_table_deg": 10.000881805888842,
+      "peak_table_rate": 2.0019549758237014,
+      "tracking_error_deg": 0.001338905116922362,
+      "final_table_deg": 0.0012326136265451873,
+      "final_body_deg": 0.0013237543558791145,
+      "joint_margin": 0.6925832477396286,
+      "termination": "completed",
+      "duration": 21.72,
+      "elapsed": 21.720000000058203,
+      "waist": [
+        0.0,
+        0.0
+      ],
+      "pre_quiet_fraction": 1.0
+    },
+    "max_head_command_difference_deg": 5.012696038712095,
+    "max_head_command_difference_mm": 0.617299251678842
+  },
+  {
+    "seed": 37003,
+    "level": {
+      "job": {
+        "side": 1,
+        "angle": 10.0,
+        "rate": 2.0,
+        "seed": 37003,
+        "cycles": 1,
+        "flat": true,
+        "dt": 0.000125
+      },
+      "passed": true,
+      "start_ok": true,
+      "continuous_edge": true,
+      "stable_endpoints": true,
+      "quiet_threshold_pass": true,
+      "final_edge": true,
+      "flat_return": false,
+      "shell": null,
+      "first_loss": null,
+      "max_support_gap_ms": 0,
+      "peak_table_deg": 0.000786970384772321,
+      "peak_table_rate": 0.0003153528479255855,
+      "tracking_error_deg": 0.0007864305172068651,
+      "final_table_deg": 0.0007840087589303059,
+      "final_body_deg": 31.581122753759264,
+      "joint_margin": 0.6707906947329788,
+      "termination": "completed",
+      "duration": 21.72,
+      "elapsed": 21.720000000058203,
+      "waist": [
+        0.0,
+        0.0
+      ],
+      "pre_quiet_fraction": 1.0
+    },
+    "feedback": {
+      "job": {
+        "side": 1,
+        "angle": 10.0,
+        "rate": 2.0,
+        "seed": 37003,
+        "cycles": 1,
+        "flat": false,
+        "dt": 0.000125
+      },
+      "passed": true,
+      "start_ok": true,
+      "continuous_edge": true,
+      "stable_endpoints": true,
+      "quiet_threshold_pass": true,
+      "final_edge": true,
+      "flat_return": false,
+      "shell": null,
+      "first_loss": null,
+      "max_support_gap_ms": 0,
+      "peak_table_deg": 10.001178485453254,
+      "peak_table_rate": 2.0001308107243116,
+      "tracking_error_deg": 0.0015378658599812145,
+      "final_table_deg": 0.0015333320766935691,
+      "final_body_deg": 31.5815724069229,
+      "joint_margin": 0.6698951746672911,
+      "termination": "completed",
+      "duration": 21.72,
+      "elapsed": 21.720000000058203,
+      "waist": [
+        0.0,
+        0.0
+      ],
+      "pre_quiet_fraction": 1.0
+    },
+    "level_command_replay": {
+      "job": {
+        "side": 1,
+        "angle": 10.0,
+        "rate": 2.0,
+        "seed": 37003,
+        "cycles": 1,
+        "flat": false,
+        "dt": 0.000125
+      },
+      "passed": false,
+      "start_ok": true,
+      "continuous_edge": false,
+      "stable_endpoints": false,
+      "quiet_threshold_pass": false,
+      "final_edge": false,
+      "flat_return": true,
+      "shell": null,
+      "first_loss": {
+        "time_s": 4.640000000000524,
+        "table_deg": 1.0384904977157676,
+        "table_rate_deg_s": 1.2185069721182213
+      },
+      "max_support_gap_ms": 17081,
+      "peak_table_deg": 10.000905595371266,
+      "peak_table_rate": 2.0019704413513004,
+      "tracking_error_deg": 0.0013780205605209428,
+      "final_table_deg": 0.001289170141411635,
+      "final_body_deg": 0.0014655892044231184,
+      "joint_margin": 0.68459447473223,
+      "termination": "completed",
+      "duration": 21.72,
+      "elapsed": 21.720000000058203,
+      "waist": [
+        0.0,
+        0.0
+      ],
+      "pre_quiet_fraction": 1.0
+    },
+    "max_head_command_difference_deg": 3.9555176790723587,
+    "max_head_command_difference_mm": 0.49966815941998133
+  }
+]

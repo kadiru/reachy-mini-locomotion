@@ -97,6 +97,11 @@ def scene_xml(upstream, config, free=True):
     if config.get('cad_shell_floor'):
         from .shell_contact import use_cad_floor
         use_cad_floor(world, base, friction)
+    if free and config.get('tilt_table'):
+        if bank:
+            raise ValueError("The moving table starts level")
+        from .tilt_table import add_table
+        add_table(world)
     return ET.tostring(root, encoding="unicode"), hashlib.sha256(original).hexdigest()
 
 
