@@ -142,4 +142,6 @@ media/simulation/*
 !experiments/reports/moving-table-imu.json
 !media/simulation/moving-table-imu.png
 !media/simulation/moving-table-imu.mp4
+!media/simulation/imu-right-catch.mp4
+!experiments/reports/imu-right-catch.json
 !experiments/reports/moving-table-imu-bandwidth.json

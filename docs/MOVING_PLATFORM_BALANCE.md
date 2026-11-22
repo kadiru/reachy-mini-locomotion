@@ -105,6 +105,8 @@ python experiments/imu_transfer.py --plot
 python experiments/film_imu_transfer.py
 ```
 
+The level-ground refit compares the original controller, a trained feedback policy and command replay on 16 fresh releases. [Follow-up IMU catch experiment](IMU_RIGHT_CATCH.md)
+
 ## Controls and compute
 
 All 276 primary qualification trials completed. The waist target stayed at zero throughout. All six starting controls and all 66 duration-matched level controls held their requested edge. At the bracket endpoints, the measured table trajectory met the tracking checks. In the coarse 2°, 256°/s uphill-left test the fixture exceeded the tracking tolerance, so that test cannot establish a precise speed limit. The lower, refined interval uses runs within tolerance.

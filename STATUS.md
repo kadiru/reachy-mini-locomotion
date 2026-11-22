@@ -1,5 +1,11 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 22 — Right-edge catch with a learned head trajectory and 50 Hz IMU feedback
+
+The refit held all eight nominal 32.2° releases and missed all eight changed mechanical starts. Disabling its feedback reproduced the eight successful trajectories exactly. Feedback changed three outward shell landings into flat-foot returns at 32.45°, and changed a flat-foot return into a shell landing at 31.95° with 9 ms old readings. Across the 16 shared cases the original controller held zero and landed on the shell three times, the refit held eight with one shell landing, and command replay held eight with three shell landings. All 48 complete trials continued through their full eight seconds at a fixed waist target. Four CPU fits used 5.280 Wh gross over 211 simulated episodes. No physical robot was operated. [All 16 comparison chapters](media/simulation/imu-right-catch.mp4) · [Training, test conditions and compute](docs/IMU_RIGHT_CATCH.md)
+
+Run `python experiments/train_imu_catch.py qualify --workers 6` with the project IMU environment and pinned assets, then `python experiments/film_imu_catch.py`. Next, test stationary angle offsets separately from angular-rate errors and require edge recovery where replay fails. The physical comparison remains a supported IMU recording with synchronized video.
+
 ## November 22 — Testing the edge catch with 50 Hz inertial feedback
 
 The original frozen controller reproduced 3/3 downhill-right edge holds through a 10° deck excursion. Supplying one gyro reading every 20 ms broke the initial catch in all three seeds even with exact roll and pitch available. A bandwidth model based on the pinned BMI088 driver produced 0/9 holds on the moving deck and 0/9 on a matched stationary deck. The paired runs tipped inward or landed on the shell before the deck began to move. All 33 simulations completed. The two evaluation commands used 3.66 Wh gross on the M4 CPU. Mounting, transport timing and physical balance remain unverified. [Matched release video](media/simulation/moving-table-imu.mp4) · [Angle traces](media/simulation/moving-table-imu.png) · [Test design, counts and receipts](docs/MOVING_PLATFORM_BALANCE.md#balance-with-an-imu-estimate)
