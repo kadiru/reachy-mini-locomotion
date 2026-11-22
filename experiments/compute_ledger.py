@@ -97,38 +97,47 @@ def build(rate, rate_basis, receipts=RECEIPTS):
         add('Overhead disturbance',file,None,'evaluation only; reuses balance policy',
             '40 matched disturbed trials; held edge',
             (x['final_hold']=='True' for x in csv.DictReader(f) if x['primary']=='True' and int(x['count'])>0))
+    def metered_stages(report, filename, model, policy, stages, suite, flags):
+        costs = [c for c in report['training_cost'] if c['stage'] in stages]
+        meters = [read(c['receipt']) for c in costs]
+        seconds = sum(c['wall_s'] for c in costs)
+        energy = sum(c['gross_wh'] for c in costs)/1000
+        incremental = sum(m['incremental_kwh'] for m in meters)
+        add(model, filename, sum(c['rollouts'] for c in costs), ' + '.join(stages), suite, flags)
+        rows[-1].update(
+            policy_sha256=report['sha256'][policy], metered_host_cpu=costs[0]['cpu'],
+            workers='/'.join(map(str,sorted({c['workers'] for c in costs}))), wall_s=seconds,
+            simulated_rollout_s=sum(c['simulated_rollout_s'] for c in costs),
+            process_tree_cpu_s=sum(c['cpu_s'] for c in costs),
+            meter_receipt=str(REPORTS/filename), energy_evidence='metered search, cumulative stages',
+            energy_scope=meters[0]['scope'], gross_system_kwh=energy,
+            mean_system_w=energy*3_600_000/seconds,
+            peak_sample_system_w=max(m['gross']['peak_w'] for m in meters),
+            baseline_system_w=sum(m['baseline']['mean_w']*m['wall_s'] for m in meters)/seconds,
+            above_baseline_kwh=incremental, gross_system_cost_usd=energy*rate,
+            above_baseline_cost_usd=incremental*rate)
+
     gyro_file = 'motor-training-gyro-peg.json'
     if (REPORTS/gyro_file).exists():
         report = read(REPORTS/gyro_file)
-        def gyro(model, policy, stages, suite, flags):
-            costs = [c for c in report['training_cost'] if c['stage'] in stages]
-            meters = [read(c['receipt']) for c in costs]
-            seconds = sum(c['wall_s'] for c in costs)
-            energy = sum(c['gross_wh'] for c in costs)/1000
-            incremental = sum(m['incremental_kwh'] for m in meters)
-            add(model, gyro_file, sum(c['rollouts'] for c in costs), ' + '.join(stages), suite, flags)
-            rows[-1].update(
-                policy_sha256=report['sha256'][policy], metered_host_cpu=costs[0]['cpu'],
-                workers=costs[0]['workers'], wall_s=seconds,
-                simulated_rollout_s=sum(c['simulated_rollout_s'] for c in costs),
-                process_tree_cpu_s=sum(c['cpu_s'] for c in costs),
-                meter_receipt=str(REPORTS/gyro_file), energy_evidence='metered search, cumulative stages',
-                energy_scope=meters[0]['scope'], gross_system_kwh=energy,
-                mean_system_w=energy*3_600_000/seconds,
-                peak_sample_system_w=max(m['gross']['peak_w'] for m in meters),
-                baseline_system_w=sum(m['baseline']['mean_w']*m['wall_s'] for m in meters)/seconds,
-                above_baseline_kwh=incremental, gross_system_cost_usd=energy*rate,
-                above_baseline_cost_usd=incremental*rate)
         core = ['periodic orbit','tilt feedback']
-        gyro('Gyro-peg rim roll','configs/gyro-peg-experimental.json',core,
+        metered_stages(report,gyro_file,'Gyro-peg rim roll','configs/gyro-peg-experimental.json',core,
              '8 reserved 24-second rim-roll trials',(r['passed'] for r in report['held_out']))
-        gyro('Wide gyro-peg circle','configs/gyro-peg-wide-experimental.json',core+['wide floor circle'],
+        metered_stages(report,gyro_file,'Wide gyro-peg circle','configs/gyro-peg-wide-experimental.json',core+['wide floor circle'],
              '8 reserved two-minute traveling circles',
              (r['large_floor_pass'] for r in report['wide_tests'] if r['condition'] in report['held_out_conditions']))
-        gyro('Deep gyro-peg roll','configs/gyro-peg-deep-experimental.json',
+        metered_stages(report,gyro_file,'Deep gyro-peg roll','configs/gyro-peg-deep-experimental.json',
              ['deep edge reference','deep edge endurance','four-sector blend'],
              '4 reserved deep-roll conditions on selected launch side',
              (r['passed'] for r in report['deep_tests']['held_out']))
+    lift_file = 'motor-training-deep-lift.json'
+    if (REPORTS/lift_file).exists():
+        report = read(REPORTS/lift_file)
+        checks = [r for r in report['checks'] if r['condition'] in report['fresh']]
+        stages = [c['stage'] for c in report['training_cost']]
+        metered_stages(report,lift_file,'31-degree foot-center circle','configs/deep-lift-circle.json',
+                       stages,'4 fresh flat starts through 36-second deep circle',
+                       (r['circle_pass'] for r in checks))
     return rows
 
 

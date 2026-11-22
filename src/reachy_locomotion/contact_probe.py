@@ -82,6 +82,9 @@ def scene_xml(upstream, config, free=True):
     if free and config.get('disturbance_balls'):
         from .ball_disturbance import add_balls
         add_balls(world,config['disturbance_balls'])
+    if free and config.get('side_pendulum'):
+        from .side_pendulum import add_pendulum
+        add_pendulum(root, config['side_pendulum'])
     return ET.tostring(root, encoding="unicode"), hashlib.sha256(original).hexdigest()
 
 

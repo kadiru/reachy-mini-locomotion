@@ -109,7 +109,7 @@ class TiltPhase:
         return target,'tilt-timed head orbit',float(r)
 
 
-def ground_course(rows, foot_diameter_mm=112.):
+def ground_course(rows, foot_diameter_mm=112., accept_loop=None):
     """Find full floor loops separately from the rapid wobble in each rim lap."""
     t=np.array([r['time_s'] for r in rows])
     xy=np.array([r['foot_xyz_m'][:2] for r in rows])*1000
@@ -143,7 +143,8 @@ def ground_course(rows, foot_diameter_mm=112.):
             loop=fit(i,j)
             if loop and (350<=abs(loop['sweep_deg'])<=385 and loop['coherence']>=.93
                          and loop['radial_cv']<=.18 and loop['endpoint_gap_mm']<=.175*loop['diameter_mm']):
-                loops.append(loop)
+                if accept_loop is None or accept_loop(loop):
+                    loops.append(loop)
     best=max(loops,key=lambda c:c['diameter_mm'],default=None)
     # Count disjoint circles of at least one foot diameter. Overlapping windows
     # which describe the same revolution can only contribute a single lap.

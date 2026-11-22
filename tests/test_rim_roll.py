@@ -39,6 +39,9 @@ class RimRollTests(unittest.TestCase):
         self.assertIsNotNone(loop)
         self.assertAlmostEqual(loop['diameter_mm'],200.,delta=2.)
         self.assertIsNone(ground_course(data[:550])['best_loop'])
+        later=ground_course(data,accept_loop=lambda lap:lap['start_s']>=8.)['best_loop']
+        self.assertGreaterEqual(later['start_s'],8.)
+        self.assertIsNone(ground_course(data,accept_loop=lambda lap:False)['best_loop'])
 
     def test_wrong_direction_is_not_a_positive_rim_lap(self):
         r=measures(self.ring(),.056,-1,0.)

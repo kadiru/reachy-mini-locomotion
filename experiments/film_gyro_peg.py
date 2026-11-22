@@ -29,7 +29,13 @@ def main():
     deep='captured_s' in run['metrics']
     course = run['metrics'].get('floor_course') if not deep else None
     loop = course.get('best_loop') if course else None
+    lift_circle = run['metrics'].get('circle_pass',False)
+    if lift_circle:
+        loop = run['metrics']['loop']
     summary=None
+    if lift_circle:
+        summary=(f"Closed foot-center lap   /   {loop['diameter_mm']/10:.2f} cm",
+                 f"Lean during lap   {loop['min_lean']:.1f}° to {loop['max_lean']:.1f}°")
     if a.report and course and 'params' in run['metrics']:
         report=read(a.report)
         if report['wide_policy']['orbit']!=run['metrics']['params']:
@@ -114,7 +120,16 @@ def main():
     if course:
         schedule.extend((i,'4× floor path') for i in range(400,len(rows),8))
         schedule.append((len(rows)-1,'4× floor path'))
-    if deep and run['metrics']['safe']:
+    if lift_circle:
+        begin=round(50*loop['start_s'])
+        end=min(len(rows),1+round(50*loop['end_s']))
+        launch_end=min(begin,round(50*(run['metrics']['capture_s']+1.5)))
+        schedule=[(i,'launch in real time') for i in range(0,launch_end,2)]
+        schedule.extend((i,'measured lap in real time') for i in range(begin,end,2))
+        if len(rows)-end>100:
+            schedule.extend((i,'end of the trial') for i in range(len(rows)-51,len(rows),2))
+        schedule.extend((i,'2× overhead center lap') for i in range(begin,end,4))
+    elif deep and run['metrics']['safe']:
         begin=round(50*(run['metrics']['captured_s']+1.))
         end=min(len(rows),begin+round(50*run['metrics']['period']))
         schedule.extend((i,'2× overhead rim lap') for i in range(begin,end,4))
@@ -136,7 +151,7 @@ def main():
                           stdin=subprocess.PIPE) as enc, mujoco.Renderer(model,height=516,width=800) as renderer:
         for i,speed in schedule:
             r=rows[i]
-            if speed in ('4× floor path','2× overhead rim lap'):
+            if speed in ('4× floor path','2× overhead rim lap','2× overhead center lap'):
                 camera.elevation=-56
                 camera.distance=max(.66,.4+1.6*side/1000)
                 camera.lookat[:]=[*midpoint/1000,.11]
@@ -153,6 +168,7 @@ def main():
             def label(x,y,s,size,fill=INK):
                 pen.text((x,y),s,font=fonts[size],fill=fill)
             title='Deep lean from an edge capture' if deep else 'Rolling around the foot rim'
+            if lift_circle:title='A foot-center circle at deep lean'
             if loop and run['metrics'].get('large_floor_pass'):title='A wide circle on a rolling rim'
             label(24,8,title,32)
             label(24,51,'Reachy Mini   /   MuJoCo simulation   /   fixed waist   /   '+speed,19,MUTED)
@@ -166,6 +182,8 @@ def main():
             label(913,180,'left',16,MUTED)
             label(1141,180,'right',16,MUTED)
             j=max(0,i-(round(50*run['metrics']['period']) if deep else 17))
+            if lift_circle:
+                j=max(0,i-round(50*run['metrics']['orbit'].get('period',14.)))
             trail(pen,local[j:i+1],valid[j:i+1],rim_point,COP,4)
             if valid[i]:dot(pen,rim_point(local[i]),COP)
             label(849,310,'Ground tracks',25)
@@ -173,9 +191,11 @@ def main():
                 cx,cy=floor_point(np.array(loop['center_xy_mm']))
                 rad=loop['diameter_mm']/2/side*228
                 pen.ellipse((cx-rad,cy-rad,cx+rad,cy+rad),outline='#647e89')
-            if course and i>=14:
+            if (course or lift_circle) and i>=14:
                 pen.line([floor_point(v) for v in centers[:i+1:8]],fill='#438387',width=2)
             j=max(0,i-(round(50*run['metrics']['period']) if deep else 74))
+            if lift_circle:
+                j=max(0,i-round(50*loop['period_s']))
             trail(pen,contact[j:i+1],valid[j:i+1],floor_point,COP,2)
             trail(pen,centers[j:i+1],np.ones(i+1-j,bool),floor_point,FOOT,3)
             dot(pen,floor_point(centers[i]),FOOT)
@@ -191,7 +211,7 @@ def main():
             if loop:
                 label(913,646,f"Floor loop  {loop['diameter_mm']/10:.1f} cm",23,FOOT)
             note=('Fixed overhead camera. The dashed ring is fitted to a measured lap of the foot center.'
-                  if speed=='4× floor path' and loop else
+                  if speed in ('4× floor path','2× overhead center lap') and loop else
                   'Orange follows the measured center of pressure. The cyan stripe marks the front of the foot.')
             label(24,684,note,19,MUTED)
             enc.stdin.write(frame.tobytes())

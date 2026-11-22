@@ -89,6 +89,9 @@ class TravelingEdge:
 
     def observe_attitude(self,t,pitch):self.pitch=pitch
 
+    def reference_angle(self,elapsed):
+        return self.direction*(2*math.pi/self.period)*(elapsed-1.+math.exp(-elapsed))
+
     def target(self,t,roll):
         if self.start is None:
             stable=(self.child.catch_trigger is not None and abs(self.child.sensed[0]-self.side*self.child.f.target_roll_deg)<2.
@@ -97,7 +100,7 @@ class TravelingEdge:
             if self.stable>=25:self.start=t
         if self.start is not None:
             dt=t-self.start
-            self.angle=self.direction*(2*math.pi/self.period)*(dt-1.+math.exp(-dt))
+            self.angle=self.reference_angle(dt)
             self.Q=rotation((0,0,self.angle))
             if self.sector_mix:self.mix_models()
             self.child.control_gain=self.gain0*(1.+(self.gain-1.)*min(1.,dt))

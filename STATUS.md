@@ -1,5 +1,13 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 21 — Repairing the deep lift and testing a ceiling pendulum
+
+The sensor-selected launch now captures the left edge from flat on all four former failures. The lower-grip correction changes the brake and starts pitch feedback earlier. The reduced-voltage correction uses a stronger lateral pump and a shorter braking hold. The fine-timestep launch shortens the catch stroke. The noisy start uses a nominal head-motion reference. The 75-second nominal and reduced-voltage trials both completed at the fixed waist target. On reduced voltage the foot center traced a 3.59 cm circle and the rim made 3.92 uninterrupted revolutions. [Center-circle film](media/simulation/deep-lift-center-circle.mp4) · [Simulation measurements and replay](docs/DEEP_LIFT_PENDULUM.md)
+
+The final policy passed both acquisition and the 36-second deep-circle test on 4/4 original conditions. Across four additional variants it acquired 2/4 and completed 1/4 circles. Two further noise seeds passed on nominal dynamics and a new combined floor, voltage and noise condition missed capture. The noisy branch followed the learned trajectory with zero residual correction frames on the matched success. The next simulation target is recovery when a changed plant actually needs those corrections. Nine metered CPU fits used 28.35 Wh gross over 485 rollouts. No physical robot was used.
+
+A 25 g ceiling-hung ball started 8 inches from the upright side shell when vertical. Fourteen left/right releases at 0–45° produced nine robot hits. The 30° right-side trial withstood two contacts and finished at 31.1° on the edge. Seven impact trials fell and one settled flat. The reel opens with the recovery and includes the actual landings. [Pendulum film](media/simulation/deep-lift-pendulum.mp4)
+
 ## November 21 — Deep rim rolls and wide traveling circles
 
 The fixed-waist controller now rolls Reachy around its whole foot at a sustained 31° lean in MuJoCo. From a flat start it reached the left edge at 3.16 s and completed 4.35 uninterrupted rim revolutions in a 65-second nominal trial, with −233.7° of base yaw. At 8 kHz the rim stayed loaded throughout the captured phase. The contact point drew 13.1 cm diameter circles while the foot center drew 3.5 cm circles. All four reserved deep-roll trials missed the initial edge capture. Two settled flat and two reached a joint limit. [Deep-roll film](media/simulation/gyro-peg-deep.mp4)

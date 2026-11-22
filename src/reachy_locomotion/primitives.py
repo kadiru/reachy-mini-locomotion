@@ -202,8 +202,14 @@ class PrimitiveSimulator(SwaySimulator):
         average_gyro=getattr(controller,'gyro_interval_average',False)
         gyro_sum=np.zeros(3);gyro_count=0;gyro_velocity=np.zeros(6);gyro_stride=max(1,round(.001/self.dt))
         waist_commands = [float(self.initial_targets[waist])]
+        pendulum = self.config.get('side_pendulum')
+        if pendulum:
+            latch = m.equality('pendulum_latch').id
         for frame in range(total_frames+1):
             t=frame*.02
+            if pendulum and t >= pendulum['release_s'] and d.eq_active[latch]:
+                d.eq_active[latch] = False
+                mujoco.mj_forward(m,d)
             if balls is not None:balls.release(d,t)
             R=d.xmat[self.base].reshape(3,3);rpy=euler(R);roll=math.degrees(rpy[0])
             tilt=math.degrees(math.acos(float(np.clip(R[2,2],-1,1))))
@@ -377,10 +383,12 @@ class PrimitiveSimulator(SwaySimulator):
                     peak_sampled_roll_rate_deg_s=max(abs(x['roll_rate_deg_s']) for x in trace),terminal_state=terminal,
                     control_rate_hz=50,roll_sensor_delay_s=sensor_delay,roll_sensor_assumption='simulated base roll; physical estimator not calibrated',
                     gyro_interval_averaged=average_gyro,gyro_sampling_hz=1/(gyro_stride*self.dt) if average_gyro else 50,
-                    external_forces_applied=balls is not None,upstream_xml_sha256=self.source_sha256,kinematics_sha256=self.ik.source_sha256,
+                    external_forces_applied=balls is not None or pendulum is not None,upstream_xml_sha256=self.source_sha256,kinematics_sha256=self.ik.source_sha256,
                     trace=trace,motor_diagnostics=self.servos.report(),render_forward_frame='startup')
         if waist_mode=='off':assert result['waist_peak_torque_nm']==0 and waist_work==0
         if balls is not None:result.update(ball_disturbances=balls.report(),direct_robot_forces_applied=False)
+        if pendulum:
+            result['direct_robot_forces_applied'] = False
         if observe_landing:
             result.update(observe_landing=True,first_body_floor_contact=floor_event,
                           first_joint_travel_warning=joint_event,fell=floor_event is not None)
