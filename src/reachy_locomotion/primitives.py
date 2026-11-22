@@ -173,6 +173,11 @@ class PrimitiveSimulator(SwaySimulator):
         if diagnostic_initial_angular_rate_deg_s and reset_angle is None:raise ValueError('Curriculum rate requires an explicitly tilted reset')
         if reset_angle is not None:
             maximum_reset = 33 if tilt_limit_deg == 35 else 45
+            cad_floor = self.config.get('cad_shell_floor', False)
+            if cad_floor and observe_landing and tilt_limit_deg is None:
+                maximum_reset = 90
+            if cad_floor and diagnostic_initial_angular_rate_deg_s:
+                raise ValueError('CAD shell placement supports stationary releases only')
             if not math.isfinite(reset_angle) or not 20<=abs(reset_angle)<=maximum_reset:
                 raise ValueError(f'Diagnostic edge reset must be between 20 and {maximum_reset} degrees')
             angle=math.radians(reset_angle);qa=m.jnt_qposadr[m.joint('floating_foot').id]
@@ -183,6 +188,10 @@ class PrimitiveSimulator(SwaySimulator):
             va=m.jnt_dofadr[m.joint('floating_foot').id]
             d.qvel[va+3+(diagnostic_initial_pitch_deg is not None)]=math.radians(diagnostic_initial_angular_rate_deg_s)
             mujoco.mj_forward(m,d)
+            if cad_floor:
+                from .shell_contact import place_on_floor
+                place_on_floor(m, d, qa+2)
+                mujoco.mj_forward(m,d)
             if diagnostic_initial_angular_rate_deg_s:
                 R=d.xmat[self.base].reshape(3,3);rim=np.zeros(3)
                 rim[1 if diagnostic_initial_roll_deg is not None else 0]=self.config['foot_radius_m']*math.copysign(1,reset_angle)*(-1 if diagnostic_initial_roll_deg is not None else 1)

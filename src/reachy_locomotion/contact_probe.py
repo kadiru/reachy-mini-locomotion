@@ -85,6 +85,9 @@ def scene_xml(upstream, config, free=True):
     if free and config.get('side_pendulum'):
         from .side_pendulum import add_pendulum
         add_pendulum(root, config['side_pendulum'])
+    if config.get('cad_shell_floor'):
+        from .shell_contact import use_cad_floor
+        use_cad_floor(world, base, friction)
     return ET.tostring(root, encoding="unicode"), hashlib.sha256(original).hexdigest()
 
 

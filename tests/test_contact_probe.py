@@ -44,6 +44,30 @@ class ContactPhysicsTests(unittest.TestCase):
         self.assertTrue((self.model.dof_frictionloss[dof:dof+6] == 0).all())
         self.assertTrue((self.model.dof_damping[dof:dof+6] == 0).all())
 
+    def test_cad_floor_uses_external_parts_and_places_a_side_release_without_penetration(self):
+        import mujoco
+        import numpy as np
+        from reachy_locomotion.shell_contact import place_on_floor
+        model = mujoco.MjModel.from_xml_string(scene_xml(UPSTREAM, dict(CONFIG,cad_shell_floor=True))[0])
+        self.assertAlmostEqual(sum(model.body_mass), sum(self.model.body_mass))
+        floor = model.geom("floor").id
+        foot = model.geom("foot_contact_proxy").id
+        self.assertEqual(model.geom_type[foot], mujoco.mjtGeom.mjGEOM_MESH)
+        self.assertEqual(model.geom_conaffinity[floor], 8)
+        shells = np.flatnonzero(model.geom_contype == 8)
+        meshes = [model.mesh(model.geom_dataid[g]).name for g in shells]
+        self.assertEqual(meshes.count("antenna"), 2)
+        self.assertIn("head_front_3dprint",meshes)
+        self.assertIn("body_down_3dprint",meshes)
+        d = mujoco.MjData(model)
+        adr = model.jnt_qposadr[model.joint("floating_foot").id]
+        d.qpos[adr+3:adr+7] = [np.cos(np.pi/4),np.sin(np.pi/4),0.,0.]
+        mujoco.mj_forward(model,d)
+        place_on_floor(model,d,adr+2)
+        mujoco.mj_forward(model,d)
+        gaps = [mujoco.mj_geomDistance(model,d,floor,g,1.,None) for g in shells]
+        self.assertAlmostEqual(min(gaps),0.,places=6)
+
     def test_foot_frame_is_invariant_to_world_translation_and_yaw(self):
         import mujoco
         import numpy as np

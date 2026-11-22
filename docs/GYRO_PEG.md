@@ -1,5 +1,7 @@
 # Rolling Reachy Mini around its base
 
+**CAD-foot follow-up.** The deep controller reproduced its rim roll on the circular contact proxy. Switching floor contact to the CAD shells caused the same controller to finish flat. Treat the deep roll as a geometry-sensitive simulation result. [Matched experiment and tilted-release films](TILTED_RELEASE_AND_SIDE_ROLL.md)
+
 The target is a tilted, free-standing base whose loaded point travels around the circumference of the foot. Two different circles can appear in the same run. On a short timescale the contact patch travels around the 112 mm foot. Over many wobbles the center of the whole base can trace a much wider circle on the floor.
 
 ## Sustained deep roll

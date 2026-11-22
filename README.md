@@ -3,6 +3,8 @@
 Learn head-driven, penguin-like locomotion from **Meta Quest 3S** demonstrations,
 then evaluate sim-to-real transfer on Reachy Mini Wireless.
 
+The CAD-foot experiment compares the original deep roll against the robot part meshes, tests balance after a tilted release, and measures head-driven rolling while lying on the shell. [Contact measurements, successful catches, and failures on video](docs/TILTED_RELEASE_AND_SIDE_ROLL.md).
+
 The deep-roll follow-up trains the initial lift on the four former failures, measures the circle traced by the foot center near 31°, and swings a ceiling-hung ball into the rolling robot from either side. [Best center-circle video](media/simulation/deep-lift-center-circle.mp4) · [Pendulum releases](media/simulation/deep-lift-pendulum.mp4) · [Measurements and training](docs/DEEP_LIFT_PENDULUM.md)
 
 In MuJoCo, Reachy leans about 31° and rolls around every edge of its foot with its waist held fixed. A second controller takes the foot center around a wider, 20.4 cm circle and finishes within 9.5 mm of the lap start. [Deep rim roll](media/simulation/gyro-peg-deep.mp4) · [Wide traveling circle](media/simulation/gyro-peg-wide.mp4) · [Contact measurements and stress tests](docs/GYRO_PEG.md).

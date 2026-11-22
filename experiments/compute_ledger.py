@@ -99,7 +99,7 @@ def build(rate, rate_basis, receipts=RECEIPTS):
             (x['final_hold']=='True' for x in csv.DictReader(f) if x['primary']=='True' and int(x['count'])>0))
     def metered_stages(report, filename, model, policy, stages, suite, flags):
         costs = [c for c in report['training_cost'] if c['stage'] in stages]
-        meters = [read(c['receipt']) for c in costs]
+        meters = [report['compute'][c['meter_index']] if 'meter_index' in c else read(c['receipt']) for c in costs]
         seconds = sum(c['wall_s'] for c in costs)
         energy = sum(c['gross_wh'] for c in costs)/1000
         incremental = sum(m['incremental_kwh'] for m in meters)
@@ -107,7 +107,8 @@ def build(rate, rate_basis, receipts=RECEIPTS):
         rows[-1].update(
             policy_sha256=report['sha256'][policy], metered_host_cpu=costs[0]['cpu'],
             workers='/'.join(map(str,sorted({c['workers'] for c in costs}))), wall_s=seconds,
-            simulated_rollout_s=sum(c['simulated_rollout_s'] for c in costs),
+            simulated_rollout_s=(sum(c['simulated_rollout_s'] for c in costs)
+                                 if all(c['simulated_rollout_s'] is not None for c in costs) else None),
             process_tree_cpu_s=sum(c['cpu_s'] for c in costs),
             meter_receipt=str(REPORTS/filename), energy_evidence='metered search, cumulative stages',
             energy_scope=meters[0]['scope'], gross_system_kwh=energy,
@@ -138,6 +139,18 @@ def build(rate, rate_basis, receipts=RECEIPTS):
         metered_stages(report,lift_file,'31-degree foot-center circle','configs/deep-lift-circle.json',
                        stages,'4 fresh flat starts through 36-second deep circle',
                        (r['circle_pass'] for r in checks))
+    shell_file = 'motor-training-shell-release.json'
+    if (REPORTS/shell_file).exists():
+        report = read(REPORTS/shell_file)
+        stages = [c['stage'] for c in report['training_cost']]
+        checks = [r for r in report['qualification']['results'] if 'seed' in r['job']]
+        metered_stages(report,shell_file,'CAD tilted-release catch','release_settings',stages[:-1],
+                       '12 fresh stationary releases, strict final 5 seconds',(r['edge_pass'] for r in checks))
+        driven = [r for r in report['follow-side'] if r['job']['mode']!='hold']
+        metered_stages(report,shell_file,'Gravity-directed side roll','side_settings',stages[-1:],
+                       '8 development strokes, full net torso turn with zero head contact',
+                       (r['termination']=='completed' and r['min_joint_margin_rad']>=0 and 'head' not in r['touch']
+                        and abs(r['net_axis_rotation_deg'])>=360 for r in driven))
     return rows
 
 

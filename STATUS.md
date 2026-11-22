@@ -1,5 +1,13 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 21 — Tilted releases on the CAD foot and head-driven side rolling
+
+The original 31° deep roll reproduced on a circular foot. On the pinned CAD shells its launch missed and settled flat. Freezing the head target during the circular-foot roll caused a torso landing 1.15 s later. [Measured support geometry](media/simulation/deep-roll-support.png)
+
+The left regulator held the edge from a stationary 32.2° release for 7.26 strict seconds. All six fresh left releases ended on the edge, one passed the full final-five-second test, and all six fresh right releases landed on the shell. The film compares identical initial states and shows inward and outward failures through landing. The side-rest study found a 39.9° rocking arc driven by the head with 9.7 mm minimum sampled head clearance during and after the stroke. A half-turn involved head-floor contact. Five CPU fitting commands used 7.05 Wh gross. Hardware transfer remains unverified. The next physical comparison is a supported tilt and measurement of the foot contact under load.
+
+Replay both films with `.venv/bin/python experiments/archive_shell_release.py replay --workers 4`. [Release film](media/simulation/cad-tilt-catches.mp4) · [Side-roll film](media/simulation/cad-side-roll.mp4) · [Conditions, physics, measurements and commands](docs/TILTED_RELEASE_AND_SIDE_ROLL.md)
+
 ## November 21 — Repairing the deep lift and testing a ceiling pendulum
 
 The sensor-selected launch now captures the left edge from flat on all four former failures. The lower-grip correction changes the brake and starts pitch feedback earlier. The reduced-voltage correction uses a stronger lateral pump and a shorter braking hold. The fine-timestep launch shortens the catch stroke. The noisy start uses a nominal head-motion reference. The 75-second nominal and reduced-voltage trials both completed at the fixed waist target. On reduced voltage the foot center traced a 3.59 cm circle and the rim made 3.92 uninterrupted revolutions. [Center-circle film](media/simulation/deep-lift-center-circle.mp4) · [Simulation measurements and replay](docs/DEEP_LIFT_PENDULUM.md)
