@@ -1,5 +1,7 @@
 # Reachy Mini — Quest to Locomotion
 
+Reachy can lift from flat and balance on its downhill right edge on a 9° simulated ramp. It held on four of four fresh sensor-noise runs, with a best continuous hold of 6.04 seconds. All 16 launches on reserved moderate slopes missed. [Watch the catch and every ramp orientation](media/simulation/inclined-edge-balance.mp4) · [Compare uphill and downhill head swings](docs/SLOPE_EDGE_BALANCE.md)
+
 The CAD-foot release controller catches all six former right-side falls in simulation. Watch the same release with the old policy, new policy and still-head control, followed by all 20 fresh tests. [Comparison film](media/simulation/cad-right-release-catch.mp4) · [Conditions, outcomes and training cost](docs/CAD_RELEASE_CATCH.md) · [Supported hardware comparison](docs/SUPPORTED_TILT_CALIBRATION.md)
 
 Learn head-driven, penguin-like locomotion from **Meta Quest 3S** demonstrations,

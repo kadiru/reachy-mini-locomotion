@@ -159,6 +159,14 @@ def build(rate, rate_basis, receipts=RECEIPTS):
                        [c['stage'] for c in report['training_cost']],
                        '20 reserved moving or stationary releases, strict final 5 seconds',
                        (r['strict'] for r in checks))
+    slope_file = 'motor-training-slope-balance.json'
+    if (REPORTS/slope_file).exists():
+        report = read(REPORTS/slope_file)
+        checks = [r for r in report['qualification']['trials'] if r['suite']=='unseen' and r['controller']=='adaptive']
+        metered_stages(report,slope_file,'Flat-to-edge balance on a cross-slope','configs/slope-balance.json',
+                       [c['stage'] for c in report['training_cost']],
+                       '16 reserved ramp launches, quiet correct edge for final 2 seconds',
+                       (r['hold'] for r in checks))
     return rows
 
 

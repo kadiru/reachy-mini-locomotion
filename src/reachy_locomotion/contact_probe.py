@@ -33,6 +33,9 @@ def validate_config(config):
         raise ValueError("Expected three finite nonnegative friction coefficients")
     if not 0.0001 <= config["timestep_s"] <= 0.002:
         raise ValueError("Probe timestep must be between 0.1 and 2 ms")
+    bank = config.get("floor_roll_deg", 0.)
+    if type(bank) not in (float, int) or not math.isfinite(bank) or abs(bank) >= 90:
+        raise ValueError("Cross-slope must be a finite angle between -90 and 90 degrees")
     return config
 
 
@@ -56,6 +59,10 @@ def scene_xml(upstream, config, free=True):
     base = world.find("body[@name='%s']" % BASE)
     if base is None or base.find("joint") is not None or base.find("freejoint") is not None:
         raise ValueError("Expected the inspected fixed-foot model")
+    bank = math.radians(config.get("floor_roll_deg", 0.))
+    if bank:
+        quat = f"{math.cos(bank/2)} {math.sin(bank/2)} 0 0"
+        base.set("quat", quat)
     if free:
         base.set("pos", "0 0 " + str(config["initial_clearance_m"]))
         ET.SubElement(base, "freejoint", name="floating_foot")
@@ -70,6 +77,8 @@ def scene_xml(upstream, config, free=True):
     ET.SubElement(world, "geom", name="floor", type="plane", size="2 2 0.05",
                   contype="1", conaffinity="1", condim="6", friction=friction,
                   rgba="0.2 0.25 0.3 1")
+    if bank:
+        world.find("geom[@name='floor']").set("quat", quat)
     for actuator in root.find("actuator"):
         actuator.set("kp", str(config["position_kp"]))
         actuator.set("kv", str(config["position_kv"]))

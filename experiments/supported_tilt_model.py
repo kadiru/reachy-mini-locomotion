@@ -11,7 +11,7 @@ from reachy_locomotion.motors import DynamixelApproximation
 from tilted_release import MOTORS, UPSTREAM, plant, read
 
 
-def supported(roll):
+def fixed_fixture(roll):
     if not np.isfinite(roll) or abs(roll)>45:
         raise ValueError('Supported calibration uses signed roll up to 45 degrees')
     config=read(MOTORS)
@@ -29,6 +29,11 @@ def supported(roll):
     servo=DynamixelApproximation(m,config['motor_model'])
     servo.reset(targets)
     mujoco.mj_forward(m,d)
+    return free,m,d,servo
+
+
+def supported(roll):
+    _,m,d,servo=fixed_fixture(roll)
     neutral=np.eye(4)
     neutral[2,3]=.177
     samples=[]

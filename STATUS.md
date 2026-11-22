@@ -1,5 +1,11 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 22 — Flat-foot launches on sideways ramps
+
+The frozen CAD-foot controller acquired the downhill right edge of a 9° ramp on all four fresh sensor-noise repeats. Its best quiet hold lasted 6.04 s and ended at 30.82° roll. The original controller settled flat. The mirrored left launch returned flat on four of four repeats. Across 16 reserved launches at 2°, 4°, 6.5° and 8°, the slope-aware policy held zero, landed on its shell five times, returned flat six times and remained in motion five times. All 150 qualification trials began flat on the surface, completed eight seconds and held the waist target at zero. The four CPU fitting stages used 76.08 Wh gross on the Mac M4 over 3,741 rollouts and 19 planning trees. Hardware transfer is unverified.
+
+Replay with `.venv/bin/python experiments/archive_slope_balance.py replay`. Next, use the measured pitch and roll rates during the lift to correct the head stroke before coasting, targeting the downhill left mirror and the gap between 8° and 9° first. [Comparison film](media/simulation/inclined-edge-balance.mp4) · [Conditions, outcomes and compute](docs/SLOPE_EDGE_BALANCE.md)
+
 ## November 22 — Catching tilted releases on the CAD foot
 
 The frozen, fixed-waist controller finishes on the requested edge in all six former right-side shell landings. Four pass the full final-five-second test. At the matched 32.2° release it holds for 7.90 continuous seconds. On 20 fresh releases with initial motion it records zero shell landings, ten edge endpoints, four strict holds, nine safe flat returns and one flat return with a joint warning. The original controller hit the shell seven times. Across 18 additional bus-voltage, gain and floor-grip checks the trained controller finishes on edge 15 times with ten strict passes and no shell contact. Training used 30.117 Wh gross on the M4 CPU over 1,330 rollouts. The hardware session is prepared for read-only, externally supported measurements.

@@ -120,7 +120,7 @@ class PrimitiveController:
 def classify_trial(reason,tail,peak_roll):
     fell=reason in ('nonfoot_floor_contact','tilt_reached_80_deg')
     complete=reason is None
-    settled=bool(tail) and all(x['tilt_deg']<3 and x['base_angular_speed_rad_s']<.2 and x['base_speed_m_s']<.02 and x['normal_n']>.5 for x in tail)
+    settled=bool(tail) and all(x.get('tilt_from_floor_deg',x['tilt_deg'])<3 and x['base_angular_speed_rad_s']<.2 and x['base_speed_m_s']<.02 and x['normal_n']>.5 for x in tail)
     return dict(fell=fell,completed=complete,model_valid=complete or fell,
                 settled=complete and settled,recovered=complete and settled and peak_roll>=6)
 
@@ -171,7 +171,11 @@ class PrimitiveSimulator(SwaySimulator):
         if not math.isfinite(diagnostic_initial_angular_rate_deg_s) or abs(diagnostic_initial_angular_rate_deg_s)>100:
             raise ValueError('Invalid curriculum angular rate')
         if diagnostic_initial_angular_rate_deg_s and reset_angle is None:raise ValueError('Curriculum rate requires an explicitly tilted reset')
+        banked = bool(self.config.get('floor_roll_deg'))
+        floor_normal = d.geom_xmat[self.floor].reshape(3,3)[:,2].copy()
         if reset_angle is not None:
+            if banked:
+                raise ValueError('Tilted resets require a level floor')
             maximum_reset = 33 if tilt_limit_deg == 35 else 45
             cad_floor = self.config.get('cad_shell_floor', False)
             if cad_floor and observe_landing and tilt_limit_deg is None:
@@ -246,8 +250,12 @@ class PrimitiveSimulator(SwaySimulator):
                     if normal>.01:points.append(c.pos.copy());weights.append(normal)
             rims=[d.xpos[self.base]+R@np.array([0,sign*self.config['foot_radius_m'],0]) for sign in [-1,1]]
             lift=abs(float(rims[1][2]-rims[0][2]))*1000
+            if banked:
+                lift=abs(2*self.config['foot_radius_m']*float(floor_normal@R[:,1]))*1000
             edge=bool(min(forces)<.1 and max(forces)>.5 and lift>=10)
             foreaft_lift=abs(2*self.config['foot_radius_m']*float(R[2,0]))*1000
+            if banked:
+                foreaft_lift=abs(2*self.config['foot_radius_m']*float(floor_normal@R[:,0]))*1000
             foreaft_edge=bool(min(foreaft_forces)<.1 and max(foreaft_forces)>.5 and foreaft_lift>=10)
             slip=0.;contact=None
             if points:
@@ -255,7 +263,8 @@ class PrimitiveSimulator(SwaySimulator):
                 # Velocity of the material foot point currently at the loaded
                 # contact; movement of the contact centroid is NOT a slip proxy.
                 jac=np.zeros((3,m.nv));mujoco.mj_jac(m,d,jac,None,contact,self.base)
-                slip=float(np.linalg.norm((jac@d.qvel)[:2]))
+                point_velocity=jac@d.qvel
+                slip=float(np.linalg.norm(point_velocity-floor_normal*(floor_normal@point_velocity))) if banked else float(np.linalg.norm(point_velocity[:2]))
             if edge and frame:
                 edge_time+=.02;slip_distance+=slip*.02
                 if previous_edge:edge_yaw+=yaw_step
@@ -273,6 +282,8 @@ class PrimitiveSimulator(SwaySimulator):
                      base_angular_speed_rad_s=float(np.linalg.norm(base_velocity[:3])),base_speed_m_s=float(np.linalg.norm(base_velocity[3:])),
                      com_world_m=d.subtree_com[self.base].tolist(),contact_world_m=contact.tolist() if contact is not None else None,
                      foot_xyz_m=d.xpos[self.base].tolist())
+            if banked:
+                row['tilt_from_floor_deg']=math.degrees(math.acos(float(np.clip(floor_normal@R[:,2],-1,1))))
             if record_rim_contact or waist_mode == 'position':
                 local_contact = R.T @ (contact - d.xpos[self.base]) if contact is not None else None
                 row['contact_foot_xy_m'] = local_contact[:2].tolist() if local_contact is not None else None
@@ -333,7 +344,8 @@ class PrimitiveSimulator(SwaySimulator):
                 tilt=math.degrees(math.acos(float(np.clip(d.xmat[self.base][8],-1,1))))
                 peak_tilt=max(peak_tilt,tilt)
                 peak_roll=max(peak_roll,abs(math.degrees(math.atan2(d.xmat[self.base][7],d.xmat[self.base][8]))))
-                peak_lift=max(peak_lift,abs(2*self.config['foot_radius_m']*float(d.xmat[self.base][7]))*1000)
+                height_axis = floor_normal@d.xmat[self.base].reshape(3,3)[:,1] if banked else d.xmat[self.base][7]
+                peak_lift=max(peak_lift,abs(2*self.config['foot_radius_m']*float(height_axis))*1000)
                 if tilt>=35 and first35 is None:first35=float(d.time)
                 if tilt>=40 and first40 is None:first40=float(d.time)
                 if tilt_limit_deg is not None and tilt>=tilt_limit_deg:reason=f'tilt_reached_{tilt_limit_deg}_deg'
