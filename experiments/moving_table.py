@@ -24,9 +24,11 @@ SLOW = 2.
 
 
 @lru_cache(maxsize=2)
-def plant(dt):
+def plant(dt, base_imu=False):
     cfg = read(MOTORS)
     cfg.update(cad_shell_floor=True, tilt_table=True, timestep_s=dt)
+    if base_imu:
+        cfg.update(base_imu=True)
     return PrimitiveSimulator(UPSTREAM, cfg)
 
 
@@ -127,8 +129,8 @@ def footprint_displacement(rows, start):
     return dict(max_footprint_travel_mm=float(distance_mm.max()), final_footprint_travel_mm=float(distance_mm[-1]))
 
 
-def simulate(job, recording=False, wrap_controller=None, measure_footprint=False):
-    sim=plant(job['dt'])
+def simulate(job, recording=False, wrap_controller=None, measure_footprint=False, imu_observer=None):
+    sim=plant(job['dt'], imu_observer is not None)
     side=job['side']
     ctl=make_controller(sim,side,job['seed'],read(POLICY)['sides'][str(side)])
     if wrap_controller is not None:
@@ -139,7 +141,7 @@ def simulate(job, recording=False, wrap_controller=None, measure_footprint=False
     run=sim.run_primitive(Primitive(),seconds=duration,controller=ctl,waist_mode='hold_neutral',
                           diagnostic_initial_roll_deg=side*job.get('release',32.2),tilt_limit_deg=None,observe_landing=True,
                           record=recording,record_rim_contact=True,step_audit=audit,
-                          table_motion=None if job['flat'] else path)
+                          table_motion=None if job['flat'] else path, imu_observer=imu_observer)
     rows=run['trace']
     pre=[r for r in rows if path.start-1<=r['time_s']<=path.start]
     post=[r for r in rows if r['time_s']>=path.start]

@@ -129,7 +129,7 @@ class PrimitiveSimulator(SwaySimulator):
     def run_primitive(self,recipe,seconds=3.6,waist_mode='off',record=False,
                       controller=None,tilt_limit_deg=80,finish_settle_s=None,diagnostic_initial_roll_deg=None,
                       diagnostic_initial_pitch_deg=None,diagnostic_initial_angular_rate_deg_s=0.,collision_window=None,
-                      observe_landing=False, step_audit=None, record_rim_contact=False, table_motion=None):
+                      observe_landing=False, step_audit=None, record_rim_contact=False, table_motion=None, imu_observer=None):
         if collision_window is not None:
             start_s, end_s = collision_window
             if not record or not 0 <= start_s < end_s <= seconds or end_s-start_s > 2:
@@ -219,6 +219,7 @@ class PrimitiveSimulator(SwaySimulator):
         edge_time=edge_yaw=slip_distance=0.;last_roll=last_pitch=0.;previous_edge=False
         total_frames=round(seconds/.02);base_velocity=np.zeros(6)
         finished_at=None;duration_budget=seconds;early_finish=False
+        inertial_tick = getattr(imu_observer,'advance',None)
         average_gyro=getattr(controller,'gyro_interval_average',False)
         gyro_sum=np.zeros(3);gyro_count=0;gyro_velocity=np.zeros(6);gyro_stride=max(1,round(.001/self.dt))
         waist_commands = [float(self.initial_targets[waist])]
@@ -241,8 +242,10 @@ class PrimitiveSimulator(SwaySimulator):
             if hasattr(controller,'observe_heading'):controller.observe_heading(t,math.degrees(angles[0]))
             if hasattr(controller,'observe_head'):
                 controller.observe_head(t,math.degrees(euler(relative_head_pose(m,d))[2]))
+            attitude, sampled_gyro = imu_observer.sample(m,d,t) if imu_observer is not None else (None,None)
+            policy_roll, policy_pitch = (roll,math.degrees(rpy[1])) if attitude is None else attitude
             if hasattr(controller,'observe_attitude'):
-                controller.observe_attitude(t,math.degrees(rpy[1]))
+                controller.observe_attitude(t,policy_pitch)
             if waist_mode == 'position':
                 controller.observe_waist(float(d.qpos[waist_qadr]))
             if hasattr(controller,'observe_head_state'):
@@ -281,7 +284,9 @@ class PrimitiveSimulator(SwaySimulator):
             previous_edge=edge;peak_slip=max(peak_slip,slip)
             mujoco.mj_objectVelocity(m,d,mujoco.mjtObj.mjOBJ_XBODY,self.base,base_velocity,0)
             if hasattr(controller,'observe_angular_velocity'):
-                controller.observe_angular_velocity(t,gyro_sum/gyro_count if average_gyro and gyro_count else R.T@base_velocity[:3])
+                if sampled_gyro is None:
+                    sampled_gyro = gyro_sum/gyro_count if average_gyro and gyro_count else R.T@base_velocity[:3]
+                controller.observe_angular_velocity(t,sampled_gyro)
                 gyro_sum[:]=0.;gyro_count=0
             row=dict(time_s=t,roll_deg=roll,pitch_deg=pitch,roll_rate_deg_s=roll_rate,pitch_rate_deg_s=pitch_rate,tilt_deg=tilt,
                      foreaft_edge_support=foreaft_edge,front_back_height_difference_mm=foreaft_lift,
@@ -303,7 +308,7 @@ class PrimitiveSimulator(SwaySimulator):
                 row['contact_foot_xy_m'] = local_contact[:2].tolist() if local_contact is not None else None
             if waist_mode == 'position':
                 row['waist_target_deg'] = math.degrees(controller.waist_target_rad)
-            pose,stage,sensed=controller.target(t,roll);row.update(stage=stage,sensed_roll_deg=sensed);trace.append(row)
+            pose,stage,sensed=controller.target(t,policy_roll);row.update(stage=stage,sensed_roll_deg=sensed);trace.append(row)
             if hasattr(controller,'diagnostics'):row.update(controller.diagnostics())
             if finish_settle_s is not None and getattr(controller,'finished',False):
                 if finished_at is None:finished_at=t
@@ -346,6 +351,8 @@ class PrimitiveSimulator(SwaySimulator):
                 self.servos.apply(d)
                 if waist_mode=='off':d.ctrl[waist]=0.
                 mujoco.mj_step(m,d);mujoco.mj_forward(m,d)
+                if inertial_tick is not None:
+                    inertial_tick()
                 if step_audit is not None:
                     step_audit(self, d)
                 if (dense and start_s-1e-9 <= d.time <= end_s+1e-9

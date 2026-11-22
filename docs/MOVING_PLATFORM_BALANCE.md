@@ -68,6 +68,43 @@ We sample foot forces at 1 kHz. The loaded side must carry more than 0.5 N, the 
 
 An edge pass requires a steady start, continuous support under this definition, the correct final edge, full completion, table angle tracking within 0.1° at the 50 Hz checkpoints, and no shell contact or modeled travel violation. A second score checks drift during each hold. In the starting and final one-second windows and final half-second of each intermediate dwell, roll and pitch must each span at most 3°, yaw at most 5°, and foot-center displacement from the window start at most 10 mm. The raw report also retains the older instantaneous quietness score. The simulation continues past edge loss and through shell contact. Videos replay simulated poses, use a level camera, and label the playback speed.
 
+## Balance with an IMU estimate
+
+We repeated the 10° downhill-right tilt using the same three seeds, 32.2° supported release, head-state feedback, frozen controller and motor model. The instrumented reference reproduced all three original trial records exactly. The new input path feeds measured specific force and angular velocity through the Madgwick IMU update from AHRS 0.4.0 at 50 Hz, as used by the pinned Pollen driver. A static simulated gravity reading initializes tilt before release. For these tests we assumed aligned sensor axes and a site 30 mm above the foot origin. Head pose still comes directly from the simulated linkage. Mounting, sensor bias, oscillator jitter, transport latency and loaded actuator response remain uncalibrated. [Driver used by the pinned SDK](https://pypi.org/project/pollen-bmi088-imu-library/1.0.0rc1/) · [Robot IMU readout](https://github.com/pollen-robotics/reachy_mini/blob/a9a2a42adcc1abc7d9c90d390889bbebf930c96c/src/reachy_mini/daemon/backend/robot/backend.py#L535-L572)
+
+| Inputs to the frozen controller | Held edge through return |
+|---|---:|
+| Original body attitude and interval-averaged gyro | 3/3 |
+| Original body attitude and one quantized gyro sample per 20 ms | 0/3 |
+| Filter-estimated attitude and one gyro sample per 20 ms, starting at release | 0/3 |
+| Same estimator and gyro, table kept level for the matched duration | 0/3 |
+| Original inputs until 3 s, then estimator and sampled gyro as the table starts | 0/3 |
+
+With instantaneous IMU samples the body settled inward before the table started. At the handoff the estimated roll was within 0.13° of the actual roll on every seed. All three then lost the original edge 1.46–1.79 s into the excursion and settled flat. No shell landing occurred in these 15 trials. Replacing the gyro input alone was sufficient to break these catches. The point-sampled comparison omits the sensor chip's internal bandwidth.
+
+In a second set of matched trials we modeled the pinned driver's 100 Hz register updates, ±3 g and ±500°/s ranges and 16-bit quantization. Bosch specifies a 40 Hz accelerometer cutoff at the selected normal 100 Hz setting and 12 Hz for gyro register setting 0x05. We approximate each response with a causal first-order low-pass integrated at the physics rate. The controller reads held registers at 50 Hz. We varied the age of each register at readout between 0, 5 and 9 ms. Accelerometer and gyro clocks are phase-locked in this test. The device's detailed transfer functions and the readout phase on the physical unit remain unmeasured. [Bosch BMI088 datasheet, §§4.4 and 5.5.6](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmi088-ds001.pdf)
+
+| Age of reading | Held through the 10° excursion | Landed flat / on shell, moving deck | Landed flat / on shell, level control |
+|---:|---:|---:|---:|
+| 0 ms | 0/3 | 3 / 0 | 3 / 0 |
+| 5 ms | 0/3 | 2 / 1 | 2 / 1 |
+| 9 ms | 0/3 | 1 / 2 | 1 / 2 |
+
+The outcome of every paired release was already apparent by the scheduled start of the tilt at 3 s. Each shell contact occurred 1.11–1.28 s after release at about 61° of body tilt. All 33 trials continued to 21.72 s. Timing affected which way the robot fell even on level ground. These three seeds establish a failure of the frozen release controller in this sensor model. The physical unit’s packet ages and best catch timing still need measurement.
+
+The two evaluation commands used 3.66 Wh of whole-Mac energy over 4.98 minutes on the Apple M4 CPU, equivalent to $0.00110 at $0.30/kWh. Together they accrued 26.73 CPU core-minutes. The energy measurement excludes rendering. [Point-sampling receipt](../experiments/reports/compute-meter/moving-table-imu.json) · [Bandwidth receipt](../experiments/reports/compute-meter/moving-table-imu-bandwidth.json)
+
+[Watch three matched releases](../media/simulation/moving-table-imu.mp4) · [Body angle and IMU estimate over time](../media/simulation/moving-table-imu.png) · [Point-sampled trial data](../experiments/reports/moving-table-imu.json) · [Bandwidth and register timing trials](../experiments/reports/moving-table-imu-bandwidth.json)
+
+With Python 3.10–3.12 and the project’s `sim` and `imu` extras, run the following from the project root. The plot additionally uses Matplotlib. The archived Mac run used Python 3.9 with postponed evaluation of annotations in a local copy of AHRS 0.4.0. Its numerical filter code was unchanged.
+
+```sh
+python experiments/imu_transfer.py --workers 5
+python experiments/imu_transfer.py --bandwidth --workers 6
+python experiments/imu_transfer.py --plot
+python experiments/film_imu_transfer.py
+```
+
 ## Controls and compute
 
 All 276 primary qualification trials completed. The waist target stayed at zero throughout. All six starting controls and all 66 duration-matched level controls held their requested edge. At the bracket endpoints, the measured table trajectory met the tracking checks. In the coarse 2°, 256°/s uphill-left test the fixture exceeded the tracking tolerance, so that test cannot establish a precise speed limit. The lower, refined interval uses runs within tolerance.

@@ -1,5 +1,11 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 22 — Testing the edge catch with 50 Hz inertial feedback
+
+The original frozen controller reproduced 3/3 downhill-right edge holds through a 10° deck excursion. Supplying one gyro reading every 20 ms broke the initial catch in all three seeds even with exact roll and pitch available. A bandwidth model based on the pinned BMI088 driver produced 0/9 holds on the moving deck and 0/9 on a matched stationary deck. The paired runs tipped inward or landed on the shell before the deck began to move. All 33 simulations completed. The two evaluation commands used 3.66 Wh gross on the M4 CPU. Mounting, transport timing and physical balance remain unverified. [Matched release video](media/simulation/moving-table-imu.mp4) · [Angle traces](media/simulation/moving-table-imu.png) · [Test design, counts and receipts](docs/MOVING_PLATFORM_BALANCE.md#balance-with-an-imu-estimate)
+
+Run `python experiments/imu_transfer.py --workers 5`, `python experiments/imu_transfer.py --bandwidth --workers 6`, and `python experiments/film_imu_transfer.py` with the simulator and IMU dependencies. Next, measure IMU axes and packet timing during supported physical tilts. Refit the stationary right-edge catch across timing variation and test it on fresh seeds before repeating the 10° excursion.
+
 ## November 22 — Balancing while a level platform tilts and returns
 
 With its waist held at zero, Reachy maintained the downhill right edge through a 10° tilt and return in all three simulated repeats. Replaying head commands from the level table lost that edge near 1.04° in all three and ended flat. With a 10 mm allowance for contact travel, both left orientations passed to 3.5° and both right orientations to 4.25°. The uphill right edge stayed loaded at 28.75° while traveling 53 cm across the table. On repeated 5° excursions it held continuously at 166°/s, briefly unloaded and recovered at 173.35°/s, and ended flat at 256°/s. All 276 primary trials completed, all 66 duration-matched flat controls held, and all 196 repository tests passed locally. The two metered CPU evaluation intervals used 22.23 Wh gross. Hardware transfer is unverified.

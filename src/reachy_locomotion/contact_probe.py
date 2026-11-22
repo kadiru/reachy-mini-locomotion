@@ -97,6 +97,13 @@ def scene_xml(upstream, config, free=True):
     if config.get('cad_shell_floor'):
         from .shell_contact import use_cad_floor
         use_cad_floor(world, base, friction)
+    if free and config.get('base_imu'):
+        site = ET.SubElement(base, "site", name="balance_imu", pos="0 0 .03", size=".001")
+        sensors = root.find("sensor")
+        if sensors is None:
+            sensors = ET.SubElement(root, "sensor")
+        for name in ("accelerometer", "gyro"):
+            ET.SubElement(sensors, name, name="balance_" + name, site=site.get("name"))
     if free and config.get('tilt_table'):
         if bank:
             raise ValueError("The moving table starts level")
