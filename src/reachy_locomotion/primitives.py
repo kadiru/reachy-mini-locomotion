@@ -129,7 +129,7 @@ class PrimitiveSimulator(SwaySimulator):
     def run_primitive(self,recipe,seconds=3.6,waist_mode='off',record=False,
                       controller=None,tilt_limit_deg=80,finish_settle_s=None,diagnostic_initial_roll_deg=None,
                       diagnostic_initial_pitch_deg=None,diagnostic_initial_angular_rate_deg_s=0.,collision_window=None,
-                      observe_landing=False, step_audit=None):
+                      observe_landing=False, step_audit=None, record_rim_contact=False):
         if collision_window is not None:
             start_s, end_s = collision_window
             if not record or not 0 <= start_s < end_s <= seconds or end_s-start_s > 2:
@@ -259,9 +259,10 @@ class PrimitiveSimulator(SwaySimulator):
                      base_angular_speed_rad_s=float(np.linalg.norm(base_velocity[:3])),base_speed_m_s=float(np.linalg.norm(base_velocity[3:])),
                      com_world_m=d.subtree_com[self.base].tolist(),contact_world_m=contact.tolist() if contact is not None else None,
                      foot_xyz_m=d.xpos[self.base].tolist())
-            if waist_mode == 'position':
+            if record_rim_contact or waist_mode == 'position':
                 local_contact = R.T @ (contact - d.xpos[self.base]) if contact is not None else None
                 row['contact_foot_xy_m'] = local_contact[:2].tolist() if local_contact is not None else None
+            if waist_mode == 'position':
                 row['waist_target_deg'] = math.degrees(controller.waist_target_rad)
             pose,stage,sensed=controller.target(t,roll);row.update(stage=stage,sensed_roll_deg=sensed);trace.append(row)
             if hasattr(controller,'diagnostics'):row.update(controller.diagnostics())

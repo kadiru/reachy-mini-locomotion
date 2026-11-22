@@ -1,5 +1,13 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 21 — Deep rim rolls and wide traveling circles
+
+The fixed-waist controller now rolls Reachy around its whole foot at a sustained 31° lean in MuJoCo. From a flat start it reached the left edge at 3.16 s and completed 4.35 uninterrupted rim revolutions in a 65-second nominal trial, with −233.7° of base yaw. At 8 kHz the rim stayed loaded throughout the captured phase. The contact point drew 13.1 cm diameter circles while the foot center drew 3.5 cm circles. All four reserved deep-roll trials missed the initial edge capture. Two settled flat and two reached a joint limit. [Deep-roll film](media/simulation/gyro-peg-deep.mp4)
+
+The wider traveling controller traced a 20.4 cm diameter circle with the center of the foot on the higher-grip floor, returning within 9.5 mm of its lap start. Four of eight reserved trials passed. The slick-floor laps were too small and both changed-mass and delayed-motor trials fell. All six fitting stages together used 13.62 Wh on the Mac M4 CPU over 645 rollouts. Hardware transfer remains unverified. The next simulation target is a reliable deep-edge launch under those four perturbations, followed by increasing the foot-center circle at the same lean. [Wide-circle film](media/simulation/gyro-peg-wide.mp4) · [Metrics, costs and reproduction commands](docs/GYRO_PEG.md)
+
+Replay the filmed trials with `.venv/bin/python experiments/refine_traveling_edge.py replay` and `.venv/bin/python experiments/fit_gyro_course.py replay`.
+
 ## November 21 — All trained skills on film
 
 The [three-minute simulation reel](media/simulation/trained-skills-reel.mp4) has 11 seekable skill chapters and 16 examples. Walking starts at 0:00, balance at 1:02 and turning at 1:55. Clips retain the original telemetry and replay speeds. Each side panel names the test population behind its pass count. Walking steering repair, continuous spin and active-waist balance show measured Mac system energy, with the refit electricity priced at an illustrative $0.30/kWh. The overhead comparison uses the existing side-balance controller. Hardware transfer remains unverified.

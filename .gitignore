@@ -120,3 +120,5 @@ media/simulation/*
 !experiments/reports/compute-meter/*.json
 !experiments/reports/training-compute.csv
 !media/simulation/trained-skills-reel.mp4
+!media/simulation/gyro-peg-wide.mp4
+!media/simulation/gyro-peg-deep.mp4

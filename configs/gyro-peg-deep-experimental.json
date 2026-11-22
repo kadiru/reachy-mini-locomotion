@@ -1,0 +1,12 @@
+{
+  "side": -1,
+  "period": 14.0,
+  "direction": 1,
+  "gain": 1.0,
+  "seconds": 36.699999999999996,
+  "sector_mix": 0.55,
+  "waist_target_rad": 0.0,
+  "command_hz": 50,
+  "side_regulator": "configs/edge-balance-experimental.json",
+  "foreaft_regulator": "configs/foreaft-balance-experimental.json"
+}

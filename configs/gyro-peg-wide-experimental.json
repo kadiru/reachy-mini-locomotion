@@ -1,0 +1,33 @@
+{
+  "orbit": {
+    "period_frames": 16,
+    "roll_deg": 38.24262864396997,
+    "pitch_deg": 20.83266343651345,
+    "pitch_phase_deg": -89.91927586386421,
+    "xy_mm": 18.165955185014102,
+    "xy_phase_deg": 87.22143337230519,
+    "yaw_deg": -20.2721684726617,
+    "yaw_phase_deg": -48.96079787564391,
+    "z_mm": -15.0,
+    "pitch_bias_deg": -6.227862403021423,
+    "yaw_harmonic": 1,
+    "xy_sense": 1,
+    "vertical_mm": 5.404965506344258,
+    "vertical_phase_deg": 53.88219262599391,
+    "yaw_stroke_fraction": 0.0,
+    "rate_gain": 0.0,
+    "reference_deg_s": 24.0,
+    "roll_bias_deg": 0.0,
+    "y_bias_mm": -3.3435500619342036,
+    "tilt_feedback": {
+      "lead_deg": -169.96574111397405,
+      "gain_per_deg": -1.3282788470306335,
+      "target_lean_deg": 20.0,
+      "sense": 1,
+      "lock_gain": 0.1634554393535357
+    }
+  },
+  "foot_winding_for_positive_mirror": 1,
+  "waist_target_rad": 0.0,
+  "command_hz": 50
+}

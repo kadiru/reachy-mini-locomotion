@@ -91,6 +91,14 @@ class SpinController:
             if frame:
                 self.phase += 2*math.pi/o.period_frames*(1+float(np.clip(correction,-.18,.18)))
             phi = self.phase
+        target = self.pose_for_phase(phi, ramp*ramp*(3-2*ramp))
+        self.last_pose=target
+        if not o.rate_gain and ramp==1.:
+            self.cache[tick] = target
+        return target, 'orbit', 0.
+
+    def pose_for_phase(self, phi, envelope):
+        o = self.orbit
         pp, xp, yp = map(math.radians, (o.pitch_phase_deg,o.xy_phase_deg,o.yaw_phase_deg))
         r = self.mirror*(o.roll_bias_deg+o.roll_deg*math.cos(phi))
         p = o.pitch_bias_deg + o.pitch_deg*math.cos(phi+pp)
@@ -101,7 +109,6 @@ class SpinController:
         angles = np.radians([r,p,y])
         height = o.z_mm + o.vertical_mm*math.cos(o.yaw_harmonic*phi+math.radians(o.vertical_phase_deg))
         offset = .001*np.array([o.xy_sense*o.xy_mm*math.sin(phi+xp),self.mirror*(o.y_bias_mm+o.xy_mm*math.cos(phi+xp)),height])
-        envelope = ramp*ramp*(3-2*ramp)
 
         def pose(scale):
             result = np.eye(4)
@@ -126,10 +133,7 @@ class SpinController:
                 else:
                     high = mid
             target = pose(low)
-        self.last_pose=target
-        if not o.rate_gain and ramp==1.:
-            self.cache[tick] = target
-        return target, 'orbit', 0.
+        return target
 
 
 def spin_metrics(result, duration, direction):

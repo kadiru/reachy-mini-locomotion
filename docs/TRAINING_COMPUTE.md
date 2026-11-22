@@ -20,6 +20,10 @@ The spin refit wrote the selected policy and completed every training stage. Its
 
 [Spin receipt](../experiments/reports/compute-meter/spin.json) · [Waist receipt](../experiments/reports/compute-meter/waist.json) · [Walking receipt](../experiments/reports/compute-meter/walk.json)
 
+## Gyro-peg policies
+
+The gyro-peg comparison has three entries. The rim-roll and wide-circle entries share the initial periodic-orbit and tilt-feedback searches, so summing those rows would count that energy twice. The deep-roll entry measures the additional training on top of the previously identified side and fore/aft balance regulators. [Gyro-peg outcomes and electricity](GYRO_PEG.md)
+
 ## Earlier models
 
 | Behavior | Indexed fit rollouts | Test suite | Passed |
