@@ -1,5 +1,11 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 21 — Measured home training cost
+
+Three CPU MuJoCo refits ran sequentially on the 10-core Apple M4 Mac mini. The continuous spin fit used 8.641 Wh for 910 rollouts and passed 8/8 reserved checks. The active-waist sweep used 3.584 Wh for 58 rollouts on the existing balance regulator and passed 1/8. The walking steering repair used 0.699 Wh for 21 rollouts on the existing gait and passed 10/10 fresh trials. These runs took 17 min 29 s elapsed and 111.2 CPU core-minutes in total. The RTX 4090 and RTX 4070 contributed zero training GPU-hours.
+
+Gross system-sensor energy was 12.925 Wh. Subtracting each run's pre-training background gives 7.885 Wh. Timing, power samples and policy identities are archived with a nine-behavior comparison. The original development sessions have no historical power traces. On future fits, run the meter from job start and record the household tariff plus the held-out suite. [Measured costs and reproduction commands](docs/TRAINING_COMPUTE.md) · [Comparison CSV](experiments/reports/training-compute.csv).
+
 ## November 21 — Active waist turning on a single foot edge
 
 Reachy launched from flat on both sides and held a roughly 32° lean through three 12-second torso sweeps, covering about 179° in world heading. Separate 125-second trials completed ten full cycles on each side, continuously holding the edge for 121.84 seconds on the left and 121.64 seconds on the right. At ±90° commanded waist travel, the simulation confirmed the original left or right rim sector stayed continuously loaded at 8 kHz. The center of pressure moved less than 4.9 mm across the floor after the sweep began. Fixing the head after capture lost either edge in under a second.

@@ -1,0 +1,19 @@
+{
+  "host": "kfuUbuntu",
+  "queried_utc": "2026-11-22T00:10:19.425436+00:00",
+  "used_for_metered_refits": false,
+  "devices": [
+    {
+      "index": 0,
+      "model": "NVIDIA GeForce RTX 4090",
+      "device_id": "00000000:01:00.0",
+      "configured_board_limit_w": 480.0
+    },
+    {
+      "index": 1,
+      "model": "NVIDIA GeForce RTX 4070",
+      "device_id": "00000000:04:00.0",
+      "configured_board_limit_w": 200.0
+    }
+  ]
+}

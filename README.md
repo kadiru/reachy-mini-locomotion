@@ -3,6 +3,8 @@
 Learn head-driven, penguin-like locomotion from **Meta Quest 3S** demonstrations,
 then evaluate sim-to-real transfer on Reachy Mini Wireless.
 
+We measured the home electricity used to refit three Reachy behaviors on the Mac mini and paired each run with its simulation success rate. [Training power, cost and success rates](docs/TRAINING_COMPUTE.md) · [Downloadable comparison data](experiments/reports/training-compute.csv).
+
 Reachy can now sweep its torso through about 179° while balancing on the same left or right foot edge. The waist motor drives the turn and the head corrects the lean. [Watch both edges](media/simulation/active-waist-edge-sweep.mp4) · [Sweep measurements](docs/ACTIVE_WAIST_EDGE_BALANCE.md).
 
 Reachy can also spin continuously with its waist held still. In simulation it completed 12.68 left turns or 12.26 right turns in three minutes. A more tilted policy put 516° of base rotation onto a loaded rim in one minute. [Watch the fastest spin](media/simulation/continuous-spin.mp4) · [Watch the rim spin](media/simulation/continuous-rim-spin.mp4) · [Compare the policies](docs/CONTINUOUS_SPIN.md).

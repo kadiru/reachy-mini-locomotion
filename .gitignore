@@ -116,3 +116,6 @@ media/simulation/*
 !media/simulation/continuous-spin.mp4
 !media/simulation/continuous-rim-spin.mp4
 !media/simulation/active-waist-edge-sweep.mp4
+!experiments/reports/compute-meter/
+!experiments/reports/compute-meter/*.json
+!experiments/reports/training-compute.csv

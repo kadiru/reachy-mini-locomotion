@@ -12,6 +12,7 @@ def main():
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--out',type=Path,required=True)
     ap.add_argument('--workers',type=int,default=4)
+    ap.add_argument('--fit-only',action='store_true',help='Stop after selecting the walking policy, before qualification')
     a=ap.parse_args()
     if a.out.exists():
         ap.error('Choose a new report')
@@ -38,6 +39,8 @@ def main():
         report=dict(evidence='MuJoCo only',fit=fit,nominal=checks,policy=dict(p,selected_candidate=name),
                     failed_condition=hard,parameters=policies)
         save(a.out,report)
+        if a.fit_only:
+            return
         def grid(conditions):
             return list(pool.map(rollout,[(f'floor-{i}',p,s,16,c,None) for i,c in enumerate(conditions) for s in (-1,1)]))
         report['retest']=grid(old['conditions'])
