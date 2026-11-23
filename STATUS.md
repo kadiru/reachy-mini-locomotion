@@ -1,5 +1,11 @@
 # Reachy Mini — Quest to Locomotion — Status
 
+## November 22 — IMU refresh rate and sensor location
+
+The 25–1,000 Hz study finished with 918 comparisons across 51 skill/condition pairs and 110 extra sensor-placement and catch checks. Of 42 feedback cases, 14 qualified twice at 25 Hz, 18 at 50 Hz and 19 at 1,000 Hz. The fast shuffle kept 57.3 mm/s at 25 Hz. The slick-floor quarter turn qualified twice from wide-band 50 Hz upward. The original right-edge catch qualified in only 5/8 fresh release tests at 500 Hz and 4/8 at 1,000 Hz. At 1,000 Hz its mean foot-roll RMSE was 53.54° using a head IMU, 1.46° using ideal head pose correction and 0.05° using a foot IMU. The foot sensor held both matched starts. Two evaluation intervals used 22.91 Wh on the Mac M4 CPU. An interrupted interval had no completed meter receipt. All 203 local tests passed.
+
+Regenerate both figures with `python experiments/report_imu_frequency.py --replot`. The physical robot was unreachable at its usual address. Next, use the GET-only logger with Reachy supported and record the measured head pose and foot orientation on camera before deciding on a foot-mounted sensor. [Study, hardware settings and exact reproduction commands](docs/IMU_FREQUENCY.md) · [Full comparison matrix](media/simulation/imu-frequency.png) · [Per-trial data](experiments/reports/imu-frequency.csv)
+
 ## November 22 — Right-edge catch with a learned head trajectory and 50 Hz IMU feedback
 
 The refit held all eight nominal 32.2° releases and missed all eight changed mechanical starts. Disabling its feedback reproduced the eight successful trajectories exactly. Feedback changed three outward shell landings into flat-foot returns at 32.45°, and changed a flat-foot return into a shell landing at 31.95° with 9 ms old readings. Across the 16 shared cases the original controller held zero and landed on the shell three times, the refit held eight with one shell landing, and command replay held eight with three shell landings. All 48 complete trials continued through their full eight seconds at a fixed waist target. Four CPU fits used 5.280 Wh gross over 211 simulated episodes. No physical robot was operated. [All 16 comparison chapters](media/simulation/imu-right-catch.mp4) · [Training, test conditions and compute](docs/IMU_RIGHT_CATCH.md)

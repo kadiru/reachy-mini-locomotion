@@ -145,3 +145,7 @@ media/simulation/*
 !media/simulation/imu-right-catch.mp4
 !experiments/reports/imu-right-catch.json
 !experiments/reports/moving-table-imu-bandwidth.json
+!experiments/reports/imu-frequency.json
+!experiments/reports/imu-frequency.csv
+!media/simulation/imu-frequency.png
+!media/simulation/imu-frequency-overview.png

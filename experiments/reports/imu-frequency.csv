@@ -1,0 +1,919 @@
+skill,rate,repeat,passed,qualified,value,unit,archive_floor,imu_updates
+refit release,archive,0,True,True,0.9975062344139651,loaded fraction,,0
+refit release,archive,1,True,True,0.9975062344139651,loaded fraction,,0
+refit release,stock,0,True,True,0.9975062344139651,loaded fraction,,401
+refit release,stock,1,True,True,0.9975062344139651,loaded fraction,,401
+refit release,25,0,False,False,0.10972568578553615,loaded fraction,,200
+refit release,25,1,False,False,0.12468827930174564,loaded fraction,,200
+refit release,50,0,False,False,0.1371571072319202,loaded fraction,,400
+refit release,50,1,False,False,0.1745635910224439,loaded fraction,,400
+refit release,100,0,False,False,0.14463840399002495,loaded fraction,,800
+refit release,100,1,False,False,0.23690773067331672,loaded fraction,,800
+refit release,200,0,False,False,0.19950124688279303,loaded fraction,,1600
+refit release,200,1,False,False,0.22942643391521197,loaded fraction,,1600
+refit release,400,0,False,False,0.22693266832917705,loaded fraction,,3200
+refit release,400,1,False,False,0.2718204488778055,loaded fraction,,3200
+refit release,500,0,False,False,0.18204488778054864,loaded fraction,,4000
+refit release,500,1,False,False,0.3541147132169576,loaded fraction,,4000
+refit release,1000,0,False,False,0.18703241895261846,loaded fraction,,8000
+refit release,1000,1,False,False,0.23690773067331672,loaded fraction,,8000
+refit shifted,archive,0,False,False,0.2144638403990025,loaded fraction,,0
+refit shifted,archive,1,False,False,0.2144638403990025,loaded fraction,,0
+refit shifted,stock,0,False,False,0.2144638403990025,loaded fraction,,401
+refit shifted,stock,1,False,False,0.2144638403990025,loaded fraction,,401
+refit shifted,25,0,False,False,0.12718204488778054,loaded fraction,,200
+refit shifted,25,1,False,False,0.13216957605985039,loaded fraction,,200
+refit shifted,50,0,False,False,0.10473815461346633,loaded fraction,,400
+refit shifted,50,1,False,False,0.14463840399002495,loaded fraction,,400
+refit shifted,100,0,False,False,0.18952618453865336,loaded fraction,,800
+refit shifted,100,1,False,False,0.17955112219451372,loaded fraction,,800
+refit shifted,200,0,False,False,0.16209476309226933,loaded fraction,,1600
+refit shifted,200,1,False,False,0.14214463840399003,loaded fraction,,1600
+refit shifted,400,0,False,False,0.17955112219451372,loaded fraction,,3200
+refit shifted,400,1,False,False,0.1396508728179551,loaded fraction,,3200
+refit shifted,500,0,False,False,0.1546134663341646,loaded fraction,,4000
+refit shifted,500,1,False,False,0.14214463840399003,loaded fraction,,4000
+refit shifted,1000,0,False,False,0.1371571072319202,loaded fraction,,8000
+refit shifted,1000,1,False,False,0.14962593516209477,loaded fraction,,8000
+original release,archive,0,False,False,0.2942643391521197,loaded fraction,,0
+original release,archive,1,False,False,0.1396508728179551,loaded fraction,,0
+original release,stock,0,False,False,0.2942643391521197,loaded fraction,,401
+original release,stock,1,False,False,0.1396508728179551,loaded fraction,,401
+original release,25,0,False,False,0.2169576059850374,loaded fraction,,200
+original release,25,1,False,False,0.22194513715710723,loaded fraction,,200
+original release,50,0,False,False,0.24189526184538654,loaded fraction,,400
+original release,50,1,False,False,0.40648379052369077,loaded fraction,,400
+original release,100,0,False,False,0.8503740648379052,loaded fraction,,800
+original release,100,1,True,True,0.9975062344139651,loaded fraction,,800
+original release,200,0,False,False,0.4014962593516209,loaded fraction,,1600
+original release,200,1,True,True,0.9975062344139651,loaded fraction,,1600
+original release,400,0,True,True,0.9975062344139651,loaded fraction,,3200
+original release,400,1,False,False,0.6583541147132169,loaded fraction,,3200
+original release,500,0,True,True,0.9975062344139651,loaded fraction,,4000
+original release,500,1,True,True,0.9975062344139651,loaded fraction,,4000
+original release,1000,0,True,True,0.9975062344139651,loaded fraction,,8000
+original release,1000,1,True,True,0.9975062344139651,loaded fraction,,8000
+left CAD release,archive,0,True,True,7.26,hold s,,0
+left CAD release,archive,1,False,False,3.36,hold s,,0
+left CAD release,stock,0,False,False,0.0,hold s,,401
+left CAD release,stock,1,False,False,0.0,hold s,,401
+left CAD release,25,0,False,False,0.0,hold s,,200
+left CAD release,25,1,False,False,0.0,hold s,,200
+left CAD release,50,0,False,False,0.0,hold s,,400
+left CAD release,50,1,False,False,0.0,hold s,,400
+left CAD release,100,0,False,False,0.0,hold s,,800
+left CAD release,100,1,False,False,0.0,hold s,,800
+left CAD release,200,0,False,False,0.02,hold s,,1600
+left CAD release,200,1,False,False,0.06,hold s,,1600
+left CAD release,400,0,False,False,0.04,hold s,,3200
+left CAD release,400,1,False,False,0.0,hold s,,3200
+left CAD release,500,0,False,False,0.06,hold s,,4000
+left CAD release,500,1,False,False,0.02,hold s,,4000
+left CAD release,1000,0,False,False,3.5,hold s,,8000
+left CAD release,1000,1,False,False,0.02,hold s,,8000
+moving deck,archive,0,True,True,10.00117881250298,deck deg,,0
+moving deck,archive,1,True,True,10.00117922242285,deck deg,,0
+moving deck,stock,0,False,False,10.001391496080355,deck deg,,1087
+moving deck,stock,1,False,False,10.002730049335327,deck deg,,1087
+moving deck,25,0,False,False,10.001340248261547,deck deg,,543
+moving deck,25,1,False,False,10.00134159054555,deck deg,,543
+moving deck,50,0,False,False,10.001336974040278,deck deg,,1086
+moving deck,50,1,False,False,10.001377921299134,deck deg,,1086
+moving deck,100,0,False,False,10.001071555999337,deck deg,,2172
+moving deck,100,1,False,False,10.001179520689607,deck deg,,2172
+moving deck,200,0,False,False,10.001308055315887,deck deg,,4344
+moving deck,200,1,False,False,10.001181268626365,deck deg,,4344
+moving deck,400,0,True,True,10.001178292625319,deck deg,,8688
+moving deck,400,1,False,False,10.00113101404526,deck deg,,8688
+moving deck,500,0,True,True,10.001178214487638,deck deg,,10860
+moving deck,500,1,False,False,10.001181763928553,deck deg,,10860
+moving deck,1000,0,True,True,10.001178638441175,deck deg,,21720
+moving deck,1000,1,False,False,10.001086171274705,deck deg,,21720
+front edge,archive,0,True,True,7.76,hold s,,0
+front edge,archive,1,True,True,7.76,hold s,,0
+front edge,stock,0,False,False,0.0,hold s,,59
+front edge,stock,1,False,False,0.0,hold s,,401
+front edge,25,0,False,False,0.0,hold s,,25
+front edge,25,1,False,False,0.0,hold s,,12
+front edge,50,0,False,False,0.0,hold s,,58
+front edge,50,1,False,False,0.0,hold s,,58
+front edge,100,0,False,False,0.0,hold s,,217
+front edge,100,1,False,False,0.0,hold s,,107
+front edge,200,0,False,False,0.0,hold s,,1600
+front edge,200,1,False,False,0.0,hold s,,237
+front edge,400,0,False,False,0.0,hold s,,458
+front edge,400,1,False,False,0.0,hold s,,474
+front edge,500,0,False,False,0.0,hold s,,617
+front edge,500,1,False,False,0.0,hold s,,659
+front edge,1000,0,False,False,0.0,hold s,,796
+front edge,1000,1,False,False,0.0,hold s,,1158
+back edge,archive,0,True,True,7.54,hold s,,0
+back edge,archive,1,True,True,7.54,hold s,,0
+back edge,stock,0,False,False,0.0,hold s,,49
+back edge,stock,1,False,False,0.0,hold s,,37
+back edge,25,0,False,False,0.0,hold s,,20
+back edge,25,1,False,False,0.0,hold s,,18
+back edge,50,0,False,False,0.0,hold s,,62
+back edge,50,1,False,False,0.0,hold s,,38
+back edge,100,0,False,False,0.02,hold s,,304
+back edge,100,1,False,False,0.0,hold s,,101
+back edge,200,0,False,False,0.0,hold s,,175
+back edge,200,1,False,False,0.0,hold s,,117
+back edge,400,0,False,False,0.0,hold s,,433
+back edge,400,1,False,False,0.0,hold s,,291
+back edge,500,0,False,False,0.0,hold s,,463
+back edge,500,1,False,False,0.0,hold s,,361
+back edge,1000,0,False,False,0.0,hold s,,1089
+back edge,1000,1,False,False,0.0,hold s,,728
+left edge,archive,0,True,True,6.42,hold s,,0
+left edge,archive,1,True,True,6.28,hold s,,0
+left edge,stock,0,False,False,0.0,hold s,,185
+left edge,stock,1,False,False,0.0,hold s,,156
+left edge,25,0,False,False,0.0,hold s,,250
+left edge,25,1,False,False,0.0,hold s,,82
+left edge,50,0,False,False,0.0,hold s,,201
+left edge,50,1,False,False,0.0,hold s,,166
+left edge,100,0,False,False,0.0,hold s,,377
+left edge,100,1,False,False,0.02,hold s,,347
+left edge,200,0,False,False,0.0,hold s,,752
+left edge,200,1,False,False,0.0,hold s,,682
+left edge,400,0,False,False,0.04,hold s,,1827
+left edge,400,1,False,False,0.02,hold s,,1312
+left edge,500,0,False,False,0.02,hold s,,2175
+left edge,500,1,False,False,0.0,hold s,,1644
+left edge,1000,0,False,False,0.0,hold s,,3612
+left edge,1000,1,False,False,0.0,hold s,,3295
+right edge,archive,0,True,True,5.98,hold s,,0
+right edge,archive,1,True,True,5.82,hold s,,0
+right edge,stock,0,False,False,0.0,hold s,,155
+right edge,stock,1,False,False,0.0,hold s,,160
+right edge,25,0,False,False,0.0,hold s,,250
+right edge,25,1,False,False,0.0,hold s,,62
+right edge,50,0,False,False,0.0,hold s,,123
+right edge,50,1,False,False,0.0,hold s,,198
+right edge,100,0,False,False,0.0,hold s,,353
+right edge,100,1,False,False,0.02,hold s,,339
+right edge,200,0,False,False,0.0,hold s,,774
+right edge,200,1,False,False,0.0,hold s,,758
+right edge,400,0,False,False,3.66,hold s,,4000
+right edge,400,1,False,False,0.0,hold s,,1248
+right edge,500,0,False,False,0.0,hold s,,2151
+right edge,500,1,False,False,0.0,hold s,,1577
+right edge,1000,0,False,False,0.0,hold s,,3951
+right edge,1000,1,False,False,0.0,hold s,,3536
+rolling impact,archive,0,True,True,8.1,hold s,,0
+rolling impact,archive,1,True,True,7.64,hold s,,0
+rolling impact,stock,0,False,False,0.0,hold s,,155
+rolling impact,stock,1,False,False,0.0,hold s,,160
+rolling impact,25,0,False,False,0.0,hold s,,350
+rolling impact,25,1,False,False,0.0,hold s,,62
+rolling impact,50,0,False,False,0.0,hold s,,123
+rolling impact,50,1,False,False,0.0,hold s,,198
+rolling impact,100,0,False,False,0.0,hold s,,353
+rolling impact,100,1,False,False,0.02,hold s,,339
+rolling impact,200,0,False,False,0.0,hold s,,774
+rolling impact,200,1,False,False,0.0,hold s,,758
+rolling impact,400,0,False,False,7.38,hold s,,5600
+rolling impact,400,1,False,False,0.0,hold s,,1248
+rolling impact,500,0,False,False,0.0,hold s,,2151
+rolling impact,500,1,False,False,0.0,hold s,,1577
+rolling impact,1000,0,False,False,0.0,hold s,,3951
+rolling impact,1000,1,False,False,0.0,hold s,,3536
+direct impact,archive,0,True,True,8.2,hold s,,0
+direct impact,archive,1,False,False,8.12,hold s,,0
+direct impact,stock,0,False,False,0.0,hold s,,155
+direct impact,stock,1,False,False,0.0,hold s,,160
+direct impact,25,0,False,False,0.0,hold s,,350
+direct impact,25,1,False,False,0.0,hold s,,62
+direct impact,50,0,False,False,0.0,hold s,,123
+direct impact,50,1,False,False,0.0,hold s,,198
+direct impact,100,0,False,False,0.0,hold s,,353
+direct impact,100,1,False,False,0.02,hold s,,339
+direct impact,200,0,False,False,0.0,hold s,,774
+direct impact,200,1,False,False,0.0,hold s,,758
+direct impact,400,0,False,False,0.08,hold s,,2309
+direct impact,400,1,False,False,0.0,hold s,,1248
+direct impact,500,0,False,False,0.0,hold s,,2151
+direct impact,500,1,False,False,0.0,hold s,,1577
+direct impact,1000,0,False,False,0.0,hold s,,3951
+direct impact,1000,1,False,False,0.0,hold s,,3536
+controlled return,archive,0,True,True,4.98,hold s,,0
+controlled return,archive,1,False,False,4.78,hold s,,0
+controlled return,stock,0,False,False,0.0,hold s,,155
+controlled return,stock,1,False,False,0.0,hold s,,160
+controlled return,25,0,False,False,0.0,hold s,,350
+controlled return,25,1,False,False,0.0,hold s,,62
+controlled return,50,0,False,False,0.0,hold s,,123
+controlled return,50,1,False,False,0.0,hold s,,198
+controlled return,100,0,False,False,0.0,hold s,,353
+controlled return,100,1,False,False,0.02,hold s,,339
+controlled return,200,0,False,False,0.0,hold s,,774
+controlled return,200,1,False,False,0.0,hold s,,758
+controlled return,400,0,True,True,5.2,hold s,,5600
+controlled return,400,1,False,False,0.0,hold s,,1248
+controlled return,500,0,False,False,0.0,hold s,,2151
+controlled return,500,1,False,False,0.0,hold s,,1577
+controlled return,1000,0,False,False,0.0,hold s,,3951
+controlled return,1000,1,False,False,0.0,hold s,,3536
+shuffle,archive,0,True,True,57.31651608680104,mm/s,45.85321286944083,0
+shuffle,archive,1,True,True,57.31651608680104,mm/s,45.85321286944083,0
+shuffle,stock,0,True,True,57.31651608680104,mm/s,45.85321286944083,298
+shuffle,stock,1,True,True,57.31651608680104,mm/s,45.85321286944083,298
+shuffle,25,0,True,True,57.31651608680104,mm/s,45.85321286944083,148
+shuffle,25,1,True,True,57.31651608680104,mm/s,45.85321286944083,149
+shuffle,50,0,True,True,57.31651608680104,mm/s,45.85321286944083,297
+shuffle,50,1,True,True,57.31651608680104,mm/s,45.85321286944083,297
+shuffle,100,0,True,True,57.31651608680104,mm/s,45.85321286944083,594
+shuffle,100,1,True,True,57.31651608680104,mm/s,45.85321286944083,594
+shuffle,200,0,True,True,57.31651608680104,mm/s,45.85321286944083,1188
+shuffle,200,1,True,True,57.31651608680104,mm/s,45.85321286944083,1188
+shuffle,400,0,True,True,57.31651608680104,mm/s,45.85321286944083,2376
+shuffle,400,1,True,True,57.31651608680104,mm/s,45.85321286944083,2376
+shuffle,500,0,True,True,57.31651608680104,mm/s,45.85321286944083,2970
+shuffle,500,1,True,True,57.31651608680104,mm/s,45.85321286944083,2970
+shuffle,1000,0,True,True,57.31651608680104,mm/s,45.85321286944083,5940
+shuffle,1000,1,True,True,57.31651608680104,mm/s,45.85321286944083,5940
+large rocking,archive,0,True,True,49.81114801323327,mm/s,39.84891841058662,0
+large rocking,archive,1,False,False,44.84176286969325,mm/s,,0
+large rocking,stock,0,False,False,43.68602325036979,mm/s,39.84891841058662,719
+large rocking,stock,1,False,False,43.93473972919145,mm/s,,1057
+large rocking,25,0,False,False,42.93056073269943,mm/s,39.84891841058662,303
+large rocking,25,1,False,False,46.88258905973068,mm/s,,351
+large rocking,50,0,False,False,44.39740018568663,mm/s,39.84891841058662,702
+large rocking,50,1,False,False,46.55986199449759,mm/s,,814
+large rocking,100,0,False,False,44.50186923678899,mm/s,39.84891841058662,1404
+large rocking,100,1,False,False,44.749515340315256,mm/s,,2112
+large rocking,200,0,False,False,44.17408746236368,mm/s,39.84891841058662,2680
+large rocking,200,1,False,False,45.06909102602382,mm/s,,3320
+large rocking,400,0,False,False,44.23052027758196,mm/s,39.84891841058662,6256
+large rocking,400,1,False,False,43.79009222172077,mm/s,,6640
+large rocking,500,0,False,False,44.59572133031764,mm/s,39.84891841058662,7180
+large rocking,500,1,False,False,47.052702416379084,mm/s,,7180
+large rocking,1000,0,False,False,47.17562826306646,mm/s,39.84891841058662,15640
+large rocking,1000,1,False,False,44.72222554984598,mm/s,,14680
+sustained steps,archive,0,True,True,21.139242170381813,mm,16.911393736305453,0
+sustained steps,archive,1,True,True,21.2204718475669,mm,16.976377478053518,0
+sustained steps,stock,0,True,True,21.074397407627885,mm,16.911393736305453,315
+sustained steps,stock,1,True,True,19.776403744632706,mm,16.976377478053518,312
+sustained steps,25,0,True,True,20.808599026103913,mm,16.911393736305453,156
+sustained steps,25,1,True,True,21.10794990959568,mm,16.976377478053518,156
+sustained steps,50,0,True,True,20.905770094043444,mm,16.911393736305453,312
+sustained steps,50,1,True,True,21.197067825692837,mm,16.976377478053518,314
+sustained steps,100,0,True,True,21.087409408459656,mm,16.911393736305453,624
+sustained steps,100,1,True,True,21.14245734121483,mm,16.976377478053518,628
+sustained steps,200,0,True,True,21.103125162730006,mm,16.911393736305453,1252
+sustained steps,200,1,True,True,21.14602441883806,mm,16.976377478053518,1256
+sustained steps,400,0,True,True,21.099443106535105,mm,16.911393736305453,2512
+sustained steps,400,1,True,True,21.14317438081304,mm,16.976377478053518,2512
+sustained steps,500,0,True,True,21.095297767443192,mm,16.911393736305453,3140
+sustained steps,500,1,True,True,21.14337758201698,mm,16.976377478053518,3140
+sustained steps,1000,0,True,True,21.096011325607883,mm,16.911393736305453,6280
+sustained steps,1000,1,True,True,21.14383929506102,mm,16.976377478053518,6280
+distance per swing,archive,0,True,True,6.565509170469274,mm/swing,5.25240733637542,0
+distance per swing,archive,1,True,True,6.0525343925405695,mm/swing,4.842027514032456,0
+distance per swing,stock,0,True,True,6.295764393934488,mm/swing,5.25240733637542,261
+distance per swing,stock,1,True,True,6.049717031992308,mm/swing,4.842027514032456,261
+distance per swing,25,0,True,True,6.242181102639684,mm/swing,5.25240733637542,130
+distance per swing,25,1,True,True,6.033093707974952,mm/swing,4.842027514032456,130
+distance per swing,50,0,True,True,6.3120379419743236,mm/swing,5.25240733637542,260
+distance per swing,50,1,True,True,6.045279991881267,mm/swing,4.842027514032456,260
+distance per swing,100,0,True,True,6.297253989470755,mm/swing,5.25240733637542,520
+distance per swing,100,1,True,True,6.047644628273921,mm/swing,4.842027514032456,520
+distance per swing,200,0,True,True,6.2425778347508105,mm/swing,5.25240733637542,1040
+distance per swing,200,1,True,True,6.054357372782075,mm/swing,4.842027514032456,1040
+distance per swing,400,0,True,True,6.398900448113964,mm/swing,5.25240733637542,2080
+distance per swing,400,1,True,True,6.058794046036025,mm/swing,4.842027514032456,2080
+distance per swing,500,0,True,True,6.5015187958311005,mm/swing,5.25240733637542,2600
+distance per swing,500,1,True,True,6.050924841867879,mm/swing,4.842027514032456,2600
+distance per swing,1000,0,True,True,6.49283849900574,mm/swing,5.25240733637542,5200
+distance per swing,1000,1,True,True,6.0588947725447975,mm/swing,4.842027514032456,5200
+teleop cadence,archive,0,True,True,2.720025501429324,mm/s,2.176020401143459,0
+teleop cadence,archive,1,True,True,2.7375783575224406,mm/s,2.1900626860179524,0
+teleop cadence,stock,0,True,True,2.720025501429324,mm/s,2.176020401143459,681
+teleop cadence,stock,1,True,True,2.7375783575224406,mm/s,2.1900626860179524,681
+teleop cadence,25,0,True,True,2.720025501429324,mm/s,2.176020401143459,340
+teleop cadence,25,1,True,True,2.7375783575224406,mm/s,2.1900626860179524,340
+teleop cadence,50,0,True,True,2.720025501429324,mm/s,2.176020401143459,680
+teleop cadence,50,1,True,True,2.7375783575224406,mm/s,2.1900626860179524,680
+teleop cadence,100,0,True,True,2.720025501429324,mm/s,2.176020401143459,1360
+teleop cadence,100,1,True,True,2.7375783575224406,mm/s,2.1900626860179524,1360
+teleop cadence,200,0,True,True,2.720025501429324,mm/s,2.176020401143459,2720
+teleop cadence,200,1,True,True,2.7375783575224406,mm/s,2.1900626860179524,2720
+teleop cadence,400,0,True,True,2.720025501429324,mm/s,2.176020401143459,5440
+teleop cadence,400,1,True,True,2.7375783575224406,mm/s,2.1900626860179524,5440
+teleop cadence,500,0,True,True,2.720025501429324,mm/s,2.176020401143459,6800
+teleop cadence,500,1,True,True,2.7375783575224406,mm/s,2.1900626860179524,6800
+teleop cadence,1000,0,True,True,2.720025501429324,mm/s,2.176020401143459,13600
+teleop cadence,1000,1,True,True,2.7375783575224406,mm/s,2.1900626860179524,13600
+edge braking,archive,0,True,True,1.3946962921321504,mm/s,1.1157570337057203,0
+edge braking,archive,1,True,True,1.1259615902405624,mm/s,0.90076927219245,0
+edge braking,stock,0,True,True,1.3946962921321504,mm/s,1.1157570337057203,681
+edge braking,stock,1,True,True,1.1259778708728236,mm/s,0.90076927219245,681
+edge braking,25,0,True,True,1.200652489260155,mm/s,1.1157570337057203,340
+edge braking,25,1,True,False,0.8813856317321958,mm/s,0.90076927219245,340
+edge braking,50,0,True,True,1.3946962921321504,mm/s,1.1157570337057203,680
+edge braking,50,1,True,True,1.1259778708728236,mm/s,0.90076927219245,680
+edge braking,100,0,True,True,1.3946962921321504,mm/s,1.1157570337057203,1360
+edge braking,100,1,True,True,1.1259615902405624,mm/s,0.90076927219245,1360
+edge braking,200,0,True,True,1.3946962921321504,mm/s,1.1157570337057203,2720
+edge braking,200,1,True,True,1.1259615902405624,mm/s,0.90076927219245,2720
+edge braking,400,0,True,True,1.3946962921321504,mm/s,1.1157570337057203,5440
+edge braking,400,1,True,True,1.1259615902405624,mm/s,0.90076927219245,5440
+edge braking,500,0,True,True,1.3946962921321504,mm/s,1.1157570337057203,6800
+edge braking,500,1,True,True,1.1259615902405624,mm/s,0.90076927219245,6800
+edge braking,1000,0,True,True,1.3946962921321504,mm/s,1.1157570337057203,13600
+edge braking,1000,1,True,True,1.1259615902405624,mm/s,0.90076927219245,13600
+encoder edge walking,archive,0,True,True,0.4689651989650219,mm/s,0.37517215917201757,0
+encoder edge walking,archive,1,True,True,0.5197501613201614,mm/s,0.4158001290561291,0
+encoder edge walking,stock,0,True,True,0.4706872027545275,mm/s,0.37517215917201757,681
+encoder edge walking,stock,1,True,True,0.5211073396568213,mm/s,0.4158001290561291,681
+encoder edge walking,25,0,True,True,0.47668935684137437,mm/s,0.37517215917201757,340
+encoder edge walking,25,1,False,False,-0.06263346619034244,mm/s,0.4158001290561291,340
+encoder edge walking,50,0,True,True,0.5263168577852938,mm/s,0.37517215917201757,680
+encoder edge walking,50,1,True,True,0.5197501613201614,mm/s,0.4158001290561291,680
+encoder edge walking,100,0,True,True,0.4689651989650219,mm/s,0.37517215917201757,1360
+encoder edge walking,100,1,True,True,0.5197501613201614,mm/s,0.4158001290561291,1360
+encoder edge walking,200,0,True,True,0.4706872027545275,mm/s,0.37517215917201757,2720
+encoder edge walking,200,1,True,True,0.5197501613201614,mm/s,0.4158001290561291,2720
+encoder edge walking,400,0,True,True,0.4706872027545275,mm/s,0.37517215917201757,5440
+encoder edge walking,400,1,True,True,0.5197501613201614,mm/s,0.4158001290561291,5440
+encoder edge walking,500,0,True,True,0.4706872027545275,mm/s,0.37517215917201757,6800
+encoder edge walking,500,1,True,True,0.5197501613201614,mm/s,0.4158001290561291,6800
+encoder edge walking,1000,0,True,True,0.4706872027545275,mm/s,0.37517215917201757,13600
+encoder edge walking,1000,1,True,True,0.5197501613201614,mm/s,0.4158001290561291,13600
+alternating edge walking,archive,0,True,True,0.9830763434287298,mm/s,0.7864610747429839,0
+alternating edge walking,archive,1,True,True,0.9811567125319711,mm/s,0.7849253700255769,0
+alternating edge walking,stock,0,True,True,0.9821053563737546,mm/s,0.7864610747429839,681
+alternating edge walking,stock,1,True,True,0.9804820055362583,mm/s,0.7849253700255769,681
+alternating edge walking,25,0,True,True,1.0029608263375713,mm/s,0.7864610747429839,340
+alternating edge walking,25,1,True,True,1.0164920060398466,mm/s,0.7849253700255769,340
+alternating edge walking,50,0,True,True,0.9689567744801336,mm/s,0.7864610747429839,680
+alternating edge walking,50,1,True,True,0.9847259408307272,mm/s,0.7849253700255769,680
+alternating edge walking,100,0,True,True,0.9815127862872554,mm/s,0.7864610747429839,1360
+alternating edge walking,100,1,True,True,0.9859375947231376,mm/s,0.7849253700255769,1360
+alternating edge walking,200,0,True,True,0.9798067507706661,mm/s,0.7864610747429839,2720
+alternating edge walking,200,1,True,True,0.9842226797733704,mm/s,0.7849253700255769,2720
+alternating edge walking,400,0,True,True,0.9829634064502307,mm/s,0.7864610747429839,5440
+alternating edge walking,400,1,True,True,0.9812321578762463,mm/s,0.7849253700255769,5440
+alternating edge walking,500,0,True,True,0.9832623984553047,mm/s,0.7864610747429839,6800
+alternating edge walking,500,1,True,True,0.9811462647172321,mm/s,0.7849253700255769,6800
+alternating edge walking,1000,0,True,True,0.9832832237904069,mm/s,0.7864610747429839,13600
+alternating edge walking,1000,1,True,True,0.9811270519985477,mm/s,0.7849253700255769,13600
+target pivot,archive,0,True,True,29.132711807701636,signed turn deg,23.30616944616131,0
+target pivot,archive,1,True,True,27.962441672131657,signed turn deg,22.369953337705326,0
+target pivot,stock,0,True,True,28.62596173724915,signed turn deg,23.30616944616131,701
+target pivot,stock,1,True,True,27.15088989757746,signed turn deg,22.369953337705326,701
+target pivot,25,0,True,True,30.8666982966405,signed turn deg,23.30616944616131,350
+target pivot,25,1,True,True,30.009131141869904,signed turn deg,22.369953337705326,460
+target pivot,50,0,True,True,27.81507654659964,signed turn deg,23.30616944616131,700
+target pivot,50,1,True,True,28.481604922010757,signed turn deg,22.369953337705326,700
+target pivot,100,0,True,True,30.46286127904055,signed turn deg,23.30616944616131,1400
+target pivot,100,1,True,True,28.664501870451748,signed turn deg,22.369953337705326,1400
+target pivot,200,0,True,True,30.778470540125866,signed turn deg,23.30616944616131,2800
+target pivot,200,1,True,True,28.633149645122806,signed turn deg,22.369953337705326,2800
+target pivot,400,0,True,True,30.887725800691484,signed turn deg,23.30616944616131,5600
+target pivot,400,1,True,True,28.632876845928845,signed turn deg,22.369953337705326,5600
+target pivot,500,0,True,True,30.91873709796508,signed turn deg,23.30616944616131,7000
+target pivot,500,1,True,True,28.638123667640496,signed turn deg,22.369953337705326,7000
+target pivot,1000,0,True,True,30.957498979857945,signed turn deg,23.30616944616131,14000
+target pivot,1000,1,True,True,28.679046778454616,signed turn deg,22.369953337705326,14000
+efficient pivot,archive,0,True,True,86.25187424744121,signed turn deg,69.00149939795297,0
+efficient pivot,archive,1,True,True,90.10693519678004,signed turn deg,72.08554815742404,0
+efficient pivot,stock,0,True,True,87.33375281854912,signed turn deg,69.00149939795297,1141
+efficient pivot,stock,1,True,True,86.12118993087282,signed turn deg,72.08554815742404,921
+efficient pivot,25,0,True,True,87.83467715595361,signed turn deg,69.00149939795297,570
+efficient pivot,25,1,True,True,92.69852209598338,signed turn deg,72.08554815742404,570
+efficient pivot,50,0,True,True,85.378982066686,signed turn deg,69.00149939795297,1140
+efficient pivot,50,1,True,True,87.27846959420381,signed turn deg,72.08554815742404,920
+efficient pivot,100,0,True,True,90.60230356366709,signed turn deg,69.00149939795297,2720
+efficient pivot,100,1,True,True,88.15834482836061,signed turn deg,72.08554815742404,1840
+efficient pivot,200,0,True,True,86.11101695735114,signed turn deg,69.00149939795297,4560
+efficient pivot,200,1,True,True,88.1479591655633,signed turn deg,72.08554815742404,3680
+efficient pivot,400,0,True,True,91.4346411044003,signed turn deg,69.00149939795297,10880
+efficient pivot,400,1,True,True,88.24431836055894,signed turn deg,72.08554815742404,7360
+efficient pivot,500,0,True,True,90.46750774063582,signed turn deg,69.00149939795297,13600
+efficient pivot,500,1,True,True,88.23888211006845,signed turn deg,72.08554815742404,9200
+efficient pivot,1000,0,True,True,90.61640104223314,signed turn deg,69.00149939795297,27200
+efficient pivot,1000,1,True,True,88.26493096036825,signed turn deg,72.08554815742404,18400
+slick quarter turn,archive,0,True,True,87.89382462245189,signed turn deg,70.31505969796152,0
+slick quarter turn,archive,1,True,True,86.79012675477942,signed turn deg,69.43210140382354,0
+slick quarter turn,stock,0,True,True,88.95279484814769,signed turn deg,70.31505969796152,1141
+slick quarter turn,stock,1,False,False,68.79345699131119,signed turn deg,69.43210140382354,2021
+slick quarter turn,25,0,True,True,88.19349852026373,signed turn deg,70.31505969796152,570
+slick quarter turn,25,1,False,False,68.72364545484167,signed turn deg,69.43210140382354,1010
+slick quarter turn,50,0,True,True,90.8000558102522,signed turn deg,70.31505969796152,1140
+slick quarter turn,50,1,True,True,90.5654994788563,signed turn deg,69.43210140382354,1140
+slick quarter turn,100,0,True,True,87.84457674890476,signed turn deg,70.31505969796152,2280
+slick quarter turn,100,1,True,True,90.05449935491352,signed turn deg,69.43210140382354,2280
+slick quarter turn,200,0,True,True,88.78664618645884,signed turn deg,70.31505969796152,5440
+slick quarter turn,200,1,True,True,90.61193295795182,signed turn deg,69.43210140382354,4560
+slick quarter turn,400,0,True,True,93.15791696178346,signed turn deg,70.31505969796152,10880
+slick quarter turn,400,1,True,True,92.86838436575887,signed turn deg,69.43210140382354,16160
+slick quarter turn,500,0,True,True,92.05760972253005,signed turn deg,70.31505969796152,13600
+slick quarter turn,500,1,True,True,90.26712217099674,signed turn deg,69.43210140382354,11400
+slick quarter turn,1000,0,True,True,88.0856777104364,signed turn deg,70.31505969796152,22800
+slick quarter turn,1000,1,True,True,89.9688276464687,signed turn deg,69.43210140382354,22800
+fast spin,archive,0,True,True,4.0426559364577805,rpm,3.2341247491662246,0
+fast spin,archive,1,True,True,3.9115106086141065,rpm,3.1292084868912853,0
+fast spin,stock,0,True,True,4.0426559364577805,rpm,3.2341247491662246,1001
+fast spin,stock,1,True,True,3.9115106086141065,rpm,3.1292084868912853,1001
+fast spin,25,0,True,True,4.0426559364577805,rpm,3.2341247491662246,500
+fast spin,25,1,True,True,3.9115106086141065,rpm,3.1292084868912853,500
+fast spin,50,0,True,True,4.0426559364577805,rpm,3.2341247491662246,1000
+fast spin,50,1,True,True,3.9115106086141065,rpm,3.1292084868912853,1000
+fast spin,100,0,True,True,4.0426559364577805,rpm,3.2341247491662246,2000
+fast spin,100,1,True,True,3.9115106086141065,rpm,3.1292084868912853,2000
+fast spin,200,0,True,True,4.0426559364577805,rpm,3.2341247491662246,4000
+fast spin,200,1,True,True,3.9115106086141065,rpm,3.1292084868912853,4000
+fast spin,400,0,True,True,4.0426559364577805,rpm,3.2341247491662246,8000
+fast spin,400,1,True,True,3.9115106086141065,rpm,3.1292084868912853,8000
+fast spin,500,0,True,True,4.0426559364577805,rpm,3.2341247491662246,10000
+fast spin,500,1,True,True,3.9115106086141065,rpm,3.1292084868912853,10000
+fast spin,1000,0,True,True,4.0426559364577805,rpm,3.2341247491662246,20000
+fast spin,1000,1,True,True,3.9115106086141065,rpm,3.1292084868912853,20000
+rim spin,archive,0,True,True,2.977833543017928,rpm,2.3822668344143425,0
+rim spin,archive,1,False,False,3.4000841111424402,rpm,,0
+rim spin,stock,0,True,True,2.977833543017928,rpm,2.3822668344143425,1001
+rim spin,stock,1,False,False,3.4000841111424402,rpm,,1001
+rim spin,25,0,True,True,2.977833543017928,rpm,2.3822668344143425,500
+rim spin,25,1,False,False,3.4000841111424402,rpm,,500
+rim spin,50,0,True,True,2.977833543017928,rpm,2.3822668344143425,1000
+rim spin,50,1,False,False,3.4000841111424402,rpm,,1000
+rim spin,100,0,True,True,2.977833543017928,rpm,2.3822668344143425,2000
+rim spin,100,1,False,False,3.4000841111424402,rpm,,2000
+rim spin,200,0,True,True,2.977833543017928,rpm,2.3822668344143425,4000
+rim spin,200,1,False,False,3.4000841111424402,rpm,,4000
+rim spin,400,0,True,True,2.977833543017928,rpm,2.3822668344143425,8000
+rim spin,400,1,False,False,3.4000841111424402,rpm,,8000
+rim spin,500,0,True,True,2.977833543017928,rpm,2.3822668344143425,10000
+rim spin,500,1,False,False,3.4000841111424402,rpm,,10000
+rim spin,1000,0,True,True,2.977833543017928,rpm,2.3822668344143425,20000
+rim spin,1000,1,False,False,3.4000841111424402,rpm,,20000
+waist sweep,archive,0,True,True,13.64,loaded s,,0
+waist sweep,archive,1,True,True,13.84,loaded s,,0
+waist sweep,stock,0,False,False,0.0,loaded s,,146
+waist sweep,stock,1,False,False,0.0,loaded s,,150
+waist sweep,25,0,False,False,0.0,loaded s,,77
+waist sweep,25,1,False,False,0.0,loaded s,,89
+waist sweep,50,0,False,False,0.0,loaded s,,128
+waist sweep,50,1,False,False,0.0,loaded s,,214
+waist sweep,100,0,False,False,0.0,loaded s,,392
+waist sweep,100,1,False,False,0.0,loaded s,,361
+waist sweep,200,0,False,False,0.0,loaded s,,677
+waist sweep,200,1,False,False,0.0,loaded s,,693
+waist sweep,400,0,False,False,0.0,loaded s,,3159
+waist sweep,400,1,False,False,0.0,loaded s,,1352
+waist sweep,500,0,False,False,0.0,loaded s,,1763
+waist sweep,500,1,False,False,0.0,loaded s,,1631
+waist sweep,1000,0,False,False,0.0,loaded s,,3297
+waist sweep,1000,1,False,False,0.0,loaded s,,3248
+gyro peg,archive,0,True,True,23.689155532390497,rim turns,18.9513244259124,0
+gyro peg,archive,1,True,True,40.381905582154594,rim turns,32.30552446572368,0
+gyro peg,stock,0,True,True,39.65171220301301,rim turns,18.9513244259124,1201
+gyro peg,stock,1,True,True,38.743238354723516,rim turns,32.30552446572368,1201
+gyro peg,25,0,True,False,6.810825858942529,rim turns,18.9513244259124,600
+gyro peg,25,1,True,False,26.52282719040038,rim turns,32.30552446572368,600
+gyro peg,50,0,True,True,40.037183491407305,rim turns,18.9513244259124,1200
+gyro peg,50,1,True,True,40.03087673006142,rim turns,32.30552446572368,1200
+gyro peg,100,0,True,False,15.728740605583221,rim turns,18.9513244259124,2400
+gyro peg,100,1,True,True,40.01788766500231,rim turns,32.30552446572368,2400
+gyro peg,200,0,True,True,30.455953545243045,rim turns,18.9513244259124,4800
+gyro peg,200,1,True,True,40.005722102994945,rim turns,32.30552446572368,4800
+gyro peg,400,0,True,True,40.94036827253395,rim turns,18.9513244259124,9600
+gyro peg,400,1,True,True,40.0889095209213,rim turns,32.30552446572368,9600
+gyro peg,500,0,True,True,26.043843438638007,rim turns,18.9513244259124,12000
+gyro peg,500,1,True,True,39.9604206419676,rim turns,32.30552446572368,12000
+gyro peg,1000,0,True,True,23.768035830110335,rim turns,18.9513244259124,24000
+gyro peg,1000,1,True,True,39.96564592684193,rim turns,32.30552446572368,24000
+wide gyro peg,archive,0,True,True,11.73810420764445,rim turns,9.39048336611556,0
+wide gyro peg,archive,1,True,True,198.84087037204563,rim turns,159.07269629763653,0
+wide gyro peg,stock,0,True,True,33.75911707766117,rim turns,9.39048336611556,6001
+wide gyro peg,stock,1,False,False,201.71839322953142,rim turns,159.07269629763653,6001
+wide gyro peg,25,0,False,False,51.79174708420861,rim turns,9.39048336611556,3000
+wide gyro peg,25,1,True,True,225.86021174131406,rim turns,159.07269629763653,3000
+wide gyro peg,50,0,False,False,44.75774545739219,rim turns,9.39048336611556,6000
+wide gyro peg,50,1,False,False,214.54610963743653,rim turns,159.07269629763653,6000
+wide gyro peg,100,0,True,True,17.74620605203191,rim turns,9.39048336611556,12000
+wide gyro peg,100,1,False,False,210.36304286796553,rim turns,159.07269629763653,12000
+wide gyro peg,200,0,True,True,11.778727913077818,rim turns,9.39048336611556,24000
+wide gyro peg,200,1,False,False,213.99016838055294,rim turns,159.07269629763653,24000
+wide gyro peg,400,0,True,True,20.756591267790796,rim turns,9.39048336611556,48000
+wide gyro peg,400,1,False,False,214.40858709935807,rim turns,159.07269629763653,48000
+wide gyro peg,500,0,True,True,20.720530006951538,rim turns,9.39048336611556,60000
+wide gyro peg,500,1,False,False,213.91100405968837,rim turns,159.07269629763653,60000
+wide gyro peg,1000,0,True,True,17.741256325450824,rim turns,9.39048336611556,120000
+wide gyro peg,1000,1,False,False,213.9019602923772,rim turns,159.07269629763653,120000
+deep lift and circle,archive,0,True,True,1.7648462239630316,rim turns,1.4118769791704253,0
+deep lift and circle,archive,1,True,True,1.7565936356324583,rim turns,1.4052749085059668,0
+deep lift and circle,stock,0,False,False,0.09708786267308374,rim turns,1.4118769791704253,249
+deep lift and circle,stock,1,False,False,0.0,rim turns,1.4052749085059668,1801
+deep lift and circle,25,0,False,False,0.034250599771168524,rim turns,1.4118769791704253,109
+deep lift and circle,25,1,False,False,0.0,rim turns,1.4052749085059668,900
+deep lift and circle,50,0,False,False,0.11559558971024048,rim turns,1.4118769791704253,227
+deep lift and circle,50,1,False,False,0.0,rim turns,1.4052749085059668,1800
+deep lift and circle,100,0,False,False,0.06153196977547865,rim turns,1.4118769791704253,503
+deep lift and circle,100,1,False,False,0.0,rim turns,1.4052749085059668,3600
+deep lift and circle,200,0,False,False,0.06497490027707527,rim turns,1.4118769791704253,997
+deep lift and circle,200,1,False,False,0.0,rim turns,1.4052749085059668,7200
+deep lift and circle,400,0,False,False,0.0798937776100938,rim turns,1.4118769791704253,1903
+deep lift and circle,400,1,False,False,0.0,rim turns,1.4052749085059668,14400
+deep lift and circle,500,0,False,False,0.12525857174730065,rim turns,1.4118769791704253,2705
+deep lift and circle,500,1,False,False,0.0,rim turns,1.4052749085059668,18000
+deep lift and circle,1000,0,False,False,0.058423529049319044,rim turns,1.4118769791704253,4904
+deep lift and circle,1000,1,False,False,0.0,rim turns,1.4052749085059668,36000
+pendulum,archive,0,False,False,93.51284875440655,lean deg,,0
+pendulum,archive,1,True,True,31.125701520764874,lean deg,,0
+pendulum,stock,0,False,False,91.23440102567008,lean deg,,601
+pendulum,stock,1,False,False,92.66178843347443,lean deg,,601
+pendulum,25,0,False,False,89.11557023965236,lean deg,,300
+pendulum,25,1,False,False,73.0432009206108,lean deg,,300
+pendulum,50,0,False,False,70.31138218273398,lean deg,,600
+pendulum,50,1,False,False,92.57298263385734,lean deg,,600
+pendulum,100,0,False,False,70.96211410607371,lean deg,,1200
+pendulum,100,1,False,False,72.61764602838517,lean deg,,1200
+pendulum,200,0,False,False,70.65581515067618,lean deg,,2400
+pendulum,200,1,False,False,70.32570286744797,lean deg,,2400
+pendulum,400,0,False,False,70.44327538027444,lean deg,,4800
+pendulum,400,1,False,False,71.21351850530985,lean deg,,4800
+pendulum,500,0,False,False,72.44917396672032,lean deg,,6000
+pendulum,500,1,False,False,70.53495760749908,lean deg,,6000
+pendulum,1000,0,False,False,71.23896612573274,lean deg,,12000
+pendulum,1000,1,False,False,71.21478437121753,lean deg,,12000
+slope launch,archive,0,True,True,4.264559113293819,hold score s,,0
+slope launch,archive,1,True,True,4.245127516964933,hold score s,,0
+slope launch,stock,0,False,False,0.46169579232809355,hold score s,,401
+slope launch,stock,1,False,False,0.33918810447187275,hold score s,,401
+slope launch,25,0,False,False,0.5498615973511134,hold score s,,200
+slope launch,25,1,False,False,1.3570266021678816,hold score s,,200
+slope launch,50,0,False,False,0.6530000321638109,hold score s,,400
+slope launch,50,1,False,False,0.4467214961807003,hold score s,,400
+slope launch,100,0,False,False,2.7239972924932263,hold score s,,800
+slope launch,100,1,False,False,2.4141232064329454,hold score s,,800
+slope launch,200,0,False,False,1.463418540401526,hold score s,,1600
+slope launch,200,1,False,False,2.979641285545045,hold score s,,1600
+slope launch,400,0,False,False,4.30482146089888,hold score s,,3200
+slope launch,400,1,False,False,3.652240475212681,hold score s,,3200
+slope launch,500,0,False,False,4.322113044754119,hold score s,,4000
+slope launch,500,1,False,False,4.139214800191175,hold score s,,4000
+slope launch,1000,0,False,False,4.164349479619318,hold score s,,8000
+slope launch,1000,1,False,False,4.139600686455134,hold score s,,8000
+overhead drop,archive,0,True,True,5.32,hold s,,0
+overhead drop,archive,1,True,True,6.0,hold s,,0
+overhead drop,stock,0,False,False,0.0,hold s,,601
+overhead drop,stock,1,False,False,0.02,hold s,,601
+overhead drop,25,0,False,False,0.0,hold s,,300
+overhead drop,25,1,False,False,0.0,hold s,,300
+overhead drop,50,0,False,False,0.0,hold s,,600
+overhead drop,50,1,False,False,0.02,hold s,,600
+overhead drop,100,0,False,False,0.0,hold s,,1200
+overhead drop,100,1,False,False,0.0,hold s,,1200
+overhead drop,200,0,False,False,0.0,hold s,,2400
+overhead drop,200,1,False,False,0.0,hold s,,2400
+overhead drop,400,0,False,False,0.04,hold s,,4800
+overhead drop,400,1,False,False,0.02,hold s,,4800
+overhead drop,500,0,False,False,0.02,hold s,,6000
+overhead drop,500,1,False,False,0.0,hold s,,6000
+overhead drop,1000,0,False,False,0.0,hold s,,12000
+overhead drop,1000,1,False,False,0.0,hold s,,12000
+40 degree catch,archive,0,True,True,40.446704831193024,peak deg,,0
+40 degree catch,archive,1,True,True,40.36053553834337,peak deg,,0
+40 degree catch,stock,0,False,False,72.80462067646488,peak deg,,35
+40 degree catch,stock,1,True,True,40.36053553834337,peak deg,,201
+40 degree catch,25,0,False,False,72.80462067646488,peak deg,,17
+40 degree catch,25,1,False,False,72.24206998327583,peak deg,,18
+40 degree catch,50,0,False,False,72.752818320141,peak deg,,37
+40 degree catch,50,1,True,True,40.36053553834337,peak deg,,200
+40 degree catch,100,0,False,False,72.752818320141,peak deg,,74
+40 degree catch,100,1,False,False,72.25438465073412,peak deg,,67
+40 degree catch,200,0,False,False,72.752818320141,peak deg,,149
+40 degree catch,200,1,True,True,40.36053553834337,peak deg,,800
+40 degree catch,400,0,False,False,72.23447335335607,peak deg,,381
+40 degree catch,400,1,True,True,40.36053553834337,peak deg,,1600
+40 degree catch,500,0,False,False,72.23447335335607,peak deg,,476
+40 degree catch,500,1,True,True,40.36053553834337,peak deg,,2000
+40 degree catch,1000,0,False,False,72.23447335335607,peak deg,,953
+40 degree catch,1000,1,True,True,40.36053553834337,peak deg,,4000
+left side regulator,archive,0,True,True,7.36,hold s,,0
+left side regulator,archive,1,True,True,7.36,hold s,,0
+left side regulator,stock,0,False,False,0.0,hold s,,172
+left side regulator,stock,1,False,False,0.0,hold s,,150
+left side regulator,25,0,False,False,0.0,hold s,,167
+left side regulator,25,1,False,False,0.0,hold s,,89
+left side regulator,50,0,False,False,0.0,hold s,,147
+left side regulator,50,1,False,False,0.0,hold s,,214
+left side regulator,100,0,False,False,0.02,hold s,,321
+left side regulator,100,1,False,False,0.02,hold s,,361
+left side regulator,200,0,False,False,0.0,hold s,,688
+left side regulator,200,1,False,False,0.02,hold s,,693
+left side regulator,400,0,False,False,0.06,hold s,,1452
+left side regulator,400,1,False,False,0.0,hold s,,1352
+left side regulator,500,0,False,False,0.04,hold s,,1834
+left side regulator,500,1,False,False,0.0,hold s,,1631
+left side regulator,1000,0,False,False,0.02,hold s,,3401
+left side regulator,1000,1,False,False,0.0,hold s,,3248
+right side regulator,archive,0,True,True,6.74,hold s,,0
+right side regulator,archive,1,True,True,6.74,hold s,,0
+right side regulator,stock,0,False,False,0.0,hold s,,146
+right side regulator,stock,1,False,False,0.0,hold s,,150
+right side regulator,25,0,False,False,0.0,hold s,,77
+right side regulator,25,1,False,False,0.0,hold s,,77
+right side regulator,50,0,False,False,0.0,hold s,,128
+right side regulator,50,1,False,False,0.0,hold s,,173
+right side regulator,100,0,False,False,0.0,hold s,,392
+right side regulator,100,1,False,False,0.0,hold s,,315
+right side regulator,200,0,False,False,0.0,hold s,,677
+right side regulator,200,1,False,False,0.0,hold s,,655
+right side regulator,400,0,False,False,0.0,hold s,,3159
+right side regulator,400,1,False,False,0.0,hold s,,1381
+right side regulator,500,0,False,False,0.0,hold s,,1763
+right side regulator,500,1,False,False,0.0,hold s,,1714
+right side regulator,1000,0,False,False,0.0,hold s,,3297
+right side regulator,1000,1,False,False,0.0,hold s,,3644
+side shell rocking,archive,0,True,True,36.40082138741726,rock arc deg,,0
+side shell rocking,archive,1,True,True,39.93451778066452,rock arc deg,,0
+side shell rocking,stock,0,True,True,36.40082138741726,rock arc deg,,751
+side shell rocking,stock,1,True,True,39.93451778066452,rock arc deg,,751
+side shell rocking,25,0,True,True,36.40082138741726,rock arc deg,,375
+side shell rocking,25,1,True,True,39.93451778066452,rock arc deg,,375
+side shell rocking,50,0,True,True,36.40082138741726,rock arc deg,,750
+side shell rocking,50,1,True,True,39.93451778066452,rock arc deg,,750
+side shell rocking,100,0,True,True,36.40082138741726,rock arc deg,,1500
+side shell rocking,100,1,True,True,39.93451778066452,rock arc deg,,1500
+side shell rocking,200,0,True,True,36.40082138741726,rock arc deg,,3000
+side shell rocking,200,1,True,True,39.93451778066452,rock arc deg,,3000
+side shell rocking,400,0,True,True,36.40082138741726,rock arc deg,,6000
+side shell rocking,400,1,True,True,39.93451778066452,rock arc deg,,6000
+side shell rocking,500,0,True,True,36.40082138741726,rock arc deg,,7500
+side shell rocking,500,1,True,True,39.93451778066452,rock arc deg,,7500
+side shell rocking,1000,0,True,True,36.40082138741726,rock arc deg,,15000
+side shell rocking,1000,1,True,True,39.93451778066452,rock arc deg,,15000
+heading gait,archive,0,True,True,15.821556049818753,mm/s,12.657244839855004,0
+heading gait,archive,1,True,True,15.767921150536143,mm/s,12.614336920428915,0
+heading gait,stock,0,True,True,15.7882743572221,mm/s,12.657244839855004,1108
+heading gait,stock,1,True,True,15.894693705857641,mm/s,12.614336920428915,1108
+heading gait,25,0,True,True,15.672944614947182,mm/s,12.657244839855004,553
+heading gait,25,1,True,True,15.403434663028852,mm/s,12.614336920428915,554
+heading gait,50,0,True,True,15.819551131243294,mm/s,12.657244839855004,1107
+heading gait,50,1,True,True,15.731729961799463,mm/s,12.614336920428915,1107
+heading gait,100,0,True,True,15.859902809808412,mm/s,12.657244839855004,2214
+heading gait,100,1,True,True,15.91582187598797,mm/s,12.614336920428915,2214
+heading gait,200,0,True,True,15.767168026849667,mm/s,12.657244839855004,4428
+heading gait,200,1,True,True,15.853714117051233,mm/s,12.614336920428915,4428
+heading gait,400,0,True,True,15.881289987726692,mm/s,12.657244839855004,8856
+heading gait,400,1,True,True,15.729346759964054,mm/s,12.614336920428915,8856
+heading gait,500,0,True,True,15.845005041573414,mm/s,12.657244839855004,11070
+heading gait,500,1,True,True,15.826140210729537,mm/s,12.614336920428915,11070
+heading gait,1000,0,True,True,15.8066356140655,mm/s,12.657244839855004,22140
+heading gait,1000,1,True,True,15.744820210526598,mm/s,12.614336920428915,22140
+speed gait,archive,0,True,True,48.5252245557481,mm/s,38.82017964459848,0
+speed gait,archive,1,True,True,48.427913342849656,mm/s,38.74233067427973,0
+speed gait,stock,0,True,True,48.51480753836523,mm/s,38.82017964459848,452
+speed gait,stock,1,True,True,48.460520389909085,mm/s,38.74233067427973,452
+speed gait,25,0,True,True,48.341004636401,mm/s,38.82017964459848,225
+speed gait,25,1,True,True,47.4729349936846,mm/s,38.74233067427973,226
+speed gait,50,0,True,True,48.574287888619764,mm/s,38.82017964459848,451
+speed gait,50,1,True,True,48.3169221783875,mm/s,38.74233067427973,451
+speed gait,100,0,True,True,48.54193645039784,mm/s,38.82017964459848,902
+speed gait,100,1,True,True,48.52348457176799,mm/s,38.74233067427973,902
+speed gait,200,0,True,True,48.55478333755637,mm/s,38.82017964459848,1804
+speed gait,200,1,True,True,48.48858958622252,mm/s,38.74233067427973,1804
+speed gait,400,0,True,True,48.480701600799485,mm/s,38.82017964459848,3608
+speed gait,400,1,True,True,48.47792934198256,mm/s,38.74233067427973,3608
+speed gait,500,0,True,True,48.357386763288126,mm/s,38.82017964459848,4510
+speed gait,500,1,True,True,48.39862027067328,mm/s,38.74233067427973,4510
+speed gait,1000,0,True,True,48.4641960359521,mm/s,38.82017964459848,9020
+speed gait,1000,1,True,True,48.520839312882615,mm/s,38.74233067427973,9020
+first penguin,archive,0,True,True,44.39410339389281,mm,35.51528271511425,0
+first penguin,archive,1,True,True,46.24761818139889,mm,36.998094545119116,0
+first penguin,stock,0,True,True,44.78301125275491,mm,35.51528271511425,809
+first penguin,stock,1,True,True,48.47687655885655,mm,36.998094545119116,809
+first penguin,25,0,True,True,44.862998445846586,mm,35.51528271511425,400
+first penguin,25,1,True,True,43.87278720730865,mm,36.998094545119116,401
+first penguin,50,0,True,True,42.466534092191054,mm,35.51528271511425,804
+first penguin,50,1,True,True,47.76079419704621,mm,36.998094545119116,808
+first penguin,100,0,True,True,44.11816397334081,mm,35.51528271511425,1612
+first penguin,100,1,True,True,46.76118851401763,mm,36.998094545119116,1616
+first penguin,200,0,True,True,44.41905561348228,mm,35.51528271511425,3232
+first penguin,200,1,True,True,47.07759105912515,mm,36.998094545119116,3232
+first penguin,400,0,True,True,44.617542254859245,mm,35.51528271511425,6464
+first penguin,400,1,True,True,47.1323732563071,mm,36.998094545119116,6464
+first penguin,500,0,True,True,44.68400563923919,mm,35.51528271511425,8080
+first penguin,500,1,True,True,47.17294256509829,mm,36.998094545119116,8080
+first penguin,1000,0,True,True,44.7961669042195,mm,35.51528271511425,16160
+first penguin,1000,1,True,True,47.24084169430104,mm,36.998094545119116,16160
+faster penguin,archive,0,True,True,20.53797859052236,mm,16.43038287241789,0
+faster penguin,archive,1,True,True,21.215454897353258,mm,16.972363917882607,0
+faster penguin,stock,0,True,True,20.49257068879538,mm,16.43038287241789,329
+faster penguin,stock,1,True,True,19.788198030687415,mm,16.972363917882607,327
+faster penguin,25,0,True,True,39.63445459993987,mm,16.43038287241789,300
+faster penguin,25,1,True,True,39.093790956225796,mm,16.972363917882607,296
+faster penguin,50,0,True,True,20.370732405759508,mm,16.43038287241789,326
+faster penguin,50,1,True,True,21.196729092880897,mm,16.972363917882607,328
+faster penguin,100,0,True,True,20.507812431131725,mm,16.43038287241789,652
+faster penguin,100,1,True,True,21.144394113322836,mm,16.972363917882607,656
+faster penguin,200,0,True,True,20.499302128206736,mm,16.43038287241789,1312
+faster penguin,200,1,True,True,21.140357986452333,mm,16.972363917882607,1312
+faster penguin,400,0,True,True,20.49937190178241,mm,16.43038287241789,2624
+faster penguin,400,1,True,True,21.144716050866144,mm,16.972363917882607,2624
+faster penguin,500,0,True,True,20.50143709562089,mm,16.43038287241789,3280
+faster penguin,500,1,True,True,21.143808949379526,mm,16.972363917882607,3280
+faster penguin,1000,0,True,True,20.508212217912767,mm,16.43038287241789,6560
+faster penguin,1000,1,True,True,21.145469152213735,mm,16.972363917882607,6560
+feedback penguin,archive,0,True,True,20.53797859052236,mm,16.43038287241789,0
+feedback penguin,archive,1,True,True,21.215454897353258,mm,16.972363917882607,0
+feedback penguin,stock,0,True,True,20.49257068879538,mm,16.43038287241789,329
+feedback penguin,stock,1,True,True,19.788198030687415,mm,16.972363917882607,327
+feedback penguin,25,0,True,True,39.63445459993987,mm,16.43038287241789,300
+feedback penguin,25,1,True,True,39.093790956225796,mm,16.972363917882607,296
+feedback penguin,50,0,True,True,20.370732405759508,mm,16.43038287241789,326
+feedback penguin,50,1,True,True,21.196729092880897,mm,16.972363917882607,328
+feedback penguin,100,0,True,True,20.507812431131725,mm,16.43038287241789,652
+feedback penguin,100,1,True,True,21.144394113322836,mm,16.972363917882607,656
+feedback penguin,200,0,True,True,20.499302128206736,mm,16.43038287241789,1312
+feedback penguin,200,1,True,True,21.140357986452333,mm,16.972363917882607,1312
+feedback penguin,400,0,True,True,20.49937190178241,mm,16.43038287241789,2624
+feedback penguin,400,1,True,True,21.144716050866144,mm,16.972363917882607,2624
+feedback penguin,500,0,True,True,20.50143709562089,mm,16.43038287241789,3280
+feedback penguin,500,1,True,True,21.143808949379526,mm,16.972363917882607,3280
+feedback penguin,1000,0,True,True,20.508212217912767,mm,16.43038287241789,6560
+feedback penguin,1000,1,True,True,21.145469152213735,mm,16.972363917882607,6560
+alternating original,archive,0,True,True,1.0725048472554757,mm/s,0.8580038778043806,0
+alternating original,archive,1,True,True,1.0684462487624973,mm/s,0.8547569990099979,0
+alternating original,stock,0,True,True,1.0724943207436362,mm/s,0.8580038778043806,681
+alternating original,stock,1,True,True,1.0657244664873549,mm/s,0.8547569990099979,681
+alternating original,25,0,True,True,1.0763768188008742,mm/s,0.8580038778043806,340
+alternating original,25,1,True,True,1.0971824387647415,mm/s,0.8547569990099979,340
+alternating original,50,0,True,True,1.083313407080495,mm/s,0.8580038778043806,680
+alternating original,50,1,True,True,1.0630941118803394,mm/s,0.8547569990099979,680
+alternating original,100,0,True,True,1.0723958489924168,mm/s,0.8580038778043806,1360
+alternating original,100,1,True,True,1.0688360138403092,mm/s,0.8547569990099979,1360
+alternating original,200,0,True,True,1.072635631761024,mm/s,0.8580038778043806,2720
+alternating original,200,1,True,True,1.0683238132339923,mm/s,0.8547569990099979,2720
+alternating original,400,0,True,True,1.07241454925045,mm/s,0.8580038778043806,5440
+alternating original,400,1,True,True,1.0684841997052457,mm/s,0.8547569990099979,5440
+alternating original,500,0,True,True,1.0724979268353352,mm/s,0.8580038778043806,6800
+alternating original,500,1,True,True,1.0684564506190903,mm/s,0.8547569990099979,6800
+alternating original,1000,0,True,True,1.0725127087183788,mm/s,0.8580038778043806,13600
+alternating original,1000,1,True,True,1.068445514312504,mm/s,0.8547569990099979,13600
+initial deep gyro,archive,0,True,True,2.327650476933823,rim turns,1.8621203815470584,0
+initial deep gyro,archive,1,False,False,0.06952241770759873,rim turns,,0
+initial deep gyro,stock,0,False,False,0.14675728240383057,rim turns,1.8621203815470584,172
+initial deep gyro,stock,1,False,False,0.0743278696015538,rim turns,,1836
+initial deep gyro,25,0,False,False,0.10993665649697724,rim turns,1.8621203815470584,167
+initial deep gyro,25,1,False,False,0.09167930832485663,rim turns,,918
+initial deep gyro,50,0,False,False,0.1032946632549162,rim turns,1.8621203815470584,147
+initial deep gyro,50,1,False,False,0.07132550866535733,rim turns,,1835
+initial deep gyro,100,0,False,False,0.12017959319498385,rim turns,1.8621203815470584,321
+initial deep gyro,100,1,False,False,0.07124193535039758,rim turns,,3670
+initial deep gyro,200,0,False,False,0.12331885536028572,rim turns,1.8621203815470584,688
+initial deep gyro,200,1,False,False,0.07108709567310299,rim turns,,7340
+initial deep gyro,400,0,False,False,0.16465665007629124,rim turns,1.8621203815470584,1452
+initial deep gyro,400,1,False,False,0.07114353341564102,rim turns,,14680
+initial deep gyro,500,0,False,False,0.1781934885518838,rim turns,1.8621203815470584,1834
+initial deep gyro,500,1,False,False,0.07114692724587084,rim turns,,18350
+initial deep gyro,1000,0,False,False,0.11921364345043486,rim turns,1.8621203815470584,3401
+initial deep gyro,1000,1,False,False,0.07115569311886874,rim turns,,36700
+bilateral catch,archive,0,True,True,10.888738374593292,peak roll deg,,0
+bilateral catch,archive,1,True,True,13.930659333928563,peak roll deg,,0
+bilateral catch,stock,0,True,True,9.634869248456603,peak roll deg,,401
+bilateral catch,stock,1,True,True,13.937055164624294,peak roll deg,,401
+bilateral catch,25,0,True,True,10.83820097702045,peak roll deg,,200
+bilateral catch,25,1,True,True,10.068916837958959,peak roll deg,,200
+bilateral catch,50,0,True,True,10.85985446192817,peak roll deg,,400
+bilateral catch,50,1,True,True,13.93204694292414,peak roll deg,,400
+bilateral catch,100,0,True,True,10.869979759775772,peak roll deg,,800
+bilateral catch,100,1,True,True,13.93196641942337,peak roll deg,,800
+bilateral catch,200,0,True,True,9.626610419523303,peak roll deg,,1600
+bilateral catch,200,1,True,True,13.93182012588198,peak roll deg,,1600
+bilateral catch,400,0,True,True,9.636961666362065,peak roll deg,,3200
+bilateral catch,400,1,True,True,13.931826408511533,peak roll deg,,3200
+bilateral catch,500,0,True,True,9.638231081704419,peak roll deg,,4000
+bilateral catch,500,1,True,True,13.931799492844247,peak roll deg,,4000
+bilateral catch,1000,0,True,True,9.638996284802866,peak roll deg,,8000
+bilateral catch,1000,1,True,True,13.93181789988713,peak roll deg,,8000
+fall primitive,archive,0,True,True,60.97616336045686,peak roll deg,,0
+fall primitive,archive,1,True,True,69.75187885716021,peak roll deg,,0
+fall primitive,stock,0,True,True,60.97616336045686,peak roll deg,,310
+fall primitive,stock,1,True,True,69.75187885716021,peak roll deg,,326
+fall primitive,25,0,True,True,60.97616336045686,peak roll deg,,154
+fall primitive,25,1,True,True,69.75187885716021,peak roll deg,,163
+fall primitive,50,0,True,True,60.97616336045686,peak roll deg,,309
+fall primitive,50,1,True,True,69.75187885716021,peak roll deg,,325
+fall primitive,100,0,True,True,60.97616336045686,peak roll deg,,619
+fall primitive,100,1,True,True,69.75187885716021,peak roll deg,,650
+fall primitive,200,0,True,True,60.97616336045686,peak roll deg,,1239
+fall primitive,200,1,True,True,69.75187885716021,peak roll deg,,1301
+fall primitive,400,0,True,True,60.97616336045686,peak roll deg,,2479
+fall primitive,400,1,True,True,69.75187885716021,peak roll deg,,2602
+fall primitive,500,0,True,True,60.97616336045686,peak roll deg,,3099
+fall primitive,500,1,True,True,69.75187885716021,peak roll deg,,3252
+fall primitive,1000,0,True,True,60.97616336045686,peak roll deg,,6198
+fall primitive,1000,1,True,True,69.75187885716021,peak roll deg,,6505
+catch primitive,archive,0,True,True,19.286810757928635,peak roll deg,,0
+catch primitive,archive,1,True,True,30.033550655293734,peak roll deg,,0
+catch primitive,stock,0,True,True,19.286810757928635,peak roll deg,,401
+catch primitive,stock,1,True,True,30.033550655293734,peak roll deg,,401
+catch primitive,25,0,True,True,24.85269166778123,peak roll deg,,200
+catch primitive,25,1,True,True,30.033550655293734,peak roll deg,,200
+catch primitive,50,0,True,True,19.286810757928635,peak roll deg,,400
+catch primitive,50,1,True,True,30.033550655293734,peak roll deg,,400
+catch primitive,100,0,True,True,19.286810757928635,peak roll deg,,800
+catch primitive,100,1,True,True,30.033550655293734,peak roll deg,,800
+catch primitive,200,0,True,True,19.286810757928635,peak roll deg,,1600
+catch primitive,200,1,True,True,30.033550655293734,peak roll deg,,1600
+catch primitive,400,0,True,True,19.286810757928635,peak roll deg,,3200
+catch primitive,400,1,True,True,30.033550655293734,peak roll deg,,3200
+catch primitive,500,0,True,True,19.286810757928635,peak roll deg,,4000
+catch primitive,500,1,True,True,30.033550655293734,peak roll deg,,4000
+catch primitive,1000,0,True,True,19.286810757928635,peak roll deg,,8000
+catch primitive,1000,1,True,True,30.033550655293734,peak roll deg,,8000
+pivot primitive,archive,0,False,False,18.772160314685276,peak roll deg,,0
+pivot primitive,archive,1,True,True,22.23185266660079,peak roll deg,,0
+pivot primitive,stock,0,False,False,16.64253687472527,peak roll deg,,401
+pivot primitive,stock,1,True,True,18.16536877700006,peak roll deg,,401
+pivot primitive,25,0,False,False,18.833990905824887,peak roll deg,,200
+pivot primitive,25,1,True,True,24.120394444358762,peak roll deg,,200
+pivot primitive,50,0,False,False,18.786124851202704,peak roll deg,,400
+pivot primitive,50,1,True,True,22.23185266660079,peak roll deg,,400
+pivot primitive,100,0,False,False,18.786124851202704,peak roll deg,,800
+pivot primitive,100,1,True,True,22.23185266660079,peak roll deg,,800
+pivot primitive,200,0,False,False,18.766992309474958,peak roll deg,,1600
+pivot primitive,200,1,True,True,22.23185266660079,peak roll deg,,1600
+pivot primitive,400,0,False,False,18.766992309474958,peak roll deg,,3200
+pivot primitive,400,1,True,True,22.23185266660079,peak roll deg,,3200
+pivot primitive,500,0,False,False,18.766992309474958,peak roll deg,,4000
+pivot primitive,500,1,True,True,22.23185266660079,peak roll deg,,4000
+pivot primitive,1000,0,False,False,18.766992309474958,peak roll deg,,8000
+pivot primitive,1000,1,True,True,22.23185266660079,peak roll deg,,8000
+first sway candidate,archive,0,True,True,18.04944937859585,mm/s,14.43955950287668,0
+first sway candidate,archive,1,False,False,24.63471142371042,mm/s,,0
+first sway candidate,stock,0,True,True,18.04944937859585,mm/s,14.43955950287668,0
+first sway candidate,stock,1,False,False,24.63471142371042,mm/s,,0
+first sway candidate,25,0,True,True,18.04944937859585,mm/s,14.43955950287668,0
+first sway candidate,25,1,False,False,24.63471142371042,mm/s,,0
+first sway candidate,50,0,True,True,18.04944937859585,mm/s,14.43955950287668,0
+first sway candidate,50,1,False,False,24.63471142371042,mm/s,,0
+first sway candidate,100,0,True,True,18.04944937859585,mm/s,14.43955950287668,0
+first sway candidate,100,1,False,False,24.63471142371042,mm/s,,0
+first sway candidate,200,0,True,True,18.04944937859585,mm/s,14.43955950287668,0
+first sway candidate,200,1,False,False,24.63471142371042,mm/s,,0
+first sway candidate,400,0,True,True,18.04944937859585,mm/s,14.43955950287668,0
+first sway candidate,400,1,False,False,24.63471142371042,mm/s,,0
+first sway candidate,500,0,True,True,18.04944937859585,mm/s,14.43955950287668,0
+first sway candidate,500,1,False,False,24.63471142371042,mm/s,,0
+first sway candidate,1000,0,True,True,18.04944937859585,mm/s,14.43955950287668,0
+first sway candidate,1000,1,False,False,24.63471142371042,mm/s,,0
+motor limited open gait,archive,0,True,True,2.4864437170740477,mm/s,1.9891549736592382,0
+motor limited open gait,archive,1,True,True,2.536576010462746,mm/s,2.029260808370197,0
+motor limited open gait,stock,0,True,True,2.4864437170740477,mm/s,1.9891549736592382,0
+motor limited open gait,stock,1,True,True,2.536576010462746,mm/s,2.029260808370197,0
+motor limited open gait,25,0,True,True,2.4864437170740477,mm/s,1.9891549736592382,0
+motor limited open gait,25,1,True,True,2.536576010462746,mm/s,2.029260808370197,0
+motor limited open gait,50,0,True,True,2.4864437170740477,mm/s,1.9891549736592382,0
+motor limited open gait,50,1,True,True,2.536576010462746,mm/s,2.029260808370197,0
+motor limited open gait,100,0,True,True,2.4864437170740477,mm/s,1.9891549736592382,0
+motor limited open gait,100,1,True,True,2.536576010462746,mm/s,2.029260808370197,0
+motor limited open gait,200,0,True,True,2.4864437170740477,mm/s,1.9891549736592382,0
+motor limited open gait,200,1,True,True,2.536576010462746,mm/s,2.029260808370197,0
+motor limited open gait,400,0,True,True,2.4864437170740477,mm/s,1.9891549736592382,0
+motor limited open gait,400,1,True,True,2.536576010462746,mm/s,2.029260808370197,0
+motor limited open gait,500,0,True,True,2.4864437170740477,mm/s,1.9891549736592382,0
+motor limited open gait,500,1,True,True,2.536576010462746,mm/s,2.029260808370197,0
+motor limited open gait,1000,0,True,True,2.4864437170740477,mm/s,1.9891549736592382,0
+motor limited open gait,1000,1,True,True,2.536576010462746,mm/s,2.029260808370197,0
+open progress fast,archive,0,True,True,17.571133631368262,mm/s,14.05690690509461,0
+open progress fast,archive,1,True,True,17.506434782923336,mm/s,14.00514782633867,0
+open progress fast,stock,0,True,True,17.571133631368262,mm/s,14.05690690509461,0
+open progress fast,stock,1,True,True,17.506434782923336,mm/s,14.00514782633867,0
+open progress fast,25,0,True,True,17.571133631368262,mm/s,14.05690690509461,0
+open progress fast,25,1,True,True,17.506434782923336,mm/s,14.00514782633867,0
+open progress fast,50,0,True,True,17.571133631368262,mm/s,14.05690690509461,0
+open progress fast,50,1,True,True,17.506434782923336,mm/s,14.00514782633867,0
+open progress fast,100,0,True,True,17.571133631368262,mm/s,14.05690690509461,0
+open progress fast,100,1,True,True,17.506434782923336,mm/s,14.00514782633867,0
+open progress fast,200,0,True,True,17.571133631368262,mm/s,14.05690690509461,0
+open progress fast,200,1,True,True,17.506434782923336,mm/s,14.00514782633867,0
+open progress fast,400,0,True,True,17.571133631368262,mm/s,14.05690690509461,0
+open progress fast,400,1,True,True,17.506434782923336,mm/s,14.00514782633867,0
+open progress fast,500,0,True,True,17.571133631368262,mm/s,14.05690690509461,0
+open progress fast,500,1,True,True,17.506434782923336,mm/s,14.00514782633867,0
+open progress fast,1000,0,True,True,17.571133631368262,mm/s,14.05690690509461,0
+open progress fast,1000,1,True,True,17.506434782923336,mm/s,14.00514782633867,0
+open progress conservative,archive,0,True,True,6.022535772618606,mm/s,4.8180286180948855,0
+open progress conservative,archive,1,True,True,5.756223039632681,mm/s,4.604978431706145,0
+open progress conservative,stock,0,True,True,6.022535772618606,mm/s,4.8180286180948855,0
+open progress conservative,stock,1,True,True,5.756223039632681,mm/s,4.604978431706145,0
+open progress conservative,25,0,True,True,6.022535772618606,mm/s,4.8180286180948855,0
+open progress conservative,25,1,True,True,5.756223039632681,mm/s,4.604978431706145,0
+open progress conservative,50,0,True,True,6.022535772618606,mm/s,4.8180286180948855,0
+open progress conservative,50,1,True,True,5.756223039632681,mm/s,4.604978431706145,0
+open progress conservative,100,0,True,True,6.022535772618606,mm/s,4.8180286180948855,0
+open progress conservative,100,1,True,True,5.756223039632681,mm/s,4.604978431706145,0
+open progress conservative,200,0,True,True,6.022535772618606,mm/s,4.8180286180948855,0
+open progress conservative,200,1,True,True,5.756223039632681,mm/s,4.604978431706145,0
+open progress conservative,400,0,True,True,6.022535772618606,mm/s,4.8180286180948855,0
+open progress conservative,400,1,True,True,5.756223039632681,mm/s,4.604978431706145,0
+open progress conservative,500,0,True,True,6.022535772618606,mm/s,4.8180286180948855,0
+open progress conservative,500,1,True,True,5.756223039632681,mm/s,4.604978431706145,0
+open progress conservative,1000,0,True,True,6.022535772618606,mm/s,4.8180286180948855,0
+open progress conservative,1000,1,True,True,5.756223039632681,mm/s,4.604978431706145,0

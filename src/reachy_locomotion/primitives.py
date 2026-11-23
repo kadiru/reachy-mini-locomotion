@@ -239,10 +239,11 @@ class PrimitiveSimulator(SwaySimulator):
                 yaw=math.atan2(d.xmat[body][3],d.xmat[body][0]);delta=(yaw-previous[j]+math.pi)%(2*math.pi)-math.pi
                 angles[j]+=delta;previous[j]=yaw
                 if j==0:yaw_step=delta
-            if hasattr(controller,'observe_heading'):controller.observe_heading(t,math.degrees(angles[0]))
+            attitude, sampled_gyro = imu_observer.sample(m,d,t) if imu_observer is not None else (None,None)
+            if hasattr(controller,'observe_heading'):
+                controller.observe_heading(t,getattr(imu_observer,'heading_deg',math.degrees(angles[0])))
             if hasattr(controller,'observe_head'):
                 controller.observe_head(t,math.degrees(euler(relative_head_pose(m,d))[2]))
-            attitude, sampled_gyro = imu_observer.sample(m,d,t) if imu_observer is not None else (None,None)
             policy_roll, policy_pitch = (roll,math.degrees(rpy[1])) if attitude is None else attitude
             if hasattr(controller,'observe_attitude'):
                 controller.observe_attitude(t,policy_pitch)

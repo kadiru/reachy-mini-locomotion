@@ -104,6 +104,8 @@ def scene_xml(upstream, config, free=True):
             sensors = ET.SubElement(root, "sensor")
         for name in ("accelerometer", "gyro"):
             ET.SubElement(sensors, name, name="balance_" + name, site=site.get("name"))
+            if config.get("head_imu"):
+                ET.SubElement(sensors, name, name="moving_head_" + name, site="head")
     if free and config.get('tilt_table'):
         if bank:
             raise ValueError("The moving table starts level")

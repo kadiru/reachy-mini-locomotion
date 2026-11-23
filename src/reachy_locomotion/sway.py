@@ -184,7 +184,7 @@ class SwaySimulator:
             raise ValueError("IK exceeds inspected model joint limits")
         return joints
 
-    def run(self, gait, cycles=8, warmup_cycles=2, record=False, feedback=None, sensor=None):
+    def run(self, gait, cycles=8, warmup_cycles=2, record=False, feedback=None, sensor=None, imu_observer=None):
         if cycles < 1 or warmup_cycles < 1:
             raise ValueError("Require positive measurement and warm-up cycles")
         model = self.model
@@ -244,7 +244,11 @@ class SwaySimulator:
             cycle_monitor.observe(frame, state.xpos[self.base],
                                   math.atan2(base_matrix[2, 1], base_matrix[2, 2]), startup_heading, forces)
             if controller:
-                controller.update(current_yaw)
+                if imu_observer is None:
+                    controller.update(current_yaw)
+                else:
+                    imu_observer.sample(model, state, frame * .02)
+                    controller.update(startup_yaw + math.radians(imu_observer.heading_deg))
             commanded_gait = controller.steer(gait) if controller else gait
             desired = commanded_gait.pose(phase, envelope)
             try:
@@ -325,6 +329,8 @@ class SwaySimulator:
                     self.servos.apply(state)
                 mujoco.mj_step(model, state)
                 mujoco.mj_forward(model, state)
+                if imu_observer is not None and controller:
+                    imu_observer.advance()
                 if not np.isfinite(state.qpos).all() or not np.isfinite(state.qvel).all() or any(w.number for w in state.warning):
                     reason = "numerical_warning"
                     break
