@@ -4,9 +4,11 @@ Reachy Mini has an expressive moving head, but no legs. This project investigate
 
 The starting observation was controller-driven rocking on a physical robot. The current research combines **Quest demonstration capture, a calibrated-recording workflow, and MuJoCo experiments with learned gait parameters and feedback**.
 
-[![Reachy Mini during the original controller-driven demonstration](docs/showcase/reachy.jpg)](https://vimeo.com/kadiru/demo-reachy-reach)
+[![Reachy Mini during the original controller-driven demonstration](docs/showcase/reachy.jpg)](https://vimeo.com/kadiru/demo-reachy-reach#t=0s&end=7s)
 
 *Physical teleoperation footage. Apparent progress is visible; this clip does not measure speed or demonstrate an autonomous learned gait. [Frame-by-frame observations](docs/VIMEO_OBSERVATIONS_2026-11-18.md).*
+
+This standalone locomotion research is separate from [Emcee / Sidekick](https://github.com/kadiru/Emcee), the mobile-host prototype in which Reachy Mini rides on temi.
 
 **Watch the simulation:** [three-minute trained-skills reel](media/simulation/trained-skills-reel.mp4) · [moving-table feedback comparison](media/simulation/moving-table-feedback.mp4)
 
